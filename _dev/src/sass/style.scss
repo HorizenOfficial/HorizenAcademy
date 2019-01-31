@@ -1,0 +1,37 @@
+/*
+The main SCSS file for everything, yep
+*/
+
+@import "../../bower_components/normalize-css/normalize";
+@import "../../bower_components/bootstrap/scss/bootstrap";
+@import "vendor/animations";
+@import "../../bower_components/animate.css/animate";
+
+//@import "vendor/bootstrap/bootstrap";
+//
+//@import "partials/variables";
+//@import "partials/mixins";
+
+$base-font-family: proxima-nova, sans-serif;
+$base-font-weight: 400;
+$header-font-family: proxima-nova, sans-serif;
+$header-font-weight: 100;
+
+$green: #69ffbd;
+$lightteal: #94ffd0;
+$lightblue: #62c6f9;
+$blue: #203768;
+$darkblue: #1B2F5A;
+$gray: #a1a1a1;
+$lightgray: #f3f3f3;
+
+
+$font-header-size1: 2.8rem; // 40pt in design
+$font-header-size2: 1.8rem; // 28pt in design
+$font-text-size1: 1.25rem; // 18pt in design
+$font-text-size2: 1rem; // 15pt in design
+
+
+@import "partials/extends";
+@import "partials/layout";
+@import "partials/home";

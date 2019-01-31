@@ -1,0 +1,15 @@
+---
+permalink: sitemap.xml
+layout:
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}{% if page.noindex %}{% elsif page.url == '/404' %}{% elsif page.url == '/sitemap.xml' %}{% elsif page.url == '/feed.xml' %}{% elsif page.url == '/robots.txt' %}{% elsif page.url == '/redirects.json' %}{% else %}<url>
+    {% if page.url == '/' %}<loc>{{ site.url }}{{ site.baseurl }}{% if site.baseurl.size > 0 %}/{% endif %}</loc>{% else %}<loc>{{ site.url }}{{ site.baseurl }}{{page.url}}</loc>{% endif %}
+    <lastmod>{% last_modified_at %Y-%m-%d %}</lastmod>
+    <changefreq>hourly</changefreq>
+    {% if page.url == '/' %}<priority>1.0</priority>{% else %}<priority>0.9</priority>{% endif %}
+  </url>
+  {% endif %}{% endfor %}
+</urlset>

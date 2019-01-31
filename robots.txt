@@ -1,0 +1,10 @@
+---
+permalink: robots.txt
+layout:
+---
+
+User-agent: *
+{% for node in site.pages %}{% if node.noindex %}
+{% assign isset = true %}Disallow: {{ node.url }}{% endif %}{% endfor %}{% if isset != true %}Disallow:{% endif %}
+{% for language in site.languages %}
+{% if language == 'en' %}Sitemap: {{ site.url }}/sitemap.xml{% else %}Sitemap: {{ site.url }}/{{language}}/sitemap.xml{% endif %}{% endfor %}

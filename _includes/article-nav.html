@@ -1,0 +1,129 @@
+
+<div class="article-nav">
+    <div class="levels">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <a href="#" class="js-SelectLevel" data-level="beginner">
+                    <div class="level beginner">
+                        <div class="icon">
+                            <img src="/assets/img/icons/levels/beginner-1.svg" alt="Beginner" class="icon-inactive">
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-active">
+                        </div>
+                        <div class="level-name">Beginner</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="js-SelectLevel" data-level="intermediate">
+                    <div class="level intermediate">
+                        <div class="icon">
+                            <img src="/assets/img/icons/levels/intermediate-1.svg" alt="Intermediate" class="icon-inactive">
+                            <img src="/assets/img/icons/levels/intermediate-2.svg" alt="Intermediate" class="icon-active">
+                        </div>
+                        <div class="level-name">Intermediate</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#" class="js-SelectLevel" data-level="advanced">
+                    <div class="level advanced">
+                        <div class="icon">
+                            <img src="/assets/img/icons/levels/advanced-1.svg" alt="Advanced" class="icon-inactive">
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-active">
+                        </div>
+                        <div class="level-name">Advanced</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+    <div class="categories">
+        <div class="row no-gutters">
+            <div class="col-md-6">
+                <a href="#" class="js-SelectCategory" data-category="history">
+                    <div class="category history">
+                        <div class="icon">
+                            <img src="/assets/img/icons/categories/history-1.svg" alt="History" class="icon-inactive">
+                            <img src="/assets/img/icons/categories/history-2.svg" alt="History" class="icon-active">
+                        </div>
+                        <span class="category-name">History</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="js-SelectCategory" data-category="technology">
+                    <div class="category technology">
+                        <div class="icon">
+                            <img src="/assets/img/icons/categories/technology-1.svg" alt="Technology" class="icon-inactive">
+                            <img src="/assets/img/icons/categories/technology-2.svg" alt="Technology" class="icon-active">
+                        </div>
+                        <span class="category-name">Technology</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="js-SelectCategory" data-category="privacy">
+                    <div class="category privacy">
+                        <div class="icon">
+                            <img src="/assets/img/icons/categories/privacy-1.svg" alt="Privacy" class="icon-inactive">
+                            <img src="/assets/img/icons/categories/privacy-2.svg" alt="Privacy" class="icon-active">
+                        </div>
+                        <span class="category-name">Privacy</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="js-SelectCategory" data-category="horizen">
+                    <div class="category horizen">
+                        <div class="icon">
+                            <img src="/assets/img/icons/categories/horizen-1.svg" alt="Horizen" class="icon-inactive">
+                            <img src="/assets/img/icons/categories/horizen-2.svg" alt="Horizen" class="icon-active">
+                        </div>
+                        <span class="category-name">Horizen</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+    <div class="articles" id="list-articles">
+
+        <div class="hidden">
+            <div>
+                <div>
+        {% assign current_chapter = "" %}
+
+        {% for post in site.posts reversed %}
+
+        {% if current_chapter != post.chapter %}
+        {% assign current_chapter = post.chapter %}
+                </div>
+            </div>
+        </div>
+
+        {% capture chapter_index %}{% increment my_counter %}{% endcapture %}
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ chapter_index }}" aria-expanded="true" aria-controls="collapseOne">
+                        {{current_chapter }}
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse{{ chapter_index }}" class="collapse" data-parent="#list-articles">
+                <div class="card-body">
+        {% endif %}
+
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+
+.btn {
+  border-radius: 0;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.btn-info {
+  background-color: #0e9de5;
+  border-color: #0e9de5;
+  &:hover, &:focus, &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active {
+    background-color: #0a2561;
+  }
+}
+

@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    {% capture page_id %}{% if page.namespace != '' or page.namespace != blank %}{{ page.namespace | slugify }}{% else %}{{ page.url | slugify }}{% endif %}{% endcapture %}
+
+    <body id="{{ page_id }}" class="lng-{{site.lang}}">
+
+    {% include header.html %}
+
+    <div class="site-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 article-nav-wrapper">
+                    {% include article-nav.html %}
+                </div>
+                <div class="col-md-9 site-content-wrapper">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    </body>
+
+</html>
