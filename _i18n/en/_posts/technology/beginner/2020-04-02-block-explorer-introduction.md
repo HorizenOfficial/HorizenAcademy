@@ -34,4 +34,4 @@ There are three pieces of information left:
 
 We encourage you to go to our block explorer and start playing around with it. The landing page will show you the latest transactions in real time if you do not have an address yet to start exploring. Just pick one by clicking on it and you will see the associated addresses. You can start exploring from there.
 
-https://explorer.zen-solutions.io/
+[https://explorer.zen-solutions.io/](https://explorer.zen-solutions.io/)

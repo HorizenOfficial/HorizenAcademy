@@ -60,6 +60,6 @@ Cryptocurrencies and blockchain are not an easy topic. In this line of articles,
 
 If you feel comfortable about everything you have read and would like to keep learning: there is more! Move up one level and see our more advanced articles. We have structured them in the same way, but added more detail to all topics and split them up to look at the individual components more closely. We designed the content in a way where you can either read it from top to bottom (which we can only recommend) or jump to articles that you are especially interested in.
 
-We hope you enjoyed this series of articles. Please let us know if there is anything that you find confusing. The content provided is and will be work in progress for a while. We are always open to suggestions and constructive feedback so drop us a message at academy@horizen.global if you want to share your thoughts with us.
+We hope you enjoyed this series of articles. Please let us know if there is anything that you find confusing. The content provided is and will be work in progress for a while. We are always open to suggestions and constructive feedback so drop us a message at [academy@horizen.global](mailto:academy@horizen.global) if you want to share your thoughts with us.
 
-Your Horizen Team
+**Your Horizen Team**

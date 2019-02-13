@@ -77,4 +77,4 @@ In our analogy the individual mailboxes are transparent. Everybody can see what 
 
 In our next article, we will summarise all the previous articles shortly and introduce you to the block explorer. A block explorer is the blockchain equivalent of a web browser. It lets you access all the information that is publicly stored on the blockchain. If you are the hands-on type, try out this neat demo, that lets you do test transactions and much more.
 
-https://coindemo.io/
+[https://coindemo.io/](https://coindemo.io/)

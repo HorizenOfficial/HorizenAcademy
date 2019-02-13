@@ -23,12 +23,12 @@ defaults:
 email: info@horizenlabs.io
 description: Horizen Labs
 baseurl: ""
-url: https://horizen.global
+url: https://horizenlabs.io
 logo: /assets/img/zencash-stacked.jpg
 author:
-  name: Horizen
-  email: info@horizen.global
-  uri: https://horizen.global
+  name: Horizen Labs
+  email: info@horizenlabs.io
+  uri: https://horizenlabs.io
   bio:
   facebook: https://www.facebook.com/horizenglobal/
   twitter: horizenglobal

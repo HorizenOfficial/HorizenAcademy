@@ -1,4 +1,3 @@
-
 <div class="article-nav">
     <div class="levels">
         <div class="row no-gutters">
@@ -39,49 +38,49 @@
         <hr/>
     </div>
 
-    <div class="categories">
+    <div class="topics">
         <div class="row no-gutters">
             <div class="col-md-6">
-                <a href="#" class="js-SelectCategory" data-category="history">
-                    <div class="category history">
+                <a href="#" class="js-SelectTopic" data-topic="history">
+                    <div class="topic history">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/history-1.svg" alt="History" class="icon-inactive">
                             <img src="/assets/img/icons/categories/history-2.svg" alt="History" class="icon-active">
                         </div>
-                        <span class="category-name">History</span>
+                        <span class="topic-name">History</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="js-SelectCategory" data-category="technology">
-                    <div class="category technology">
+                <a href="#" class="js-SelectTopic" data-topic="technology">
+                    <div class="topic technology">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/technology-1.svg" alt="Technology" class="icon-inactive">
                             <img src="/assets/img/icons/categories/technology-2.svg" alt="Technology" class="icon-active">
                         </div>
-                        <span class="category-name">Technology</span>
+                        <span class="topic-name">Technology</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="js-SelectCategory" data-category="privacy">
-                    <div class="category privacy">
+                <a href="#" class="js-SelectTopic" data-topic="privacy">
+                    <div class="topic privacy">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/privacy-1.svg" alt="Privacy" class="icon-inactive">
                             <img src="/assets/img/icons/categories/privacy-2.svg" alt="Privacy" class="icon-active">
                         </div>
-                        <span class="category-name">Privacy</span>
+                        <span class="topic-name">Privacy</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="js-SelectCategory" data-category="horizen">
-                    <div class="category horizen">
+                <a href="#" class="js-SelectTopic" data-topic="horizen">
+                    <div class="topic horizen">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/horizen-1.svg" alt="Horizen" class="icon-inactive">
                             <img src="/assets/img/icons/categories/horizen-2.svg" alt="Horizen" class="icon-active">
                         </div>
-                        <span class="category-name">Horizen</span>
+                        <span class="topic-name">Horizen</span>
                     </div>
                 </a>
             </div>
@@ -91,37 +90,31 @@
 
     <div class="articles" id="list-articles">
 
-        <div class="hidden">
+        <div class="d-none">
             <div>
-                <div>
-        {% assign current_chapter = "" %}
+                {% assign current_level = "" %}
+                {% assign current_topic = "" %}
+                {% assign current_chapter = "" %}
 
-        {% for post in site.posts reversed %}
+                {% for post in site.posts reversed %}
 
-        {% if current_chapter != post.chapter %}
-        {% assign current_chapter = post.chapter %}
-                </div>
+                {% if current_chapter != post.chapter or current_topic != post.topic or current_level != post.level %}
+                {% assign current_level = post.level %}
+                {% assign current_topic = post.topic %}
+                {% assign current_chapter = post.chapter %}
             </div>
         </div>
 
-        {% capture chapter_index %}{% increment my_counter %}{% endcapture %}
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ chapter_index }}" aria-expanded="true" aria-controls="collapseOne">
-                        {{current_chapter }}
-                    </button>
-                </h5>
-            </div>
+        {% capture chapter_index %}{% increment chapter_counter %}{% endcapture %}
+        <div class="topic-articles level-{{current_level}} topic-{{current_topic}}">
+            <a href="#collapse{{ chapter_index }}" data-toggle="collapse" class="chapter">{{current_chapter }}</a>
 
-            <div id="collapse{{ chapter_index }}" class="collapse" data-parent="#list-articles">
-                <div class="card-body">
-        {% endif %}
+            <div id="collapse{{ chapter_index }}" class="collapse chapter-articles" data-parent="#list-articles">
+                {% endif %}
 
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {% endfor %}
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                {% endfor %}
 
-                </div>
             </div>
         </div>
 
