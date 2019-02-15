@@ -13,12 +13,15 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="site-wrapper d-table w-100">
-        <div class="article-nav-wrapper d-table-cell">
-            {% include article-nav.html %}
-        </div>
-        <div class="site-content-wrapper d-table-cell">
-            {{ content }}
+    <div class="left-menu" id="left-menu">
+        {% include left-menu.html %}
+    </div>
+
+    <div class="site-wrapper">
+        <div class="container-fluid">
+            <div class="site-content-wrapper">
+                {{ content }}
+            </div>
         </div>
     </div>
 

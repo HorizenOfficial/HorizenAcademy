@@ -101,25 +101,35 @@ body {
   }
 }
 
-.site-wrapper {
-  min-height: calc(100vh - 81px);
-}
-.article-nav-wrapper {
+#left-menu {
   background-color: #041336;
   background-image: linear-gradient(#041235, #0b245a);
   width: 350px;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 15px;
-  vertical-align: top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  .logo {
+    background-color: #041742;
+    padding: 13px 0;
+    text-align: center;
+    img {
+      height: 55px;
+    }
+  }
+}
+
+.site-wrapper {
+  width: 100%;
+  padding-left: 350px;
 }
 .site-content-wrapper {
-  padding-left: 0;
-  padding-right: 0;
-  vertical-align: top;
 }
 
 .article-nav {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
   a {
     color: #3d6892;
     &:hover, &:active, &.active {
