@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Intro to Transactions (Basic)"
 permalink: technology/beginner/intro-to-transactions-basic/
 topic: technology

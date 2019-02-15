@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "The Cypherpunk Movement"
 permalink: history/the-cypherpunk-movement/
 topic: history

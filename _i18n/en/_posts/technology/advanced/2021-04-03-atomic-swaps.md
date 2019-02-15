@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Atomic Swaps"
 permalink: technology/advanced/atomic-swaps/
 topic: technology

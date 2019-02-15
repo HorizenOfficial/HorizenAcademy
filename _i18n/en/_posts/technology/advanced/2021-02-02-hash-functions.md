@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Hash Functions"
 permalink: technology/advanced/hash-functions/
 topic: technology

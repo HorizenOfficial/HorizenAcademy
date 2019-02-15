@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Attacks on Blockchain"
 permalink: technology/advanced/attacks-on-blockchain/
 topic: technology

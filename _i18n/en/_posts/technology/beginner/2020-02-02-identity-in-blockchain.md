@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Identity in Blockchain"
 permalink: technology/beginner/identity-in-blockchain/
 topic: technology

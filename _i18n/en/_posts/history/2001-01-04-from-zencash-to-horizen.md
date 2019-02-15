@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "From ZenCash to Horizen"
 permalink: history/from-zencash-to-horizen/
 topic: history

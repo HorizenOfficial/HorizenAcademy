@@ -104,6 +104,10 @@
 
                 {% for post in site.posts reversed %}
 
+                {% if post.type != "article" %}
+                {% continue %}
+                {% endif %}
+
                 {% if current_chapter != post.chapter or current_topic != post.topic or current_level != post.level %}
                 {% assign current_level = post.level %}
                 {% assign current_topic = post.topic %}

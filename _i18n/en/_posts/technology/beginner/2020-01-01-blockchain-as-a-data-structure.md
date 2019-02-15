@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Blockchain as a Data Structure"
 permalink: technology/beginner/blockchain-as-a-data-structure/
 topic: technology

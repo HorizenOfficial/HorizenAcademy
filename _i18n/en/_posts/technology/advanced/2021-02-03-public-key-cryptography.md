@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Public Key Cryptography"
 permalink: technology/advanced/public-key-cryptography/
 topic: technology

@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "The UTXO Model"
 permalink: technology/advanced/the-utxo-model/
 topic: technology

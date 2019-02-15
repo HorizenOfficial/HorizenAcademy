@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Block Explorer Continued"
 permalink: technology/advanced/block-explorer-continued/
 topic: technology

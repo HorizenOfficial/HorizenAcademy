@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Satoshi Nakamoto"
 permalink: history/satoshi-nakamoto/
 topic: history

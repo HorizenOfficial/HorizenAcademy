@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Types of wallets"
 permalink: technology/advanced/types-of-wallets/
 topic: technology

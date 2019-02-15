@@ -1,5 +1,6 @@
 ---
 layout: post
+type: article
 title:  "Consensus Mechanisms"
 permalink: technology/advanced/consensus-mechanisms/
 topic: technology
