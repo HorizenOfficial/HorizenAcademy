@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Block Explorer Continued"
-permalink: technology/intermediate/block-explorer-continued/
+permalink: technology/advanced/block-explorer-continued/
 topic: technology
-level: intermediate
+level: advanced
 chapter: "Transactions"
 ---
 
@@ -15,14 +15,14 @@ If you know how to navigate one block explorer, you will know how to navigate al
 
 The information that you will find in a block explorer is structured either by the blocks, by addresses or individual transactions. Let's look into a first example to make all this more tangible.
 
-![Latest blocks](/assets/post_files/technology/intermediate/block-explorer-continued/latest_blocks.png)
+![Latest blocks](/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png)
 
 There are a number of block explorers out there, often times several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers out there: blockchain.com.
 
 You will see an overview of the most recently created blocks on the landing page. Let's go through what we see here:
 
  - **Height**: the height is the number the block carries. The very first block created was block #0, after that came block #1 and then block #2. As you can see at the time of writing there have been quite a few blocks mined.
- - **Age**: Is the age of the block. It's self-explanatory, but there is a piece of interesting information between the lines: you might know that the block time, the interval in which new blocks are mined, is 10 minutes with Bitcoin. How come it took only 6 minutes to mine block 539.772 and only 9 minutes for block 539.771? This is because the block time is an average. There will always be blocks created slower and a few that will be produced a lot faster, but on average it will take 10 minutes. In our article about [mining]({{ site.baseurl }}{% post_url /technology/intermediate/2021-02-06-mining %}), we explain to you how the block time is adjusted.
+ - **Age**: Is the age of the block. It's self-explanatory, but there is a piece of interesting information between the lines: you might know that the block time, the interval in which new blocks are mined, is 10 minutes with Bitcoin. How come it took only 6 minutes to mine block 539.772 and only 9 minutes for block 539.771? This is because the block time is an average. There will always be blocks created slower and a few that will be produced a lot faster, but on average it will take 10 minutes. In our article about [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-mining %}), we explain to you how the block time is adjusted.
  - **Transactions**: the number of transactions included in this block. This means that in the 6 minutes it took to mine block 539.772 about 1500 transactions were conducted.
  - **Total Sent**: The 1547 transactions that took place add up to almost 4700 Bitcoins sent.
  - **Relayed By**: The miner (or mining pool) that solved the block and earned the block reward.
@@ -33,7 +33,7 @@ You will see an overview of the most recently created blocks on the landing page
 
 Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first bitcoin block that was ever mined, we can use the search function and enter "0". If you haven't opened the site yet this link will take you directly to the genesis block, that is what the very first block of a given chain is always called.
 
-![The Genesis Block](/assets/post_files/technology/intermediate/block-explorer-continued/genesis_block.png)
+![The Genesis Block](/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png)
 
 Let us go through the information we can find here. It might seem overwhelming at first, but going through the information step by step you will see that it is quite simple to make sense of.
 
@@ -47,7 +47,7 @@ We have talked about the height before so we will get to the timestamp now. The 
 
 The "Relayed By" field shows who mined the block. Today's mining pools and their reward addresses are mostly known. This is how the block explorer "knows" who mined the block: it compares the address that received the newly generated coins (1A1zP1...) in the coinbase transaction with a number of known addresses from mining pools. In this case, we do know who the miner was, although the block explorer doesn't tell us: Satoshi Nakamoto himself.
 
-We talk about the _difficulty_ in our [mining article]({{ site.baseurl }}{% post_url /technology/intermediate/2021-02-06-mining %}) in more detail. The difficulty describes how hard the puzzle the miners need to solve is. It refers to the number of leading zeros in the block hash. As you can see on the right, the Genesis Block hash had 10 leading zeros. Today (as of the time of writing) blocks like block 539.772 need to have at least 18 leading zeros. The more leading zeros required, the harder the puzzle.
+We talk about the _difficulty_ in our [mining article]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-mining %}) in more detail. The difficulty describes how hard the puzzle the miners need to solve is. It refers to the number of leading zeros in the block hash. As you can see on the right, the Genesis Block hash had 10 leading zeros. Today (as of the time of writing) blocks like block 539.772 need to have at least 18 leading zeros. The more leading zeros required, the harder the puzzle.
 
 Bits, Size, and Weight all refer to the size of the data of a given block, not too spectacular. Version refers to the software that ran at the time the block was created.
 
@@ -59,7 +59,7 @@ What you will most likely use a block explorer for is checking a transaction sta
 
 If we want to look at the very first cryptocurrency transaction ever done we need to go to Block #170, where the first bitcoin transaction from Satoshi Nakamoto to Hal Finney is included.
 
-![Bitcoin Transaction](/assets/post_files/technology/intermediate/block-explorer-continued/transactions.png)
+![Bitcoin Transaction](/assets/post_files/technology/advanced/block-explorer-continued/transactions.png)
 
 It is the first block on the bitcoin blockchain that contains more than one transaction. We can find the coinbase transaction on the very top. Below is the first transaction as you would expect it. One person sending coins to another one.
 

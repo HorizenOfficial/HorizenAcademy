@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Consensus Mechanisms"
-permalink: technology/intermediate/consensus-mechanisms/
+permalink: technology/advanced/consensus-mechanisms/
 topic: technology
-level: intermediate
+level: advanced
 chapter: "How Does it work?"
 ---
 
@@ -15,7 +15,7 @@ There are many approaches to achieving consensus in a distributed network but th
 
 _"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_ - Demiro Massessi
 
-![Consensus](/assets/post_files/technology/intermediate/consensus-mechanisms/consensus.jpg)
+![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus.jpg)
 
 ### Proof-of-Work - PoW
 
@@ -29,7 +29,7 @@ Miners require computational power because the problem they are trying to solve 
 
 All nodes and miners verify the validity of a new block as soon as the block is discovered and broadcast to the network. If it is, they delete all the transactions that are now already recorded on the blockchain from their mempool, which is the storage that they use to collect transactions. They start working on the next block once their mempool contains transactions that haven't been mined. This is how the network agrees on a single version of the history of all transactions in a Proof-of-Work blockchain.
 
-![POW](/assets/post_files/technology/intermediate/consensus-mechanisms/POW.jpg)
+![POW](/assets/post_files/technology/advanced/consensus-mechanisms/POW.jpg)
 
 
 **The Longest Chain Rule**
@@ -38,7 +38,7 @@ Now you can imagine a scenario in which two miners find a block at the same time
 
 If 80% of miners receive block A first and the other 20% block B, then the chances of block A getting extended are 80% (assuming all miners have the same computational power). In a way, the miners vote with their computational power on one version of the history. This aligns perfectly with our quote from the beginning of the article: _"In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_ - Demiro Massessi
 
-![Longest chain](/assets/post_files/technology/intermediate/consensus-mechanisms/longest_chain.jpg)
+![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain.jpg)
 
 Proof-of-Work is one of the most secure consensus mechanisms. This mechanism is only feasible if there is a sufficient amount of computing power (_hash rate_) in the network. The Bitcoin protocol has proved how secure Proof-of-Work consensus is for over 10 years, given enough computing power on the network. We already talked about game theory in our article describing blockchain as a **protocol to transfer value** and in the article on **smart contracts**. Game theory "is the study of mathematical models of strategic interaction between rational decision-makers" according to Wikipedia. Miners are a group of rational decision makers in a PoW blockchain. The incentives, to act according to the rules of the mining protocol are embedded in the protocol itself. This is what makes a mature PoW blockchain so robust.
 
@@ -52,7 +52,7 @@ Whereas miners are mining blocks in PoW, _validators_ are _forging_ blocks in Po
 
 The scarce resource in a PoS environment is the native currency of the blockchain. The more money you stake on a PoS blockchain, the higher your chances of validating a new block. In (most) Proof-of-Stake blockchains there is no block reward. The validators incentive to do work is solely based on collecting the transaction fees attached to the transactions.
 
-![POS](/assets/post_files/technology/intermediate/consensus-mechanisms/POS.png)
+![POS](/assets/post_files/technology/advanced/consensus-mechanisms/POS.png)
 
 ### Comparing POW and POS
 
@@ -64,7 +64,7 @@ Supporters of Proof-of-Stake refer to the high energy cost and limited throughpu
 
 We will pick up on this discussion once again at the end of our article on mining. The arguments of the PoS and PoW community will make a more sense to you once you understand what the mining process is all about.
 
-![Comparing POW and POS](/assets/post_files/technology/intermediate/consensus-mechanisms/compare.jpg)
+![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/compare.jpg)
 
 ### Summary
 

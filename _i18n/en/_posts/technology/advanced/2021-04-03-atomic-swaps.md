@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Atomic Swaps"
-permalink: technology/intermediate/atomic-swaps/
+permalink: technology/advanced/atomic-swaps/
 topic: technology
-level: intermediate
+level: advanced
 chapter: "Transactions"
 ---
 
@@ -19,7 +19,7 @@ Hashed Timelock Contracts (HTLCs) enable atomic swaps. To understand HTLCs we mu
 A state channel is a two-way communication channel that allows interaction that would usually happen on-chain, to occur off-chain.  
 One specific type of state channel is the payment channel. As the name suggests, a payment channel is a state channel that deals with payments. You may have heard about payment channels in the context of the lightning network or other so-called second layer solutions. An HTLC (Hashed Time Lock Contract) is a specific type of payment channel that enables the exchange of two different crypto assets off-chain.
 
-![channel hierarchy](/assets/post_files/technology/intermediate/atomic-swaps/channel_hierarchy.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy.jpg)
 
 The "Hashed" part of HTLC means, that a hash can serve as a lock for the contract, to protect it from a third party accessing it. The "Timelock" part refers to the contract being able to have an expiration date. We will explain what this means to the user after outlining how you would conduct an Atomic Swap.
 
@@ -44,7 +44,7 @@ At this point, both participants have locked up the funds they agreed to exchang
 
 Since this is an automated process steps 7 and 8 happen at the same time and there is no trust required from either party. Either both or none of them get the funds of the other.
 
-![swaps](/assets/post_files/technology/intermediate/atomic-swaps/swaps.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps.jpg)
 
 ### Atomic Swaps Today
 

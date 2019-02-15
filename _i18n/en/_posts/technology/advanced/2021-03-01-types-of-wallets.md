@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Types of wallets"
-permalink: technology/intermediate/types-of-wallets/
+permalink: technology/advanced/types-of-wallets/
 topic: technology
-level: intermediate
+level: advanced
 chapter: "Wallets"
 ---
 
@@ -15,7 +15,7 @@ This article should give you a better understanding of what types of wallets are
 
 Let's have a look at this overview of the different wallet types before we go into individual wallets in detail.
 
-![overview](/assets/post_files/technology/intermediate/types-of-wallets/overview.jpg)
+![overview](/assets/post_files/technology/advanced/types-of-wallets/overview.jpg)
 
 ### Hosted Web Wallets
 
@@ -23,7 +23,7 @@ Before getting into web wallets, let us remember that a wallet is an interface t
 
 This leads us to a distinction between hosted and non-hosted web wallets. With hosted web wallets, your keys are stored online by a trusted third party. These parties are mostly exchanges such as Coinbase, Binance or Bittrex. When you create an account with these entities they will create an entry in their internal database linking your account to a set of key pairs for the different coins they have listed.
 
-![Hosted Web Wallets](/assets/post_files/technology/intermediate/types-of-wallets/hosted_webwallet.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet.jpg)
 
 An advantage with a hosted web wallet is the option to recover your password in case you forget or misplace it. Losing your private keys (together with your mnemonic phrase respectively) leads to lost funds in all other cases.
 
@@ -35,7 +35,7 @@ You will need to keep some funds on an exchange permanently if you plan to trade
 
 Besides hosted web wallets there is also a range of non-hosted web wallets. The most popular non-hosted web wallet is likely MyEtherWallet, which can store Ether (ETH) and all ERC-20 tokens (tokens that are "living" on the Ethereum blockchain). Those wallets provide an interface to check your funds or create transactions in your web browser, but you have to provide the keys with each login.
 
-![Non-Hosted Web Wallets](/assets/post_files/technology/intermediate/types-of-wallets/non-hosted_webwallet.png)
+![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet.png)
 
 There is a range of options to access your wallet with MyEtherWallet (often abbreviated as MEW). The first option requires your address but only lets you view your funds. MetaMask is a browser plugin that provides the option to make ETH payments within your browser and the ability to login to MEW. It also provides a function detecting phishing sites and warning you when you are about to open one.
 
@@ -60,9 +60,11 @@ By now you know the tasks a wallet performs: viewing, receiving and sending. If 
 
 With desktop and mobile wallets, there is a choice between single- and multi-currency options. Those should be rather self-explanatory terms. The former allows you to store one coin, while the latter supports multiple currencies. Some of the more popular examples for desktop include Coinomi and Sphere by Horizen. For mobile, there are Coinomi, Mycelium or Paytomat to name just a few.
 
-![coinomi](/assets/post_files/technology/intermediate/types-of-wallets/coinomi.jpg)
-![Paytomat](/assets/post_files/technology/intermediate/types-of-wallets/Paytomat.png)
-![mycelium](/assets/post_files/technology/intermediate/types-of-wallets/mycelium.png)
+<div class="row align-items-center">
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/coinomi.jpg" alt="coinomi"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/Paytomat.png" alt="Paytomat"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/mycelium.png" alt="mycelium"></div>
+</div>
 
 If you got your first coins on an exchange, I would recommend you to transfer your funds out of the exchange (hosted web wallet) onto a desktop, paper, or hardware wallet. Send a fraction first to make sure everything works as planned. If your first transaction works then you would send the rest. You are now protected from third-party risk, but have full responsibility for your funds yourself.
 
@@ -74,7 +76,7 @@ When printing your paper wallet you shouldn't use a shared printer like the one 
 
 You will end up with something looking like this after printing the wallet securely.
 
-![paper wallet](/assets/post_files/technology/intermediate/types-of-wallets/paper_wallet.jpg)
+![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.jpg)
 
 There is only one thing left to do: send funds to the public key. After that, you have a perfect gift or long term storage for your coins. The main risk with a paper wallet is you actually losing or destroying the wallet by accident. If you don't have a mnemonic phrase to recover the private key you are at risk of losing all funds on the wallet by accident. So choose wisely where to store your paper wallet. Print several copies if you feel uncomfortable having only one and store all of them in separate, safe places.
 
@@ -86,7 +88,7 @@ Now let's get to the interesting part: how does such a wallet actually work?
 
 The interface generates an address from your public key if you want to receive funds. Using this feature is pretty straightforward: if you click the receive button the process runs in the background and the address is displayed for you to share it with the sender. If you want to send funds the app creates the formal transaction that needs to be signed. The unsigned transaction is now sent to your hardware wallet, where it gets signed with your private key on the device. The signature is then returned to your computer and the complete transaction including the signature broadcasted to the network.
 
-![signing hardware wallet](/assets/post_files/technology/intermediate/types-of-wallets/signing_hardware_wallet.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet.jpg)
 
 Your private key(s) do not leave the device, so they are not visible to the computer you are using your hardware wallet with at any time. This is why a hardware wallet is considered the most secure way of storing crypto, especially large amounts.
 
@@ -102,4 +104,4 @@ With desktop, mobile, paper or hardware wallets you own the keys and nobody but 
 
 This whole movement of cryptocurrencies aims to give you back the power over your money, but...
 
-![with great power comes great responsibility](/assets/post_files/technology/intermediate/types-of-wallets/with-great-power-comes-great-responsibility.gif)
+![with great power comes great responsibility](/assets/post_files/technology/advanced/types-of-wallets/with-great-power-comes-great-responsibility.gif)
