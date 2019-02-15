@@ -16,7 +16,13 @@ $(function () {
     var activeLevel, activeTopic;
 
     function updateListArticles() {
-        if (!activeLevel || !activeTopic) return;
+        if (!activeTopic) return;
+
+        if (!activeLevel) {
+            // pre-selected Beginner level when user selects a topic
+            $(".js-SelectLevel[data-level='beginner']").click();
+            return;
+        }
 
         $(".topic-articles.open .collapse").collapse('hide');
 
