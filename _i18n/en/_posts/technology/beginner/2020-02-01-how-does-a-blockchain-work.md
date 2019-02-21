@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title:  "How does a Blockchain work?"
+title: "How does a Blockchain work?"
 permalink: technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner

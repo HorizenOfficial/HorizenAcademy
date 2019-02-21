@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title:  "Block Explorer Continued"
+title: "Block Explorer Continued"
 permalink: technology/advanced/block-explorer-continued/
 topic: technology
 level: advanced
@@ -23,7 +23,7 @@ There are a number of block explorers out there, often times several versions fo
 You will see an overview of the most recently created blocks on the landing page. Let's go through what we see here:
 
  - **Height**: the height is the number the block carries. The very first block created was block #0, after that came block #1 and then block #2. As you can see at the time of writing there have been quite a few blocks mined.
- - **Age**: Is the age of the block. It's self-explanatory, but there is a piece of interesting information between the lines: you might know that the block time, the interval in which new blocks are mined, is 10 minutes with Bitcoin. How come it took only 6 minutes to mine block 539.772 and only 9 minutes for block 539.771? This is because the block time is an average. There will always be blocks created slower and a few that will be produced a lot faster, but on average it will take 10 minutes. In our article about [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-mining %}), we explain to you how the block time is adjusted.
+ - **Age**: Is the age of the block. It's self-explanatory, but there is a piece of interesting information between the lines: you might know that the block time, the interval in which new blocks are mined, is 10 minutes with Bitcoin. How come it took only 6 minutes to mine block 539.772 and only 9 minutes for block 539.771? This is because the block time is an average. There will always be blocks created slower and a few that will be produced a lot faster, but on average it will take 10 minutes. In our article about [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), we explain to you how the block time is adjusted.
  - **Transactions**: the number of transactions included in this block. This means that in the 6 minutes it took to mine block 539.772 about 1500 transactions were conducted.
  - **Total Sent**: The 1547 transactions that took place add up to almost 4700 Bitcoins sent.
  - **Relayed By**: The miner (or mining pool) that solved the block and earned the block reward.
@@ -48,7 +48,7 @@ We have talked about the height before so we will get to the timestamp now. The 
 
 The "Relayed By" field shows who mined the block. Today's mining pools and their reward addresses are mostly known. This is how the block explorer "knows" who mined the block: it compares the address that received the newly generated coins (1A1zP1...) in the coinbase transaction with a number of known addresses from mining pools. In this case, we do know who the miner was, although the block explorer doesn't tell us: Satoshi Nakamoto himself.
 
-We talk about the _difficulty_ in our [mining article]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-mining %}) in more detail. The difficulty describes how hard the puzzle the miners need to solve is. It refers to the number of leading zeros in the block hash. As you can see on the right, the Genesis Block hash had 10 leading zeros. Today (as of the time of writing) blocks like block 539.772 need to have at least 18 leading zeros. The more leading zeros required, the harder the puzzle.
+We talk about the _difficulty_ in our [mining article]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}) in more detail. The difficulty describes how hard the puzzle the miners need to solve is. It refers to the number of leading zeros in the block hash. As you can see on the right, the Genesis Block hash had 10 leading zeros. Today (as of the time of writing) blocks like block 539.772 need to have at least 18 leading zeros. The more leading zeros required, the harder the puzzle.
 
 Bits, Size, and Weight all refer to the size of the data of a given block, not too spectacular. Version refers to the software that ran at the time the block was created.
 

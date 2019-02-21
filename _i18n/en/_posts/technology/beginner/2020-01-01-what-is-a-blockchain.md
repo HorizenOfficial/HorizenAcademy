@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title:  "What is a Blockchain?"
+title: "What is a Blockchain?"
 permalink: technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner

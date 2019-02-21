@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title:  "Hash Functions"
+title: "Hash Functions"
 permalink: technology/advanced/hash-functions/
 topic: technology
 level: advanced
-chapter: "How Does it work?"
+chapter: "How does a Blockchain work?"
 ---
 
 Hash functions are an integral part of blockchain technology and serve many purposes. A hash function is a mathematical function that takes an input of any given length and produces an output of fixed length. The output is often called a hash value, (hash) digest, or hash.

@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title:  "Block Explorer Introduction"
+title: "Block Explorer Introduction"
 permalink: technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner

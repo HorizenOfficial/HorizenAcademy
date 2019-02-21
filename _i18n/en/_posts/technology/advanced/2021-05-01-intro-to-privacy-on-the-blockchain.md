@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title:  "Privacy on the Blockchain"
+title: "Privacy on the Blockchain"
 permalink: technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced

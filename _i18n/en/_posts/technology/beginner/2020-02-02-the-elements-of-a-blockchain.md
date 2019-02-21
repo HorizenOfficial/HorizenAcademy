@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title:  "The elements of a blockchain"
+title: "The elements of a blockchain"
 permalink: technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner

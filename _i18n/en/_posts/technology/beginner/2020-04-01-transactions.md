@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title:  "Transactions"
+title: "Transactions"
 permalink: technology/beginner/transactions/
 topic: technology
 level: beginner
