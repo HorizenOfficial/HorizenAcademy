@@ -234,8 +234,31 @@ body {
       }
     }
     .topic-articles {
-      padding-left: 24px;
+      position: relative;
+      padding-left: 28px;
       display: none;
+      .arrow {
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        img {
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: transform 500ms ease, opacity 500ms ease;
+          width: 13px;
+          max-width: none;
+        }
+        .arrow-down {
+          opacity: 1;
+          transform: rotate( 0deg );
+        }
+        .arrow-up {
+          opacity: 0;
+          transform: rotate( 180deg );
+        }
+      }
       &.show {
         display: block;
       }
@@ -244,7 +267,18 @@ body {
         .chapter {
           color: white;
         }
+        .arrow {
+          .arrow-down {
+            opacity: 0;
+            transform: rotate( -180deg );
+          }
+          .arrow-up {
+            opacity: 1;
+            transform: rotate( 0deg );
+          }
+        }
       }
+
       .chapter {
         display: block;
         padding: 12px 0;

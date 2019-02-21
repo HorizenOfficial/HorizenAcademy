@@ -79,7 +79,14 @@ $(function () {
 
         $(".js-SelectLevel[data-level='" + postContent.data("level") + "']").addClass("active");
         $(".js-SelectTopic[data-topic='" + postContent.data("topic") + "']").addClass("active");
-        $("a[href='" + postContent.data("url") + "']").addClass("active").closest(".collapse").collapse('show');
+
+        var articleLink = $("#list-articles a[href='" + postContent.data("url") + "']");
+        console.log(articleLink);
+        if (articleLink.hasClass("chapter")) {
+            articleLink.next().collapse('show');
+        } else {
+            articleLink.addClass("active").closest(".collapse").collapse('show');
+        }
     }
 
 });
