@@ -1,6 +1,6 @@
 ---
 layout: post
-type: article
+type: intro
 title:  "Intro to Privacy on the Blockchain"
 permalink: technology/beginner/intro-to-privacy-on-the-blockchain/
 topic: technology

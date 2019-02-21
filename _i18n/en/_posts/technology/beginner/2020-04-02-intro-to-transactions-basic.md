@@ -8,7 +8,7 @@ level: beginner
 chapter: "Transactions"
 ---
 
-In the first article of our tech category, [What is a Blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-blockchain-as-a-data-structure %}), we said that the blockchain is a public ledger that keeps track of all the transactions that ever happened on the network. The article about [identity on a blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-identity-in-blockchain %}) explained that every user is characterized through an individual key pair. In the last article, we stated that [a wallet is a program]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}), that helps you with managing your keys and creating transactions. 
+In the first article of our tech category, [What is a Blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}), we said that the blockchain is a public ledger that keeps track of all the transactions that ever happened on the network. The article about [identity on a blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}) explained that every user is characterized through an individual key pair. In the last article, we stated that [a wallet is a program]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}), that helps you with managing your keys and creating transactions. 
 
 This article should give you a nice concept to keep in mind when thinking about what a cryptocurrency transaction is and how it works. 
 

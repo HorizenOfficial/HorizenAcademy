@@ -49,4 +49,4 @@ One of these single pages represents a block in this comparison, the pile of the
 
 The blockchain is simply a way to store information like lists and tables are. Public blockchains come with useful features that were not achievable until now. It is impossible to change information after the fact. The information is immutable and highly secure. That is why blockchain is perfect for supporting digital currencies.
 
-Another way we can look at blockchain is as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-a-protocol-to-transfer-value %}), as the internet is a protocol to transfer information. We will look at blockchain from this perspective in our next article.
+Another way we can look at blockchain is as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-03-a-protocol-to-transfer-value %}), as the internet is a protocol to transfer information. We will look at blockchain from this perspective in our next article.

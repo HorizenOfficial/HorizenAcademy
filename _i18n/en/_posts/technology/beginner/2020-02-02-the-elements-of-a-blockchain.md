@@ -5,7 +5,7 @@ title:  "The elements of a blockchain"
 permalink: technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner
-chapter: "How Does it work?"
+chapter: "How does a Blockchain work?"
 ---
 
 The last articles stated that on one hand, the blockchain is a data structure, a way to store information. On the other hand, it is a protocol to transfer value and the miners are the bookkeepers of a blockchain. We want to discuss the parties that play a part in the blockchain ecosystem in this article. Let's first talk about the term protocol again before we discuss that.
@@ -54,4 +54,4 @@ Miners are rewarded for solving the puzzle. This gives incentive for individuals
 This process generates new coins and creates an incentive for people to create a consensus.
 
 ### Summary
-In conclusion, miners and node operators are the two main entities in a blockchain. The nodes make up the infrastructure of the network. Miners are the bookkeepers that make the decisions regarding the order of events. They receive a reward for their efforts. The reward generates new coins. The next article is going to tackle the question of how [identity works in the context of the blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-identity-in-blockchain %}). It will cover the keys that we mentioned in this article and what they are for.
+In conclusion, miners and node operators are the two main entities in a blockchain. The nodes make up the infrastructure of the network. Miners are the bookkeepers that make the decisions regarding the order of events. They receive a reward for their efforts. The reward generates new coins. The next article is going to tackle the question of how [identity works in the context of the blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). It will cover the keys that we mentioned in this article and what they are for.
