@@ -110,8 +110,10 @@ gulp.task('concat', function() {
         // paths.bower + 'moment/moment.js',
         // paths.src + 'js/vendor/*.js',
 
-        paths.src + 'js/vendor/headroom.min.js',
-        paths.src + 'js/vendor/jQuery.headroom.min.js',
+        paths.bower + 'jquery.nicescroll/dist/jquery.nicescroll.min.js',
+
+        // paths.src + 'js/vendor/headroom.min.js',
+        // paths.src + 'js/vendor/jQuery.headroom.min.js',
 
         paths.src + 'js/scripts.js'
     ];

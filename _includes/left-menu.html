@@ -4,7 +4,7 @@
     </a>
 </div>
 
-<div class="article-nav">
+<div class="article-nav" id="article-nav">
     <div class="levels">
         <div class="row no-gutters">
             <div class="col-md-4">
@@ -58,7 +58,13 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="js-SelectTopic" data-topic="technology">
+                <a
+                        href="{% post_url /technology/beginner/2020-12-31-tech-beginner %}"
+                        class="js-SelectTopic" data-topic="technology"
+                        data-url-beginner="{% post_url /technology/beginner/2020-12-31-tech-beginner %}"
+                        data-url-advanced="{% post_url /technology/advanced/2021-12-31-tech-advanced %}"
+                        data-url-expert="#"
+                >
                     <div class="topic technology">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/technology-1.svg" alt="Technology" class="icon-inactive">
@@ -69,7 +75,13 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="#" class="js-SelectTopic" data-topic="privacy">
+                <a
+                        href="#b"
+                        class="js-SelectTopic" data-topic="privacy"
+                        data-url-beginner="#"
+                        data-url-advanced="#"
+                        data-url-expert="#"
+                >
                     <div class="topic privacy">
                         <div class="icon">
                             <img src="/assets/img/icons/categories/privacy-1.svg" alt="Privacy" class="icon-inactive">
@@ -103,6 +115,10 @@
                 {% assign current_chapter = "" %}
 
                 {% for post in site.posts reversed %}
+
+                {% unless post.chapter %}
+                {% continue %}
+                {% endunless %}
 
                 {% if current_chapter != post.chapter or current_topic != post.topic or current_level != post.level %}
                 {% assign current_level = post.level %}

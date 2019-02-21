@@ -12,6 +12,14 @@ $(function () {
     //     }
     // });
 
+    $("#article-nav").niceScroll({
+        cursorcolor:"#000",
+        cursoropacitymin: 0,
+        cursoropacitymax: 0.5,
+        cursorwidth: "8px",
+        cursorborder: "none"
+    });
+
 
     var activeLevel, activeTopic;
 
@@ -30,6 +38,8 @@ $(function () {
 
         listArticles.find(".topic-articles.show").removeClass("show");
         listArticles.find(".topic-articles.level-" + activeLevel + ".topic-" + activeTopic).addClass("show");
+
+        listArticles.find(".topic-articles.level-all" + ".topic-" + activeTopic).addClass("show");
     }
 
     $(".js-SelectLevel").click(function (e) {
@@ -44,23 +54,28 @@ $(function () {
         btn.addClass("active");
         activeLevel = btn.data("level");
 
-        updateListArticles();
-    });
-
-    $(".js-SelectTopic").click(function (e) {
-        e.preventDefault();
-        var btn = $(this);
-
-        if (btn.hasClass("active")) {
-            return;
-        }
-
-        btn.closest(".topics").find(".js-SelectTopic.active").removeClass("active");
-        btn.addClass("active");
-        activeTopic = btn.data("topic");
+        $(".js-SelectTopic").each(function (_, linkTopic) {
+            linkTopic = $(linkTopic);
+            linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
+        });
 
         updateListArticles();
     });
+
+    // $(".js-SelectTopic").click(function (e) {
+    //     e.preventDefault();
+    //     var btn = $(this);
+    //
+    //     if (btn.hasClass("active")) {
+    //         return;
+    //     }
+    //
+    //     btn.closest(".topics").find(".js-SelectTopic.active").removeClass("active");
+    //     btn.addClass("active");
+    //     activeTopic = btn.data("topic");
+    //
+    //     updateListArticles();
+    // });
 
     $(".chapter-articles")
         .on('show.bs.collapse', function () {
@@ -68,6 +83,12 @@ $(function () {
         })
         .on('hide.bs.collapse', function () {
             $(this).closest(".topic-articles").removeClass("open");
+        })
+        .on('shown.bs.collapse', function () {
+            $("#article-nav").getNiceScroll().resize();
+        })
+        .on('hidden.bs.collapse', function () {
+            $("#article-nav").getNiceScroll().resize();
         });
 
     var postContent = $(".js-PostContent");

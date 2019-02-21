@@ -24,7 +24,8 @@
     "wow": "wowjs#^1.1.2",
     "animate.css": "^3.5.2",
     "js-cookie": "^2.2.0",
-    "popper.js": "^1.14.0"
+    "popper.js": "^1.14.0",
+    "jquery.nicescroll": "^3.7.6"
   },
   "dependencies": {
     "aos": "^2.2.0",
