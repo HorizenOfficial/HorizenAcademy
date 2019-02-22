@@ -26,20 +26,21 @@ $(function () {
     function updateListArticles() {
         if (!activeTopic) return;
 
-        if (!activeLevel) {
-            // pre-selected Beginner level when user selects a topic
-            $(".js-SelectLevel[data-level='beginner']").click();
-            return;
-        }
+        // if (!activeLevel) {
+        //     // pre-selected Beginner level when user selects a topic
+        //     $(".js-SelectLevel[data-level='beginner']").click();
+        //     return;
+        // }
 
-        $(".topic-articles.open .collapse").collapse('hide');
+        // $(".topic-articles.open .collapse").collapse('hide');
 
-        var listArticles = $("#list-articles");
+        var articleNav = $("#article-nav");
 
-        listArticles.find(".topic-articles.show").removeClass("show");
-        listArticles.find(".topic-articles.level-" + activeLevel + ".topic-" + activeTopic).addClass("show");
+        articleNav.find(".topic-articles.show").removeClass("show");
+        $("#list-"+activeTopic+"-articles .topic-articles.level-" + activeLevel).addClass("show");
+        // articleNav.find(".topic-articles.level-" + activeLevel + ".topic-" + activeTopic).addClass("show");
 
-        listArticles.find(".topic-articles.level-all" + ".topic-" + activeTopic).addClass("show");
+        articleNav.find("#list-" + activeTopic + "-articles").addClass("show");
     }
 
     $(".js-SelectLevel").click(function (e) {
@@ -101,12 +102,16 @@ $(function () {
         $(".js-SelectLevel[data-level='" + postContent.data("level") + "']").addClass("active");
         $(".js-SelectTopic[data-topic='" + postContent.data("topic") + "']").addClass("active");
 
-        var articleLink = $("#list-articles a[href='" + postContent.data("url") + "']");
-        console.log(articleLink);
-        if (articleLink.hasClass("chapter")) {
-            articleLink.next().collapse('show');
-        } else {
+        $(".js-SelectTopic").each(function (_, linkTopic) {
+            linkTopic = $(linkTopic);
+            linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
+        });
+
+        var articleLink = $("#article-nav a[href='" + postContent.data("url") + "']");
+        if (articleLink.hasClass("article-link")) {
             articleLink.addClass("active").closest(".collapse").collapse('show');
+        } else if (articleLink.hasClass("chapter-link")) {
+            articleLink.next().collapse('show');
         }
     }
 
