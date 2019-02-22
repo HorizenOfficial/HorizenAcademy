@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Blockchain as a Data Structure"
-permalink: technology/beginner/blockchain-as-a-data-structure/
+permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner
 chapter: "What is a Blockchain?"

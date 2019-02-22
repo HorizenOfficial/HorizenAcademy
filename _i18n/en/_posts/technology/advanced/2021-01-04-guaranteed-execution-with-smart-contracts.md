@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Guaranteed Execution with Smart Contracts"
-permalink: technology/advanced/guaranteed-execution-with-smart-contracts/
+permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
 chapter: "What is a Blockchain?"

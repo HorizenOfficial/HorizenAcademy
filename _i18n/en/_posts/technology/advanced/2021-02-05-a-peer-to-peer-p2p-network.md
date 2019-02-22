@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "A Peer-to-Peer (P2P) Network"
-permalink: technology/advanced/a-peer-to-peer-p2p-network/
+permalink: /technology/advanced/a-peer-to-peer-p2p-network/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"

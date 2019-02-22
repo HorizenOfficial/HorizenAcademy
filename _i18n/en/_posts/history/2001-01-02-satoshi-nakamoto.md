@@ -2,9 +2,8 @@
 layout: post
 type: article
 title: "Satoshi Nakamoto"
-permalink: history/satoshi-nakamoto/
+permalink: /history/satoshi-nakamoto/
 topic: history
-level: all
 chapter: "From Cypherpunks to Horizen"
 ---
 

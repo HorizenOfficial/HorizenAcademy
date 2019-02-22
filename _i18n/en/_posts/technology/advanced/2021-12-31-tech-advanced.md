@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Tech Advanced"
-permalink: technology/advanced/
+permalink: /technology/advanced/
 topic: technology
 level: advanced
 ---

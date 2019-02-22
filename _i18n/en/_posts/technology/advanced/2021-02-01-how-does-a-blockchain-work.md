@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "How Does a Blockchain Work?"
-permalink: technology/advanced/how-does-a-blockchain-work/
+permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"

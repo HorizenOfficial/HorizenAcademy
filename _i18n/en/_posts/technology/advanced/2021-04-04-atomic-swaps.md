@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Atomic Swaps"
-permalink: technology/advanced/atomic-swaps/
+permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced
 chapter: "Transactions"

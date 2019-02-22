@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Transactions"
-permalink: technology/beginner/transactions/
+permalink: /technology/beginner/transactions/
 topic: technology
 level: beginner
 chapter: "Transactions"

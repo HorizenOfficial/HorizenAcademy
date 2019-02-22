@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Hash Functions"
-permalink: technology/advanced/hash-functions/
+permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"

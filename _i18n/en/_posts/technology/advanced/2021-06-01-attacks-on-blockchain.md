@@ -1,8 +1,8 @@
 ---
 layout: post
-type: article
+type: intro
 title: "Attacks on Blockchain"
-permalink: technology/advanced/attacks-on-blockchain/
+permalink: /technology/advanced/attacks-on-blockchain/
 topic: technology
 level: advanced
 chapter: "Attacks"

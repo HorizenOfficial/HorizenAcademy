@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "A Protocol to Transfer Value"
-permalink: technology/beginner/a-protocol-to-transfer-value/
+permalink: /technology/beginner/a-protocol-to-transfer-value/
 topic: technology
 level: beginner
 chapter: "What is a Blockchain?"

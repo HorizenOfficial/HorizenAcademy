@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Consensus Mechanisms"
-permalink: technology/advanced/consensus-mechanisms/
+permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"

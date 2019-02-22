@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Types of wallets"
-permalink: technology/advanced/types-of-wallets/
+permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
 chapter: "Wallets"

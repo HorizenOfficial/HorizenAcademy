@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Identity in Blockchain"
-permalink: technology/beginner/identity-in-blockchain/
+permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner
 chapter: "How does a Blockchain work?"

@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "What is a Blockchain?"
-permalink: technology/beginner/what-is-a-blockchain/
+permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner
 chapter: "What is a Blockchain?"

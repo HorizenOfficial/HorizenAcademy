@@ -1,8 +1,8 @@
 ---
 layout: post
-type: article
+type: intro
 title: "Privacy on the Blockchain"
-permalink: technology/advanced/privacy-on-the-blockchain/
+permalink: /technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced
 chapter: "Privacy"

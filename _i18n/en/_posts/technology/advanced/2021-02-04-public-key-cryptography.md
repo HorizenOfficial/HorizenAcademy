@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Public Key Cryptography"
-permalink: technology/advanced/public-key-cryptography/
+permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"

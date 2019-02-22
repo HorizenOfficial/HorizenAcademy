@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Tech Beginner"
-permalink: technology/beginner/
+permalink: /technology/beginner/
 topic: technology
 level: beginner
 ---

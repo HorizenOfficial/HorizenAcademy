@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "The Elements of a Blockchain"
-permalink: technology/advanced/the-elements-of-a-blockchain/
+permalink: /technology/advanced/the-elements-of-a-blockchain/
 topic: technology
 level: advanced
 chapter: "How does a Blockchain work?"
