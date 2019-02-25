@@ -84,7 +84,9 @@ $(function () {
         })
         .on('hide.bs.collapse', function () {
             $(this).closest(".topic-articles").removeClass("open");
-        })
+        });
+
+    $(".chapter-articles, .one-level-topic-articles")
         .on('shown.bs.collapse', function () {
             $("#article-nav").getNiceScroll().resize();
         })

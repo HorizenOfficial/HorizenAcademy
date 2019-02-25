@@ -2,7 +2,7 @@ body {
   font-family: $base-font-family;
   color: #121F1F;
   font-weight: $base-font-weight;
-  //padding-top: 66px;
+  padding-top: 81px;
 }
 
 
@@ -118,6 +118,17 @@ body {
       height: 55px;
     }
   }
+  .bottom-links {
+    padding: 12px;
+    a {
+      display: block;
+      color: #3d6892;
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .site-wrapper {
@@ -131,7 +142,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 15px;
-  height: calc(100% - 81px);
+  height: calc(100% - 170px);
   a {
     color: #3d6892;
     &:hover, &:active, &.active {
