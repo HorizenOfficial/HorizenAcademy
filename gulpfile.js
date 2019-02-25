@@ -105,15 +105,15 @@ gulp.task('concat', function() {
         // paths.bower + 'aos/dist/aos.js',
         // paths.bower + 'lity/dist/lity.js',
         // paths.bower + 'select2/dist/js/select2.min.js',
-        // paths.bower + 'ajaxchimp/jquery.ajaxchimp.js',
+        paths.bower + 'ajaxchimp/jquery.ajaxchimp.js',
         // paths.bower + 'js-cookie/src/js.cookie.js',
         // paths.bower + 'moment/moment.js',
         // paths.src + 'js/vendor/*.js',
 
         paths.bower + 'jquery.nicescroll/dist/jquery.nicescroll.min.js',
 
-        // paths.src + 'js/vendor/headroom.min.js',
-        // paths.src + 'js/vendor/jQuery.headroom.min.js',
+        paths.src + 'js/vendor/headroom.min.js',
+        paths.src + 'js/vendor/jQuery.headroom.min.js',
 
         paths.src + 'js/scripts.js'
     ];

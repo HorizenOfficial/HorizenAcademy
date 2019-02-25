@@ -1,16 +1,16 @@
 $(function () {
 
-    // $(".site-nav").headroom({
-    //     "tolerance": 5,
-    //     "offset": 40,
-    //     "classes": {
-    //         "initial": "animated",
-    //         "pinned": "slideDown",
-    //         "unpinned": "slideUp",
-    //         "top": "headroom--top",
-    //         "notTop": "headroom--not-top"
-    //     }
-    // });
+    $(".site-nav").headroom({
+        "tolerance": 5,
+        "offset": 40,
+        "classes": {
+            "initial": "animated",
+            "pinned": "slideDown",
+            "unpinned": "slideUp",
+            "top": "headroom--top",
+            "notTop": "headroom--not-top"
+        }
+    });
 
     $("#article-nav").niceScroll({
         cursorcolor:"#000",
