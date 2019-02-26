@@ -60,7 +60,21 @@ $(function () {
             linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
         });
 
+        var oldActiveChapter = $(".chapter-articles.collapse.show");
+
         updateListArticles();
+
+        if (oldActiveChapter.length) {
+            var title = oldActiveChapter.closest(".topic-articles").find(".chapter-link").text().trim();
+
+            $("#article-nav .topic-articles.show").each(function(_, topic) {
+                topic = $(topic);
+                var t = topic.find(".chapter-link").text().trim();
+                if (t === title) {
+                    topic.find(".chapter-articles.collapse").collapse('show');
+                }
+            });
+        }
     });
 
     // $(".js-SelectTopic").click(function (e) {
