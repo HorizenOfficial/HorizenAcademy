@@ -92,7 +92,7 @@ When you set up a wallet the software will first generate a large random number 
 
 Head to our next article to learn about the Peer-to-Peer network: The infrastructure most public blockchains are built upon.
 
-
+### Further reading
 
 {%
   include further_reading.html
