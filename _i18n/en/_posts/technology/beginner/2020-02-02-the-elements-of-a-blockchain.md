@@ -18,6 +18,7 @@ A protocol is like a set of rules. These rules implemented govern a given blockc
 Now that you know that a protocol, a term you will hear quite often is just a set of rules let's take a look at the individuals that play a part in a blockchain ecosystem.
 
 ### Nodes
+
 A network of computers or servers (_nodes_) run a blockchain. They are constantly communicating to exchange information. Nodes make up the infrastructure of the blockchain. A _full node_ is a node that maintains a copy of the blockchain. A light node does not keep a copy of the blockchain. The light node must connect to a full node before it can interact with the blockchain. You need to communicate with the network to be able to use a cryptocurrency such as ZEN or Bitcoin. You could compare the distributed network of a blockchain to the infrastructure supporting your mobile phone in this sense.
 
 A _full node_ is like a cell phone tower that your phone is connecting to (a _light node_ would be the phone here). All the antenna stations (full nodes) connect to each other and make up the communication networks infrastructure. If you want to make a call with your phone, you need to connect to a cell phone tower first, before you can interact with any other mobile phone.
@@ -29,6 +30,7 @@ You can run a full node, and you should if you want to contribute to the stabili
 ![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes.png)
 
 ### Miner
+
 Miners are nodes as well. They support the network by forwarding information and maintaining a copy of the blockchain, just like all the other nodes. Additionally, the miners are constantly trying to solve a puzzle required to create new blocks.
 
 Leaving the technical details aside, for now, their actual purpose for the network is the following: Each new block can be understood as a collective decision on the history of the last few minutes. The network comes to _consensus_ on the order of transactions for that time period. For Horizen this time period is 2.5 min on average, for Bitcoin, it is 10 minutes.
@@ -54,9 +56,10 @@ Miners are rewarded for solving the puzzle. This gives incentive for individuals
 This process generates new coins and creates an incentive for people to create a consensus.
 
 ### Summary
+
 In conclusion, miners and node operators are the two main entities in a blockchain. The nodes make up the infrastructure of the network. Miners are the bookkeepers that make the decisions regarding the order of events. They receive a reward for their efforts. The reward generates new coins. The next article is going to tackle the question of how [identity works in the context of the blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). It will cover the keys that we mentioned in this article and what they are for.
 
-
+### Further Reading
 
 {%
   include further_reading.html
