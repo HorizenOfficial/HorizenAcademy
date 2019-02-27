@@ -93,8 +93,33 @@ When you set up a wallet the software will first generate a large random number 
 Head to our next article to learn about the Peer-to-Peer network: The infrastructure most public blockchains are built upon.
 
 
-[https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f](https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f)
 
-[https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3](https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3)
+{%
+  include further_reading.html
+  title="How to create a Bitcoin wallet address from a private key"
+  summary="An article outlining the different steps from private key to wallet address including the corresponding code in python."
+  author="Timur Badretdinov"
+  url="https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f"
+  image="https://cdn-images-1.medium.com/max/1200/1*yrGW1KubP_JKLR1CVg074g.png"
+%}
 
-[https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/)
+{%
+  include further_reading.html
+  title="What is the math behind elliptic curve cryptography?"
+  summary="Hans does a brilliant job at explaining the connection between private key, public key, address and digital signature in this article."
+  author="Hans Knutson"
+  url="https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3"
+  image="https://cdn-images-1.medium.com/max/1200/1*4dcCrlQfGqZECDLy-25fnw.png"
+%}
+
+{%
+  include further_reading.html
+  title="Elliptic Curve Cryptography: a gentle introduction"
+  summary="Also Andrea calls it a gentle introduction this is an article for those of you that really care about the math behind ECC."
+  author="Andrea Corbellini"
+  url="https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/"
+  image="https://andrea.corbellini.name/images/point-addition.png"
+%}
+
+
+

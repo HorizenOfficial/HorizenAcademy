@@ -43,3 +43,12 @@ To use private transactions with Horizen, you will use a different address type.
 While cryptocurrencies are not anonymous by default, some of them offer features that allow you to transact privately. To increase the level of privacy, you should use different addresses for every incoming transaction. This makes it harder for an adversary to track your transaction history. Most wallets will do this automatically for you. You can use cryptocurrencies with enhanced privacy features, like Horizen, to transact completely private. This is done by using a different address type (z-Addresses).
 
 In our advanced section, we will look at a few more privacy conserving concepts.
+
+{%
+  include further_reading.html
+  title="How Zcoin's Privacy Technology Compares to the Competition"
+  summary="An extensive comparison of different privacy mechanisms on the blockchain used by different Cryptocurrencies"
+  author="Reuben Yap, Zcoin"
+  url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
+  image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
+%}

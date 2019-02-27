@@ -1,0 +1,17 @@
+<div class="further-reading">
+    <a href="{{ include.url }}" target="_blank">
+        <div class="row no-gutters align-items-center">
+            <div class="col-10 col-sm-9">
+                <div class="p-3">
+                    <h4 class="title">{{ include.title }}</h4>
+                    <div class="author">― {{ include.author }}</div>
+                    <div class="summary">{{ include.summary }}</div>
+                    <div class="link">{{ include.url }}</div>
+                </div>
+            </div>
+            <div class="col-2 col-sm-3">
+                <img src="{{ include.image }}" alt="{{ include.title }}">
+            </div>
+        </div>
+    </a>
+</div>

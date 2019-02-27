@@ -57,5 +57,34 @@
       font-weight: 600;
       color: #041742;
     }
+    .further-reading {
+      border: 1px solid #e5e5e5;
+      margin-top: 2rem;
+      a {
+        color: #121F1F;
+        text-decoration: none;
+      }
+      .title {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 0;
+      }
+      .author {
+        color: #888;
+        font-size: 14px;
+      }
+      .summary {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .link {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #888;
+        font-size: 12px;
+      }
+    }
   }
 }

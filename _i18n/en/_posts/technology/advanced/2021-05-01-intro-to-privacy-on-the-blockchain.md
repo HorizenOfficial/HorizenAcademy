@@ -78,6 +78,15 @@ The idea of using Zero-Knowledge Proofs for cryptocurrency transactions is the f
 There are many ways to reclaim your privacy on a public blockchain. The approaches like Change Addresses and Coin Mixers don't provide strong privacy, but they help make it harder to trace transactions to their origin and link real-world identities to addresses on the blockchain. Ring Signatures and Zero-Knowledge Proofs are more advanced concepts, that actually allow you to transact entirely private, even on fully open and public blockchains.
 
 
+{%
+  include further_reading.html
+  title="How Zcoin's Privacy Technology Compares to the Competition"
+  summary="An extensive comparison of different privacy mechanisms on the blockchain used by different Cryptocurrencies"
+  author="Reuben Yap, Zcoin"
+  url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
+  image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
+%}
+
 Links:
 
 [http://www.coinjoinsudoku.com/](http://www.coinjoinsudoku.com/)

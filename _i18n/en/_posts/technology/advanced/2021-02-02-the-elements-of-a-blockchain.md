@@ -44,5 +44,15 @@ There are many consensus mechanisms. The "original" that Horizen, Bitcoin and mo
 
 This is a great blockchain Demo. We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand this somewhat complex topic. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
 
-
 [https://blockchaindemo.io/](https://blockchaindemo.io/)
+
+
+
+{%
+  include further_reading.html
+  title="Three Elements to Understanding Blockchain & Its Greatest Opportunity"
+  summary="A different take on the elements of the blockchain. The author names openness, consensus and gamification as the three main components of blockchain technology."
+  author="Brad Arlen"
+  url="https://medium.com/coinmonks/three-elements-to-understanding-blockchain-its-greatest-opportunity-e9d89086692a"
+  image="https://cdn-images-1.medium.com/max/1200/1*3S5O0k-Ee65N-AmbbWw-Lg.png"
+%}
