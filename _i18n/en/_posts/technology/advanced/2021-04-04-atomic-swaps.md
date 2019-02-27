@@ -64,8 +64,31 @@ Atomic Swaps present an alternative to centralized exchanges used today once the
 
 This was the last article on transactions in the advanced section. To learn more about how transactions work and what types of transactions there are you can visit our expert level. On the advanced level, we will continue with an **introduction to privacy-preserving techniques** on the blockchain.
 
+### Further Reading
 
+{%
+  include further_reading.html
+  title="Atomic Swaps - The Interoperability Revolution in Cryptos"
+  summary="An overview of Atomic Swap integrations and the benefits as well as drawbacks of the technology."
+  author="Faisal Khan"
+  url="https://medium.com/datadriveninvestor/atomic-swaps-the-interoperability-revolution-in-cryptos-f7ddf1381d47"
+  image="https://cdn-images-1.medium.com/max/800/0*2BCpfDnLJoSKI6P4"
+%}
 
-**Further Reading**
+{%
+  include further_reading.html
+  title="Everything You Need to Know about Atomic Swaps, and How Komodo is Advancing the Technology"
+  summary="A timeline of Atomic Swaps and an outlook on what this means for decentralized exchanges."
+  author="Komodo Platform"
+  url="https://medium.com/@komodoplatform/everything-you-need-to-know-about-atomic-swaps-and-how-komodo-is-advancing-the-technology-cadaec50da7c"
+  image="https://cdn-images-1.medium.com/fit/c/50/50/1*WEC_feWnTjLuc6acdYSjlQ.png"
+%}
 
-[https://medium.com/datadriveninvestor/atomic-swaps-the-interoperability-revolution-in-cryptos-f7ddf1381d47](https://medium.com/datadriveninvestor/atomic-swaps-the-interoperability-revolution-in-cryptos-f7ddf1381d47)
+{%
+  include further_reading.html
+  title="Atomic Swap compatibility of different cryptocurrencies."
+  summary="This website shows which crypto pairs already support Atomic Swaps"
+  author=""
+  url="https://swapready.net/"
+  image=""
+%}
