@@ -8,7 +8,7 @@ level: advanced
 chapter: "How does a Blockchain work?"
 ---
 
-There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
+Hello. There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
 
 ![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works.jpg)
 
