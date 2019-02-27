@@ -33,6 +33,4 @@ There are three pieces of information left:
  - The number of confirmations tells you how old and a transaction is. Every block that is created (mined) after a transaction is included in the blockchain is called a confirmation of that transaction. 
  - There is the total volume of the transaction.
 
-We encourage you to go to our block explorer and start playing around with it. The landing page will show you the latest transactions in real time if you do not have an address yet to start exploring. Just pick one by clicking on it and you will see the associated addresses. You can start exploring from there.
-
-[https://explorer.zen-solutions.io/](https://explorer.zen-solutions.io/)
+We encourage you to go to our [block explorer](https://explorer.zen-solutions.io/) and start playing around with it. The landing page will show you the latest transactions in real time if you do not have an address yet to start exploring. Just pick one by clicking on it and you will see the associated addresses. You can start exploring from there.
