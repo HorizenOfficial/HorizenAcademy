@@ -15,13 +15,13 @@ In our first article, we will go back in time to see where blockchain technology
 
 Encryption was primarily used for military purposes before the 1970s. People at that time were living in the analog world. Few had computers and even fewer could imagine a technology that would connect almost every human being on the planet - the internet.
 
-Two publications brought cryptography out in the open, namely the "Data Encryption Standard" published by the US Government and a paper called "New Directions in Cryptography" by Dr. Whitfield Diffie and Dr. Martin Hellman published in 1976.
+Two publications brought cryptography out in the open, namely the "Data Encryption Standard" published by the US Government and a paper called ["New Directions in Cryptography"](https://ee.stanford.edu/~hellman/publications/24.pdf) by Dr. Whitfield Diffie and Dr. Martin Hellman published in 1976.
 
-Dr. David Chaum started writing on topics such as anonymous digital cash and pseudonymous reputation systems in the 1980s, such as the ones described in "Security without Identification: Transaction Systems to make Big Brother Obsolete". This was the first step towards the digital currencies we are seeing today.
+Dr. David Chaum started writing on topics such as anonymous digital cash and pseudonymous reputation systems in the 1980s, such as the ones described in ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://www.chaum.com/publications/Security_Wthout_Identification.html). This was the first step towards the digital currencies we are seeing today.
 
 ### The Cypherpunks
 
-It wasn't until 1992 that a group of cryptographers in the San Francisco Bay area started meeting up on a regular basis to discuss their work and related ideas. They built a basis for years of cryptographic research to come. Besides their regular meetings, they also started the Cypherpunk mailing list in which they discussed many ideas including those which led to the birth of Bitcoin. In late 1992 Eric Hughes, one of the first cypherpunks, wrote "A Cypherpunks's Manifesto" laying out the ideals and vision of the movement.
+It wasn't until 1992 that a group of cryptographers in the San Francisco Bay area started meeting up on a regular basis to discuss their work and related ideas. They built a basis for years of cryptographic research to come. Besides their regular meetings, they also started the Cypherpunk mailing list in which they discussed many ideas including those which led to the birth of Bitcoin. In late 1992 Eric Hughes, one of the first cypherpunks, wrote ["A Cypherpunks's Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) laying out the ideals and vision of the movement.
 
 _Note: We encourage you to read A Cypherpunk's Manifesto. The Manifesto is just as relevant today (if not more than) as it was in 1992. This short read takes only a few minutes of your time. It's astonishing to see how much foresight the early members had when most people didn't even think about computers yet._ 
 
@@ -49,14 +49,19 @@ _"The traditional banking model achieves a level of privacy by limiting access t
 
 Technology did not enable strong privacy prior to the 20th century, but neither did it enable affordable mass surveillance. We believe in the human right to privacy and work towards enabling anybody that wishes to claim his or her privacy to be able to do so. We see a cryptocurrency with selective privacy as a good step in the right direction of reclaiming our privacy.
 
+### Further Readding
+
+{% include further_reading.html 
+title="Bitcoin and the Rise of the Cypherpunks" 
+summary="This article is tracing the history of the Cypherpunks to understand the motivations behind the movement that spawned bitcoin." 
+author="Jameson Lopp" 
+url="https://www.coindesk.com/the-rise-of-the-cypherpunks" 
+image="https://static.coindesk.com/wp-content/uploads/2016/04/CYPHERPUNK-Final.jpg" %}
 
 
-[https://csrc.nist.gov/publications/fips/fips46-3/fips46-3.pdf](https://csrc.nist.gov/publications/fips/fips46-3/fips46-3.pdf)
-
-[https://ee.stanford.edu/~hellman/publications/24.pdf](https://ee.stanford.edu/~hellman/publications/24.pdf)
-
-[https://www.chaum.com/publications/Security_Wthout_Identification.html](https://www.chaum.com/publications/Security_Wthout_Identification.html)
-
-[https://www.coindesk.com/the-rise-of-the-cypherpunks](https://www.coindesk.com/the-rise-of-the-cypherpunks)
-
-[https://www.activism.net/cypherpunk/manifesto.html](https://www.activism.net/cypherpunk/manifesto.html)
+{% include further_reading.html 
+title="A Cypherpunk's Manifesto" 
+summary="A Cypherpunk's Manifesto outlines the motivations and core values of the movement." 
+author="Eric Hughes" 
+url="https://www.activism.net/cypherpunk/manifesto.html" 
+image="" %}
