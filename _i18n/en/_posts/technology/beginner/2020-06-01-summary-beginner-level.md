@@ -57,3 +57,7 @@ If you feel comfortable about everything you have read and would like to keep le
 We hope you enjoyed this series of articles. Please let us know if there is anything that you find confusing. The content provided is and will be work in progress for a while. We are always open to suggestions and constructive feedback so drop us a message at [academy@horizen.global](mailto:academy@horizen.global) if you want to share your thoughts with us.
 
 **Your Horizen Team**
+
+### Further Reading
+
+{% include further_reading.html title="Planting Bitcoin" summary="A brilliant article examining the different factors that contributed to Bitcoins success. Dan Held is one of the best writers in the blockchain space and compares the evolutionary steps of the Bitcoin protocol to the different phases of planting a tree." author="Dan Held" url="https://medium.com/@danhedl/planting-bitcoin-56bd1459cb23" image="https://cdn-images-1.medium.com/max/1200/1*ndsz9PCJFuRuqv2Ayb3Vkw.png" %}
