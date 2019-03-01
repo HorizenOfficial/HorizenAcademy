@@ -10,7 +10,7 @@ chapter: "How does a Blockchain work?"
 
 Hash functions are an integral part of blockchain technology and serve many purposes. A hash function is a mathematical function that takes an input of any given length and produces an output of fixed length. The output is often called a hash value, (hash) digest, or hash.
 
-There are many hash functions and just as many online "calculators" for hash functions such as this one. The calculators allow you to hash any input that you like with different hash functions at the same time. The size of the input can range from a single digit to entire files, but the size of the output will always be the same.
+There are [many hash functions](https://en.wikipedia.org/wiki/List_of_hash_functions) and just as many online "calculators" for hash functions such as [this one](https://www.fileformat.info/tool/hash.htm). The calculators allow you to hash any input that you like with different hash functions at the same time. The size of the input can range from a single digit to entire files, but the size of the output will always be the same.
 
 A cryptographic hash function must fulfill the following set of criteria to be viable for use in a blockchain:
 
@@ -35,6 +35,7 @@ Hash Functions are the first cornerstone of blockchain technology. A hash of a f
 
 In our next article, we will look at public-key cryptography. Public-key cryptography is the second cornerstone of blockchain tech and the concept that makes up your "identity" on the blockchain.
 
+### Further Reading
 
 {%
   include further_reading.html
@@ -44,8 +45,3 @@ In our next article, we will look at public-key cryptography. Public-key cryptog
   url="https://medium.com/swlh/this-simple-yet-powerful-invention-is-changing-the-world-d04688c25f13"
   image="https://cdn-images-1.medium.com/max/1200/1*rONjogTs70KIuLyAO_oy_g.png"
 %}
-
-
-[https://en.wikipedia.org/wiki/List_of_hash_functions](https://en.wikipedia.org/wiki/List_of_hash_functions)
-
-[https://www.fileformat.info/tool/hash.htm](https://www.fileformat.info/tool/hash.htm)
