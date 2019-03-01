@@ -42,11 +42,9 @@ There are many consensus mechanisms. The "original" that Horizen, Bitcoin and mo
 
 ### Demo
 
-This is a great blockchain Demo. We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand this somewhat complex topic. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
+This is a [great blockchain Demo](https://blockchaindemo.io/). We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand this somewhat complex topic. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
 
-[https://blockchaindemo.io/](https://blockchaindemo.io/)
-
-
+### Further Reading
 
 {%
   include further_reading.html
