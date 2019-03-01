@@ -12,4 +12,4 @@ In a Peer-to-Peer network, your connection may get lost as well, because a peer 
 
 ### graphic here
 
-We talk about Peer-to-Peer networks indirectly in our [Technology Beginner section]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}) and directly in our [Advanced Technology section]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-the-elements-of-a-blockchain %}) in case you want to know more about it.
+We talk about Peer-to-Peer networks indirectly in our [Technology Beginner section]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}) and directly in our [Advanced Technology section]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}) in case you want to know more about it.
