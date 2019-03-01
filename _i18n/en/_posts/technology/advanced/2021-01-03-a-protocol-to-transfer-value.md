@@ -12,7 +12,7 @@ We will now look at blockchain from a different perspective. This perspective co
 
 > “[The] Bitcoin protocol and network today [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
 
-The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. Techopedia's definition of a network protocol goes as follows:
+The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. [Techopedia's definition](https://www.techopedia.com/definition/12938/network-protocols) of a network protocol goes as follows:
 
 > "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication." - Techopedia
 
@@ -70,8 +70,7 @@ I would like to end this article the same way it began, with a quote from Jeff G
 
 > "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik, Bitcoin Core Developer
 
-[https://www.techopedia.com/definition/12938/network-protocols](https://www.techopedia.com/definition/12938/network-protocols)
-
+### Further Reading
 
 {%
   include further_reading.html
