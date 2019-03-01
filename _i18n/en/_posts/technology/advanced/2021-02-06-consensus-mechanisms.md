@@ -71,7 +71,7 @@ We will pick up on this discussion once again at the end of our article on minin
 
 In the Proof-of-Work method, miners are voting on a version of the history with the weight of the computational power they are controlling. In the Proof-of-Stake method, validators are voting on a version of the history with the weight of the funds or stake they own on the blockchain. While PoW has proven secure for over a decade now, the security of PoS blockchains remains to be proven. In our next article on mining, we will finally explain what the "puzzle" or "computationally expensive task" is, that we have been vaguely talking about up until now.
 
-
+### Further Reading
 
 {%
   include further_reading.html
@@ -81,6 +81,3 @@ In the Proof-of-Work method, miners are voting on a version of the history with 
   url="https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95"
   image="https://cdn-images-1.medium.com/max/1200/1*Z72T7mvIjOryzydJotUgzA.jpeg"
 %}
-
-
-[https://medium.com/coinmonks/blockchain-consensus-and-fault-tolerance-in-a-nutshell-765de83b8d03](https://medium.com/coinmonks/blockchain-consensus-and-fault-tolerance-in-a-nutshell-765de83b8d03)
