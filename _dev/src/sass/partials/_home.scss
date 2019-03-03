@@ -29,6 +29,45 @@
     .lead {
       font-weight: normal;
     }
+    .skill-levels {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      .level {
+        margin-left: 2px;
+        margin-right: 2px;
+        border: 1px solid #e5e5e5;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        .level-name {
+          text-transform: uppercase;
+          margin-top: 0.75rem;
+          font-weight: bold;
+        }
+        img {
+          width: 50%;
+
+        }
+        .icon-active {
+          display: none;
+        }
+      }
+      a {
+        color: #121F1F;
+        &:hover {
+          color: #121F1F;
+          text-decoration: none;
+        }
+      }
+      a.active, a:hover {
+        .icon-inactive {
+          display: none;
+        }
+        .icon-active {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 

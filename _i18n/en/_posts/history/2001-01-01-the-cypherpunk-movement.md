@@ -11,11 +11,11 @@ In our first article, we will go back in time to see where blockchain technology
 
 ### Cryptography for the People
 
-![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions.png)
-
 Encryption was primarily used for military purposes before the 1970s. People at that time were living in the analog world. Few had computers and even fewer could imagine a technology that would connect almost every human being on the planet - the internet.
 
 Two publications brought cryptography out in the open, namely the "Data Encryption Standard" published by the US Government and a paper called ["New Directions in Cryptography"](https://ee.stanford.edu/~hellman/publications/24.pdf) by Dr. Whitfield Diffie and Dr. Martin Hellman published in 1976.
+
+![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions.png)
 
 Dr. David Chaum started writing on topics such as anonymous digital cash and pseudonymous reputation systems in the 1980s, such as the ones described in ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://www.chaum.com/publications/Security_Wthout_Identification.html). This was the first step towards the digital currencies we are seeing today.
 

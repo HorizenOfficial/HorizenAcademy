@@ -7,6 +7,8 @@ topic: history
 chapter: "From Cypherpunks to Horizen"
 ---
 
+![History Horizen logos](/assets/post_files/history/from-zencash-to-horizen/History-Logos.jpg)
+
 ### The Birth of ZenCash
 
 It started almost by accident. Rob Viglione, the co-founder of Horizen, was finishing his Ph.D. at the University of South Carolina, teaching a blockchain course, and working at ZClassic as a part-time hobby. ZClassic had a really informal team, but Rob was passionate about this project. He gradually increased his commitment and activity in the community and took on a leadership role as the project developed. Rob met Rolf Versluis while working collaboratively on ZClassic. They both loved the ZClassic project, but they had a vision for what the future of privacy, governance, and economics could look like. They learned of one another's shared visions through working together on the project. So they decided to meet one day. Rob invited Rolf, who lived in Georgia, to give a lecture to his university students and to sit down to discuss the prospects of their collaboration.
