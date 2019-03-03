@@ -72,21 +72,10 @@ Once the attacker has received the good or other currency bought with their coin
 
 This has happened to many smaller blockchains in the past. In fact, Horizen suffered from a 51% attack in early June 2018. We immediately started to work on a solution to mitigate the risk of a 51% attack on smaller blockchains that are not secured by as much computing power as for example the Bitcoin blockchain.
 
-We came up with a solution that penalizes delayed block submissions. There is no legitimate reason for a miner, to broadcast several blocks to the network at once. Our protection mechanism makes these attacks very costly. So costly that it does not make any economic sense to perform such an attack on our network. Many other blockchains are now looking to implement a similar protection mechanism with their protocol. You can find the whitepaper to our protection mechanism here.
+[We came up with a solution](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) that penalizes delayed block submissions. There is no legitimate reason for a miner, to broadcast several blocks to the network at once. Our protection mechanism makes these attacks very costly. So costly that it does not make any economic sense to perform such an attack on our network. Many other blockchains are now looking to implement a similar protection mechanism with their protocol. You can find the whitepaper to our protection mechanism here.
 
 ### Summary
 
 Blockchains have solved the Byzantine General's Problem of achieving consensus on the order of events in an untrustworthy environment. There are different ways a blockchain can be attacked. Performing these attacks becomes more difficult over time as more computing power is added to the network and it becomes more robust. In a DDOS Attack, a perpetrator wants to slow down or halt the network by spamming it with a large number of transactions. In a Sybil Attack, a malicious actor controls many fake identities and tries to either meddle with online elections or to manipulate the communication in a P2P network. In a 51% attack, a miner controlling the majority of computing power on the network tries to spend coins twice, by writing a private version of the blockchain first, before broadcasting all blocks at once to the honest miners.
 
 The attack scenarios presented in this article, except for the 51% attack, are not endemic to blockchains and have been around since the beginning of distributed peer networks. There are many measures in place to mitigate the risk of the different attack scenarios out there. We will look at them closely in the advanced section. We hope this last article didn't leave you with a wrong impression on blockchain security. Blockchain technology is highly secure, but as with anything else in the digital realm, there are no invincible protocols.
-
-This was the last article in our technology section for intermediate users. We hope you liked what you found here. Why don't you move on to our expert section to gain a more in-depth understanding of blockchain technology? We look at the individual ideas presented throughout this intermediate section in more detail. Most subsections of our intermediate articles have a dedicated article for the ambitious reader.
-
-We are always looking for constructive feedback. If you have any ideas about how we can improve our academy please don't hesitate to contact us at academy@horizen.global.
-
-Thanks for reading, your Horizen Team!
-
-
-[https://medium.com/coinmonks/what-is-a-51-attack-or-double-spend-attack-aa108db63474](https://medium.com/coinmonks/what-is-a-51-attack-or-double-spend-attack-aa108db63474) → graphics
-
-[https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf)

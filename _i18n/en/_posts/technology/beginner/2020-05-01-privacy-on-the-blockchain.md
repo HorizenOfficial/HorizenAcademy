@@ -16,7 +16,8 @@ Through increasingly more powerful data analysis, it is possible to link real-wo
 
 ### Why Privacy
 
-There are many legitimate reasons to create private financial transactions. If you have a medical condition and need to purchase your prescriptions on a regular basis you have good reason to conduct these transactions privately. If you have a business, you don't want to reveal your revenue streams to your competition and if you are buying a present for your spouse, you might not want him or her to see it before they actually get the present. There are many good reasons to transact privately, and we believe that privacy is and should be treated as a basic human right.
+There are many legitimate reasons to create private financial transactions. If you have a medical condition and need to purchase your prescriptions on a regular basis you have good reason to conduct these transactions privately. If you have a business, you don't want to reveal your revenue streams to your competition and if you are buying a present for your spouse, you might not want him or her to see it before they actually get the present. There are many good reasons to transact privately, and we believe that privacy is and should be treated as a basic human right. 
+In our privacy section we also take a look at the "I've got nothing to hide" argument.
 
 ### How to Reclaim Your Privacy
 

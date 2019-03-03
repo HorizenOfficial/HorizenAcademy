@@ -41,6 +41,3 @@ We believe that the Web 3.0 will benefit largely from the emergence of distribut
 Peer-to-Peer networks offer great robustness or fault tolerance at the expanse of efficiency. Every node is performing the same task on the network and acts as a client and a server at the same time. If one of your peers goes offline you connect to another one. If you run a node and happen to go offline for a while, you need to reconnect at some point to get updated by your peers on the blocks that you missed to become fully functional again.
 
 In the next two articles, we will introduce you to the two most common mechanisms to reach consensus on a history of events in a distributed setting. You have probably come across the term Proof-of-Work and mining before. We will explain what Proof-of-Work and Proof-of-Stake are about and after that look into the mining process in detail including the puzzle that the miners solve.
-
-
-[https://medium.com/coinmonks/blockchain-consensus-and-fault-tolerance-in-a-nutshell-765de83b8d03](https://medium.com/coinmonks/blockchain-consensus-and-fault-tolerance-in-a-nutshell-765de83b8d03)

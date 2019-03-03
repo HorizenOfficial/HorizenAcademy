@@ -36,7 +36,7 @@ Coin mixing transactions don't require any changes to the basic Bitcoin protocol
 
 The level of privacy provided by mixing services is far better than using regular transactions, but one can link input addresses to output addresses easily by monitoring the amounts of coins in a mixing transaction. There are tools available online to do so. Another downside of coin mixing is that many mixers available are centralized and run by a third party that could potentially steal your funds. CoinJoin based techniques prevent this risk of your coins being stolen by having no central party.
 
-By now there are many iterations of coin mixing protocols that improved upon the privacy promise step by step. With CoinJoin for example, every user has to send the same amount to the mixing pool, which makes amount tracking significantly harder. Introducing **Confidential Transactions** will solve this issue by hiding the amounts of transactions. In our advanced section, we will talk about the individual mixers in more detail, but let us move on for now.
+By now there are many iterations of coin mixing protocols that improved upon the privacy promise step by step. With CoinJoin for example, every user has to send the same amount to the mixing pool, which makes amount tracking significantly harder. Introducing [Confidential Transactions](https://medium.com/@ecurrencyhodler/a-primer-to-confidential-transactions-e6ab3dd2bf1e) will solve this issue by hiding the amounts of transactions. In our advanced section, we will talk about the individual mixers in more detail, but let us move on for now.
 
 ### Ring Signatures
 
@@ -77,6 +77,7 @@ The idea of using Zero-Knowledge Proofs for cryptocurrency transactions is the f
 
 There are many ways to reclaim your privacy on a public blockchain. The approaches like Change Addresses and Coin Mixers don't provide strong privacy, but they help make it harder to trace transactions to their origin and link real-world identities to addresses on the blockchain. Ring Signatures and Zero-Knowledge Proofs are more advanced concepts, that actually allow you to transact entirely private, even on fully open and public blockchains.
 
+### Further Reading
 
 {%
   include further_reading.html
@@ -86,13 +87,3 @@ There are many ways to reclaim your privacy on a public blockchain. The approach
   url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
   image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
 %}
-
-Links:
-
-[http://www.coinjoinsudoku.com/](http://www.coinjoinsudoku.com/)
-
-[https://people.xiph.org/~greg/confidential_values.txt](https://people.xiph.org/~greg/confidential_values.txt) - CT paper Back
-
-[https://medium.com/@ecurrencyhodler/a-primer-to-confidential-transactions-e6ab3dd2bf1e](https://medium.com/@ecurrencyhodler/a-primer-to-confidential-transactions-e6ab3dd2bf1e)
-
-[https://link.springer.com/chapter/10.1007%2F3-540-45682-1_32](https://link.springer.com/chapter/10.1007%2F3-540-45682-1_32) Ring Signature Paper

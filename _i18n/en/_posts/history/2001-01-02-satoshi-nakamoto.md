@@ -11,7 +11,7 @@ Bitcoin just celebrated its 10th birthday, but the creator of the first cryptocu
 
 We don't want to speculate on the identity of Satoshi in this article, but rather provide you with the facts that are common knowledge. It is a strength rather than a weakness that Satoshi went off the grid after he bootstrapped the Bitcoin movement, but more on that later.
 
-The story of Bitcoin really starts on October 31st, 2008, when Satoshi Nakamoto published the Bitcoin Whitepaper "Bitcoin: A Peer-to-Peer Electronic Cash System" to the Cryptography Mailing List. He said that he was working on the code for almost two years and that he had to finish writing the code before he could convince himself that he could make the software work.
+The story of Bitcoin really starts on October 31st, 2008, when Satoshi Nakamoto published the Bitcoin Whitepaper ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://bitcoin.org/bitcoin.pdf) to the Cryptography Mailing List. He said that he was working on the code for almost two years and that he had to finish writing the code before he could convince himself that he could make the software work.
 
 10 days later, on November 9th, 2008 he published the source code of Bitcoin on Sourceforge so others could review the code and convince themselves that it worked.
 
@@ -27,7 +27,7 @@ On January 9th. bitcoin version 0.1 was released on Sourceforge.
 
 Via the cryptography mailing list and the P2P-foundation, many cypherpunks joined the discussion about bitcoin. Some of them like Adam Back, Wei Dai and Nick Szabo had been working on electronic cash systems themselves before, and at the time were probably the only people able to comment on the matter competently. 
 
-One of the early cypherpunks, Hal Finney, conducted the first bitcoin transaction on January 12th, recorded in block 170 of the Bitcoin blockchain (at the time of writing we are at block 557,200) when he received 10 BTC from Satoshi Nakamoto.
+One of the early cypherpunks, Hal Finney, conducted the first bitcoin transaction on January 12th, recorded in [block 170](https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee) of the Bitcoin blockchain (at the time of writing we are at block 557,200) when he received 10 BTC from Satoshi Nakamoto.
 
 It took several months (October 5th, 2009), for the first exchange rate of bitcoin to the US Dollar to be established. New Liberty Standard published an exchange rate that day that established the value of US$ 1 being worth 1,309.03 BTC. Where is that time machine again?! The exchange rate was not based on an actual market at that time but based on the cost of electricity to mine one bitcoin.
 
@@ -35,7 +35,7 @@ It took another half a year until the first Bitcoin transaction on record for a 
 
 It was around that time that Satoshi decided to leave the project. He handed responsibility for the source code repository over to Gavin Andresen and left without further notice.
 
-If you would like to see a visualization of the order of events and see what happened next there is a timeline that is pretty comprehensive until the beginning of 2014.
+If you would like to see a visualization of the order of events and see what happened next [there is a timeline](http://historyofbitcoin.org/) that is pretty comprehensive until the beginning of 2014.
 
 ### Absence as a Strength
 
@@ -45,6 +45,7 @@ Another benefit of Satoshis anonymity is that bitcoin is evaluated based on the 
 
 If you are still out there and happen to stumble across this article: Thank you Satoshi!
 
+### Further Reading
 
 {%
   include further_reading.html
@@ -54,12 +55,3 @@ If you are still out there and happen to stumble across this article: Thank you 
   url="https://medium.com/@danhedl/planting-bitcoin-56bd1459cb23"
   image="https://cdn-images-1.medium.com/max/1200/1*ndsz9PCJFuRuqv2Ayb3Vkw.png"
 %}
-
-
-[https://satoshi.nakamotoinstitute.org/emails/cryptography/1/](https://satoshi.nakamotoinstitute.org/emails/cryptography/1/)
-
-[https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)
-
-[https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee](https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee)
-
-[http://historyofbitcoin.org/](http://historyofbitcoin.org/)
