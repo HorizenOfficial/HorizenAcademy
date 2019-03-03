@@ -1,0 +1,42 @@
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+}
+
+.navbar-toggler {
+  padding: .25rem .15rem;
+}
+
+#header-logo {
+  height: auto;
+  width: 200px;
+}
+
+#left-menu {
+  left: -350px;
+  z-index: 100;
+  overflow-y: auto;
+  transition: left 0.5s ease-in-out;
+  &.open {
+    left: 0;
+  }
+}
+
+.article-nav {
+  height: auto;
+}
+
+.site-wrapper {
+  padding-left: 0;
+}
+
+
+#homepage .intro {
+  padding: 0;
+}
+
+.post-section {
+  padding: 0 0 3rem 0;
+}

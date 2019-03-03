@@ -77,7 +77,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write('/maps'))
         // .pipe(sourcemaps.write('/assets/css/maps'))
         .pipe(gulp.dest('_site/assets/css'))
-        .pipe(browserSync.reload({stream:true}))
+        // .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
 });
 
@@ -100,7 +100,7 @@ gulp.task('concat', function() {
         // paths.bower + 'headroom.js/dist/jQuery.headroom.min.js',
         // paths.bower + 'jquery.countdown/dist/jquery.countdown.min.js',
         // paths.bower + 'animsition/dist/js/animsition.min.js',
-        // paths.bower + 'enquire/dist/enquire.min.js',
+        paths.bower + 'enquire/dist/enquire.min.js',
         // paths.bower + 'bLazy/blazy.min.js',
         // paths.bower + 'aos/dist/aos.js',
         // paths.bower + 'lity/dist/lity.js',
@@ -124,30 +124,10 @@ gulp.task('concat', function() {
         .pipe(uglify())
         .pipe(sourcemaps.write('/assets/js/maps'))
         .pipe(gulp.dest('./_site/assets/js'))
-        .pipe(browserSync.reload({stream:true}))
+        // .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(paths.dist + 'js'))
 });
 
-// gulp.task('concat-lp', function() {
-//     var jsFiles = [
-//         paths.bower + 'jquery/dist/jquery.min.js',
-//         paths.bower + 'underscore/underscore-min.js',
-//         paths.bower + 'tether/dist/js/tether.min.js',
-//         paths.bower + 'bootstrap/dist/js/bootstrap.min.js',
-//         paths.bower + 'enquire/dist/enquire.min.js',
-//         paths.bower + 'bLazy/blazy.min.js',
-//         paths.src + 'js/landing-page.js'
-//     ]
-//
-//     return gulp.src(jsFiles)
-//         .pipe(sourcemaps.init())
-//         .pipe(concat('landing-page.js'))
-//         .pipe(uglify())
-//         .pipe(sourcemaps.write('/assets/js/maps'))
-//         .pipe(gulp.dest('./_site/assets/js'))
-//         .pipe(browserSync.reload({stream:true}))
-//         .pipe(gulp.dest(paths.dist + 'js'))
-// });
 
 // Compression images
 // gulp.task('img', function() {
@@ -186,7 +166,7 @@ gulp.task('watch', function () {
  */
 gulp.task('default', [
     'browser-sync',
-    'watch',
+    'watch'
 ]);
 
 // AWS_PROFILE=zen gulp upload

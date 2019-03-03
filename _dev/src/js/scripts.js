@@ -1,23 +1,49 @@
 $(function () {
 
-    $(".site-nav").headroom({
-        "tolerance": 5,
-        "offset": 40,
-        "classes": {
-            "initial": "animated",
-            "pinned": "slideDown",
-            "unpinned": "slideUp",
-            "top": "headroom--top",
-            "notTop": "headroom--not-top"
-        }
+
+    // ONLY for desktop
+    enquire.register("screen and (min-width: 992px)", function() {
+
+        $(".site-nav").headroom({
+            "tolerance": 5,
+            "offset": 40,
+            "classes": {
+                "initial": "animated",
+                "pinned": "slideDown",
+                "unpinned": "slideUp",
+                "top": "headroom--top",
+                "notTop": "headroom--not-top"
+            }
+        });
+
+
+        $("#article-nav").niceScroll({
+            cursorcolor:"#000",
+            cursoropacitymin: 0,
+            cursoropacitymax: 0.5,
+            cursorwidth: "8px",
+            cursorborder: "none"
+        });
+
+        $(".chapter-articles, .one-level-topic-articles")
+            .on('shown.bs.collapse', function () {
+                $("#article-nav").getNiceScroll().resize();
+            })
+            .on('hidden.bs.collapse', function () {
+                $("#article-nav").getNiceScroll().resize();
+            });
+
     });
 
-    $("#article-nav").niceScroll({
-        cursorcolor:"#000",
-        cursoropacitymin: 0,
-        cursoropacitymax: 0.5,
-        cursorwidth: "8px",
-        cursorborder: "none"
+
+
+    // ONLY for mobile
+    enquire.register("screen and (max-width: 991px)", function() {
+
+        $("#mobile-left-menu-toggler").click(function () {
+            $("#left-menu").toggleClass("open");
+        });
+
     });
 
 
@@ -100,13 +126,6 @@ $(function () {
             $(this).closest(".topic-articles").removeClass("open");
         });
 
-    $(".chapter-articles, .one-level-topic-articles")
-        .on('shown.bs.collapse', function () {
-            $("#article-nav").getNiceScroll().resize();
-        })
-        .on('hidden.bs.collapse', function () {
-            $("#article-nav").getNiceScroll().resize();
-        });
 
     var postContent = $(".js-PostContent");
     if (postContent.length) {
