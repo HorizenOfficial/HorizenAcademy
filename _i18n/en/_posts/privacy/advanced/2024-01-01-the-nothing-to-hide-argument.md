@@ -2,9 +2,9 @@
 layout: post
 type: intro
 title: 'The "Nothing to hide" Argument'
-permalink: /privacy/beginner/the-nothing-to-hide-argument/
+permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
-level: beginner
+level: advanced
 chapter: "Why Privacy?"
 ---
 

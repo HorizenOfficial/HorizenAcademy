@@ -14,6 +14,6 @@ When Bob wants to spend that one ZEN, later on, he will create a new message to 
 
 This is similar to how you get a dollar bill from somebody and hand it to the next person when you want to spend it.
 
-### Graphic here when ready
+![Transaction](/assets/post_files/eli5/what-is-a-transaction/transaction.jpeg)
 
 We talk about [transactions in more detail]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-01-transactions %}) in our Technology Section.
