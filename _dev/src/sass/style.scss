@@ -34,7 +34,7 @@ $font-text-size2: 1rem; // 15pt in design
 
 @import "partials/extends";
 @import "partials/layout";
-@import "partials/home";
+@import "partials/pages";
 
 @media (max-width: 991px) {
   @import "partials/mobile";

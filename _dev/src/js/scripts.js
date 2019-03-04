@@ -129,6 +129,8 @@ $(function () {
 
     var postContent = $(".js-PostContent");
     if (postContent.length) {
+        // browsing article content
+
         activeLevel = postContent.data("level");
         activeTopic = postContent.data("topic");
 

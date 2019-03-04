@@ -1,9 +1,11 @@
 
 #homepage {
+  .site-content-wrapper {
+    background: url(../img/bkg/bg-intro.jpg) no-repeat scroll top center;
+    background-size: cover;
+  }
   .intro {
     padding: 6rem 8rem;
-    background: url(../img/bg-intro.jpg) no-repeat scroll top center;
-    background-size: cover;
     h3 {
       text-align: center;
       color: #041742;
@@ -71,63 +73,9 @@
   }
 }
 
-.post-section {
-  padding: 3rem;
-  .post-title {
-    color: #041742;
-    font-weight: bold;
-    &:after {
-      content: '';
-      display: block;
-      width: 100px;
-      height: 5px;
-      background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-  }
-  .post-content {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-    h3 {
-      margin-top: 2rem;
-      font-weight: 600;
-      color: #041742;
-    }
-    .further-reading {
-      border: 1px solid #e5e5e5;
-      margin-top: 2rem;
-      a {
-        color: #121F1F;
-        text-decoration: none;
-      }
-      .title {
-        margin-bottom: 0;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-top: 0;
-      }
-      .author {
-        color: #888;
-        font-size: 14px;
-      }
-      .summary {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .link {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #888;
-        font-size: 12px;
-      }
-      img {
-        max-height: 150px;
-        margin-right: 0;
-      }
-    }
+#page-eli5 {
+  .site-content-wrapper {
+    background: url(../img/bkg/bg-eli5.jpg) no-repeat scroll top center;
+    background-size: cover;
   }
 }

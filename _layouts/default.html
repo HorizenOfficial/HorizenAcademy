@@ -7,7 +7,7 @@ layout: compress
 
     {% include head.html %}
 
-    {% capture page_id %}{% if page.namespace != '' or page.namespace != blank %}{{ page.namespace | slugify }}{% else %}{{ page.url | slugify }}{% endif %}{% endcapture %}
+    {% capture page_id %}{% if page.permalink == '/' %}homepage{% else %}page-{{ page.permalink | slugify }}{% endif %}{% endcapture %}
 
     <body id="{{ page_id }}" class="lng-{{site.lang}}">
 
@@ -18,9 +18,9 @@ layout: compress
     </div>
 
     <div class="site-wrapper">
-        <div class="container-fluid">
+        <div class="site-content-wrapper">
 
-            <div class="site-content-wrapper">
+            <div class="container-fluid">
                 {{ content }}
             </div>
 

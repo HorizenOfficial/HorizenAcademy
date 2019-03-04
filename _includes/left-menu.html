@@ -117,7 +117,7 @@
 
 
         <a
-                href="{% post_url /privacy/beginner/2023-12-31-privacy-beginner %}"
+                href="{% post_url /privacy/2025-12-30-privacy %}"
                 class="js-SelectTopic" data-topic="privacy"
                 data-url-beginner="{% post_url /privacy/beginner/2023-12-31-privacy-beginner %}"
                 data-url-advanced="{% post_url /privacy/advanced/2024-12-31-privacy-advanced %}"
@@ -211,49 +211,26 @@
             <div style="height: 12px;"></div>
 
             <div class="d-none">
-                <div>
-                    {% assign current_level = "" %}
-                    {% assign current_chapter = "" %}
+                {% assign current_level = "" %}
+                {% assign current_chapter = "" %}
 
-                    {% for post in site.posts reversed %}
+                {% for post in site.posts reversed %}
 
-                    {% if post.topic != "horizen" %}
-                    {% continue %}
-                    {% endif %}
-
-                    {% unless post.chapter %}
-                    {% continue %}
-                    {% endunless %}
-
-                    {% if current_chapter != post.chapter or current_level != post.level %}
-                    {% assign current_level = post.level %}
-                    {% assign current_chapter = post.chapter %}
-                </div>
-            </div>
-
-            {% capture chapter_index %}{% increment chapter_counter %}{% endcapture %}
-            <div class="topic-articles level-{{current_level}}">
-
-                <a href="#horizen-chapter-{{ chapter_index }}" data-toggle="collapse" class="arrow">
-                    <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
-                    <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
-                </a>
-
-                {% if post.type == "intro" %}
-                <a href="{{ post.url }}" class="chapter chapter-link">{{current_chapter }}</a>
-                {% else %}
-                <a href="#" data-target="#horizen-chapter-{{ chapter_index }}" class="chapter chapter-link chapter-collapse">{{current_chapter }}</a>
+                {% if post.topic != "horizen" %}
+                {% continue %}
                 {% endif %}
 
-                <div id="horizen-chapter-{{ chapter_index }}" class="collapse chapter-articles" data-parent="#list-horizen-articles">
-                    {% endif %}
+                {% if current_level != post.level %}
+                {% assign current_level = post.level %}
+            </div>
+            <div class="topic-articles level-{{current_level}}">
+                {% endif %}
 
-                    {% if post.type == "article" %}
-                    <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
-                    {% endif %}
-                    {% endfor %}
+                {% if post.type == "article" %}
+                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                {% endif %}
 
-                </div>
+                {% endfor %}
             </div>
 
             <div style="height: 12px;"></div>
@@ -282,11 +259,39 @@
 
             {% for post in site.posts reversed %}
 
-            {% if post.topic != "history" or post.type != "article" %}
-            {% continue %}
+            {% if post.topic == "history" and post.type == "article" %}
+            <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
             {% endif %}
 
+            {% endfor %}
+
+            <div style="height: 12px;"></div>
+
+        </div>
+
+
+
+        <div class="topic-resources one-level-topic">
+            <a href="{% post_url /resources/2002-12-31-resources %}" data-topic="resources">
+                <div class="topic resources">
+                    <span class="topic-name">Resources</span>
+                </div>
+            </a>
+            <a href="#list-resources-articles" data-toggle="collapse" class="arrow">
+                <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
+                <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
+            </a>
+        </div>
+
+        <div id="list-resources-articles" class="articles one-level-topic-articles list-topic-articles collapse" data-parent="#list-topics">
+
+            <div style="height: 12px;"></div>
+
+            {% for post in site.posts reversed %}
+
+            {% if post.topic == "resources" and post.type == "article" %}
             <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+            {% endif %}
 
             {% endfor %}
 
@@ -297,7 +302,7 @@
 
 
         <div class="topic-eli5 one-level-topic">
-            <a href="#aa" data-topic="eli5">
+            <a href="{% post_url /eli5/2000-12-31-eli5 %}" data-topic="eli5">
                 <div class="topic eli5">
                     <span class="topic-name">ELI5</span>
                 </div>
@@ -314,11 +319,9 @@
 
             {% for post in site.posts reversed %}
 
-            {% if post.topic != "eli5" or post.type != "article" %}
-            {% continue %}
-            {% endif %}
-
+            {% if post.topic == "eli5" and post.type == "article" %}
             <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+            {% endif %}
 
             {% endfor %}
 
@@ -331,6 +334,6 @@
 </div>
 
 <div class="bottom-links">
-    <a href="#">FAQ</a>
+    <!--<a href="#">FAQ</a>-->
     <a href="#">See all Content</a>
 </div>
