@@ -1,8 +1,8 @@
 ---
 layout: post
 type: article
-title: "Intro to Transactions (Basic)"
-permalink: /technology/beginner/intro-to-transactions-basic/
+title: "Intro to Transactions"
+permalink: /technology/beginner/intro-to-transactions/
 topic: technology
 level: beginner
 chapter: "Transactions"

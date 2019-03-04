@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Summary Beginner Level"
-permalink: /technology/beginner/summary-beginner-level/
+permalink: /technology/beginner/summary/
 topic: technology
 level: beginner
 chapter: "Summary"
@@ -36,7 +36,7 @@ Your public key is like your address on the blockchain and your private key is t
 
 ![Wallet does](/assets/post_files/technology/beginner/wallets/wallet_does.jpg)
 
-A simple way to think of a [transaction]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions-basic %}): Imagine a grid of mailboxes. Each address on the blockchain is a single mailbox in this grid. If you wish to send a transaction you must unlock your funds (mailbox) with your private key and find the recipient's mailbox using their address. The transaction ends up as a statement like "Alice send Bob 5 ZEN". This statement is what represents Bob's coins.
+A simple way to think of a [transaction]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}): Imagine a grid of mailboxes. Each address on the blockchain is a single mailbox in this grid. If you wish to send a transaction you must unlock your funds (mailbox) with your private key and find the recipient's mailbox using their address. The transaction ends up as a statement like "Alice send Bob 5 ZEN". This statement is what represents Bob's coins.
 
 ![Sent](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_sent.jpg)
 
