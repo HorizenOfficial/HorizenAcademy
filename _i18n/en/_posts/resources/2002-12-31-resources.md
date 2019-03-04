@@ -6,7 +6,7 @@ permalink: /resources/
 topic: resources
 ---
 
-A common theme in crypto and blockchain is: Don't trust, verify!  We want you to do the same. Although we have put a lot of effort into creating the content for the Horizen Academy, we might have missed a few minor errors. 
+A common theme in crypto and blockchain is: Don't trust, verify!  We want you to do the same. Although we have put a lot of effort into creating the content for the Horizen Academy, we might have missed a few errors. 
 
 It is always a good idea to consult with more than one source if you are serious about learning about a topic and blockchain is no exception. In this section, we have collected a number of resources, from great [articles]({{ site.baseurl }}{% post_url /resources/2002-01-01-articles %}) to [books]({{ site.baseurl }}{% post_url /resources/2002-01-02-books %}), [podcasts]({{ site.baseurl }}{% post_url /resources/2002-01-03-podcasts %}) as well as [documentaries and movies]({{ site.baseurl }}{% post_url /resources/2002-01-04-videos-and-movies %}). 
 
