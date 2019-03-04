@@ -25,3 +25,7 @@ While Bitcoin can support strong privacy, many ways of using it are usually not 
 ### [Coindesk](https://www.coindesk.com/)
 
 If you want to stay up to date about the blockchain and crypto industry, Coindesk is a good place to start. You will find all the important news about adoption, use-cases, and technical developments. They have become the de-facto industry standard for topic related news.
+
+### [Surveillance Self-Defense](https://ssd.eff.org/en)
+
+A project of the Electronic Frontier Foundation (EFF), an independent non-profit working to protect online privacy for nearly thirty years. This is Surveillance Self-Defense : their expert guide to protecting you and your friends from online spying.
