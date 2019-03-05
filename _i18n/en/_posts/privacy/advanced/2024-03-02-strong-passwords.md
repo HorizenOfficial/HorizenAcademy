@@ -14,7 +14,7 @@ It is important that you use a different password for each website or applicatio
 
 ![password](/assets/post_files/privacy/advanced/strong-passwords/password.png)
 
-Source ([https://xkcd.com/936/](https://xkcd.com/936/))
+[Source](https://xkcd.com/936/)
 
 ### How Are Passwords Hacked?
 
