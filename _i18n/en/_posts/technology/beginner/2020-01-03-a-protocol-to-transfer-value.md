@@ -16,7 +16,8 @@ When a blockchain operates a cryptocurrency the network (← a decentralized "po
 
 ![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol.jpg)
 
-Addresses on a blockchain are of course a little different to real-life addresses. They look like this: [1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX](https://www.blockchain.com/btc/address/1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX). Signatures are also different from what you know. We will talk more about addresses and signatures throughout the next articles in this section.
+Addresses on a blockchain are of course a little different to real-life addresses. They look like this: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX. 
+Signatures are also different from what you know. We will talk more about addresses and signatures throughout the next articles in this section.
 
 Cryptocurrency [wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) help you create an address and send transactions.
 
