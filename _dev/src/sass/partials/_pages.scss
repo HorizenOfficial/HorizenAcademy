@@ -78,3 +78,43 @@
     background-size: cover;
   }
 }
+
+
+#page-content-overview {
+  .content-overview {
+    .nav-item {
+      flex-basis: 0;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    .nav-link {
+      color: #3f6a96;
+      border-radius: 0;
+      background-color: #f5f6fa;
+      text-transform: uppercase;
+      font-weight: bold;
+      &.active, &:hover {
+        background-color: #009ce8;
+        color: white;
+        //font-weight: normal;
+      }
+    }
+    .icon-level {
+      height: 50px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+    .table {
+      th {
+        vertical-align: middle;
+      }
+    }
+    .article-link {
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+  }
+}
+

@@ -164,27 +164,12 @@ $(function () {
 
     // home lading page
     if ($("#homepage").length) {
-        $(".js-SelectLevel").addClass("active"); // highlight all level by default
+        $(".js-SelectLevel").addClass("active"); // highlight all levels by default
+        $(".js-SelectTopic").addClass("active"); // highlight all topics by default
 
-        var homeLevels = $(".js-Home-SelectLevel");
-
-        homeLevels.eq(0).addClass("active");
-        var levelAnimation = setInterval(function () {
-            var levelActive = $(".js-Home-SelectLevel.active");
-            var index = levelActive.parent().index();
-            index = (index + 1) % 3;
-
-            levelActive.removeClass("active");
-            $(".js-Home-SelectLevel").eq(index).addClass("active");
-        }, 1000);
-
-        homeLevels.click(function (e) {
+        $(".js-Home-SelectLevel").click(function (e) {
             e.preventDefault();
             var btn = $(this);
-
-            if (levelAnimation) {
-                clearInterval(levelAnimation);
-            }
 
             btn.closest(".skill-levels").find(".js-Home-SelectLevel.active").removeClass("active");
             btn.addClass("active");
@@ -206,5 +191,6 @@ $(function () {
     }
 
 });
+
 
 

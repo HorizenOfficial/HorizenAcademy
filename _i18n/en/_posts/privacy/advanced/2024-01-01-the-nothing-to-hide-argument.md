@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title: 'The "Nothing to hide" Argument'
+title: 'The "Nothing to Hide" Argument'
 permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced
