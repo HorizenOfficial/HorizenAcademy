@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title: "Tech Beginner"
+title: "Technology Beginner"
 permalink: /technology/beginner/
 topic: technology
 level: beginner
