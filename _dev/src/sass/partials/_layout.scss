@@ -6,6 +6,17 @@ body {
 }
 
 
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+body::after{ content:''; display:block; height:246px; }
+.site-footer-wrapper{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  /*height:100px;*/
+}
+
+
 .navbar {
   //padding-top: 1.4rem;
   //padding-bottom: 0;
@@ -99,6 +110,23 @@ body {
   #header-navbars {
     margin-top: 1rem;
   }
+
+  #mobile-left-menu-toggler {
+    img {
+      width: 30px;
+    }
+    .icon-blue {
+      display: none;
+    }
+    &.open {
+      .icon-white {
+        display: none;
+      }
+      .icon-blue {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 #left-menu {
@@ -135,6 +163,7 @@ body {
   width: 100%;
   padding-left: 350px;
 }
+
 .site-content-wrapper {
 }
 
@@ -142,7 +171,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 15px;
-  height: calc(100% - 170px);
+  height: calc(100% - 125px);
   a {
     color: #3d6892;
     &:hover, &:active, &.active {
@@ -293,10 +322,29 @@ body {
         color: white;
       }
     }
+    &#list-horizen-articles {
+      .topic-articles {
+        a {
+          display: block;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+    }
     .topic-articles {
       position: relative;
       padding-left: 28px;
       display: none;
+      .chapter-dot {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background-color: #9bb9d3;
+      }
       .arrow {
         position: absolute;
         top: 20px;
@@ -355,6 +403,15 @@ body {
           }
         }
       }
+
+      &.one-article {
+        .chapter-dot {
+          display: block;
+        }
+        .arrow {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -382,6 +439,9 @@ body {
   padding-top: 3rem;
   a {
     color: #ccc;
+  }
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -439,9 +499,9 @@ body {
         color: #888;
         font-size: 12px;
       }
-      img {
-        max-height: 150px;
-        margin-right: 0;
+      .preview-img {
+        background-size: cover;
+        background-repeat: no-repeat;
       }
     }
   }

@@ -1,8 +1,7 @@
 $(function () {
 
-
     // ONLY for desktop
-    enquire.register("screen and (min-width: 992px)", function() {
+    enquire.register("screen and (min-width: 992px)", function () {
 
         $(".site-nav").headroom({
             "tolerance": 5,
@@ -18,7 +17,7 @@ $(function () {
 
 
         $("#article-nav").niceScroll({
-            cursorcolor:"#000",
+            cursorcolor: "#000",
             cursoropacitymin: 0,
             cursoropacitymax: 0.5,
             cursorwidth: "8px",
@@ -36,14 +35,24 @@ $(function () {
     });
 
 
-
     // ONLY for mobile
-    enquire.register("screen and (max-width: 991px)", function() {
+    enquire.register("screen and (max-width: 991px)", function () {
 
         $("#mobile-left-menu-toggler").click(function () {
             $("#left-menu").toggleClass("open");
+            $(this).toggleClass("open");
         });
 
+    });
+
+
+    // update menu icon, always run on init
+    $("#article-nav .chapter-articles").each(function (_, chapter) {
+        chapter = $(chapter);
+
+        if (chapter.children().length === 0) {
+            chapter.closest(".topic-articles").addClass("one-article");
+        }
     });
 
 
@@ -63,7 +72,7 @@ $(function () {
         var articleNav = $("#article-nav");
 
         articleNav.find(".topic-articles.show").removeClass("show");
-        $("#list-"+activeTopic+"-articles .topic-articles.level-" + activeLevel).addClass("show");
+        $("#list-" + activeTopic + "-articles .topic-articles.level-" + activeLevel).addClass("show");
         // articleNav.find(".topic-articles.level-" + activeLevel + ".topic-" + activeTopic).addClass("show");
 
         articleNav.find("#list-" + activeTopic + "-articles").addClass("show");
@@ -73,7 +82,7 @@ $(function () {
         e.preventDefault();
         var btn = $(this);
 
-        if (btn.hasClass("active")) {
+        if (activeLevel === btn.data("level")) {
             return;
         }
 
@@ -93,7 +102,7 @@ $(function () {
         if (oldActiveChapter.length) {
             var title = oldActiveChapter.closest(".topic-articles").find(".chapter-link").text().trim();
 
-            $("#article-nav .topic-articles.show").each(function(_, topic) {
+            $("#article-nav .topic-articles.show").each(function (_, topic) {
                 topic = $(topic);
                 var t = topic.find(".chapter-link").text().trim();
                 if (t === title) {
@@ -152,4 +161,49 @@ $(function () {
         }
     }
 
+
+    // home lading page
+    if ($("#homepage").length) {
+        $(".js-SelectLevel").addClass("active"); // highlight all level by default
+
+        var homeLevels = $(".js-Home-SelectLevel");
+
+        homeLevels.eq(0).addClass("active");
+        var levelAnimation = setInterval(function () {
+            var levelActive = $(".js-Home-SelectLevel.active");
+            var index = levelActive.parent().index();
+            index = (index + 1) % 3;
+
+            levelActive.removeClass("active");
+            $(".js-Home-SelectLevel").eq(index).addClass("active");
+        }, 1000);
+
+        homeLevels.click(function (e) {
+            e.preventDefault();
+            var btn = $(this);
+
+            if (levelAnimation) {
+                clearInterval(levelAnimation);
+            }
+
+            btn.closest(".skill-levels").find(".js-Home-SelectLevel.active").removeClass("active");
+            btn.addClass("active");
+
+            $(".js-SelectLevel[data-level='" + btn.data("level") + "']").click();
+        });
+    }
+
+
+    // Technology lading page
+    if ($("#page-technology").length) {
+        $("#list-technology-articles .topic-articles.level-beginner").addClass("show");
+    }
+
+
+    // Privacy lading page
+    if ($("#page-privacy").length) {
+        $("#list-privacy-articles .topic-articles.level-beginner").addClass("show");
+    }
+
 });
+

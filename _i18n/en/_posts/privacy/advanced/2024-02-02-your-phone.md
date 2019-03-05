@@ -1,11 +1,11 @@
 ---
 layout: post
-type: intro
+type: article
 title: "Your Phone"
 permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced
-chapter: "Where Privacy is compromised?"
+chapter: "Where Your Privacy is Compromised?"
 ---
 
 In our beginner level article - [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) we touched how privacy is compromised on two most used devices today - a phone and a computer. In this article we will focus on a phone, the most used one of two.

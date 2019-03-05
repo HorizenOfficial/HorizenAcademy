@@ -5,7 +5,7 @@ title: "A Peer-to-Peer (P2P) Network"
 permalink: /technology/advanced/a-peer-to-peer-p2p-network/
 topic: technology
 level: advanced
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 The Internet that we are experiencing today is highly centralized. Most data that we as the users of the internet produce, end up in the hands of a few large corporations. But there are a number of truly distributed systems out there living on the internet. Although not exactly the same, for the purpose of this article, we will use the term distributed network and Peer-to-Peer network interchangeably.

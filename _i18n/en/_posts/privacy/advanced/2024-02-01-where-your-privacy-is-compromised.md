@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "Where Privacy is Compromised?"
-permalink: /privacy/advanced/where-privacy-is-compromised/
+title: "Where Your Privacy is Compromised?"
+permalink: /privacy/advanced/where-your-privacy-is-compromised/
 topic: privacy
 level: advanced
-chapter: "Where Privacy is compromised?"
+chapter: "Where Your Privacy is Compromised?"
 ---
 
 The amount of time people spend using their computers and phones is incredible! Not only do you use your devices for several hours a day on average, but you also produce a large amount of data during that time.

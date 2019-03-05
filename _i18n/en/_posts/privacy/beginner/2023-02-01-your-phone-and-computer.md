@@ -5,7 +5,7 @@ title: "Your Phone and Computer"
 permalink: /privacy/beginner/your-phone-and-computer/
 topic: privacy
 level: beginner
-chapter: "Where Privacy is compromised?"
+chapter: "Where Your Privacy is Compromised?"
 ---
 
 A phone and computer are arguably the two most used devices these days. We use them regularly every day and most of us even work with them for several hours in a row or even for a whole day.

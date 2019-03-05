@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "The elements of a blockchain"
+title: "The Elements of a Blockchain"
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 The last articles stated that on one hand, the blockchain is a data structure, a way to store information. On the other hand, it is a protocol to transfer value and the miners are the bookkeepers of a blockchain. We want to discuss the parties that play a part in the blockchain ecosystem in this article. Let's first talk about the term protocol again before we discuss that.

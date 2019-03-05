@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "How does a Blockchain work?"
+title: "How Does a Blockchain Work?"
 permalink: /technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 After reading our first two articles about what a blockchain is, you know that in its most simple form it's a method to store data. This method of handling data allows you to transfer value without involving a central entity. We made the comparison of blockchain being a protocol to transfer value with the internet being a protocol that enables you to transfer information. We also compared blockchain to the post being a "protocol" to send physical goods.

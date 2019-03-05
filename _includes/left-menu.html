@@ -89,6 +89,7 @@
             {% capture chapter_index %}{% increment chapter_counter %}{% endcapture %}
             <div class="topic-articles level-{{current_level}}">
 
+                <div class="chapter-dot"></div>
                 <a href="#technology-chapter-{{ chapter_index }}" data-toggle="collapse" class="arrow">
                     <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
                     <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
@@ -160,6 +161,7 @@
             {% capture chapter_index %}{% increment chapter_counter %}{% endcapture %}
             <div class="topic-articles level-{{current_level}}">
 
+                <div class="chapter-dot"></div>
                 <a href="#privacy-chapter-{{ chapter_index }}" data-toggle="collapse" class="arrow">
                     <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
                     <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
@@ -271,6 +273,36 @@
 
 
 
+        <div class="topic-eli5 one-level-topic">
+            <a href="{% post_url /eli5/2000-12-31-eli5 %}" data-topic="eli5">
+                <div class="topic eli5">
+                    <span class="topic-name">Explain it Like I'm 5</span>
+                </div>
+            </a>
+            <a href="#list-eli5-articles" data-toggle="collapse" class="arrow">
+                <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
+                <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
+            </a>
+        </div>
+
+        <div id="list-eli5-articles" class="articles one-level-topic-articles list-topic-articles collapse" data-parent="#list-topics">
+
+            <div style="height: 12px;"></div>
+
+            {% for post in site.posts reversed %}
+
+            {% if post.topic == "eli5" and post.type == "article" %}
+            <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+            {% endif %}
+
+            {% endfor %}
+
+            <div style="height: 12px;"></div>
+
+        </div>
+
+
+
         <div class="topic-resources one-level-topic">
             <a href="{% post_url /resources/2002-12-31-resources %}" data-topic="resources">
                 <div class="topic resources">
@@ -290,36 +322,6 @@
             {% for post in site.posts reversed %}
 
             {% if post.topic == "resources" and post.type == "article" %}
-            <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
-            {% endif %}
-
-            {% endfor %}
-
-            <div style="height: 12px;"></div>
-
-        </div>
-
-
-
-        <div class="topic-eli5 one-level-topic">
-            <a href="{% post_url /eli5/2000-12-31-eli5 %}" data-topic="eli5">
-                <div class="topic eli5">
-                    <span class="topic-name">ELI5</span>
-                </div>
-            </a>
-            <a href="#list-eli5-articles" data-toggle="collapse" class="arrow">
-                <img src="/assets/img/icons/arrows/arrow-down-grey.svg" alt="" class="arrow-down">
-                <img src="/assets/img/icons/arrows/arrow-up-green.svg" alt="" class="arrow-up">
-            </a>
-        </div>
-
-        <div id="list-eli5-articles" class="articles one-level-topic-articles list-topic-articles collapse" data-parent="#list-topics">
-
-            <div style="height: 12px;"></div>
-
-            {% for post in site.posts reversed %}
-
-            {% if post.topic == "eli5" and post.type == "article" %}
             <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
             {% endif %}
 

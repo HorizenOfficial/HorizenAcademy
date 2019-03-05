@@ -5,7 +5,7 @@ title: "The Elements of a Blockchain"
 permalink: /technology/advanced/the-elements-of-a-blockchain/
 topic: technology
 level: advanced
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 When Satoshi Nakamoto released the Bitcoin whitepaper he presented an innovation composed of several well-known components and as a few new ones. We designed this chapter to explain how a blockchain works and what the individual parts do. We want to put the individual pieces into context before we move on to explaining each concept. 

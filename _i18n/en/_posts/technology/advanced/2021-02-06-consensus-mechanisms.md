@@ -5,7 +5,7 @@ title: "Consensus Mechanisms"
 permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 The consensus mechanism of a blockchain allows the network to agree on a single version of history. The history in the case of a blockchain for cryptocurrencies is the order in which the transactions on the network happened.

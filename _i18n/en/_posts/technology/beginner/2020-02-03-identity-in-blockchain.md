@@ -5,7 +5,7 @@ title: "Identity in Blockchain"
 permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 In our last article talking about the elements of a blockchain, we concluded that miners are the bookkeepers of a cryptocurrency. They keep track of how much funds there are and who owns them. We must introduce the concept of identity to have ownership. You want to be the sole owner of your funds and there must be a way to associate the funds with you. Let's talk about where cryptography enters the scene and what this has to do with your identity.
