@@ -101,17 +101,11 @@ body::after{ content:''; display:block; height:246px; }
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
-  .navbar-toggler {
-    border: none;
-  }
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(98, 198, 249, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
   #header-navbars {
     margin-top: 1rem;
   }
-
-  #mobile-left-menu-toggler {
+  .navbar-toggler {
+    border: none;
     img {
       width: 30px;
     }
@@ -501,7 +495,9 @@ body::after{ content:''; display:block; height:246px; }
       }
       .preview-img {
         background-size: cover;
+        //background-size: contain;
         background-repeat: no-repeat;
+        background-position: center right;
       }
     }
   }
