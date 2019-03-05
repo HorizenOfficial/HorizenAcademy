@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title: "Tech Expert"
+title: "Technology Expert"
 permalink: /technology/expert/
 topic: technology
 level: expert
