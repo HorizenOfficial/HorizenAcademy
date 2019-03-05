@@ -28,7 +28,7 @@ A database is a highly efficient data structure. Databases are an excellent way 
 This entity decides who can add data to the database and who can access it, but it also has the power to change or delete data. You can edit your social media profile. Your friends can see that information, but if you violate the terms of agreement they can delete your post. The central entity has the last say in what stays on the platform. This can be both good and bad when it comes to a social network, but this would not be a good feature when looking at data structures that store your money
 
 
-##### A blockchain: Less efficient, but decentralized
+##### A blockchain: Less Efficient, but Decentralized
 Many different entities, or peers, operate a blockchain. These peers don't know or trust each other (therefore "trustless"). The good thing is that they don't need to trust each other. Many peers keep a copy of the data and no single peer has the power to change or censor the data. Participants (or nodes in technical terms) communicate constantly to keep each other updated on new events. Events on the blockchain are most commonly transactions.
 
 There is no centralized entity, like a bank or clearinghouse responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding the rules of the protocol can create a wallet an send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network and every participant (or node, or peer) keeps a copy of it. A node can be an individual person, a store accepting crypto, or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database, but more secure.
@@ -36,7 +36,7 @@ There is no centralized entity, like a bank or clearinghouse responsible for acc
 ![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing.jpg)
 
 
-##### Where does the term blockchain come from?
+##### Where does the term Blockchain come from?
 The blockchain does not keep data in a single huge continuous ledger but separates the data into blocks. These blocks are then connected to each other like individual pages in a book. That is how the term blockchain came to be. Imagine a bookie recording entries using single pages instead of one large book. Every few minutes he takes a new piece of paper and writes "the last page I used was page X, this is page Y". The notes that he includes "chain" the pages together. He can easily arrange the pages if he ever drops them because each page references its predecessor.
 
 
