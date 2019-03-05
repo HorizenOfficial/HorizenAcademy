@@ -1,7 +1,7 @@
 ---
 layout: post
 type: intro
-title: "Tech Advanced"
+title: "Technology Advanced"
 permalink: /technology/advanced/
 topic: technology
 level: advanced
