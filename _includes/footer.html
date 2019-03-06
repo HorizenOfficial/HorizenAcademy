@@ -1,0 +1,59 @@
+<footer class="site-footer-wrapper">
+    <div class="footer-subscribe site-wrapper">
+        <div class="container-fluid">
+            <form action="https://zencash.us15.list-manage.com/subscribe?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" method="post" id="mc-footer-subscribe-form">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input name="MERGE1" type="text" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <input name="MERGE0" type="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select name="MERGE6" class="form-control">
+                                <option value="">Country</option>
+                                <option selected value="">Country (Optional)</option>
+                                {% for country in site.data.countryNames %}
+                                <option value="{{country[1]}}">{{country[1]}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <button class="btn btn-info btn-block text-uppercase" type="submit">Subscribe to updates</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="b_a2e6f8a8a8a21683874d560ea_281e1f8cee" tabindex="-1" value="">
+            </form>
+
+            <div>
+                <p class="email-fail" style="display: none;">
+                    Your browser blocked the form submit. You can <a href="https://zencash.us15.list-manage.com/subscribe?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" target="_blank">sign up here instead</a>.
+                </p>
+                <p class="email-success" style="display: none;">
+                    Success! Please check your email to confirm we have the right one.
+                </p>
+                <p class="email-feedback"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="site-footer text-center site-wrapper">
+        <div class="container-fluid">
+            <p class="copyright">© 2019 Horizen. All rights reserved.</p>
+            <p class="links">
+                <a href="#">Legal</a>
+                |
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>

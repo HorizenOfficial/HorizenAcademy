@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+    <h2 class="post-title">{{ page.title }}</h2>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    {% include post-bottom-nav.html %}
+
+</div>

@@ -1,0 +1,283 @@
+---
+layout: default
+title: titles.content-overview
+description: descriptions.content-overview
+keywords: keywords.content-overview
+
+namespace: content-overview
+permalink: /content-overview/
+---
+
+
+<div class="post-section">
+    <h2 class="post-title">CONTENT OVERVIEW</h2>
+
+    <div class="post-content">
+        <section class="content-overview">
+            <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="label-technology" data-toggle="pill" href="#tab-technology" role="tab" aria-controls="tab-technology" aria-selected="true">Technology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="label-privacy" data-toggle="pill" href="#tab-privacy" role="tab" aria-controls="tab-privacy" aria-selected="false">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="label-horizen" data-toggle="pill" href="#tab-horizen" role="tab" aria-controls="tab-horizen" aria-selected="false">Horizen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="label-history" data-toggle="pill" href="#tab-history" role="tab" aria-controls="tab-history" aria-selected="false">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="label-eli5" data-toggle="pill" href="#tab-eli5" role="tab" aria-controls="tab-eli5" aria-selected="false">ELI5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="label-resources" data-toggle="pill" href="#tab-resources" role="tab" aria-controls="tab-resources" aria-selected="false">Resources</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="tabs-content">
+                <div class="tab-pane fade show active" id="tab-technology" role="tabpanel" aria-labelledby="label-technology">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-uppercase">
+                            <th scope="col">
+                                Chapter
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
+                                Beginner
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
+                                Advanced
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
+                                Expert
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr class="d-none">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            {% assign current_chapter = "" %}
+
+                            {% for post in site.posts reversed %}
+
+                            {% if post.topic != "technology" or post.level != "beginner" %} {% continue %} {% endif %}
+                            {% unless post.chapter %} {% continue %} {% endunless %}
+
+                            {% if current_chapter != post.chapter %}
+                            {% assign current_chapter = post.chapter %}
+
+                        </tr>
+                        <tr>
+                            <th scope="row">{{ post.chapter }}</th>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "technology" and post2.level == "beginner" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "technology" and post2.level == "advanced" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "technology" and post2.level == "expert" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+
+                            {% endif %}
+
+                            {% endfor %}
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="tab-privacy" role="tabpanel" aria-labelledby="label-privacy">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-uppercase">
+                            <th scope="col">
+                                Chapter
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
+                                Beginner
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
+                                Advanced
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
+                                Expert
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr class="d-none">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            {% assign current_chapter = "" %}
+
+                            {% for post in site.posts reversed %}
+
+                            {% if post.topic != "privacy" or post.level != "beginner" %} {% continue %} {% endif %}
+                            {% unless post.chapter %} {% continue %} {% endunless %}
+
+                            {% if current_chapter != post.chapter %}
+                            {% assign current_chapter = post.chapter %}
+
+                        </tr>
+                        <tr>
+                            <th scope="row">{{ post.chapter }}</th>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "privacy" and post2.level == "beginner" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "privacy" and post2.level == "advanced" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post2 in site.posts reversed %}
+                                {% if post2.topic == "privacy" and post2.level == "expert" and post2.chapter == current_chapter %}
+                                <a href="{{ post2.url }}" class="article-link">{{ post2.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+
+                            {% endif %}
+
+                            {% endfor %}
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="tab-horizen" role="tabpanel" aria-labelledby="label-horizen">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-uppercase">
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
+                                Beginner
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
+                                Advanced
+                            </th>
+                            <th scope="col">
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
+                                Expert
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "horizen" and post.level == "beginner" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "horizen" and post.level == "advanced" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "horizen" and post.level == "expert" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="tab-history" role="tabpanel" aria-labelledby="label-history">
+                    <table class="table">
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "history" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="tab-eli5" role="tabpanel" aria-labelledby="label-eli5">
+                    <table class="table">
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "eli5" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="tab-resources" role="tabpanel" aria-labelledby="label-resources">
+                    <table class="table">
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                {% for post in site.posts reversed %}
+                                {% if post.topic == "resources" and post.type == "article" %}
+                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
+                                {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+

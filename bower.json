@@ -1,0 +1,35 @@
+{
+  "name": "jekyll-gulp-siteleaf",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Zen Academy <info@horizen.global>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "v4.2.1",
+    "enquire": "^2.1.2",
+    "normalize-css": "^5.0.0",
+    "animsition": "^4.0.2",
+    "ajaxchimp": "^1.3.0",
+    "wow": "wowjs#^1.1.2",
+    "animate.css": "^3.5.2",
+    "js-cookie": "^2.2.0",
+    "popper.js": "^1.14.0",
+    "jquery.nicescroll": "^3.7.6"
+  },
+  "dependencies": {
+    "aos": "^2.2.0",
+    "lity": "^2.3.0",
+    "select2": "^4.0.5"
+  }
+}

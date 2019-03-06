@@ -1,0 +1,36 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    {% capture page_id %}{% if page.permalink == '/' %}homepage{% else %}page-{{ page.permalink | slugify }}{% endif %}{% endcapture %}
+
+    <body id="{{ page_id }}" class="lng-{{site.lang}}">
+
+    {% include header.html %}
+
+    <div class="left-menu" id="left-menu">
+        {% include left-menu.html %}
+    </div>
+
+    <div class="site-wrapper">
+        <div class="site-content-wrapper">
+
+            <div class="container-fluid">
+                {{ content }}
+            </div>
+
+        </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    </body>
+
+</html>

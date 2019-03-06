@@ -1,0 +1,126 @@
+global:
+titles:
+  homepage: Horizen Academy
+descriptions:
+  homepage: Horizen is a highly usable cryptocurrency and a leading-edge technology platform. Our technology runs on zk-SNARKs and is powered by our Super Nodes and Secure Nodes. Using our cryptocurrency (ZEN), users can perform both private and anonymous, untraceable transactions. Horizen provides everyone with privacy and complete control of their digital footprint using our Responsible Privacy(™) framework. Horizen’s Decentralized Autonomous Organization will give everyone a voice, and let anyone submit proposals to our platform.
+keywords:
+  homepage: Horizen, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+nav:
+  top:
+    about: About
+    what-is-horizen: What is Horizen
+    built: Built on Horizen
+    features: Features
+    roadmap: Roadmap
+    team: Team
+    whitepaper: White Papers
+    exchanges: Get ZEN
+    wallets: Use ZEN
+    miningpools: Earn ZEN
+    zen-faucet: ZEN Faucet
+    proposal: Submit a Proposal
+    community: Community
+    support: Support
+    blog: Updates
+    store: Store
+  footer:
+    contact: Contact us
+    about:
+      title: About
+      items:
+        - title: 'What is Horizen?'
+          namespace: what-is-horizen
+        - title: 'Team'
+          namespace: team
+        - title: 'Roadmap'
+          namespace: roadmap
+        - title: 'Technology'
+          namespace: technology
+    resources:
+      title: Resources
+      items:
+        - title: 'Block Explorer 1'
+          link: 'https://explorer.zensystem.io/'
+          type: external
+        - title: 'Block Explorer 2'
+          link: 'http://explorer.zenmine.pro/insight/'
+          type: external
+        - title: 'Block Explorer 3'
+          link: 'https://explorer.zen-solutions.io/'
+          type: external
+        - title: 'Legal'
+          link: '/legal/'
+        - title: 'Support'
+          link: 'https://support.horizen.global'
+          type: external
+        - title: 'Public Keys'
+          link: 'https://github.com/zencashofficial/keys'
+          type: external
+        - title: 'Media Kit'
+          link: '/media/'
+    community:
+      title: Join our Community
+    email:
+      title: Get Email Updates
+      contact:
+        title: Contact Us
+        email: info@zencash.com
+    copyright: All rights reserved.
+homepage:
+  hero:
+    subtitle: Bringing privacy to life
+    subtitle2: Money, Messages, & Media
+    wallet-button: Get A Wallet
+    buy-button: Buy ZEN
+    announcement: Excited to Announce R&D Partnership with IOHK
+    announcement-button: Hello Horizen! Meet our new brand
+  about:
+    title: Horizen is a privacy-oriented cryptocurrency and a leading-edge technology platform.
+    content: We are connected to many crypto-payment providers and are constantly adding more, encouraging mass adoption of our platform. Our sidechains will enable anyone to build privacy-based applications, allowing us to bring thousands of real-life services to the world.
+    products:
+      zencash: For Money
+      zenchat: For Messaging
+      zenpub: For Media
+      zenhide: For Web Traffic
+      zendao: Treasury and Voting System
+      development: (in development)
+      nav:
+        - title: About
+          link: '/what-is-horizen/'
+          icon: /assets/img/icons/features.png
+        - title: Roadmap
+          link: '/roadmap/'
+          icon: /assets/img/icons/roadmap.png
+        - title: Team
+          link: '/team/'
+          icon: /assets/img/icons/team.png
+        - title: Store
+          link: 'https://store.horizen.global/'
+          icon: /assets/img/icons/shop.png
+  overview:
+    title: Overview
+    items:
+      - title: Ticker Symbol
+        subtitle: ZEN
+        icon: /assets/img/icons/overview/overview_ticker.png
+      - title: Launch Date
+        subtitle: May 2017
+        icon: /assets/img/icons/overview/overview_launch.png
+      - title: Market Cap
+        subtitle: $100M
+        icon: /assets/img/icons/overview/overview_marcap.png
+      - title: Total Nodes
+        id: nodeCount
+        subtitle: '<span id="totalNodes">17,000</span>'
+        icon: /assets/img/icons/overview/overview_nodes.png
+      - title: Circulating Supply
+        id: circSupply
+        subtitle: '<span id="totalCirc">4,061,588</span> ZEN'
+        icon: /assets/img/icons/overview/overview_circsupply.png
+      - title: Max supply
+        subtitle: 21,000,000 ZEN
+        icon: /assets/img/icons/overview/overview_maxsupply.png
+      - title: Proof of Work
+        subtitle: Equihash Algorithm
+        icon: /assets/img/icons/overview/overview_algo.png
+
