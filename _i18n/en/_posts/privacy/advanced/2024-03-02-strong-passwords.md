@@ -38,7 +38,7 @@ A strong password should have at least 12 characters. If you are protecting sens
 
 There are some methods that you can apply to create a strong password. The sentence method uses a familiar sentence as a starting point and applies some sort of algorithm to make your password.
 
-You could start out with "I went to school in Woodland Park and played soccer during the fall season". Now you can think of an algorithm to create a password out of this sentence, like using the first two characters of each word, the last two characters, the first and the last or any other combination that works for you. Using the first two characters would yield "IwetoscinWoPaanplsodufase". This is a fairly secure password that will survive both a dictionary attack, as well as a brute force attack if the attacker is not 100% committed to you as a target.
+You could start out with "I went to school in Woodland Park and played soccer during fall season". Now you can think of an algorithm to create a password out of this sentence, like using the first two characters of each word, the last two characters, the first and the last or any other combination that works for you. Using the first two characters would yield "IwetoscinWoPaanplsodufase". This is a fairly secure password that will survive both a dictionary attack, as well as a brute force attack if the attacker is not 100% committed to you as a target.
 
 Another method is using regular words that don't make sense in this combination. correcthorsebatterystaple is a commonly used example of this method.
 
