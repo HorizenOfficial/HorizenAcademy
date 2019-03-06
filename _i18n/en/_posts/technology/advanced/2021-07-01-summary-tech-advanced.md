@@ -12,7 +12,7 @@ In this last article of our advanced Technology Section, we want to summarize wh
 
 ### What is a Blockchain?
 
-In our first chapter of "What is a Blockchain" we looked at it from three different perspectives. First, we looked at it as a computer scientist and described the Blockchain as a Data Structure (TI1.1)[Blockchain as a Data Structure]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}). A blockchain is like a linked list, a common data structure with the difference that the references that link the individual blocks are cryptographically secured. This makes it infeasible to tamper with the data recorded on a blockchain.
+In our first chapter of "What is a Blockchain" we looked at it from three different perspectives. First, we looked at it as a computer scientist and described the [blockchain as a data structure]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}). A blockchain is like a linked list, a common data structure with the difference that the references that link the individual blocks are cryptographically secured. This makes it infeasible to tamper with the data recorded on a blockchain.
 
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_broken.jpg)
 
@@ -66,7 +66,7 @@ We also showed you a very special kind of transaction in this chapter, an [Atomi
 
 ### Privacy on the Blockchain
 
-The human right to privacy is one of Horizen's core values. We looked at different methods to preserve your privacy in [Privacy on the Blockchain]({{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}). We started with simple methods such as using different addresses for every new transaction and coin mixing protocols that combine a number of transactions from different sources to obfuscate the link between sender and recipient. A more advanced technique to guarantee private transactions is the use of ring signatures. With ring signatures, a group of people signs a transaction and an observer will know for sure that one of the group members sent the transaction but he won't be able to tell which one.
+The human right to privacy is one of Horizen's core values. We looked at different methods to preserve your [privacy on the blockchain]({{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}). We started with simple methods such as using different addresses for every new transaction and coin mixing protocols that combine a number of transactions from different sources to obfuscate the link between sender and recipient. A more advanced technique to guarantee private transactions is the use of ring signatures. With ring signatures, a group of people signs a transaction and an observer will know for sure that one of the group members sent the transaction but he won't be able to tell which one.
 
 The last privacy-preserving technology we talked about were Zero-Knowledge Proofs, or more precisely zkSNARKs. It is the technology Horizen uses for its Shielded Transactions. Simply speaking, a Zero-Knowledge Proof enables you to prove to a verifier that you know something, without revealing that knowledge. We used the example of a seeing person convincing a blindfolded one that two balls are of different color, without revealing the colors.
 
