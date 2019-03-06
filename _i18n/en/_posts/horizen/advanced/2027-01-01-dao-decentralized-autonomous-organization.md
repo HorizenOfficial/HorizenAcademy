@@ -1,8 +1,8 @@
 ---
 layout: post
 type: article
-title: "DAO"
-permalink: /horizen/advanced/dao/
+title: "DAO - Decentralized  Autonomous Organization"
+permalink: /horizen/advanced/dao-decentralized-autonomous-organization/
 topic: horizen
 level: advanced
 ---
@@ -50,4 +50,4 @@ We aim to reduce rational ignorance by providing incentive to encourage voters t
 
 In the first step towards becoming a DAO, we want to decentralize the decision making about our treasury funds. Users will be able to submit proposals and the community will vote on which proposals should receive funding. The infrastructure for the voting process and the distribution of funds will be built on a sidechain. The voting mechanism we are implementing is a liquid democracy based system, where a voter can choose to vote on issues directly, or they can delegate their vote to an expert. To combat voter apathy we plan to incentivize participation in the decision-making process with financial rewards.
 
-For a detailed explanation of our planned treasury system go see our article on it on the [expert level]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao %}).
+For a detailed explanation of our planned treasury system go see our article on it on the [expert level]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).

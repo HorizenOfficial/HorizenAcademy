@@ -43,7 +43,7 @@ Critics of the sidechain concept like to point out, that most sidechain implemen
 
 ### Why Does Horizen Look at Sidechains?
 
-The Horizen blockchain project has set itself ambitious goals. We plan on including features such as developing a treasury system for the [DAO]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao %}) in cooperation with IOHK, a decentralized solution for tracking Secure and Super Nodes and handling their rewards, as well as developing a [Block-DAG]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}) protocol to increase transaction throughput.
+The Horizen blockchain project has set itself ambitious goals. We plan on including features such as developing a treasury system for the [DAO]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}) in cooperation with IOHK, a decentralized solution for tracking Secure and Super Nodes and handling their rewards, as well as developing a [Block-DAG]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}) protocol to increase transaction throughput.
 
 You can probably see the benefits of developing a sidechain first as some of these functionalities would require significant modifications of the core client if implemented directly into the existing codebase.  Building new features and making changes to the protocol, even if they are small, is not just challenging from the aspect of building consensus around them, but it also comes with security risks. Every addition has to be considered carefully.
 

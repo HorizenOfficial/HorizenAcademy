@@ -80,8 +80,13 @@ $(function () {
     }
 
     $(".js-SelectLevel").click(function (e) {
-        e.preventDefault();
         var btn = $(this);
+
+        if (btn.attr("href").length > 1) {
+            return;
+        }
+
+        e.preventDefault();
 
         if (activeLevel === btn.data("level")) {
             return;
@@ -194,6 +199,146 @@ $(function () {
             });
 
         }
+
+
+        // post bottom nav
+        function updateNavLink(navLink, desLink) {
+            navLink.attr("href", desLink.attr("href")).removeClass("btn disabled");
+
+            navLink.find(".article-title").html(desLink.hasClass("js-SelectTopic") ? desLink.find(".topic-name").html() : desLink.html());
+        }
+        function linkNavNextChapter() {
+            var nextChapter = articleLink.closest(".topic-articles").next();
+            if (nextChapter.length && nextChapter.hasClass("show")) {
+                updateNavLink(nextNav, nextChapter.find(".chapter-link"));
+            }
+        }
+        function linkNavPrevChapter() {
+            var prevChapter = articleLink.closest(".topic-articles").prev();
+            if (prevChapter.length && prevChapter.hasClass("show")) {
+                updateNavLink(prevNav, prevChapter.find(".chapter-link"));
+            }
+        }
+
+        var bottomNav =  $(".post-bottom-nav");
+        var prevNav =  bottomNav.find(".link-prev-article");
+        var nextNav =  bottomNav.find(".link-next-article");
+        var nextArticle;
+
+        if (articleLink.hasClass("article-link")) {
+
+            var prevArticle = articleLink.prev();
+            if (prevArticle.length) {
+                updateNavLink(prevNav, prevArticle);
+            } else {
+                var currentChapter = articleLink.closest(".topic-articles").find(".chapter-link");
+                if (currentChapter.length) {
+                    updateNavLink(prevNav, currentChapter.find(".chapter-link"));
+                } else {
+                    // updateNavLink(prevNav, $(".js-SelectTopic.active"));
+                }
+            }
+
+
+            nextArticle = articleLink.next();
+            if (nextArticle.length) {
+                updateNavLink(nextNav, nextArticle);
+            } else {
+                linkNavNextChapter();
+            }
+
+        } else if (articleLink.hasClass("chapter-link")) {
+
+            linkNavPrevChapter();
+
+            nextArticle = articleLink.closest(".topic-articles").find(".chapter-articles").find("a:first-child");
+            if (nextArticle.length) {
+                updateNavLink(nextNav, nextArticle);
+            } else {
+                linkNavNextChapter();
+            }
+
+        } else if (articleLink.hasClass("js-SelectTopic")) {
+
+            var topic = $("#list-"+articleLink.data("topic")+"-articles");
+            // no preview article
+            var chapters = topic.find(".show .chapter-link");
+            if (chapters.length) {
+                updateNavLink(nextNav, chapters.first());
+            } else {
+                updateNavLink(nextNav, topic.find(".article-link").first());
+            }
+
+        }
+
+
+        // update level links
+        // bottomNav.find(".skill-levels .link-" + postContent.data("level")).addClass("active").attr("href", postContent.data("url"));
+        var articleTitle;
+
+        if (articleLink.hasClass("article-link")) {
+
+            articleTitle = articleLink.text().trim();
+
+            ["beginner", "advanced", "expert"].forEach(function (level) {
+                if (postContent.data("level") === level) {
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                    return;
+                }
+
+                articleLink.closest(".list-topic-articles").find(".topic-articles.level-" + level + " .article-link").each(function (_, article) {
+                    article = $(article);
+                    var t = article.text().trim();
+                    if (t === articleTitle) {
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", article.attr("href")).removeClass("btn disabled");
+                        $(".js-SelectLevel[data-level='" + level + "']").attr("href", article.attr("href"));
+                    }
+                });
+
+            });
+
+        } else if (articleLink.hasClass("chapter-link")) {
+
+            articleTitle = articleLink.closest(".topic-articles").find(".chapter-link").text().trim();
+
+            ["beginner", "advanced", "expert"].forEach(function (level) {
+                if (postContent.data("level") === level) {
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                    return;
+                }
+
+                articleLink.closest(".list-topic-articles").find(".topic-articles.level-" + level).each(function (_, topic) {
+                    topic = $(topic);
+                    var chapter = topic.find(".chapter-link");
+                    var t = chapter.text().trim();
+                    if (t === articleTitle) {
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", chapter.attr("href")).removeClass("btn disabled");
+                        $(".js-SelectLevel[data-level='" + level + "']").attr("href", chapter.attr("href"));
+                    }
+                });
+
+            });
+
+        } else if (articleLink.hasClass("js-SelectTopic")) {
+
+            ["beginner", "advanced", "expert"].forEach(function (level) {
+                if (articleLink.data("url-" + level)) {
+
+                    if (postContent.data("level") === level) {
+                        bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                        $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                        return;
+                    }
+
+                    bottomNav.find(".skill-levels .link-" + level).attr("href", articleLink.data("url-" + level)).removeClass("btn disabled");
+                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", articleLink.data("url-" + level));
+                }
+            });
+
+        }
+
     }
 
 
@@ -227,5 +372,63 @@ $(function () {
 
 });
 
+
+// subscribe form
+$(function () {
+    var mcWrapper = $(".footer-subscribe");
+    var mcForm = $("#mc-footer-subscribe-form");
+
+    var failCb = function (response) {
+        // mailchimp ajax submit error
+        mcForm.fadeOut();
+        mcWrapper.find(".email-fail").fadeIn();
+    };
+
+    var successCb = function (response) {
+        mcForm.fadeOut();
+        mcWrapper.find(".email-success").fadeIn();
+    };
+
+    var errorCb = function (response) {
+        var errorMap = [
+            {"message": "is already subscribed", "response": "Looks like you're already subscribed."},
+            {"message": "Please enter a value", "response": "Please enter an email address."},
+            {"message": "Too many subscribe attempts", "response": "Please wait 5 mintutes and try again."},
+            {"message": "must contain a single @", "response": "Please enter a valid email address."},
+            {"message": "domain portion of the email address is invalid", "response": "Please enter a valid email address."}
+        ];
+
+        mcForm.find(".form-group").addClass('has-warning');
+        var errorMsg = "Something went wrong when submitting the form. Please check the information you provided and try again."; // default
+
+        for (var i = 0; i < errorMap.length; i++) {
+            if (response.msg.indexOf(errorMap[i].message) >= 0) {
+                errorMsg = errorMap[i].response;
+                break;
+            }
+        }
+
+        mcWrapper.find(".email-feedback").text(errorMsg);
+    };
+
+    var fnCallback = function(response) {
+        if (response.status == '404') {
+            return failCb(response);
+        }
+
+        if (response.result === 'success') {
+            return successCb(response);
+        }
+
+        if (response.result === 'error') {
+            return errorCb(response);
+        }
+    };
+
+    mcForm.ajaxChimp({
+        url: mcForm.attr('action'),
+        callback: fnCallback
+    });
+});
 
 

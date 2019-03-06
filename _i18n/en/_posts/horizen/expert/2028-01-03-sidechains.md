@@ -11,7 +11,7 @@ In our [Advanced Section]({{ site.baseurl }}{% post_url /horizen/advanced/2027-1
 
 ![sidechains](/assets/post_files/horizen/expert/sidechains/sidechains.jpg)
 
-Having the ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will be the Treasury (Whitepaper), moving the organization a step closer to its goal of becoming a [decentralized autonomous organization or DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao %}).
+Having the ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will be the Treasury (Whitepaper), moving the organization a step closer to its goal of becoming a [decentralized autonomous organization or DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).
 
 ### How Does It Work Now?
 
@@ -176,4 +176,4 @@ The CCT security is enforced by adding references to the mainchain with every bl
 
 Having the ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. There will be a lot of work from here, to actually having a first sidechain deployed on the Horizen main-net. This includes rigorous security testing and further evaluation of the sidechain consensus protocol.
 
-One of the first use-cases of a sidechain for the Horizen project will most likely be a sidechain facilitating the treasury, moving the project a step closer to becoming a truly [decentralized autonomous organization]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao %}).
+One of the first use-cases of a sidechain for the Horizen project will most likely be a sidechain facilitating the treasury, moving the project a step closer to becoming a truly [decentralized autonomous organization]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).

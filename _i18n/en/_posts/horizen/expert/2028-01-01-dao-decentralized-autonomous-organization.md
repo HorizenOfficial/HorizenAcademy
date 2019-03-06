@@ -1,8 +1,8 @@
 ---
 layout: post
 type: article
-title: "DAO"
-permalink: /horizen/expert/dao/
+title: "DAO - Decentralized  Autonomous Organization"
+permalink: /horizen/expert/dao-decentralized-autonomous-organization/
 topic: horizen
 level: expert
 ---

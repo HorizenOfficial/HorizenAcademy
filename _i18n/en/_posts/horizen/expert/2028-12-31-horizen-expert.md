@@ -7,7 +7,7 @@ topic: horizen
 level: expert
 ---
 
-This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via [DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao %}) sustainable funding model.
+This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via [DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}) sustainable funding model.
 
 ![DAO](/assets/post_files/horizen/expert/dao/DAO.jpg)
 
