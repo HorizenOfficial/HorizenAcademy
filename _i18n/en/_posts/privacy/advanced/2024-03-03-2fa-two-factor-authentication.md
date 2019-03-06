@@ -14,7 +14,7 @@ We already use 2FA in real life. A notable example is using an ATM to withdraw c
 
 The good news is that almost every service in a blockchain world has an optional 2FA built in. It became a de-facto standard in this sphere. Enabling 2FA is one of the best security best practices you can employ as it protects you even in cases of platform-level hacks when the passwords get exposed. Of course, considering that the platform itself has the 2FA implemented correctly. 2FA works by requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like Microsoft Authenticator, Google Authenticator or others. 
 
-
+![2FA](/assets/post_files/privacy/advanced/2FA/2FA.jpg)
 
 ### 2FA Through Text Messages
 
