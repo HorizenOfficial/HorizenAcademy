@@ -119,3 +119,47 @@
 }
 
 
+#page-technology, #page-privacy {
+  .post-section {
+    .post-title {
+      font-size: 2.5rem;
+    }
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+  .icon-level {
+    height: 50px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .table-levels {
+    border-spacing: 16px 0;
+    border-collapse: separate;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    td {
+      border-left: 1px solid #f5f6fa;
+      border-right: 1px solid #f5f6fa;
+      padding: 0.6rem 1.2rem;
+    }
+    tr:first-child td {
+      border-top: 1px solid #f5f6fa;
+      padding-top: 1.2rem;
+      padding-bottom: 0.6rem;
+    }
+    tr:last-child td {
+      border-bottom: 1px solid #f5f6fa;
+      background-color: #f5f6fa;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      ul {
+        margin-bottom: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+
+
