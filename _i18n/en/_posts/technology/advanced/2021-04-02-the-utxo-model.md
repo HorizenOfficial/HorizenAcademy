@@ -14,7 +14,7 @@ When you think about how your bank does the accounting for your bank account it 
 
 The blockchain does not create an "account" for you to maintain a balance. There is no final balance stored on the ledger. The blockchain only stores individual transactions and to check your balance, there is an additional step involved. For this step, you are going to use your wallet, which does this automatically whenever you open it and it shows you your balance, or you can do it manually using the block explorer. What happens in the background when you use either of these tools is that they search the ledger for all transactions, that involve your address(es). The wallet (or explorer) then adds all incoming transactions together and subtracts all outgoing transactions to derive your current balance.
 
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet.jpg)
+![wallet](/assets/post_files/technology/advanced/the-utxo-model/utxo.jpg)
 
 Each transaction on the blockchain has one or more inputs and one or more outputs. Let's have a look at an actual example throughout a series of four transactions:
 

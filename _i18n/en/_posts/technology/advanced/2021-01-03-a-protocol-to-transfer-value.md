@@ -14,7 +14,7 @@ We will now look at blockchain from a different perspective. This perspective co
 
 The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. [Techopedia's definition](https://www.techopedia.com/definition/12938/network-protocols) of a network protocol goes as follows:
 
-> "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication." - Techopedia
+> "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication."
 
 The inception of the blockchain defines this set of rules, procedures, and formats. The only way to alter these rules is if a majority of the network participants decide to do so. Public blockchains require consensus building, which in turn requires careful consideration of each change proposed. This desirable feature helps to create a robust trust foundation for users.
 
@@ -30,7 +30,7 @@ You can distinguish between several broad types of networking protocols. There a
 Below you see a collection of protocols, many of which you use every day. For example, The TCP/IP Protocol specifies how to break data down into packets, address the packets, and route them through the network to their final destination. You are using the TCP/IP standard any time you go online to communicate with different servers to receive the information you want to access.  
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication. For example, when sending your payment details to an online shop you use SSL to establish an encrypted connection before you actually send your credit card information across the internet.
 
-The Simple Network Management Protocol (**SNMP**) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
+The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
 
 ![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols.png)
 

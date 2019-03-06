@@ -14,7 +14,7 @@ It is important that you use a different password for each website or applicatio
 
 ![password](/assets/post_files/privacy/beginner/strong-passwords/password.png)
 
-Source ([https://xkcd.com/936/](https://xkcd.com/936/))
+[Source](https://xkcd.com/936/)
 
 The second best practice is creating passwords that are strong and hard to guess, especially for computers but for humans too. Let's compare these two passwords: 
 

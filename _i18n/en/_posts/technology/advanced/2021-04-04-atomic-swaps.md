@@ -62,7 +62,7 @@ The technology is very promising, but to achieve adoption wallets as well as exc
 
 Atomic Swaps present an alternative to centralized exchanges used today once they are available between the majority of cryptocurrencies. At no point is there a third party involved that has access to a users funds. The exchange process is entirely trustless and almost instant. Hashed Timelock Contracts are the heart of Atomic Swaps. I suspect that it won't take long until Atomic Swap compatibility will be a necessary feature for a blockchain to gain adoption.
 
-This was the last article on transactions in the advanced section. To learn more about how transactions work and what types of transactions there are you can visit our expert level. On the advanced level, we will continue with an **introduction to privacy-preserving techniques** on the blockchain.
+This was the last article on transactions in the advanced section. To learn more about how transactions work and what types of transactions there are you can visit our expert level. On the advanced level, we will continue with an introduction to privacy-preserving techniques on the blockchain.
 
 ### Further Reading
 

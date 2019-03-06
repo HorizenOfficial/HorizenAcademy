@@ -14,21 +14,21 @@ Using additional resources will help you understand the topics blockchain and cr
 
 
 
-### [Jameson Lopp - Bitcoin Resources](https://lopp.net/bitcoin.html)
+#### [Jameson Lopp - Bitcoin Resources](https://lopp.net/bitcoin.html)
 
 Jameson Lopp has put on of the best-curated Resource Lists around Bitcoin, Blockchain and Crypto in general. He lists online courses, the most important forums, podcasts, blogs and much much more. Make sure to check it out, it is a very valuable collection of content.
 
-### [Privacy Bitcoin Wiki](https://en.bitcoin.it/wiki/Privacy)
+#### [Privacy Bitcoin Wiki](https://en.bitcoin.it/wiki/Privacy)
 
 While Bitcoin can support strong privacy, many ways of using it are usually not very private. With a proper understanding of the technology, bitcoin can indeed be used in a very private and anonymous way. This Wiki does not only explain the different technological concepts behind Bitcoin but also includes a lot of best-case and worst-case examples of how to use crypto.
 
-### [Coindesk](https://www.coindesk.com/)
+#### [Coindesk](https://www.coindesk.com/)
 
 If you want to stay up to date about the blockchain and crypto industry, Coindesk is a good place to start. You will find all the important news about adoption, use-cases, and technical developments. They have become the de-facto industry standard for topic related news.
 
 Image: (https://surveymonkey-assets.s3.amazonaws.com/survey/153531389/17caf602-8aaf-4f27-a1ef-f8f84bb262c6.png)
 
-### [Surveillance Self-Defense](https://ssd.eff.org/en)
+#### [Surveillance Self-Defense](https://ssd.eff.org/en)
 
 A project of the Electronic Frontier Foundation (EFF), an independent non-profit working to protect online privacy for nearly thirty years. This is Surveillance Self-Defense : their expert guide to protecting you and your friends from online spying.
 

@@ -20,7 +20,7 @@ Smart contracts promise to eliminate the need for middlemen, such as lawyers or 
 
 For example, a landlord and a tenant could use a smart contract to govern the rental agreement. The smart contract could automatically lock the tenant out of the apartment if the tenant fails to pay rent. The if-then statement, in this case, would look something like:
 
-If the contract address receives amount X by the 3rd of each month from address Y, grant Y access to the apartment. If payment fails for 2 consecutive months, revoke the right of Y to unlock the apartment.
+*If the contract address receives amount X by the 3rd of each month from address Y, grant Y access to the apartment. If payment fails for 2 consecutive months, revoke the right of Y to unlock the apartment.*
 
 Another potential use case for smart contracts would be a decentralized eBay. One could construct a smart contract with an expiry date defining the time period of the auction and a starting bid. The highest bidder would receive the item at the end of the auction period in exchange for their money. The losing bidders would be automatically refunded by the smart contract. Such a decentralized version of eBay would be considered a dApp or decentralized App.
 

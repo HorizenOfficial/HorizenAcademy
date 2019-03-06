@@ -10,11 +10,11 @@ chapter: "Wallets"
 
 A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our introduction to wallets. The main differentiator between the different types of wallets is the physical location your keys are stored in.
 
-This article should give you a better understanding of what types of wallets are available and help you identify a given wallet between the types described below.
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_AW.jpg)
 
 ### The Different Types of Wallets
 
-Let's have a look at this overview of the different wallet types before we go into individual wallets in detail.
+This article should give you a better understanding of what types of wallets are available and help you identify a given wallet between the types described below. Let's have a look at this overview of the different wallet types before we go into the individual wallets in detail.
 
 ![overview](/assets/post_files/technology/advanced/types-of-wallets/overview.jpg)
 
