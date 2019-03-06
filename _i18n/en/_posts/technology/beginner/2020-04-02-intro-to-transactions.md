@@ -31,7 +31,7 @@ Now let us consider each individual mailbox in this grid. We explained that iden
 
 The corresponding key pair identifies the individual mailboxes in our grid instead of numbers. You can find a given mailbox or account with the public key or address, as the identifier. You can open it with the corresponding private key.
 
-**Note**: There is a slight difference between an address and a public key, but for now, we can consider them to be the same. We will get to this difference in the **intermediate section**.
+**Note**: There is a slight difference between an address and a public key, but for now, we can consider them to be the same. We will get to this difference in the [intermediate section]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}).
 
 To make this analogy work imagine the door to your mailbox is transparent. Nobody other than the owner of the key pair can open the mailbox, but everybody can see what's inside. We will get back to this property when we talk about the block explorer. To sum up what we have so far, once using more familiar terminology and once using blockchain lingo:
 
