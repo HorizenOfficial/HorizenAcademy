@@ -54,7 +54,7 @@ Monero is the most notable cryptocurrency making use of Ring Signatures which ar
 
 ### Zero-Knowledge Proofs
 
-Zero-Knowledge proofs (zk-Proofs) were known long before blockchain technology emerged but with distributed ledgers, a whole new set of possible use-cases came around.
+Zero-Knowledge Proofs (zk-Proofs) were known long before blockchain technology emerged but with distributed ledgers, a whole new set of possible use-cases came around.
 
 Simply speaking, a Zero Knowledge Proof lets you prove to a verifier that you know something, without revealing that knowledge. Here is an intuitive, non-digital example of what this might look like. A seeing person is the prover, a blindfolded person is the verifier, and there are two balls of different color. 
 
