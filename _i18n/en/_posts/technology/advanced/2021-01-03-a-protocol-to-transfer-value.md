@@ -14,7 +14,7 @@ We will now look at blockchain from a different perspective. This perspective co
 
 The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. [Techopedia's definition](https://www.techopedia.com/definition/12938/network-protocols) of a network protocol goes as follows:
 
-> "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication." - Techopedia
+> "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication."
 
 The inception of the blockchain defines this set of rules, procedures, and formats. The only way to alter these rules is if a majority of the network participants decide to do so. Public blockchains require consensus building, which in turn requires careful consideration of each change proposed. This desirable feature helps to create a robust trust foundation for users.
 
