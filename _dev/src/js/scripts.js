@@ -370,6 +370,12 @@ $(function () {
         $("#list-privacy-articles .topic-articles.level-beginner").addClass("show");
     }
 
+
+    // Horizen lading page
+    if ($("#page-horizen").length) {
+        $("#list-horizen-articles .topic-articles.level-beginner").addClass("show");
+    }
+
 });
 
 
