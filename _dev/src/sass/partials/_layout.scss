@@ -295,7 +295,7 @@ body::after{ content:''; display:block; height:246px; }
     .one-level-topic-articles {
       a {
         display: block;
-        padding: 12px 0 12px 12px;
+        padding: 8px 0 8px 12px;
       }
     }
   }
@@ -331,7 +331,7 @@ body::after{ content:''; display:block; height:246px; }
       .chapter-dot {
         display: none;
         position: absolute;
-        top: 20px;
+        top: 18px;
         left: 10px;
         width: 8px;
         height: 8px;
@@ -340,7 +340,7 @@ body::after{ content:''; display:block; height:246px; }
       }
       .arrow {
         position: absolute;
-        top: 20px;
+        top: 17px;
         left: 8px;
         img {
           display: inline-block;
@@ -382,7 +382,7 @@ body::after{ content:''; display:block; height:246px; }
 
       .chapter {
         display: block;
-        padding: 12px 0;
+        padding: 10px 0;
         font-weight: bold;
       }
       .chapter-articles {
@@ -494,9 +494,10 @@ body::after{ content:''; display:block; height:246px; }
       }
       .preview-img {
         background-size: cover;
-        //background-size: contain;
         background-repeat: no-repeat;
-        background-position: center right;
+        background-position: center;
+        //background-size: contain;
+        //background-position: center right;
       }
     }
   }

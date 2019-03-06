@@ -1,22 +1,11 @@
 $(function () {
 
+    var articleNav = $("#article-nav");
+
     // ONLY for desktop
     enquire.register("screen and (min-width: 992px)", function () {
 
-        $(".site-nav").headroom({
-            "tolerance": 5,
-            "offset": 40,
-            "classes": {
-                "initial": "animated",
-                "pinned": "slideDown",
-                "unpinned": "slideUp",
-                "top": "headroom--top",
-                "notTop": "headroom--not-top"
-            }
-        });
-
-
-        $("#article-nav").niceScroll({
+        articleNav.niceScroll({
             cursorcolor: "#000",
             cursoropacitymin: 0,
             cursoropacitymax: 0.5,
@@ -26,10 +15,10 @@ $(function () {
 
         $(".chapter-articles, .one-level-topic-articles")
             .on('shown.bs.collapse', function () {
-                $("#article-nav").getNiceScroll().resize();
+                articleNav.getNiceScroll().resize();
             })
             .on('hidden.bs.collapse', function () {
-                $("#article-nav").getNiceScroll().resize();
+                articleNav.getNiceScroll().resize();
             });
 
     });
@@ -46,8 +35,22 @@ $(function () {
     });
 
 
+
+    $(".site-nav").headroom({
+        "tolerance": 5,
+        "offset": 40,
+        "classes": {
+            "initial": "animated",
+            "pinned": "slideDown",
+            "unpinned": "slideUp",
+            "top": "headroom--top",
+            "notTop": "headroom--not-top"
+        }
+    });
+
+
     // update menu icon, always run on init
-    $("#article-nav .chapter-articles").each(function (_, chapter) {
+    articleNav.find(".chapter-articles").each(function (_, chapter) {
         chapter = $(chapter);
 
         if (chapter.children().length === 0) {
@@ -68,8 +71,6 @@ $(function () {
         // }
 
         // $(".topic-articles.open .collapse").collapse('hide');
-
-        var articleNav = $("#article-nav");
 
         articleNav.find(".topic-articles.show").removeClass("show");
         $("#list-" + activeTopic + "-articles .topic-articles.level-" + activeLevel).addClass("show");
@@ -105,7 +106,7 @@ $(function () {
         if (oldActiveChapter.length) {
             var title = oldActiveChapter.closest(".topic-articles").find(".chapter-link").text().trim();
 
-            $("#article-nav .topic-articles.show").each(function (_, topic) {
+            articleNav.find(".topic-articles.show").each(function (_, topic) {
                 topic = $(topic);
                 var t = topic.find(".chapter-link").text().trim();
                 if (t === title) {
@@ -156,11 +157,42 @@ $(function () {
             linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
         });
 
-        var articleLink = $("#article-nav a[href='" + postContent.data("url") + "']");
+        var articleLink = articleNav.find("a[href='" + postContent.data("url") + "']");
+
+        var menuCollapseOpen = false;
+        // open list articles in chapter/topic
         if (articleLink.hasClass("article-link")) {
             articleLink.addClass("active").closest(".collapse").collapse('show');
+
+            menuCollapseOpen = true;
         } else if (articleLink.hasClass("chapter-link")) {
             articleLink.next().collapse('show');
+
+            menuCollapseOpen = true;
+        }
+
+        // scroll
+        // articleLink.offset().top - articleNav.offset().top;
+        // articleNav.height();
+        // articleLink.offset().top - articleNav.height() - articleNav.offset().top;
+        // articleNav.animate({scrollTop: 0});
+
+        // auto scroll
+        if (menuCollapseOpen) {
+
+            // run on desktop version only
+            enquire.register("screen and (min-width: 992px)", function () {
+
+                setTimeout(function () {
+                    var viewBuff = 80;
+                    var offsetTop = Math.round(articleLink.offset().top - articleNav.height() - articleNav.offset().top + viewBuff);
+                    if (offsetTop > 0) {
+                        articleNav.animate({scrollTop: offsetTop});
+                    }
+                }, 1000); // wait collap open
+
+            });
+
         }
     }
 

@@ -61,7 +61,7 @@ topic: resources
 
 
 
-## Videos
+<h2 class="mt-5">Videos</h2>
 
 
 
@@ -96,7 +96,7 @@ topic: resources
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AecPrwqjbGw?rel=0" allowfullscreen></iframe>
         </div>
-        <p class="mt-5">
+        <p class="mt-3">
             <a class="btn btn-info" href="https://www.youtube.com/playlist?list=PLPQwGV1aLnTthcG265_FYSaV24hFScvC0" target="_blank">Watch on Youtube</a>
         </p>
     </div>
