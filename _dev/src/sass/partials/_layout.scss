@@ -6,17 +6,17 @@ body {
 }
 
 
-//html{ height:100%; }
-//body{ min-height:100%; position:relative; }
-//body::after{ content:''; display:block; height:246px; }
-//.site-footer-wrapper{
-//  position:absolute;
-//  bottom:0;
-//  width:100%;
-//}
-.site-content-wrapper {
-  min-height: calc(100vh - 323px);
+html{ height:100%; }
+body{ min-height:100%; position:relative; }
+body::after{ content:''; display:block; height:246px; }
+.site-footer-wrapper{
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
+//.site-content-wrapper {
+//  min-height: calc(100vh - 323px);
+//}
 
 
 .navbar {
