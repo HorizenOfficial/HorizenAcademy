@@ -30,7 +30,7 @@ You can distinguish between several broad types of networking protocols. There a
 Below you see a collection of protocols, many of which you use every day. For example, The TCP/IP Protocol specifies how to break data down into packets, address the packets, and route them through the network to their final destination. You are using the TCP/IP standard any time you go online to communicate with different servers to receive the information you want to access.  
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication. For example, when sending your payment details to an online shop you use SSL to establish an encrypted connection before you actually send your credit card information across the internet.
 
-The Simple Network Management Protocol (**SNMP**) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
+The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
 
 ![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols.png)
 
