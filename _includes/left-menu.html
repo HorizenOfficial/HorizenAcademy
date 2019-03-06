@@ -1,5 +1,5 @@
 <div class="logo">
-    <a href="/">
+    <a href="{% tl homepage %}">
         <img src="/assets/img/Logo-beta.svg" alt="" class="header-logo">
     </a>
 </div>
@@ -244,7 +244,7 @@
 
 
         <div class="topic-history one-level-topic">
-            <a href="{% post_url /history/2001-12-31-history %}" data-topic="history">
+            <a href="{% post_url /history/2001-12-31-history %}" class="js-SelectTopic" data-topic="history">
                 <div class="topic history">
                     <span class="topic-name">History</span>
                 </div>
@@ -274,7 +274,7 @@
 
 
         <div class="topic-eli5 one-level-topic">
-            <a href="{% post_url /eli5/2000-12-31-eli5 %}" data-topic="eli5">
+            <a href="{% post_url /eli5/2000-12-31-eli5 %}" class="js-SelectTopic" data-topic="eli5">
                 <div class="topic eli5">
                     <span class="topic-name">Explain it Like I'm 5</span>
                 </div>
@@ -304,7 +304,7 @@
 
 
         <div class="topic-resources one-level-topic">
-            <a href="{% post_url /resources/2002-12-31-resources %}" data-topic="resources">
+            <a href="{% post_url /resources/2002-12-31-resources %}" class="js-SelectTopic" data-topic="resources">
                 <div class="topic resources">
                     <span class="topic-name">Resources</span>
                 </div>
@@ -337,5 +337,5 @@
 
 <div class="bottom-links">
     <!--<a href="#">FAQ</a>-->
-    <a href="{% tl contentoverview %}">See all Content</a>
+    <a href="{% tl content-overview %}">See all Content</a>
 </div>

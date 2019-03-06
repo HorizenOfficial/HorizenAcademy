@@ -1,3 +1,10 @@
+body {
+  padding-top: 75px;
+}
+
+body:after {
+  height: 410px;
+}
 
 .navbar-brand {
   padding-top: 0;

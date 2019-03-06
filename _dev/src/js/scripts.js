@@ -92,7 +92,10 @@ $(function () {
 
         $(".js-SelectTopic").each(function (_, linkTopic) {
             linkTopic = $(linkTopic);
-            linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
+
+            if (linkTopic.data("url-" + activeLevel)) {
+                linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
+            }
         });
 
         var oldActiveChapter = $(".chapter-articles.collapse.show");
