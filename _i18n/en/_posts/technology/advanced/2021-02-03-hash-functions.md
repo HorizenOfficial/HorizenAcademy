@@ -15,8 +15,8 @@ There are [many hash functions](https://en.wikipedia.org/wiki/List_of_hash_funct
 A cryptographic hash function must fulfill the following set of criteria to be viable for use in a blockchain:
 
  - One-wayness - It has to be easy to calculate an output from a given input but impossible to calculate the input from a given output. When we are talking about cryptocurrency mining later in this chapter, this will be an integral part.
- - Pseudo-random - A change in the input will produce an unforeseeable change in the output. If the hash value of the input "2" was "4", the hash of the input "3" better not be 6.
- - Collision-resistant - It should be hard (read impossible) to find two inputs to a hash function resulting in the same output. 
+ - Pseudo random - A change in the input will produce an unforeseeable change in the output. If the hash value of the input "2" was "4", the hash of the input "3" better not be 6.
+ - Collision resistant - It should be hard (read impossible) to find two inputs to a hash function resulting in the same output. 
  - Deterministic - The same input always needs to produce the same output
 
 ![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function.jpg)
