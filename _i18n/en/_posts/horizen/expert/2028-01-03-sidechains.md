@@ -54,7 +54,7 @@ The proposed SCP is based on the Ouroboros Protocol developed by IOHK for the Ca
 
 ![epoch](/assets/post_files/horizen/expert/sidechains/epoch.jpg)
 
-### Modifications of the Ouroboros Protocol
+#### Modifications of the Ouroboros Protocol
 
 The security of software is usually evaluated under certain assumptions. Consensus protocols are no different.
 
@@ -66,23 +66,23 @@ The randomness is derived from the smallest block hash on the mainchain in a giv
 
 Another modification to the original Ouroboros implementation regards the references to the mainchain included in the sidechain blocks. We will talk about this in the context of the Cross-Chain Transfer Protocol when introducing the concept of full referencing.
 
-### Liveness and Persistence
+#### Liveness and Persistence
 
 Garay, Kiayias & Leonardos say that the standard procedure of proving blockchain consensus protocol security requires demonstrating the ability of the protocol to satisfy two fundamental properties of a distributed ledger: liveness and persistence.
 
-> “**Persistence** states that once a transaction goes more than k blocks “deep” into the blockchain of one honest player, then it will be included in every honest player’s blockchain with overwhelming probability, and it will be assigned a permanent position in the ledger.” — Garay, Kiayias & Leonardos, 2014
+> “Persistence states that once a transaction goes more than k blocks “deep” into the blockchain of one honest player, then it will be included in every honest player’s blockchain with overwhelming probability, and it will be assigned a permanent position in the ledger.” — Garay, Kiayias & Leonardos, 2014
 
-Persistence is closely related to the property of **immutability**.
+Persistence is closely related to the property of immutability.
 
-> “[…]**Liveness** says that all transactions originating from honest account holders will eventually end up at a depth more than k blocks in an honest player’s blockchain, and hence the adversary cannot perform a selective denial of service attack against honest account holders.” — Garay, Kiayias & Leonardos, 2014
+> “[…]Liveness says that all transactions originating from honest account holders will eventually end up at a depth more than k blocks in an honest player’s blockchain, and hence the adversary cannot perform a selective denial of service attack against honest account holders.” — Garay, Kiayias & Leonardos, 2014
 
-This is closely related to the property of **censorship resistance**.
+This is closely related to the property of censorship resistance.
 
 (Note that this is a different k from the one describing the number of blocks per epoch.)
 
 Properties like liveness and persistence are proven under a set of assumptions such as an honest majority among participants. An exhaustive list of these assumptions and their definitions can be found in the original Ouroboros paper.
 
-### Enabling Different SCP’s
+#### Enabling Different SCP’s
 
 The motivation behind developing the SCP and CCT separately was to enable a variety of possible SCP’s. Although the following description of the Cross-Chain Transfer Protocol takes up on a few concepts of the adapted Ouroboros protocol described above, it can be combined with a number of other consensus mechanisms. Horizen is currently looking into a Block-DAG (Directed Acyclic Graph) structure. The interoperability between another POW sidechain or a Block-DAG mainchain and the CCT protocol will be subject to additional research.
 
@@ -96,7 +96,7 @@ The first sub-protocol deals with forward transactions, which are transactions f
 
 The second sub-protocol deals with backward transactions, which are transactions from sidechain to mainchain.
 
-**Forward Transactions and Full Referencing**
+#### Forward Transactions and Full Referencing
 
 It is the goal to enable cross-chain transfers, so there must be a form of communication between chains. The sidechain needs to be aware of all transactions on the mainchain that are sending assets to an address on the sidechain (forward). There needs to be a mechanism for the mainchain to verify incoming backward transactions.
 
@@ -119,7 +119,7 @@ Enabling the forward transfer protocol implies making changes to the current mai
 
 The other problem that is solved relates to the finality issue with POW chains using Nakamoto consensus. It is possible for a valid forward transaction to be included in a mainchain block at first, but the block containing the transaction to be forked out and becoming orphaned shortly after. This could create the opportunity to double spend (once on the mainchain and once on the sidechain) if the transaction was already added to the sidechain ledger. The binding eliminates such a situation. In case of a fork in the mainchain, the sidechain blocks that refer to the forked out mainchain block will also be reverted.
 
-### Backward Transactions and Certifiers
+#### Backward Transactions and Certifiers
 
 Now for the most interesting part. How can the mainchain verify incoming backward transactions if it doesn’t keep track of the sidechain(s)? Using the bookkeeper analogy from before the following problem has to be solved: the mainchain bookkeepers need to add incoming transactions from the sidechains to their book, but can never look at the other books around them.
 
@@ -129,7 +129,7 @@ I would like to go back to the differentiating factor of sidechains and Drivecha
 
 We decided on developing the SCP and CCP independently of each other. Since it is a stated goal to enable a variety of different SCP’s, it is not feasible for the mainchain to track every sidechain, for it would have to know each individual consensus protocol. This implies that strictly speaking the proposed implementation qualifies as a drivechain rather than a sidechain, for its operational mode is asynchronous: the mainchain doesn’t keep track of the sidechains.
 
-### Getting Transaction Data from Sidechain to Mainchain
+#### Getting Transaction Data from Sidechain to Mainchain
 
 From a data point of view, to make all of this work there needs to be a transfer mechanism, initiated on the sidechain, that informs the mainchain of incoming backward transactions. This is done by introducing a new type of data container called Cross-Chain Certificates (CCCert’s).
 
