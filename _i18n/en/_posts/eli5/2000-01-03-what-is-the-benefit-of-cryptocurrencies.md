@@ -12,7 +12,7 @@ Cryptocurrencies are digital cash. You are in control of it and can give it to a
 
 Another benefit is that you can choose if you want to do a transaction privately or publicly. Sometimes you don't want everybody to know what you are spending money on. With cryptocurrencies, you have the option to do so.
 
-The greatest benefit might be, that everyone can use cryptocurrencies. You only need an app to do so. Many people in poor countries don't have a bank account and cannot send or receive money. With crypto, all they need is an app on their phone and they can start transferring money the way you and I are used to already.
+The greatest benefit might be, that everyone can use cryptocurrencies. You only need an app to do so. Many people in poor countries don't have a bank account and cannot send or receive money. With crypto, all they need is an app on their phone and they can start transferring money the way most people are used to already.
 
 ### Further Reading
 
