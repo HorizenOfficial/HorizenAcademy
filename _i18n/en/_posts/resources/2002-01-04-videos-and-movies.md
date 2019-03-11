@@ -18,7 +18,10 @@ topic: resources
         <p>
             Bitcoin is the most disruptive invention since the Internet, and now an ideological battle is underway between fringe utopists and mainstream capitalism. The film shows the players who are defining how this technology will shape our lives.
         </p>
-        <p class="mt-5">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tmxqlSevtkQ?rel=0" allowfullscreen></iframe>
+        </div>
+        <p class="mt-3">
             <a class="btn btn-info" href="https://www.netflix.com/title/80154500" target="_blank">Watch on Netflix</a>
         </p>
     </div>
@@ -34,7 +37,10 @@ topic: resources
         <p>
             This documentary examines the history of money and patterns of technological innovation to explain how the controversial crypto-currency Bitcoin works. Is it the future of money or a recipe for financial disaster?
         </p>
-        <p class="mt-5">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lUF6klWuB38?rel=0" allowfullscreen></iframe>
+        </div>
+        <p class="mt-3">
             <a class="btn btn-info" href="https://www.amazon.com/Bitcoin-End-Money-As-Know/dp/B013HU3WX6" target="_blank">Watch on Amazon</a>
         </p>
     </div>
@@ -51,7 +57,7 @@ topic: resources
             Exploring the revolutionary Bitcoin digital currency. It doesn't need banks or to be printed. It can be transferred in a second to anywhere in the world. With global financial instability in the headlines daily, more and more people are taking their money away from the banks. Is Bitcoin the only way forward? Magic Money paints a future where control of our money is taken away from global institutions and given back to us.
         </p>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PVo5wCSnmSs?rel=0" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PVo5wCSnmSs?rel=0" allowfullscreen></iframe>
         </div>
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.youtube.com/watch?v=PVo5wCSnmSs" target="_blank">Watch on YouTube</a>
