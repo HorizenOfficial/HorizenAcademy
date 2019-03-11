@@ -7,7 +7,7 @@ topic: technology
 level: beginner
 ---
 
-We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
 
 This is the Beginner Level which gives you a high-level overview of blockchain technology.
 

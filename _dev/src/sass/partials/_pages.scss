@@ -18,14 +18,13 @@
       font-weight: bold;
       text-transform: uppercase;
       font-size: 2.8rem;
-      &:after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 5px;
-        background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
-        margin: 2rem auto;
-      }
+    }
+    .line {
+      display: block;
+      width: 100px;
+      height: 5px;
+      background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
+      margin: 2rem auto;
     }
     .lead {
       font-weight: normal;

@@ -23,7 +23,7 @@ A network of computers or servers (_nodes_) run a blockchain. They are constantl
 
 A _full node_ is like a cell phone tower that your phone is connecting to (a _light node_ would be the phone here). All the antenna stations (full nodes) connect to each other and make up the communication networks infrastructure. If you want to make a call with your phone, you need to connect to a cell phone tower first, before you can interact with any other mobile phone.
 
-Similarly, in the distributed network of a blockchain, the _full nodes_ are up and running most of the time and make up the distributed network. They also maintain a copy of the entire blockchain. You are likely using a _light node_ if you use a wallet on your phone or computer. IIn this case you are going to connect to a _full node_ first, before you can actually interact with the blockchain. 
+Similarly, in the distributed network of a blockchain, the _full nodes_ are up and running most of the time and make up the distributed network. They also maintain a copy of the entire blockchain. You are likely using a _light node_ if you use a wallet on your phone or computer. In this case you are going to connect to a _full node_ first, before you can actually interact with the blockchain. 
 
 You can run a full node, and you should if you want to contribute to the stability and security of your network, but to use cryptocurrencies you don't have to. Most wallets out there are light nodes, which means they store your keys but don't maintain a copy of the blockchain. With our flagship app Sphere by Horizen, you can choose to run a full node or not, making it a "hybrid node".
 

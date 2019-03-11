@@ -5,7 +5,7 @@ title: "Consensus Mechanisms"
 permalink: /technology/expert/consensus-mechanisms/
 topic: technology
 level: expert
-chapter: "How does a Blockchain work?"
+chapter: "How Does a Blockchain Work?"
 ---
 
 {% include tech-not-available.md %}
