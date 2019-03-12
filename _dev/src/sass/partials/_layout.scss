@@ -475,6 +475,7 @@ body::after{ content:''; display:block; height:246px; }
     line-height: 1.6;
     & > p:first-child, .lead {
       font-size: 1.2rem;
+      font-weight: normal;
     }
     img {
       display: block;

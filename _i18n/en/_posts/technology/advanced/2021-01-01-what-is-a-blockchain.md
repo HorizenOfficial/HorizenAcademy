@@ -19,7 +19,7 @@ We would like to look at blockchain from three different perspectives in the fir
             First, from a computer scientists perspective looking at blockchain as a data structure.
         </p>
         <p class="mt-4">
-            [Read about Sata Structure &gt;]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %})
+            <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">Read about Sata Structure &gt;</a>
         </p>
     </div>
 </div>
@@ -34,7 +34,7 @@ We would like to look at blockchain from three different perspectives in the fir
             Secondly, from a more philosophical perspective; reviewing the implications of blockchain technology used for value transfer.
         </p>
         <p class="mt-4">
-            [Read about Value Transfer &gt;]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %})
+            <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">Read about Value Transfer &gt;</a>
         </p>
     </div>
 </div>
@@ -49,15 +49,7 @@ We would like to look at blockchain from three different perspectives in the fir
             Lastly, we discuss smart contracts, a technology that blockchain technology enables. You can summarize Smart contracts as digital contracts with guaranteed execution. You might have heard the term programmable money in the context of cryptocurrencies before. Smart contracts are the technology that enables this programmability.
         </p>
         <p class="mt-4">
-            [Read about Smart Contracts &gt;]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %})
+            <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">Read about Smart Contracts &gt;</a>
         </p>
     </div>
 </div>
-
-
-
-
-
-
-
-![Smart Contracts](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract.jpg)
