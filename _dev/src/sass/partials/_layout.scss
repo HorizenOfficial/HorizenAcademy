@@ -1,6 +1,6 @@
 body {
   font-family: $base-font-family;
-  color: #121F1F;
+  color: #041742;
   font-weight: $base-font-weight;
   padding-top: 61px;
 }
@@ -460,25 +460,37 @@ body::after{ content:''; display:block; height:246px; }
   .post-title {
     color: #041742;
     font-weight: bold;
+    text-transform: uppercase;
     &:after {
       content: '';
       display: block;
       width: 100px;
       height: 5px;
       background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
-      margin-top: 1rem;
+      margin-top: 1.8rem;
       margin-bottom: 2rem;
     }
   }
   .post-content {
+    line-height: 1.6;
+    & > p:first-child, .lead {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
     img {
       display: block;
       margin: 0 auto;
     }
     h3 {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
       color: #041742;
+      font-size: 1.4rem;
+    }
+    h5 {
+      font-size: 1.15rem;
+      font-weight: bold;
     }
     .further-reading {
       border: 1px solid #e5e5e5;

@@ -9,9 +9,12 @@ chapter: "What is a Blockchain?"
 ---
 
 Welcome to the very first article in the technology section of our Horizen Academy. The first two articles aim to explain to you what a blockchain actually is. If you have read up on Bitcoin, blockchain, and cryptocurrencies before you may know there is a distinction between:
- - Blockchain technology in general
- - A protocol (the rules) of a specific blockchain
- - The currency that is running on top of this blockchain (if there is one)
+
+<ul class="lead">
+    <li>Blockchain technology in general</li>
+    <li>A protocol (the rules) of a specific blockchain</li>
+    <li>The currency that is running on top of this blockchain (if there is one)</li>
+</ul>
 
 This article provides an introduction to what a blockchain is, and what it allows us to do. You can look at it in many different ways, depending on the context, but we want to focus on two very general approaches. On one hand, it is a way to store data and on the other hand a "language", or protocol to transfer value.
 

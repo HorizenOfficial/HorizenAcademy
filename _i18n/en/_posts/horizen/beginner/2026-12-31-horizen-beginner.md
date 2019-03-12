@@ -7,9 +7,7 @@ topic: horizen
 level: beginner
 ---
 
-This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via DAO (ZB1) sustainable funding model.
-
-![DAO - Decentralized Autonomous Organization](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO.jpg)
+This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via [DAO]({{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}) sustainable funding model.
 
 We look at the two main engineering challenges we are combating. Both approaches aim to expand the capacities of our blockchain. Most blockchains can only handle a handful of transactions per second today. There are many approaches to make blockchains scale. We review our solutions to these issues.
 
