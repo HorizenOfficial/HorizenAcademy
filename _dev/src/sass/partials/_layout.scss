@@ -467,7 +467,7 @@ body::after{ content:''; display:block; height:246px; }
       width: 100px;
       height: 5px;
       background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
-      margin-top: 1rem;
+      margin-top: 1.8rem;
       margin-bottom: 2rem;
     }
   }
@@ -482,10 +482,15 @@ body::after{ content:''; display:block; height:246px; }
       margin: 0 auto;
     }
     h3 {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
       color: #041742;
       font-size: 1.4rem;
+    }
+    h5 {
+      font-size: 1.15rem;
+      font-weight: bold;
     }
     .further-reading {
       border: 1px solid #e5e5e5;

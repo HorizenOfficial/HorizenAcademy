@@ -9,16 +9,10 @@ level: advanced
 
 This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via [DAO]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}) sustainable funding model.
 
-![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
-
 We look at the two main engineering challenges we are combating. Both approaches aim to expand the capacities of our blockchain. Most blockchains can only handle a handful of transactions per second today. There are many approaches to make blockchains scale. We review our solutions to these issues.
 
  - [Block-DAG]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}) structure
  - [Sidechain]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}) construction.
-
-![leaves](/assets/post_files/horizen/advanced/block-dag/leaves.jpg)
-
-![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains.jpg)
 
 We also show you the first applications on our blockchain platform. 
 

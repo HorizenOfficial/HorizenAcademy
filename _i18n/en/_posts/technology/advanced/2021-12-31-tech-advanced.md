@@ -13,6 +13,4 @@ This section is designed for Advanced users and is best for users with a basic u
 
 The articles in this level take approximately 10 minutes to read and introduce you to the frequently used technical terms.
 
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_data.jpg)
-
 If you have been following our Beginner section content, this section will look similar. We cover the same topics, but in more depth using more technical terms. If you start reading an article and feel overwhelmed you can go back to the [Beginner Level]({{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}). If you find the content too trivial move up one level and read about the same topic in more detail in our [Expert Level]({{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}).

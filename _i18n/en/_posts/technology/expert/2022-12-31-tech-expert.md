@@ -15,6 +15,4 @@ This is the Expert Section and is best for those with a good understanding of th
 
 The articles in this level take approximately 10 - 20 minutes to read and use technical terms frequently.
 
-![Block](/assets/post_files/technology/expert/block.jpg)
-
 If you have been following our Advanced Level content, this section will look similar. We cover the same topics, but in more depth using the technical terms we introduced at the advanced level. If you start reading an article and feel overwhelmed you can go back to the [Advanced Level]({{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}). If you want more precise information we have included links to GitHub repos, whitepapers, and other sources at the bottom of each article so you can find all the information needed to fully understand these topics.
