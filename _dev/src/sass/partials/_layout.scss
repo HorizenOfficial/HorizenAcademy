@@ -460,6 +460,7 @@ body::after{ content:''; display:block; height:246px; }
   .post-title {
     color: #041742;
     font-weight: bold;
+    text-transform: uppercase;
     &:after {
       content: '';
       display: block;
@@ -471,6 +472,11 @@ body::after{ content:''; display:block; height:246px; }
     }
   }
   .post-content {
+    font-weight: 300;
+    & > p:first-child {
+      font-weight: normal;
+      font-size: 1.2rem;
+    }
     img {
       display: block;
       margin: 0 auto;
@@ -479,6 +485,7 @@ body::after{ content:''; display:block; height:246px; }
       margin-top: 2rem;
       font-weight: 600;
       color: #041742;
+      font-size: 1.4rem;
     }
     .further-reading {
       border: 1px solid #e5e5e5;
