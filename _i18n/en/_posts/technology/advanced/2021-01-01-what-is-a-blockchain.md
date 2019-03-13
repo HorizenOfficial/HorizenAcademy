@@ -34,7 +34,7 @@ We would like to look at blockchain from three different perspectives in the fir
             Secondly, from a more philosophical perspective; reviewing the implications of blockchain technology used for value transfer.
         </p>
         <p class="mt-4">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">Read about Value Transfer</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">Read about Value Transfer ❯ </a>
         </p>
     </div>
 </div>
