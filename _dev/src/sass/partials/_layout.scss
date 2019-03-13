@@ -78,10 +78,17 @@ body::after{ content:''; display:block; height:246px; }
 
 
 @media (min-width: 992px) {
+  .navbar {
+    padding-left: 0;
+    & > .container-fluid {
+      padding-left: 0;
+    }
+  }
   .navbar-brand {
-    width: 319px;
+    width: 300px;
     text-align: center;
-    padding-right: 46px;
+    padding-right: 0;
+    margin-right: 0;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: .8rem;
@@ -141,7 +148,7 @@ body::after{ content:''; display:block; height:246px; }
 #left-menu {
   background-color: #041336;
   background-image: linear-gradient(#041235, #0b245a);
-  width: 350px;
+  width: 300px;
   position: fixed;
   top: 0;
   left: 0;
@@ -170,7 +177,7 @@ body::after{ content:''; display:block; height:246px; }
 
 .site-wrapper {
   width: 100%;
-  padding-left: 350px;
+  padding-left: 300px;
 }
 
 .site-content-wrapper {
@@ -195,21 +202,8 @@ body::after{ content:''; display:block; height:246px; }
   .levels {
     .level {
       text-align: center;
-      background-color: #092351;
       padding-top: 20px;
       padding-bottom: 10px;
-      &.beginner {
-        margin-left: 0;
-        margin-right: 4px;
-      }
-      &.advanced {
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      &.expert {
-        margin-left: 4px;
-        margin-right: 0;
-      }
       img {
         width: 45%;
       }
@@ -225,7 +219,6 @@ body::after{ content:''; display:block; height:246px; }
     }
     a:hover, .active {
       .level {
-        background-color: #123d70;
         .icon-inactive {
           display: none;
         }
@@ -240,7 +233,7 @@ body::after{ content:''; display:block; height:246px; }
     .topic {
       background-color: #092351;
       text-align: center;
-      margin-top: 6px;
+      margin-top: 4px;
       position: relative;
       padding: 12px 0;
       .icon {
@@ -548,7 +541,7 @@ body::after{ content:''; display:block; height:246px; }
     margin-top: 2rem;
     .skill-levels {
       width: 100%;
-      max-width: 350px;
+      max-width: 300px;
       margin: 0 auto;
       .level {
         margin-left: 3px;
