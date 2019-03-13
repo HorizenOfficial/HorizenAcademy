@@ -485,7 +485,7 @@ body::after{ content:''; display:block; height:246px; }
       font-size: 1.15rem;
       font-weight: bold;
     }
-    ul {
+    ul:not(.nav) {
       list-style: none; /* Remove default bullets */
       li {
         &:before {
