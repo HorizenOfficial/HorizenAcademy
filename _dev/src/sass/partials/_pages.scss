@@ -112,6 +112,12 @@
       margin-top: 8px;
       margin-bottom: 8px;
       line-height: 1.2;
+      &[data-type='intro']:first-child {
+        display: none;
+      }
+      &[data-type='intro']:last-child {
+        display: block;
+      }
     }
   }
 }
