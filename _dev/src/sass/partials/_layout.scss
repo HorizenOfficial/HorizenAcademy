@@ -492,6 +492,19 @@ body::after{ content:''; display:block; height:246px; }
       font-size: 1.15rem;
       font-weight: bold;
     }
+    ul {
+      list-style: none; /* Remove default bullets */
+      li {
+        &:before {
+          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          color: #0e9de5; /* Change the color */
+          font-weight: bold; /* If you want it to be bold */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          width: 1em; /* Also needed for space (tweak if needed) */
+          margin-left: -1em; /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
     .further-reading {
       border: 1px solid #e5e5e5;
       margin-top: 2rem;
