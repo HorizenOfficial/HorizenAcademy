@@ -1,22 +1,25 @@
 
 #homepage {
   .site-content-wrapper {
-    background: url(../img/bkg/bg-intro.jpg) no-repeat scroll top center;
-    background-size: cover;
-  }
-  .intro {
-    padding: 6rem 8rem;
-    h3 {
-      text-align: center;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.8rem;
+    background: url(../img/bkg/bg-home-p1.jpg) no-repeat top right;
+    & > .container-fluid {
+      background: url(../img/bkg/bg-home-p2.jpg) no-repeat bottom left;
     }
-    h1 {
-      text-align: center;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 2.8rem;
+  }
+  .post-section {
+    .titles {
+      h3 {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+      }
     }
     .line {
       display: block;
@@ -24,9 +27,6 @@
       height: 5px;
       background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
       margin: 2rem auto;
-    }
-    .lead {
-      font-weight: normal;
     }
     .skill-levels {
       width: 100%;
