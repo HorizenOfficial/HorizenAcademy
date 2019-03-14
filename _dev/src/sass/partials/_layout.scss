@@ -450,6 +450,9 @@ body::after{ content:''; display:block; height:246px; }
 
 .post-section {
   padding: 3rem;
+  @media (max-width: 991px) {
+    padding: 0;
+  }
   .post-title {
     color: #041742;
     font-weight: bold;
@@ -538,11 +541,15 @@ body::after{ content:''; display:block; height:246px; }
 
 
   .post-bottom-nav {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
     .skill-levels {
       width: 100%;
       max-width: 300px;
       margin: 0 auto;
+      @media (max-width: 991px) {
+        margin-bottom: 1rem;
+      }
       .level {
         margin-left: 3px;
         margin-right: 3px;
@@ -579,10 +586,10 @@ body::after{ content:''; display:block; height:246px; }
       }
     }
     .link-article {
-      padding: 2rem;
       color: #121F1F;
       background-color: #f5f6fa;
       transition: color 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06), background-color 250ms cubic-bezier(0.27, 0.01, 0.38, 1.06);
+      height: 100%;
       &:hover {
         text-decoration: none;
         color: white;
@@ -590,20 +597,23 @@ body::after{ content:''; display:block; height:246px; }
       }
       &.link-prev-article {
         margin-right: 3px;
-        padding-left: 1.8rem;
+        padding-left: 1.5rem;
         padding-right: 1rem;
+        @media (max-width: 991px) {
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+        }
       }
       &.link-next-article {
         margin-left: 3px;
-        padding-right: 1.8rem;
+        padding-right: 1.5rem;
         padding-left: 1rem;
-      }
-      .nav-text {
-        font-size: 1.2rem;
+        @media (max-width: 991px) {
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+        }
       }
     }
   }
 }
-
-
 
