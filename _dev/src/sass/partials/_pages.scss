@@ -72,10 +72,27 @@
 
 #page-eli5 {
   .site-content-wrapper {
-    background: url(../img/bkg/bg-eli5.jpg) no-repeat scroll top center;
-    background-size: cover;
+    background: url(../img/bkg/bg-eli5-p1.jpg) no-repeat top left;
+    & > .container-fluid {
+      background: url(../img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+    }
+  }
+  .post-section {
+    .post-title {
+      font-size: 2.5rem;
+    }
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+  .list-eli5-articles {
+    a {
+      color: #041742;
+      font-weight: bold;
+    }
   }
 }
+
 
 
 #page-content-overview {
