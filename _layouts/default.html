@@ -29,7 +29,7 @@ layout: compress
 
     {% include footer.html %}
 
-    <script type="text/javascript" src="/assets/js/scripts.js"></script>
+    <script type="text/javascript" src="{{ "/assets/js/scripts.js" | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}"></script>
 
     </body>
 
