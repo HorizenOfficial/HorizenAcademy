@@ -136,12 +136,21 @@ $(function () {
     //     updateListArticles();
     // });
 
+
     $(".chapter-articles")
         .on('show.bs.collapse', function () {
             $(this).closest(".topic-articles").addClass("open");
         })
         .on('hide.bs.collapse', function () {
             $(this).closest(".topic-articles").removeClass("open");
+        });
+
+    $(".one-level-topic-articles")
+        .on('show.bs.collapse', function () {
+            $(this).prev().addClass("active");
+        })
+        .on('hide.bs.collapse', function () {
+            $(this).prev().removeClass("active");
         });
 
 
