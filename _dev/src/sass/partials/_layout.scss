@@ -8,15 +8,23 @@ body {
 
 html{ height:100%; }
 body{ min-height:100%; position:relative; }
-body::after{ content:''; display:block; height:246px; }
+body::after{
+  content:'';
+  display:block;
+  height: 265px;
+  @media (max-width: 767px) {
+    height: 315px;
+  }
+  @media (max-width: 575px) {
+    height: 425px;
+  }
+}
 .site-footer-wrapper{
   position:absolute;
   bottom:0;
   width:100%;
 }
-//.site-content-wrapper {
-//  min-height: calc(100vh - 323px);
-//}
+
 
 
 .navbar {
@@ -450,7 +458,16 @@ body::after{ content:''; display:block; height:246px; }
 
 .post-section {
   padding: 4rem 6rem;
+  @media (max-width: 1199px) {
+    padding: 2rem 0;
+  }
   @media (max-width: 991px) {
+    padding: 2rem;
+  }
+  @media (max-width: 767px) {
+    padding: 1rem;
+  }
+  @media (max-width: 575px) {
     padding: 0;
   }
   .post-title {
@@ -543,9 +560,16 @@ body::after{ content:''; display:block; height:246px; }
   .post-bottom-nav {
     margin-top: 4rem;
     margin-bottom: 3rem;
+    a {
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
     .skill-levels {
       width: 100%;
       max-width: 300px;
+      min-width: 288px;
       margin: 0 auto;
       @media (max-width: 991px) {
         margin-bottom: 1rem;
@@ -571,6 +595,7 @@ body::after{ content:''; display:block; height:246px; }
       a {
         color: #121F1F;
         padding: 0;
+        display: block;
         &:hover {
           color: #121F1F;
           text-decoration: none;

@@ -203,7 +203,7 @@ $(function () {
 
         // post bottom nav
         function updateNavLink(navLink, desLink) {
-            navLink.attr("href", desLink.attr("href")).removeClass("btn disabled");
+            navLink.attr("href", desLink.attr("href")).removeClass("disabled");
 
             navLink.find(".article-title").html(desLink.hasClass("js-SelectTopic") ? desLink.find(".topic-name").html() : desLink.html());
         }
@@ -229,7 +229,9 @@ $(function () {
 
             var prevArticle = articleLink.prev();
             if (prevArticle.length) {
-                updateNavLink(prevNav, prevArticle);
+                if (prevArticle.attr("href")) {
+                    updateNavLink(prevNav, prevArticle);
+                }
             } else {
                 var currentChapter = articleLink.closest(".topic-articles").find(".chapter-link");
                 if (currentChapter.length) {
@@ -241,7 +243,7 @@ $(function () {
 
 
             nextArticle = articleLink.next();
-            if (nextArticle.length) {
+            if (nextArticle.length && nextArticle.attr("href")) {
                 updateNavLink(nextNav, nextArticle);
             } else {
                 linkNavNextChapter();
