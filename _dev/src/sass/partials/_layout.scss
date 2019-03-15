@@ -305,7 +305,23 @@ body::after{
         }
         .arrow-up {
           opacity: 0;
-          transform: rotate( 180deg );
+          transform: rotate( -180deg );
+        }
+      }
+      &.active {
+        background-color: #123d70;
+        a {
+          color: white;
+        }
+        .arrow {
+          .arrow-down {
+            opacity: 0;
+            transform: rotate( 180deg );
+          }
+          .arrow-up {
+            opacity: 1;
+            transform: rotate( 0deg );
+          }
         }
       }
     }
@@ -319,13 +335,6 @@ body::after{
 
   .list-topic-articles {
     background-color: #072454;
-    //background-image: linear-gradient(#072454, #072454);
-    //padding-top: 12px;
-    //padding-bottom: 12px;
-    &.show {
-      //padding-top: 12px;
-      //padding-bottom: 12px;
-    }
     a {
       color: #9bb9d3;
       &:hover, &.active {
