@@ -18,25 +18,25 @@ Let's take a step back and start from the beginning. The basis of public-key cry
 
 We would like to talk about elliptic curve cryptography (ECC) before we discuss how your keys and addresses work together. There are different mathematical concepts used to build a public-key cryptographic system. Bitcoin and most other cryptocurrencies use Elliptic Curve Cryptography (ECC).
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.png" alt="ECC" style="width: 400px;">
 
 Bitcoin, Ethereum and many other currencies use a curve called secp256k1 and it looks like the one above. The equation for this curve is y^2 = x^3 + 7. What makes elliptic curves useful is that you can do math with them, and the math you do with the curves contains special properties.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.png" alt="ECC" style="width: 400px;">
 
 The graph above shows an example of adding two points on the curve together. When we want to add point P and Q together, we first connect them with a straight line. This straight line will intersect with the curve at some third point. Now we must project the third point onto the other side of the x-axis (multiply the y-coordinate by -1) and we get the sum of point P and Q: R. The key takeaway is that the sum of two points on the curve is a third point on the curve.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.png" alt="ECC" style="width: 400px;">
 
 When we want to multiply a point on the curve we must add it to itself. To multiply point P by two we add it to itself once. In this case, we can't really connect two points, but we go for the tangent line (the one with the arrows). If you look at a random point close to P (the lightest gray), connecting the two points will result in the lightest grey line. Moving this point closer and closer towards P (from light to dark) brings the connecting line closer to the tangent line until it becomes the points and the lines overlap.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.png" alt="ECC" style="width: 400px;">
 
 The addition to itself is easy. We take the intersection of the straight line with the curve once again and project it onto the other side of the x-axis.
 
 If we want to multiply P by 3 we now add P and point (P + P) together. To multiply P by four we can add point (P + P) to itself and so on.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.png" alt="ECC" style="width: 400px;">
 
 The key takeaway is that multiplying a point is an easy task. The division is difficult (read infeasible). There is no algorithm to calculate how many times P was added to itself or in terms of multiplication by what number it was multiplied in order to get to a certain point. This should be enough to understand the basic concept of public key cryptography based on elliptic curves.
 
@@ -60,7 +60,7 @@ y = 3267051002075881697808308513050704318447127338065924327593890433575733748242
 
 This base point is now added to itself as many times as your private key dictates. If your private key was the number "3", then you would perform the calculation we just showed you. If you add the base point to itself as often as your private key says (private key * P) you get your public key.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_6.jpg)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_6.jpg" alt="ECC" style="width: 400px;">
 
 To recap: Your private key is a large random number. Your public key is a point on the elliptic curve that you get when you multiply the base point P with your private key.
 
