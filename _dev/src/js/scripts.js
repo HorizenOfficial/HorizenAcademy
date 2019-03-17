@@ -32,6 +32,20 @@ $(function () {
             $(this).toggleClass("open");
         });
 
+        // zoom image on mobile
+        var fullZoom = $("#full-screen-image-zoom");
+        fullZoom.find('.panzoom').panzoom({
+            $zoomIn: fullZoom.find(".zoom-in"),
+            $zoomOut: fullZoom.find(".zoom-out")
+        });
+        $(".post-content img").click(function (e) {
+            fullZoom.show();
+            fullZoom.find("img").attr("src", $(this).attr("src"));
+        });
+        fullZoom.find(".zoom-close").click(function (e) {
+            fullZoom.hide();
+        });
+
     });
 
 

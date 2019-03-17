@@ -115,6 +115,9 @@ gulp.task('concat', function() {
         paths.src + 'js/vendor/headroom.min.js',
         paths.src + 'js/vendor/jQuery.headroom.min.js',
 
+        // mobile zoom image
+        paths.src + 'js/vendor/jquery.panzoom.js',
+
         paths.src + 'js/scripts.js'
     ];
 

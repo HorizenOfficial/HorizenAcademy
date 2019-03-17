@@ -27,6 +27,17 @@ layout: compress
         </div>
     </div>
 
+    <div id="full-screen-image-zoom" style="display: none;">
+        <div class="zoom-controls">
+            <div class="zoom-ctl zoom-in"></div>
+            <div class="zoom-ctl zoom-out"></div>
+            <div class="zoom-ctl zoom-close"></div>
+        </div>
+        <div class="panzoom zoom-close">
+            <img src="http://mmeiers.github.io/pinch-zoomer-v2/getting_started/assets/1.jpg" alt="" id="full-zoom-image">
+        </div>
+    </div>
+
     {% include footer.html %}
 
     <script type="text/javascript" src="{{ "/assets/js/scripts.js" | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}"></script>
