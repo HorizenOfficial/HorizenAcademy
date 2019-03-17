@@ -45,6 +45,9 @@ $(function () {
         fullZoom.find(".zoom-close").click(function (e) {
             fullZoom.hide();
         });
+        fullZoom.find("img").click(function (e) {
+            e.stopPropagation();
+        });
 
     });
 
