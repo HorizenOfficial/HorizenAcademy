@@ -10,7 +10,7 @@ chapter: "How Does a Blockchain Work?"
 
 There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
 
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works.jpg)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/how_it_works.jpg" alt="How it works" style="width: 400px;">
 
 Let's take a step back and start from the beginning. The basis of public-key cryptography is private keys, public keys, addresses, and digital signatures. The private key creates a digital signature. The blockchain contains a record (the transaction) stating that there are some funds associated with your public key when you receive cryptocurrency. You must provide a digital signature to authorize your spending. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
 
@@ -78,7 +78,7 @@ Base58Check is a way to convert bits into alphanumeric characters, but it exclud
 
 You can generate as many addresses as you like from a single private key, and most wallets today do this for you. It is a feature to enhance your privacy, as it makes it harder for a third party to link all your payments together. We will talk about this concept and how it works with change addresses in the following chapter Privacy on the Blockchain.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_7.png)
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_7.png" alt="ECC" style="width: 400px;">
 
 ### Digital Signature
 
