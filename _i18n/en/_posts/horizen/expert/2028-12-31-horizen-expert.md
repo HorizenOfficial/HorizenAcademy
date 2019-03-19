@@ -12,7 +12,7 @@ level: expert
         <img src="/assets/img/horizen-logo-blueprint.svg" alt="Horizen blueprint"/>
     </div>
     <div class="col-md-9">
-        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via [DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}) sustainable funding model.
+        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
     </div>
 </div>
 
