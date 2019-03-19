@@ -273,9 +273,9 @@ $(function () {
 
             var topic = $("#list-"+articleLink.data("topic")+"-articles");
             // no preview article
-            var chapters = topic.find(".show .chapter-link");
-            if (chapters.length) {
-                updateNavLink(nextNav, chapters.first());
+            var articles = topic.find(".show .article-link");
+            if (articles.length) {
+                updateNavLink(nextNav, articles.first());
             } else {
                 updateNavLink(nextNav, topic.find(".article-link").first());
             }
