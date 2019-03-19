@@ -577,9 +577,10 @@ body::after{
     margin-top: 4rem;
     margin-bottom: 3rem;
     a {
+      color: #121F1F;
       &.disabled {
         pointer-events: none;
-        opacity: 0.5;
+        color: #d2dbeb;
       }
     }
     .skill-levels {
@@ -609,7 +610,6 @@ body::after{
         }
       }
       a {
-        color: #121F1F;
         padding: 0;
         display: block;
         &:hover {
