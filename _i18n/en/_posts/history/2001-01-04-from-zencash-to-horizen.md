@@ -65,7 +65,7 @@ The Zen network was the target of a 51% attack on June 3, 2018, at approximately
 
 The Horizen team knew about it immediately thanks to the tripwire system. The team began executing the mitigation procedures they had been working on to significantly increase the difficulty of future attacks. Because our engineering team was already working on possible solutions for 51% attack, we did the POC and coding quickly and proceeded with the network upgrade.
 
-We determined the best solution was to enhance the longest chain rule (Satoshi Consensus) and introduce a penalty for delayed block reporting. This makes it exponentially more difficult and costly for those looking to perform a 51% attack. You can read our "Solution to 51% Attacks" whitepaper here.
+We determined the best solution was to enhance the longest chain rule (Satoshi Consensus) and introduce a penalty for delayed block reporting. This makes it exponentially more difficult and costly for those looking to perform a 51% attack. You can read our "Solution to 51% Attacks" whitepaper [here](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf).
 
 Learn more about the attack and our detailed timeline in our blog post.
 
@@ -75,7 +75,7 @@ As our project grew bigger and more popular we were getting confused with ZCash 
 
 The last push we needed to kick start our brand expansion came in the form of a letter from a large international bank. In the letter, they expressed that the ZenCash logo was similar to their sister organization one, and they requested we change ours. It didn't make sense to fight over a branding that didn't fit us anymore. So, we created a special task force and partnered with BrandTuitive. Our teams combined and spent hours upon hours working on our brand expansion. The result was (and still is) phenomenal. The name Horizen aligned perfectly with the mission and goals of our project. The team and our community loved that we were able to keep ZEN as part of our name. Since ZEN remained a part of us we were also able to maintain our cryptocurrency's ticker symbol, ZEN.
 
-You can read more about our brand expansion process on our blog here and here.
+You can read more about our brand expansion process on our blog [here](https://blog.zencash.com/zencash-brand-expansion/) and [here](https://blog.zencash.com/hello-horizen/).
 
 ### Horizen to the Future
 
