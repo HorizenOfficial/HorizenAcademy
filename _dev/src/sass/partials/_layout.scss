@@ -198,7 +198,7 @@ body::after{
   height: calc(100% - 106px);
   a {
     color: #3d6892;
-    &:hover, &:active, &.active {
+    &:hover, &:active, &.active, &.pre-active {
       color: white;
       text-decoration: none;
     }
@@ -270,7 +270,7 @@ body::after{
         text-align: left;
       }
     }
-    a:hover, .active {
+    a:hover, .active, .pre-active {
       .topic {
         background-color: #123d70;
         .icon-inactive {
@@ -308,20 +308,14 @@ body::after{
           transform: rotate( -180deg );
         }
       }
-      &.active {
-        background-color: #123d70;
-        a {
-          color: white;
+      & > .active + .arrow {
+        .arrow-down {
+          opacity: 0;
+          transform: rotate( 180deg );
         }
-        .arrow {
-          .arrow-down {
-            opacity: 0;
-            transform: rotate( 180deg );
-          }
-          .arrow-up {
-            opacity: 1;
-            transform: rotate( 0deg );
-          }
+        .arrow-up {
+          opacity: 1;
+          transform: rotate( 0deg );
         }
       }
     }
@@ -403,6 +397,9 @@ body::after{
             opacity: 1;
             transform: rotate( 0deg );
           }
+        }
+        .chapter-dot {
+          background-color: #26db8d;
         }
       }
 

@@ -147,10 +147,10 @@ $(function () {
 
     $(".one-level-topic-articles")
         .on('show.bs.collapse', function () {
-            $(this).prev().addClass("active");
+            $(this).prev().find(".js-SelectTopic").addClass("active");
         })
         .on('hide.bs.collapse', function () {
-            $(this).prev().removeClass("active");
+            $(this).prev().find(".js-SelectTopic").removeClass("active");
         });
 
 
@@ -355,8 +355,9 @@ $(function () {
 
     // home lading page
     if ($("#homepage").length) {
-        $(".js-SelectLevel").addClass("active"); // highlight all levels by default
-        $(".js-SelectTopic").addClass("active"); // highlight all topics by default
+        // highlight all levels and all topics by default
+        $(".js-SelectLevel").addClass("active");
+        $(".js-SelectTopic").addClass("pre-active");
 
         $(".js-Home-SelectLevel").click(function (e) {
             e.preventDefault();
