@@ -471,10 +471,10 @@ body::after{
     padding: 2rem;
   }
   @media (max-width: 767px) {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   @media (max-width: 575px) {
-    padding: 0;
+    padding: 2rem 0;
   }
   .post-title {
     color: #041742;

@@ -2,8 +2,14 @@
 #homepage {
   .site-content-wrapper {
     background: url(../img/bkg/bg-home-p1.jpg) no-repeat top right;
+    @media (max-width: 991px) {
+      background-size: 35% auto;
+    }
     & > .container-fluid {
       background: url(../img/bkg/bg-home-p2.jpg) no-repeat bottom left;
+      @media (max-width: 991px) {
+        background-size: 50% auto;
+      }
     }
   }
   .post-section {
@@ -72,6 +78,9 @@
     background: url(../img/bkg/bg-eli5-p1.jpg) no-repeat top left;
     & > .container-fluid {
       background: url(../img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+      @media (max-width: 991px) {
+        background-size: 55% auto;
+      }
     }
   }
   .post-section {
