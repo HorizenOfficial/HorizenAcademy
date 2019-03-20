@@ -102,6 +102,11 @@
 
 
 #page-content-overview {
+  .site-content-wrapper {
+    @media (max-width: 991px) {
+      width: 990px;
+    }
+  }
   .content-overview {
     .nav-item {
       flex-basis: 0;
