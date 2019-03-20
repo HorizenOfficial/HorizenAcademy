@@ -14,7 +14,7 @@ This is the Advanced Level and is best for users who have a general understandin
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/intro/why.svg" alt="Why Privacy" />
+        <img src="/assets/post_files/privacy/advanced/intro/why2.svg" alt="Why Privacy" />
     </div>
     <div class="col-md-9">
         <h5>Why Privacy?</h5>
@@ -29,7 +29,7 @@ This is the Advanced Level and is best for users who have a general understandin
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/intro/where.svg" alt="Where Your Privacy is Compromised" />
+        <img src="/assets/post_files/privacy/advanced/intro/where2.svg" alt="Where Your Privacy is Compromised" />
     </div>
     <div class="col-md-9">
         <h5>Where Your Privacy is Compromised?</h5>
@@ -44,7 +44,7 @@ This is the Advanced Level and is best for users who have a general understandin
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/intro/best.svg" alt="Best Practices" />
+        <img src="/assets/post_files/privacy/advanced/intro/best2.svg" alt="Best Practices" />
     </div>
     <div class="col-md-9">
         <h5>Best Practices</h5>
@@ -59,7 +59,7 @@ This is the Advanced Level and is best for users who have a general understandin
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/intro/tools.svg" alt="Tools to Protect your Privacy - Advanced" />
+        <img src="/assets/post_files/privacy/advanced/intro/tools2.svg" alt="Tools to Protect your Privacy - Advanced" />
     </div>
     <div class="col-md-9">
         <h5>Tools to Protect your Privacy - Advanced</h5>
