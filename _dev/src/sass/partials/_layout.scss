@@ -514,6 +514,12 @@ body::after{
     ul:not(.nav) {
       @include list-blue-bullet();
     }
+    .twitter-tweet {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.5rem !important; // override inline style
+      margin-bottom: 1.5rem !important; // override inline style
+    }
     .further-reading {
       border: 1px solid #e5e5e5;
       margin-top: 2rem;
