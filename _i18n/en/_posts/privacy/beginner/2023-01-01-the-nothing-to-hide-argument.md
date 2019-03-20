@@ -19,13 +19,13 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument)
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/protecting.svg" alt="Privacy is not about hiding, it is about protecting"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="Privacy is not about hiding, it is about protecting"></td>
         <td>
             <strong>Privacy is not about hiding, it is about protecting</strong>: Would you give passwords to your email and other accounts to anyone? Would you allow everyone to read your social media messages? Would you love to have someone always around who eavesdrops each and every conversation of yours, see your medical records and know about your appointments with your doctor? Or let's go very trivial - why do you ever have curtains on the shady side of your house or even wear pants?
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/human.svg" alt="Privacy is a fundamental human right"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="Privacy is a fundamental human right"></td>
         <td>
             <strong>Privacy is a fundamental human right</strong>: The right to free speech and the right to assemble are the basic fundamental human rights even if you do not have anything to say or protest now. So is privacy. Think about voting, medical information, and banking information. It is obvious that you wish them to be kept private.
         </td>
@@ -37,19 +37,19 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument)
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/location.svg" alt="Location data is sensitive"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Location data is sensitive"></td>
         <td>
             <strong>Location data is sensitive</strong>: It can determine where you live, where you work, where you shop and hang out with friends. Every modern smartphone detects home and workplace just after several days of usage.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/search.svg" alt="Social media gathers even more"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Social media gathers even more"></td>
         <td>
             <strong>Social media gathers even more</strong>: What you like or follow and what applications you use on social media determine what types of ads you will see. Your age, sex, occupation, job title, and every other little detail can also be taken into account for ad targeting. Social media is the best marketing platform we have seen to date. Not only do those details determine what kind of ads you see, but sometimes also what price is shown to you. Especially when you book flights your metadata determines what prices will be available.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/check.svg" alt="Every little bit counts"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Every little bit counts"></td>
         <td>
             <strong>Every little bit counts</strong>: Some companies gather emails while others locate where you go shop or eat. Some large search engines even keep your search history if you use their account. Others aggregate all the data and form a complete picture of who you are, where you go and with whom and what you do. As the great article over spreadprivacy.com says - If that feels creepy, it’s because it is.
         </td>

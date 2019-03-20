@@ -63,7 +63,7 @@ With desktop and mobile wallets, there is a choice between single- and multi-cur
 
 <div class="row align-items-center">
     <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/coinomi.jpg" alt="coinomi"></div>
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/Paytomat.png" alt="Paytomat"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
     <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/mycelium.png" alt="mycelium"></div>
 </div>
 

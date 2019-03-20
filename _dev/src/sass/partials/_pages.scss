@@ -119,6 +119,7 @@
     .table {
       th {
         vertical-align: middle;
+        border-top: none;
       }
     }
     .article-link {
@@ -145,6 +146,9 @@
   }
   .welcome-text {
     font-size: 1.2rem;
+    ul {
+      @include list-blue-bullet();
+    }
   }
   .icon-level {
     height: 50px;

@@ -198,7 +198,7 @@ body::after{
   height: calc(100% - 106px);
   a {
     color: #3d6892;
-    &:hover, &:active, &.active {
+    &:hover, &:active, &.active, &.pre-active {
       color: white;
       text-decoration: none;
     }
@@ -270,7 +270,7 @@ body::after{
         text-align: left;
       }
     }
-    a:hover, .active {
+    a:hover, .active, .pre-active {
       .topic {
         background-color: #123d70;
         .icon-inactive {
@@ -308,20 +308,14 @@ body::after{
           transform: rotate( -180deg );
         }
       }
-      &.active {
-        background-color: #123d70;
-        a {
-          color: white;
+      & > .active + .arrow {
+        .arrow-down {
+          opacity: 0;
+          transform: rotate( 180deg );
         }
-        .arrow {
-          .arrow-down {
-            opacity: 0;
-            transform: rotate( 180deg );
-          }
-          .arrow-up {
-            opacity: 1;
-            transform: rotate( 0deg );
-          }
+        .arrow-up {
+          opacity: 1;
+          transform: rotate( 0deg );
         }
       }
     }
@@ -403,6 +397,9 @@ body::after{
             opacity: 1;
             transform: rotate( 0deg );
           }
+        }
+        .chapter-dot {
+          background-color: #26db8d;
         }
       }
 
@@ -515,17 +512,7 @@ body::after{
       font-weight: bold;
     }
     ul:not(.nav) {
-      list-style: none; /* Remove default bullets */
-      li {
-        &:before {
-          content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-          color: #0e9de5; /* Change the color */
-          font-weight: bold; /* If you want it to be bold */
-          display: inline-block; /* Needed to add space between the bullet and the text */
-          width: 1em; /* Also needed for space (tweak if needed) */
-          margin-left: -1em; /* Also needed for space (tweak if needed) */
-        }
-      }
+      @include list-blue-bullet();
     }
     .further-reading {
       border: 1px solid #e5e5e5;
@@ -580,9 +567,10 @@ body::after{
     margin-top: 4rem;
     margin-bottom: 3rem;
     a {
+      color: #121F1F;
       &.disabled {
         pointer-events: none;
-        opacity: 0.5;
+        color: #d2dbeb;
       }
     }
     .skill-levels {
@@ -612,7 +600,6 @@ body::after{
         }
       }
       a {
-        color: #121F1F;
         padding: 0;
         display: block;
         &:hover {

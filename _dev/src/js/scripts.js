@@ -164,10 +164,10 @@ $(function () {
 
     $(".one-level-topic-articles")
         .on('show.bs.collapse', function () {
-            $(this).prev().addClass("active");
+            $(this).prev().find(".js-SelectTopic").addClass("active");
         })
         .on('hide.bs.collapse', function () {
-            $(this).prev().removeClass("active");
+            $(this).prev().find(".js-SelectTopic").removeClass("active");
         });
 
 
@@ -290,9 +290,9 @@ $(function () {
 
             var topic = $("#list-"+articleLink.data("topic")+"-articles");
             // no preview article
-            var chapters = topic.find(".show .chapter-link");
-            if (chapters.length) {
-                updateNavLink(nextNav, chapters.first());
+            var articles = topic.find(".show .article-link");
+            if (articles.length) {
+                updateNavLink(nextNav, articles.first());
             } else {
                 updateNavLink(nextNav, topic.find(".article-link").first());
             }
@@ -372,8 +372,9 @@ $(function () {
 
     // home lading page
     if ($("#homepage").length) {
-        $(".js-SelectLevel").addClass("active"); // highlight all levels by default
-        $(".js-SelectTopic").addClass("active"); // highlight all topics by default
+        // highlight all levels and all topics by default
+        $(".js-SelectLevel").addClass("active");
+        $(".js-SelectTopic").addClass("pre-active");
 
         $(".js-Home-SelectLevel").click(function (e) {
             e.preventDefault();
