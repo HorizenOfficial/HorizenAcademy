@@ -22,21 +22,29 @@ Usually, a block explorer will show you the most recent transactions first. We w
 
 **An Example**
 
-![TX](/assets/post_files/technology/advanced/the-utxo-model/TX1.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX1.png" alt="TX">
+</div>
 
 We created this simple example, only involving two different addresses. We shortened the addresses for better readability. The address we are concerned with here is the grey one: znRwe...  Let's say this is Bob and the other one (blue), is Alice.
 
 In the first TX (above), Bob's address is funded when he receives 10.2 ZEN. The individual TX has one input and two outputs. The first output (10.2 ZEN) is what Alice actually wanted to transfer to Bob, the second output is called the change. The input that Alice was using, was an output of a transaction she received before. When she still had her funds untouched, it was an Unspent Transaction Output (UTXO). If a transaction output is spent is indicated by the <span class="text-danger">(S)</span>. If the transaction is unspent it is indicated with the <span class="text-success">(U)</span> following the amount. But we will get back to this in a minute. Alice didn't have a UTXO that was exactly 10.2 ZEN so she used one that was larger and sent the remaining ZEN back to herself, just as you would receive change in a store if you were to pay $ 45 with a $ 50 bill.
 
-![TX](/assets/post_files/technology/advanced/the-utxo-model/TX2.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX2.png" alt="TX">
+</div>
 
 In the second transaction, Bob uses his UTXO of 10.2 ZEN to create a TX where he spends 5 ZEN and sends the change of 5.1999 ZEN back to his own address. The difference between inputs and outputs is consumed as the transaction fee. He now owns 5.1999 ZEN on his znRwe... address.
 
-![TX](/assets/post_files/technology/advanced/the-utxo-model/TX3.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX3.png" alt="TX">
+</div>
 
 In a third transaction, Bob receives another 2 ZEN, increasing his balance to 7.1999 ZEN. He now has two UTXO's at his disposal for further transactions: one of 5.1999 ZEN and another one of 2 ZEN. If he were to open his wallet at that point, it would show him a balance of 7.1999 ZEN by looking at all transactions on the blockchain, filtering out the ones that involve his address and then adding up all incoming TX's and subtracting all outgoing TX's.
 
-![TX](/assets/post_files/technology/advanced/the-utxo-model/TX4.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX4.png" alt="TX">
+</div>
 
 In the last transaction of this example, Bob wants to spend 6 ZEN. Neither of the two UTXO's he has at that point is sufficient for that purpose. Although the block explorer shows only one input for the last transaction the wallet actually used two inputs when creating it. It combined both remaining UTXO's worth 7.1999 and created two outputs with it: the 6 ZEN output he actually wanted to spend and an additional output for the change of 1.1998 (1.1999 minus the transaction fee).
 

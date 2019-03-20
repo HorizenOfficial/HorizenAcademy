@@ -18,11 +18,15 @@ For this article, we assume that you are familiar with the UTXO model that many 
 
 ### Change Addresses
 
-![Change Addresses](/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_0.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_0.png" alt="Change Addresses">
+</div>
 
 Change addresses were introduced so people you are transacting with don't have access to your entire transaction history just by looking up the address you used for transacting with them. Most modern wallets automatically generate change addresses for you when you create a transaction. In the example above of a regular bitcoin transaction, you can see one input and two outputs to the transaction. The first output went to a different address and is the amount, the user wanted to spend. The remainder of the UTXO went back to the same address the funds originated from.
 
-![Change Addresses](/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_1.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_1.png" alt="Change Addresses">
+</div>
 
 A wallet that supports change addresses will generate a new address, every time you are receiving funds, no matter if they are change or regular incoming transactions. The example above shows a transaction with the exact same amounts as before, but this time the change went back to a newly created change address. This feature improves privacy by making it harder to trace the transaction history of a given user.
 

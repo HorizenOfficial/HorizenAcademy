@@ -42,7 +42,9 @@ A simple way to think of a [transaction]({{ site.baseurl }}{% post_url /technolo
 
 To access the information stored on the blockchain you can use the [block explorer]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}). Like how a web browser lets you access information on the internet, the block explorer lets you access information on the blockchain. You can look up addresses, transactions, or entire blocks.
 
-![Explorer address summary](/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Explorer address summary">
+</div>
 
 While cryptocurrencies are not anonymous by default, some of them offer features that allow you to transact privately. To increase the level of privacy, you should use different addresses for every incoming transaction. This makes it harder for an adversary to track your transaction history. Most wallets will do this automatically for you. You can use cryptocurrencies with enhanced privacy features, like Horizen that offers Zero-Knowledge Proofs, to transact completely private. This is done by using a different address type within the same wallet (z-Addresses).
 

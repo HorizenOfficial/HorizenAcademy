@@ -1,5 +1,5 @@
 body {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 .navbar-brand {
@@ -29,6 +29,7 @@ body {
 
 .article-nav {
   height: auto;
+  min-height: calc(100vh - 105px);
 }
 
 .site-wrapper {
@@ -36,7 +37,7 @@ body {
 }
 
 
-#homepage .intro {
-  padding: 0 0 1rem;
+#page-content-overview {
+
 }
 
