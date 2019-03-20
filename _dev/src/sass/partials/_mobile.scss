@@ -29,6 +29,7 @@ body {
 
 .article-nav {
   height: auto;
+  min-height: calc(100vh - 105px);
 }
 
 .site-wrapper {
