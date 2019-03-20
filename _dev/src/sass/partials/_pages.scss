@@ -126,11 +126,9 @@
       display: inline-block;
     }
     .table {
-      th {
-        vertical-align: middle;
-      }
       thead {
         th {
+          vertical-align: middle;
           border-top: none;
         }
       }
