@@ -17,6 +17,19 @@ body {
   width: 200px;
 }
 
+#left-menu-overlay {
+  display: block;
+  visibility: hidden;
+  background-color: #0a2153;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 #left-menu {
   left: -350px;
   z-index: 100;
@@ -24,6 +37,10 @@ body {
   transition: left 0.5s ease-in-out;
   &.open {
     left: 0;
+    & + #left-menu-overlay {
+      opacity: 0.5;
+      visibility: visible;
+    }
   }
 }
 
@@ -35,9 +52,3 @@ body {
 .site-wrapper {
   padding-left: 0;
 }
-
-
-#page-content-overview {
-
-}
-
