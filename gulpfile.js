@@ -1,21 +1,11 @@
 var gulp = require('gulp'),
-    // pump = require('pump'),
-    // watch = require('gulp-watch'),
-    // rename = require('gulp-rename'),
-    // cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     cp = require('child_process'),
-    // s3 = require('gulp-s3-upload')(
-    //   {useIAM:true},  // or {} / null
-    //   { /* S3 Config */ }
-    // ),
     browserSync = require('browser-sync').create();
-    // stream = browserSync.stream;
 
 var paths = {
     dev: './_dev/',
@@ -129,18 +119,6 @@ gulp.task('concat', function() {
 });
 
 
-// Compression images
-// gulp.task('img', function() {
-// 	return gulp.src('assets/img/**/*')
-// 		.pipe(imagemin({
-// 			interlaced: true,
-// 			progressive: true,
-// 			svgoPlugins: [{removeViewBox: false}]
-// 		}))
-//     .pipe(gulp.dest('_site/assets/img'))
-//     .pipe(browserSync.reload({stream:true}));
-// });
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -169,16 +147,3 @@ gulp.task('default', [
     'watch'
 ]);
 
-// AWS_PROFILE=zen gulp upload
-
-// gulp.task('upload', function() {
-//     gulp.src(paths.site + '**')
-//         .pipe(s3({
-//             Bucket: 'zen-website', //  Required
-//             ACL:    'public-read'  //  Needs to be user-defined
-//         }, {
-//             // S3 Constructor Options, ie:
-//             maxRetries: 5
-//         }))
-//     ;
-// });
