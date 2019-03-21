@@ -19,7 +19,7 @@ On January 3rd, 2009 the Genesis Block of Bitcoin was mined and the first 50 bit
 
 <h3 class="text-center font-italic">"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."</h3>
 
-![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor_AW.jpg)
+![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
 
 Choosing to include this headline suggests that one of the main motivations to build Bitcoin was to create an alternative to the fractional reserve banking system that provably destabilizes the economy and arguably disenfranchises the general public.
 
