@@ -499,6 +499,16 @@ body::after{
     img {
       display: block;
       margin: 0 auto;
+      &[src*="_M."] {
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+      }
+      &[src*="_D."] {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
     }
     h3 {
       margin-top: 3rem;
