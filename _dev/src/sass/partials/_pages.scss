@@ -161,7 +161,7 @@
     }
   }
   .welcome-text {
-    font-size: 1.2rem;
+    font-size: $font-text-size1;
     ul {
       @include list-blue-bullet();
     }
