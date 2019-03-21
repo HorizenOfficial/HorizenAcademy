@@ -1,7 +1,7 @@
 <div class="further-reading">
     <a href="{{ include.url }}" target="_blank">
         <div class="row no-gutters">
-            <div class="col-10 col-sm-9">
+            <div class="col-12 col-md-9">
                 <div class="p-3">
                     <h4 class="title">{{ include.title }}</h4>
                     <div class="author">― {{ include.author }}</div>
@@ -9,7 +9,7 @@
                     <div class="link">{{ include.url }}</div>
                 </div>
             </div>
-            <div class="col-2 col-sm-3 preview-img" style="background-image: url({{ include.image | default: '/assets/img/icons/further-reading.jpg' }})"></div>
+            <div class="d-none d-md-block col-md-3 preview-img" style="background-image: url({{ include.image | default: '/assets/img/icons/further-reading.jpg' }})"></div>
         </div>
     </a>
 </div>
