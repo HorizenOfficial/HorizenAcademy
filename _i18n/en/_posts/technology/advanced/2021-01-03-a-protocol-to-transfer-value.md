@@ -32,7 +32,8 @@ SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted li
 
 The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
 
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols.png)
+![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_D.jpg)
+![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_M.jpg)
 
 Throughout the history of the internet, people have defined standards for the exchange of various types of data. It's important to note that it was not always the best protocol which gained mass adoption. People are unlikely to switch to a different protocol once they begin using and building upon one unless it is leagues better. Developers become attracted to the increasing libraries and tools available on these protocols. This cycle repeats itself until a protocol eventually becomes a standard.
 
@@ -52,7 +53,8 @@ Another subset of rules is concerned with the structure of a valid block. Rememb
 
 Following the block header, the block contains all the transactions that were included.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_D.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_M.jpg)
 
 Now there needs to be a set of rules describing what an individual transaction must look like. We will talk about transactions in detail in a dedicated article but for now, it should suffice to know that a transaction needs to include the sender, the recipient, the amount of the transfer, and a digital signature. The digital signature is a way to authorize the spending of your funds. The private key of a user creates this digital signature. We explain this process further in our article on public-key cryptography.
 

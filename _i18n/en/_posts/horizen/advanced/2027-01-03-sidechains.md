@@ -19,7 +19,8 @@ _"A sidechain is a blockchain that validates data from other blockchains. […] 
 
 In other words, a sidechain is a blockchain in and of itself, but with the capability to communicate and interoperate with one or more other chains. When you hear the term sidechain today, people are mostly talking about pegged sidechains, which allow you to transfer assets back and forth between chains.
 
-![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains.jpg)
+![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains_D.jpg)
+![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains_M.jpg)
 
 ### So What is the Benefit of This Technology?
 
@@ -60,7 +61,8 @@ The construction of the sidechain model consists of two parts:
 
 The _sidechain consensus protocol_ governs how the network agrees on new blocks and therefore on the history of transactions. The _cross-chain transfer protocol_ determines how assets can be sent from the mainchain to a sidechain and vice versa. We will look at these two protocols in our [sidechain article in the expert section]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}).
 
-![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/SCP_CCT.jpg)
+![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/SCP_CCT_D.jpg)
+![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/SCP_CCT_M.jpg)
 
 ### Summary
 

@@ -16,7 +16,8 @@ Before we get into the different attack scenarios we would like to introduce you
 
 Imagine you are a general a few centuries ago and you want to attack a castle with your army. The castle is very robust and the army inside strong. You have arranged a number of other armies to support the attack and each of those armies is going to attack from a different side. The armies are separated by distance, each of them several miles apart. If they all attack at the same time the chances of victory are very high. If the attack is uncoordinated then you will most likely suffer defeat.
 
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_D.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_M.jpg)
 
 You as the general have the following problem: How can you make sure all armies are attacking at the same time. In other terms how can you achieve consensus on the time of the attack? You cannot give signals with flags, torches or smoke, as those signals could be picked up by the enemy.
 
@@ -24,7 +25,8 @@ You could send messengers on horseback, but what if one of them is captured or k
 
 Blockchain technology claims to have solved this issue. 
 
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_1.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_1_D.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_1_M.jpg)
 
 Each General now has a ledger of events that is always synchronized with the other General's ledgers without a central party being in charge of the coordination. Every time a block gets mined, all the participants agree on the order of events for the last couple of minutes. Getting back to our general's problem, now they have a way of knowing if all of them are going to attack, or if they should retread collectively.
 
@@ -38,7 +40,8 @@ Now that we have talked about the general problem a consensus mechanism aims to 
 
 A Distributed Denial-of-Service (DDOS) attack in computing is an attack, where a perpetrator seeks to make a network resource unavailable to its users, by flooding the network with a large number of superfluous request in an attempt to overload the system. It is an attack that not only blockchains but any online service can suffer from. In a simple form, the DOS (Denial-of-Service) attack, all these requests originate from the same source. This makes it somewhat easy to prevent. If a single IP-address sends a huge amount of requests that cannot be justified by legitimate reasons, you can have a measure in place that automatically blocks this IP-address. In the case of a DDOS attack, the distributed refers to a large number of different sources that the malicious requests originate from.
 
-![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS.jpg)
+![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_D.jpg)
+![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_M.jpg)
 
 A DDOS attack is much harder to tackle because to do so you need to differentiate between legitimate and malicious requests. This is a very hard problem. In the context of blockchains, this comes down to an almost ideological question. The motivation to introduce transaction fees was to eliminate spam. Some people argue that as long as the requests have a transaction fee attached they cannot be considered spam by definition. I would argue, that as long as the sole purpose of the requests (in this case transactions) is to slow down the network it can still be considered spam. This is a strongly subjective view, as it is impossible to be certain about the motivation behind a large number of transactions.
 
@@ -48,7 +51,8 @@ A Sybil Attack is an attempt to manipulate a P2P network by creating multiple fa
 
 Another possible use for Sybil attacks is to censor certain participants. A number of Sybil nodes can surround your node and prevent it from connecting to other, honest nodes on the network. This way one could try to prevent you from either sending or receiving information to the network.
 
-![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/sybil.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/sybil_D.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/sybil_M.jpg)
 
 One way to mitigate Sybil Attacks is to introduce or raise the cost to create an identity. This cost must be carefully balanced. It has to be low enough so that new participants aren't restricted from joining the network and creating legitimate identities. It must also be high enough that creating a large number of identities in a short period of time becomes very difficult. In PoW blockchains, the nodes that actually make decisions on transactions are the mining nodes. There is a real-world cost, namely buying the mining hardware, associated with creating a fake "mining-identity". Additionally, having a large number of mining nodes still doesn't suffice to influence the network meaningfully. To do that you would also need large amounts of computational power. In other words, you need large clusters of computers. The associated costs make it hard to Sybil attack Proof-of-Work blockchains.
 
@@ -62,7 +66,8 @@ A malicious miner wanting to perform a double spend will first create a regular 
 
 First, they will not include their own transaction spending their coins in their privately mined chain. Second, they will not broadcast the blocks they find to the network, therefore we call it the private chain.
 
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent.jpg)
+![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent_D.jpg)
+![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent_M.jpg)
 
 If they control a majority of the computing power, their chain will grow faster on average than the honest chain. The Longest Chain Rule in PoW blockchains, also known as Nakamoto Consensus, governs what happens in case of such a fork. The branch, that has more blocks to it and accordingly represents the chain created with a larger amount of computing power is considered the valid chain.
 

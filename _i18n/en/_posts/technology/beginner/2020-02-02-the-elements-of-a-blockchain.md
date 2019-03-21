@@ -27,7 +27,8 @@ Similarly, in the distributed network of a blockchain, the _full nodes_ are up a
 
 You can run a full node, and you should if you want to contribute to the stability and security of your network, but to use cryptocurrencies you don't have to. Most wallets out there are light nodes, which means they store your keys but don't maintain a copy of the blockchain. With our flagship app Sphere by Horizen, you can choose to run a full node or not, making it a "hybrid node".
 
-![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes.png)
+![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_D.jpg)
+![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_M.jpg)
 
 ### Miner
 
@@ -37,7 +38,8 @@ Leaving the technical details aside, for now, their actual purpose for the netwo
 
 But why do you need the puzzle? Each miner might have a slightly different block than the other miners. This is because it takes some time for a new transaction to spread across the entire network, and different miners might receive those transactions in a different order.
 
-![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner.jpg)
+![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_D.jpg)
+![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_M.jpg)
 
 The miners start solving a new puzzle (working on the next block) immediately after solving the previous block. They gather all the transactions on the network that have not been included in a block yet and put them in their version of the next block. The miner who solves the puzzle first gets to write the history for the last few minutes. This person broadcasts their block to the network together with the solution they found for the puzzle. All nodes, no matter if they are mining or not verify if the solution to the puzzle is correct, and if it is they add the new block to their copy of the blockchain. Now the cycle starts all over again. 
 

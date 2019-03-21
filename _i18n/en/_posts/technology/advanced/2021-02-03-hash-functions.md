@@ -19,7 +19,8 @@ A cryptographic hash function must fulfill the following set of criteria to be v
  - Collision resistant - It should be hard (read impossible) to find two inputs to a hash function resulting in the same output. 
  - Deterministic - The same input always needs to produce the same output
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_M.jpg)
 
 
 

@@ -10,7 +10,8 @@ chapter: "How Does a Blockchain Work?"
 
 The Internet that we are experiencing today is highly centralized. Most data that we as the users of the internet produce, end up in the hands of a few large corporations. But there are a number of truly distributed systems out there living on the internet. Although not exactly the same, for the purpose of this article, we will use the term distributed network and Peer-to-Peer network interchangeably.
 
-![Central distri](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri.jpg)
+![Central distri](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_D.jpg)
+![Central distri](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_M.jpg)
 
 One example of a truly distributed system on the internet is BitTorrent. Like any other technology, Peer-to-Peer networks have enabled legitimate use-cases, such as the reliable exchange of open source software. They also have illegitimate use-cases, such as pirating music and movies. Distributed systems have some major advantages over their more centralized counterparts, most notably their robustness. Peer-to-Peer networks have a high level of redundancy built in. Single points of failure are missing and the system can survive even if a majority of the network shuts down. We’ve seen the tremendous difficulty that authorities have had taking some of these networks offline with services like BitTorrent or Napster. That is due to the fault tolerance you get from a peer-to-peer architecture.
 
@@ -24,7 +25,8 @@ We have found a simple yet great visualization of a distributed system that demo
 
 The variations of distributed networks mostly regard the data structure that is being maintained and the broadcasting mechanism or message propagation that nodes use to communicate and exchange data. The two most commonly used spreading protocols are flooding and diffusion. With flooding, nodes propagate a message with a constant or deterministic transmission delay. Diffusion is a refined version of flooding. In networks using diffusion, such as Bitcoin and most other cryptocurrencies the nodes propagate messages with a random transmission delay. This makes it harder for an eavesdropper to determine the origin of a message and therefore identifying nodes real-world location and possibly owner.
 
-![Spreading](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/spreading.jpg)
+![Spreading](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/spreading_D.jpg)
+![Spreading](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/spreading_M.jpg)
 
 Many distributed systems are built with an append-only data structure and blockchains are an example of this. The blocks in a blockchain are cryptographically connected data containers in an append-only log. It is infeasible to change or delete data from the past. In other distributed networks it can be desirable to delete data, for storage efficiency or to maintain only relevant information. In the case of blockchains, especially the ones for cryptocurrencies this would be considered a devastating bug. If the transaction ledger were to change this would destroy the use-case of a digital currency, because it would imply changing balances. This is clearly not desirable for a censorship-resistant form of global money.
 
