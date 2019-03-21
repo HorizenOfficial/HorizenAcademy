@@ -183,6 +183,10 @@ body::after{
   }
 }
 
+#left-menu-overlay {
+  display: none;
+}
+
 .site-wrapper {
   width: 100%;
   padding-left: 300px;
@@ -493,8 +497,20 @@ body::after{
   .post-content {
     line-height: 1.6;
     & > p:first-child, .lead {
-      font-size: 1.2rem;
+      font-size: $font-text-size1;
       font-weight: normal;
+      margin-bottom: 1.5rem;
+    }
+    .table.lead {
+      td {
+        border: 0;
+        padding: 0;
+        vertical-align: middle;
+        &.icon {
+          width: 100px;
+          padding-right: 20px;
+        }
+      }
     }
     img {
       display: block;

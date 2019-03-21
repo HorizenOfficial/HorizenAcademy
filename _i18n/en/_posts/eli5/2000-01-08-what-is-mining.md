@@ -6,7 +6,14 @@ permalink: /eli5/what-is-mining/
 topic: eli5
 ---
 
-Mining is a part of coming to a [consensus]({{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}) on a blockchain that uses the Proof-of-Work method to agree on the order of events.
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-mining/Mining.jpg" alt="Mining"></td>
+        <td>
+            Mining is a part of coming to a [consensus]({{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}) on a blockchain that uses the Proof-of-Work method to agree on the order of events.
+        </td>
+    </tr>
+</table> 
 
 A miner is somebody that looks at what is happening on the network and records every transfer of money. Two different miners might have a different opinion about the order in which some transactions happened. Every miner writes everything they saw happening on the network in a [block]({{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}). Now there are many miners on a blockchain, and therefore many different opinions.
 

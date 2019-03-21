@@ -6,7 +6,14 @@ permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 ---
 
-A hash function is something that we use to create a fingerprint of a file. You can use a hash function to create a fingerprint for every type of file you can imagine.  
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td>
+            A hash function is something that we use to create a fingerprint of a file. You can use a hash function to create a fingerprint for every type of file you can imagine.
+        </td>
+    </tr>
+</table>   
 
 Let's say I want to send you a text file and don't want you to change it. I could use a hash function to create a fingerprint of the text before I send it to you. 
 

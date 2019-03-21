@@ -32,6 +32,11 @@ $(function () {
             $(this).toggleClass("open");
         });
 
+        $("#left-menu-overlay").click(function () {
+            $("#left-menu").removeClass("open");
+            $("#mobile-left-menu-toggler").removeClass("open");
+        });
+
     });
 
 
