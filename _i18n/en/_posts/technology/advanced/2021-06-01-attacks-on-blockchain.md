@@ -73,7 +73,7 @@ If they control a majority of the computing power, their chain will grow faster 
 
 Once the attacker has received the good or other currency bought with their coins, they will broadcast the private branch to the entire network. All the honest miners will then drop the honest branch and start mining on top of the malicious chain. The network treats the attacker's transaction as if it never happened because the attacker did not include it in the malicious chain. The attacker is still in control of their funds and can now spend them again.
 
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent.gif)
+<img src="/assets/post_files/technology/advanced/attacks-on-blockchain/percent.gif" alt="51% Attack" style="width: 700px;">
 
 This has happened to many smaller blockchains in the past. In fact, Horizen suffered from a 51% attack in early June 2018. We immediately started to work on a solution to mitigate the risk of a 51% attack on smaller blockchains that are not secured by as much computing power as for example the Bitcoin blockchain.
 
