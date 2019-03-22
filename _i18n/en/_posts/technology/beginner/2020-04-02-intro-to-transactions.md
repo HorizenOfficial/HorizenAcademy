@@ -26,7 +26,8 @@ The lockers are accessible from anywhere, at any time, as long as you have acces
 
 Now let us consider each individual mailbox in this grid. We explained that identity on a blockchain is a pair of keys: a public and a private key in the article about identity on the blockchain. These keys always come as a set. In this analogy, each individual mailbox is a visual representation of a key pair.
 
-![Empty](/assets/post_files/technology/beginner/intro-to-transactions-basic/T1_empty.jpg)
+![Empty](/assets/post_files/technology/beginner/intro-to-transactions-basic/T1_empty_D.jpg)
+![Empty](/assets/post_files/technology/beginner/intro-to-transactions-basic/T1_empty_M.jpg)
 
 
 The corresponding key pair identifies the individual mailboxes in our grid instead of numbers. You can find a given mailbox or account with the public key or address, as the identifier. You can open it with the corresponding private key.
@@ -51,7 +52,8 @@ Your address will be used to create a new mailbox in the grid of mailboxes. Then
 
 The transaction is visible to everybody, but only the owner of the corresponding private key can access the funds.
 
-![Received](/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_received.jpg)
+![Received](/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_received_D.jpg)
+![Received](/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_received_M.jpg)
 
 ### Your First Time Creating a Transaction
 
@@ -64,7 +66,8 @@ To send funds to this address the following things will happen:
  - The wallet locates the mailbox of the recipient using his address (or public key).
  - Your wallet slips the newly created transaction inside.
 
-![Sent](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_sent.jpg)
+![Sent](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_sent_D.jpg)
+![Sent](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_sent_M.jpg)
 
 Every participant can now see (or validate) that you transferred your funds to another party. Only this party can access the transferred funds with the corresponding private key. Once you send the transaction there is no way for you to change or reverse it. This means you should always double check the addresses that you are sending any funds to. If possible, you should always use the copy - paste function instead of typing an address manually and check the first and last few digits. If you send funds to the wrong address by accident there is no way to revert the transaction.
 

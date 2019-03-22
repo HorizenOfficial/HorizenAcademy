@@ -12,10 +12,12 @@ You should have a pretty good understanding of blockchain if you have read throu
 
 There are different ways to keep track of ownership. Most blockchains use the [UTXO (Unspent Transaction Output) Model]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}) to track a user's funds. It is similar to how cash works. If you receive money in a transaction you can think of receiving a bill with any given value. If you use this cryptocurrency "bill" to pay for something worth less than its value, you receive change to account for the difference in nominal value. Not too unfamiliar after all.
 
-![wallet balance Int](/assets/post_files/technology/advanced/transactions/wallet_balance_Int.jpg)
+![wallet balance Int](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_D.jpg)
+![wallet balance Int](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
 
 We have introduced the [block explorer]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}) in our Beginner Level, but we want to take a more in-depth look at the tool that lets you access the information on a blockchain.
 
 For the last article of this chapter, we want to show you a special type of transaction, an [atomic swap]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}). It is a more sophisticated type of transaction that allows users to exchange different kinds of cryptocurrencies peer-to-peer. There is no third party involved and no trust required. Either both of them get what they agreed to beforehand, or nothing happens at all. Atomic swaps hold the promise of making many different blockchains interoperable.
 
-![atomic swap](/assets/post_files/technology/advanced/transactions/atomic_swap.jpg)
+![atomic swap](/assets/post_files/technology/advanced/transactions/atomic_swap_D.jpg)
+![atomic swap](/assets/post_files/technology/advanced/transactions/atomic_swap_M.jpg)

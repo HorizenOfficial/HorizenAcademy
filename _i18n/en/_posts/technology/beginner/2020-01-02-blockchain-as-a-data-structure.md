@@ -22,7 +22,8 @@ This article provides an introduction to what a blockchain is, and what it allow
 
 A blockchain is a data structure in the eyes of a computer scientist. This structure stores information reliably regardless of being in a trustless environment. A data structure may sound technical at first, but its function is exactly that. It structures your data. Lists or tables are familiar types of data structures. You likely use one of these two methods any time you write down information on paper. There are many types of data structures in the digital world, including blockchain. The term blockchain comes from the structure that stores your data. All data becomes separated into blocks. Every block states which block came before it creating a "chain" of blocks. Stating which block came previously is commonly referred to as referencing.
 
-![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain.jpg)
+![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_D.jpg)
+![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_M.jpg)
 
 
 ##### A Database: Efficient but Centralized
@@ -36,14 +37,16 @@ Many different entities, or peers, operate a blockchain. These peers don't know 
 
 There is no centralized entity, like a bank or clearinghouse responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding the rules of the protocol can create a wallet an send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network and every participant (or node, or peer) keeps a copy of it. A node can be an individual person, a store accepting crypto, or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database, but more secure.
 
-![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing.jpg)
+![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_D.jpg)
+![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_M.jpg)
 
 
 ##### Where does the term Blockchain come from?
 The blockchain does not keep data in a single huge continuous ledger but separates the data into blocks. These blocks are then connected to each other like individual pages in a book. That is how the term blockchain came to be. Imagine a bookie recording entries using single pages instead of one large book. Every few minutes he takes a new piece of paper and writes "the last page I used was page X, this is page Y". The notes that he includes "chain" the pages together. He can easily arrange the pages if he ever drops them because each page references its predecessor.
 
 
-![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain.jpg)
+![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_D.jpg)
+![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_M.jpg)
 
 
 One of these single pages represents a block in this comparison, the pile of the pages he already used represent the blockchain. The reference that page X came before page Y is what "chains" the blocks together. Instead of one bookkeeper, there are many of them working simultaneously. Miners are the bookkeepers of a blockchain and we will explain their role in the section about how a blockchain works.

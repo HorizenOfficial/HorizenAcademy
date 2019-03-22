@@ -11,7 +11,8 @@ One of the major challenges in making blockchain technology ready for mass adopt
 
 There are many different approaches to making blockchains scale. Horizen is looking into two of those possible solutions. The last article covered our efforts to build a Block-DAG protocol, this article is about our Sidechain construction.
 
-![Sidechains](/assets/post_files/horizen/beginner/sidechains/sidechains.jpg)
+![Sidechains](/assets/post_files/horizen/beginner/sidechains/sidechains_D.jpg)
+![Sidechains](/assets/post_files/horizen/beginner/sidechains/sidechains_M.jpg)
 
 When you enable sidechains, you allow a number of different blockchains to run in parallel. A sidechain is a blockchain in and of itself with the added feature of being interoperable with the mainchain. The interaction with a blockchain facilitating a cryptocurrency, such as our current Horizen blockchain, will mostly be concerned with transactions. The most important part of building our sidechain construction is the cross-chain transfer protocol. The cross-chain transfer protocol will allow ZEN to be sent from the mainchain to one of the sidechains and vice versa.
 

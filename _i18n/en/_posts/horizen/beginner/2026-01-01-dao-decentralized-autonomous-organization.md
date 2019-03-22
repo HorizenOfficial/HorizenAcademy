@@ -18,7 +18,8 @@ The DAO founders define the criteria for allowing a change in the beginning and 
 Horizen determines how to spend their budget on a monthly basis. The budget allows us to pay for developing our protocol, marketing efforts, and many other things. We plan to open the budget determinations to our community when we release the ZenDAO.  
 Any member of the community can submit a proposal of what they would like to contribute to the DAO and how much funds would be needed for the proposal. The community can review the proposal, which might be translating the website to another language, creating a video for marketing purposes, or building an app on top of Horizen. Every month there will be a voting period. The community can cast votes on whether a proposal should be funded or not within this period. After the tally phase, the approved proposals will automatically receive the allocated funds and the community members that have submitted the proposal can begin working.
 
-![DAO - Decentralized Autonomous Organization](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO.jpg)
+![DAO - Decentralized Autonomous Organization](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO_D.jpg)
+![DAO - Decentralized Autonomous Organization](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO_M.jpg)
 
 Horizen believes that empowering our community is important. We are creating the building blocks necessary to create our vision for the ZenDAO. Voting on the development of the Horizen blockchain platform will be a fair process for community members to partake in the decision-making process and is a great way to legitimize decisions regarding future developments.
 
