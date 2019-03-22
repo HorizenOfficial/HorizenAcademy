@@ -203,3 +203,11 @@
   }
 }
 
+#page-privacy-advanced, #page-technology-advanced-what-is-a-blockchain {
+  .post-section .post-content h5 {
+    @include media-breakpoint-down(md) {
+      margin-left: 6.5%;
+      margin-top: 0.5rem;
+    }
+  }
+}
