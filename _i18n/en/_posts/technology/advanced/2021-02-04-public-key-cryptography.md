@@ -10,7 +10,8 @@ chapter: "How Does a Blockchain Work?"
 
 There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/how_it_works.jpg" alt="How it works" style="width: 400px;">
+![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_D.jpg)
+![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_M.jpg)
 
 Let's take a step back and start from the beginning. The basis of public-key cryptography is private keys, public keys, addresses, and digital signatures. The private key creates a digital signature. The blockchain contains a record (the transaction) stating that there are some funds associated with your public key when you receive cryptocurrency. You must provide a digital signature to authorize your spending. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
 
@@ -18,25 +19,25 @@ Let's take a step back and start from the beginning. The basis of public-key cry
 
 We would like to talk about elliptic curve cryptography (ECC) before we discuss how your keys and addresses work together. There are different mathematical concepts used to build a public-key cryptographic system. Bitcoin and most other cryptocurrencies use Elliptic Curve Cryptography (ECC).
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.png" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;">
 
 Bitcoin, Ethereum and many other currencies use a curve called secp256k1 and it looks like the one above. The equation for this curve is y^2 = x^3 + 7. What makes elliptic curves useful is that you can do math with them, and the math you do with the curves contains special properties.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.png" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;">
 
 The graph above shows an example of adding two points on the curve together. When we want to add point P and Q together, we first connect them with a straight line. This straight line will intersect with the curve at some third point. Now we must project the third point onto the other side of the x-axis (multiply the y-coordinate by -1) and we get the sum of point P and Q: R. The key takeaway is that the sum of two points on the curve is a third point on the curve.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.png" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;">
 
 When we want to multiply a point on the curve we must add it to itself. To multiply point P by two we add it to itself once. In this case, we can't really connect two points, but we go for the tangent line (the one with the arrows). If you look at a random point close to P (the lightest gray), connecting the two points will result in the lightest grey line. Moving this point closer and closer towards P (from light to dark) brings the connecting line closer to the tangent line until it becomes the points and the lines overlap.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.png" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;">
 
 The addition to itself is easy. We take the intersection of the straight line with the curve once again and project it onto the other side of the x-axis.
 
 If we want to multiply P by 3 we now add P and point (P + P) together. To multiply P by four we can add point (P + P) to itself and so on.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.png" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;">
 
 The key takeaway is that multiplying a point is an easy task. The division is difficult (read infeasible). There is no algorithm to calculate how many times P was added to itself or in terms of multiplication by what number it was multiplied in order to get to a certain point. This should be enough to understand the basic concept of public key cryptography based on elliptic curves.
 
@@ -78,7 +79,8 @@ Base58Check is a way to convert bits into alphanumeric characters, but it exclud
 
 You can generate as many addresses as you like from a single private key, and most wallets today do this for you. It is a feature to enhance your privacy, as it makes it harder for a third party to link all your payments together. We will talk about this concept and how it works with change addresses in the following chapter Privacy on the Blockchain.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_7.png" alt="ECC" style="width: 400px;">
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_7_D.jpg)
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_7_M.jpg)
 
 ### Digital Signature
 

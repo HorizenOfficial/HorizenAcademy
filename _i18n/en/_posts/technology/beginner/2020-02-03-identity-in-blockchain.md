@@ -16,11 +16,13 @@ One of the core concepts that make cryptocurrencies work is the concept of _asym
 
 With symmetric cryptography, you encrypt and decrypt text with the same key (like a padlock).
 
-![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric.png)
+![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_D.jpg)
+![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_M.jpg)
 
 With asymmetric cryptography, you encrypt and decrypt text with two different keys, the public key, and the private key. The keys always come in pairs. If you encrypt a message with a public key it must be decrypted with the corresponding private key and vice versa. This boils down to a simple concept: Your key pair is your identity on the blockchain.
 
-![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric.png)
+![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_D.jpg)
+![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_M.jpg)
 
 ### Your Key Pair is Your Identity
 
@@ -31,7 +33,8 @@ The idea in cryptocurrencies is that you are receiving funds with your public ke
 The real life comparison you will hear most often is your public key being like your address. You can give it to anybody that wants to send you a letter. Your private key is like the key to your postbox. Only this key lets you access your mail and you wouldn't hand it to a stranger. If you want to learn about this concept in more detail, you will find a more in-depth explanation in the intermediate section and an exact description in the advanced section.  
 A **transaction** is a standardized message to the network. This message includes how much of your funds you want to send, and to whom. This information is then encrypted with your private key, a step we call _signing a transaction_.
 
-![Signing](/assets/post_files/technology/beginner/identity-in-blockchain/signing.jpg)
+![Signing](/assets/post_files/technology/beginner/identity-in-blockchain/signing_D.jpg)
+![Signing](/assets/post_files/technology/beginner/identity-in-blockchain/signing_M.jpg)
 
 A digital signature works similar to how you authorize real-life transactions using your "analog" signature. Even with modern supercomputers, it is infeasible to forge such a digital signature. Therefore public-key cryptography is one of the safest means of encryption available today.
 

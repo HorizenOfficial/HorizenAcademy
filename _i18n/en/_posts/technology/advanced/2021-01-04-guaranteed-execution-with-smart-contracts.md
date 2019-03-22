@@ -12,7 +12,8 @@ We have looked at blockchain in two different ways. First as a data structure an
 
 A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to an agreement. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
 
 ### The Promise of Smart Contracts
 
@@ -30,7 +31,8 @@ A decentralized application or dApp is a more sophisticated use case for smart c
 
 Dapps use smart contracts to communicate with the underlying blockchain. Imagine a future where smart contract libraries with a large number of template contracts that can be used for various purposes. We are already seeing a trend towards this scenario with smart contract platforms such as Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_D.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_M.jpg)
 
 ### Smart Contract Platform
 
@@ -52,7 +54,8 @@ One must consider that writing traditional contracts takes years of studying the
 
 There is another major challenge to overcome. The digital world needs to learn about real-world events in order for a smart contract to function and execute. An oracle is an entity submitting data to a blockchain or smart contract. The trust problem is referred to as the Oracle Problem. Imagine a smart contract running a betting platform in a trustless environment. An oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because an Oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle.jpg)
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_D.jpg)
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_M.jpg)
 
 Centralized Oracles are not considered a solution to the Oracle Problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. No matter if centralized or decentralized, an oracle will always come at a cost. Acting honestly must always be the most profitable strategy and therefore strong incentives must be in place. This is another problem that needs game theoretic evaluation and incentive design, just like the incentives for miners that we talked about in our **last article**.
 

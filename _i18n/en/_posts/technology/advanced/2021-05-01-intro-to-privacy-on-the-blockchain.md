@@ -34,7 +34,8 @@ A wallet that supports change addresses will generate a new address, every time 
 
 Coin mixing protocols like SharedCoin, TumbleBit or CoinJoin (used by Dash) are the next evolutionary step to improve privacy by mixing several different inputs and outputs in a single transaction, often times during several intermediary transactions.
 
-![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_D.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_M.jpg)
 
 Coin mixing transactions don't require any changes to the basic Bitcoin protocol that many other cryptocurrencies (such as Horizen) use. In the graphic above you can see the schematics of a coin mixing transaction. A number of inputs are combined in a mixing pool (center) and later distributed to their destination addresses. A coin mixing transaction makes it harder for an attacker to figure out who was sending money to whom.
 
@@ -48,7 +49,8 @@ Ring Signatures were first introduced by Rivest, Shamir, and Taumann in 2001 and
 
 Imagine a high ranking White House official (Alice) wanting to leak a secret to the press about the president. She needs to make sure, the journalist who receives the leak has a way to verify the source of the information without revealing her identity. What she can do is use a Ring Signature to sign the message. To construct the ring signature all she needs is her private key and the public keys of the other possible whistleblowers, e.g. other members of the cabinet (Bob and Carol).
 
-![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_D.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_M.jpg)
 
 The verifier (journalist) can verify that the message was indeed signed by a high ranking official, but he cannot determine who constructed the signature (Alice, Bob or Carol?).
 
@@ -64,7 +66,8 @@ Simply speaking, a Zero Knowledge Proof lets you prove to a verifier that you kn
 
 The seeing person (prover) wants to convince the blindfolded person (verifier) that the two balls are of different colors, without revealing the colors. They sit down at a table and the blind person shows the prover one of the balls. The blind person continues to put both balls under the table and chooses to show one ball in a second round - either the same one as before or the other one. If he chooses to show the same ball, the prover knows because he sees the same color and he tells the blind person. If the blind person were to show the other ball, the prover could tell with certainty that the verifier (blind person) switched the balls under the table
 
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_D.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_M.jpg)
 
 In the second round, the prover would have a fifty-fifty chance of getting the right answer if they had to guess. They would have to guess in case the claim that he is trying to prove (the balls are of a different color) was false. At this point, the blind person cannot be sure if the claim is correct, or if the prover got lucky.
 

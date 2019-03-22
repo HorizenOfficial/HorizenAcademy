@@ -14,7 +14,8 @@ An analogy that might help you understand this concept is how the mail works. Le
 The mail is permissionless in the sense that anybody, who wants to send a letter to someone can find a postbox near him or her and drop the letter in there. It will arrive at its destination a few days later. You don't need to ask for anybody's permission to do so. The "protocol" for sending a letter comprises of two things: you must put a stamp of sufficient value on it and you must provide the delivery address. The standard address format is a name, address and the country if you want to send the letter abroad.  
 When a blockchain operates a cryptocurrency the network (← a decentralized "post-like" service) is taking care of delivering your transaction (← letter) to the recipient. The protocol asks you to add a small transaction fee (← stamp) and provide the necessary information in a standardized way: your address, the recipient's address, the amount to transfer and your signature.
 
-![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol.jpg)
+![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_D.jpg)
+![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_M.jpg)
 
 Addresses on a blockchain are of course a little different to real-life addresses. They look like this: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX. 
 Signatures are also different from what you know. We will talk more about addresses and signatures throughout the next articles in this section.
