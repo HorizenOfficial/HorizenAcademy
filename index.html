@@ -50,6 +50,7 @@ permalink: /
     </div>
 
     <div class="skill-levels text-center mt-4 pb-5">
+
         <div class="row no-gutters">
             <div class="col-4">
                 <a href="#" class="js-Home-SelectLevel active" data-level="beginner">
@@ -85,6 +86,52 @@ permalink: /
                 </a>
             </div>
         </div>
+
+        <div class="home-topics d-none d-lg-block">
+            <a
+                    href="{% post_url /technology/2022-12-30-tech %}"
+                    class="js-Home-SelectTopic"
+                    data-url-beginner="{% post_url /technology/beginner/2020-12-31-tech-beginner %}"
+                    data-url-advanced="{% post_url /technology/advanced/2021-12-31-tech-advanced %}"
+                    data-url-expert="{% post_url /technology/expert/2022-12-31-tech-expert %}"
+            >
+                <div class="topic technology">
+                    <div class="icon">
+                        <img src="/assets/img/icons/categories/technology-2.svg" alt="Technology" class="icon-active">
+                    </div>
+                    <span class="topic-name">Technology</span>
+                </div>
+            </a>
+            <a
+                    href="{% post_url /privacy/2025-12-30-privacy %}"
+                    class="js-Home-SelectTopic"
+                    data-url-beginner="{% post_url /privacy/beginner/2023-12-31-privacy-beginner %}"
+                    data-url-advanced="{% post_url /privacy/advanced/2024-12-31-privacy-advanced %}"
+                    data-url-expert="{% post_url /privacy/expert/2025-12-31-privacy-expert %}"
+            >
+                <div class="topic privacy">
+                    <div class="icon">
+                        <img src="/assets/img/icons/categories/privacy-2.svg" alt="Privacy" class="icon-active">
+                    </div>
+                    <span class="topic-name">Privacy</span>
+                </div>
+            </a>
+            <a
+                    href="{% post_url /horizen/2028-12-30-horizen %}"
+                    class="js-Home-SelectTopic"
+                    data-url-beginner="{% post_url /horizen/beginner/2026-12-31-horizen-beginner %}"
+                    data-url-advanced="{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}"
+                    data-url-expert="{% post_url /horizen/expert/2028-12-31-horizen-expert %}"
+            >
+                <div class="topic horizen">
+                    <div class="icon">
+                        <img src="/assets/img/icons/categories/horizen-2.svg" alt="Horizen" class="icon-active">
+                    </div>
+                    <span class="topic-name">Horizen</span>
+                </div>
+            </a>
+        </div>
+
     </div>
 </div>
 

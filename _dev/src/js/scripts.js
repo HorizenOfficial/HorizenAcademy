@@ -298,7 +298,7 @@ $(function () {
 
             ["beginner", "advanced", "expert"].forEach(function (level) {
                 if (postContent.data("level") === level) {
-                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("disabled");
                     $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
                     return;
                 }
@@ -307,7 +307,7 @@ $(function () {
                     article = $(article);
                     var t = article.text().trim();
                     if (t === articleTitle) {
-                        bottomNav.find(".skill-levels .link-" + level).attr("href", article.attr("href")).removeClass("btn disabled");
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", article.attr("href")).removeClass("disabled");
                         $(".js-SelectLevel[data-level='" + level + "']").attr("href", article.attr("href"));
                     }
                 });
@@ -320,7 +320,7 @@ $(function () {
 
             ["beginner", "advanced", "expert"].forEach(function (level) {
                 if (postContent.data("level") === level) {
-                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("disabled");
                     $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
                     return;
                 }
@@ -330,7 +330,7 @@ $(function () {
                     var chapter = topic.find(".chapter-link");
                     var t = chapter.text().trim();
                     if (t === articleTitle) {
-                        bottomNav.find(".skill-levels .link-" + level).attr("href", chapter.attr("href")).removeClass("btn disabled");
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", chapter.attr("href")).removeClass("disabled");
                         $(".js-SelectLevel[data-level='" + level + "']").attr("href", chapter.attr("href"));
                     }
                 });
@@ -343,12 +343,12 @@ $(function () {
                 if (articleLink.data("url-" + level)) {
 
                     if (postContent.data("level") === level) {
-                        bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
+                        bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("disabled");
                         $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
                         return;
                     }
 
-                    bottomNav.find(".skill-levels .link-" + level).attr("href", articleLink.data("url-" + level)).removeClass("btn disabled");
+                    bottomNav.find(".skill-levels .link-" + level).attr("href", articleLink.data("url-" + level)).removeClass("disabled");
                     $(".js-SelectLevel[data-level='" + level + "']").attr("href", articleLink.data("url-" + level));
                 }
             });
@@ -372,6 +372,26 @@ $(function () {
             btn.addClass("active");
 
             $(".js-SelectLevel[data-level='" + btn.data("level") + "']").click();
+        });
+
+        // open nav on mobile
+        enquire.register("screen and (max-width: 991px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                $("#left-menu").addClass("open");
+                $("#mobile-left-menu-toggler").addClass("open");
+            });
+        });
+
+        // show button on desktop
+        enquire.register("screen and (min-width: 992px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                var btnLevel = $(this);
+
+                $(".js-Home-SelectTopic").each(function (_, topic) {
+                    topic = $(topic);
+                    topic.attr("href", topic.data("url-" + btnLevel.data("level")));
+                });
+            });
         });
     }
 
