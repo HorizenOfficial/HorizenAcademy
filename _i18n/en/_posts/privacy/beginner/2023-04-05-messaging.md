@@ -42,7 +42,7 @@ Teamwork and collaboration is another big thing today with Slack and Teams leadi
 
 Armed with a lot of alternatives, we wish you happy and secure messaging.
 
-![Keybase](/assets/post_files/privacy/beginner/messaging/keybase.png)
+<img src="/assets/post_files/privacy/beginner/messaging/keybase.png" alt="Keybase" style="width: 200px;">
 
 
 ### Further Reading
