@@ -18,7 +18,7 @@ There are three types of password managers: locally installed software applicati
 
 The most useful for beginners are web-based services. These services sync passwords between your devices and keep your vault secured in the cloud, and protected with a master password and 2FA (preferably). Most of these password managers have browser add-ons and/or software available to install on your computer or mobile device and acts as a vault.
 
-![_LastPass](/assets/post_files/privacy/beginner/password-manager/lastpass.png)
+<img src="/assets/post_files/privacy/beginner/password-manager/lastpass.png" alt="LastPass" style="width: 600px;">
 <p class="text-center font-italic">LastPass browser add-on interface</p>
 
 It is important to take note of pricing. While many password managers offer paid tiers, some have excellent free versions available e.g. LastPass. We recommend starting with a free tier or trial, test things out and decide if the specific password manager fits your need. You might discover that a free tier is satisfactory for you or you may wish to upgrade to the paid one as needed.
