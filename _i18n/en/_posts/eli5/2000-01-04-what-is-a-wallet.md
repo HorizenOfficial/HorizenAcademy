@@ -8,7 +8,7 @@ topic: eli5
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-wallet/Wallet.jpg" alt="Wallet"></td>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
         <td>
             A wallet is a program on your computer or phone, that lets you receive and send money. In order to do that, it needs access to [your keys]({{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}). A wallet will help you create and manage your public and private key that work like your email address and your password for it. An important difference to a regular wallet you are using every day is that you don't keep your money in your wallet.
         </td>
