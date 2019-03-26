@@ -4,6 +4,7 @@ type: article
 title: "What is the Benefit of Cryptocurrencies?"
 permalink: /eli5/what-is-the-benefit-of-cryptocurrencies/
 topic: eli5
+further_reads: [5_amazing_benefits_of_cryptocurrency_a_new_digital_future]
 ---
 
 When you send money to an online shop or a friend you are asking the bank to send the money on your behalf. What if the bank isn't open, like on a Sunday, or refuses to send the money for some reason?
@@ -29,13 +30,3 @@ When you send money to an online shop or a friend you are asking the bank to sen
     </tr>
 </table>
 
-### Further Reading
-
-{%
-  include further_reading.html 
-  title="5 Amazing Benefits of Cryptocurrency: A New Digital Future" 
-  summary="This article shows the benefits and shortcomings of cryptocurrencies today in an easy to read fashion." 
-  author="Ameer Rosic" 
-  url="https://blockgeeks.com/5-benefits-cryptocurrency/" 
-  image="https://blockgeeks.com/wp-content/uploads/2016/11/ADVANTAGES_OF_CRYPTOCURRENCY01.png"
-%}

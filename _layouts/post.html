@@ -11,4 +11,14 @@ layout: default
 
     {% include post-bottom-nav.html %}
 
+    {% if page.further_reads %}
+    <div class="further-reading-wrapper">
+        <h3>Further Reading</h3>
+
+        {% for further_read in page.further_reads %}
+            {% include further_reads/{{ further_read }}.md %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>

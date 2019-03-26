@@ -6,6 +6,7 @@ permalink: /privacy/advanced/strong-passwords/
 topic: privacy
 level: advanced
 chapter: "Best Practices"
+further_reads: [how_to_create_a_strong_password]
 ---
 
 Reusing the same password on many websites and applications is the number one security bad practice. Even large and strong platforms are being hacked and their users' credentials are sold over black markets. There have been cases when the stolen data was available publicly too. Imagine if your credentials were in one of these databases - every account you used the same password for, is essentially hacked too.
@@ -56,14 +57,3 @@ We covered password managers in our beginner level and [you can find the article
 
 Using strong passwords is the first step to protecting your data. Use a different password for every service you have an account for! Hackers will try to get their hands on your passwords through phishing, dictionary attacks or through brute force attacks. Your password should have at least 12 characters but 20 is better. Don't use common phrases or rely on simply substituting letters through numbers or symbols. There are some good methods to create strong passwords such as the sentence method. To keep track of all the different passwords, use a [password manager]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How to create a strong password"
-  summary="The author explains the most common ways passwords get hacked, examines the anatomy of strong passwords suggests methods to create them."
-  author="Charlotte Empey"
-  url="https://blog.avast.com/strong-password-ideas"
-  image="https://blog.avast.com/hs-fs/hubfs/Avast-blog-phishing-tax-season.jpg?width=1920&name=Avast-blog-phishing-tax-season.jpg"
-%}

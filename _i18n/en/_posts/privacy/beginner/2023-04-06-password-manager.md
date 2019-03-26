@@ -6,6 +6,7 @@ permalink: /privacy/beginner/password-manager/
 topic: privacy
 level: beginner
 chapter: "Tools to protect your Privacy"
+further_reads: [best_password_managers_2019]
 ---
 
 In our [article about strong passwords]({{ site.baseurl }}{% post_url /privacy/beginner/2023-03-02-strong-passwords %}) we mentioned that it is essential to have a different password for each service and application you use. That raised the question "How can a normal human being remember so many different passwords?" and the solution for that question is Password Managers. These programs manage passwords for us so that we don't have to remember them. Amazing, right?
@@ -25,14 +26,3 @@ It is important to take note of pricing. While many password managers offer paid
 
 The hardest part is choosing a password manager itself - there are so many of them! Rather than choosing a specific one for you, we encourage you to try several and only then choose the one best suited to your needs and devices. Some popular ones include LastPass, 1Password, MasterPass, and KeePassX. Below you will find an article that can get you started on your research for a good password manager.
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Best Password Managers 2019"
-  summary="This article revies 6 of the most popular password managers."
-  author="Paul Wagenseil"
-  url="https://www.tomsguide.com/us/best-password-managers,review-3785.html"
-  image=""
-%}

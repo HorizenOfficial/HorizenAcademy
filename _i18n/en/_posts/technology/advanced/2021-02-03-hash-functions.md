@@ -6,6 +6,7 @@ permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
+further_reads: [hash_functions_explained_with_emojis]
 ---
 
 Hash functions are an integral part of blockchain technology and serve many purposes. A hash function is a mathematical function that takes an input of any given length and produces an output of fixed length. The output is often called a hash value, (hash) digest, or hash.
@@ -36,13 +37,3 @@ Hash Functions are the first cornerstone of blockchain technology. A hash of a f
 
 In our next article, we will look at public-key cryptography. Public-key cryptography is the second cornerstone of blockchain tech and the concept that makes up your "identity" on the blockchain.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Hash functions explained with Emojis"
-  summary="A playful approach at explaining hash functions and their importance for blockchains."
-  author="Patrick Woodhead"
-  url="https://medium.com/swlh/this-simple-yet-powerful-invention-is-changing-the-world-d04688c25f13"
-  image="https://cdn-images-1.medium.com/max/1200/1*rONjogTs70KIuLyAO_oy_g.png"
-%}

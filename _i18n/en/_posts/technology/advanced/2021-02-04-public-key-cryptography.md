@@ -6,6 +6,7 @@ permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
+further_reads: [how_to_create_a_bitcoin_wallet_address_from_a_private_key, what_is_the_math_behind_elliptic_curve_cryptography, elliptic_curve_cryptography_a_gentle_introduction]
 ---
 
 There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
@@ -114,35 +115,4 @@ Your private key is actually used for is signing transactions. You can only use 
 When you set up a wallet the software will first generate a large random number that is your private key. The base point P on the elliptic curve is multiplied by your private key to get your public key, a point on the curve. Your public key is then hashed and it removes the characters I, l, 0 and O to improve readability. You need to provide a digital signature that you can only produce to spend any funds.
 
 Head to our next article to learn about the Peer-to-Peer network: The infrastructure most public blockchains are built upon.
-
-### Further reading
-
-{%
-  include further_reading.html
-  title="How to create a Bitcoin wallet address from a private key"
-  summary="An article outlining the different steps from private key to wallet address including the corresponding code in python."
-  author="Timur Badretdinov"
-  url="https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f"
-  image="https://cdn-images-1.medium.com/max/1200/1*yrGW1KubP_JKLR1CVg074g.png"
-%}
-
-{%
-  include further_reading.html
-  title="What is the math behind elliptic curve cryptography?"
-  summary="Hans does a brilliant job at explaining the connection between private key, public key, address and digital signature in this article."
-  author="Hans Knutson"
-  url="https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3"
-  image="https://cdn-images-1.medium.com/max/1200/1*4dcCrlQfGqZECDLy-25fnw.png"
-%}
-
-{%
-  include further_reading.html
-  title="Elliptic Curve Cryptography: a gentle introduction"
-  summary="Also Andrea calls it a gentle introduction this is an article for those of you that really care about the math behind ECC."
-  author="Andrea Corbellini"
-  url="https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/"
-  image="https://andrea.corbellini.name/images/point-addition.png"
-%}
-
-
 

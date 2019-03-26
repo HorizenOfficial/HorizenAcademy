@@ -6,6 +6,7 @@ permalink: /privacy/beginner/2fa-two-factor-authentication/
 topic: privacy
 level: beginner
 chapter: "Best Practices"
+further_reads: [how_to_set_up_2fa_using_google_authenticator]
 ---
 
 Two-factor Authentication or in short, 2FA is a way to let users access a service using a combination of two authentication methods. This may be an additional PIN code or a password, a one-time password (OTP), a fingerprint or other biometric data or even an additional security chip or token inside your device.
@@ -28,14 +29,3 @@ Enabling 2FA is one of the best security best practices you can employ as it pro
 
 Head over to our intermediate article about 2FA to learn more about the 2FA methods, choose suitable ones and start using them right away.
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How To Set up 2FA Using Google Authenticator"
-  summary="This guide explains what the Google Authenticator App is, how you set it up and what you need to do in case your device breaks."
-  author="Harsh Agrawal"
-  url="https://coinsutra.com/google-authenticator-setup-guide/"
-  image="https://coinsutra.com/wp-content/uploads/2018/01/Set-up-2FA-Using-Google-Authenticator.jpg"
-%}

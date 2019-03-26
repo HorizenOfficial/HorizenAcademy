@@ -6,6 +6,7 @@ permalink: /technology/beginner/a-protocol-to-transfer-value/
 topic: technology
 level: beginner
 chapter: "What is a Blockchain?"
+further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
 ---
 
 One of the great innovations of the blockchain boils down to being a protocol to transfer value. Andreas Antonopoulos calls Bitcoin "a language to communicate value" which feels like an accurate description to me.
@@ -28,30 +29,3 @@ The internet (with underlying TCP/IP protocol) enables you to transfer informati
 
 Let's have a look at [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
 
-
-{%
-  include further_reading.html
-  title="Why Bitcoin's Lightning Network is Ingenious"
-  summary="A short history of accounting and why Bitcoin can be understood as the first occasion of Triple-Entry Bookkeeping. Brilliant take on the value of distributed ledgers for financial transactions."
-  author="Todd Kronenberg"
-  url="https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae"
-  image="https://cdn-images-1.medium.com/max/1200/1*LRthxmnfHZiP1GSpwpuE4g.jpeg"
-%}
-
-{%
-  include further_reading.html
-  title="Explain Bitcoin Like I'm Five"
-  summary="The author explains why it is not that easy to build digital money and how bitcoin solved this problem in very simple terms"
-  author="Nik Custodio"
-  url="https://medium.freecodecamp.org/explain-bitcoin-like-im-five-73b4257ac833"
-  image="https://cdn-images-1.medium.com/max/1200/1*d3ASVo4LX_QKtOXaeCdWmg.jpeg"
-%}
-
-{%
-  include further_reading.html
-  title="Money as Language"
-  summary="Andreas making the point of currency being a form of language to communicate value. Talk in video form as well as a transcript."
-  author="Andreas Antonopolous"
-  url="https://www.weusecoins.com/video-bitcoin-money-as-language/"
-  image="https://i.ytimg.com/vi/bVEMa7YkefY/hqdefault.jpg"
-%}

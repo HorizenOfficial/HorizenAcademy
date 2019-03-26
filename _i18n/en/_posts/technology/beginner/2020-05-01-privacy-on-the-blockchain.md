@@ -6,6 +6,7 @@ permalink: /technology/beginner/intro-to-privacy-on-the-blockchain/
 topic: technology
 level: beginner
 chapter: "Privacy"
+further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
 It is a common misconception that Bitcoin and other cryptocurrencies are an anonymous means of payment. In fact, they are not anonymous, but pseudonymous. 
@@ -46,11 +47,3 @@ While cryptocurrencies are not anonymous by default, some of them offer features
 
 In our advanced section, we will look at a few more privacy conserving concepts.
 
-{%
-  include further_reading.html
-  title="How Zcoin's Privacy Technology Compares to the Competition"
-  summary="An extensive comparison of different privacy mechanisms on the blockchain used by different Cryptocurrencies"
-  author="Reuben Yap, Zcoin"
-  url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
-  image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
-%}

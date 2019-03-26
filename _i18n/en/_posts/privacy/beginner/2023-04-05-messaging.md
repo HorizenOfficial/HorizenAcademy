@@ -6,6 +6,7 @@ permalink: /privacy/beginner/messaging/
 topic: privacy
 level: beginner
 chapter: "Tools to protect your Privacy"
+further_reads: [secure_messaging_apps_comparison, secure_messaging_scorecard_a_thorough_review_of_top_trending_apps]
 ---
 
 We all chat and we do tons of it. SMS, iMessage, Skype, Messenger, WhatsApp, Telegram... Some might even remember the era of ICQ and mIRC!
@@ -44,23 +45,3 @@ Armed with a lot of alternatives, we wish you happy and secure messaging.
 
 <img src="/assets/post_files/privacy/beginner/messaging/keybase.png" alt="Keybase" style="width: 200px;">
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Secure Messaging Apps Comparison"
-  summary="A chart listing and rating different Messaging Apps and their privacy features."
-  author="Mark Williams"
-  url="https://www.securemessagingapps.com/"
-  image=""
-%}
-
-{%
-  include further_reading.html
-  title="Secure Messaging Scorecard: a thorough review of top trending apps"
-  summary="Secure Messaging Scorecard: a thorough review of top trending apps"
-  author="VIPole"
-  url="https://blog.vipole.com/secure-messaging-scorecard-187aedb81bfc"
-  image="https://cdn-images-1.medium.com/max/2600/1*6bxPQLukpTymrbrliCAtBg.png"
-%}

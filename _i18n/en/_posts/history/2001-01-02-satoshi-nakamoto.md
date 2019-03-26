@@ -5,6 +5,7 @@ title: "Satoshi Nakamoto"
 permalink: /history/satoshi-nakamoto/
 topic: history
 chapter: "From Cypherpunks to Horizen"
+further_reads: [planting_bitcoin]
 ---
 
 Bitcoin just celebrated its 10th birthday, but the creator of the first cryptocurrency blockchain still remains anonymous. There have been many attempts to identify the man/woman/group behind the pseudonym, Satoshi Nakamoto, none of them successful.
@@ -45,13 +46,3 @@ Another benefit of Satoshis anonymity is that bitcoin is evaluated based on the 
 
 If you are still out there and happen to stumble across this article: Thank you Satoshi!
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Planting Bitcoin"
-  summary="A brilliant article examining the different factors that contributed to Bitcoins success from Dan Held, one of the best writers in the blockchain space."
-  author="Dan Held"
-  url="https://medium.com/@danhedl/planting-bitcoin-56bd1459cb23"
-  image="https://cdn-images-1.medium.com/max/1200/1*ndsz9PCJFuRuqv2Ayb3Vkw.png"
-%}

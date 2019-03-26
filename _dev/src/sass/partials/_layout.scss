@@ -546,41 +546,51 @@ body::after{
       margin-top: 1.5rem !important; // override inline style
       margin-bottom: 1.5rem !important; // override inline style
     }
-    .further-reading {
-      border: 1px solid #e5e5e5;
-      margin-top: 2rem;
-      a {
-        color: #121F1F;
-        text-decoration: none;
-      }
-      .title {
-        margin-bottom: 0;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-top: 0;
-      }
-      .author {
-        color: #888;
-        font-size: 14px;
-      }
-      .summary {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .link {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #888;
-        font-size: 12px;
-      }
-      .preview-img {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        //background-size: contain;
-        //background-position: center right;
-      }
+  }
+
+  .further-reading-wrapper {
+    h3 {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      color: #041742;
+      font-size: 1.4rem;
+    }
+  }
+  .further-reading {
+    border: 1px solid #e5e5e5;
+    margin-top: 2rem;
+    a {
+      color: #121F1F;
+      text-decoration: none;
+    }
+    .title {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .author {
+      color: #888;
+      font-size: 14px;
+    }
+    .summary {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .link {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #888;
+      font-size: 12px;
+    }
+    .preview-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      //background-size: contain;
+      //background-position: center right;
     }
   }
 

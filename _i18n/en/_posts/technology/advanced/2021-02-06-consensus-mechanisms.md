@@ -6,6 +6,7 @@ permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
+further_reads: [how_does_distributed_consensus_work]
 ---
 
 The consensus mechanism of a blockchain allows the network to agree on a single version of history. The history in the case of a blockchain for cryptocurrencies is the order in which the transactions on the network happened.
@@ -76,13 +77,3 @@ We will pick up on this discussion once again at the end of our article on minin
 
 In the Proof-of-Work method, miners are voting on a version of the history with the weight of the computational power they are controlling. In the Proof-of-Stake method, validators are voting on a version of the history with the weight of the funds or stake they own on the blockchain. While PoW has proven secure for over a decade now, the security of PoS blockchains remains to be proven. In our next article on mining, we will finally explain what the "puzzle" or "computationally expensive task" is, that we have been vaguely talking about up until now.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How Does Distributed Consensus Work?"
-  summary="What is so special about distributed systems and why do they need a consensus mechanism? An extensive article covering the intricacies of distributed systems."
-  author="Preethi Kasireddy"
-  url="https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95"
-  image="https://cdn-images-1.medium.com/max/1200/1*Z72T7mvIjOryzydJotUgzA.jpeg"
-%}
