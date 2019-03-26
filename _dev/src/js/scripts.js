@@ -64,6 +64,8 @@ $(function () {
     });
 
 
+    var $SelectLevel = $(".js-SelectLevel"), $SelectTopic = $(".js-SelectTopic");
+
     var activeLevel, activeTopic;
 
     function updateListArticles() {
@@ -84,7 +86,7 @@ $(function () {
         articleNav.find("#list-" + activeTopic + "-articles").addClass("show");
     }
 
-    $(".js-SelectLevel").click(function (e) {
+    $SelectLevel.click(function (e) {
         var btn = $(this);
 
         if (btn.attr("href").length > 1) {
@@ -101,7 +103,7 @@ $(function () {
         btn.addClass("active");
         activeLevel = btn.data("level");
 
-        $(".js-SelectTopic").each(function (_, linkTopic) {
+        $SelectTopic.each(function (_, linkTopic) {
             linkTopic = $(linkTopic);
 
             if (linkTopic.data("url-" + activeLevel)) {
@@ -126,6 +128,15 @@ $(function () {
         }
     });
 
+    $SelectTopic.click(function (e) {
+        var btn = $(this);
+        var postContent = $(".js-PostContent");
+
+        if (postContent.length && btn.attr("href") === postContent.data("url")) {
+            e.preventDefault();
+            $("#list-" + btn.data("topic") + "-articles").collapse('toggle');
+        }
+    });
     // $(".js-SelectTopic").click(function (e) {
     //     e.preventDefault();
     //     var btn = $(this);
@@ -171,7 +182,7 @@ $(function () {
         $(".js-SelectLevel[data-level='" + postContent.data("level") + "']").addClass("active");
         $(".js-SelectTopic[data-topic='" + postContent.data("topic") + "']").addClass("active");
 
-        $(".js-SelectTopic").each(function (_, linkTopic) {
+        $SelectTopic.each(function (_, linkTopic) {
             linkTopic = $(linkTopic);
             linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
         });
@@ -361,8 +372,8 @@ $(function () {
     // home lading page
     if ($("#homepage").length) {
         // highlight all levels and all topics by default
-        $(".js-SelectLevel").addClass("active");
-        $(".js-SelectTopic").addClass("pre-active");
+        $SelectLevel.addClass("active");
+        $SelectTopic.addClass("pre-active");
 
         $(".js-Home-SelectLevel").click(function (e) {
             e.preventDefault();
