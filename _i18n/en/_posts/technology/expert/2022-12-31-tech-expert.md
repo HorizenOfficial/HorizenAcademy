@@ -9,7 +9,14 @@ level: expert
 
 ## Coming Soon!
 
-We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+<div class="row mb-3">
+    <div class="col-md-3">
+        <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint"/>
+    </div>
+    <div class="col-md-9 lead">
+        We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+    </div>
+</div>
 
 This is the Expert Section and is best for those with a good understanding of the technology, but feel they are missing some important details about how it works. 
 

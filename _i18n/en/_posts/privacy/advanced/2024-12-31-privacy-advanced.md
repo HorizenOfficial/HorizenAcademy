@@ -7,7 +7,14 @@ topic: privacy
 level: advanced
 ---
 
-We designed the Horizen Academy to be the go-to place for education on online privacy, blockchain, and cryptocurrency. It doesn’t matter why you want to learn about these topics. No matter your comfort level or interest: this project is for you.
+<div class="row mb-3">
+    <div class="col-md-3">
+        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint"/>
+    </div>
+    <div class="col-md-9 lead">
+        We designed the Horizen Academy to be the go-to place for education on online privacy, blockchain, and cryptocurrency. It doesn’t matter why you want to learn about these topics. No matter your comfort level or interest: this project is for you.
+    </div>
+</div>
 
 This is the Advanced Level and is best for users who have a general understanding of digital privacy and the technology that can enable you to control your digital footprint but want to know about it in more detail. 
 
