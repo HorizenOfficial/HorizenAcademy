@@ -6,6 +6,7 @@ permalink: /privacy/advanced/your-computer/
 topic: privacy
 level: advanced
 chapter: "Where Your Privacy is Compromised?"
+further_reads: [is_your_browser_safe_against_tracking, snowden_movie]
 ---
 
 In our beginner section, we touched the topic of compromising privacy on your phone and computer, two most used devices: [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}). In our article [Your Phone]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}) we talked specifically about a phone and as today's smartphones are almost just small computers, most of that also applies to this article too.
@@ -25,20 +26,3 @@ Turning off and/or covering your microphone and webcam is also a good practice. 
 
 But the most dangerous are malware, particularly on Windows operating system. As it is the most widely used OS, attackers get most benefits targeting Windows, rather than other systems. You should always be careful with unknown files and use security best practices and updated antimalware software to keep yourself safe.
 
-
-### Further Reading
-
-{% include further_reading.html 
-title="Is Your Browser safe against tracking?" 
-summary="Test your current browser configuration here! Panopticlick is a research project designed to better uncover the tools and techniques of online trackers and test the efficacy of privacy add-ons." 
-author="Panopticlick" 
-url="https://panopticlick.eff.org/about" 
-image="https://panopticlick.eff.org/static/images/logo.svg" %}
-
-
-{% include further_reading.html 
-title="Snowden - Movie" 
-summary="The NSA's illegal surveillance techniques are leaked to the public by one of the agency's employees, Edward Snowden, in the form of thousands of classified documents distributed to the press." 
-author="Oliver Stone" 
-url="https://www.imdb.com/title/tt3774114/" 
-image="https://m.media-amazon.com/images/M/MV5BMTg2MzYzNzgzOF5BMl5BanBnXkFtZTgwOTg4NzQ4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" %}

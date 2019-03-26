@@ -6,6 +6,7 @@ permalink: /privacy/beginner/password-manager/
 topic: privacy
 level: beginner
 chapter: "Tools to protect your Privacy"
+further_reads: [best_password_managers_2019]
 ---
 
 In our [article about strong passwords]({{ site.baseurl }}{% post_url /privacy/beginner/2023-03-02-strong-passwords %}) we mentioned that it is essential to have a different password for each service and application you use. That raised the question "How can a normal human being remember so many different passwords?" and the solution for that question is Password Managers. These programs manage passwords for us so that we don't have to remember them. Amazing, right?
@@ -18,21 +19,10 @@ There are three types of password managers: locally installed software applicati
 
 The most useful for beginners are web-based services. These services sync passwords between your devices and keep your vault secured in the cloud, and protected with a master password and 2FA (preferably). Most of these password managers have browser add-ons and/or software available to install on your computer or mobile device and acts as a vault.
 
-![_LastPass](/assets/post_files/privacy/beginner/password-manager/lastpass.png)
+<img src="/assets/post_files/privacy/beginner/password-manager/lastpass.png" alt="LastPass" style="width: 600px;">
 <p class="text-center font-italic">LastPass browser add-on interface</p>
 
 It is important to take note of pricing. While many password managers offer paid tiers, some have excellent free versions available e.g. LastPass. We recommend starting with a free tier or trial, test things out and decide if the specific password manager fits your need. You might discover that a free tier is satisfactory for you or you may wish to upgrade to the paid one as needed.
 
 The hardest part is choosing a password manager itself - there are so many of them! Rather than choosing a specific one for you, we encourage you to try several and only then choose the one best suited to your needs and devices. Some popular ones include LastPass, 1Password, MasterPass, and KeePassX. Below you will find an article that can get you started on your research for a good password manager.
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Best Password Managers 2019"
-  summary="This article revies 6 of the most popular password managers."
-  author="Paul Wagenseil"
-  url="https://www.tomsguide.com/us/best-password-managers,review-3785.html"
-  image=""
-%}

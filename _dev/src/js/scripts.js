@@ -64,6 +64,8 @@ $(function () {
     });
 
 
+    var $SelectLevel = $(".js-SelectLevel"), $SelectTopic = $(".js-SelectTopic"), $PostContent = $(".js-PostContent");
+
     var activeLevel, activeTopic;
 
     function updateListArticles() {
@@ -84,7 +86,7 @@ $(function () {
         articleNav.find("#list-" + activeTopic + "-articles").addClass("show");
     }
 
-    $(".js-SelectLevel").click(function (e) {
+    $SelectLevel.click(function (e) {
         var btn = $(this);
 
         if (btn.attr("href").length > 1) {
@@ -101,7 +103,7 @@ $(function () {
         btn.addClass("active");
         activeLevel = btn.data("level");
 
-        $(".js-SelectTopic").each(function (_, linkTopic) {
+        $SelectTopic.each(function (_, linkTopic) {
             linkTopic = $(linkTopic);
 
             if (linkTopic.data("url-" + activeLevel)) {
@@ -126,6 +128,22 @@ $(function () {
         }
     });
 
+    $SelectTopic.click(function (e) {
+        var btn = $(this);
+
+        if ($PostContent.length && btn.attr("href") === $PostContent.data("url")) {
+            e.preventDefault();
+            $("#list-" + btn.data("topic") + "-articles").collapse('toggle');
+        }
+    });
+    articleNav.find(".chapter-link").click(function (e) {
+        var btn = $(this);
+
+        if ($PostContent.length && btn.attr("href") === $PostContent.data("url")) {
+            e.preventDefault();
+            btn.closest(".topic-articles").find(".chapter-articles.collapse").collapse('toggle');
+        }
+    });
     // $(".js-SelectTopic").click(function (e) {
     //     e.preventDefault();
     //     var btn = $(this);
@@ -159,24 +177,24 @@ $(function () {
         });
 
 
-    var postContent = $(".js-PostContent");
-    if (postContent.length) {
+
+    if ($PostContent.length) {
         // browsing article content
 
-        activeLevel = postContent.data("level");
-        activeTopic = postContent.data("topic");
+        activeLevel = $PostContent.data("level");
+        activeTopic = $PostContent.data("topic");
 
         updateListArticles();
 
-        $(".js-SelectLevel[data-level='" + postContent.data("level") + "']").addClass("active");
-        $(".js-SelectTopic[data-topic='" + postContent.data("topic") + "']").addClass("active");
+        $(".js-SelectLevel[data-level='" + $PostContent.data("level") + "']").addClass("active");
+        $(".js-SelectTopic[data-topic='" + $PostContent.data("topic") + "']").addClass("active");
 
-        $(".js-SelectTopic").each(function (_, linkTopic) {
+        $SelectTopic.each(function (_, linkTopic) {
             linkTopic = $(linkTopic);
             linkTopic.attr("href", linkTopic.data("url-" + activeLevel));
         });
 
-        var articleLink = articleNav.find("a[href='" + postContent.data("url") + "']");
+        var articleLink = articleNav.find("a[href='" + $PostContent.data("url") + "']");
 
         var menuCollapseOpen = false;
         // open list articles in chapter/topic
@@ -289,7 +307,7 @@ $(function () {
 
 
         // update level links
-        // bottomNav.find(".skill-levels .link-" + postContent.data("level")).addClass("active").attr("href", postContent.data("url"));
+        // bottomNav.find(".skill-levels .link-" + $PostContent.data("level")).addClass("active").attr("href", $PostContent.data("url"));
         var articleTitle;
 
         if (articleLink.hasClass("article-link")) {
@@ -297,9 +315,9 @@ $(function () {
             articleTitle = articleLink.text().trim();
 
             ["beginner", "advanced", "expert"].forEach(function (level) {
-                if (postContent.data("level") === level) {
-                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
-                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                if ($PostContent.data("level") === level) {
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", $PostContent.data("url")).removeClass("disabled");
+                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", $PostContent.data("url"));
                     return;
                 }
 
@@ -307,7 +325,7 @@ $(function () {
                     article = $(article);
                     var t = article.text().trim();
                     if (t === articleTitle) {
-                        bottomNav.find(".skill-levels .link-" + level).attr("href", article.attr("href")).removeClass("btn disabled");
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", article.attr("href")).removeClass("disabled");
                         $(".js-SelectLevel[data-level='" + level + "']").attr("href", article.attr("href"));
                     }
                 });
@@ -319,9 +337,9 @@ $(function () {
             articleTitle = articleLink.closest(".topic-articles").find(".chapter-link").text().trim();
 
             ["beginner", "advanced", "expert"].forEach(function (level) {
-                if (postContent.data("level") === level) {
-                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
-                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                if ($PostContent.data("level") === level) {
+                    bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", $PostContent.data("url")).removeClass("disabled");
+                    $(".js-SelectLevel[data-level='" + level + "']").attr("href", $PostContent.data("url"));
                     return;
                 }
 
@@ -330,7 +348,7 @@ $(function () {
                     var chapter = topic.find(".chapter-link");
                     var t = chapter.text().trim();
                     if (t === articleTitle) {
-                        bottomNav.find(".skill-levels .link-" + level).attr("href", chapter.attr("href")).removeClass("btn disabled");
+                        bottomNav.find(".skill-levels .link-" + level).attr("href", chapter.attr("href")).removeClass("disabled");
                         $(".js-SelectLevel[data-level='" + level + "']").attr("href", chapter.attr("href"));
                     }
                 });
@@ -342,13 +360,13 @@ $(function () {
             ["beginner", "advanced", "expert"].forEach(function (level) {
                 if (articleLink.data("url-" + level)) {
 
-                    if (postContent.data("level") === level) {
-                        bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", postContent.data("url")).removeClass("btn disabled");
-                        $(".js-SelectLevel[data-level='" + level + "']").attr("href", postContent.data("url"));
+                    if ($PostContent.data("level") === level) {
+                        bottomNav.find(".skill-levels .link-" + level).addClass("active").attr("href", $PostContent.data("url")).removeClass("disabled");
+                        $(".js-SelectLevel[data-level='" + level + "']").attr("href", $PostContent.data("url"));
                         return;
                     }
 
-                    bottomNav.find(".skill-levels .link-" + level).attr("href", articleLink.data("url-" + level)).removeClass("btn disabled");
+                    bottomNav.find(".skill-levels .link-" + level).attr("href", articleLink.data("url-" + level)).removeClass("disabled");
                     $(".js-SelectLevel[data-level='" + level + "']").attr("href", articleLink.data("url-" + level));
                 }
             });
@@ -361,8 +379,8 @@ $(function () {
     // home lading page
     if ($("#homepage").length) {
         // highlight all levels and all topics by default
-        $(".js-SelectLevel").addClass("active");
-        $(".js-SelectTopic").addClass("pre-active");
+        $SelectLevel.addClass("active");
+        $SelectTopic.addClass("pre-active");
 
         $(".js-Home-SelectLevel").click(function (e) {
             e.preventDefault();
@@ -372,6 +390,26 @@ $(function () {
             btn.addClass("active");
 
             $(".js-SelectLevel[data-level='" + btn.data("level") + "']").click();
+        });
+
+        // open nav on mobile
+        enquire.register("screen and (max-width: 991px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                $("#left-menu").addClass("open");
+                $("#mobile-left-menu-toggler").addClass("open");
+            });
+        });
+
+        // show button on desktop
+        enquire.register("screen and (min-width: 992px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                var btnLevel = $(this);
+
+                $(".js-Home-SelectTopic").each(function (_, topic) {
+                    topic = $(topic);
+                    topic.attr("href", topic.data("url-" + btnLevel.data("level")));
+                });
+            });
         });
     }
 

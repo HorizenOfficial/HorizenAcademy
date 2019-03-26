@@ -7,7 +7,14 @@ topic: privacy
 level: beginner
 ---
 
-This is the Beginner Level on online privacy and is best for users who are new to digital privacy and the technology that can enable you to control your digital footprint.
+<div class="row mb-3">
+    <div class="col-md-3">
+        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint"/>
+    </div>
+    <div class="col-md-9 lead">
+        This is the Beginner Level on online privacy and is best for users who are new to digital privacy and the technology that can enable you to control your digital footprint.
+    </div>
+</div>
 
 We talk about why privacy is important and why the ["I've got nothing to hide"]({{ site.baseurl }}{% post_url /privacy/beginner/2023-01-01-the-nothing-to-hide-argument %}) argument is fundamentally flawed followed by an explanation of [where and how your online privacy is compromised]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) on your phone and computer.
 

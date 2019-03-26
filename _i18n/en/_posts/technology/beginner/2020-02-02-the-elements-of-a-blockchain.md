@@ -6,6 +6,7 @@ permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner
 chapter: "How Does a Blockchain Work?"
+further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity, blockchain_technology_explained_introduction_meaning_and_applications]
 ---
 
 The last articles stated that on one hand, the blockchain is a data structure, a way to store information. On the other hand, it is a protocol to transfer value and the miners are the bookkeepers of a blockchain. We want to discuss the parties that play a part in the blockchain ecosystem in this article. Let's first talk about the term protocol again before we discuss that.
@@ -61,22 +62,3 @@ This process generates new coins and creates an incentive for people to create a
 
 In conclusion, miners and node operators are the two main entities in a blockchain. The nodes make up the infrastructure of the network. Miners are the bookkeepers that make the decisions regarding the order of events. They receive a reward for their efforts. The reward generates new coins. The next article is going to tackle the question of how [identity works in the context of the blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). It will cover the keys that we mentioned in this article and what they are for.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Three Elements to Understanding Blockchain & Its Greatest Opportunity"
-  summary="A different take on the elements of the blockchain. The author names openness, consensus and gamification as the three main components of blockchain technology."
-  author="Brad Arlen"
-  url="https://medium.com/coinmonks/three-elements-to-understanding-blockchain-its-greatest-opportunity-e9d89086692a"
-  image="https://cdn-images-1.medium.com/max/1200/1*3S5O0k-Ee65N-AmbbWw-Lg.png"
-%}
-
-{%
-  include further_reading.html
-  title="Blockchain Technology Explained: Introduction, Meaning, and Applications"
-  summary="The author explains the pieces that make blockchain work and gives a few examples of potential use cases for the technology."
-  author="Mayank Pratap"
-  url="https://hackernoon.com/blockchain-technology-explained-introduction-meaning-and-applications-edbd6759a2b2"
-  image="https://cdn-images-1.medium.com/max/1200/1*9wK0VOvs0fjJ_PjAvz-MoQ.jpeg"
-%}

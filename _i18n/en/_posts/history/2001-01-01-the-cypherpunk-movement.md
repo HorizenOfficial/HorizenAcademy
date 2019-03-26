@@ -5,6 +5,7 @@ title: "The Cypherpunk Movement"
 permalink: /history/the-cypherpunk-movement/
 topic: history
 chapter: "From Cypherpunks to Horizen"
+further_reads: [bitcoin_and_the_rise_of_the_cypherpunks, a_cypherpunk_manifesto]
 ---
 
 In our first article, we will go back in time to see where blockchain technology and cryptocurrencies came from. This leads us back to the cypherpunk movement starting in the 1970s.
@@ -50,19 +51,3 @@ _"The traditional banking model achieves a level of privacy by limiting access t
 
 Technology did not enable strong privacy prior to the 20th century, but neither did it enable affordable mass surveillance. We believe in the human right to privacy and work towards enabling anybody that wishes to claim his or her privacy to be able to do so. We see a cryptocurrency with selective privacy as a good step in the right direction of reclaiming our privacy.
 
-### Further Readding
-
-{% include further_reading.html 
-title="Bitcoin and the Rise of the Cypherpunks" 
-summary="This article is tracing the history of the Cypherpunks to understand the motivations behind the movement that spawned bitcoin." 
-author="Jameson Lopp" 
-url="https://www.coindesk.com/the-rise-of-the-cypherpunks" 
-image="https://static.coindesk.com/wp-content/uploads/2016/04/CYPHERPUNK-Final.jpg" %}
-
-
-{% include further_reading.html 
-title="A Cypherpunk's Manifesto" 
-summary="A Cypherpunk's Manifesto outlines the motivations and core values of the movement." 
-author="Eric Hughes" 
-url="https://www.activism.net/cypherpunk/manifesto.html" 
-image="" %}

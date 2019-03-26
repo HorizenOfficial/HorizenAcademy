@@ -69,6 +69,34 @@
         }
       }
     }
+    .home-topics {
+      margin-left: 3px;
+      margin-right: 3px;
+      margin-top: 1rem;
+      .topic {
+        border: 1px solid #0e9de5;
+        text-align: center;
+        margin-top: 4px;
+        position: relative;
+        padding: 12px 0;
+        .icon {
+          display: inline-block;
+          width: 60px;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          top: calc(50% - 20px);
+        }
+        img {
+          height: 40px;
+        }
+        .topic-name {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
 
@@ -203,3 +231,11 @@
   }
 }
 
+#page-privacy-advanced, #page-technology-advanced-what-is-a-blockchain {
+  .post-section .post-content h5 {
+    @include media-breakpoint-down(md) {
+      margin-left: 6.5%;
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -6,6 +6,7 @@ permalink: /privacy/beginner/strong-passwords/
 topic: privacy
 level: beginner
 chapter: "Best Practices"
+further_reads: [how_to_create_a_strong_password]
 ---
 
 Reusing same passwords on many websites and applications is the number one security bad practice. Even large and strong platforms are being hacked and their users' credentials are getting sold over black markets. There have been cases when the stolen data was available publicly too. Imagine if your credentials were in one of such databases - every account you used the same password for, is essentially hacked too.
@@ -31,14 +32,3 @@ Using password managers means you can also generate long, complex passwords and 
 
 Now you are armed with the basic knowledge needed to upgrade and strengthen your passwords.
 
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How to create a strong password"
-  summary="The author explains the most common ways passwords get hacked, examines the anatomy of strong passwords suggests methods to create them."
-  author="Charlotte Empey"
-  url="https://blog.avast.com/strong-password-ideas"
-  image="https://blog.avast.com/hs-fs/hubfs/Avast-blog-phishing-tax-season.jpg?width=1920&name=Avast-blog-phishing-tax-season.jpg"
-%}

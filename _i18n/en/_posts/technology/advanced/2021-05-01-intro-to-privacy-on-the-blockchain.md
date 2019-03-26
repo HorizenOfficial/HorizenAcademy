@@ -6,6 +6,7 @@ permalink: /technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced
 chapter: "Privacy"
+further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
 One of the great value propositions of blockchains is the transparency that such public ledgers offer. There are many cases though where it is desirable to conduct private transactions. In this article, we want to introduce you to four concepts that aim to increase the level of privacy for transactions on public blockchains. It is a common misconception that cryptocurrencies are private. Most of them are pseudo-anonymous, meaning that real-world identities are not connected to addresses by default, but can be connected through ongoing data analysis.
@@ -83,14 +84,3 @@ The idea of using Zero-Knowledge Proofs for cryptocurrency transactions is the f
 ### Summary
 
 There are many ways to reclaim your privacy on a public blockchain. The approaches like Change Addresses and Coin Mixers don't provide strong privacy, but they help make it harder to trace transactions to their origin and link real-world identities to addresses on the blockchain. Ring Signatures and Zero-Knowledge Proofs are more advanced concepts, that actually allow you to transact entirely private, even on fully open and public blockchains.
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How Zcoin's Privacy Technology Compares to the Competition"
-  summary="An extensive comparison of different privacy mechanisms on the blockchain used by different Cryptocurrencies"
-  author="Reuben Yap, Zcoin"
-  url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
-  image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
-%}

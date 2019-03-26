@@ -6,6 +6,7 @@ permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner
 chapter: "How Does a Blockchain Work?"
+further_reads: [the_impact_of_digital_identity, how_blockchain_can_solve_identity_management_problems]
 ---
 
 In our last article talking about the elements of a blockchain, we concluded that miners are the bookkeepers of a cryptocurrency. They keep track of how much funds there are and who owns them. We must introduce the concept of identity to have ownership. You want to be the sole owner of your funds and there must be a way to associate the funds with you. Let's talk about where cryptography enters the scene and what this has to do with your identity.
@@ -44,22 +45,3 @@ All of this would be cumbersome to do manually and require quite some skill. Luc
 
 Your key pair is your identity on the blockchain. Your public key is like your address and used to receive funds. Whereas your private key is like a password, it lets you (or anybody that gets their hands on it) spend your funds. Always protect your private keys and never hand them out to other parties! If anybody asks you for your private key it is most certainly a scam.
 
-
-
-{%
-  include further_reading.html
-  title="The Impact of Digital Identity"
-  summary="An article on how blockchain can help enforce Article 8 of the UN's Convention on the Rights of the Child - the human right to Identity."
-  author="Justine Humenansky"
-  url="https://blockchainatberkeley.blog/the-impact-of-digital-identity-9eed5b0c3016"
-  image="https://cdn-images-1.medium.com/max/1200/0*7MohwFuFldcCWsEj"
-%}
-
-{%
-  include further_reading.html
-  title="How Blockchain Can Solve Identity Management Problems"
-  summary="An article outlining how blockchain may be the way forward for developing an identity management system that gives full control to users."
-  author="Rohan Pinto"
-  url="https://www.forbes.com/sites/forbestechcouncil/2018/07/27/how-blockchain-can-solve-identity-management-problems/#30e0dfe613f5"
-  image="https://thumbor.forbes.com/thumbor/600x315/https%3A%2F%2Fblogs-images.forbes.com%2Fforbestechcouncil%2Ffiles%2F2018%2F07%2F960x0-69-500x500.jpg"
-%}

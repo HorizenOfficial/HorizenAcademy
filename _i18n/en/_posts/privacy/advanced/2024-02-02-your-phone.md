@@ -6,6 +6,7 @@ permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced
 chapter: "Where Your Privacy is Compromised?"
+further_reads: [your_phone_number_is_all_a_hacker_needs_to_read_texts_listen_to_calls_and_track_you, do_not_let_criminals_steal_your_cellphone_number_with_this_scam]
 ---
 
 In our beginner level article - [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) we touched how privacy is compromised on two most used devices today - a phone and a computer. In this article we will focus on a phone, the most used one of two.
@@ -32,25 +33,4 @@ We advise you not to use text messages as a 2FA method if possible. There is mor
 The first and most simple method is social engineering. There have been a number of incidents where an attacker managed to convince an employee of a mobile communications company that "his" phone got lost or his SIM card broke and that he needs a replacement immediately. Coincidentally the victim also just moved, so the address is changed and a second SIM card is shipped to the attacker. Although this exploit is unlikely to work first try, by repeatedly calling the service hotline of a phone company eventually the attacker might find an employee willing to do just this. 
 
 Another method the attacker might use is to open an account with a different service provider an request your number to be ported. Most providers offer you to keep your number if you switch from let's say Verizon to AT&T. This opens up this simple but effective attack vector. We could go on with the list of possible exploits but the point is: your number is a rather easy target. You can read more about 2FA in our best practices section. 
-
-
-### Further Reading:
-
-{%
-  include further_reading.html
-  title="Your phone number is all a hacker needs to read texts, listen to calls and track you"
-  summary="Weaknesses within mobile phone network interconnection system allows criminals or governments to remotely snoop on anyone with a phone"
-  author="Samuel Gibbs"
-  url="https://www.theguardian.com/technology/2016/apr/18/phone-number-hacker-read-texts-listen-calls-track-you"
-  image="https://static.wixstatic.com/media/17b7f4_bf0094f297124b179578a2dec09d85d6~mv2.jpg"
-%}
-
-{%
-  include further_reading.html
-  title="Do Not Let Criminals Steal Your Cellphone Number With This Scam"
-  summary="Criminals want to steal your phone number. If they can get it, they can set up a new cellphone with that number - and receive all of your calls and text messages. They can send messages to your friends and colleagues tricking them into doing all sorts of bad things. And, if you use multi-factor authentication for social media sites or online banking - they can receive those messages as well, potentially, in some cases, giving them access to your social media accounts and bank accounts."
-  author="Joseph Steinberg"
-  url="https://www.inc.com/joseph-steinberg/do-not-let-criminals-steal-your-phone-without-having-to-actually-take-the-device.html"
-  image="https://www.incimages.com/uploaded_files/image/970x450/getty_522695431_201336.jpg"
-%}
 

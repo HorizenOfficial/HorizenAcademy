@@ -6,6 +6,7 @@ permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
 chapter: "What is a Blockchain?"
+further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 
 We have looked at blockchain in two different ways. First as a data structure and second as a protocol to transfer value. For the last article of this chapter about what a blockchain is we want to talk about smart contracts. Besides AI, IoT, and blockchain, smart contracts have been one of the hottest topics over the last two years in the tech world. They are software on the blockchain.
@@ -76,19 +77,3 @@ Smart Contracts can ensure objective execution on the basis of mutually agreed u
 
 This was the last article in the chapter on what a blockchain is and what it can do. In the next chapter, we will take a look at how blockchains work.
 
-### Further Reading
-
-{% include further_reading.html 
-title="The Oracle Problem" 
-summary="An article about the challenge of submitting truthful real-world data to blockchains." 
-author="Delphi" 
-url="https://medium.com/@DelphiSystems/the-oracle-problem-856ccbdbd14f" 
-image="https://cdn-images-1.medium.com/max/800/1*YrDfK0COoy1JnkJXyj68Vg.png" %}
-
-
-{% include further_reading.html 
-title="The Truth about Smart Contracts" 
-summary='Jimmy Song is a well-known technical writer in the blockchain industry and explains the challenges of implementing "trustless" Smart Contracts.'
-author="Jimmy Song" 
-url="https://medium.com/@jimmysong/the-truth-about-smart-contracts-ae825271811f" 
-image="https://cdn-images-1.medium.com/max/800/0*3ZFzH_sf5kXtbsxC.jpg" %}

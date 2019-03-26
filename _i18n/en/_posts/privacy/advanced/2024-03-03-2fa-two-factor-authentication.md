@@ -6,6 +6,7 @@ permalink: /privacy/advanced/2fa-two-factor-authentication/
 topic: privacy
 level: advanced
 chapter: "Best Practices"
+further_reads: [how_to_set_up_2fa_using_google_authenticator, simplify_and_secure_your_online_logins_with_a_yubikey]
 ---
 
 Two-factor Authentication or in short, 2FA is a way to let users access a service using a combination of two authentication methods. This may be an additional PIN code or a password, a one-time password (OTP), a fingerprint or other biometric data or even an additional security chip or token inside your device.
@@ -40,25 +41,4 @@ Most methods offer a way to restore your 2FA codes, in case you accidentally del
 ### Summary
 
 Enabling 2FA with all accounts that support it substantially improves security. Try not to use text messages as a 2FA method, because this is a vulnerable method with many attack vectors. Using a 2FA app or even hardware device is a better choice. Don't forget to create backups for the method you decided to use.
-
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How To Set up 2FA Using Google Authenticator"
-  summary="This guide explains what the Google Authenticator App is, how you set it up and what you need to do in case your device breaks."
-  author="Harsh Agrawal"
-  url="https://coinsutra.com/google-authenticator-setup-guide/"
-  image="https://coinsutra.com/wp-content/uploads/2018/01/Set-up-2FA-Using-Google-Authenticator.jpg"
-%}
-
-{%
-  include further_reading.html
-  title="Simplify and Secure Your Online Logins with a YubiKey"
-  summary="In this article, you will learn what a YubiKey is, which one you should get and how you get started using it."
-  author="Josie Colt"
-  url="https://www.wired.com/story/how-to-use-a-yubikey/"
-  image="https://media.wired.com/photos/5ad53457f962fc0661ab9847/master/w_582,c_limit/yubikey.jpg"
-%}
 
