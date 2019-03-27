@@ -5,6 +5,7 @@ title: "Horizen VPN"
 permalink: /horizen/advanced/horizen-vpn/
 topic: horizen
 level: advanced
+published: false
 ---
 
 Usually, you are at risk of having the data you are sending and receiving intercepted when you are using an unsecured public network like with a Wifi hotspot in a cafe or at an airport. By using a VPN you can rest assured that the entire communication between your computer and the endpoint of your connection is protected. All the data you are transmitting is encrypted on your device and only decrypted when it reaches its desired endpoint

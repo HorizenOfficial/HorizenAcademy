@@ -24,3 +24,4 @@ We look at the two main engineering challenges we are combating. Both approaches
 We also show you the first application on our blockchain platform. 
 
  - [ZenChat]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-04-zenchat %}) is a messenger that allows state of the art encryption for your private conversations. ZenChat is live and integrated into our Flagship App Sphere by Horizen.
+ {% comment %}- [Horizen VPN]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-05-horizen-vpn %}) is our second application. It will make use of our node network, the largest node network in the industry, to offer a decentralized VPN service. Node Operators will have the opportunity to offer their nodes as an endpoint for the VPN service and earn money for providing this service. This application is not live yet, but we are working on it already.{% endcomment %}
