@@ -9,7 +9,7 @@ level: beginner
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint"/>
+        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         This is the Beginner Level on online privacy and is best for users who are new to digital privacy and the technology that can enable you to control your digital footprint.

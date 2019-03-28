@@ -9,7 +9,7 @@ level: advanced
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint"/>
+        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         We designed the Horizen Academy to be the go-to place for education on online privacy, blockchain, and cryptocurrency. It doesn’t matter why you want to learn about these topics. No matter your comfort level or interest: this project is for you.

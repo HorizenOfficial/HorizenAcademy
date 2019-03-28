@@ -512,6 +512,12 @@ body::after{
         }
       }
     }
+    .lead-icon {
+      @media (max-width: 767px) {
+        width: 200px;
+        margin-bottom: 1rem;
+      }
+    }
     img {
       display: block;
       margin-left: auto;
