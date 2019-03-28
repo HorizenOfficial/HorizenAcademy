@@ -97,4 +97,10 @@
       gtag('config', 'UA-104158206-6');
   </script>
 
+  {% if page.css %}
+    <style>
+      {{ page.css }}
+    </style>
+  {% endif %}
+
 </head>

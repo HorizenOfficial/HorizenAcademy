@@ -5,11 +5,46 @@ title: "From ZenCash to Horizen"
 permalink: /history/from-zencash-to-horizen/
 topic: history
 chapter: "From Cypherpunks to Horizen"
+css: |
+  .rocket-image {
+    position: relative;
+  }
+  .rocket-image img {
+    position: absolute;
+    z-index: -1;
+    right: -80px;
+    bottom: -90px;
+    height: 300px;
+  }
+  @media (max-width: 991px) {
+    .rocket-image img {
+      height: 280px;
+    }
+  }
+  .post-section .post-content p {
+    margin-bottom: 1.5rem;
+  }
+  .learn-more {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    padding: 1rem 12px 1rem 100px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .learn-more img {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    width: 80px;
+  }
 ---
 
-![History Horizen logos](/assets/post_files/history/from-zencash-to-horizen/History-Logos.jpg)
-
 ### The Birth of ZenCash
+
+<div class="rocket-image d-none d-md-block">
+    <img src="/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
+</div>
 
 It started almost by accident. Rob Viglione, the co-founder of Horizen, was finishing his Ph.D. at the University of South Carolina, teaching a blockchain course, and working at ZClassic as a part-time hobby. ZClassic had a really informal team, but Rob was passionate about this project. He gradually increased his commitment and activity in the community and took on a leadership role as the project developed. Rob met Rolf Versluis while working collaboratively on ZClassic. They both loved the ZClassic project, but they had a vision for what the future of privacy, governance, and economics could look like. They learned of one another's shared visions through working together on the project. So they decided to meet one day. Rob invited Rolf, who lived in Georgia, to give a lecture to his university students and to sit down to discuss the prospects of their collaboration.
 
@@ -17,7 +52,9 @@ ZClassic was a community project. While Rob and Rolf had good ideas, they did no
 
 Rob and Rolf forked ZClassic and co-founded ZenCash. They were finally able to begin pursuing their goals. They began implementing their ideas for governance, economics, treasury, and privacy on a network level. On May 19, 2017, at the block height of 110000 of the ZClassic blockchain, they took the snapshot needed to enter the final phase of their launch. ZenCash blockchain was born on May 30, 2017, 23:46:46 UTC.
 
-_Note: On the more technical side, this is the block #110000 that Rob and Rolf forked from. ZenCash began their new blockchain with a treasury model on block #110001, Note the 1.0625 ZEN emission in the Coinbase transaction, which is the part of new coin emission that went to the treasury._
+> On the more technical side, this is the block #110000 that Rob and Rolf forked from. ZenCash began their new blockchain with a treasury model on block #110001, Note the 1.0625 ZEN emission in the Coinbase transaction, which is the part of new coin emission that went to the treasury.
+
+![History Horizen logos](/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
 
 ### From a Part-time Hobby to a Full-Time Job
 
@@ -43,7 +80,18 @@ As the economic model was implemented into the protocol, the team was able to be
 
 We are moving in the right direction as a project, but we are not done. We have dedicated ourselves to continuously identifying stakeholders who deserve incentive. For example, the contributors to the ZenDAO system will receive an incentive for participating in the voting process.
 
-_Note: Super Nodes will host Horizen's upcoming sidechains, making them the first fully decentralized sidechains in the industry._
+<blockquote>
+    <table class="table table-borderless">
+    <tbody>
+        <tr>
+            <td style="width: 80px;" class="p-0"><img src="/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
+            <td class="pt-0 pb-0 pr-0 pl-3">
+                Super Nodes will host Horizen's upcoming sidechains, making them the first fully decentralized sidechains in the industry.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</blockquote>
 
 ### Cooperation with IOHK, Code Particle, InfoPulse
 
@@ -57,6 +105,18 @@ We have met many of our partners through Charles. He introduced us to InfoPulse,
 
 Code Particle is another noteworthy partner who works on development for the flagship app, Sphere by Horizen. They also provide core developer support for the Horizen zend - our core protocol software. Pier Stabilini (A lead engineer for Code Particle) works closely with our team and has contributed considerably to the project's success.
 
+<div class="row mb-4 align-items-center">
+    <div class="col-md-4 mt-4">
+        <img src="/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
+    </div>
+    <div class="col-md-4 mt-4">
+        <img src="/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
+    </div>
+    <div class="col-md-4 mt-4">
+        <img src="/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
+    </div>
+</div>
+
 ### The 51% Attack and a Solution to It
 
 Although the 51% attack was a great shock for the Horizen team and community it did not come out of the blue. The whole industry was aware of a blog that stated the cost of 51% attacks against many projects. The Horizen team began disaster planning and brainstorming shortly after learning the cost to attack was low. We set up a tripwire system as part of the plan that would alert us if it detected a significant net-hash increase, and we put our tech team on a standby monitoring the network.
@@ -67,7 +127,12 @@ The Horizen team knew about it immediately thanks to the tripwire system. The te
 
 We determined the best solution was to enhance the longest chain rule (Satoshi Consensus) and introduce a penalty for delayed block reporting. This makes it exponentially more difficult and costly for those looking to perform a 51% attack. You can read our "Solution to 51% Attacks" whitepaper [here](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf).
 
-Learn more about the attack and our detailed timeline in our blog post.
+<div class="learn-more">
+    <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
+    For more information, read our blog post
+    “<a href="#" class="font-weight-bold" target="_blank">ZenCash Statement On Double Spent Attack</a>”
+    and “<a href="#" class="font-weight-bold" target="_blank">51% Attack Prevention: A Solution to Modify Bitcoin’s Consensus</a>” whitepaper.
+</div>
 
 ### Brand Expansion - from ZenCash to Horizen
 
@@ -75,8 +140,32 @@ As our project grew bigger and more popular we were getting confused with ZCash 
 
 The last push we needed to kick start our brand expansion came in the form of a letter from a large international bank. In the letter, they expressed that the ZenCash logo was similar to their sister organization one, and they requested we change ours. It didn't make sense to fight over a branding that didn't fit us anymore. So, we created a special task force and partnered with BrandTuitive. Our teams combined and spent hours upon hours working on our brand expansion. The result was (and still is) phenomenal. The name Horizen aligned perfectly with the mission and goals of our project. The team and our community loved that we were able to keep ZEN as part of our name. Since ZEN remained a part of us we were also able to maintain our cryptocurrency's ticker symbol, ZEN.
 
-You can read more about our brand expansion process on our blog [here](https://blog.zencash.com/zencash-brand-expansion/) and [here](https://blog.zencash.com/hello-horizen/).
+<img src="/assets/post_files/history/from-zencash-to-horizen/HZ-logos.svg" alt="Horizen logos" style="width: 500px; margin-top: 2rem; margin-bottom: 5rem;">
 
-### Horizen to the Future
+<div class="learn-more">
+    <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
+    For more information, read our blog posts
+    “<a href="https://blog.zencash.com/zencash-brand-expansion/" class="font-weight-bold" target="_blank">New Brand Reveal</a>”
+    and “<a href="https://blog.zencash.com/hello-horizen/" class="font-weight-bold" target="_blank">Hello Horizen!</a>”.
+</div>
 
-This brings us to the present. We have had our ups and downs in these last two years. We have not only survived. We have grown stronger and anti-fragile and we dedicate ourselves to growing every day.
+
+<table class="table table-borderless">
+<tbody>
+    <tr>
+        <td style="width: 100px;" class="pl-0 pr-0"><img src="/assets/img/horizen-icon.svg" alt="Horizen"></td>
+        <td class="pl-3 pl-lg-4">
+            <h3 class="mt-0">Horizen to the Future</h3>
+            <p>
+                This brings us to the present. We have had our ups and downs in these last two years. We have not only survived. We have grown stronger and anti-fragile and we dedicate ourselves to growing every day.
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://blog.horizen.global/" target="_blank">LATEST NEWS</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/roadmap/" target="_blank">HORIZEN ROADMAP</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/team/" target="_blank">HORIZEN TEAM TODAY</a></div>
+</div>

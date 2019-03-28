@@ -30,6 +30,12 @@ a {
   color: #0e9de5;
 }
 
+blockquote {
+  border-left: 4px solid #a3e5ff;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
 .table-layout-fixed {
   table-layout: fixed;
 }
