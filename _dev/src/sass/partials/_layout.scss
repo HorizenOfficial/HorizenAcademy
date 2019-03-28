@@ -514,7 +514,8 @@ body::after{
     }
     img {
       display: block;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
       &[src*="_M."] {
         @include media-breakpoint-up(lg) {
           display: none;
