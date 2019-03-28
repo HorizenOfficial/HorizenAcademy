@@ -9,7 +9,7 @@ level: expert
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/horizen-blueprint.svg" alt="Horizen blueprint"/>
+        <img src="/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint"/>
     </div>
     <div class="col-md-9 lead">
         This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
