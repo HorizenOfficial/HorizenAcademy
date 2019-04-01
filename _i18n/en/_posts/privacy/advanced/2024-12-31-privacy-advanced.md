@@ -24,7 +24,7 @@ This is the Advanced Level and is best for users who have a general understandin
         <img src="/assets/post_files/privacy/advanced/intro/why2.svg" alt="Why Privacy" />
     </div>
     <div class="col-md-9">
-        <h5>Why Privacy?</h5>
+        <h5 class="intro-article-title">Why Privacy?</h5>
         <p class="mb-1">
             First, we will examine the "I've got nothing to hide" argument, that is frequently used when people say that a person should not worry about government surveillance if he/she has "nothing to hide."
         </p>
@@ -39,7 +39,7 @@ This is the Advanced Level and is best for users who have a general understandin
         <img src="/assets/post_files/privacy/advanced/intro/where2.svg" alt="Where Your Privacy is Compromised" />
     </div>
     <div class="col-md-9">
-        <h5>Where Your Privacy is Compromised?</h5>
+        <h5 class="intro-article-title">Where Your Privacy is Compromised?</h5>
         <p class="mb-1">
             Next, we will look at where and how your privacy is compromised on the different devices and services you are using. Most people use their phone and computer for many hours a day. The amount of data one person produces during just one day is immense. Through sophisticated data analysis, your digital behavior allows drawing powerful conclusions about your life.
         </p>
@@ -54,7 +54,7 @@ This is the Advanced Level and is best for users who have a general understandin
         <img src="/assets/post_files/privacy/advanced/intro/tools2.svg" alt="Best Practices" />
     </div>
     <div class="col-md-9">
-        <h5>Best Practices</h5>
+        <h5 class="intro-article-title">Best Practices</h5>
         <p class="mb-1">
             The third chapter looks at two best practices, that everybody should use: strong passwords and 2-Factor-Authentication or 2FA. They make it much harder for an attacker to get access to your accounts.
         </p>
@@ -69,7 +69,7 @@ This is the Advanced Level and is best for users who have a general understandin
         <img src="/assets/post_files/privacy/advanced/intro/best2.svg" alt="Tools to Protect your Privacy - Advanced" />
     </div>
     <div class="col-md-9">
-        <h5>Tools to Protect your Privacy - Advanced</h5>
+        <h5 class="intro-article-title">Tools to Protect your Privacy - Advanced</h5>
         <p class="mb-1">
             Lastly, we will introduce you to some advanced tools to protect your online privacy.
         </p>
