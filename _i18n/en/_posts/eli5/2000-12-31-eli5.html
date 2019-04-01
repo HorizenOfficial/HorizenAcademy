@@ -4,6 +4,28 @@ type: intro
 title: "ELI5"
 permalink: /eli5/
 topic: eli5
+css: |
+  .site-content-wrapper {
+    background: url(/assets/img/bkg/bg-eli5-p1.jpg) no-repeat top left;
+  }
+  .site-content-wrapper > .container-fluid {
+    background: url(/assets/img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+  }
+  @media (max-width: 991px) {
+    .site-content-wrapper > .container-fluid {
+      background-size: 55% auto;
+    }
+  }
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+  .list-eli5-articles a {
+    color: #041742;
+    font-weight: bold;
+  }
 ---
 
 <div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">

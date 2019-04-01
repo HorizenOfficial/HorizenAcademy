@@ -543,6 +543,12 @@ body::after{
     h5 {
       font-size: 1.15rem;
       font-weight: bold;
+      &.intro-article-title {
+        @include media-breakpoint-down(sm) {
+          margin-left: 6.5%;
+          margin-top: 0.5rem;
+        }
+      }
     }
     ul:not(.nav) {
       @include list-blue-bullet();

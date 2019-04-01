@@ -52,8 +52,6 @@
     ]
   }
   </script>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="32x32" href="{{ "/assets/fav/apple-touch-icon-32x32.png" | prepend: site.baseurl_root }}" />
@@ -96,6 +94,15 @@
 
       gtag('config', 'UA-104158206-6');
   </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}">
+
+  {% if page.css_files %}
+    {% for css_file in page.css_files %}
+      <link rel="stylesheet" type="text/css" href="{{ "/assets/css/" | append: css_file | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}">
+    {% endfor %}
+  {% endif %}
 
   {% if page.css %}
     <style>

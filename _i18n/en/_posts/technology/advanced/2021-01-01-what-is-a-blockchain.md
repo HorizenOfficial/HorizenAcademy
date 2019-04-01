@@ -15,7 +15,7 @@ We would like to look at blockchain from three different perspectives in the fir
         <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/DS2.svg" alt="Blockchain Data" />
     </div>
     <div class="col-md-9">
-        <h5>Blockchain as a Data Structure</h5>
+        <h5 class="intro-article-title">Blockchain as a Data Structure</h5>
         <p class="mb-1">
             First, from a computer scientists perspective looking at blockchain as a data structure.
         </p>
@@ -31,7 +31,7 @@ We would like to look at blockchain from three different perspectives in the fir
         <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
     </div>
     <div class="col-md-9">
-        <h5>A Protocol to Transfer Value</h5>
+        <h5 class="intro-article-title">A Protocol to Transfer Value</h5>
         <p class="mb-1">
             Secondly, from a more philosophical perspective; reviewing the implications of blockchain technology used for value transfer.
         </p>
@@ -47,7 +47,7 @@ We would like to look at blockchain from three different perspectives in the fir
         <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
     </div>
     <div class="col-md-9">
-        <h5>Guaranteed Execution with Smart Contracts</h5>
+        <h5 class="intro-article-title">Guaranteed Execution with Smart Contracts</h5>
         <p class="mb-1">
             Lastly, we discuss smart contracts, a technology that blockchain technology enables. You can summarize Smart contracts as digital contracts with guaranteed execution. You might have heard the term programmable money in the context of cryptocurrencies before. Smart contracts are the technology that enables this programmability.
         </p>
