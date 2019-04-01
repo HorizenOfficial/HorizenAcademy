@@ -16,12 +16,94 @@ level: beginner
     </div>
 </div>
 
-This is the Beginner Level which gives you a high-level overview of blockchain technology.
 
-We will bring you up to speed on the basics that make blockchains work. If you want to continue learning you should be ready for our advanced content at the end of this level.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/what_is_a_blockchain.svg" alt="What is a Blockchain" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">What is a Blockchain?</h5>
+        <p class="mb-1">
+            In the first chapter of this section, we explain to you what a blockchain is and what it can do.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
 
-After finishing this level, you should be able to explain to a friend what a blockchain is and what its main purpose is. You should also feel comfortable using a cryptocurrency after reading through our beginner section. 
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/how_does_a_blockchain_work.svg" alt="How Does a Blockchain Work" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">How Does a Blockchain Work?</h5>
+        <p class="mb-1">
+            Next, we will bring you up to speed on the basics that make blockchains work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
 
-If you find the content too trivial move up one level and read about the same concepts in more detail.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/wallets.svg" alt="Wallets" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Wallets</h5>
+        <p class="mb-1">
+            In order to receive and send cryptocurrencies you use so called cryptocurreny wallets. In the third chapter we will introduce you to how such wallets work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
 
-If you are interested in a particular topic you can read about it through all levels. If you want to get a general overview, read through the entire Beginner section before moving on. We designed each article to be read individually or in the context of the entire level.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/transactions.svg" alt="Transactions" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Transactions</h5>
+        <p class="mb-1">
+            After we have talked about wallets, the interfaces you use to create transactions, we will take a closer look at what transactions are and how they work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-04-01-transactions %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/privacy.svg" alt="Intro to Privacy on the Blockchain" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Intro to Privacy on the Blockchain</h5>
+        <p class="mb-1">
+            It is a common misconception that cryptocurrencies are anonymous. While this is not generally the case, you have the option to create truly anonymous transactions. This chapter is dedicated to privacy on the blockchain.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-05-01-privacy-on-the-blockchain %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/beginner/intro/summary.svg" alt="Summary Beginner" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Summary Beginner</h5>
+        <p class="mb-1">
+            We end the Beginner Level of the Technology section with a summary of all the previous chapters.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-06-01-summary-beginner-level %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
