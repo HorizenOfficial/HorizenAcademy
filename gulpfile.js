@@ -102,6 +102,8 @@ gulp.task('concat', function() {
 
         paths.bower + 'jquery.nicescroll/dist/jquery.nicescroll.min.js',
 
+        paths.bower + 'algoliasearch/dist/algoliasearchLite.min.js',
+
         paths.src + 'js/vendor/headroom.min.js',
         paths.src + 'js/vendor/jQuery.headroom.min.js',
 

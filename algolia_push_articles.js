@@ -59,11 +59,24 @@ FILE_LIST.forEach(function (f) {
         content = content.substr(0, MAX_LENGTH);
     }
 
+    var topic = null, level = null;
+    if ($(".js-PostContent").length) {
+        topic = $(".js-PostContent").data("topic");
+        level = $(".js-PostContent").data("level");
+    }
+
+    if (topic === "technology" && level === "expert") {
+        // TODO: temporary ignore Technology Expert
+        return;
+    }
+
     ALGOLIA_OBJECTS.push({
         objectID: f.id,
         url: f.url,
         title: $("title").text(),
-        content: content
+        content: content,
+        topic: topic,
+        level: level
     });
 });
 

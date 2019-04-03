@@ -29,6 +29,9 @@ css: |
 ---
 
 <div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
     <div class="row align-items-center">
         <div class="col-md-4">
             <h2 class="post-title text-uppercase">{{ page.title }}</h2>
