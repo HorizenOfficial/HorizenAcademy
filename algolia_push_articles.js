@@ -70,6 +70,11 @@ FILE_LIST.forEach(function (f) {
         return;
     }
 
+    if (topic === "privacy" && level === "expert") {
+        // TODO: temporary ignore Privacy Expert
+        return;
+    }
+
     ALGOLIA_OBJECTS.push({
         objectID: f.id,
         url: f.url,
