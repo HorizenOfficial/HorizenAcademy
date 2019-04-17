@@ -12,6 +12,33 @@ The amount of time people spend using their computers and phones is incredible! 
 
 Much of this data is rather sensitive. Most people wouldn't want to give a stranger access to their smartphone with private conversations, pictures, and contacts. Yet, few people take measures against sharing all this sensitive data with tech giants like Google, Apple or Facebook. Not only do those tech companies collect every piece of information on you they can get their hands on, but so do governments around the world, some more, some less.
 
-In this chapter, we want to show you where exactly your digital privacy is compromised the most: on [your phone]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}) and on [your computer]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}).
 
-You can improve your privacy substantially simply by adjusting some of the basic settings. Adjusting your privacy settings combined with best practices to protect your accounts and some tools to enhance your privacy you are on your way to owning your digital footprint.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/phone.svg" alt="Your Phone" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Your Phone</h5>
+        <p class="mb-1">
+            This article shows you where your phone is leaking data and what you can do to prevent that.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/computer.svg" alt="Your Computer" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Your Computer</h5>
+        <p class="mb-1">
+            The second device most people use on a daily basis is their computer. Here we look at steps you can take to protect it.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}">Read Article</a>
+        </p>
+    </div>
+</div>

@@ -16,12 +16,63 @@ level: beginner
     </div>
 </div>
 
-We look at the two main engineering challenges we are combating. Both approaches aim to expand the capacities of our blockchain. Most blockchains can only handle a handful of transactions per second today. There are many approaches to make blockchains scale. We review our solutions to these issues.
 
- - [Block-DAG]({{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}) structure
- - [Sidechain]({{ site.baseurl }}{% post_url /horizen/beginner/2026-01-03-sidechains %}) construction.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/horizen/beginner/intro/dao.svg" alt="DAO - Decentralized Autonomous Organization" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">DAO - Decentralized Autonomous Organization</h5>
+        <p class="mb-1">
+            We want to transition our foundation to a DAO over time, a Decentralized Autonomous Organization. This article shows you what this means.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-We also show you the first application on our blockchain platform. 
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/horizen/beginner/intro/sidechains.svg" alt="Sidechains" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Sidechains</h5>
+        <p class="mb-1">
+            Sidechains are a promising approach to improve blockchains. Here we show you what sidechains are and how we plan to use them.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-03-sidechains %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
- - [ZenChat]({{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}) is a messenger that allows state of the art encryption for your private conversations. ZenChat is live and integrated into our Flagship App Sphere by Horizen.
- {% comment %}- [Horizen VPN]({{ site.baseurl }}{% post_url /horizen/beginner/2026-01-05-horizen-vpn %}) is our second application. It will make use of our node network, the largest node network in the industry, to offer a decentralized VPN service. Node Operators will have the opportunity to offer their nodes as an endpoint for the VPN service and earn money for providing this service. This application is not live yet, but we are working on it already.{% endcomment %}
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/horizen/beginner/intro/dag.svg" alt="Block DAG" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Block DAG</h5>
+        <p class="mb-1">
+            Horizen is working on a Block-DAG protocol in cooperation with IOHK. This article explains what a DAG is and why it is interesting to us.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/horizen/beginner/intro/zenchat.svg" alt="ZenChat" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">ZenChat</h5>
+        <p class="mb-1">
+            ZenChat is the first application aside from our cryptocurrency, ZEN, that is running on top of the Horizen Blockchain.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}">Read Article</a>
+        </p>
+    </div>
+</div>
