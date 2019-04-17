@@ -25,7 +25,7 @@ Cryptocurrency [wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020
 
 ### Summary
 
-The internet (with underlying TCP/IP protocol) enables you to transfer information and cryptocurrencies. This is very similar to the postal system which enables you to send physical goods. Blockchain technology provides a protocol to transfer value. We will discuss what a transaction looks like and the data needed to complete a transaction in the [article about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
+We can consider the Mail to be a "protocol" to transfer physical goods, while the internet with its underlying TCP/IP protocol enables you to transfer information. Blockchain technology and cryptocurrencies provide a protocol to transfer value from one person to another, without any intermediaries. We will discuss what an actual transaction looks like and the data needed to complete a transaction in a dedicated [article about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
 
-Let's have a look at [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
+Let's first have a look at [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
 
