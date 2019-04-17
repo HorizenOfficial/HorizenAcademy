@@ -11,7 +11,7 @@ further_reads: [consensus_for_kids]
     <tr>
         <td class="icon"><img src="/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
         <td>
-            The [blockchain]({{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}) records all the transfers of money. If you have only 1 ZEN and create two transactions at the same time spending the same coin twice, the network needs to agree on which of the two transactions was first and therefore is the valid one.
+            The <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">blockchain</a> records all the transfers of money. If you have only 1 ZEN and create two transactions at the same time spending the same coin twice, the network needs to agree on which of the two transactions was first and therefore is the valid one.
         </td>
     </tr>
 </table> 
