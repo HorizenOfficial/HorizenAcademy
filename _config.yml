@@ -31,6 +31,10 @@ links:
   youtube: https://www.youtube.com/channel/UCQ0v_lUnZHIKUQUXJzfgqOg
   store: https://store.horizen.global/
   support: https://support.horizen.global
+algolia:
+  application_id: LAIP286P46
+  search_only_api_key: 5ab28de7858bf585159b2d4f8272d060
+  index_name: horizen_academy
 future: true
 permalink: pretty
 excerpt_separator:

@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{ page.level | default: 'none' }}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{ page.level | default: '' }}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
     <h2 class="post-title">{{ page.title }}</h2>
 
     <div class="post-content">
