@@ -10,14 +10,48 @@ chapter: "Transactions"
 
 You should have a pretty good understanding of blockchain if you have read through our first chapters in the advanced section and made it this far. After we have covered the ideas and value propositions of blockchain in the first chapter we looked at the concepts that make blockchain work. In this chapter, we will look at a small subunit of the blockchain, a tiny piece in the puzzle. The blockchain is made of many blocks which in turn are containers for transactions. 
 
-There are different ways to keep track of ownership. Most blockchains use the [UTXO (Unspent Transaction Output) Model]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}) to track a user's funds. It is similar to how cash works. If you receive money in a transaction you can think of receiving a bill with any given value. If you use this cryptocurrency "bill" to pay for something worth less than its value, you receive change to account for the difference in nominal value. Not too unfamiliar after all.
 
-![wallet balance Int](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_D.jpg)
-![wallet balance Int](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="The UTXO Model" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">The UTXO Model</h5>
+        <p class="mb-1">
+            Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-We have introduced the [block explorer]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}) in our Beginner Level, but we want to take a more in-depth look at the tool that lets you access the information on a blockchain.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="Block Explorer Continued" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Block Explorer Continued</h5>
+        <p class="mb-1">
+            A block explorer is a tool that lets you browse the data on a blockchain. Here we take a look at what kind of information you will find.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-For the last article of this chapter, we want to show you a special type of transaction, an [atomic swap]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}). It is a more sophisticated type of transaction that allows users to exchange different kinds of cryptocurrencies peer-to-peer. There is no third party involved and no trust required. Either both of them get what they agreed to beforehand, or nothing happens at all. Atomic swaps hold the promise of making many different blockchains interoperable.
-
-![atomic swap](/assets/post_files/technology/advanced/transactions/atomic_swap_D.jpg)
-![atomic swap](/assets/post_files/technology/advanced/transactions/atomic_swap_M.jpg)
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Atomic Swaps" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Atomic Swaps</h5>
+        <p class="mb-1">
+            Lastly, we want to show you a special type of transaction. An Atomic Swap lets you exchange two different cryptocurrencies without using an exchange.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Read Article</a>
+        </p>
+    </div>
+</div>

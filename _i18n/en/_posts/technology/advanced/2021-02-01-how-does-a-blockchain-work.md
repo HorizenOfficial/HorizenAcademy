@@ -10,19 +10,93 @@ chapter: "How Does a Blockchain Work?"
 
 In this chapter of our Advanced Level about blockchain technology, we will introduce you to the most important ideas, elements, and entities of a public blockchain starting with an [overview]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).
 
-The two technical concepts in this chapter are hash functions and public-key cryptography. [Hash functions]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) are used to verify the integrity of data on a blockchain. [Public-key cryptography]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}) is used to verify ownership on the blockchain. Because we have tools to ensure data integrity and ownership we are equipped to have a currency on a blockchain.
 
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_D.jpg)
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_M.jpg)
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">The Elements of a Blockchain</h5>
+        <p class="mb-1">
+            In the first article of this chapter we give you an overview of the different elements that make a blockchain work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-In the third article, we will talk about the infrastructure that is running a blockchain. Many servers, or nodes are connected in a distributed [peer-to-peer or P2P network]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}). The architecture of this network is what helps provide the benefits, that blockchain technology offers and what makes the technology so robust.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Hash Functions" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Hash Functions</h5>
+        <p class="mb-1">
+            Hash Functions are an important part in every blockchain because they are used to verify the integrity of data.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-![P2P network](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_D.jpg)
-![P2P network](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_M.jpg)
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/pkc.svg" alt="Public Key Cryptography" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Public Key Cryptography</h5>
+        <p class="mb-1">
+            Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-If you have a large number of nodes running a currency, they not only need to communicate about events such as transactions. They also need to agree on what happened periodically. There are different ways to achieve that kind of agreement among the network participants. The method of coming to an agreement is called [consensus mechanism]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) and we will look at two examples of these mechanisms.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/p2p.svg" alt="A Peer-to-Peer (P2P) Network" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">A Peer-to-Peer (P2P) Network</h5>
+        <p class="mb-1">
+            Here we talk about the "physical" infrastructure that blockchains are running on - the Peer-to-Peer Network.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-The most used kind of consensus mechanism, Proof-of-work, requires miners that support the network with computing power. How contributing to the network with computational power helps to protect the data on a blockchain will be covered in our last article on [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}).
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/consensus.svg" alt="Consensus Mechanisms" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Consensus Mechanisms</h5>
+        <p class="mb-1">
+            There are many different parties in a blockchain and all of them need to agree on the transaction history. Here we show you how this is achieved.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-![Mining](/assets/post_files/technology/advanced/mining/miner_D.jpg)
-![Mining](/assets/post_files/technology/advanced/mining/miner_M.jpg)
+<div class="row mt-5">
+    <div class="col-md-3">
+        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/mining.svg" alt="Mining" />
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Mining</h5>
+        <p class="mb-1">
+            In this last article of the chapter we show you how miners secure the blockchain with their computational power.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Read Article</a>
+        </p>
+    </div>
+</div>
