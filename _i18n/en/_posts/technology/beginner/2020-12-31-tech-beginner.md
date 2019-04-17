@@ -12,7 +12,7 @@ level: beginner
         <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
-        We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+        In this level we want to give you a gentle introduction into blockchain technology, the technology that makes cryptocurrencies possible and powerful. We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology: this project is for you.
     </div>
 </div>
 
@@ -24,7 +24,7 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">What is a Blockchain?</h5>
         <p class="mb-1">
-            In the first chapter of this section, we explain to you what a blockchain is and what it can do.
+            In the first chapter of this section, we explain to you what a blockchain is and what it can do. It stores transactions safely and can, therefore, be used to transfer value.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">Read Chapter</a>
@@ -39,7 +39,7 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">How Does a Blockchain Work?</h5>
         <p class="mb-1">
-            Next, we will bring you up to speed on the basics that make blockchains work.
+            Next, we will bring you up to speed on the basics that make blockchains work. We talk about the entities maintaining the blockchain and ownership on the blockchain.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
@@ -54,10 +54,10 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">Wallets</h5>
         <p class="mb-1">
-            In order to receive and send cryptocurrencies you use so called cryptocurreny wallets. In the third chapter we will introduce you to how such wallets work.
+            In order to receive and send cryptocurrencies you use so called cryptocurreny wallets. In the third chapter we will explain to you how such wallets work.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -84,10 +84,10 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">Intro to Privacy on the Blockchain</h5>
         <p class="mb-1">
-            It is a common misconception that cryptocurrencies are anonymous. While this is not generally the case, you have the option to create truly anonymous transactions. This chapter is dedicated to privacy on the blockchain.
+            It is a common misconception that cryptocurrencies are anonymous. While this is not generally the case, you have the option to create truly private transactions. This chapter is dedicated to privacy on the blockchain.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-05-01-privacy-on-the-blockchain %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-05-01-privacy-on-the-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -102,7 +102,7 @@ level: beginner
             We end the Beginner Level of the Technology section with a summary of all the previous chapters.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-06-01-summary-beginner-level %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-06-01-summary-beginner-level %}">Read the Summary</a>
         </p>
     </div>
 </div>

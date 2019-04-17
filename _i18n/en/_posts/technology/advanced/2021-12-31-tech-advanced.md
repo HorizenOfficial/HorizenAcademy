@@ -16,7 +16,7 @@ level: advanced
     </div>
 </div>
 
-This section is designed for Advanced users and is best for users with a basic understanding of the technology, but which are not yet confident in their ability to apply this knowledge.
+This section is designed for Advanced users and is best for those who have a basic understanding of the technology, but which are not yet confident in their ability to apply this knowledge.
 
 The articles in this level take approximately 10 minutes to read and introduce you to the frequently used technical terms.
 
