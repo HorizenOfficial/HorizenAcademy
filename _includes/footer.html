@@ -1,4 +1,35 @@
 <footer class="site-footer-wrapper">
+    <div class="footer-share-social site-wrapper text-right">
+        {% capture share_link %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+        <div class="container-fluid">
+            Share this article:
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url={{ share_link }}&text={{ page.title }}&hashtags=Horizen" target="_blank">
+                <img src="/assets/img/icons/socials/twitter-grey.svg" alt="Twitter" class="icon-grey" />
+                <img src="/assets/img/icons/socials/twitter-color.svg" alt="Twitter" class="icon-color" />
+            </a>
+
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u={{ share_link }}" target="_blank">
+                <img src="/assets/img/icons/socials/facebook-grey.svg" alt="Facebook" class="icon-grey" />
+                <img src="/assets/img/icons/socials/facebook-color.svg" alt="Facebook" class="icon-color" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_link }}" target="_blank">
+                <img src="/assets/img/icons/socials/linkedin-grey.svg" alt="LinkedIn" class="icon-grey" />
+                <img src="/assets/img/icons/socials/linkedin-color.svg" alt="LinkedIn" class="icon-color" />
+            </a>
+
+            <!-- Reddit -->
+            <a href="http://reddit.com/submit?url={{ share_link }}&title={{ page.title }}" target="_blank">
+                <img src="/assets/img/icons/socials/reddit-grey.svg" alt="Reddit" class="icon-grey" />
+                <img src="/assets/img/icons/socials/reddit-color.svg" alt="Reddit" class="icon-color" />
+            </a>
+        </div>
+    </div>
+
     <div class="footer-subscribe site-wrapper">
         <div class="container-fluid">
             <form action="https://zencash.us15.list-manage.com/subscribe/post?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" method="post" id="mc-footer-subscribe-form">

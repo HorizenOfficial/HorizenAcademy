@@ -11,12 +11,12 @@ body{ min-height:100%; position:relative; }
 body::after{
   content:'';
   display:block;
-  height: 265px;
+  height: 360px;
   @media (max-width: 767px) {
-    height: 315px;
+    height: 415px;
   }
   @media (max-width: 575px) {
-    height: 425px;
+    height: 520px;
   }
 }
 .site-footer-wrapper{
@@ -451,6 +451,27 @@ body::after{
   }
 }
 
+.footer-share-social {
+  padding: 2rem 0;
+  img {
+    height: 32px;
+  }
+  a {
+    margin-left: 10px;
+    .icon-color {
+      display: none;
+    }
+    &:hover {
+      text-decoration: none;
+      .icon-grey {
+        display: none;
+      }
+      .icon-color {
+        display: inline;
+      }
+    }
+  }
+}
 
 .site-footer {
   background-color: #011031;
