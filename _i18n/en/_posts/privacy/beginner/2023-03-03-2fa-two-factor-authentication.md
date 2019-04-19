@@ -23,7 +23,8 @@ Enabling 2FA is one of the best security best practices you can employ as it pro
 
 2FA works by requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like Microsoft Authenticator, Google Authenticator or others. Using a separate code generating application is a better practice because you can use it offline or in another country without turning on a roaming service. You can also be sure that no one takes over your mobile number and get an SMS before you or alter it in some form or another.
 
-![2FA](/assets/post_files/privacy/advanced/2FA/2FA.jpg)
+![2FA](/assets/post_files/privacy/beginner/2fa/2fa_D.jpg)
+![2FA](/assets/post_files/privacy/beginner/2fa/2fa_M.jpg)
 
 2FA comes with a drawback too - you become dependent upon it and like your password manager vault, you have to be careful not to lose your second-factor authentication device which in most cases is your smartphone. Thankfully, many 2FA applications and services offer a way to back up the application itself or keep a backup code for the service itself so that you are not locked out permanently.
 
