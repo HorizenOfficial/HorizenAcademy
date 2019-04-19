@@ -13,7 +13,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">The Elements of a Blockchain</h5>
@@ -28,7 +30,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Hash Functions" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Hash Functions" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Hash Functions</h5>
@@ -43,7 +47,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/pkc.svg" alt="Public Key Cryptography" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/pkc.svg" alt="Public Key Cryptography" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Public Key Cryptography</h5>
@@ -58,7 +64,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/p2p.svg" alt="A Peer-to-Peer (P2P) Network" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/p2p.svg" alt="A Peer-to-Peer (P2P) Network" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">A Peer-to-Peer (P2P) Network</h5>
@@ -73,7 +81,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/consensus.svg" alt="Consensus Mechanisms" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/consensus.svg" alt="Consensus Mechanisms" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Consensus Mechanisms</h5>
@@ -88,7 +98,9 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/mining.svg" alt="Mining" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/mining.svg" alt="Mining" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Mining</h5>

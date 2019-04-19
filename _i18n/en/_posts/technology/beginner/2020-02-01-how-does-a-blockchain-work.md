@@ -13,7 +13,9 @@ After reading our first two articles about what a blockchain is, you know that i
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}">
+            <img src="/assets/post_files/technology/beginner/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">The Elements of a Blockchain</h5>
@@ -28,7 +30,9 @@ After reading our first two articles about what a blockchain is, you know that i
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/how-does-a-blockchain-work/identity.svg" alt="Identity in Blockchain" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}">
+            <img src="/assets/post_files/technology/beginner/how-does-a-blockchain-work/identity.svg" alt="Identity in Blockchain" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Identity in Blockchain</h5>

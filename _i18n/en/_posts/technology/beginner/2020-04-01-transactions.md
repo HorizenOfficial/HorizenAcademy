@@ -13,7 +13,9 @@ If you have read our prior articles than you already know more about blockchain 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/transactions/transactions.svg" alt="Intro to Transactions" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}">
+            <img src="/assets/post_files/technology/beginner/transactions/transactions.svg" alt="Intro to Transactions" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Intro to Transactions</h5>
@@ -28,7 +30,9 @@ If you have read our prior articles than you already know more about blockchain 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/transactions/block_explorer.svg" alt="Block Explorer Introduction" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}">
+            <img src="/assets/post_files/technology/beginner/transactions/block_explorer.svg" alt="Block Explorer Introduction" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Block Explorer Introduction</h5>

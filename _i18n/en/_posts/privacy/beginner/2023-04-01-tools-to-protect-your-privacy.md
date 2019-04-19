@@ -13,7 +13,9 @@ This is the Beginner Level. This level is best for users who are new to digital 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/browser.svg" alt="Browser" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %}">
+            <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/browser.svg" alt="Browser" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Browser</h5>
@@ -28,7 +30,9 @@ This is the Beginner Level. This level is best for users who are new to digital 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/search_engine.svg" alt="Search Engine" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-03-search-engine %}">
+            <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/search_engine.svg" alt="Search Engine" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Search Engine</h5>
@@ -43,7 +47,9 @@ This is the Beginner Level. This level is best for users who are new to digital 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/ad_block.svg" alt="Ad Blocker" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-04-ad-blocker %}">
+            <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/ad_block.svg" alt="Ad Blocker" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Ad Blocker</h5>
@@ -58,7 +64,9 @@ This is the Beginner Level. This level is best for users who are new to digital 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/messaging.svg" alt="Messaging" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-05-messaging %}">
+            <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/messaging.svg" alt="Messaging" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Messaging</h5>
@@ -73,7 +81,9 @@ This is the Beginner Level. This level is best for users who are new to digital 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/password_manager.svg" alt="Password Manager" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}">
+            <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/password_manager.svg" alt="Password Manager" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Password Manager</h5>

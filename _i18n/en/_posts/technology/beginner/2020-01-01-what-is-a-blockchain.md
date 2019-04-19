@@ -13,7 +13,9 @@ Most people have come across the term blockchain but few can tell you what it is
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/what-is-a-blockchain/data_struct.svg" alt="Blockchain as a Data Structure" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}">
+            <img src="/assets/post_files/technology/beginner/what-is-a-blockchain/data_struct.svg" alt="Blockchain as a Data Structure" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Blockchain as a Data Structure</h5>
@@ -28,7 +30,9 @@ Most people have come across the term blockchain but few can tell you what it is
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/what-is-a-blockchain/protocol.svg" alt="A Protocol to Transfer Value" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-03-a-protocol-to-transfer-value %}">
+            <img src="/assets/post_files/technology/beginner/what-is-a-blockchain/protocol.svg" alt="A Protocol to Transfer Value" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">A Protocol to Transfer Value</h5>
