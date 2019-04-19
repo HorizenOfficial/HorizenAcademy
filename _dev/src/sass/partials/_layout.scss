@@ -451,6 +451,28 @@ body::after{
   }
 }
 
+.footer-share-social {
+  background-color: #f5f6fa;
+  padding: 2rem 0;
+  img {
+    height: 32px;
+  }
+  a {
+    margin-left: 10px;
+    .icon-color {
+      display: none;
+    }
+    &:hover {
+      text-decoration: none;
+      .icon-grey {
+        display: none;
+      }
+      .icon-color {
+        display: inline;
+      }
+    }
+  }
+}
 
 .site-footer {
   background-color: #011031;
