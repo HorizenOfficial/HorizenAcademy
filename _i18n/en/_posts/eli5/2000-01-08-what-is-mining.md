@@ -10,7 +10,7 @@ topic: eli5
     <tr>
         <td class="icon"><img src="/assets/post_files/eli5/what-is-mining/Mining.jpg" alt="Mining"></td>
         <td>
-            Mining is a part of coming to a [consensus]({{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}) on a blockchain that uses the Proof-of-Work method to agree on the order of events.
+            Mining is a part of coming to a <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">consensus</a> on a blockchain that uses the Proof-of-Work method to agree on the order of events.
         </td>
     </tr>
 </table> 
