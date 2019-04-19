@@ -19,7 +19,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/intro/why.svg" alt="Why Privacy" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-01-01-the-nothing-to-hide-argument %}">
+            <img src="/assets/post_files/privacy/beginner/intro/why.svg" alt="Why Privacy" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Why Privacy?</h5>
@@ -34,7 +36,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/intro/where.svg" alt="Where Your Privacy is Compromised" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">
+            <img src="/assets/post_files/privacy/beginner/intro/where.svg" alt="Where Your Privacy is Compromised" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Where Your Privacy is Compromised</h5>
@@ -49,7 +53,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/intro/tools.svg" alt="Best Practices" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">
+            <img src="/assets/post_files/privacy/beginner/intro/tools.svg" alt="Best Practices" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Best Practices</h5>
@@ -64,7 +70,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/intro/best.svg" alt="Tools to Protect your Privacy - Beginner" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">
+            <img src="/assets/post_files/privacy/beginner/intro/best.svg" alt="Tools to Protect your Privacy - Beginner" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Tools to Protect your Privacy</h5>

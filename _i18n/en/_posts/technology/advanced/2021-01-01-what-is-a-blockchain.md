@@ -12,7 +12,9 @@ We would like to look at blockchain from three different perspectives in the fir
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/DS2.svg" alt="Blockchain Data" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">
+            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/DS2.svg" alt="Blockchain Data" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Blockchain as a Data Structure</h5>
@@ -28,7 +30,9 @@ We would like to look at blockchain from three different perspectives in the fir
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">
+            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">A Protocol to Transfer Value</h5>
@@ -44,7 +48,9 @@ We would like to look at blockchain from three different perspectives in the fir
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">
+            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Guaranteed Execution with Smart Contracts</h5>

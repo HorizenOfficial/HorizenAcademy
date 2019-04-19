@@ -13,7 +13,9 @@ This chapter describes personal security best practices and provides you with a 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/best-practices/strong_password.svg" alt="Strong Passwords" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-02-strong-passwords %}">
+            <img src="/assets/post_files/privacy/beginner/best-practices/strong_password.svg" alt="Strong Passwords" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Strong Passwords</h5>
@@ -28,7 +30,9 @@ This chapter describes personal security best practices and provides you with a 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/beginner/best-practices/2fa.svg" alt="2FA - Two-factor Authentication" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-03-2fa-two-factor-authentication %}">
+            <img src="/assets/post_files/privacy/beginner/best-practices/2fa.svg" alt="2FA - Two-factor Authentication" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">2FA - Two-factor Authentication</h5>

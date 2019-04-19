@@ -13,7 +13,9 @@ This chapter describes the necessary tools to protect your privacy. We selected 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/vpn.svg" alt="VPN" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-02-vpn %}">
+            <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/vpn.svg" alt="VPN" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">VPN</h5>
@@ -28,7 +30,9 @@ This chapter describes the necessary tools to protect your privacy. We selected 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/encrypted_mail.svg" alt="Encrypted Email" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-03-encrypted-email %}">
+            <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/encrypted_mail.svg" alt="Encrypted Email" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Encrypted Email</h5>
@@ -43,7 +47,9 @@ This chapter describes the necessary tools to protect your privacy. We selected 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/vitual_phone_number.svg" alt="Virtual Phone Number" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-04-virtual-phone-number %}">
+            <img src="/assets/post_files/privacy/advanced/tools-to-protect-your-privacy/vitual_phone_number.svg" alt="Virtual Phone Number" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Virtual Phone Number</h5>

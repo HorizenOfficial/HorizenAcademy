@@ -15,7 +15,9 @@ Much of this data is rather sensitive. Most people wouldn't want to give a stran
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/phone.svg" alt="Your Phone" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">
+            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/phone.svg" alt="Your Phone" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Your Phone</h5>
@@ -30,7 +32,9 @@ Much of this data is rather sensitive. Most people wouldn't want to give a stran
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/computer.svg" alt="Your Computer" />
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}">
+            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/computer.svg" alt="Your Computer" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Your Computer</h5>

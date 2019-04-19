@@ -19,7 +19,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/horizen/beginner/intro/dao.svg" alt="DAO - Decentralized Autonomous Organization" />
+        <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">
+            <img src="/assets/post_files/horizen/beginner/intro/dao.svg" alt="DAO - Decentralized Autonomous Organization" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">DAO - Decentralized Autonomous Organization</h5>
@@ -34,7 +36,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/horizen/beginner/intro/sidechains.svg" alt="Sidechains" />
+        <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-03-sidechains %}">
+            <img src="/assets/post_files/horizen/beginner/intro/sidechains.svg" alt="Sidechains" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Sidechains</h5>
@@ -49,7 +53,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/horizen/beginner/intro/dag.svg" alt="Block DAG" />
+        <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}">
+            <img src="/assets/post_files/horizen/beginner/intro/dag.svg" alt="Block DAG" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Block DAG</h5>
@@ -64,7 +70,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/horizen/beginner/intro/zenchat.svg" alt="ZenChat" />
+        <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}">
+            <img src="/assets/post_files/horizen/beginner/intro/zenchat.svg" alt="ZenChat" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">ZenChat</h5>

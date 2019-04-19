@@ -19,7 +19,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/what_is_a_blockchain.svg" alt="What is a Blockchain" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">
+            <img src="/assets/post_files/technology/beginner/intro/what_is_a_blockchain.svg" alt="What is a Blockchain" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">What is a Blockchain?</h5>
@@ -34,7 +36,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/how_does_a_blockchain_work.svg" alt="How Does a Blockchain Work" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}">
+            <img src="/assets/post_files/technology/beginner/intro/how_does_a_blockchain_work.svg" alt="How Does a Blockchain Work" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">How Does a Blockchain Work?</h5>
@@ -49,7 +53,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/wallets.svg" alt="Wallets" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">
+            <img src="/assets/post_files/technology/beginner/intro/wallets.svg" alt="Wallets" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Wallets</h5>
@@ -64,7 +70,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/transactions.svg" alt="Transactions" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-04-01-transactions %}">
+            <img src="/assets/post_files/technology/beginner/intro/transactions.svg" alt="Transactions" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Transactions</h5>
@@ -79,7 +87,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/privacy.svg" alt="Intro to Privacy on the Blockchain" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-05-01-privacy-on-the-blockchain %}">
+            <img src="/assets/post_files/technology/beginner/intro/privacy.svg" alt="Intro to Privacy on the Blockchain" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Intro to Privacy on the Blockchain</h5>
@@ -94,7 +104,9 @@ level: beginner
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/beginner/intro/summary.svg" alt="Summary Beginner" />
+        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-06-01-summary-beginner-level %}">
+            <img src="/assets/post_files/technology/beginner/intro/summary.svg" alt="Summary Beginner" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Summary Beginner</h5>

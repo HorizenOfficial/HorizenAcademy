@@ -13,7 +13,9 @@ You should have a pretty good understanding of blockchain if you have read throu
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="The UTXO Model" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
+            <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="The UTXO Model" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">The UTXO Model</h5>
@@ -28,7 +30,9 @@ You should have a pretty good understanding of blockchain if you have read throu
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="Block Explorer Continued" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
+            <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="Block Explorer Continued" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Block Explorer Continued</h5>
@@ -43,7 +47,9 @@ You should have a pretty good understanding of blockchain if you have read throu
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Atomic Swaps" />
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">
+            <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Atomic Swaps" />
+        </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Atomic Swaps</h5>
