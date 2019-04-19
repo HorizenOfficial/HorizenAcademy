@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "The UTXO Model"
+description: "Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works."
 permalink: /technology/advanced/the-utxo-model/
 topic: technology
 level: advanced

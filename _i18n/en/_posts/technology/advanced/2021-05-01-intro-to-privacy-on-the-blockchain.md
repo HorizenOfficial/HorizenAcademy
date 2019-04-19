@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Privacy on the Blockchain"
+description: "Here we introduce you to the different technologies that enable private transactions on a public blockchain."
 permalink: /technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced

@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Best Practices"
+description: "We introduce you to two security best practices. Using strong passwords and 2FA to protect your accounts."
 permalink: /privacy/beginner/best-practices/
 topic: privacy
 level: beginner

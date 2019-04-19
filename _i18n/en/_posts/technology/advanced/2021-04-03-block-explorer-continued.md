@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Block Explorer Continued"
+description: "A block explorer lets you browse the data on a blockchain. We take a look at what kind of information you will find."
 permalink: /technology/advanced/block-explorer-continued/
 topic: technology
 level: advanced

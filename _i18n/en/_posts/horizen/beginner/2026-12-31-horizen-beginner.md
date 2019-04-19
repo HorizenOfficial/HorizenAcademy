@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Beginner"
+description: "We show you how our organization works, how we are funded and what engineering challenges we are facing."
 permalink: /horizen/beginner/
 topic: horizen
 level: beginner

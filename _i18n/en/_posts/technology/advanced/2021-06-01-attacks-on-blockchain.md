@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Attacks on Blockchain"
+description: "We explain the most common attack scenarios on public blockchains and how their risk can be mitigated."
 permalink: /technology/advanced/attacks-on-blockchain/
 topic: technology
 level: advanced

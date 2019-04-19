@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "A Protocol to Transfer Value"
+description: "We compare blockchains as protocols to transfer money with the internet as a protocol to transfer information."
 permalink: /technology/advanced/a-protocol-to-transfer-value/
 topic: technology
 level: advanced

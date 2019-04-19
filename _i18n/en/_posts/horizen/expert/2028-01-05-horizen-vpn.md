@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Horizen VPN"
+description: ""
 permalink: /horizen/expert/horizen-vpn/
 topic: horizen
 level: expert

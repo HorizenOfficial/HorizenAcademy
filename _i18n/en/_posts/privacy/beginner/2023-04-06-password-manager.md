@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Password Manager"
+description: "Using strong passwords is an important best practice. Using a password manager will help you create and remember them."
 permalink: /privacy/beginner/password-manager/
 topic: privacy
 level: beginner

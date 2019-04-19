@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Block Explorer Introduction"
+description: "A block explorer lets you find information on a blockchain, like a browser lets you access information on the internet."
 permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner

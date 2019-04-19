@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Consensus Mechanisms"
+description: "There are many peers in a blockchain and the consensus mechanism has all of them agree on a single history of events."
 permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced

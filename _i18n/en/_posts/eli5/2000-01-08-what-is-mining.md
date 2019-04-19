@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is Mining?"
+description: "A miner is somebody that looks at what is happening on the network and records every transfer of money."
 permalink: /eli5/what-is-mining/
 topic: eli5
 ---

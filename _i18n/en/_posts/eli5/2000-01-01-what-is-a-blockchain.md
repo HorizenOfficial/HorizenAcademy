@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Blockchain?"
+description: "Comparing a blockchain and its blocks with a book and its pages."
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]

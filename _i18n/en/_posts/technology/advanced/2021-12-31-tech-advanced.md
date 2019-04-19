@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Technology Advanced"
+description: "We take a slightly more technical look at blockchain technology and its parts in this section of the Horizen Academy."
 permalink: /technology/advanced/
 topic: technology
 level: advanced

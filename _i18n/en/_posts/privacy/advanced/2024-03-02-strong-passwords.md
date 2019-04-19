@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Strong Passwords"
+description: "We explain the difference between passwords that are hard to remember and those that are hard to guess."
 permalink: /privacy/advanced/strong-passwords/
 topic: privacy
 level: advanced

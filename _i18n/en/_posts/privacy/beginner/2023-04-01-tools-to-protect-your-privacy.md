@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Tools to Protect your Privacy - Beginner"
+description: "In this chapter we show you the basic tools needed to enhance your online privacy."
 permalink: /privacy/beginner/tools-to-protect-your-privacy/
 topic: privacy
 level: beginner

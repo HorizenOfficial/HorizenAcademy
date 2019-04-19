@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Intro to Privacy on the Blockchain"
+description: "While most cryptocurrencies are public, there are technologies that enable private transactions on a public blockchain."
 permalink: /technology/beginner/intro-to-privacy-on-the-blockchain/
 topic: technology
 level: beginner

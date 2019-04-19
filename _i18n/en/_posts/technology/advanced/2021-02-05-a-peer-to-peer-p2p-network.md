@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "A Peer-to-Peer (P2P) Network"
+description: "Here we talk about the "physical" infrastructure that blockchains are running on - the Peer-to-Peer Network."
 permalink: /technology/advanced/a-peer-to-peer-p2p-network/
 topic: technology
 level: advanced

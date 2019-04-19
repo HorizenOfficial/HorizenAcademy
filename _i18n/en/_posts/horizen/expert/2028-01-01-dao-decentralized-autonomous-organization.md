@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "DAO - Decentralized  Autonomous Organization"
+description: "Over time our foundation will become a DAO - a Decentralized Autonomous Organization. Find out what this means here."
 permalink: /horizen/expert/dao-decentralized-autonomous-organization/
 topic: horizen
 level: expert

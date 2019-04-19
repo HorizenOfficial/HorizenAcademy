@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "How Does a Blockchain Work?"
+description: "This chapter will bring you up to speed on the basics that make blockchains work. We talk about miners, nodes and keys."
 permalink: /technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner

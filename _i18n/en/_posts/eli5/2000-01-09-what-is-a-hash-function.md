@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Hash Function?"
+description: "A hash function is something that is use to create a fingerprint of a file so you can see if it has been changed or not."
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 further_reads: [hashing]

@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Advanced Summary"
+description: "We end the advanced level of our blockchain technology section with a summary of all the previous chapters."
 permalink: /technology/advanced/summary/
 topic: technology
 level: advanced

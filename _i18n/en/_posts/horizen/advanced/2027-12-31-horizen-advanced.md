@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Advanced"
+description: "We show you how our organization works, how we are funded and what engineering challenges we are facing."
 permalink: /horizen/advanced/
 topic: horizen
 level: advanced

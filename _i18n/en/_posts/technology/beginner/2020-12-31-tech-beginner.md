@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Technology Beginner"
+description: "In this section we want to give you an introduction into blockchain technology which makes cryptocurrencies possible."
 permalink: /technology/beginner/
 topic: technology
 level: beginner

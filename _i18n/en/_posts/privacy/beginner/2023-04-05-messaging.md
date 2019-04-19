@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Messaging"
+description: "Instant messaging is the most used forms of communication today. You should pick a messenger that respects your privacy."
 permalink: /privacy/beginner/messaging/
 topic: privacy
 level: beginner

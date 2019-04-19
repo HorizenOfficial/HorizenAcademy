@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "From ZenCash to Horizen"
+description: "For the last part of this chapter, we share with you how ZenCash started and how it evolved into Horizen."
 permalink: /history/from-zencash-to-horizen/
 topic: history
 chapter: "From Cypherpunks to Horizen"

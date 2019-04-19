@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Videos & Movies"
+description: "We have put together a list of videos and documentaries, that help getting started on blockchain and cryptocurrencies."
 permalink: /resources/videos-and-movies/
 topic: resources
 ---

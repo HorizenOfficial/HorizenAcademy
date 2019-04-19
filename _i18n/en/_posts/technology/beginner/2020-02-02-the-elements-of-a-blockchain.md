@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "The Elements of a Blockchain"
+description: "In this article we want to discuss two important parties that play a role in a blockchain ecosystem: Miners and Nodes. "
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner

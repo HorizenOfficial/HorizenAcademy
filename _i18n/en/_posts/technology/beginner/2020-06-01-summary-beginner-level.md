@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Summary Beginner"
+description: "We end the Beginner Level of the Technology section with a summary of all the previous chapters. "
 permalink: /technology/beginner/summary/
 topic: technology
 level: beginner

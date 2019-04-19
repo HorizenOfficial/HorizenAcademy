@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Types of wallets"
+description: "In order to receive and send cryptocurrencies you will use a wallet. Here we explain the different types of wallets."
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced

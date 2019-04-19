@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "What is a Blockchain?"
+description: "In this chapter, we explain to you how a blockchain stores data and why this makes it suitable to transfer value."
 permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner

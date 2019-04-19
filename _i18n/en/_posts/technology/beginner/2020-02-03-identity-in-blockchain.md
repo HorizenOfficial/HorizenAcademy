@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Identity in Blockchain"
+description: "We explain where cryptography enters the scene and what it has to do with identity, ownership and your key pair."
 permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner

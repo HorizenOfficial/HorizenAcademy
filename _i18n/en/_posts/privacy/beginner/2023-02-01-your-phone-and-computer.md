@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Your Phone and Computer"
+description: "In this chapter we show you how your online privacy is compromised on your phone as well as on your computer."
 permalink: /privacy/beginner/your-phone-and-computer/
 topic: privacy
 level: beginner

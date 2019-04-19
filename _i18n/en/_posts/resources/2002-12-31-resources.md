@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Resources"
+description: "Using additional resources will help you understand the topics blockchain and cryptocurrency better."
 permalink: /resources/
 topic: resources
 ---

@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "The Elements of a Blockchain"
+description: "In the first article of this chapter we give you an overview of the different elements that make a blockchain work."
 permalink: /technology/advanced/the-elements-of-a-blockchain/
 topic: technology
 level: advanced
