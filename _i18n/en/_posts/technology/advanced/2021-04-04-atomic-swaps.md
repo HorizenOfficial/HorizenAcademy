@@ -39,7 +39,7 @@ You can create an HTLC once you meet both conditions. The process of an Atomic S
  5. Bob creates an HTLC with an address on the Horizen blockchain using Alice's hash lock.
  6. Bob deposits the agreed upon amount of ZEN in the contract address and locks them up.
 
-At this point, both participants have locked up the funds they agreed to exchange. Because both blockchains are public, each of them can verify the amounts deposited. Only Alice has the key to unlock the funds on both chains right now. In case she does not proceed the Timelock would release the funds back to their original owners after a certain period of time. That way she can't trick Bob into losing his funds by locking them up and never receiving the key to unlock them. If she proceeds the next two steps happen almost simultaneously.
+    At this point, both participants have locked up the funds they agreed to exchange. Because both blockchains are public, each of them can verify the amounts deposited. Only Alice has the key to unlock the funds on both chains right now. In case she does not proceed the Timelock would release the funds back to their original owners after a certain period of time. That way she can't trick Bob into losing his funds by locking them up and never receiving the key to unlock them. If she proceeds the next two steps happen almost simultaneously.
 
  7. Alice uses the key to unlock Bob's ZEN and transfers them to an address that she controls. Bob learns about the key when Alice unlocks the funds by monitoring his HTLC.
  8. Bob uses the key he just learned to unlock Alice's Bitcoin and transfers them to a Bitcoin address he controls.
