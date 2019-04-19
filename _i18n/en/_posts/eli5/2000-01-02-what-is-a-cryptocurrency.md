@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Cryptocurrency?"
+description: "A cryptocurrency is digital money. There are many cryptocurrencies, just like there are many traditional currencies."
 permalink: /eli5/what-is-a-cryptocurrency/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]

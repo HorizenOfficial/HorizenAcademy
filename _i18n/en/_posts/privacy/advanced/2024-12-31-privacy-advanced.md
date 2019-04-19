@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Privacy Advanced"
+description: "This section is for users who have a general understanding of digital privacy but want to know about it in more detail."
 permalink: /privacy/advanced/
 topic: privacy
 level: advanced

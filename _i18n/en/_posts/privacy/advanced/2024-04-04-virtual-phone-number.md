@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Virtual Phone Number"
+description: "If you don't want to share your number every time you register for some service a virtual phone number is what you need."
 permalink: /privacy/advanced/virtual-phone-number/
 topic: privacy
 level: advanced

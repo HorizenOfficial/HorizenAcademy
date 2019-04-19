@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is Consensus?"
+description: "The consensus mechanism makes sure, that the entire network agrees on a single history of transactions."
 permalink: /eli5/what-is-consensus/
 topic: eli5
 further_reads: [consensus_for_kids]

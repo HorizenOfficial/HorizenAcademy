@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "How Does a Blockchain Work?"
+description: "We introduce you to the most important ideas, elements, and entities of a public blockchain starting with an overview."
 permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced

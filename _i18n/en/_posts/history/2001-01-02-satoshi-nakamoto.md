@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Satoshi Nakamoto"
+description: "An unknown developer using the pseudonym Satoshi Nakamoto created Bitcoin in 2008 before it went live in January 2009."
 permalink: /history/satoshi-nakamoto/
 topic: history
 chapter: "From Cypherpunks to Horizen"

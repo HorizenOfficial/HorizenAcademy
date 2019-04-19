@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Intro to Transactions"
+description: "We give you an analogy to keep in mind when thinking about what a cryptocurrency transaction is and how it works."
 permalink: /technology/beginner/intro-to-transactions/
 topic: technology
 level: beginner

@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Transaction?"
+description: "When you create a transaction you send a message to the network that some of your money now belongs to somebody else."
 permalink: /eli5/what-is-a-transaction/
 topic: eli5
 ---

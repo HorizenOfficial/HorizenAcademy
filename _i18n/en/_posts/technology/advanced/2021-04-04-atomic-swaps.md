@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Atomic Swaps"
+description: "An Atomic Swap, a special type of transaction, lets you exchange two different cryptocurrencies without an exchange."
 permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced

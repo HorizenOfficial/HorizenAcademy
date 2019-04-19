@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Privacy Beginner"
+description: "If you are new to digital privacy you can find out where your privacy is compromised and how you can protect it."
 permalink: /privacy/beginner/
 topic: privacy
 level: beginner

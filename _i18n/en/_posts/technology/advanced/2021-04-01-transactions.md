@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Transactions"
+description: "After we have covered wallets we take a look at what cryptocurrency transactions are and how they work."
 permalink: /technology/advanced/transactions/
 topic: technology
 level: advanced

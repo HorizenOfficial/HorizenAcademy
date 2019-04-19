@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Tools to Protect your Privacy - Advanced"
+description: "Here we introduce some more advanced tools needed to enhance your online privacy: VPN, Encrypted Mail and more."
 permalink: /privacy/advanced/tools-to-protect-your-privacy/
 topic: privacy
 level: advanced

@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Wallet?"
+description: "A wallet is a program on your computer or phone, that lets you receive and send digital money."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
 ---

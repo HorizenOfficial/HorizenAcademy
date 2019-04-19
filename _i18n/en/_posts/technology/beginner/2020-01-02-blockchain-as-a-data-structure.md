@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Blockchain as a Data Structure"
+description: "In the first article of this chapter, we will look at how a bockchain stores data and why this makes the data secure."
 permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner

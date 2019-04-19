@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Public Key Cryptography"
+description: "Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name."
 permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced

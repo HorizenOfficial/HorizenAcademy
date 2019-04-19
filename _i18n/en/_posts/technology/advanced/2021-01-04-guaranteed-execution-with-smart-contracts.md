@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Guaranteed Execution with Smart Contracts"
+description: "Cryptocurrencies are sometimes referred to as programmable money. Smart Contracts allow this programmability."
 permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced

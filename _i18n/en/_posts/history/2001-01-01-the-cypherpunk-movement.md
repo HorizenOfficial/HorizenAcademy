@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "The Cypherpunk Movement"
+description: "The Cypherpunks are a group of computer scientist that want to provide strong encryption to the general public."
 permalink: /history/the-cypherpunk-movement/
 topic: history
 chapter: "From Cypherpunks to Horizen"

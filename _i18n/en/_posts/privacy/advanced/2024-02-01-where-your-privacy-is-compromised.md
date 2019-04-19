@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Where Your Privacy is Compromised?"
+description: "In this chapter we show you how your online privacy is compromised on your phone as well as on your computer."
 permalink: /privacy/advanced/where-your-privacy-is-compromised/
 topic: privacy
 level: advanced

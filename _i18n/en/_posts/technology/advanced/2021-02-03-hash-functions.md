@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Hash Functions"
+description: "Hash Functions are an important part in every blockchain because they are used to verify the integrity of data."
 permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced

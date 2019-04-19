@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "What is a Peer-to-Peer Network?"
+description: "In a Peer-to-Peer network, every participant is connected to everybody else. This makes it very robust."
 permalink: /eli5/what-is-a-peer-to-peer-network/
 topic: eli5
 ---

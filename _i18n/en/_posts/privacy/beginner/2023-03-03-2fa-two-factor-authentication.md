@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "2FA - Two-factor Authentication"
+description: "This article explains another best practice that we encourage you to use: 2-Factor Authentication or 2FA."
 permalink: /privacy/beginner/2fa-two-factor-authentication/
 topic: privacy
 level: beginner

@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Ad Blocker"
+description: "Ads are not just annoying, they can also contain malicious code so using an ad blocker is highly recommended."
 permalink: /privacy/beginner/ad-blocker/
 topic: privacy
 level: beginner
