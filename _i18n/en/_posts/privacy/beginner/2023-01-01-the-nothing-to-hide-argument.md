@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: 'The "Nothing to Hide" Argument'
-description: "First we talk about why privacy is important and why the "Nothing to Hide" argument is fundamentally flawed."
+description: 'First we talk about why privacy is important and why the "Nothing to Hide" argument is fundamentally flawed.'
 permalink: /privacy/beginner/the-nothing-to-hide-argument/
 topic: privacy
 level: beginner
