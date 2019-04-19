@@ -11,12 +11,12 @@ body{ min-height:100%; position:relative; }
 body::after{
   content:'';
   display:block;
-  height: 265px;
+  height: 360px;
   @media (max-width: 767px) {
-    height: 315px;
+    height: 415px;
   }
   @media (max-width: 575px) {
-    height: 425px;
+    height: 520px;
   }
 }
 .site-footer-wrapper{
