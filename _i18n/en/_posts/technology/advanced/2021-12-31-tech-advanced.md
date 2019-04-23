@@ -64,7 +64,7 @@ level: advanced
             In order to receive and send cryptocurrencies you will use a wallet. In the third chapter we will show you the different types of wallets.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -98,7 +98,7 @@ level: advanced
             While most cryptocurrencies are not private by default, you have the option to create truly private transactions. This chapter introduces the different methods that achieve privacy on the blockchain.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -115,7 +115,7 @@ level: advanced
             Blockchains are a secure way to store data but there are ways to attack a blockchain. We show you the most common attacks and how their risk is mitigated.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -132,7 +132,7 @@ level: advanced
             We end the Advanced Level of the Technology section with a summary of all the previous chapters.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">Read the Summary</a>
         </p>
     </div>
 </div>
