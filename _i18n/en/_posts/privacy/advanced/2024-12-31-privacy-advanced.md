@@ -31,7 +31,7 @@ level: advanced
             First, we will examine the "I've got nothing to hide" argument, that is frequently used when people say that a person should not worry about government surveillance if he/she has "nothing to hide."
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">Read Chapter</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">Read Article</a>
         </p>
     </div>
 </div>
