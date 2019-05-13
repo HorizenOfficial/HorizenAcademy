@@ -43,7 +43,7 @@ level: advanced
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Where Your Privacy is Compromised?</h5>
+        <h5 class="intro-article-title">Where Your Privacy is Compromised</h5>
         <p class="mb-1">
             Next, we will look at where and how your privacy is compromised on the different devices and services you are using. Most people use their phone and computer for many hours a day. The amount of data one person produces during just one day is immense. Through sophisticated data analysis, your digital behavior allows drawing powerful conclusions about your life.
         </p>
