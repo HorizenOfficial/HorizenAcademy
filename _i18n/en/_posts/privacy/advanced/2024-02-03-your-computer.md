@@ -6,7 +6,7 @@ description: "The second device most people use on a daily basis is their comput
 permalink: /privacy/advanced/your-computer/
 topic: privacy
 level: advanced
-chapter: "Where Your Privacy is Compromised?"
+chapter: "Where Your Privacy is Compromised"
 further_reads: [is_your_browser_safe_against_tracking, snowden_movie]
 ---
 

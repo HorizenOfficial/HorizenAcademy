@@ -6,7 +6,7 @@ description: "This article shows you where your phone is leaking data and what y
 permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced
-chapter: "Where Your Privacy is Compromised?"
+chapter: "Where Your Privacy is Compromised"
 further_reads: [your_phone_number_is_all_a_hacker_needs_to_read_texts_listen_to_calls_and_track_you, do_not_let_criminals_steal_your_cellphone_number_with_this_scam]
 ---
 
