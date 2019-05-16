@@ -17,7 +17,7 @@ A protocol is like a set of rules. These rules implemented govern a given blockc
  - If you have 1 Coin, 1 Coin is the most you can spend.
  - If you try to spend the same Coin twice, the first transaction that spends it will be valid. The second transaction will be invalid.
 
-Now that you know that a protocol, a term you will hear quite often is just a set of rules let's take a look at the individuals that play a part in a blockchain ecosystem.
+Now that you know that a protocol, a term you will hear quite often, is just a set of rules let's take a look at the individuals that play a part in a blockchain ecosystem.
 
 ### Nodes
 
