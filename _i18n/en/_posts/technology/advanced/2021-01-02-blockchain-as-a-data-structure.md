@@ -15,12 +15,8 @@ One can explain Blockchain technology in many different ways. Looking at blockch
 
 A data structure, in the context of computer science, is a way to store, organize, and manage data. A data structure enables you to access, add, modify and search the data contained within it. Some of the most common and basic data structures include arrays and linked lists. An array is a number of enumerated elements. These elements can be numbers, letters, words or even files. The indices allow you to access any element individually, so if you want to change some entry in an array and you know it's location, you have instant access.
 
-{%
-  include image_caption.html
-  image="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_D.jpg"
-  image2="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_M.jpg"
-  caption="One-dimensional array with six elements"
-%}
+![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_D.jpg)
+![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_M.jpg)
 
 _Nodes_ are the data elements in a linked list. A node includes at least one piece of data (any type) and a pointer to the next element. This pointer's function is to tell your computer where to find the next element of the list.
 
