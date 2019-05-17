@@ -10,11 +10,11 @@ chapter: "What is a Blockchain?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
 ---
 
-One of the great innovations of the blockchain boils down to being a protocol to transfer value. Andreas Antonopoulos calls Bitcoin "a language to communicate value" which feels like an accurate description to me.
+One of the great innovations of the blockchain boils down to it being a protocol to transfer value. Andreas Antonopoulos calls Bitcoin "a language to communicate value", which feels like an accurate description to me.
 
 An analogy that might help you understand this concept is how the mail works. Let's forget about the post as an entity actually operating the mail service for a minute and think about it this way:  
-The mail is permissionless in the sense that anybody, who wants to send a letter to someone can find a postbox near him or her and drop the letter in there. It will arrive at its destination a few days later. You don't need to ask for anybody's permission to do so. The "protocol" for sending a letter comprises of two things: you must put a stamp of sufficient value on it and you must provide the delivery address. The standard address format is a name, address and the country if you want to send the letter abroad.  
-When a blockchain operates a cryptocurrency the network (← a decentralized "post-like" service) is taking care of delivering your transaction (← letter) to the recipient. The protocol asks you to add a small transaction fee (← stamp) and provide the necessary information in a standardized way: your address, the recipient's address, the amount to transfer and your signature.
+The mail is permissionless in the sense that anybody who wants to send a letter to someone can find a postbox near him or her and drop the letter in there. It will arrive at its destination a few days later. You don't need to ask for anybody's permission to do so. The "protocol" for sending a letter comprises two things: you must put a stamp of sufficient value on it and you must provide the recipient's address. The standard address format is a name, address and the country if you want to send the letter abroad.  
+When a blockchain facilitates a cryptocurrency, the network (← a decentralized "post-like" service) delivers your transaction (← letter) to the recipient. The protocol requires you to add a small transaction fee (← stamp) and provide the necessary information in a standardized way: your address, the recipient's address, the amount to transfer and your signature.
 
 ![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_D.jpg)
 ![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_M.jpg)
@@ -26,7 +26,7 @@ Cryptocurrency [wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020
 
 ### Summary
 
-We can consider the Mail to be a "protocol" to transfer physical goods, while the internet with its underlying TCP/IP protocol enables you to transfer information. Blockchain technology and cryptocurrencies provide a protocol to transfer value from one person to another, without any intermediaries. We will discuss what an actual transaction looks like and the data needed to complete a transaction in a dedicated [article about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
+We can consider the mail to be a "protocol" to transfer physical goods, while the internet with its underlying TCP/IP protocol enables you to transfer information. Blockchain technology and cryptocurrencies provide a protocol to transfer value directly from one person to another, without any intermediaries. We will discuss what an actual transaction looks like, and the data needed to complete a transaction, in a dedicated [article about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
 
 Let's first have a look at [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
 
