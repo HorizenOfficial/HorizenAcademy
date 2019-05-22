@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Public Key Cryptography"
-description: "Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article you learn about Public-Key Cryptography at an advanced level."
 permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced

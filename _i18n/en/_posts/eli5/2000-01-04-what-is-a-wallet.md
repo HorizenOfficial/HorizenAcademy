@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Wallet?"
-description: "A wallet is a program on your computer or phone, that lets you receive and send digital money."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency wallets in a simple, understandable way."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
 ---

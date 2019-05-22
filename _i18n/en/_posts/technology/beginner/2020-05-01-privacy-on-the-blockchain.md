@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Intro to Privacy on the Blockchain"
-description: "While most cryptocurrencies are public, there are technologies that enable private transactions on a public blockchain."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we introduce privacy and how it works on the blockchain at a beginner level."
 permalink: /technology/beginner/intro-to-privacy-on-the-blockchain/
 topic: technology
 level: beginner

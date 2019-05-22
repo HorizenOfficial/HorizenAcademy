@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Best Practices"
-description: "We introduce you to two security best practices. Using strong passwords and 2FA to protect your accounts."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, we introduce you to two security best practices: Using strong passwords and two-factor authetification. This article is designed for advanced users."
 permalink: /privacy/advanced/best-practices/
 topic: privacy
 level: advanced

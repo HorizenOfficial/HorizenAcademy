@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Strong Passwords"
-description: "We explain the difference between passwords that are hard to remember and those that are hard to guess."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we explore the differences between passwords that are hard to remember and passwords that are hard to guess at a beginner level."
 permalink: /privacy/beginner/strong-passwords/
 topic: privacy
 level: beginner

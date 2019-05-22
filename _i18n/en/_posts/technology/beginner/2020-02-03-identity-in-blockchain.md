@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Identity in Blockchain"
-description: "We explain where cryptography enters the scene and what it has to do with identity, ownership and your key pair."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we explain cryptography's part in blockchain as it relates to identity, ownership, and your key pairs at a beginner level."
 permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner

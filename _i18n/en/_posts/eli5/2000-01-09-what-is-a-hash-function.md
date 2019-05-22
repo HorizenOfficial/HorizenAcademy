@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Hash Function?"
-description: "A hash function is something that is use to create a fingerprint of a file so you can see if it has been changed or not."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about hash functions in a simple, understandable way."
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 further_reads: [hashing]

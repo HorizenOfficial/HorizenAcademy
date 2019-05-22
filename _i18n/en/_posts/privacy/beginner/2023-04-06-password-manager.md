@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Password Manager"
-description: "Using strong passwords is an important best practice. Using a password manager will help you create and remember them."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we discuss password managers.These tools help you securely keep track of strong passwords."
 permalink: /privacy/beginner/password-manager/
 topic: privacy
 level: beginner

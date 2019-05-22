@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Tools to Protect your Privacy - Advanced"
-description: "Here we introduce some more advanced tools needed to enhance your online privacy: VPN, Encrypted Mail and more."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, we show you the tools needed to enhance your online privacy at an advanced level."
 permalink: /privacy/advanced/tools-to-protect-your-privacy/
 topic: privacy
 level: advanced

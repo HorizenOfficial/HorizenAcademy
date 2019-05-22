@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Ad Blocker"
-description: "Ads are not just annoying, they can also contain malicious code so using an ad blocker is highly recommended."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we review online ads and how to protect yourself from malicious code with ad blockers."
 permalink: /privacy/beginner/ad-blocker/
 topic: privacy
 level: beginner

@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "DAO - Decentralized Autonomous Organization"
-description: "Over time our foundation will become a DAO - a Decentralized Autonomous Organization. Find out what this means here."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. Over time our foundation will become a Decentralized Autonomous Organization (DAO). We discuss this technology at a beginner level in this article."
 permalink: /horizen/beginner/dao-decentralized-autonomous-organization/
 topic: horizen
 level: beginner

@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Your Computer"
-description: "The second device most people use on a daily basis is their computer. Here we look at steps you can take to protect it."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. The second device most people use on a daily basis is their computer. Here we look at steps you can take to protect it."
 permalink: /privacy/advanced/your-computer/
 topic: privacy
 level: advanced

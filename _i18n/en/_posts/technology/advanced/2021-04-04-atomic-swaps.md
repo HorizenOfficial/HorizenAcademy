@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Atomic Swaps"
-description: "An Atomic Swap, a special type of transaction, lets you exchange two different cryptocurrencies without an exchange."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn about atomic swaps at an advanced level."
 permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced

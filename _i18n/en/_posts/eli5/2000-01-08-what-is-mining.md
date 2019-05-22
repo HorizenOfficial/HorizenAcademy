@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is Mining?"
-description: "A miner is somebody that looks at what is happening on the network and records every transfer of money."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency miners in a simple, understandable way."
 permalink: /eli5/what-is-mining/
 topic: eli5
 ---

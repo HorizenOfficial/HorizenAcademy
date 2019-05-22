@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is Consensus?"
-description: "The consensus mechanism makes sure, that the entire network agrees on a single history of transactions."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about the consensus mechanism in a simple, understandable way."
 permalink: /eli5/what-is-consensus/
 topic: eli5
 further_reads: [consensus_for_kids]

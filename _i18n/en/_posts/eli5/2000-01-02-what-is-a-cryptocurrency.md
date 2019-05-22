@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Cryptocurrency?"
-description: "A cryptocurrency is digital money. There are many cryptocurrencies, just like there are many traditional currencies."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn what cryptocurrencies are at a simple, understandable way."
 permalink: /eli5/what-is-a-cryptocurrency/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]

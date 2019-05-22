@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Blockchain as a Data Structure"
-description: "In the first article of this chapter, we will look at how a bockchain stores data and why this makes the data secure."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy.  In this chapter, you will learn how a blockchain stores data and why this makes it suitable to transfer value at a beginner level."
 permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner

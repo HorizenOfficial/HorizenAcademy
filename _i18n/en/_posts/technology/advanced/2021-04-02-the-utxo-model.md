@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "The UTXO Model"
-description: "Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn about the UTXO (Unspent Transaction Output) Model and how to track a user's funds with the UTXO model."
 permalink: /technology/advanced/the-utxo-model/
 topic: technology
 level: advanced

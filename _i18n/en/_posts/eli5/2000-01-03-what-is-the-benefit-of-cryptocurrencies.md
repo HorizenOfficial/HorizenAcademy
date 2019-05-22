@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is the Benefit of Cryptocurrencies?"
-description: "The greatest benefit might be, that everyone can use cryptocurrencies. You only need an app to do so."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article you learn about the benefits of cryptocurrencies in a simple, understandable way."
 permalink: /eli5/what-is-the-benefit-of-cryptocurrencies/
 topic: eli5
 further_reads: [5_amazing_benefits_of_cryptocurrency_a_new_digital_future]

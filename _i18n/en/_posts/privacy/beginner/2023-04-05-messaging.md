@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Messaging"
-description: "Instant messaging is the most used forms of communication today. You should pick a messenger that respects your privacy."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we review the importance of choosing a privacy-based messaging app for communication."
 permalink: /privacy/beginner/messaging/
 topic: privacy
 level: beginner
