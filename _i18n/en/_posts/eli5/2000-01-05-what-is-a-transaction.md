@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Transaction?"
-description: "When you create a transaction you send a message to the network that some of your money now belongs to somebody else."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency transactions in a simple, understandable way."
 permalink: /eli5/what-is-a-transaction/
 topic: eli5
 ---

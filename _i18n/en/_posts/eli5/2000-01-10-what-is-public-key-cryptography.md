@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is Public-Key Cryptography?"
-description: "Blockchains use Public-Key Cryptography to identify the rightful owner of their money."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about public-key cryptography in a simple, understandable way."
 permalink: /eli5/what-is-public-key-cryptography/
 topic: eli5
 ---

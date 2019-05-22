@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "What is a Blockchain?"
-description: "Blockchain from three different perspectives: a way to store data, a protocol to transfer value and programmable money."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we compare blockchain from three different perspectives: a way to store data, a protocol to transfer value and programmable money."
 permalink: /technology/advanced/what-is-a-blockchain/
 topic: technology
 level: advanced

@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "How Does a Blockchain Work?"
-description: "We introduce you to the most important ideas, elements, and entities of a public blockchain starting with an overview."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we review how a blockchain works at an advanced level."
 permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced

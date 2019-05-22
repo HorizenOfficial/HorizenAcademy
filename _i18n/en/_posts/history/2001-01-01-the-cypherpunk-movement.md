@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "The Cypherpunk Movement"
-description: "The Cypherpunks are a group of computer scientist that want to provide strong encryption to the general public."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we discuss a group of computer scientists known as The Cypherpunks."
 permalink: /history/the-cypherpunk-movement/
 topic: history
 chapter: "From Cypherpunks to Horizen"

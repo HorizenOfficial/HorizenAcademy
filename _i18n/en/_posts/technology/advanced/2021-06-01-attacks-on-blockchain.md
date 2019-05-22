@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Attacks on Blockchain"
-description: "We explain the most common attack scenarios on public blockchains and how their risk can be mitigated."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn the most common attack scenarios on public blockchains and how their risk can be mitigated."
 permalink: /technology/advanced/attacks-on-blockchain/
 topic: technology
 level: advanced

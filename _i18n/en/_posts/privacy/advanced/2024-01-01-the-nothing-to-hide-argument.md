@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: 'The "Nothing to Hide" Argument'
-description: 'First we talk about why privacy is important and why the "Nothing to Hide" argument is fundamentally flawed.'
+description: 'The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we discuss the Nothing to Hide Arguement and why it is fundamentally flawed.'
 permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced

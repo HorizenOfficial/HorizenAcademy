@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Resources"
-description: "Using additional resources will help you understand the topics blockchain and cryptocurrency better."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. We have compiled a list of resources for users who would like to learn more about our base technologies."
 permalink: /resources/
 topic: resources
 ---

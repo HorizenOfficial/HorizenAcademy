@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Types of wallets"
-description: "In order to receive and send cryptocurrencies you will use a wallet. Here we explain the different types of wallets."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article. you will learn about the different types of cryptocurrency wallets at an advanced level."
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced

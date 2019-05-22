@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "A Protocol to Transfer Value"
-description: "We compare blockchains as protocols to transfer money with the internet as a protocol to transfer information."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we compare blockchains as protocols to transfer money with the internet as a protocol to transfer information at an advanced level."
 permalink: /technology/advanced/a-protocol-to-transfer-value/
 topic: technology
 level: advanced

@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Sidechains"
-description: "Sidechains are a promising approach to improve upon blockchains. We explain what sidechains are and their benefits."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we explain what sidechains are and how they can improve blockchain ecosystems at a beginner level."
 permalink: /horizen/beginner/sidechains/
 topic: horizen
 level: beginner

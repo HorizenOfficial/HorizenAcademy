@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Summary Beginner"
-description: "We end the Beginner Level of the Technology section with a summary of all the previous chapters. "
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we summarize the topics we discussed in the technology chapter for beginners."
 permalink: /technology/beginner/summary/
 topic: technology
 level: beginner

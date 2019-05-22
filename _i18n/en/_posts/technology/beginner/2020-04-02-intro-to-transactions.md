@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Intro to Transactions"
-description: "We give you an analogy to keep in mind when thinking about what a cryptocurrency transaction is and how it works."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we explain how cryptocurrency transactions work at a beginner level."
 permalink: /technology/beginner/intro-to-transactions/
 topic: technology
 level: beginner

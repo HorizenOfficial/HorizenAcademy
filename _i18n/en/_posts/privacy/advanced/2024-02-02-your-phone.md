@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Your Phone"
-description: "This article shows you where your phone is leaking data and what you can do to prevent this data leakage."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn where your phone is leaking data and what you can do to prevent this data leakage."
 permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced

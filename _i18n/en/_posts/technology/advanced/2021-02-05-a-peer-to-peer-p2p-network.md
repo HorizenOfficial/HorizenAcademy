@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "A Peer-to-Peer (P2P) Network"
-description: 'Here we talk about the "physical" infrastructure that blockchains are running on - the Peer-to-Peer Network.'
+description: 'The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about the peer-to-peer network, also known as, the physical infrastructure that blockchains run on.'
 permalink: /technology/advanced/a-peer-to-peer-p2p-network/
 topic: technology
 level: advanced

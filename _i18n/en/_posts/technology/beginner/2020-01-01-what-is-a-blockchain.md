@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "What is a Blockchain?"
-description: "In this chapter, we explain to you how a blockchain stores data and why this makes it suitable to transfer value."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, you will learn how a blockchain stores data and why this makes it suitable to transfer value at a beginner level."
 permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner

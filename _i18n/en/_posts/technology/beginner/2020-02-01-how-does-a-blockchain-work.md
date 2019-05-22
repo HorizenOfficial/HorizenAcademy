@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "How Does a Blockchain Work?"
-description: "This chapter will bring you up to speed on the basics that make blockchains work. We talk about miners, nodes and keys."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter will bring you up to speed on the basics that make blockchains work at a beginner level."
 permalink: /technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner

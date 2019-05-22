@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Blockchain?"
-description: "Comparing a blockchain and its blocks with a book and its pages."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we compare a blockchain and it's blocks to a book and it's pages."
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]
