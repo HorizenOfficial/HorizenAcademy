@@ -27,7 +27,7 @@ The first password is very hard for a human being to remember but it can be easi
 
 Now the second password is very easy to remember as a human being but it is amazingly hard for a computer to bruteforce it. It will take hundreds of years to crack it.
 
-As we have learned the two basic rules now a third problem arises - we have so many accounts nowadays! How can a normal human being remember so many different passwords? One cannot, obviously. [Password managers]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %} come to save us. These programs manage passwords for us so that we don't even have to remember them. Amazing, right?
+As we have learned the two basic rules now a third problem arises - we have so many accounts nowadays! How can a normal human being remember so many different passwords? One cannot, obviously. [Password managers]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}) come to save us. These programs manage passwords for us so that we don't even have to remember them. Amazing, right?
 
 Using password managers means you can also generate long, complex passwords and do not worry that either human being or a computer can crack or remember it. You can even generate random data for security questions and save them in the software vault itself. It comes at a cost though - now you have a single point of failure so you have to choose a strong password and protect your password manager vault very carefully.
 

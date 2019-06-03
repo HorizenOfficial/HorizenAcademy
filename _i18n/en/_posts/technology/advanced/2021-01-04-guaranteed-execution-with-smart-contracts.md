@@ -12,7 +12,7 @@ further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 
 We have looked at blockchain in two different ways. First as a data structure and second as a protocol to transfer value. For the last article of this chapter about what a blockchain is we want to talk about smart contracts. Besides AI, IoT, and blockchain, smart contracts have been one of the hottest topics over the last two years in the tech world. They are software on the blockchain.
 
-A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to an agreement. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
+A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to something happening in the future. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
 
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
