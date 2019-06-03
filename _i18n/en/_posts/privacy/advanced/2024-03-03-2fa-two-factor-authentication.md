@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "2FA - Two-factor Authentication"
-description: "This article explains another best practice that we encourage you to use: 2-Factor Authentication or 2FA."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we expain why using 2-factor authentification (2FA) is important at an advanced level."
 permalink: /privacy/advanced/2fa-two-factor-authentication/
 topic: privacy
 level: advanced

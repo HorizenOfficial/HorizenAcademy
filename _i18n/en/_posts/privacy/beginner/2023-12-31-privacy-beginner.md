@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Privacy Beginner"
-description: "If you are new to digital privacy you can find out where your privacy is compromised and how you can protect it."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we show you where your digital privacy is most compromised and how you can protect it."
 permalink: /privacy/beginner/
 topic: privacy
 level: beginner

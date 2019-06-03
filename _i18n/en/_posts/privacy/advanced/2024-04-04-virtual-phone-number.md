@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Virtual Phone Number"
-description: "If you don't want to share your number every time you register for some service a virtual phone number is what you need."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we explain how virtual phone numbers can protect your privacy."
 permalink: /privacy/advanced/virtual-phone-number/
 topic: privacy
 level: advanced

@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Search Engine"
-description: "By using a privacy focus search engine you can reduce the amount of data that is collected about you significantly."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we cover several privacy-focused search engines that enable you to reduce digital data collection. This article is designed for beginners."
 permalink: /privacy/beginner/search-engine/
 topic: privacy
 level: beginner

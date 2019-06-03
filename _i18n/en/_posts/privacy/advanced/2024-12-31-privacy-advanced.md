@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Privacy Advanced"
-description: "This section is for users who have a general understanding of digital privacy but want to know about it in more detail."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter covers several digital privacy topics at an advanced level. These topics are: The Nothing To Hide Arguement, Computer Privacy, Cell Phone Privacy, and the actions you can take to strengthen your digital privacy."
 permalink: /privacy/advanced/
 topic: privacy
 level: advanced

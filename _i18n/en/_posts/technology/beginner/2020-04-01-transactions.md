@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Transactions"
-description: "After we have covered wallets we take a look at what cryptocurrency transactions are and how they work."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, we explain how cryptocurrency transactions work at a beginner level."
 permalink: /technology/beginner/transactions/
 topic: technology
 level: beginner

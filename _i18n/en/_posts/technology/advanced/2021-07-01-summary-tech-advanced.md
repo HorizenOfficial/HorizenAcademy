@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Advanced Summary"
-description: "We end the advanced level of our blockchain technology section with a summary of all the previous chapters."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. We end the advanced level of our blockchain technology section with a summary of the previous chapters."
 permalink: /technology/advanced/summary/
 topic: technology
 level: advanced

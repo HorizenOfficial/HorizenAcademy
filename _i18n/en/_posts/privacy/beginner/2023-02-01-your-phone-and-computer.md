@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Your Phone and Computer"
-description: "In this chapter we show you how your online privacy is compromised on your phone as well as on your computer."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we show you how your online privacy is compromised on your phone and your computer."
 permalink: /privacy/beginner/your-phone-and-computer/
 topic: privacy
 level: beginner

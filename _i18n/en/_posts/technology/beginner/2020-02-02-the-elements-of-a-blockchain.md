@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "The Elements of a Blockchain"
-description: "In this article we want to discuss two important parties that play a role in a blockchain ecosystem: Miners and Nodes. "
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn the role miners and nodes play in a blockchain ecosystem at a beginner level."
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner

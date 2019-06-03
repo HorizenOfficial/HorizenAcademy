@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Beginner"
-description: "We show you how our organization works, how we are funded and what engineering challenges we are facing."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we show you howour organization woks, how we are funded, and some of the engineering challenges we are facing today at a beginner level."
 permalink: /horizen/beginner/
 topic: horizen
 level: beginner

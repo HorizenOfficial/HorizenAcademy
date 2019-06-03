@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Guaranteed Execution with Smart Contracts"
-description: "Cryptocurrencies are sometimes referred to as programmable money. Smart Contracts allow this programmability."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn why cryptocurrencies are sometimes referred to as programmable money."
 permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced

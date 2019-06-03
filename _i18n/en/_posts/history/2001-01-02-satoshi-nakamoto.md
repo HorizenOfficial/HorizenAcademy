@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Satoshi Nakamoto"
-description: "An unknown developer using the pseudonym Satoshi Nakamoto created Bitcoin in 2008 before it went live in January 2009."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we learn more about Satoshi Nakamoto - The creator of Bitcoin."
 permalink: /history/satoshi-nakamoto/
 topic: history
 chapter: "From Cypherpunks to Horizen"

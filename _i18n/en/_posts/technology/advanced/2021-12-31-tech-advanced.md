@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Technology Advanced"
-description: "We take a slightly more technical look at blockchain technology and its parts in this section of the Horizen Academy."
+description: "The Horizen Academy is an educational platform on blockchain technology, cryptocurrency, and privacy. Our blockchain technology content for advanced users includes: What a blockchain is, how it works, cryptocurrency wallets and more."
 permalink: /technology/advanced/
 topic: technology
 level: advanced

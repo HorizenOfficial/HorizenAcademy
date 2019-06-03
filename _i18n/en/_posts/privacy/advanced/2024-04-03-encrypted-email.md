@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Encrypted Email"
-description: "Sending encrypted emails reduces the risk of somebody snooping in on your mail and is easier to set up than most think."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn about encrypted emails. Sending encrypted emails reduces the risk of somebody snooping in on your mail and is easier to set up than most think."
 permalink: /privacy/advanced/encrypted-email/
 topic: privacy
 level: advanced

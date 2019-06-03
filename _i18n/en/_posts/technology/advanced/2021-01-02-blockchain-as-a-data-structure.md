@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Blockchain as a Data Structure"
-description: "This article explains blockchain from a computer scientists perspective looking at it as a data structure."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This article explains blockchain at an advanced level from a computer scientist's perspective looking at it as a data structure."
 permalink: /technology/advanced/blockchain-as-a-data-structure/
 topic: technology
 level: advanced

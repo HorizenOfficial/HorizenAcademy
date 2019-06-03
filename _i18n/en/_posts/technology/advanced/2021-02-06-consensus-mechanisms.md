@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Consensus Mechanisms"
-description: "There are many peers in a blockchain and the consensus mechanism has all of them agree on a single history of events."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about consensus mechanisms at an advanced level."
 permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced

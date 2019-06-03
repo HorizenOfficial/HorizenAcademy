@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Block Explorer Introduction"
-description: "A block explorer lets you find information on a blockchain, like a browser lets you access information on the internet."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we introduce block explorers at a beginner level."
 permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner

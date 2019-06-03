@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "What is a Peer-to-Peer Network?"
-description: "In a Peer-to-Peer network, every participant is connected to everybody else. This makes it very robust."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about Peer-to-Peer networks in a simple, understandable way."
 permalink: /eli5/what-is-a-peer-to-peer-network/
 topic: eli5
 ---
