@@ -22,7 +22,7 @@ Enabling 2FA is one of the best security best practices you can employ as it pro
 
 ### How Does 2FA Work?
 
-2FA works by requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like Microsoft Authenticator, Google Authenticator or others. Using a separate code generating application is a better practice because you can use it offline or in another country without turning on a roaming service. You can also be sure that no one takes over your mobile number and get an SMS before you or alter it in some form or another.
+2FA works by requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like Microsoft Authenticator, Google Authenticator or others. Using a separate code generating application is a better practice because you can use it offline or in another country without turning on a roaming service. You can also be sure that no one takes over your mobile number and gets an SMS before you or alters it in some form or another.
 
 ![2FA](/assets/post_files/privacy/beginner/2fa/2fa_D.jpg)
 ![2FA](/assets/post_files/privacy/beginner/2fa/2fa_M.jpg)
