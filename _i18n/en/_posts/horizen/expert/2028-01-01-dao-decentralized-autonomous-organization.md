@@ -8,7 +8,7 @@ topic: horizen
 level: expert
 ---
 
-IOHK’s Roman Oliynykov published a paper in cooperation with Bingsheng Zhang and Hamed Balogun from Lancaster University describing a treasury system that could be deployed on various cryptocurrencies regardless of the consensus mechanism used. A prototype has been implemented in Scala over the Scorex 2.0 framework. You can find a detailed presentation here. Rob Viglione explained the implications in a short video on Twitter. Horizen is working towards implementing the proposed treasury system to decide upon and distribute our treasury funds in a decentralized fashion.
+IOHK’s Roman Oliynykov published a paper in cooperation with Bingsheng Zhang and Hamed Balogun from Lancaster University describing a treasury system that could be deployed on various cryptocurrencies regardless of the consensus mechanism used. A prototype has been implemented in Scala over the Scorex 2.0 framework. Rob Viglione explained the implications in a short video on Twitter. Horizen is working towards implementing the proposed treasury system to decide upon and distribute our treasury funds in a decentralized fashion.
 
 We summarize the paper and provide some context in this article.
 
