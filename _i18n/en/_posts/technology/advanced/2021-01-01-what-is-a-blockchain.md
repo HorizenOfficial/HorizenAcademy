@@ -9,7 +9,7 @@ level: advanced
 chapter: "What is a Blockchain?"
 ---
 
-We would like to look at blockchain from three different perspectives in the first section of our intermediate technology category.
+We would like to look at blockchain from three different perspectives in the first section of our advanced technology section.
 
 <div class="row mt-5">
     <div class="col-md-3">
