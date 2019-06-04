@@ -28,8 +28,6 @@ With asymmetric cryptography, you encrypt and decrypt text with two different ke
 
 ### Your Key Pair is Your Identity
 
-This boils down to a simple concept: Your key pair is your identity on the blockchain.
-
 The idea in cryptocurrencies is that you are receiving funds with your public key and spending them with your private key. Those keys were intentionally named public and private key. You can share your public key with anybody that wants to send you funds. Your private key, as the name suggests, should remain private under all circumstances, because it allows you to spend your funds. If somebody else gets their hands on your private key, they can access and steal your funds.
 
 The real life comparison you will hear most often is your public key being like your address. You can give it to anybody that wants to send you a letter. Your private key is like the key to your postbox. Only this key lets you access your mail and you wouldn't hand it to a stranger. If you want to learn about this concept in more detail, you will find a more in-depth explanation in the intermediate section and an exact description in the advanced section.  
