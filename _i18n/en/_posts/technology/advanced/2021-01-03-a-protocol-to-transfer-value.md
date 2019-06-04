@@ -12,7 +12,7 @@ further_reads: [why_bitcoin_lightning_network_is_ingenious]
 
 We will now look at blockchain from a different perspective. This perspective considers the use of blockchain technology as a settlement network for financial transactions and the rules and conventions that make a blockchain work. 
 
-> “[The] Bitcoin protocol and network today [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
+> “[The] Bitcoin protocol and network today is [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
 
 The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. [Techopedia's definition](https://www.techopedia.com/definition/12938/network-protocols) of a network protocol goes as follows:
 
