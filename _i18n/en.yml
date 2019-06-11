@@ -1,4 +1,3 @@
-global:
 titles:
   homepage: Horizen Academy
   content-overview: Content Overview
@@ -8,3 +7,33 @@ descriptions:
 keywords:
   homepage: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
   content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+
+
+nav:
+  home: Home
+  built: Built on Horizen
+  get-zen: Get ZEN
+  use-zen: Use ZEN
+  earn-zen: Earn ZEN
+  mining-pools: Mining Pools
+  secure-nodes: Secure Nodes
+  super-nodes: Super Nodes
+  faucet: ZEN Faucet
+  forum: Submit a Proposal
+  community: Community
+  academy: Academy
+
+menu:
+  level:
+    beginner: Beginner
+    advanced: Advanced
+    expert: Expert
+  topic:
+    technology: Technology
+    privacy: Privacy
+    horizen: Horizen
+    history: History
+    eli5: "Explain it Like I'm 5"
+    resources: Resources
+  see-all-content: See all Content
+

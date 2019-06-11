@@ -53,6 +53,11 @@ $(function () {
         }
     });
 
+    $(".toggle-languages").click(function (e) {
+        e.preventDefault();
+        $(".language-select").toggleClass("show");
+    });
+
 
     // update menu icon, always run on init
     articleNav.find(".chapter-articles").each(function (_, chapter) {

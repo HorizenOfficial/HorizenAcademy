@@ -139,6 +139,11 @@ gulp.task('watch', function () {
     ], ['jekyll-rebuild']);
 });
 
+// shortcut
+gulp.task('b', ['jekyll-build']);
+gulp.task('js', ['concat']);
+gulp.task('css', ['sass']);
+
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.

@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse" id="header-navbars">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global" target="_blank">Home</a>
+                    <a class="nav-link" href="https://www.horizen.global" target="_blank">{% t nav.home %}</a>
                 </li>
                 <li class="nav-item dropdown" id="built-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="built-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Built on Horizen</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="built-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.built %}</a>
                     <div class="dropdown-menu" aria-labelledby="built-nav">
                         <a class="dropdown-item" href="https://www.horizen.global/zen/" target="_blank">ZEN</a>
                         <a class="dropdown-item" href="https://www.horizen.global/zenchat/" target="_blank">ZenChat</a>
@@ -30,23 +30,23 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global/exchanges/" target="_blank">Get ZEN</a>
+                    <a class="nav-link" href="https://www.horizen.global/exchanges/" target="_blank">{% t nav.get-zen %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global/wallets/" target="_blank">Use ZEN</a>
+                    <a class="nav-link" href="https://www.horizen.global/wallets/" target="_blank">{% t nav.use-zen %}</a>
                 </li>
                 <li class="nav-item dropdown" id="earn-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="earn-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Earn ZEN</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="earn-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.earn-zen %}</a>
                     <div class="dropdown-menu" aria-labelledby="earn-nav">
-                        <a class="dropdown-item" href="https://www.horizen.global/mining-pools/" target="_blank">Mining Pools</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/securenodes/" target="_blank">Secure Nodes</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/supernodes/" target="_blank">Super Nodes</a>
-                        <a class="dropdown-item" href="https://getzen.cash/" target="_blank">ZEN Faucet</a>
-                        <a class="dropdown-item" href="https://forum.horizen.global/" target="_blank">Submit a Proposal</a>
+                        <a class="dropdown-item" href="https://www.horizen.global/mining-pools/" target="_blank">{% t nav.mining-pools %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.global/securenodes/" target="_blank">{% t nav.secure-nodes %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.global/supernodes/" target="_blank">{% t nav.super-nodes %}</a>
+                        <a class="dropdown-item" href="https://getzen.cash/" target="_blank">{% t nav.faucet %}</a>
+                        <a class="dropdown-item" href="https://forum.horizen.global/" target="_blank">{% t nav.forum %}</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.community %}</a>
                     <div class="dropdown-menu" aria-labelledby="community">
                         <a class="dropdown-item" href="https://twitter.com/horizenglobal" target="_blank">Twitter</a>
                         <a class="dropdown-item" href="https://horizen.global/invite/discord" target="_blank">Discord</a>
@@ -61,10 +61,10 @@
                     </div>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% tl homepage %}">Academy</a>
+                    <a class="nav-link" href="{% tl homepage %}">{% t nav.academy %}</a>
                 </li>
-                <li class="nav-item d-none">
-                    <a class="nav-link toggle-languages" href="#">EN</a>
+                <li class="nav-item">
+                    <a class="nav-link toggle-languages text-uppercase" href="#">{{ site.lang }}</a>
                 </li>
             </ul>
         </div>
