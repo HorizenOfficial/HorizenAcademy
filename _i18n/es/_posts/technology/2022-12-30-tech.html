@@ -1,0 +1,243 @@
+---
+layout: default
+type: intro
+title: "Tecnología"
+description: "El contenido de este espacio se encuentra disponible en tres niveles de conocimiento: Principiante, Avanzado y Experto."
+permalink: /technology/
+topic: technology
+css: |
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+  .welcome-text ul {
+    list-style: none;
+  }
+  .welcome-text li:before {
+    content: "\2022";
+    color: #0e9de5;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  .icon-level {
+    height: 50px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .table-levels {
+    border-spacing: 16px 0;
+    border-collapse: separate;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .table-levels td {
+    border-left: 1px solid #f5f6fa;
+    border-right: 1px solid #f5f6fa;
+    padding: 0.6rem 1.2rem;
+  }
+  .table-levels tr:first-child td {
+    border-top: 1px solid #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+  .table-levels tr:last-child td {
+    border-bottom: 1px solid #f5f6fa;
+    background-color: #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .table-levels tr:last-child td {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  .table-levels a {
+    text-decoration: none;
+    color: #041742;
+  }
+---
+
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h2 class="post-title text-uppercase">{{ page.title }}</h2>
+        </div>
+        <div class="col-md-8 welcome-text">
+            <p>
+                Bienvenido a la sección de tecnología de Horizen Academy. El contenido de esta sección se ha creado con dos cosas en mente:
+            </p>
+            <ul>
+                <li>Crear contenido para todos, sin importar el nivel de conocimiento.</li>
+                <li>Mantener una estructura uniforme a lo largo de las lecciones.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+
+        <hr class="mt-5 mb-5">
+
+
+        <h3>Conocimiento para todos</h3>
+
+        <p>
+            El contenido de este espacio se encuentra disponible en tres niveles de conocimiento: 
+        </p>
+
+        <div class="table-responsive d-none d-md-block">
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Principiante
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avanzado
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Experto
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Para alguien nuevo a los temas de las criptomonedas y cadena de bloques.
+                    </td>
+                    <td>
+                        Para alguien con una comprensión general de qué son las criptomonedas y cadenas de bloques, pero que quiere saber más al respecto.
+                    </td>
+                    <td>
+                        Para alguien familiarizado técnicamente con las criptomonedas y cadenas de bloques, pero que quiere ahondar en características específicas, fórmulas matemáticas y pedazos de código.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Explicaciones por analogía y poca terminología técnica.</li>
+                            <li>Lecciones de 5 a 10 minutos.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Se introduce terminología técnica.</li>
+                            <li>Lecciones de 8 a 15 minutos.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Alta frecuencia de terminología técnica.</li>
+                            <li>Lecciones de 10 a 20 minutos.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive d-block d-md-none">
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Principiante
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Para alguien nuevo a los temas de las criptomonedas y cadena de bloques.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Explicaciones por analogía y poca terminología técnica</li>
+                            <li>Lecciones de 5 a 10 minutos.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avanzado
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Para alguien con una comprensión general de qué son las criptomonedas y cadenas de bloques, pero que quiere saber más al respecto.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Se introduce terminología técnica.</li>
+                            <li>Lecciones de 8 a 15 minutos.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Experto
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Para alguien familiarizado técnicamente con las criptomonedas y cadenas de bloques, pero que quiere ahondar en características específicas, fórmulas matemáticas y pedazos de código.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Alta frecuencia de terminología técnica.</li>
+                            <li>Lecciones de 10 a 20 minutos.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Si al leer un artículo siente que el texto es complicado, puede ajustar el nivel y leerlo escrito de manera más sucinta y con una menor cantidad de tecnicismos. Al contrario, si siente que el artículo es demasiado sencillo, puede aumentar la dificultad y encontrar explicaciones a mayor detalle del mismo contenido. Si primero necesita algo de orientación, contamos también con una
+            <a href="{% tl content-overview %}#tab-technology">vista general de todo nuestro contenido.</a>
+        </p>
+
+        <h3>La estructura</h3>
+
+        <p>
+            La estructura general de nuestro contenido es la misma en todos los niveles. El usuario encontrará las mismas secciones en el nivel principiante que en el experto. Conforme el nivel incremente, mayor cantidad de artículos que se encontrarán en cada sección. Por ejemplo, se dedicarán artículos enteros a conceptos que se mencionan solo brevemente en niveles de menor conocimiento. Esta organización permite al usuario cambiar entre niveles si considera que el actual es demasiado complejo o sencillo.
+        </p>
+
+        <p>
+            Los artículos están diseñados para poder leerse en secuencia o por separado. Para lograr un aprendizaje holístico, se recomienda leerlos de principio a fin. En todo caso, si al usuario le interesa un tema en específico, puede leer el artículo correspondiente de manera individual.
+        </p>
+
+
+    </div>
+</div>
