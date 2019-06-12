@@ -36,19 +36,19 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <input name="MERGE1" type="text" class="form-control" placeholder="Name">
+                            <input name="MERGE1" type="text" class="form-control" placeholder="{% t newsletter.name %}">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <input name="MERGE0" type="email" class="form-control" placeholder="Email">
+                            <input name="MERGE0" type="email" class="form-control" placeholder="{% t newsletter.email %}">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
                             <select name="MERGE6" class="form-control">
-                                <option value="">Country</option>
-                                <option selected value="">Country (Optional)</option>
+                                <option value="">{% t newsletter.country %}</option>
+                                <option selected value="">{% t newsletter.country %} ({% t newsletter.optional %})</option>
                                 {% for country in site.data.countryNames %}
                                 <option value="{{country[1]}}">{{country[1]}}</option>
                                 {% endfor %}
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <button class="btn btn-info btn-block text-uppercase" type="submit">Subscribe to updates</button>
+                            <button class="btn btn-info btn-block text-uppercase" type="submit">{% t newsletter.subscribe %}</button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                     Your browser blocked the form submit. You can <a href="https://zencash.us15.list-manage.com/subscribe?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" target="_blank">sign up here instead</a>.
                 </p>
                 <p class="email-success" style="display: none;">
-                    Success! Please check your email to confirm we have the right one.
+                    {% t newsletter.msg-success %}
                 </p>
                 <p class="email-feedback"></p>
             </div>
@@ -79,11 +79,11 @@
 
     <div class="site-footer text-center site-wrapper">
         <div class="container-fluid">
-            <p class="copyright">© 2019 Horizen. All rights reserved.</p>
+            <p class="copyright">© 2019 Horizen. {% t footer.copyright %}.</p>
             <p class="links">
-                <a href="#">Legal</a>
+                <a href="#">{% t footer.legal %}</a>
                 |
-                <a href="#">Privacy Policy</a>
+                <a href="#">{% t footer.privacy-policy %}</a>
             </p>
         </div>
     </div>

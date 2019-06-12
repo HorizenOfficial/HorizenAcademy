@@ -14,13 +14,13 @@ Un explorador de bloques es una herramienta que permite al usuario explorar la c
 Esto es lo que puede esperarse al explorar una dirección con un explorador de bloques (la mayoría de ellos funcionan de manera similar). La dirección que se buscó para este ejemplo tomado de un explorador de bloques de Horizen se encuentra en la parte superior: znf7; digamos que esta dirección le pertenece a Bob.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.png" alt="Resumen de dirección del explorador">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.jpg" alt="Resumen de dirección del explorador">
 </div>
 
 En la parte superior de la página, se encuentra un resumen de la actividad de la dirección. La información que aparece incluye la cantidad total recibida y enviada desde esta dirección, así como el saldo actual. La dirección en cuestión ha recibido un total de 42 ZEN. Bob no le ha enviado ningún ZEN a nadie, por lo que aún tiene un saldo de 42 ZEN.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.png" alt="Transacción de la dirección en el explorador">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.jpg" alt="Transacción de la dirección en el explorador">
 </div>
 
 Todas las transacciones relacionadas a esta dirección pueden encontrarse debajo del resumen de la dirección. Esta cuenta ha participado en una sola transacción hasta ahora. Una transacción se caracteriza por su número de identificación individual, en este caso la secuencia de números azules en la parte superior de la caja gris (a46f…).

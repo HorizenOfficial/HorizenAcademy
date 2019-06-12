@@ -14,7 +14,7 @@ Utilizar la misma contraseña en diferentes sitios y aplicaciones es quizás la 
 
 Es de suma importancia que el usuario utilice una contraseña distinta para cada sitio o aplicación en el que tenga una cuenta. Considere este hábito como la práctica de seguridad personal número uno.
 
-![password in ES](/assets/post_files/privacy/beginner/strong-passwords/ES_password.png)
+![password in ES](/assets/post_files/privacy/beginner/strong-passwords/ES_password.jpg)
 
 [Source](https://xkcd.com/936/)
 

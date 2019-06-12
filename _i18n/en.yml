@@ -15,7 +15,7 @@ nav:
   get-zen: Get ZEN
   use-zen: Use ZEN
   earn-zen: Earn ZEN
-  mining-pools: Mining Pools
+  mine-zen: Mine ZEN
   secure-nodes: Secure Nodes
   super-nodes: Super Nodes
   faucet: ZEN Faucet
@@ -37,3 +37,17 @@ menu:
     resources: Resources
   see-all-content: See all Content
 
+
+footer:
+  legal: Legal
+  privacy-policy: Privacy Policy
+  copyright: PAll rights reserved
+
+
+newsletter:
+  name: Name
+  email: Email
+  country: Country
+  optional: Optional
+  subscribe: Subscribe to updates
+  msg-success: Success! Please check your email to confirm we have the right one.
