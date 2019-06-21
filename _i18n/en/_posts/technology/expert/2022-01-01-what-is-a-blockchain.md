@@ -15,7 +15,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/DS2.svg" alt="Blockchain Data" />
         </a>
     </div>
@@ -33,7 +33,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expeert/2022-01-03-a-protocol-to-transfer-value %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
         </a>
     </div>
@@ -51,7 +51,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
         </a>
     </div>
@@ -69,12 +69,12 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2021-01-05-a-relative-the-dag %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Guaranteed Execution with Smart Contracts</h5>
+        <h5 class="intro-article-title">A Relative - The DAG</h5>
         <p class="mb-1">
             Lastly, we look at DAGs - directed acyclic graphs. A blockchain is the most simple form of a DAG, which is a term used in mathematics to describe a structure of elements in a certain relation to one another. How the concept of blockchain and decentralized consensus can be extended to other data structures is covered in this article.
         </p>
