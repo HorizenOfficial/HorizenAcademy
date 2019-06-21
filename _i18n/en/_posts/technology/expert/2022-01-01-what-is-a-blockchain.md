@@ -25,7 +25,7 @@ In this first chapter we will look at what a blockchain is in general from four 
             First, from a computer scientists perspective looking at blockchain as a data structure. How does a blockchain compare to other data structures? How is data stored in a blockchain? What special properties does it have to offer?
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -33,7 +33,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expeert/2022-01-03-a-protocol-to-transfer-value %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
         </a>
     </div>
@@ -43,7 +43,7 @@ In this first chapter we will look at what a blockchain is in general from four 
             Secondly, from a more philosophical perspective; reviewing the implications of blockchain technology used for value transfer. What is social scalibility and how does blockchain help achieve it? What are the rules of the network?
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -61,7 +61,7 @@ In this first chapter we will look at what a blockchain is in general from four 
             Thirdly, we discuss smart contracts, a technology that blockchain technology enables. You can summarize smart contracts as digital contracts with guaranteed execution. You might have heard the term programmable money in the context of cryptocurrencies before. Smart contracts are the technology that enables this programmability.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -79,7 +79,7 @@ In this first chapter we will look at what a blockchain is in general from four 
             Lastly, we look at DAGs - directed acyclic graphs. A blockchain is the most simple form of a DAG, which is a term used in mathematics to describe a structure of elements in a certain relation to one another. How the concept of blockchain and decentralized consensus can be extended to other data structures is covered in this article.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2021-01-05-a-relative-the-dag %}">Read Article</a>
         </p>
     </div>
 </div>
