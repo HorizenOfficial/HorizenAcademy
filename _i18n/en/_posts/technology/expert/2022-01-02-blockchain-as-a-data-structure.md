@@ -191,9 +191,10 @@ Each transaction is broadcast in a serialized byte format called raw format. It 
 
 Ok, that was a lot. We hope you're still with us. This passage referred to many concepts already introduced in our Advanced Section. To develop a thorough understanding of blockchain technology, and this is what the Expert Section is aiming for, we need to bring the individual concepts together and understand their relation.
 
-Transactions, being the basic building block of a blockchain, are an example of this. First, an understanding of the **UTXO model** is necessary that makes up the accounting scheme used in most cryptocurrencies. Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of **public-key cryptography**: private keys, public keys, addresses and digital signatures. Each *tx\_ in* includes a signature that authorizes spending and each newly created output *tx\_ out* includes information about what a signature needs to look like in order to authorize its spending later on. We will take an in depth look at generating and verifying digital signatures in our **chapter on PKC**.
-
-In the last chapter of the Expert Section we will also take a look at **Script** which can be understood as a very simple programming language that is used by the bitcoin client to handle transactions and data in general. 
+Transactions, being the basic building block of a blockchain, are an example of this. 
+First, an understanding of the **UTXO model** is necessary that makes up the accounting scheme used in most cryptocurrencies. 
+Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of **public-key cryptography**: private keys, public keys, addresses and digital signatures. Each *tx\_ in* includes a signature that authorizes spending and each newly created output *tx\_ out* includes information about what a signature needs to look like in order to authorize its spending later on. We will take an in depth look at generating and verifying digital signatures in our **chapter on PKC**.
+In the last chapter of the Expert Section we will also take a look at *Script* which is a simple scripting system that is used by the bitcoin client to handle transactions and data in general. 
 
 ### Summary
 
