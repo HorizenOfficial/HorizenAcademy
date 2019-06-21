@@ -135,6 +135,8 @@ Over time accounting has evolved in three steps. First single entry accounting w
 
 *Triple entry bookkeeping* now makes it impossible to create funds out of thin air, assuming the overall network is controlled by a majority of honest participants. Each transaction comes with three entries: a credit to the recipient, a debit to the payer, and a public receipt, the recorded transaction on the ledger. Because everyone can keep a copy of the entire transaction history, no actor can create a fraudulent credit for themselves. You can trust *the system itself* instead of having to trust a third party like auditors or banks.
 
+**triple entry graphic**
+
 Triple entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article "Why Bitcoin’s Lightning Network is Ingenious" that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double entry bookkeeping system on top of the blockchain - a second layer solution like the **Lightning Network**.
 
 #### Seperation of money and state
