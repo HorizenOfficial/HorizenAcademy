@@ -74,7 +74,7 @@ As Jimmy Song puts it: "A smart contract that trusts a third party removes the k
 ### Summary
 
 You should have a good idea of what a blockchain is. We looked at it as a data structure and as a set of rules. A blockchain can store data reliably due to the distributed nature of the ledger. Anybody can participate in the network without any permission or registration as long as he follows the rules of the protocol. This makes public blockchains censorship-resistant, permissionless, trustless, and valuable. It can not only store pieces of data but also programs running in a distributed fashion.  
-Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and safe time. They will most likely foster a closer connection between software developers and the judicial system. Before we can see widespread adoption we have to overcome some hurdles. Regulators have to create a framework to allow deployment of legally binding smart contracts and decentralized oracles need to be developed.
+Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and save time. They will most likely foster a closer connection between software developers and the judicial system. Before we can see widespread adoption we have to overcome some hurdles. Regulators have to create a framework to allow deployment of legally binding smart contracts and decentralized oracles need to be developed.
 
 This was the last article in the chapter on what a blockchain is and what it can do. In the next chapter, we will take a look at how blockchains work.
 

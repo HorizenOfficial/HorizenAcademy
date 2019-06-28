@@ -24,7 +24,7 @@ Dr. David Chaum started writing on topics such as anonymous digital cash and pse
 
 ### The Cypherpunks
 
-It wasn't until 1992 that a group of cryptographers in the San Francisco Bay area started meeting up on a regular basis to discuss their work and related ideas. They built a basis for years of cryptographic research to come. Besides their regular meetings, they also started the Cypherpunk mailing list in which they discussed many ideas including those which led to the birth of Bitcoin. In late 1992 Eric Hughes, one of the first cypherpunks, wrote ["A Cypherpunks's Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) laying out the ideals and vision of the movement.
+It wasn't until 1992 that a group of cryptographers in the San Francisco Bay area started meeting up on a regular basis to discuss their work and related ideas. They built a basis for years of cryptographic research to come. Besides their regular meetings, they also started the Cypherpunk mailing list in which they discussed many ideas including those which led to the birth of Bitcoin. In late 1992 Eric Hughes, one of the first cypherpunks, wrote ["A Cypherpunk's Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) laying out the ideals and vision of the movement.
 
 _Note: We encourage you to read A Cypherpunk's Manifesto. The Manifesto is just as relevant today (if not more than) as it was in 1992. This short read takes only a few minutes of your time. It's astonishing to see how much foresight the early members had when most people didn't even think about computers yet._ 
 
@@ -36,7 +36,7 @@ _"Privacy is necessary for an open society in the electronic age. Privacy is not
 
 _"Privacy in an open society also requires cryptography. If I say something, I want it heard only by those for whom I intend it. If the content of my speech is available to the world, I have no privacy. To encrypt is to indicate the desire for privacy, and to encrypt with weak cryptography is to indicate not too much desire for privacy."_
 
-_"We must defend our own privacy if we expect to have any. We must come together and create systems which allow anonymous transactions to take place. People have been defending their own privacy for centuries with whispers, darkness, envelopes, closed doors, secret handshakes, and couriers. The technologies of the past did not allow for strong privacy, but electronic technologies do._
+_"We must defend our own privacy if we expect to have any. We must come together and create systems which allow anonymous transactions to take place. People have been defending their own privacy for centuries with whispers, darkness, envelopes, closed doors, secret handshakes, and couriers. The technologies of the past did not allow for strong privacy, but electronic technologies do."_
 
 _"We the Cypherpunks are dedicated to building anonymous systems. We are defending our privacy with cryptography, with anonymous mail forwarding systems, with digital signatures, and with electronic money."_
 
