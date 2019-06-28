@@ -24,25 +24,28 @@ nav:
   community: Comunidad
   academy: Academia
 
+levels:
+  beginner: Principiante
+  advanced: Avanzado
+  expert: Experto
+
+topics:
+  technology: Tecnología
+  privacy: Privacidad
+  horizen: Horizen
+  history: Historia
+  eli5: "Explain it Like I'm 5"
+  resources: Resources
+
 menu:
-  level:
-    beginner: Principiante
-    advanced: Avanzado
-    expert: Experto
-  topic:
-    technology: Tecnología
-    privacy: Privacidad
-    horizen: Horizen
-    history: Historia
-    eli5: "Explain it Like I'm 5"
-    resources: Resources
   see-all-content: See all Content
 
 
 footer:
   legal: Legal
   privacy-policy: Privacy Policy
-  copyright: PAll rights reserved
+  copyright: All rights reserved
+  share-this-article: 'Share this article:'
 
 
 newsletter:
@@ -55,3 +58,10 @@ newsletter:
 
 post:
   further-reading: Lecturas adicionales (inglés)
+
+
+# pages
+content-overview:
+  title: CONTENT OVERVIEW
+  eli5: ELI5
+  chapter: Chapter

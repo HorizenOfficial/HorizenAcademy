@@ -93,7 +93,7 @@ gulp.task('concat', function() {
         // paths.bower + 'bLazy/blazy.min.js',
         // paths.bower + 'aos/dist/aos.js',
         // paths.bower + 'lity/dist/lity.js',
-        // paths.bower + 'select2/dist/js/select2.min.js',
+        paths.bower + 'select2/dist/js/select2.min.js',
         paths.bower + 'ajaxchimp/jquery.ajaxchimp.js',
         // paths.bower + 'js-cookie/src/js.cookie.js',
         // paths.bower + 'moment/moment.js',

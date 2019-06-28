@@ -13,10 +13,10 @@
                     <a href="#" class="js-SelectLevel" data-level="beginner">
                         <div class="level beginner">
                             <div class="icon">
-                                <img src="/assets/img/icons/levels/beginner-1.svg" alt="Beginner" class="icon-inactive">
-                                <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-active">
+                                <img src="/assets/img/icons/levels/beginner-1.svg" alt="{% t levels.beginner %}" class="icon-inactive">
+                                <img src="/assets/img/icons/levels/beginner-2.svg" alt="{% t levels.beginner %}" class="icon-active">
                             </div>
-                            <div class="level-name">{% t menu.level.beginner %}</div>
+                            <div class="level-name">{% t levels.beginner %}</div>
                         </div>
                     </a>
                 </div>
@@ -24,10 +24,10 @@
                     <a href="#" class="js-SelectLevel" data-level="advanced">
                         <div class="level advanced">
                             <div class="icon">
-                                <img src="/assets/img/icons/levels/advanced-1.svg" alt="Advanced" class="icon-inactive">
-                                <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-active">
+                                <img src="/assets/img/icons/levels/advanced-1.svg" alt="{% t levels.advanced %}" class="icon-inactive">
+                                <img src="/assets/img/icons/levels/advanced-2.svg" alt="{% t levels.advanced %}" class="icon-active">
                             </div>
-                            <div class="level-name">{% t menu.level.advanced %}</div>
+                            <div class="level-name">{% t levels.advanced %}</div>
                         </div>
                     </a>
                 </div>
@@ -35,10 +35,10 @@
                     <a href="#" class="js-SelectLevel" data-level="expert">
                         <div class="level expert">
                             <div class="icon">
-                                <img src="/assets/img/icons/levels/expert-1.svg" alt="Expert" class="icon-inactive">
-                                <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-active">
+                                <img src="/assets/img/icons/levels/expert-1.svg" alt="{% t levels.expert %}" class="icon-inactive">
+                                <img src="/assets/img/icons/levels/expert-2.svg" alt="{% t levels.expert %}" class="icon-active">
                             </div>
-                            <div class="level-name">{% t menu.level.expert %}</div>
+                            <div class="level-name">{% t levels.expert %}</div>
                         </div>
                     </a>
                 </div>
@@ -58,7 +58,7 @@
                         <img src="/assets/img/icons/topics/technology-1.svg" alt="Technology" class="icon-inactive">
                         <img src="/assets/img/icons/topics/technology-2.svg" alt="Technology" class="icon-active">
                     </div>
-                    <span class="topic-name">{% t menu.topic.technology %}</span>
+                    <span class="topic-name">{% t topics.technology %}</span>
                 </div>
             </a>
 
@@ -131,7 +131,7 @@
                         <img src="/assets/img/icons/topics/privacy-1.svg" alt="Privacy" class="icon-inactive">
                         <img src="/assets/img/icons/topics/privacy-2.svg" alt="Privacy" class="icon-active">
                     </div>
-                    <span class="topic-name">{% t menu.topic.privacy %}</span>
+                    <span class="topic-name">{% t topics.privacy %}</span>
                 </div>
             </a>
             <a href="#list-privacy-articles" data-toggle="collapse" class="d-none"></a>
@@ -205,7 +205,7 @@
                         <img src="/assets/img/icons/topics/horizen-1.svg" alt="Horizen" class="icon-inactive">
                         <img src="/assets/img/icons/topics/horizen-2.svg" alt="Horizen" class="icon-active">
                     </div>
-                    <span class="topic-name">{% t menu.topic.horizen %}</span>
+                    <span class="topic-name">{% t topics.horizen %}</span>
                 </div>
             </a>
 
@@ -248,7 +248,7 @@
             <div class="topic-history one-level-topic">
                 <a href="{{ site.baseurl }}{% post_url /history/2001-12-31-history %}" class="js-SelectTopic" data-topic="history">
                     <div class="topic history">
-                        <span class="topic-name">{% t menu.topic.history %}</span>
+                        <span class="topic-name">{% t topics.history %}</span>
                     </div>
                 </a>
                 <a href="#list-history-articles" data-toggle="collapse" class="arrow">
@@ -278,7 +278,7 @@
             <div class="topic-eli5 one-level-topic">
                 <a href="{{ site.baseurl }}{% post_url /eli5/2000-12-31-eli5 %}" class="js-SelectTopic" data-topic="eli5">
                     <div class="topic eli5">
-                        <span class="topic-name">{% t menu.topic.eli5 %}</span>
+                        <span class="topic-name">{% t topics.eli5 %}</span>
                     </div>
                 </a>
                 <a href="#list-eli5-articles" data-toggle="collapse" class="arrow">
@@ -308,7 +308,7 @@
             <div class="topic-resources one-level-topic">
                 <a href="{{ site.baseurl }}{% post_url /resources/2002-12-31-resources %}" class="js-SelectTopic" data-topic="resources">
                     <div class="topic resources">
-                        <span class="topic-name">{% t menu.topic.resources %}</span>
+                        <span class="topic-name">{% t topics.resources %}</span>
                     </div>
                 </a>
                 <a href="#list-resources-articles" data-toggle="collapse" class="arrow">

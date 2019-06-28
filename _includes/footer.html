@@ -2,7 +2,7 @@
     <div class="footer-share-social site-wrapper text-right">
         {% capture share_link %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
         <div class="container-fluid">
-            Share this article:
+            {% t footer.share-this-article %}
 
             <!-- Twitter -->
             <a href="https://twitter.com/share?url={{ share_link }}&text={{ page.title }}&hashtags=Horizen" target="_blank">
@@ -46,9 +46,8 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <select name="MERGE6" class="form-control">
-                                <option value="">{% t newsletter.country %}</option>
-                                <option selected value="">{% t newsletter.country %} ({% t newsletter.optional %})</option>
+                            <select name="MERGE6" class="form-control js-Select2" data-placeholder="{% t newsletter.country %} ({% t newsletter.optional %})">
+                                <option></option>
                                 {% for country in site.data.countryNames %}
                                 <option value="{{country[1]}}">{{country[1]}}</option>
                                 {% endfor %}

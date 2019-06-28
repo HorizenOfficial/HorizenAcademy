@@ -23,25 +23,28 @@ nav:
   community: Community
   academy: Academy
 
+levels:
+  beginner: Beginner
+  advanced: Advanced
+  expert: Expert
+
+topics:
+  technology: Technology
+  privacy: Privacy
+  horizen: Horizen
+  history: History
+  eli5: "Explain it Like I'm 5"
+  resources: Resources
+
 menu:
-  level:
-    beginner: Beginner
-    advanced: Advanced
-    expert: Expert
-  topic:
-    technology: Technology
-    privacy: Privacy
-    horizen: Horizen
-    history: History
-    eli5: "Explain it Like I'm 5"
-    resources: Resources
   see-all-content: See all Content
 
 
 footer:
   legal: Legal
   privacy-policy: Privacy Policy
-  copyright: PAll rights reserved
+  copyright: All rights reserved
+  share-this-article: 'Share this article:'
 
 
 newsletter:
@@ -55,3 +58,10 @@ newsletter:
 
 post:
   further-reading: Further Reading
+
+
+# pages
+content-overview:
+  title: CONTENT OVERVIEW
+  eli5: ELI5
+  chapter: Chapter

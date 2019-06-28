@@ -1,3 +1,9 @@
+
+// plugins
+$(function () {
+    $('.js-Select2').select2();
+});
+
 $(function () {
 
     var articleNav = $("#article-nav");
