@@ -111,7 +111,7 @@ You can generate as many addresses as you like from a single private key, and mo
 
 To wrap up this article we want to come back to digital signatures. You might hear that your keys (public and private) can encrypt and decrypt messages. This is not the case. The information contained within transactions is not encrypted in any way. It is available to anyone on the blockchain, which makes the system so transparent.
 
-Your private key is actually used for is signing transactions. You can only use the funds you receive in a transaction if you provide a digital signature that proves your knowledge of the private key. We cover how this digital signature works and how you can prove that you know the private key without revealing any information about it will in our advanced level. We combine the concept of hash functions and point multiplication on the curve for this. Although it is not exactly rocket science it is a rather complex matter.
+What your private key is actually used for is signing transactions. You can only spend funds you received in a transaction if you provide a digital signature that proves your knowledge of the private key corresponding to the address used to receive the funds. We cover how this digital signature works and how you can prove that you know the private key without revealing any information about it in our Expert Section. We combine the concept of hash functions and point multiplication on the curve for this. Although it is not exactly rocket science it is a rather complex matter.
 
 ### Summary
 

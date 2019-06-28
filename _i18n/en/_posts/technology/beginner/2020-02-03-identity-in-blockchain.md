@@ -15,20 +15,17 @@ In our last article talking about the elements of a blockchain, we concluded tha
 ### Public-Key Cryptography
 
 One of the core concepts that make cryptocurrencies work is the concept of _asymmetric cryptography_ also known as _public-key cryptography_.
-
-With symmetric cryptography, you encrypt and decrypt text with the same key (like a padlock).
+With symmetric cryptography, you encrypt and decrypt a message using the same key (like a padlock).
 
 ![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_D.jpg)
 ![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_M.jpg)
 
-With asymmetric cryptography, you encrypt and decrypt text with two different keys, the public key, and the private key. The keys always come in pairs. If you encrypt a message with a public key it must be decrypted with the corresponding private key and vice versa. This boils down to a simple concept: Your key pair is your identity on the blockchain.
+With asymmetric cryptography, you encrypt and decrypt a message using two different keys, the public key, and the private key. The keys always come in pairs. If you encrypt a message with a public key it must be decrypted with the corresponding private key and vice versa. This boils down to a simple concept: Your key pair is your identity on the blockchain.
 
 ![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_D.jpg)
 ![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_M.jpg)
 
 ### Your Key Pair is Your Identity
-
-This boils down to a simple concept: Your key pair is your identity on the blockchain.
 
 The idea in cryptocurrencies is that you are receiving funds with your public key and spending them with your private key. Those keys were intentionally named public and private key. You can share your public key with anybody that wants to send you funds. Your private key, as the name suggests, should remain private under all circumstances, because it allows you to spend your funds. If somebody else gets their hands on your private key, they can access and steal your funds.
 

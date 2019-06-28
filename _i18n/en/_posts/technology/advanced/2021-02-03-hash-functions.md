@@ -26,7 +26,7 @@ A cryptographic hash function must fulfill the following set of criteria to be v
 
 
 
-The most frequently used hash functions today is SHA-256. SHA is an acronym for Secure Hash Algorithm. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. RIPEMD160 is often used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
+The most frequently used hash function today is SHA-256. SHA is an acronym for Secure Hash Algorithm. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. RIPEMD160 is often used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
 
 Hash values are used for many purposes in cryptocurrencies and blockchains. The most notable use is the process of chaining together the blocks, thus creating the blockchain. We call a hash value a fingerprint of data for its property of being collision resistant. If you were sending a file to another person you can include the hash digest if you hash the file before sending it. The recipient can calculate the hash value for the file after receiving it and by comparing it to the hash value you provided they can check the integrity of the file.
 
