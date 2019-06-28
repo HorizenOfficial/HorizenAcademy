@@ -1,54 +1,64 @@
 ---
 layout: post
 type: article
-title: "DAO - Decentralized  Autonomous Organization"
-description: "Over time our foundation will become a DAO - a Decentralized Autonomous Organization. Find out what this means here."
+title: "OAD - Organización autónoma descentralizada"
+description: "Nuestra meta es adoptar un modelo de organización autónoma descentralizada (OAD) con el tiempo. Este artículo explica lo que eso significa."
 permalink: /horizen/advanced/dao-decentralized-autonomous-organization/
 topic: horizen
 level: advanced
 ---
 
-Horizen has the long-term goal of moving its organizational structure towards a DAO. A DAO, or Decentralized Autonomous Organization, is software that acts as an organization with a number of predefined rules and procedures.
+En Horizen nos hemos propuesto hacer una transición de nuestra estructura organizacional hacia una OAD. Una OAD, u organización autónoma descentralizada, es un software que funciona como si fuera una organización con un número de reglas y procedimientos predefinidos.
 
-The rules and procedures that govern the organization are written in code when the DAO is created. The main goal of our DAO is to decentralize the decision making regarding how we spend the funds of our non-profit organization. All community members will be able to submit proposals to receive funding. This could be a new feature for a wallet or attending a conference.
+Las reglas y procedimientos que gobiernan a dicha organización se incluyen en el código cuando se crea la OAD. La meta principal de nuestra OAD es la descentralización de la toma de decisiones respecto a cómo se utilizan los fondos de nuestra organización benéfica. Cualquier miembro de la comunidad podrá presentar propuestas para recibir fondos. Esto podría representar una nueva función en una billetera digital o al asistir a una conferencia.
 
-![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
+![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
+![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
 
-For this decentralized decision making, there needs to be a voting system in place. This voting system needs to be reliable and we decided to implement it on a dedicated sidechain which will be running in parallel to our main blockchain. We will talk more about sidechains (ZI3) in a dedicated article.
+Para esta toma de decisiones descentralizada, tiene que haberse establecido un sistema de votación. El sistema debe ser confiable, por lo que en Horizen tomamos la decisión de implementarlo en una cadena lateral dedicada paralela a nuestra cadena de bloques principal. Hablaremos más de cadenas laterales en un artículo más adelante.  
 
-For an effective voting system, one should leverage the expertise of individual experts without disenfranchising the "regular" user. If you are a developer, you will likely cast a vote for all proposals regarding new code. At the same time, you may not be very experienced when it comes to marketing and feel that other people should make decisions regarding which conferences to attend and events to support. A marketing expert will want to decide on which conferences to attend but might not have a strong opinion about what code to implement.
+En un sistema de votación efectivo debe poder aprovecharse el conocimiento de los expertos sin privar de representación al usuario promedio. Es probable que un desarrollador vote por todas las propuestas para códigos nuevos. Sin embargo, el mismo desarrollador puede no tener experiencia en ámbito del marketing, por lo que siente que otros deberían de tomar decisiones sobre a qué conferencias asistir o qué eventos apoyar. Un experto en marketing querrá decidir respecto a las conferencias, pero puede que no tenga una verdadera opinión sobre qué códigos implementar.
 
-Liquid democracy is a concept that promises to solve this problem in a fair and efficient way.
+El concepto de democracia líquida es uno que promete resolver este problema de manera justa y eficiente.
 
-### Liquid Democracy
+### Democracia líquida
 
-The two existing forms of democracy are representative democracy and direct democracy. The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they didn't scale well with an increasing number of participants. With a growing number of issues arising, voting on every single one becomes unfeasible for most participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process there are issues in regards to the transparency of representatives' votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
+Las dos principales formas de democracia implementadas en la actualidad son la democracia representativa y la democracia directa. Los primeros sistemas democráticos fueron democracias directas que ofrecían a sus participantes imparcialidad, responsabilidad y control. Sin embargo, estos sistemas no resultaron fáciles de escalar cuando incrementó el número de participantes.
 
-Liquid Democracy is a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an expert that represents your views. Alternatively, you can decide to vote on any given issue yourself. This means you can freely choose your level of involvement and there is a low barrier to entry if you wish to function as a delegate.
+Conforme aumenta el número de cuestiones que requieren una votación, emitir un voto sobre todos los asuntos se vuelve inviable para la mayoría de los participantes. Por esta razón, la mayoría de los sistemas democráticas pasaron a convertirse en democracias representativas. Las democracias de este tipo le permiten a un gran número de votantes participar en el proceso de toma de decisiones. Sin embargo, presentan nuevos problemas con respecto a la transparencia de los votos y decisiones de los representantes, la responsabilidad de los representantes ante los votantes y los obstáculo que se deben superar para poder participar directamente en el proceso de toma de decisiones.
 
-In liquid democracy, there are no election terms. You can delegate your vote to an expert or withdraw it at any time. This holds experts accountable.
+La democracia líquida es un híbrido dinámico de estas dos formas establecidas de democracia. Un sistema democrático líquido combina los beneficios de cada una y se deshace al mismo tiempo de muchas de sus debilidades. En una democracia líquida, un votante puede decidir delegarle su voto sobre un tema dado a un experto; un representante. La alternativa es que el votante emita su voto directamente. Esto significa que puede decidirse libremente qué tanta participación quiere tenerse en la toma de decisiones y que no se le presentan tantos obstáculos a quien desee fungir como delegado.
 
-![liquid_democracy](/assets/post_files/horizen/advanced/dao/liquid_democracy.jpg)
+En una democracia líquida no hay mandatos con duraciones establecidas. El votante puede delegarle su voto a un experto o retomar control de él en cualquier momento dado. Esto significa también que los expertos deben hacerse responsables de sus votos.
 
-### Entities
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
 
-The different entities in our treasury system are the following
+### Entidades
 
- - _Project Owners_ - The people that have submitted a proposal to be funded. Anybody can submit a proposal but has to pay a little fee in order to avoid spam.
- - _Voting committees_ - Stakeholders that are willing to help with the voting process. They help with the voting process, e.g. the tally phase where votes are counted.
- - _Voters_ - Each voter locks a certain amount of their stake to participate. Their vote is weighted according to their locked up stake.
- - _Experts_ - A special type of voters that have expertise in some field. Anybody can register as an expert. More on that when we get to how to register as one of the entities.
+Las diferentes entidades en nuestro sistema de tesorería son:
 
-To register as one of the entities mentioned above, a user will need to submit a special type of transaction that includes all the necessary information, such as the amount of locked up stake and the address to send the rewards for voting.
+ - _Líderes de proyecto_ - Son los participantes que han hecho propuestas para recibir fondos. Cualquiera puede hacer una propuesta tras pagar una pequeña tarifa para evitar la acumulación de spam.
+ - _Comité de votación_ - Sus miembros son los interesados dispuestos a ayudar con el proceso de votación. Se involucran en el proceso al momento de contarse los votos.
+ - _Votante_ - Cada votante le pone un candado a cierta parte de su participación para poder votar. El voto se considera conforme al peso de su participación.
+ - _Expertos_ - Son un tipo especial de votante con experiencia en un área determinada. Cualquiera puede registrarse como experto, pero hablaremos más de al explicar cómo registrarse como entidad.
 
-### Rewards
+Para registrarse como cualquiera de las entidades anteriores, el usuario necesitará hacer un tipo especial de transacción con la información necesaria, como el peso de la participación del usuario y la dirección a la que se deben enviar las recompensas por votar.
 
-Each of the voters, experts, and committee members receive a reward for participating in the governance of the protocol. There is a phenomenon called _rational ignorance. Rational ignorance is refraining from acquiring knowledge when the cost of educating oneself on an issue exceeds the potential benefit that the knowledge would provide._
+### Recompensas
 
-We aim to reduce rational ignorance by providing incentive to encourage voters to participate in the decision making progress. It is a problem in today's democracies all over the world. The time and effort it takes to acquire all the information needed to make the best possible decision in an election exceeds the benefit of being able to cast a single vote. This issue results in voter apathy. To tackle the issue of voter apathy, people that participate in the governance process receive rewards for their efforts. This creates an incentive to become informed and partake in the process. Voters will get rewarded proportionally to their stake and experts will receive a proportional reward to the number of delegations they have, or in other words the trust placed in them and their decision making.
+Cada uno de los votantes, expertos y miembros del comité reciben una recompensa por participar en la gobernanza del protocolo.
 
-### Summary
+Existe un fenómeno llamado ignorancia racional. La ignorancia racional es el acto de abstenerse de adquirir un conocimiento dado porque el costo de educarse para obtenerlo superaría el beneficio que dicho conocimiento proporcionaría.
 
-In the first step towards becoming a DAO, we want to decentralize the decision making about our treasury funds. Users will be able to submit proposals and the community will vote on which proposals should receive funding. The infrastructure for the voting process and the distribution of funds will be built on a sidechain. The voting mechanism we are implementing is a liquid democracy based system, where a voter can choose to vote on issues directly, or they can delegate their vote to an expert. To combat voter apathy we plan to incentivize participation in the decision-making process with financial rewards.
+Nuestro objetivo es reducir la ignorancia racional al proporcionar un incentivo para que los votantes participen en el proceso de votación. Esto es un problema en muchas de las democracias de la actualidad, pues el tiempo y esfuerzo que exige el adquirir la información necesaria para tomar las mejores decisiones durante una elección supera el beneficio de poder emitir un solo voto, lo cual resulta en apatía por parte del votante.
 
-For a detailed explanation of our planned treasury system go see our article on it on the [expert level]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).
+Para atacar la cuestión de la apatía de los votantes, quienes participan en el proceso de gobernanza obtienen recompensas por su esfuerzo. Esto crea un incentivo para informarse y participar en el proceso. Los votantes se verán recompensados conforme al peso de su participación y los expertos una proporcional al número de votos que se les han delegado, en otras palabras, la confianza que se les ha dado en la toma de decisiones.
+
+### Resumen
+
+Como primer paso hacia convertirnos en una OAD, queremos descentralizar la toma de decisiones respecto a los fondos de nuestra tesorería. Los usuarios podrán hacer propuestas y la comunidad determinará qué propuestas recibirán fondos. La infraestructura para los procesos de votación y repartición de fondos se construirán en una cadena lateral. 
+
+El mecanismo de votación que buscamos implementar es uno basado en un sistema democrático líquido, donde el votante puede decidir si votar directamente sobre un tema o si delegarle su voto a un experto. Para combatir la apatía entre los votantes planeamos incentivar la participación por medio de recompensas financieras.
+
+Para una explicación detallada del sistema de tesorería que tenemos planeado, consulte el artículo correspondiente en el [nivel experto]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).

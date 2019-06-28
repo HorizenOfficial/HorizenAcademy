@@ -1,8 +1,8 @@
 ---
 layout: post
 type: article
-title: "Sidechains"
-description: "Sidechains are a promising approach to improve upon blockchains. We explain what sidechains are and their benefits."
+title: "Cadenas laterales"
+description: "Las cadenas laterales son un desarrollo prometedor para las cadenas de bloques. Hablaremos de qué son y cómo pensamos implementarlas."
 permalink: /horizen/beginner/sidechains/
 topic: horizen
 level: beginner

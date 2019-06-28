@@ -1,70 +1,72 @@
 ---
 layout: post
 type: intro
-title: "Types of wallets"
-description: "In order to receive and send cryptocurrencies you will use a wallet. Here we explain the different types of wallets."
+title: "Tipos de billetera"
+description: "Para recibir y enviar criptomonedas es necesario utilizar una billetera. En este capítulo se expondrán los diferentes tipos que hay disponibles."
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
-chapter: "Wallets"
+chapter: "Billeteras"
 ---
 
-A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our introduction to wallets. The main differentiator between the different types of wallets is the physical location your keys are stored in.
+Una billetera es una programa que genera, administra y almacena un par de llaves criptográficas. El usuario puede revisar su saldo y recibir y enviar fondos desde su billetera; (si no le quedan claras las funciones principales de la billetera, lo invitamos a leer nuestro artículo de nivel principiante sobre el tema). En resumen, sin embargo, la principal diferencia entre los distintos tipos de billetera es la ubicación física en la que se almacenan las llaves del usuario.
 
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
 
-### The Different Types of Wallets
+### Los diferentes tipos de billetera
 
-This article should give you a better understanding of what types of wallets are available and help you identify a given wallet between the types described below. Let's have a look at this overview of the different wallet types before we go into the individual wallets in detail.
+Este artículo busca exponer qué tipos de billetera hay disponibles en el mercado para ayudar al lector a distinguir entre ellos. Hemos descrito en la tabla siguiente los diferentes tipos de billetera.
 
-![overview](/assets/post_files/technology/advanced/types-of-wallets/overview_D.jpg)
-![overview](/assets/post_files/technology/advanced/types-of-wallets/overview_M.jpg)
+![overview](/assets/post_files/technology/advanced/types-of-wallets/ES_overview_D.jpg)
+![overview](/assets/post_files/technology/advanced/types-of-wallets/ES_overview_M.jpg)
 
-### Hosted Web Wallets
+### Billeteras web hosteadas
 
-Before getting into web wallets, let us remember that a wallet is an interface to perform the basic operations on a cryptocurrency blockchain (viewing, receiving and sending funds) and that it needs access to your keys to do so.
+Antes de describir las billeteras web, recordemos que una billetera sirve como interfaz para realizar operaciones básicas en la cadena de bloques de una criptomoneda (ver, recibir y enviar fondos) y que necesita acceso a las llaves del usuario para lograrlo.
 
-This leads us to a distinction between hosted and non-hosted web wallets. With hosted web wallets, your keys are stored online by a trusted third party. These parties are mostly exchanges such as Coinbase, Binance or Bittrex. When you create an account with these entities they will create an entry in their internal database linking your account to a set of key pairs for the different coins they have listed.
+Esto nos lleva a una distinción entre billeteras web hosteadas y no hosteadas. Con una billetera web hosteada, un tercero de confianza almacena en línea las llaves del usuario. Los terceros suelen ser centros cambiarios como Coinbase, Binance o Bittrex. Al crear un cuenta con cualquiera de estas entidades, se crea una entrada en su base de datos interna que empareja la cuenta del usuario con un par de llaves para las diferentes monedas que tienen disponibles.
 
-![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet_D.jpg)
-![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet_M.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/ES_hosted_webwallet_D.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/ES_hosted_webwallet_M.jpg)
 
-An advantage with a hosted web wallet is the option to recover your password in case you forget or misplace it. Losing your private keys (together with your mnemonic phrase respectively) leads to lost funds in all other cases.
+Una ventaja de una billetera web hosteada es que le da al usuario la opción de recuperar su contraseña si la olvida. En cualquier otro caso, la pérdida de la una llave privada (junto con su frase mnemónica) resulta en la pérdida de todos los fondos del usuario.
 
-While this may sound reassuring, there are some drawbacks with hosted wallets (also called hot wallets/cloud wallets). Remember: if you don't control your keys, you don't control your funds. There is always a third party risk, no matter how trustworthy the party might seem. First, they are a more attractive target for hackers than individuals because their honeypot is much bigger. Second, a sudden change in regulation might not allow them to have you withdraw your funds in a worst-case scenario. It is unlikely, but definitely not impossible. Third, there is always a chance of an entity going bankrupt or stealing money. With the major exchanges like the ones mentioned above this risk seems small, but it does exist. For the reasons above we do advise everybody to store the keys to their funds themselves, meaning storing them in a wallet where you have control over your private keys. There is a responsibility that comes with being in charge of the safety of your funds yourself, but enabling you to do this is one of the main motivations for the existence of cryptocurrencies!
+Esta característica puede darle tranquilidad al usuario, pero las billeteras hosteadas (también llamadas hot wallets o cloud wallets) también tienen desventajas. Es importante recordar que si el usuario no controla sus llaves, no controla sus fondos. Involucrar a un tercero siempre tiene sus riesgos, sin importar qué tan confiable pueda considerarse. Primeramente, son un objetivo más atractivo para los hackers que un individuo, pues el botín que ofrecen es mucho mayor. Segundo, en el caso improbable de un cambio regulatorio, podría resultarle imposible al usuario retirar sus fondos; una situación poco común, pero no imposible. Tercero, nunca puede descartarse la posibilidad de que la entidad en cuestión quiebre o, peor aún, hurte los fondos de sus usuarios. En el caso de los centros cambiarios que ya mencionamos, no es probable que esto suceda, pero el riesgo permanece.
 
-You will need to keep some funds on an exchange permanently if you plan to trade often. If you want to do this right, then your level of expertise should be exceeding this article by far anyways.
+Por estas razones, nuestro consejo sería que el usuario almacene por cuenta propia sus llaves, es decir, almacenarlas en su billetera enteramente bajo su control. Que el usuario pueda resguardar la seguridad de sus propias llaves es una responsabilidad que este debe asumir, pero es también una de las principales razones por las que existen las criptomonedas.
 
-### Non-Hosted Web Wallets
+Es indispensable que el usuario conserve algo de fondos en un centro cambiario de manera permanente si tiene pensado realizar transacciones de manera cotidiana, pero las implicaciones de esto no competen al contenido de este artículo.
 
-Besides hosted web wallets there is also a range of non-hosted web wallets. The most popular non-hosted web wallet is likely MyEtherWallet, which can store Ether (ETH) and all ERC-20 tokens (tokens that are "living" on the Ethereum blockchain). Those wallets provide an interface to check your funds or create transactions in your web browser, but you have to provide the keys with each login.
+### Billeteras web no hosteadas 
+
+A la par de las billeteras web hosteadas existen las no hosteadas. La billetera web no hosteada más popular es quizás MyEtherWallet, capaz de almacenar Ether (ETH) y todos los tokens ERC-20 (los tokens que habitan la cadena de bloques de Ethereum). Estas billeteras presentan al usuario una interfaz para revisar su saldo o crear transacciones en su explorador web, pero es necesario que ingrese la información de sus llaves cada vez que inicie sesión.
 
 ![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_D.jpg)
 ![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_M.jpg)
 
-There is a range of options to access your wallet with MyEtherWallet (often abbreviated as MEW). The first option requires your address but only lets you view your funds. MetaMask is a browser plugin that provides the option to make ETH payments within your browser and the ability to login to MEW. It also provides a function detecting phishing sites and warning you when you are about to open one.
+Hay un rango de funciones a las que el usuario tiene acceso con MyEtherWallet (comúnmente abreviada MEW). La primera de ellas le permite consultar su saldo. MetaMask es una extensión de explorador que da la opción de hacer pagos en ETH dentro del explorador y de iniciar sesión en MEW. Incluye también una función que detecta sitios fraudulentos, la cual advierte al usuario si está a punto de ingresar a uno.
 
-The next couple of options, Ledger Wallet, Trezor, Digital Bitbox, and Secalot are hardware wallets. We will get to those later in the article. 
+Algunas otras opciones, como las de Ledger Wallet, Trezor, Bitbox y Secalot son billeteras hardware, y las discutiremos más adelante en el artículo.
 
-Accessing your wallet with a keystore /.json file is possible but not recommended. The file contains your private key and when you create your wallet you have the option to download it. If it gets into the wrong hands they will have access to your funds so saving it on your desktop is not the ideal solution. If you want to use this method, you should encrypt the .json file and store it on a separate device like a USB drive. To use it, connect the drive, decrypt the file, then select the file in your browser and voila. After that, you can disconnect your storage medium of choice again.
+Las últimas dos opciones son más o menos similares en cuanto a la seguridad. Le dan al usuario la opción de ingresar directamente su llave privada o de utilizar su frase mnemónica (la cual produce la llave privada al hashearse). Esto puede ser peligroso si, por ejemplo, la computadora que se está utilizando está infectada con algún malware capaz de almacenar llaves.
 
-The last two options are more or less the same with regards to safety. You can either enter your private key directly or your mnemonic phrase (which yields your private key when hashed) which is both problematic if there is any malware like keystroking malware on your computer.   
-The mnemonic phrase is a concept that is also used for all the next types of wallets to come. You will see a number of random words while creating the wallet, usually 12 or 24, that you should save.
+El concepto de frase mnemónica es uno que se empleará en el caso de todas las billeteras digitales que discutiremos. Al crear su billetera, el usuario verá una cadena de palabras aleatorias, generalmente entre 12 y 24; esta es la frase mnemónica, y resulta idóneo escribirla y guardarla en un lugar seguro.
 
-**Important**: You should write the phrase of words down on paper or save them in any analog format you see fit, but do not save them as a .txt file on your computer or a screenshot. You don't want to make it too easy for any potential attacker.
+Es **importante** conservar la frase mnemónica en un pedazo de papel o en cualquier otro tipo de formato análogo adecuado, lo esencial es nunca escribirla en un archivo de texto o almacenarla por medio de una captura de la pantalla en la computadora, pues esto le hace la tarea más fácil a un posible atacante.
 
-If you break or lose your device, no matter if we are talking about a mobile, desktop or hardware wallet: your mnemonic phrase is usually your last line of defense against a loss of funds. You can reconstruct your private key by hashing your mnemonic phrase. This implies, that any attacker that gets their hands on your recovery phrase will be able to do the same. Therefore, you must protect your mnemonic phrase as well as you would protect your funds themselves.
+Si el usuario rompe o pierde su dispositivo, sea este un celular, computadora o billetera de hardware, la frase mnemónica suele ser su última oportunidad de recuperar sus fondos. La llave privada puede reconstruirse aplicándole una función hash, aunque esto significa que cualquier otra persona puede hacer lo mismo. Así pues, es tan importante resguardar esta frase como lo es los fondos mismos.
 
-In conclusion, a non-hosted web wallet is quite convenient and just as secure, as the method, you choose to provide your keys with.
+En conclusión, una billetera web no hosteada resulta conveniente, aunque su seguridad dependerá del método que el usuario elija para ingresar sus llaves.
 
-### Desktop and Mobile Wallets
 
-If you start off with the question "where are your keys?" the desktop and mobile wallet will give you the same answer: on the device. Phones and tablets are more powerful than ever, the difference between a desktop and mobile wallet is marginal. It is also arguable whether one is safer than the other.
+### Billeteras desktop y móviles
 
-By now you know the tasks a wallet performs: viewing, receiving and sending. If you want to use crypto for everyday transactions there is almost no way around keeping some funds in a mobile wallet. As mentioned before, when creating your wallet you will get a mnemonic phrase that you should keep safe. Usually, there is a PIN, password or Face-/Touch-ID protection to access the wallet. You should never keep more funds in a mobile wallet than you are willing to lose. It's the same as with cash: you don't carry around your entire money in a wallet. You withdraw as much as you are comfortable handling in cash and keep the rest in your account (or under the mattress :P).
+Si el usuario se hace la pregunta “¿Dónde están mis llaves?”, las billeteras desktop y móviles le responderían lo mismo: en el dispositivo. Ya que nuestros teléfonos y tabletas son más poderosos que nunca, la diferencia entre una billetera desktop y móvil es marginal. Inclusive la discusión de cuál de las dos es más segura queda por resolverse.
 
-With desktop and mobile wallets, there is a choice between single- and multi-currency options. Those should be rather self-explanatory terms. The former allows you to store one coin, while the latter supports multiple currencies. Some of the more popular examples for desktop include Coinomi and Sphere by Horizen. For mobile, there are Coinomi, Mycelium or Paytomat to name just a few.
+Ya conocemos las tareas que puede realizar una billetera: revisar, recibir y enviar. Si usted desea usar cripto diariamente para hacer transacciones, no hay manera de evitar tener siempre disponible algo de fondos en la billetera móvil. Como ya mencionamos, al crear la billetera digital se le proporciona al usuario una frase mnemónica que debe mantener segura. Generalmente, las billeteras poseen también un PIN, contraseña o algún tipo de reconocimiento facial o táctil para accederlas. Es imperativo nunca tener en la billetera más fondos de los que uno estaría dispuesto a perder. Lo mismo pasa con el dinero en efectivo, nadie carga con todos sus fondos en fajas de billetes. Lo recomendable es retirar una cantidad cómoda y mantener el resto de los fondos en la cuenta (o debajo del colchón, :P).
+
+En el caso de las billeteras desktop y móviles, el usuario debe elegir entre aquellas que manejan una sola moneda o una billetera capaz de manejar varias. Algunas populares para desktop incluyen Coinomi y Sphere by Horizen, mientras que para dispositivos móviles existen Coinomi, Mycelium o Paytomat, entre otras.
 
 <div class="row align-items-center">
     <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/coinomi.jpg" alt="coinomi"></div>
@@ -72,43 +74,45 @@ With desktop and mobile wallets, there is a choice between single- and multi-cur
     <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/mycelium.png" alt="mycelium"></div>
 </div>
 
-If you got your first coins on an exchange, I would recommend you to transfer your funds out of the exchange (hosted web wallet) onto a desktop, paper, or hardware wallet. Send a fraction first to make sure everything works as planned. If your first transaction works then you would send the rest. You are now protected from third-party risk, but have full responsibility for your funds yourself.
+Si el usuario obtuvo sus primeras monedas en un centro cambiario, lo recomendable sería que transfiriera sus fondos fuera del exchange (una billetera web hosteada) hacia una billetera desktop, hardware o de papel. Le recomendamos al usuario empezar por hacer una transacción pequeña para confirmar que el proceso transcurrirá normalmente. Si esta primera transacción resulta exitosa, puede proceder a enviarse el resto de sus fondos. Tras este proceso, se encuentra protegido de los riesgos que implica involucrar a un tercero, pero ha asumido también la responsabilidad de resguardar sus fondos.
 
-### Paper Wallets
+### Billeteras de papel
 
-Grabbing our golden thread again and asking "where are the keys" give you a simple answer with a paper wallet: in your hand! A paper wallet is your public and private key pair printed on paper. Almost every cryptocurrency offers a paper wallet generator. To create a key pair you generally first have to create some entropy (a term for disorder), in other words: you want your keys to be as random as possible. This is mostly done automatically, but sometimes you will find features were you have to randomly move your mouse or hit keys on your keyboard to create randomness.
+Volvamos a hacernos la pregunta “¿Dónde están las llaves?”, una billetera de papel daría una respuesta quizás sorprendente: En la mano del usuario. Una billetera de papel no es ni más ni menos que el par de llaves del usuario impresas en papel. Casi todas las criptomonedas ofrecen generadores de billeteras de papel. Para crear un par de llaves primero es necesario generar un poco de entropía (o desorden); en otras palabras, el usuario debe aspirar a que sus llaves sean lo más aleatorias posible. Esta aleatoriedad suele generarse automáticamente, pero a veces es necesario que el usuario mueva el mouse o pulse ciertas teclas para ayudar a crear la aleatoriedad.
 
-When printing your paper wallet you shouldn't use a shared printer like the one in your office. In a best-case scenario, the printer doesn't even have a WiFi/network function. Printers usually keep a copy of the files they printed last, and an attacker might exploit this.
+Al imprimir la billetera de papel no se recomienda utilizar una impresora compartida como la de la oficina. De hecho, el ideal es que la impresora que se utilice no cuente con funciones red/Wi-Fi. Muchas impresoras conservan copias de los últimos archivos impresos, y un atacante podría aprovecharse de esto.
 
-You will end up with something looking like this after printing the wallet securely.
+Tras imprimir de manera segura su billetera de papel, tendrá algo similar a esto:
 
 ![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.jpg)
 
-There is only one thing left to do: send funds to the public key. After that, you have a perfect gift or long term storage for your coins. The main risk with a paper wallet is you actually losing or destroying the wallet by accident. If you don't have a mnemonic phrase to recover the private key you are at risk of losing all funds on the wallet by accident. So choose wisely where to store your paper wallet. Print several copies if you feel uncomfortable having only one and store all of them in separate, safe places.
+Solo queda una cosa por hacer, enviar los fondos a la llave pública. Tras de hacer eso, el resultado es o el mejor regalo de cumpleaños o un medio de almacenamiento a largo plazo para los fondos del usuario. Obviamente, los principales riesgos asociados a las billeteras de papel son su pérdida o destrucción accidentales. Si el usuario no posee la frase mnemónica para recuperar su llave privada, corre el riesgo de perder todos sus fondos por accidente; así que decida con mucho cuidado dónde guardará su billetera de papel. Imprima varias copias si se siente incómodo con solo una, luego guarde cada una en un lugar seguro.
 
-### Hardware Wallets
+### Billeteras hardware
 
-Moving on to everybody's darling: hardware wallets. With a hardware wallet, your keys are stored on the device in something called the "secure element". The secure element is a place to store data that cannot be directly accessed by your computer or any other device once connected. Although it does look like a simple USB drive, it can actually do a little more than just providing storage for your keys. To use a hardware wallet you usually have a few options of which interface to use with it. Like MyEtherWallet, a few other wallets offer hardware wallet support. Additionally, you have the native wallet apps provided by the producer. In the case of Ledger, for example, the native App is called Ledger Live.
+Pasemos a las consentidas de todos, las billeteras hardware. En una billetera hardware, las llaves del usuario se almacenan en su dispositivo en algo llamado elemento seguro (secure element). El elemento seguro es un lugar para almacenar información que no puede ser accedido por la computadora o cualquier otro dispositivo una vez conectado. Aunque por fuera luce como una memoria USB ordinaria, hace más que solo almacenar llaves. Al optar por una billetera de hardware, el usuario cuenta también con varias opciones de interfaz, una de ellas es MEW, pero existen varias otras opciones. Existen también las apps de billeteras nativas proporcionadas por los productores. En el caso de Ledger, por ejemplo, la billetera nativa se llama Ledger Live.
 
-Now let's get to the interesting part: how does such a wallet actually work?
+Ahora lo interesante, ¿cómo funciona una billetera de este tipo?
 
-The interface generates an address from your public key if you want to receive funds. Using this feature is pretty straightforward: if you click the receive button the process runs in the background and the address is displayed for you to share it with the sender. If you want to send funds the app creates the formal transaction that needs to be signed. The unsigned transaction is now sent to your hardware wallet, where it gets signed with your private key on the device. The signature is then returned to your computer and the complete transaction including the signature broadcasted to the network.
+La interfaz de la billetera genera una dirección a partir de la llave pública del usuario cuando este quiere recibir fondos. Utilizar esta función es fácil. Si el usuario le da clic al botón de “Recibir” la interfaz responde arrojando la dirección que se debe compartir con el remitente. Si el usuario desde enviar fondos, la aplicación crea una transacción formal que debe firmarse. La transacción sin firmar se envía a la billetera de hardware, donde la llave privada almacenada en el dispositivo la firma. La firma regresa a la computadora, donde la transacción completa, incluyendo la firma, se propaga a la red.
 
-![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet_D.jpg)
-![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet_M.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/ES_signing_hardware_wallet_D.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/ES_signing_hardware_wallet_M.jpg)
 
-Your private key(s) do not leave the device, so they are not visible to the computer you are using your hardware wallet with at any time. This is why a hardware wallet is considered the most secure way of storing crypto, especially large amounts.
+Las llaves privadas del usuario nunca salen del dispositivo, por lo que no son visibles para la computadora en ningún momento. No es en vano que este tipo de billetera sea el más popular, pues son la manera más segura de almacenar cripto, en especial en grandes cantidades.
 
-If your device ever breaks, you have your mnemonic phrase as a backup. At the risk of being repetitive: your mnemonic phrase, under all circumstances, must stay private and in a secure location. A copy at a trusted family member or in a bank vault might be a good idea in case of a fire, flooding or a playing dog.
+Si el dispositivo llega a romperse, el usuario tiene la frase mnemónica como respaldo. Repetimos; la frase mnemónica, en todos los casos, debe mantenerse en un lugar privado y seguro (también puede entregarse una copia a un familiar o almacenarla en un banco, todo depende el nivel de seguridad deseado).
 
-### Summary
+### Resumen
 
-There are many ways to store your cryptocurrencies. Usually, there is a trade-off between convenience and security. The most important question is: where are the keys? A wallet is only a piece of software, an interface, that helps you perform the basic functions of cryptocurrencies: generate, manage, and store your keys. It allows you to view your balance, create an address to receive funds, and create transactions to send funds.
+Hay muchas maneras de almacenar criptomonedas. Generalmente, tiene que sacrificarse la seguridad a favor de mayor conveniencia y viceversa. En general, la pregunta más importante siempre es “¿Dónde están mis llaves?”
 
-With a hosted online wallet you are trusting a third party to handle your keys. You have the option to recover your password if misplaced, but there is always a significant third-party risk. If you don't control your keys, you don't control your funds!
+Una billetera es un software, una interfaz que ayuda al usuario a realizar las funciones básicas propias de las criptomonedas: generar, administrar y almacenar llaves, así como consultar saldos, crear una dirección para recibir fondos y crear transacciones para enviarlos.
 
-With desktop, mobile, paper or hardware wallets you own the keys and nobody but yourself is responsible for keeping them safe. If your device breaks you have a mnemonic/recovery phrase to recover access to your funds. The phrase is as sensible as your private key itself and if it gets in the wrong hands, your funds are gone. This is not supposed to scare you, but to make you cautious and aware of the risk.
+En el caso de una billetera web hosteada se confía a un tercero la capacidad de administrar las llaves. Esto le da al usuario el beneficio de poder recuperar su contraseña si la pierde, pero introduce riesgos propios a la participación de un tercero; quien no controla sus llaves, no controla sus fondos.
 
-This whole movement of cryptocurrencies aims to give you back the power over your money, but...
+Con las billeteras desktop, móviles, de papel o hardware, es el usuario quien posee las llaves y se encarga de mantenerlas seguras. Si el dispositivo que las guarda llega a romperse o extraviarse, la frase mnemónica puede utilizarse para recuperar el acceso a los fondos. La frase es tan sensible como la llave privada misma, y el hurto de fondos es posible si cae en las manos equivocadas. Recordar esto es importante no para que el usuario la maneje con temor, sino para que tome las medidas de precaución necesarias y esté consciente de los riesgos.
+
+El objetivo principal del movimiento criptomonetario devolverle al usuario el control de su dinero, pero…
 
 ![with great power comes great responsibility](/assets/post_files/technology/advanced/types-of-wallets/with-great-power-comes-great-responsibility.gif)

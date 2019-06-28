@@ -1,87 +1,98 @@
 ---
 layout: post
 type: intro
-title: "Attacks on Blockchain"
-description: "We explain the most common attack scenarios on public blockchains and how their risk can be mitigated."
+title: "Ataques a la cadena de bloques"
+description: "Explicamos los escenarios de ataque más comunes en las cadenas de bloques públicas y cómo se puede mitigar su riesgo."
 permalink: /technology/advanced/attacks-on-blockchain/
 topic: technology
 level: advanced
-chapter: "Attacks"
+chapter: "Ataques"
 ---
 
-Blockchains are generally considered to be highly secure, but the level of security they provide is proportional to the amount of hash power that supports the network. The more miners there are and the more powerful their mining hardware is, the harder it is to perform an attack on the network. In this article, we want to cover the most common attack scenarios on public blockchains.
+Las cadenas de bloques suelen considerarse muy seguras, pero el nivel de seguridad que proporcionan depende de la cantidad de hash power con el cuenta la red. Entre más mineros haya y más poderoso sea su hardware de minado, más difícil será atacar la red. En este artículo queremos cubrir los tipos de ataques más comúnmente dirigidos a las cadenas de bloques públicas.
 
-### The Byzantine Generals Problem
+### El problema de los generales bizantinos
 
-Before we get into the different attack scenarios we would like to introduce you to a sort of thought experiment, namely the Byzantine General's Problem that remained unsolved for centuries until blockchain technology was introduced, which claims to have solved it.
+Antes de cubrir los diferentes tipos de ataque, le presentamos un breve ejercicio de pensamiento, el llamado problema de los generales bizantinos, un acertijo aparentemente imposible de resolver que la tecnología blockchain afirma haber resuelto.
 
-Imagine you are a general a few centuries ago and you want to attack a castle with your army. The castle is very robust and the army inside strong. You have arranged a number of other armies to support the attack and each of those armies is going to attack from a different side. The armies are separated by distance, each of them several miles apart. If they all attack at the same time the chances of victory are very high. If the attack is uncoordinated then you will most likely suffer defeat.
+Imaginemos a un general hace unos siglos. El general desea atacar un castillo con su ejército. El castillo es muy robusto y su ejército muy fuerte. El general ha distribuido a otros ejércitos alrededor del castillo para que apoyen en el ataque, y cada ejército atacará desde una dirección diferente. Los ejércitos se encuentran separados por varios kilómetros de distancia. Si todos atacan a la vez, las probabilidades de victoria son altas. Si el ataque se lleva a cabo de manera descoordinada, el resultado más probable es la derrota.
 
 ![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_D.jpg)
 ![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_M.jpg)
 
-You as the general have the following problem: How can you make sure all armies are attacking at the same time. In other terms how can you achieve consensus on the time of the attack? You cannot give signals with flags, torches or smoke, as those signals could be picked up by the enemy.
+El problema al que se enfrentan los generales es el siguiente: ¿cómo pueden asegurarse de que todos los ejércitos atacarán el castillo al mismo tiempo? En otras palabras, ¿cómo lograr un consenso sobre el momento del ataque? No pueden utilizarse señales como banderas, antorchas o humo, pues todas estas señales podrían ser detectadas por el enemigo.
 
-You could send messengers on horseback, but what if one of them is captured or killed before he reaches the intended General? To know the other generals received the message, you could have them send a messenger back with a confirmation. The messengers sent out to confirm the attack could be captured or killed as well on their way back to you. The other generals wouldn't know if you received their confirmation, so you would have to send out confirmations of the confirmations but what if those messengers get captured? Even without the risk of imposters transferring fraudulent messages and traitors confirming to attack with the intent of not doing it this situation was thought to be impossible to solve. Nobody could know with absolute certainty if the other generals intended to attack at the same time or not.
+Podrían enviarse mensajes a caballo, pero cabe la posibilidad de que algún mensajero sea capturado o asesinado antes de comunicar el mensaje. Para saber que los demás generales han recibido el mensaje, estos podrían enviarse de vuelta a un mensajero con una confirmación; pero de igual manera, este mensajero podría morir o ser capturado antes de completar su misión. Además, en ningún caso podrían estar seguro un general determinado de que los demás recibieron la confirmación, por lo que sería necesario enviar mensajeros que confirmaran las confirmaciones, dando origen al mismo problema. Incluso anulado el riesgo de que un impostor transfiriera un mensaje fraudulento o de que algún mensajero traidor confirmara la intención de atacar pero sin haber transmitido el mensaje, el problema se consideraba imposible de resolver. Ninguno de los involucrados puede saber a ciencia cierta si los demás generales tienen la intención de atacar al mismo tiempo o no.
 
-Blockchain technology claims to have solved this issue. 
+La tecnología blockchain afirma haber resuelto este problema. 
 
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_1_D.jpg)
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_1_M.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_byz_1_D.jpg)
+![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_byz_1_M.jpg)
 
-Each General now has a ledger of events that is always synchronized with the other General's ledgers without a central party being in charge of the coordination. Every time a block gets mined, all the participants agree on the order of events for the last couple of minutes. Getting back to our general's problem, now they have a way of knowing if all of them are going to attack, or if they should retread collectively.
+Ahora, cada general posee un registro de los eventos que está siempre sincronizado con el registro de los demás generales, sin necesidad de que una entidad central tenga que encargarse de la coordinación.
 
-Critics might point out that a Proof-of-Work blockchain is not truly Byzantine Fault Tolerant because there is no finality to the consensus. The more confirmations a transaction, or more generally speaking a piece of information contained in a block, has, the higher the probability of this information being final. But there is always a non-zero probability, that a fork will occur, and a different, longer chain will replace the old one. If you are not familiar with the longest chain rule have a look at our article about consensus mechanisms/mining.
+Cada vez que se mina un bloque, todos los participantes se ponen de acuerdo sobre el orden de los eventos más recientes.
 
-Looking at PoW blockchains with a lot of hash rate, such as the Bitcoin blockchain, the chances of a fork to occur after a block has 6 confirmations on top of it are considered to be small enough to call the block final. In our article on 51% Attacks in the advanced section, we will take a look at the math behind calculating those chances.
+Regresando al problema de los generales, estos tienen ahora una manera de saber si todos ejércitos atacarán al mismo tiempo o si, por ejemplo, resulta más conveniente retroceder de manera coordinada.
 
-Now that we have talked about the general problem a consensus mechanism aims to solve, let's look at some simple and intuitive attack scenarios and how we address them.
+Los críticos de las cadenas PoW afirman que este tipo de cadena no es realmente resistente a la falla bizantina porque no el consenso nunca termina de formarse. Entre más confirmaciones tenga una transacción o, de manera más general, un pedazo de información contenido en el bloque, más alta la probabilidad de que esta información sea la final. Pero existe también siempre la probabilidad de que la cadena se bifurque, y de que una cadena diferente y más larga reemplace a la antigua. Si no recuerda cómo funciona la regla de la cadena más larga, lo invitamos a leer nuestro artículo sobre mecanismos de consenso y minado.
 
-### DDOS Attack
+Al analizar cadenas de bloque PoW con un hash rate alto, como por ejemplo la cadena de Bitcoin, las probabilidades de que la cadena se bifurque después de que el bloque haya acumulado seis confirmaciones se consideran lo suficientemente ínfimas para dar por final el bloque. En nuestro artículo sobre ataques del 51% analizaremos más a fondo las matemáticas involucradas en el cálculo de estas probabilidades.
 
-A Distributed Denial-of-Service (DDOS) attack in computing is an attack, where a perpetrator seeks to make a network resource unavailable to its users, by flooding the network with a large number of superfluous request in an attempt to overload the system. It is an attack that not only blockchains but any online service can suffer from. In a simple form, the DOS (Denial-of-Service) attack, all these requests originate from the same source. This makes it somewhat easy to prevent. If a single IP-address sends a huge amount of requests that cannot be justified by legitimate reasons, you can have a measure in place that automatically blocks this IP-address. In the case of a DDOS attack, the distributed refers to a large number of different sources that the malicious requests originate from.
+Ahora que hemos explicado la naturaleza del problema que los mecanismos de consenso intentan resolver, mencionaremos algunos tipos de ataque más intuitivos y sencillos y cómo se manejan.
+
+### Ataque DDoS
+
+Un ataque de denegación de servicio distribuido (distributed denial-of-service) o DDoS es aquel en el que el atacante busca cortar la disponibilidad del recurso de una red a sus usuarios inundando la red con una cantidad enorme de solicitudes superfluas con la intención de que el sistema se sobrecargue. Este tipo de ataque puede dirigirse no solo a una cadena de bloques sino a cualquier servicio. En su versión más simple, el ataque de denegación de servicio (denial of service) o DoS, todas las solicitudes se generan desde un solo punto, lo cual los hace relativamente fáciles de prevenir. Si una sola dirección IP hace un gran número de solicitudes injustificables, hay medidas automáticas que bloquean la dirección en cuestión. En el caso de un ataque DDoS, es decir un ataque distribuido, las solicitudes maliciosas se originan desde muchos puntos diferentes.
 
 ![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_D.jpg)
 ![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_M.jpg)
 
-A DDOS attack is much harder to tackle because to do so you need to differentiate between legitimate and malicious requests. This is a very hard problem. In the context of blockchains, this comes down to an almost ideological question. The motivation to introduce transaction fees was to eliminate spam. Some people argue that as long as the requests have a transaction fee attached they cannot be considered spam by definition. I would argue, that as long as the sole purpose of the requests (in this case transactions) is to slow down the network it can still be considered spam. This is a strongly subjective view, as it is impossible to be certain about the motivation behind a large number of transactions.
+Un ataque DDoS es más difícil de contrarrestar porque hace necesario que la red diferencie entre solicitudes legítimas y maliciosas, una cuestión casi ideológica. En su momento, se introdujo la medida de tarifas de transacción para eliminar la propagación de spam. Algunos argumentan que mientras una solicitud tenga adjunta una tarifa de transacción, no puede considerarse spam. Al contrario, puede argumentarse también que mientras el único propósito de las solicitudes (en este caso transacciones) sea reducir la velocidad de la red, pueden considerarse spam. Esta es una opinión subjetiva, claro, porque resulta imposible que la red conozca la motivación de un gran número de transacciones.
 
-### Sybil Attack
+### Ataque Sybil
 
-A Sybil Attack is an attempt to manipulate a P2P network by creating multiple fake identities. To the observer, these different identities look like individual users, but behind the scenes, a single entity controls all these fake entities at once. This type of attack is important to consider especially when you think about online voting . Another area where we are seeing Sybil attacks is in social networks where fake accounts can influence the perceived public discussion into the desired direction.
+Se le llama ataque Sybil a cualquier intento de manipular una red P2P creando múltiples identidades falsas. En la superficie, cada identidad parece un usuario individual, pero la realidad es que una sola entidad controla todas las identidades falsas a la vez. Es importante considerar este tipo de ataque en especial cuando consideramos la implementación de votaciones en línea. Otro ámbito en el que son comunes los ataques Sybil son las redes sociales, donde un grupo de cuentas falsas puede influenciar la percepción del público para darle a la discusión pública una orientación específica deseada.
 
-Another possible use for Sybil attacks is to censor certain participants. A number of Sybil nodes can surround your node and prevent it from connecting to other, honest nodes on the network. This way one could try to prevent you from either sending or receiving information to the network.
+Los ataques Sybil se utilizan también para censurar a los participantes de una red. Un grupo de nodos Sybil puede rodear al nodo del usuario e impedir que se conecte con los nodos honestos de la red. De esta manera, el atacante puede evitar que el usuario reciba o envíe información en la red.
 
-![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/sybil_D.jpg)
-![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/sybil_M.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_sybil_D.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_sybil_M.jpg)
 
-One way to mitigate Sybil Attacks is to introduce or raise the cost to create an identity. This cost must be carefully balanced. It has to be low enough so that new participants aren't restricted from joining the network and creating legitimate identities. It must also be high enough that creating a large number of identities in a short period of time becomes very difficult. In PoW blockchains, the nodes that actually make decisions on transactions are the mining nodes. There is a real-world cost, namely buying the mining hardware, associated with creating a fake "mining-identity". Additionally, having a large number of mining nodes still doesn't suffice to influence the network meaningfully. To do that you would also need large amounts of computational power. In other words, you need large clusters of computers. The associated costs make it hard to Sybil attack Proof-of-Work blockchains.
+Una manera de mitigar un ataque Sybil es la de adjuntar un costo a la creación de una identidad, o bien, la de incrementarlo. El costo debe balancearse cuidadosamente, pues debe ser lo suficientemente accesible para permitir la creación de nueva identidades legítimas, pero también lo suficientemente elevado como para dificultar la creación de muchas identidades en poco tiempo. En una cadena de bloques PoW, los nodos que toman decisiones sobre las transacciones son los nodos de minado. Hay un costo real asociado a la creación de identidades falsas, particularmente el costo de comprar el hardware de minado. Además, al atacante no le bastaría tener muchos nodos de minado en la red para influirla, necesitaría también una gran cantidad de poder computacional. En otras palabras, se necesitan grandes concentraciones de computadoras. Los costos que esto implica hacen que sea difícil atacar a una cadena de bloques PoW de esta manera.
 
-We have dedicated an entire article in our Advanced Section to Sybil attacks and how to mitigate the risk of them occurring. For now, let's move on to the last type of attack we want to introduce you to.
+Le hemos dedicado un artículo completo a los ataques Sybil y cómo mitigarlos en el nivel avanzado, pero por ahora prosigamos a un último tipo de ataque.
 
-### 51% Attack
+### Ataque del 51%
 
-The best-known type of attack on public PoW blockchains is the 51% attack. The goal of a 51% attack is to perform a double spend, which means spending the same coin twice. To perform a 51% attack on a blockchain network, you need to control a majority of the hash rate or computing power of the network, hence the name.
+El ataque más conocido que afecta a las cadenas de bloques PoW es el llamado ataque del 51%. El objetivo de este ataque es lograr crear un doble gasto, es decir, lograr gastar la misma moneda dos veces.
 
-A malicious miner wanting to perform a double spend will first create a regular transaction spending their coins for either a good or for a different currency on an exchange. At the same time, they will begin mining a private chain. This means they will follow the usual mining protocol, but with two exceptions.
+Para llevar a cabo un ataque así en la red de una cadena de bloques, el atacante necesita controlar la mayoría del poder computacional de la red; de ahí su nombre.
 
-First, they will not include their own transaction spending their coins in their privately mined chain. Second, they will not broadcast the blocks they find to the network, therefore we call it the private chain.
+Un minero malicioso que quiera llevar a cabo un doble gasto debe primero crear una transacción regular en la que utilice sus fondos para adquirir alguna mercancía u otro tipo de moneda en un centro cambiario. Al mismo tiempo, empezará a minar una cadena privada. Esto significa que seguirá el protocolo de minado normal, pero con dos excepciones.
 
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent_D.jpg)
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent_M.jpg)
+Primero, no incluirá su propia transacción en su cadena privada. Segundo, no trasmitirá a la red los bloques que encuentre, por lo que su cadena adquiere la designación de privada.
 
-If they control a majority of the computing power, their chain will grow faster on average than the honest chain. The Longest Chain Rule in PoW blockchains, also known as Nakamoto Consensus, governs what happens in case of such a fork. The branch, that has more blocks to it and accordingly represents the chain created with a larger amount of computing power is considered the valid chain.
+![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_percent_D.jpg)
+![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/ES_percent_M.jpg)
 
-Once the attacker has received the good or other currency bought with their coins, they will broadcast the private branch to the entire network. All the honest miners will then drop the honest branch and start mining on top of the malicious chain. The network treats the attacker's transaction as if it never happened because the attacker did not include it in the malicious chain. The attacker is still in control of their funds and can now spend them again.
+Si el atacante controla la mayoría del poder computacional, su cadena de bloques crecerá más rápido (en promedio) que la cadena honesta. La regla de la cadena más larga de las blockchains PoW, conocida también como consenso de Nakamoto, gobierna lo que sucede en caso de este tipo de bifurcación. La cadena que tenga más bloques adjuntos, que es al mismo tiempo aquella creada con la mayor cantidad de poder computacional, se convierte en la cadena considerada válida.
+
+Una vez que el atacante haya recibido la mercancía u otra divisa comprada con sus monedas, propagará su bifurcación privada al resto de la red. En ese momento, los mineros honestos dejan la cadena honesta y empiezan a minar sobre la cadena maliciosa. La red actúa como si la transacción del atacante nunca hubiera sucedido porque nunca la incluyó en la cadena maliciosa. Con la validación de su cadena, el atacante tiene aún el control de sus fondos y puede volver a gastarlos.
 
 <img src="/assets/post_files/technology/advanced/attacks-on-blockchain/percent.gif" alt="51% Attack" style="width: 700px;">
 
-This has happened to many smaller blockchains in the past. In fact, Horizen suffered from a 51% attack in early June 2018. We immediately started to work on a solution to mitigate the risk of a 51% attack on smaller blockchains that are not secured by as much computing power as for example the Bitcoin blockchain.
+Esto le ha sucedido a muchas cadenas de bloques pequeñas en el pasado. De hecho, Horizen sufrió un ataque del 51% en junio de 2018. De inmediato, comenzamos a buscar soluciones para mitigar el riesgo de que estos ataques se lleven a cabo sobre cadenas pequeñas que no cuentan con la seguridad que brindan grandes cantidades de poder computacional (como en el caso de la blockchain de Bitcoin).
 
-[We came up with a solution](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) that penalizes delayed block submissions. There is no legitimate reason for a miner, to broadcast several blocks to the network at once. Our protection mechanism makes these attacks very costly. So costly that it does not make any economic sense to perform such an attack on our network. Many other blockchains are now looking to implement a similar protection mechanism with their protocol. You can find the whitepaper to our protection mechanism here.
+Ideamos una solución que penaliza cualquier retraso en la introducción de un bloque a la cadena, pues no hay razón legítima alguna que llevaría a un minero a propagar más de un bloque a la vez. Nuestro mecanismo de protección hace de este tipo de ataques una tarea muy costosa; tanto así que ha dejado de tener sentido económico llevar a cabo este tipo de ataque en la red de Horizen. Muchas otras cadenas de bloques están buscando también implementar mecanismos de protección similares para sus protocolos. El libro blanco de nuestro mecanismo de protección se encuentra disponible [aquí](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf).
 
-### Summary
+### Resumen
 
-Blockchains have solved the Byzantine General's Problem of achieving consensus on the order of events in an untrustworthy environment. There are different ways a blockchain can be attacked. Performing these attacks becomes more difficult over time as more computing power is added to the network and it becomes more robust. In a DDOS Attack, a perpetrator wants to slow down or halt the network by spamming it with a large number of transactions. In a Sybil Attack, a malicious actor controls many fake identities and tries to either meddle with online elections or to manipulate the communication in a P2P network. In a 51% attack, a miner controlling the majority of computing power on the network tries to spend coins twice, by writing a private version of the blockchain first, before broadcasting all blocks at once to the honest miners.
+Las cadenas de bloques han resuelto el problema de los generales bizantinos de lograr consenso sobre el orden de eventos en un ambiente de poca confianza. Aún así, hay diferentes maneras de atacar una cadena de bloques. Llevar a cabo estos ataques se vuelve más difícil con el tiempo, pues las cadenas van adquiriendo poder computacional y se vuelven más robustas.
 
-The attack scenarios presented in this article, except for the 51% attack, are not endemic to blockchains and have been around since the beginning of distributed peer networks. There are many measures in place to mitigate the risk of the different attack scenarios out there. We will look at them closely in the advanced section. We hope this last article didn't leave you with a wrong impression on blockchain security. Blockchain technology is highly secure, but as with anything else in the digital realm, there are no invincible protocols.
+En un ataque DDoS, el atacante busca hacer más lenta o detener por completo la red saturándola con grandes cantidades de transacciones. En un ataque Sybil, un actor malicioso controla muchas identidades falsas e intenta intervenir en una elección en línea o manipular la comunicación dentro de una red P2P. En un ataque del 51%, un minero que controla la mayoría del poder computacional de la cadena de bloques intenta gastar sus monedas dos veces creando primero una versión privada de la cadena y luego propagando todos sus bloques a la red de mineros honestos.
+
+Los ataques presentados en este artículo, con la excepción del ataque del 51%, no son endémicos a las cadenas de bloques y han existido desde el surgimiento de las redes par a par distribuidas. Hay muchas medidas que pueden tomarse para mitigar el riesgo de un ataque, las cuales analizaremos con más detalle en la sección experta.
+
+Esperamos que ese artículo no le haya dejado un mal sabor de boca sobre la seguridad de las cadenas de bloque. La tecnología blockchain es de las más seguras que existen, pero como cualquier otro elemento del ámbito digital, no es completamente impenetrable.
+

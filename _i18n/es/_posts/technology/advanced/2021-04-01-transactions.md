@@ -1,30 +1,30 @@
 ---
 layout: post
 type: intro
-title: "Transactions"
-description: "After we have covered wallets we take a look at what cryptocurrency transactions are and how they work."
+title: "Transacciones"
+description: "Habiendo cubierto el tema de las billeteras digitales, las interfaces que crean transacciones, nos acercaremos a la naturaleza de las transacciones y cómo funcionan."
 permalink: /technology/advanced/transactions/
 topic: technology
 level: advanced
-chapter: "Transactions"
+chapter: "Transacciones"
 ---
 
-You should have a pretty good understanding of blockchain if you have read through our first chapters in the advanced section and made it this far. After we have covered the ideas and value propositions of blockchain in the first chapter we looked at the concepts that make blockchain work. In this chapter, we will look at a small subunit of the blockchain, a tiny piece in the puzzle. The blockchain is made of many blocks which in turn are containers for transactions. 
+Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques si ha leído los capítulos anteriores a este. Tras cubrir la idea de una cadena de bloques y sus propuestas de valor en el primer capítulo, nos adentramos a los elementos que la hacen funcionar. En este capítulo, nos concentraremos en una subunidad de la cadena, una pequeñísima pieza del rompecabezas. La cadena de bloques está compuesta de muchos bloques, los cuales funcionan como contenedores de transacciones.
 
 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
-            <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="The UTXO Model" />
+            <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="El modelo UTXO" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">The UTXO Model</h5>
+        <h5 class="intro-article-title">El modelo UTXO</h5>
         <p class="mb-1">
-            Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works.
+            La mayoría de las cadenas de bloques emplean el modelo UTXO (Unspent Transaction Output) para rastrear los fondos de un usuario. Aquí explicaremos cómo funciona.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -32,16 +32,16 @@ You should have a pretty good understanding of blockchain if you have read throu
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
-            <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="Block Explorer Continued" />
+            <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="El explorador de bloques" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Block Explorer Continued</h5>
+        <h5 class="intro-article-title">El explorador de bloques</h5>
         <p class="mb-1">
-            A block explorer is a tool that lets you browse the data on a blockchain. Here we take a look at what kind of information you will find.
+            El explorador de bloques es una herramienta que permite al usuario navegar la información contenida en la cadena. Este artículo habla del tipo de información que encontrará el usuario.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -49,16 +49,16 @@ You should have a pretty good understanding of blockchain if you have read throu
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">
-            <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Atomic Swaps" />
+            <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Intercambios atómicos" />
         </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Atomic Swaps</h5>
         <p class="mb-1">
-            Lastly, we want to show you a special type of transaction. An Atomic Swap lets you exchange two different cryptocurrencies without using an exchange.
+            Por último, queremos explorar un tipo especial de transacción. Un intercambio atómico (atomic swap) le permite a un usuario intercambiar criptomonedas diferentes sin la intermediación de un centro cambiario.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Leer el artículo</a>
         </p>
     </div>
 </div>

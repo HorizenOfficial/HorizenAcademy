@@ -1,131 +1,140 @@
 ---
 layout: post
 type: article
-title: "DAO - Decentralized  Autonomous Organization"
-description: "Over time our foundation will become a DAO - a Decentralized Autonomous Organization. Find out what this means here."
+title: "OAD - Organización autónoma descentralizada"
+description: "Nuestra meta es adoptar un modelo de organización autónoma descentralizada (OAD) con el tiempo. Este artículo explica lo que eso significa."
 permalink: /horizen/expert/dao-decentralized-autonomous-organization/
 topic: horizen
 level: expert
 ---
 
-IOHK’s Roman Oliynykov published a paper in cooperation with Bingsheng Zhang and Hamed Balogun from Lancaster University describing a treasury system that could be deployed on various cryptocurrencies regardless of the consensus mechanism used. A prototype has been implemented in Scala over the Scorex 2.0 framework. You can find a detailed presentation here. Rob Viglione explained the implications in a short video on Twitter. Horizen is working towards implementing the proposed treasury system to decide upon and distribute our treasury funds in a decentralized fashion.
+Roman Oliynykov de IOHK publicó un artículo en colaboración con Bingsheng Zhang y Hamed Balogun de la Universidad de Lancaster en el que describen un sistema de tesorería que podría implementarse a varias criptomonedas sin importar el tipo de mecanismo de consenso empleado. Un prototipo del sistema se ha implementado ya a Sacala a través del esquema Scorex 2.0 (puede encontrar una presentación detallada aquí).
 
-We summarize the paper and provide some context in this article.
+Rob Viglione, por su parte, explicó las implicaciones de este sistema en un video en Twitter. Horizen se encuentra avanzando hacia la implementación de dicho sistema al sistema de tesorería para tomar decisiones sobre la distribución de fondos de manera descentralizada.
 
-![DAO](/assets/post_files/horizen/expert/dao/DAO_D.jpg)
-![DAO](/assets/post_files/horizen/expert/dao/DAO_M.jpg)
+En este artículo hemos resumido el contenido del artículo antes mencionado, proporcionando también el contexto necesario.
 
-### Introduction
+![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
+![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
 
-Building a cryptocurrency requires many things. It requires:
+### Introducción
 
- - Developers willing to commit their time to the project.
- - Some marketing. Not only to make your coin attractive to potential users but also to attract developers willing to commit their time to the project.
- - A legal team - Since regulators are watching the crypto space more closely. The legal team will make sure all endeavors are compliant with the existing regulation and will be compliant with future regulations.
+La constitución de una criptomoneda requiere muchas cosas, entre ellas:
 
-Many things could be added to this list but most of them have one thing in common: They require some sort of funding.
+ - Desarrolladores dispuestos a dedicarle su tiempo al proyecto.
+ - Algo de marketing; no solo para hacer de la divisa algo atractivo al usuario potencial, sino también para atraer desarrolladores.
+ - Un equipo legal. Ya que hay más entidades regulatorias monitoreando el espacio cripto, un equipo legal se asegurará de que todos los aspectos del proyecto cumplan con regulaciones presentes y futuras.
 
-This funding should be sustainable long term. There are three main sources of funding identified in the paper, namely:
 
- - Patron organizations and donations
- - An ICO
- - Hair-cut/tax/founders reward (part of the miners reward)
+Podríamos agregar muchas más cosas a la lista, pero la mayoría tendría una cosa en común; el requisito de algún tipo de fondos.
 
-Other people included transaction fees in this list before, but the total amount of TX fees outside the major projects like Bitcoin and Ethereum is not nearly sufficient for continuous development.
+La obtención de fondos debe ser sostenible a la larga. El documento identifica tres fuentes principales de fondos:
 
-Donations are not a reliable long term solution. An ICO does not provide sustainable funding over years and has become a legally challenging option. The third option identified to be the most promising means of funding. Mining rewards earned with Proof-of-Work cryptocurrencies offers a longer-term solution to funding issues. This solution can resolve the difficulty of finding new sources of funding. The funding issue will turn into a problem that generations to come have to deal with until the end of issuance (with currencies that adopted the Bitcoin issuance schedule roughly till 2140).
+ - Organizaciones benéficas y donaciones
+ - Una oferta inicial de monedas (initial coin offering) o ICO
+ - Recompensa de fundadores (parte de la recompensa del minero)
 
-### Decentralization is Key
+Hay quienes agregan las tarifas de transacción a esta lista, pero el monto sumado de estas transacciones más allá de proyectos a gran escala como Bitcoin o Ethereum no suele ser suficiente para el desarrollo de un proyecto.
 
-Decentralization does not just avoid single points of failure, it also helps to improve privacy. A powerful central party will always be able to gather more information on a given user than a peer in a truly distributed system would. Another area, besides the network architecture, that should be as decentralized as possible is the funding of development and maintenance and the decision making regarding what the funds at hand are used for. This is where the treasury model enters the scene. The treasury system proposed does not really care where the funds are coming from. It ensures an inclusive and fair funding process for all participants.
+Las donaciones no son una buena solución a largo plazo, mientras que las ICO no generan fondos a la larga y se han vuelto una opción legalmente controvertida. Por lo tanto, es la tercera de las opciones la que más promete en función de los fondos que genera. El minar recompensas obtenidas a través de criptomonedas PoW ofrece una mejor solución a largo plazo en cuestiones de obtención de fondos, pues evita que tengan que buscarse continuamente nuevas fuentes de ingresos. Esta solución, claro está, tendrá que enfrentarse al problema de cese de emisión (en el caso de las monedas que adoptaron el calendario de emisión de Bitcoin, hasta circa 2140).
 
-### Voting System
+### La descentralización es la clave
 
-> “The core component of a treasury system is a decision-making system that allows members of the community to collectively reach some conclusions/decisions.”
+La descentralización no solo evita la introducción de puntos débiles al sistema, sino que también ayuda a mejorar su nivel de privacidad. Una entidad centralizada y poderosa siempre tendrá la capacidad de recolectar más información sobre un usuario dado que un par en un sistema verdaderamente distribuido. Además de la arquitectura de la red, otras áreas que deben mantenerse lo más descentralizadas posible son la distribución de fondos para el desarrollo y mantenimiento de proyectos y la toma de decisiones respecto a cómo se utilizarán los fondos. Aquí es donde cobra importancia nuestro modelo de tesorería. El sistema de tesorería propuesto no distingue las fuentes de los fondos obtenidos, sino que asegura un proceso de distribución de fondos inclusivo y justo para todos los participantes.
 
-Every member of the community will be able to submit proposals to fund projects. The community will collaboratively come to a decision on which projects to fund. This could be anything from the development of a new feature for a wallet, a developer getting paid for his work, a community member traveling to a conference to raise awareness of the project or even sponsoring an event.
+### Sistema de votación
 
-Two different categories of voting schemes are viable in this context: preferential or ranked voting and approval voting.
+> “El componente central de un sistema de tesorería es un sistema de toma de decisiones que les permite a los miembros de una comunidad tomar decisiones o llegar a conclusiones de manera colectiva.”
 
-The preferential voting system allows voters to rank the given options. The highest ranked options will receive funding. Ranking can be very time consuming and difficult and require voters to compare apples to oranges when casting their vote. It’s hard to decide on which features, conferences, and events are the most important by itself. Comparing a feature to an event does not make it easier.
+Cualquier miembro de la comunidad podrá hacer propuestas para recibir fondos. La comunidad debe decidir colaborativamente qué proyectos recibirán fondos. Las propuestas podrían incluir cualquier cosa desde el desarrollo de una nueva función para la billetera virtual hasta el pago de viáticos para que un miembro de la comunidad promueva el proyecto en una conferencia o incluso el patrocinio de algún evento.
 
-Approval voting with a Yes-No-Abstain scheme simplifies the decision making the process a lot and is the option the team around Bingsheng, Roman, and Hamed chose for the treasury system. A score for each proposal can easily be calculated from the difference in Yes and No votes at the end of the voting period. The highest scoring proposals will receive funding in turns until the treasury pool is depleted for the month.
+Hay disponibles dos esquemas de votación viables en este contexto; el voto preferencial y el voto por aprobación.
 
-If you are a developer, you will likely cast a vote for all proposals regarding new code. At the same time, you might not be very experienced when it comes to marketing and feel that other people should make decisions regarding which conferences to attend and events to support. A marketing expert will want to decide on which conferences to attend but might not have a strong opinion about what code to implement… you get the idea. Now how do you leverage the expertise of certain individuals most effectively? The answer is liquid democracy.
+El voto preferencial le permite a los votantes ordenar sus opciones de acuerdo a su preferencia, por lo que las propuestas con los mejores rankings recibirán fondos. Rankear opciones puede consumir mucho tiempo y resulta difícil porque requiere que los usuarios comparen opciones muy dispares al momento de votar. Si no es fácil decidir qué función, conferencia o evento es importante por sí solo, lo es mucho menos cuando se tienen que comparar entre sí.
 
-### Liquid Democracy
+Un voto por aprobación con un esquema de votación “sí/no/abstención” simplifica mucho el proceso de toma de decisiones y es la opción que el equipo de Bingsheng, Roman y Hamed eligió implementar al sistema de tesorería. Es fácil calcular una calificación para cada propuesta a partir de la diferencia entre votos a favor y en contra al final del periodo de votaciones. Las propuestas con las calificaciones más altas recibirán fondos de manera turnada hasta agotarse los fondos mensuales designados.
 
-The two existing forms of democracy are representative democracy (RD) and direct democracy (DD). The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they don't scale well with an increasing number of participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process there are issues in regards to the transparency of representatives' votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
+Es probable que un desarrollador vote por todas las propuestas para códigos nuevos. Sin embargo, el mismo desarrollador puede no tener experiencia en ámbito del marketing, por lo que siente que otros deberían de tomar decisiones sobre a qué conferencias asistir o qué eventos apoyar. Un experto en marketing querrá decidir respecto a las conferencias, pero puede que no tenga una verdadera opinión sobre qué códigos implementar y así sucesivamente. Ahora, ¿cómo se aprovechan la experiencia y conocimiento de ciertos individuos de manera eficiente? La democracia líquida es la respuesta.
 
-Liquid Democracy (LD) can be understood as a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an expert that represents your views. Alternatively, you can decide to vote on any given issue yourself.
+### Democracia líquida
 
-A key difference is, that you can delegate your vote to whomever you like, be it your brother that is really knowledgable on a given topic or anybody else and you can withdraw your delegation at any given time - making the whole process liquid. This reduces the barrier to entry and keeps delegates accountable because they can lose delegations at any time.
+Las dos principales formas de democracia implementadas en la actualidad son la democracia representativa y la democracia directa. Los primeros sistemas democráticos fueron democracias directas que ofrecían a sus participantes imparcialidad, responsabilidad y control. Sin embargo, estos sistemas no resultaron fáciles de escalar cuando incrementó el número de participantes.
 
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/liquid_democracy_M.jpg)
+Por esta razón, la mayoría de los sistemas democráticas pasaron a convertirse en democracias representativas. Las democracias de este tipo le permiten a un gran número de votantes participar en el proceso de toma de decisiones. Sin embargo, presentan nuevos problemas con respecto a la transparencia de los votos y decisiones de los representantes, la responsabilidad de los representantes ante los votantes y los obstáculo que se deben superar para poder participar directamente en el proceso de toma de decisiones.
 
-### The Different Entities
+La democracia líquida es un híbrido dinámico de estas dos formas establecidas de democracia. Un sistema democrático líquido combina los beneficios de cada una y se deshace al mismo tiempo de muchas de sus debilidades. En una democracia líquida, un votante puede decidir delegarle su voto sobre un tema dado a un experto; un representante. La alternativa es que el votante emita su voto directamente.
 
-Getting closer to describing the voting process itself it is necessary to introduce the entities partaking.
+El voto se puede delegar a quien sea; ya sea al hermano del usuario, que por coincidencia posee una gran cantidad de conocimientos sobre un tema dado, o a cualquier otra persona. También es posible retirar la delegación en cualquier momento, lo cual hace de todo un proceso líquido. Estas medidas reducen el número de obstáculos para participar y hace responsables a los delegados de la manera en la que votan, pues pueden perder delegaciones en cualquier momento.
 
- - _Project Owners {O}_ are the people that have submitted a proposal. Anybody can submit a proposal but must pay a little fee to avoid spam.
- - _Voting committees {C}_ are stakeholders that are willing to help with the voting process. They are responsible for generating a voting public key together and announcing the voting result once a voting epoch ends.
- - _Voters {V}_ lock an amount of their stake to participate. Their vote is weighted according to their locked up stake.
- - _Experts {E}_ are a special type of voters that have expertise in some field. Anybody can register as an expert.
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
 
-Anybody can submit a proposal for funding and become a project owner. Anybody that owns a stake can register as a voter or an expert. Some of the voters will “randomly” get the option to become a voting committee member.
+### Las diferentes entidades
 
-### Treasury System Epochs
+Ya que nos estamos acercando a la descripción del proceso de votación en sí, es necesario que introduzcamos a los participantes:
 
-There are three epochs in each treasury period. During the **pre-voting epoch** all the project owners have time to submit their encrypted proposals. All proposals will be decrypted at once when the proposing stage ends. This increases fairness and prevents tactical timing of proposal submissions. During the pre-voting epoch, the community members also have time to register as a voter or an expert by submitting a special kind of transaction.
+ - _Líderes de proyecto {O}_ Son los usuarios que han presentado una propuesta. Cualquier puede presentar una propuesta tras pagar una pequeña transacción para evitar el spam.
+ - _Comité de votación {C}_ Son los participantes dispuestos a ayudar con el proceso de votación. Son responsables de la generación de la llave pública y de anunciar el resultado del voto una vez concluida la época de votaciones.
+ - _Votantes {V}_ Guardan una cierta cantidad de participación para poder involucrarse en el proceso. Su voto se pesa conforme a la cantidad guardada.
+ - _Expertos {E}_ Son un tipo especial de votantes con experiencia en algún campo particular. Cualquiera puede registrarse como experto.
 
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_D.jpg)
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_M.jpg)
+Cualquiera puede hacer una propuesta para recibir fondos y convertirse en líder de proyecto, y cualquiera que tenga una participación en la red puede registrarse como votante o experto. Algunos de los votantes recibirán aleatoriamente una invitación para convertirse en miembros del comité de votación.
 
-During the **voting epoch** the voting committee is selected, a voting key is set up and the ballot is held. For the **committee selection** “…a set of voting committees will be randomly selected from the registered voters who are willing to be considered for the committee selection. The probability of being selected is proportional to their locked stake.”
+### Épocas del sistema de tesorería
 
-The **key setup stage** is where a public voting key for the treasury epoch is generated (used as an address that all the casted votes are sent to). The votes are cast privately and only the end result will be public. It should be possible for a voter to express their opinion privately, that's why there are voting cabinets in “analog” polls. The protocol ensures that the end result does indeed represent the sum of all votes.
+Hay tres épocas en cada periodo de tesorería. Durante la **época anterior a las votaciones** los líderes de proyecto tienen tiempo de presentar sus propuestas encriptadas. Todas las propuestas se desencriptan una vez concluida la etapa de presentación de propuestas. Esto incrementa la imparcialidad y evita que los usuarios presentan sus propuestas de manera táctica. Durante la época anterior a las votaciones los miembros de la comunidad también tienen tiempo de registrarse como votantes o expertos llevando a cabo un tipo especial de transacción.
 
-Voting in private is achieved by all voters and experts encrypting their vote with the public voting key. Only the voting committee members can decrypt the casted votes in the tally stage. “Once all the committees have opened the tally, any party can read the tally”.
+![Treasury System Epochs](/assets/post_files/horizen/expert/dao/ES_treasury_epochs_D.jpg)
+![Treasury System Epochs](/assets/post_files/horizen/expert/dao/ES_treasury_epochs_M.jpg)
 
-The voters and experts cast their votes during the **ballot casting stage**. Each vote is represented as a vector. Since there are three possible votes — Yes, No, Abstain — there are three possible vectors that can be submitted.
+Durante la **época de votaciones (voting epoch)** se selecciona el comité de votaciones, se establece una llave para votar y se lleva a cabo la votación. Para la **selección del comité** “se selecciona un grupo de comités de votación aleatoriamente de entre los votantes registrados dispuestos a ser considerados para la selección del comité. La probabilidad de ser seleccionado es proporcional a la cantidad de la participación guardada del usuario.”
 
-![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_D.jpg)
-![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_M.jpg)
+En la **etapa de generación de la llave (key setup stage)** se genera la llave de votación para la época de tesorería (se utiliza como una dirección a la que se envían los votos emitidos). Los votos se emite de manera privada y solo el resultado se hace público. Debe ser posible que los votantes expresen su opinión de manera privada, es por eso que las casillas electorales se colocan en encuestas “análogas”. El protocolo es el que se encarga de que el resultado represente fielmente la suma de todos los vatos.
 
-The concept works like this: In the example below there are 4 votes, 2 voted Yes on the proposal, 1 No and 1 Abstain.
+La votación privada se logra pidiendo a todos los votantes y expertos que encripten su voto utilizando la llave pública de votación. Solo los miembros del comité de votación pueden desencriptar los votos emitidos durante la etapa de conteo. “Una vez que todos los comités han hecho público el conteo cualquiera puede accederlo.”
 
-![votes](/assets/post_files/horizen/expert/dao/votes_D.jpg)
-![votes](/assets/post_files/horizen/expert/dao/votes_M.jpg)
+Los votantes y expertos emiten sus votos durante la **etapa de emisión de boletas+** Cada voto se ve representado por un vector. Como hay varias opciones posibles; sí, no y abstención, hay también tres tipos de vectores.
 
-If you are familiar with the concept of vector addition it is easy to tell the sum of those four vectors. One of the Yes votes is canceled out by the No vote. The remaining Yes vote added together with the Abstain vote yields the diagonal vector shown below. For the tally, only the x-axis is considered. The final result of this proposal revealed in the **tally stage** would be a Yes.
+![yes no abstain](/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_D.jpg)
+![yes no abstain](/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_M.jpg)
 
-![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_D.jpg)
-![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_M.jpg)
+El concepto funciona así: En el ejemplo que aparece a continuación hay cuatro votos, dos sís, dos nos y dos abstenciones.
 
-More specifically, a score for each proposal will be calculated by taking the number of Yes votes minus the number of No votes. The resulting difference has to account for at least 10% of all the votes submitted to be considered for funding. If 100 votes are cast (without Abstain votes), there have to be at least 55 Yes votes to reach that threshold. The highest scoring proposals will be funded until the treasury is depleted for the month.
+![votes](/assets/post_files/horizen/expert/dao/ES_votes_D.jpg)
+![votes](/assets/post_files/horizen/expert/dao/ES_votes_M.jpg)
 
-![score](/assets/post_files/horizen/expert/dao/score_D.jpg)
-![score](/assets/post_files/horizen/expert/dao/score_M.jpg)
+Si ya se encuentra familiarizado con el concepto de suma de vectores le será fácil determinar la suma de estos cuatro vectores. Uno de los dos sís se ve cancelado por el voto negativo. El voto afirmativo restante sumado con la abstención resulta en el vector diagonal que aparece debajo. Para el conteo, se considera únicamente el eje “x”. El resultado final de esta propuesta revelado en la etapa de conteo sería un sí.
 
-The **post-voting** epoch consists of the tally stage and execution stage. Note that each vector is submitted in an encrypted fashion and only in the **tally stage** the committee jointly reveals all the casted votes. The score for each proposal will be calculated and the proposals ranked according to their score.
+![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_D.jpg)
+![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_M.jpg)
 
-During the **execution stage** the committee jointly signs off on the transactions funding the approved proposals.
+Más específicamente, la calificación de cada propuesta se calcula tomando el número de votos afirmativos y restándole el número negativos. La diferencia resultante tiene que abarcar por lo menos el 10% de todos los votos emitidos para que la propuesta sea considerada para la repartición de fondos. Si se emiten 100 votos (sin abstenciones) debe haber por lo menos 55 votos a favor para alcanzar esta marca. Las propuestas con las calificaciones más altas recibirán fondos hasta que los fondos mensuales de la tesorería se agoten. 
 
-### Rewards
+![score](/assets/post_files/horizen/expert/dao/ES_score_D.jpg)
+![score](/assets/post_files/horizen/expert/dao/ES_score_M.jpg)
 
-The last feature we want to talk about is the reward the voters, experts, and committee members receive for participating in the governance of the protocol. There is a phenomenon called _rational ignorance. Rational ignorance is refraining from acquiring knowledge when the cost of educating oneself on an issue exceeds the potential benefit that the knowledge would provide._
+La **época posvotación** consiste de las etapas de conteo y ejecución. Debe notarse que cada vector se recibe encriptado y es solo en la etapa de conteo que el comité revela el conjunto los votos emitidos. Se calcula la calificación de cada propuesta y se rankean las propuestas de acuerdo a su calificación.
 
-We aim to reduce rational ignorance by incentivizing voters to participate in the decision making progress. It is a problem in today's democracies all over the world. The time and effort it takes to acquire all the information needed to make the best possible decision in an election exceeds the benefit of being able to cast a single vote. This issue results in voter apathy. To tackle the issue of voter apathy, people that participate in the governance process get rewarded for their efforts. This creates an incentive to be informed and partake in the process. Voters will get rewarded proportionally to their stake and experts will get rewarded proportionally to the number of delegations they have, or in other words the trust that was placed in them and their decision making.
+Durante la **etapa de ejecución** el comité firma en conjunto las transacciones que trasladan los fondos a las propuestas aprobadas.
 
-### The Horizen Voting System Implementation Plan
+### Recompensas
 
-We plan to integrate the treasury system on a sidechain. [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) are one of the major protocol upgrades that Horizen is working on. It will enable different dApps to each run on their own sidechain with decoupled security guarantees. Even if something goes wrong on a sidechain, the mainchain will stay unaffected.
+La última función de la que queremos hablar es la recompensa que reciben los votantes, expertos y miembros del comité por participar en la gobernanza del protocolo. 
 
-The user interface and user experience of such a system are very important factors. The best treasury system does not help if it is hard to partake in. One challenge will be to come up with a structured and informative “governance-central”. We mean a go-to place, may it be a website or functionality embedded in a wallet, where the proposal-, voter-, expert-, and committee-registration is happening. The registration is formally a transaction, therefore it would be practical to have a function implemented in a wallet to make it easy for every stakeholder to participate in the governance.
+Existe un fenómeno llamado ignorancia racional. La ignorancia racional es el acto de abstenerse de adquirir un conocimiento dado porque el costo de educarse para obtenerlo superaría el beneficio que dicho conocimiento proporcionaría.
 
-Next, there needs to be a place where all the experts are listed, where their past decisions are visible and displayed in a comprehensive way. They should be able to create a profile and add a biography that you get to know who you are delegating your vote to. They will define their domain of expertise and the entirety of the provided information makes them accountable for future decisions. Don’t forget that you can revoke your delegation at any time if you do not agree with an expert any longer. This should be just as easy as delegating your vote to an expert in the first place.
+Nuestro objetivo es reducir la ignorancia racional al proporcionar un incentivo para que los votantes participen en el proceso de votación. Esto es un problema en muchas de las democracias de la actualidad, pues el tiempo y esfuerzo que exige el adquirir la información necesaria para tomar las mejores decisiones durante una elección supera el beneficio de poder emitir un solo voto, lo cual resulta en apatía por parte del votante.
 
-### Summary
+Para atacar la cuestión de la apatía de los votantes, quienes participan en el proceso de gobernanza obtienen recompensas por su esfuerzo. Esto crea un incentivo para informarse y participar en el proceso. Los votantes se verán recompensados conforme al peso de su participación y los expertos una proporcional al número de votos que se les han delegado, en otras palabras, la confianza que se les ha dado en la toma de decisiones.
 
-Our treasury system serves the purpose of distributing funds to different projects within Horizen and to legitimize the decision making process in a decentralized way. Every stakeholder will be able to submit proposals. Users will be able to vote on the different proposals either directly or by choosing a delegate to cast a vote on their behalf. This hybrid of direct and representative democracy is called liquid democracy. The voter registration, the voting process, and project funding will be built on a sidechain (a separate blockchain that is interoperable with our existing main blockchain). Users will be incentivized to partake in the governance process and a user-friendly user interface will be built to make participation easy and intuitive.
+### El plan de implementación del sistema de votaciones de Horizen
+
+Planeamos integrar el sistema de tesorería en una cadena lateral. Las [cadenas laterales (sidechains)]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) son una de las mejoras al protocolo de Horizen que nos encontramos desarrollando actualmente. La implementación de las cadenas laterales les permitirá a diferentes dApps ejecutarse sobre su propia cadena lateral con garantías de seguridad separadas. Incluso si algo sale mal en la cadena lateral, la cadena principal no se verá afectada.
+
+La interfaz y experiencia del usuario son factores muy importantes en el caso de un sistema así. Tener el mejor sistema de tesorería no ayuda si la participación resulta difícil. Un reto será el idear un centro de gobernanza estructurado e informativo. Nos referimos a un lugar de fácil acceso, quizás un sitio web o una función embebida en una billetera donde puedan llevarse a cabo los registros de propuestas, votantes y expertos y al comité de votación. Formalmente, el registro es una transacción, por lo que resultaría práctico implementar la función en una billetera, facilitándoles así a los participantes el formar parte de la gobernanza de la cadena.
+
+Además, debe haber también un lugar donde aparezca una lista de todos los expertos en conjunto con un registro visible y comprehensivo de todas sus decisiones pasadas. Cada experto deberá ser capaz de crear un perfil con información biográfica que ayude al usuario a saber a quién le está delegando su voto. El experto se encargará también de definir el área que dominan, mientras que toda la información en conjunto los hace responsables de sus decisiones. Es importante recordar que el usuario puede revocar su delegación en cualquier momento si llega a tener algún desacuerdo con sus decisiones. La revocación debe resultar tan fácil como la delegación inicial.
+
+### Resumen
+
+Nuestro sistema de tesorería cumple los propósitos de distribuir fondos a los diferentes proyectos que existen dentro de Horizen y de legitimar el proceso de toma de decisiones de una manera descentralizada. Todos los participantes podrán presentar propuestas, mientras que los usuarios tendrán la opción de votar por ellas ya sea directamente o delegándole su voto a un experto que votará en su lugar. A este híbrido entre una democracia directa y representativa se le llama democracia líquida. El registro de votantes, el proceso de votación, y la distribución de fondos a los proyectos se construirán sobre una cadena lateral, una cadena que bloques separada interoperable con nuestra cadena de bloques existente. Los usuarios se verán incentivados a participar en el proceso de gobernanza y se diseñará una interfaz amigable con el usuario para hacer de la participación un proceso fácil e intuitivo.

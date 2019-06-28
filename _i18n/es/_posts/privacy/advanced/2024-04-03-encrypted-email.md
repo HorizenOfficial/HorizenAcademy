@@ -1,42 +1,41 @@
 ---
 layout: post
 type: article
-title: "Encrypted Email"
-description: "Sending encrypted emails reduces the risk of somebody snooping in on your mail and is easier to set up than most think."
+title: "Correo electrónico encriptado"
+description: "El envío de correos electrónicos encriptados reduce el riesgo de que alguien entre a su correo y es más fácil de configurar de lo que la mayoría cree."
 permalink: /privacy/advanced/encrypted-email/
 topic: privacy
 level: advanced
-chapter: "Tools to protect your Privacy"
+chapter: "Herramientas para proteger la privacidad"
 further_reads: [email_glossary, how_to_use_pgp_encryption_with_gmail, 6_best_encrypted_email_software_to_protect_your_data]
 ---
 
-For a sophisticated hacker, it is incredibly easy to intercept your emails if you are the target. The easiest way to get your hands on somebody else's email is to gain access to that person's email account. If you follow the best practices we introduced in the last chapter, namely choosing a secure password for your email account and activating 2FA this becomes much harder already. Still, there are ways to intercept your email traffic. Using unsecured wifi networks is another attack vector for an adversary to access your online correspondence.
+A un hacker sofistacado le resulta increíblemente fácil interceptar correos electrónicos, y la manera más fácil de hacerlo es obteniendo acceso a la cuenta de correo electrónico de un usuario. Si se implementan las mejores prácticas que introdujimos en el capítulo anterior, en especial la elección de una contraseña segura y la activación de A2F, esto se vuelve mucho más difícil, pero aun así existen maneras de interceptar el flujo del correo. Utilizar redes Wi-Fi no aseguradas es también otra manera en la que un adversario puede obtener acceso a la correspondencia en línea del usuario.
 
-Encrypted emails resolve this problem and are much easier than one might think.
+La encriptación del correo electrónico del usuario no solo resuelve este problema, sino que también es mucho más fácil de hacer de lo que piensa la mayoría
 
-### How to Start?
+### Cómo empezar
 
-There are generally two options to choose from if you want to start using encrypted emails. The first and maybe more convenient option is to use add-ons for your existing email accounts and clients. There are add-ons for email service providers such as Gmail. [Apple Mail](https://support.apple.com/guide/mail/sign-or-encrypt-emails-mlhlp1180/mac) and [Microsoft Outlook](https://support.office.com/en-us/article/encrypt-email-messages-373339cb-bf1a-4509-b296-802a39d801dc) natively support encrypted emails.
+Hay fundamentalmente dos opciones a elegir si el usuario quiere empezar a enviar correos electrónicos encriptados. La primera opción es quizás la más conveniente, y es la de utilizar extensiones para las cuentas y clientes de correo que el usuario ya tiene. Hay extensiones para proveedores de correo como Gmail, pero aplicaciones como [Apple Mail](https://support.apple.com/guide/mail/sign-or-encrypt-emails-mlhlp1180/mac) y [Microsoft Outlook](https://support.office.com/en-us/article/encrypt-email-messages-373339cb-bf1a-4509-b296-802a39d801dc) tienen disponible la opción de encriptación de correo de manera nativa.
 
-The second and maybe less convenient option is to switch to a secure email client. These clients such as ProtonMail, CipherPost, Hushmail, or Disroot support email encryption natively from the regular interface. Most of these privacy-centric email providers will support the OpenPGP standard, which is open source and
+La segunda opción es menos conveniente, y es la de cambiarse a un cliente de correo electrónico seguro. Algunas opciones son ProtonMail, CipherPost, Hushmail y Disroot, los cuales hacen disponible la encriptación de manera nativa desde sus interfaces regulares. La mayoría de estos proveedores se concentran en la privacidad del usuario y se sirven de un estándar de código abierto conocido como OpenPGP.
 
-It's important to note that exchanging encrypted emails only works with people that have set up their encryption as well, either by using an add-on or by configuring their email managers. You need to exchange your public keys before you can address an encrypted email to somebody.
+Es importante recalcar que el envío de correos encriptados solo puede darse entre usuarios que tienen habilitada la opción de encriptación, ya sea por medio de una extensión o reconfigurando sus administradores de correo. En consecuencia, es necesario que el usuario comparta sus llaves públicas antes de poder enviarle un correo encriptado a alguien más.
 
-We cover the principle behind public key cryptography in our technology section. With cryptocurrencies, you use the public key to receive money and the private key to spend money. This is analogous to how you use your key pair for encrypted emails. The sender uses your public key to encrypt the text. You will use your private key to decrypt the message later on. Without your public key, people could send you encrypted messages, but you would have no way to decrypt them.
+Ya hemos cubierto el principio detrás de la criptografía de llave pública en nuestra sección de tecnología. En el caso de las criptomonedas, el usuario utiliza su llave pública para recibir dinero y la llave privada para gastarlo. El par de llaves se utiliza de manera análoga en el caso del correo encriptado. El remitente utiliza la llave pública del usuario para encriptar el texto, mientras que el receptor (el usuario) utiliza la privada para desencriptarlo más adelante. Sin la llave pública del usuario, sería posible mandarle mensajes encriptados, pero como receptor este no tendría manera de desencriptarlos.
 
-### So, Which One to Choose?
+### Cuál elegir
 
-That is a question that only you can answer. The first question you should ask yourself is how sensitive your data is. If you wish to communicate privately but don't have to worry about harsh consequences in case your email correspondence were to become public, an add-on for your existing email will probably do the trick. 
+La cuestión de qué proveedor elegir solo la puede resolver el usuario. La primera pregunta que debe responderse es la de qué tan sensible es la información que se busca encriptar. Si el usuario quiere comunicarse de manera privada pero no habría consecuencias gravísimas si su comunicación llegara a hacerse pública, lo más adecuado es la elección de una extensión para un correo existente.
 
-In case you are actually dealing with sensitive information regularly, you should consider switching your email provider or at least creating a second email address for sensitive content. Since you want to protect your privacy, be careful about how much personal information the service provider is requesting during the signup procedure. Make sure you use a [strong password]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}) and enable [2FA]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication %}).
+En caso de que el usuario maneja datos o información sensibles regularmente, debería de considerar cambiarse a un proveedor seguro o, por lo menos, crear una segunda cuenta de correo para enviar el contenido sensible. Ya que la meta aquí es que el usuario proteja su información personal, es importante prestar atención a los datos que se le proporcionan al proveedor a la hora de contratar el servicio. Por último, es esencial implementar una [contraseña robusta]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}) y habilitar la [A2F]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication %}).
 
-All of the following providers have a free service and accept cryptocurrency for premium accounts. Paying with cryptocurrencies or cash cards avoids sharing your banking details or credit card information with the email provider
+Todos los proveedores que aparecen a continuación cuentan con servicios gratuitos y aceptan criptomonedas como método de pago para la creación de cuentas prémium. Recuerde que pagar con criptomonedas o tarjetas prepagadas evita que tenga que compartir sus datos bancarios o información de tarjeta de crédito con el proveedor.
 
  - ProtonMail
  - Disroot.org
  - Mailfence
 
-We won't go through the setup procedure for your new account, because almost every service will have a detailed guide on how to set up the account so that you can use strong encryption for your email.
+No revisaremos aquí el procedimiento de cómo crear cuentas de correo nuevas, pues casi todos los proveedores cuentan ya con guías detalladas de cómo hacerlo y cómo implementar la encriptación al correo.
 
-Below we have a few resources that will help you pick an email provider that suits you.
-
+Debajo aparecen algunos recursos que lo ayudarán a elegir el proveedor que más le convenga.

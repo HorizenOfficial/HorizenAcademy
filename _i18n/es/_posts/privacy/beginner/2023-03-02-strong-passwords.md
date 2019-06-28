@@ -31,4 +31,4 @@ Con estas dos cosas en mente, es momento de mencionar que surge un tercer proble
 
 Utilizar un administrador significa que se pueden generar contraseñas largas y complejas sin que tener que recordarlas represente un problema. Pueden generarse también datos aleatoriamente para contestar preguntas de seguridad, mismos que se guardan en el registro del software. Todo esto, sin embargo, tiene sus desventajas. Al utilizar un administrador, el usuario reduce su capacidad de recuperar sus contraseñas a un único punto de error, por lo que se vuelve indispensable elegir cuidadosamente una contraseña para proteger los datos que contiene.
 
-¡Felicidades¡ Ya cuenta con la información necesaria para actualizar y fortalecer sus contraseñas.
+¡Felicidades! Ya cuenta con la información necesaria para actualizar y fortalecer sus contraseñas.

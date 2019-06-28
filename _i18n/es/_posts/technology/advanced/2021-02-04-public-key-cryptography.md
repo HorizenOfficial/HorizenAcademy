@@ -1,30 +1,30 @@
 ---
 layout: post
 type: article
-title: "Public Key Cryptography"
-description: "Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name."
+title: "Criptografía de llave pública"
+description: "Otro elemento importante para la tecnología blockchain es la criptografía de llave pública, la cual se utiliza para verificar propiedad y darle a cada criptomoneda su nombre."
 permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 further_reads: [how_to_create_a_bitcoin_wallet_address_from_a_private_key, what_is_the_math_behind_elliptic_curve_cryptography, elliptic_curve_cryptography_a_gentle_introduction]
 ---
 
-There must be a way to represent identity to have ownership on the blockchain. You cannot have ownership if there is no representation of the owner. Public-key cryptography makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides the hash functions that we were talking about in the last article. While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
+Es necesario que el usuario tenga alguna manera de representar su identidad para poder reclamar propiedad en la cadena de bloques, pues no hay propiedad sin representación del propietario. La criptografía de llave pública hace posible el presentar identidad en la cadena. Junto con las funciones hash discutidas en el último artículo, esta es la segunda piedra angular de la tecnología blockchain. Mientras que las funciones hash se utilizan para verificar la autenticidad e integridad de la información, la criptografía de llave pública se utiliza para verificar propiedad dentro de la cadena de bloques.
 
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_D.jpg)
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/how_it_works_M.jpg)
+![How it works](/assets/post_files/technology/advanced/public-key-cryptography/ES_how_it_works_D.jpg)
+![How it works](/assets/post_files/technology/advanced/public-key-cryptography/ES_how_it_works_M.jpg)
 
-Let's take a step back and start from the beginning. The basis of public-key cryptography is private keys, public keys, addresses, and digital signatures. The private key creates a digital signature. The blockchain contains a record (the transaction) stating that there are some funds associated with your public key when you receive cryptocurrency. You must provide a digital signature to authorize your spending. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
+Retomemos las bases un momento. Los fundamentos de la criptografía de llave pública son la llave pública, la llave privada, las direcciones y las firmas digitales. La llave privada crea una firma digital. La cadena de bloques contiene un registro (la transacción) que establece que hay una cantidad determinada de fondos asociada a la llave pública del usuario siempre que este recibe criptomonedas. Es necesario proporcionar una firma digital para autorizar cualquier gasto, y solo se puede proporcionar esta firma si se posee también la llave privada que corresponde a la pública.
 
-### Elliptic Curve Cryptography
+### Criptografía de curva elíptica
 
-We would like to talk about elliptic curve cryptography (ECC) before we discuss how your keys and addresses work together. There are different mathematical concepts used to build a public-key cryptographic system. Bitcoin and most other cryptocurrencies use Elliptic Curve Cryptography (ECC).
+Es importante discutir algo llamado criptografía de curva elíptica (CCE) antes de mencionar cómo funcionan en conjunto las llaves y direcciones. Hay distintos conceptos matemáticos utilizados para elaborar un sistema criptográfico de llave pública, pero Bitcoin y muchas otras criptomonedas utilizan CCE.
 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
-        Bitcoin, Ethereum and many other currencies use a curve called secp256k1 and it looks like the one on the left. The equation for this curve is y^2 = x^3 + 7. What makes elliptic curves useful is that you can do math with them, and the math you do with the curves contains special properties.
+        Bitcoin, Ethereum y muchas otras monedas emplean una curva llamada secp256k1, la cual aparece a la izquierda. La ecuación correspondiente a la curva es y^2=x^3+7. Lo que les da utilidad a las curvas elípticas es su capacidad de ser empleadas como modelos matemáticos con propiedades especiales.
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
@@ -32,7 +32,7 @@ We would like to talk about elliptic curve cryptography (ECC) before we discuss 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
-        The graph to the left shows an example of adding two points on the curve together. When we want to add point P and Q together, we first connect them with a straight line. This straight line will intersect with the curve at some third point. Now we must project the third point onto the other side of the x-axis (multiply the y-coordinate by -1) and we get the sum of point P and Q: R. The key takeaway is that the sum of two points on the curve is a third point on the curve.
+        Esta gráfica ejemplifica cómo pueden unirse dos puntos en la curva. Al querer unir P y Q, se conectan primero con una línea recta. La línea recta cruza la curva en un tercer punto. Este punto se proyecta al lado opuesto del eje “x” (se multiplica la coordenada y por -1) y obtenemos la suma de los puntos P y Q, R. En resumen, la suma de dos puntos en la curva es equivalente a un tercer punto en la misma.
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
@@ -40,7 +40,7 @@ We would like to talk about elliptic curve cryptography (ECC) before we discuss 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
-        When we want to multiply a point on the curve we must add it to itself. To multiply point P by two we add it to itself once. In this case, we can't really connect two points, but we go for the tangent line (the one with the arrows).
+        Para multiplicar un punto en la curva, es necesario sumarle su propio valor. Para multiplicar el punto P le sumamos su valor una vez. En este caso, no se están conectando ambos puntos, pero interesa la línea tangente (la flecha).
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
@@ -48,7 +48,7 @@ We would like to talk about elliptic curve cryptography (ECC) before we discuss 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
-        Why the tangent line you might ask. If you look at a random point close to P (the lightest gray), connecting the two points will result in the lightest grey line. Moving this point closer and closer towards P (from light to dark) brings the connecting line closer to the tangent line. The closer two points on the curve get, the closer their connecting line resembles the tangent until they become the same.
+        ¿Por qué la tangente? Un punto aleatorio cercano a P (el gris más claro) conectado a P produce la línea gris más clara. Acercar este punto a P de manera progresiva (de claro a oscuro) acerca a la línea conectora con la tangente. Entre más cercanos dos puntos en la curva, más similar la línea conectora a la tangente (hasta que finalmente se convierten en una misma).
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
@@ -56,66 +56,67 @@ We would like to talk about elliptic curve cryptography (ECC) before we discuss 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
-        Now the addition to itself is easy. We take the intersection of the tangent line with the curve once again and project it onto the other side of the x-axis.
+        Ahora, doblar el un valor resulta fácil. Se toma nuevamente la intersección de la tangente con la curva y se proyecta al lado opuesto del eje “x”.
         <br/>
-        If we want to multiply P by 3 we now add P and point (P + P) together. To multiply P by four we can add point (P + P) to itself and so on.
+        Si el objetivo es multiplicar P por 3, sumamos P y el punto P+P. Para multiplicar P por 4, podemos sumarle a P+P su propio valor y así consecutivamente.
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 
-The key takeaway is that multiplying a point is an easy task. The division is difficult (read infeasible). There is no algorithm to calculate how many times P was added to itself or in terms of multiplication by what number it was multiplied in order to get to a certain point. This should be enough to understand the basic concept of public key cryptography based on elliptic curves.
+Multiplicar un punto es tarea fácil. La división, en cambio, resulta difícil (léase inviable). No existe el algoritmo para calcular cuántas veces P se agregó a sí mismo o, en cuanto a la multiplicación, por qué número se multiplicó para llegar a otro punto.
 
-### Private Key
+Por ahora, esta información resulta suficiente para comprender los principios básicos de la criptografía de llave pública basada en curvas elípticas.
 
-To introduce people to the concept of public-key cryptography the analogy of the public key being like your address and the private key is the key to your postbox is often used. We used it ourselves in the beginner section. Let us begin by going through the process of creating an address from scratch.
+### La llave privada
 
-When you set up a wallet, the first step is generating your private key. Your private key is a very large random number, 256 bit long. This number is so large you could assign every grain of sand in the entire universe a unique private key. Aside from being large, your private key should be as random as possible. Creating random numbers is harder than it might sound, but this step is crucial to the safety of your funds.
+Para presentar el concepto de criptografía de llave pública se usa a menudo una comparación entre la llave pública y una dirección y la llave privada y una llave de buzón. Nosotros mismos la empleamos en la sección para principiantes. Empecemos por repasar el proceso de crear una dirección desde cero.
 
-### Public Key
+Para crear una billetera, el primer paso es generar una llave privada. La llave privada es un número largo y aleatorio (256 bits de extensión). El número es tan inmenso que podría asignársele a cada grano de arena del mundo una llave privada única. Además de ser inmensamente extensa, la llave privada también debe maximizar la aleatoriedad lo más posible. Crear un número aleatorio es más difícil de lo que suena, pero es un paso esencial para mantener seguros los fondos del usuario.
 
-You derive your public key from the large, random number you have generated for your private key. As we said, adding points together on an elliptic curve is straightforward. Bitcoin uses a base point on the curve for every key pair.
+### La llave pública
 
-The coordinates are
+La llave pública deriva de la cifra extensa y aleatoria generada para la llave privada. Como mencionamos ya, sumar puntos en una curva elíptica es bastante sencillo. Bitcoin emplea un punto base en la curva para cada par de llaves.
 
-x = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+Las coordenadas son:
 
-and
+_x_ = 55066263022277343669578718895168534326250603453777594175500187360389116729240
 
-y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+y
 
-This base point is now added to itself as many times as your private key dictates. If your private key was the number "3", then you would perform the calculation we just showed you. If you add the base point to itself as often as your private key says (private key * P) you get your public key.
+_y_ = 32670510020758816978083085130507043184471273380659243275938904335757337482424
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_6.jpg" alt="ECC" style="width: 400px;">
+Ahora, el punto base se suma a sí mismo tantas veces como lo indique la llave privada. Si el número de la llave privada del usuario fuera 3, se llevaría a cabo la operación que acaba de demostrarse. Si sumamos el valor punto base a ese mismo valor tantas veces como indique la llave privada (* P) se obtiene la llave pública.
 
-To recap: Your private key is a large random number. Your public key is a point on the elliptic curve that you get when you multiply the base point P with your private key.
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_6.jpg" alt="ECC" style="width: 400px;">
 
-A property that is necessary for any public-key cryptographic scheme, is that it is computationally infeasible to derive the private key from the public key. It is easy to calculate the public key, a point on the curve, by multiplying the base point P with a large random number (your private key). But if an adversary knows the base point P and your public key, he cannot divide them and say how many times P was added to itself to get your public key.
+En resumen, la llave privada es un número largo y aleatorio. La llave pública es un punto en la curva elíptica que se obtiene al multiplicar el punto base P por el número de la llave privada.
 
-At this point, your public key is pretty large, 512 bit, and it is easy to compress it to half the size. The elliptic curve used is symmetric about the x-axis. There are only two possible y-values for every x-value that only differ in their sign (being positive or negative). If you leave out the y-coordinate and add the information of the point having a positive or negative value for y, the public key becomes half the size but carries the same information.
+Una propiedad esencial de cualquier esquema de criptografía de llave pública es que resulta inviable computacionalmente derivar la llave privada de la pública. Resulta fácil calcular la llave pública, un punto en la curva, multiplicando el punto base P por un número aleatorio (la llave privada), pero si alguien conoce el punto base P y la llave pública del usuario, no puede dividirlas y determinar cuántas veces se multiplicó P para obtener la llave pública.
 
-### Address
+A estas alturas, la llave pública se ha vuelto bastante extensa; 512 bits, pero resulta fácil comprimirla a la mitad de su tamaño. La curva elíptica utilizada siempre es simétrica con respecto al eje “x”. Solo hay dos valores posibles de “y” para cada valor de “x”, los cuales difieren solo en su signo (positivo o negativo). Si se descarta la coordenada “y” y se agrega la información indicando que el punto posee un valor positivo o negativo para “y”, la llave pública se reduce a la mitad en tamaño pero conserva la misma información.
 
-Lastly, to get your address, your public key is now hashed. First, using the SHA256 hash function and then a second time using RIPEMD160. After adding a byte to state if this address will go to the main- or test-net and calculating a checksum there is a final step before you get your address. 
+### Dirección
 
-When we look at how a computer is working at the hardware level it is zeros and ones. Data is always stored in a binary format no matter what type of data you're looking at (images, sound files, and even your bitcoin address). There are different ways to convert a string of bits into data that humans can digest. Humans do best with a string of numbers or alphanumerical characters.
+Por último, para que el usuario obtenga su dirección, la llave pública debe pasar por un hash. Primero, se ejecuta la función hash SHA-256 y luego la RIPEMD-160. Tras agregar un solo byte que determina si la dirección se dirigirá al mainnet o testnet y realizar una suma de control, queda todavía un paso antes de obtenerse la dirección.
 
-Base58Check is a way to convert bits into alphanumeric characters, but it excludes the four characters 0, O, I, and l. Base58Check removes these characters from your address to reduce errors when copying addresses manually and proofreading them.
+A nivel de hardware, el funcionamiento de una computadora consta de solo ceros y unos. Los datos se almacenan siempre de esta manera sin importar el tipo de archivo en cuestión (imágenes, archivos de sonido y hasta direcciones Bitcoin). Hay diferentes maneras de convertir un hilo de bits en información digerible para una persona, es decir, frases numéricas o alfanuméricas.
 
-You can generate as many addresses as you like from a single private key, and most wallets today do this for you. It is a feature to enhance your privacy, as it makes it harder for a third party to link all your payments together. We will talk about this concept and how it works with change addresses in the following chapter Privacy on the Blockchain.
+Base58Check es una manera de convertir bits a caracteres alfanuméricos, pero excluye los símbolos 0, O, 1 e I. Base58Check retira estos caracteres de la dirección para reducir errores al copiar y revisar direcciones de manera manual.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_7_D.jpg)
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ecc_7_M.jpg)
+Es posible generar una cantidad indefinida de direcciones a partir de una sola llave privada, y muchas billeteras hacen precisamente eso de manera automática; hecho que mejora la privacidad y hace más complicado que un tercero agrupe las transacciones del usuario. Hablaremos más de este concepto y de cómo se relaciona con las llamadas direcciones de cambio en nuestro capítulo sobre privacidad en la cadena de bloques.
 
-### Digital Signature
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_7_D.jpg)
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_7_M.jpg)
 
-To wrap up this article we want to come back to digital signatures. You might hear that your keys (public and private) can encrypt and decrypt messages. This is not the case. The information contained within transactions is not encrypted in any way. It is available to anyone on the blockchain, which makes the system so transparent.
+### Firma digital
 
-Your private key is actually used for is signing transactions. You can only use the funds you receive in a transaction if you provide a digital signature that proves your knowledge of the private key. We cover how this digital signature works and how you can prove that you know the private key without revealing any information about it will in our advanced level. We combine the concept of hash functions and point multiplication on the curve for this. Although it is not exactly rocket science it is a rather complex matter.
+Retomemos el concepto de firma digital para concluir el artículo. Hay quienes piensan que las llaves (públicas y privadas) son capaces de encriptar y desencriptar mensajes; este no es el caso. La información contenida dentro de una transacción no se encuentra cifrada de ninguna manera y se encuentra disponible a todos los miembros de la cadena, lo cual hace de una blockchain un sistema sumamente transparente.
 
-### Summary
+La llave privada se utiliza más bien para firmar transacciones. El usuario puede solamente utilizar los fondos que recibe en una transacción si es capaz de proporcionar la firma digital que comprueba que conoce la llave privada. Abordaremos cómo funciona esta firma y cómo puede realizarse dicha comprobación sin revelar información en el nivel experto. Para lograrlo, combinaremos el concepto de funciones hash y de la multiplicación de punto en la curva (lo cual, aunque no es precisamente física cuántica, sí es una cuestión bastante compleja).
 
-When you set up a wallet the software will first generate a large random number that is your private key. The base point P on the elliptic curve is multiplied by your private key to get your public key, a point on the curve. Your public key is then hashed and it removes the characters I, l, 0 and O to improve readability. You need to provide a digital signature that you can only produce to spend any funds.
+### Resumen
 
-Head to our next article to learn about the Peer-to-Peer network: The infrastructure most public blockchains are built upon.
+Al crear una billetera el software generará primero un número aleatorio extenso que servirá de llave privada al usuario. El punto base P en la curva elíptica se multiplica por el valor de la llave privada para obtener la llave pública del usuario; un punto en la curva. La llave pública se pasa por una función hash y se retiran los caracteres 1, I, 0 y O para reducir errores de lectura. Es necesario también que el usuario proporcione su firma digital para poder gastar sus fondos.
 
+Continúe al siguiente artículo para aprender sobre las redes par a par, la infraestructura que emplean la mayoría de las cadenas de bloques públicas.

@@ -2,73 +2,74 @@
 layout: post
 type: article
 title: "Block Explorer Continued"
-description: "A block explorer lets you browse the data on a blockchain. We take a look at what kind of information you will find."
+description: "El explorador de bloques es una herramienta que permite al usuario navegar la información contenida en la cadena. Este artículo habla del tipo de información que encontrará el usuario."
 permalink: /technology/advanced/block-explorer-continued/
 topic: technology
 level: advanced
-chapter: "Transactions"
+chapter: "Transacciones"
 ---
 
-The block explorer is a graphical tool to view and explore data on the blockchain. There is a block explorer available for almost every public blockchain out there. It allows you to browse the history of a given chain. It might be most interesting to go to the very start of blockchain technology and have a look at Bitcoin in this example.
+El explorador de bloques es una herramienta gráfica para visualizar y explorar los datos de la cadena de bloques. Hay exploradores de bloques disponibles para casi todas las cadenas de bloques públicas en existencia. El explorador permite al usuario explorar el historial de una cadena determinada. Para iniciar este artículo, nos remontaremos a los orígenes de la tecnología blockchain y veremos un ejemplo utilizando Bitcoin.
 
-If you know how to navigate one block explorer, you will know how to navigate all of them. It is quite intuitive and helps to understand how a blockchain is structured and how it works. To really appreciate this article you should be familiar with the basics of a blockchain, transactions, and mining. You can always skip back to one of our previous articles covering these topics if you are unsure about something. If you are familiar with how a blockchain works, this article should help you to connect a lot of the dots that might still be all over the place.
+Si el usuario sabe navegar un explorador de bloques, sabe navegarlos todos. Son herramientas bastante intuitivas y que ayudan a entender cómo se estructuran y funcionan las cadenas de bloques. Para poder apreciar todo el contenido de este artículo, es necesario que esté familiarizado con los aspectos más básicos de las cadenas de bloques, como las transacciones y el minado. Lo invitamos a regresar a estos artículos si se siente inseguro al respecto. Si ya se encuentra familiarizado con cómo funciona una cadena de bloques, este artículo le será útil para unir algunos de los puntos que aún quedan sueltos.
 
-### What You Will Find in a Block Explorer
+### Qué hay en el explorador de bloques
 
-The information that you will find in a block explorer is structured either by the blocks, by addresses or individual transactions. Let's look into a first example to make all this more tangible.
+La información contenida en el explorador de bloques se estructura ya sea por bloques, direcciones o transacciones individuales. Veamos un primer ejemplo para hacer de todo esto algo más tangible:
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
 </div>
 
-There are a number of block explorers out there, often times several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers out there: blockchain.com.
+Hay muchos exploradores de bloques disponibles, muchas veces más de uno para la misma cadena de bloques. Ya que visitaremos el origen de las criptomonedas en este ejemplo, estudiaremos el caso de Bitcoin y de uno de los exploradores más populares: blockchain.com.
 
-You will see an overview of the most recently created blocks on the landing page. Let's go through what we see here:
+El usuario verá un resumen de los bloques más recientes en la página de inicio. Revisemos lo que aparece a continuación:
 
- - **Height**: the height is the number the block carries. The very first block created was block #0, after that came block #1 and then block #2. As you can see at the time of writing there have been quite a few blocks mined.
- - **Age**: Is the age of the block. It's self-explanatory, but there is a piece of interesting information between the lines: you might know that the block time, the interval in which new blocks are mined, is 10 minutes with Bitcoin. How come it took only 6 minutes to mine block 539.772 and only 9 minutes for block 539.771? This is because the block time is an average. There will always be blocks created slower and a few that will be produced a lot faster, but on average it will take 10 minutes. In our article about [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), we explain to you how the block time is adjusted.
- - **Transactions**: the number of transactions included in this block. This means that in the 6 minutes it took to mine block 539.772 about 1500 transactions were conducted.
- - **Total Sent**: The 1547 transactions that took place add up to almost 4700 Bitcoins sent.
- - **Relayed By**: The miner (or mining pool) that solved the block and earned the block reward.
- - **Size**: the amount of storage a given block takes up
- - **Weight**: another metric that refers to the size of a block. It is a more technical metric but as you can see: the more transactions in a block and the bigger the file size of a block, the bigger the weight.
+ - **Altura (Height)**: La altura es el número asociado al bloque. El primer bloque creado tiene por número “#0”, le siguió el “#1” y luego el “#2”. Como puede verse en la tabla, al momento de redactarse este artículo se habían minado ya muchos bloques.
+ - **Edad (Age)**: Es la edad del bloque. Aunque esta característica se explica sola, hay algo de información interesante entrelíneas; como usted ya sabrá, el tiempo de bloque, el intervalo entre el minado de dos bloques, es de 10 minutos en el caso de Bitcoin. ¿Por qué tomó entonces solo 6 minutos minar el bloque 539.772 y 9 minar el 539.771? Esto se debe a que el tiempo de bloque es un promedio. Siempre habrá bloques más lentos de crear y otros pocos que se producirán con mayor rapidez, pero en promedio el proceso tomará 10 minutos. En nuestro artículo sobre minado explicamos cómo se autoajusta el tiempo de bloque.
+ - **Transacciones (Transactions)**: El número de transacciones incluidas en el bloque. Esto quiere decir que en los 6 minutos que tomó minar el bloque 539.772 se realizaron 1500 transacciones.
+ - **Total enviado (Total Sent)**: Las 1547 transacciones que sucedieron suman un envío de casi 4700 bitcoins.
+ - **Transmitido por (Relayed By)**: El minero (o colectivo de mineros) que resolvió el bloque y obtuvo la recompensa de bloque.
+ - **Tamaño (Size)**: La cantidad de almacenamiento que ocupa un bloque determinado.
+ - **Peso (Weight)**: Otra métrica relacionada al tamaño del bloque. Es una métrica más técnica pero que se relaciona con el número de transacciones. Entre mayor el número mayor el tamaño del archivo del bloque y más grande su peso.
 
-### The Genesis Block
+### El bloque génesis
 
-Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first bitcoin block that was ever mined, we can use the search function and enter "0". If you haven't opened the site yet this link will take you directly to the genesis block, that is what the very first block of a given chain is always called.
+Veamos primero un solo bloque. La altura del primer bloque fue 0. Si el usuario quiere encontrar la primera bitcoin en ser minada, puede usar la función de búsqueda e ingresar “0”. Si no ha entrado aún al sitio, [este enlace](https://explorer.zensystem.io/block/0007104ccda289427919efc39dc9e4d499804b7bebc22df55f8b834301260602) lo llevará directamente al bloque génesis, que es el nombre que recibe siempre el primer bloque minado de una cadena.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
 </div>
 
-Let us go through the information we can find here. It might seem overwhelming at first, but going through the information step by step you will see that it is quite simple to make sense of.
+Repasemos la información que tenemos aquí. Puede parecer mucha en un principio, pero analizándola paso por paso resulta bastante fácil de entender.
 
-The genesis block contains only one transaction. This is the minimum amount you will see since every block has a so-called coinbase transaction, the transaction that is used to issue new bitcoins to the miner that solved the block.
+El bloque génesis contiene solo una transacción. Una transacción por bloque es la cantidad  mínima, pues cada bloque registra la transacción coinbase que marca la creación de nuevas monedas entregadas como recompensa al minero que resolvió el bloque.
 
-The reward for mining Bitcoin, in the beginning, was 50 BTC. The block reward reduces by half every four years (more precisely every 210,000 blocks). This has happened twice so far. A miner today receives 12.5 BTC per block.
+La recompensa por minar Bitcoin, en un principio, era de 50 BTC. La recompensa por bloque se reduce a la mitad cada cuatro años (o más precisamente cada 210,000 bloques). Esto ha sucedido dos veces hasta ahora. Un minero recibe actualmente 12.5 BTC por bloque.
 
-Other than the transaction that rewarded the miner (Satoshi Nakamoto himself in this case) there is no transaction in this block, that is why the estimated transaction volume is 0. Today there is a transaction fee attached to most transactions, but this wasn't always the case, especially when the network was still in its infancy. 
+Además de la transacción que se le recompensó al minero (en este caso Satoshi Nakamoto) no hay ninguna transacción en este bloque, y es por eso que el volumen aproximado de la transacción es 0. Hoy en día hay una pequeña tarifa adjunta a la mayoría de las transacciones, pero no siempre fue así, en especial cuando la red de Bitcoin estaba aún en su infancia.
 
-We have talked about the height before so we will get to the timestamp now. The first bitcoin was mined on the 3rd of January 2009, the birthday of the very first cryptocurrency.
+Como ya hemos discutido la altura del bloque, pasaremos a hablar de la marca de tiempo. La primera bitcoin se minó el 3 de enero de 2009; el cumpleaños de la primera criptomoneda.
 
-The "Relayed By" field shows who mined the block. Today's mining pools and their reward addresses are mostly known. This is how the block explorer "knows" who mined the block: it compares the address that received the newly generated coins (1A1zP1...) in the coinbase transaction with a number of known addresses from mining pools. In this case, we do know who the miner was, although the block explorer doesn't tell us: Satoshi Nakamoto himself.
+El campo de “Transmitido por” contiene información sobre el minero del bloque. Los grupos de minería de la actualidad, así como sus direcciones de recompensa, suelen ser de conocimiento público. De esta manera, el explorador de bloques sabe quién minó el bloque; compara las direcciones que recibieron las monedas recién generadas (1A1zP1…) en la transacción coinbase con los números de las direcciones de grupos de minería conocidos. En este caso, conocemos la identidad del minero aunque el explorador del bloque no nos la proporciona; el mismo Satoshi Nakamoto.
 
-We talk about the _difficulty_ in our [mining article]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}) in more detail. The difficulty describes how hard the puzzle the miners need to solve is. It refers to the number of leading zeros in the block hash. As you can see on the right, the Genesis Block hash had 10 leading zeros. Today (as of the time of writing) blocks like block 539.772 need to have at least 18 leading zeros. The more leading zeros required, the harder the puzzle.
+Hablamos de _dificultad_ a más detalle en nuestro [artículo sobre minería]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}). La dificultad describe qué tan difícil es el acertijo que deben resolver los mineros, y se refiere al número de ceros iniciales en el hash del bloque. Como podemos apreciar a la derecha, el hash del bloque génesis tenía diez ceros iniciales. Hoy en día (al momento de redactar el artículo) un bloque como el 539.772 exige por lo menos 18 ceros iniciales. Entre mayor el número de ceros, mayor la dificultad del acertijo.
 
-Bits, Size, and Weight all refer to the size of the data of a given block, not too spectacular. Version refers to the software that ran at the time the block was created.
+Los bits, el tamaño y el peso se refieren al tamaño de los datos de un bloque determinado, nada espectacular. La versión se refiere al software que se ejecutó en el momento en que se creó el bloque.
 
-Now we get to another interesting information: the Nonce. When miners try to solve a block, what they are doing is putting different values in the Nonce (**N**umber used **once**) field and calculate the hash of the block. If the result doesn't have the minimum amount of leading zeros required (most often it will have none at all) they try another random value for the nonce and hash the block again. This is repeated until a miner finds a nonce that produces a hash with a sufficient number of leading zeros. In the case of the very first block, Satoshis computer tried more than 2 Billion values (if he started at 0) before he found a value that produced the desired result. He received the very first 50 Bitcoin as a block reward for this. 
+Ahora pasemos a otra dato interesante, el nonce (abreviatura de **n**umber used **once**). Cuando un minero intenta resolver un bloque, lo que están haciendo es introducir valores en el campo nonce para calcular el hash del bloque. Si el resultado no tiene el número mínimo de ceros iniciales requeridos (en la mayoría de los casos no tendrá ninguno), el minero debe volver a intentarlo con otro valor nonce aleatorio. Este proceso se repite hasta que un nonce produce un hash con el número adecuado de ceros iniciales. En el caso del primer bloque, la computadora de Satoshi proceso más de 2 mil millones de valores (si empezó en 0) antes de encontrar el valor correspondiente al resultado deseado. Recibió las primeras 50 bitcoins creadas como recompensa por minar este bloque.
 
-### The First Bitcoin Transaction
+### La primera transacción Bitcoin
 
-What you will most likely use a block explorer for is checking a transaction status. You can find a given transaction either by searching for one of the addresses involved (the sending and receiving addresses) or by the transaction ID (hash). Most wallets will show you the transaction ID for all of your transactions. (This is the long sequence of characters in the gray boxes below, b1fea... and f4184...)
+La función más común del explorador de bloques es la de revisar el estatus de una transacción. Una transacción específica puede encontrarse ya sea buscando una de las direcciones en cuestión (la dirección del remitente o receptor) o la identidad de la transacción (el hash). La mayoría de las billeteras le muestran al usuario la identidad de todas sus transacciones (estas son las largas secuencias de caracteres en las cajas grises de la imagen inferior; b1fea… y f4184…).
 
-If we want to look at the very first cryptocurrency transaction ever done we need to go to Block #170, where the first bitcoin transaction from Satoshi Nakamoto to Hal Finney is included.
+Si queremos visitar la primera transacción de criptomonedas de la historia tenemos que remitirnos al bloque #170, donde se incluyó la primera transacción de bitcoins entre Satoshi Nakamoto y Hal Finney.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
 </div>
 
-It is the first block on the bitcoin blockchain that contains more than one transaction. We can find the coinbase transaction on the very top. Below is the first transaction as you would expect it. One person sending coins to another one.
+Este bloque es el primero en la cadena de bloques de Bitcoin que contiene más de una transacción. La transacción coinbase aparece arriba, como es de esperarse, y debajo de esta se registra la primera transacción; una persona enviándole monedas a otra.
 
-We hope this article helps you navigate the block explorers of this world. We encourage you to play around with this for a bit. I know it helped me a lot with understanding how the information in a blockchain is organized.
+Esperamos que este artículo lo haya ayudado a navegar un explorador de bloques (o varios). Lo animamos a usarlos y analizarlos, pues esto lo ayudará a entender la manera en la que se organiza información en la cadena de bloques.
+

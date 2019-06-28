@@ -1,60 +1,61 @@
 ---
 layout: post
 type: article
-title: "Strong Passwords"
-description: "We explain the difference between passwords that are hard to remember and those that are hard to guess."
+title: "Una contraseña segura"
+description: "Explicamos la diferencia entre las contraseñas que son difíciles de recordar y las que son difíciles de adivinar."
 permalink: /privacy/advanced/strong-passwords/
 topic: privacy
 level: advanced
-chapter: "Best Practices"
+chapter: "Mejores prácticas"
 further_reads: [how_to_create_a_strong_password]
 ---
 
-Reusing the same password on many websites and applications is the number one security bad practice. Even large and strong platforms are being hacked and their users' credentials are sold over black markets. There have been cases when the stolen data was available publicly too. Imagine if your credentials were in one of these databases - every account you used the same password for, is essentially hacked too.
+Utilizar la misma contraseña en diferentes sitios y aplicaciones es quizás la práctica digital más insegura de todas. Hay plataformas que a pesar de su tamaño y fortaleza han sido hackeadas para vender la información que almacenan sobre sus usuarios, así como ha habido casos en los que la información robada se ha hecho pública. Si el usuario tuviera su contraseña e información personal en alguna de estas bases de datos, todas sus cuentas con la misma contraseña correrían peligro de ser infiltradas.
 
-It is important that you use a different password for each website or application you create an account for. Consider this the number one security best practice.
+Es de suma importancia que el usuario utilice una contraseña distinta para cada sitio o aplicación en el que tenga una cuenta. Considere este hábito como la práctica de seguridad personal número uno.
 
-![password](/assets/post_files/privacy/advanced/strong-passwords/password.png)
+![password](/assets/post_files/privacy/advanced/strong-passwords/ES_password.jpg)
 
 [Source](https://xkcd.com/936/)
 
-### How Are Passwords Hacked?
+### ¿Cómo se hackea una contraseña?
 
-There are a few well-known methods used by hackers to obtain a password. The easiest way for a hacker to do so is through phishing. 
+Hay varios métodos muy socorridos por los hackers para obtener contraseñas ajenas. El más fácil de ellos son las llamadas ciberestafas, o phishing.
 
-With Phishing, an attacker tries to get you to hand out your password willingly. This can be done by sending you an email asking you to verify your account. A link in the email might take you to a website that looks just like the original website the email claims to link to. By entering your login information on this duplicate fake website the hackers have achieved their goal.
+En el caso de una ciberestafa, el atacante busca que el usuario entregue voluntariamente su información de contraseña. Esto puede lograrse enviándole un correo electrónico pidiéndole que verifique una cuenta, por ejemplo. Un enlace en el correo puede llevar al usuario a un sitio web fraudulento idéntico al original, el cual le pide su información de acceso. Una vez que el usuario la ingresa, el atacante ha logrado su objetivo.
 
-When you receive a suspicious email like the example above, please do not click on any links. If in doubt, visit the website as you normally would and check your account for notifications requiring users to verify their credentials. If you do not have a notification, the email is most certainly a scam.
+Si usted recibe un correo sospechoso como el que acabamos de describir, lo más importante es no darle clic a ninguno de los enlaces que contenga. Si tiene dudas, visite el sitio oficial y revise si ha recibido algún aviso indicando que verifique su información de acceso; si no lo encuentra, lo más probable es que el correo se trate de una estafa.
 
-If an attacker cannot get you to tell them your password through trickery they have two more options. 
+Por desgracia, si el atacante no logra obtener la contraseña del usuario por medio del engaño, cuenta aún con otros métodos. 
 
- - Dictionary Attack - In a dictionary attack, the hackers try a large number of common words, e.g. from a dictionary. They will not only use regular words from your Oxford Dictionary but also the most common passwords.
- - In case some of your passwords are along the line of Password123, P4ssword, P4ssw0rt or Thisismypassword you are highly vulnerable to such an attack.
- - Brute Force Attack - A brute force attack focuses on your password. Although an attacker will only use this method if you are the only target. During a brute force attack, the hacker will try out every possible combination of characters, numbers, and symbols until the attacker gains access to your account.
+ - Ataque diccionario - En un ataque de este tipo, el hacker inserta en el campo de contraseña una serie de palabras comunes (como las que pueden tomarse de un diccionario). Sin embargo, además de palabras comunes, muchos atacantes ingresan también las contraseñas más comúnmente utilizadas (digamos algo como “Contraseña123”, “c0ntr4seña” o “P4ssword”).
+ - Ataque de fuerza bruta - Un ataque de fuerza bruta se concentra en la contraseña del usuario, y se emplea cuando el atacante tiene solamente un blanco. Durante un ataque de fuerza bruta, el hacker ingresa como contraseña toda combinación de caracteres posible hasta lograr acceder a la cuenta del usuario.
 
-The attacker will most likely combine the dictionary and brute force attack by first trying out the most common passwords before moving on to random guessing.
+Lo más probable, es que un posible atacante utilice una combinación de los ataques diccionario y de fuerza bruta, intentando primero ingresar contraseñas comunes antes de pasar a intentar adivinar la contraseña.
 
-### What a Password Should Look Like
+### Cómo debe lucir una contraseña
 
-A strong password should have at least 12 characters. If you are protecting sensitive information, use 20 characters or more. Use a mix of capitalized and regular letters, numbers and symbols. Don't just use symbols or numbers as a replacement for letters as in pa$$word or p4ssw0rt. To an automated attack, the passwords are just as trivial as the original word.
+Una contraseña fuerte tiene por lo menos 12 caracteres, aunque si la información que busca proteger es sensible, se recomienda emplear 20 caracteres o más. Emplee también una mezcla de letras mayúsculas y minúsculas, así como números y caracteres especiales. No se limite a reemplazar letras por números como se hizo con “c0ntr4seña”, pues en el caso de un ataque automatizado, una contraseña así resulta tan fácil de adivinar como la palabra sin alteraciones.
 
-There are some methods that you can apply to create a strong password. The sentence method uses a familiar sentence as a starting point and applies some sort of algorithm to make your password.
+Hay algunos métodos que pueden emplearse para crear una contraseña robusta. En el método de la oración, por ejemplo, se utiliza una oración familiar o común como punto de partida, se le aplica un algoritmo manual y se emplea el resultado como contraseña.
 
-You could start out with "I went to school in Woodland Park and played soccer during fall season". Now you can think of an algorithm to create a password out of this sentence, like using the first two characters of each word, the last two characters, the first and the last or any other combination that works for you. Using the first two characters would yield "IwetoscinWoPaanplsodufase". This is a fairly secure password that will survive both a dictionary attack, as well as a brute force attack if the attacker is not 100% committed to you as a target.
+Empecemos con la frase “Mi escuela se llamaba Simón Bolívar y tenía muchos amigos”. Ahora, pensemos en un algoritmo que se le pueda aplicar para crear una contraseña, como utilizar los primeros dos caracteres de cada palabra, los dos últimos, el primero y el último o cualquier otra combinación por el estilo. Utilizar los primeros dos caracteres de cada palabra de la frase anterior daría como resultado “MiessellSiBoytemuam”, una contraseña incoherente pero segura que resistiría tanto un ataque de diccionario como un ataque de fuerza bruta (salvo que el atacante estuviera 100% dedicado a obtener la contraseña a toda costa).
 
-Another method is using regular words that don't make sense in this combination. correcthorsebatterystaple is a commonly used example of this method.
+Otro método recomendable es el de unir palabras regulares en órdenes que no tengan sentido o coherencia; “correctocaballopilagrapa” es un ejemplo de una contraseña generada por medio de este método.
 
 ### How Do You Remember These?
 
-The difficult and less secure method would be to add some sort of code to the end of a standard password, depending on the account you use it for. 
+El método menos seguro y más complicado de emplear una contraseña así en varias plataformas y lograr recordarla sería agregando alguna especie de código al final de la contraseña estándar dependiendo de la cuenta en cuestión.
 
-This way you could use "IwetoscinWoPaanplsodufase_fcbk" for your Facebook account and "IwetoscinWoPaanplsodufase_mzn" for your Amazon Login. There have been many incidents of password databases being hacked and this method would make you vulnerable to such a data breach because the attackers could derive your other passwords if they figure out the scheme you used to adapt the password.
+Así, un usuario podría utilizar “MiessellSiBoytemuam_fb” para ingresar a su cuenta de Facebook y “MiessellSiBoytemuam_nf” para su cuenta de Netflix. Sin embargo, en caso de que la base de datos donde alguna de estas contraseñas estuviera almacenada se viera infiltrada, todas las contraseñas del usuario quedarían comprometidas a la vez si el atacante lograra identificar el método empleado para adaptar la contraseña a cada cuenta.
 
-A better method is to use a password manager that generates long and difficult to guess passwords and saves them for you. Now you only have to remember one super strong password to protect your password manager application and you are good to go. 
+Un mejor método es el de utilizar un administrador de contraseñas capaz de generar y almacenar contraseñas largas y difíciles de adivinar. En este caso, el usuario tendría que recordar solo la contraseña segura de administrador para obtener acceso a cualquiera de sus cuentas personales.
 
-We covered password managers in our beginner level and [you can find the article here]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
+Hablamos a detalle sobre los administradores de contraseñas en un [artículo del nivel principiante]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
 
-### Summary
+### Resumen
 
-Using strong passwords is the first step to protecting your data. Use a different password for every service you have an account for! Hackers will try to get their hands on your passwords through phishing, dictionary attacks or through brute force attacks. Your password should have at least 12 characters but 20 is better. Don't use common phrases or rely on simply substituting letters through numbers or symbols. There are some good methods to create strong passwords such as the sentence method. To keep track of all the different passwords, use a [password manager]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
+Utilizar contraseñas seguras es el primer paso que el usuario debe tomar para proteger su información, mientras que el segundo es utilizar una contraseña diferente para cada una de sus cuentas.
+
+Un hacker intentará obtener la contraseña del usuario por medio de estafas, ataques de diccionario y ataques de fuerza bruta, por lo que una contraseña debe contener por lo menos 12 caracteres (aunque 20 serían mejores). Es importante nunca utilizar frases comunes ni conformarse con reemplazar un carácter por otro al momento de crear una contraseña. Existen algunos métodos recomendables para crear contraseñas robustas, como el método de la oración, por ejemplo. Para que el usuario lleve un registro seguro de todas sus contraseñas, es recomendable que utilice un [administrador de contraseñas]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
 

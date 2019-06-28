@@ -10,16 +10,15 @@ chapter: "Privacidad"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
-Es común pero equivocado pensar que Bitcoin y otras criptomonedas constituyen un método anónimo de pago. En la realidad, el uso criptomonedas es seudónimo, no anónimo.
+Es común pero equivocado pensar que Bitcoin y otras criptomonedas constituyen un método anónimo de pago. En la realidad, el uso de criptomonedas es seudónimo, no anónimo.
 
-Para que la transacción fuera anónima, no podría haber información alguna sobre el remitente y receptor de la transacción. Siempre se necesita una dirección para hacer una transacción en una cadena de bloques, pero ya que esta dirección no contiene información alguna sobre el dueño y cualquiera puede genera tantas cuentas como guste, decimos que la dirección es seudónima. Así, tu dirección funciona como seudónimo, de manera similar al nombre de usuario que eligen los miembros de un foro en línea.
+Para que la transacción fuera anónima, no podría haber información alguna sobre el remitente y receptor de la transacción. Siempre se necesita una dirección para hacer una transacción en una cadena de bloques, pero ya que esta dirección no contiene información alguna sobre el dueño y cualquiera puede generar tantas cuentas como guste, decimos que la dirección es seudónima. Así, tu dirección funciona como seudónimo, de manera similar al nombre de usuario que eligen los miembros de un foro en línea.
 
 A través de métodos de análisis de datos cada vez más poderosos, se ha vuelto posible relacionar identidades reales con direcciones criptomonetarias. Entre más transacciones reciba y envíe un usuario, mayor la cantidad de metadatos generados. Estos metadatos pueden incluir la dirección IP que dio origen a una transacción o los datos de un par de usuarios que se hacen transacciones frecuentemente. Los centros cambiarios pueden también registrar las direcciones que utiliza el usuario para retirar fondos y así relacionar sus direcciones con su identidad.
 
 ### ¿Por qué privacidad?
 
 Existen muchas razones legítimas para llevar a cabo transacciones financieras privadas. Por ejemplo, si un usuario padece alguna condición médica y debe comprar sus medicinas de manera regular, tiene una buena razón para hacer sus compras de manera privada. Si se es dueño de un negocio, no es deseable revelarle a la competencia las fuentes de ingresos, o si se le está comprando un regalo a la pareja, el comprador querrá mantener secreta su compra hasta el momento preciso. En fin, hay muchas razones para hacer transacciones privadas, y creemos que la privacidad es y debe considerarse un derecho humano inviolable. En nuestra sección sobre privacidad, tratamos más de cerca el argumento “No tengo nada que ocultar”.
-In our privacy section we also take a look at the "I've got nothing to hide" argument.
 
 ### Cómo recuperar la privacidad
 
@@ -40,11 +39,11 @@ Si el juego se repite varias veces, la probabilidad de adivinar correctamente to
 
 El objetivo de utilizar pruebas de cero conocimiento en transacciones criptomonetarias es el siguiente: Puede construirse una prueba de que la transacción que el usuario quiere realizar será considerada válida por un nodo verificador sin revelar ningún dato sobre la transacción en sí. Esto permite que el remitente, receptor y la cantidad se mantengan privados. Otro caso donde resulta perfecta la aplicación de pruebas de cero conocimiento es en la verificación de identidades; por ejemplo, el usuario puede comprobarle a una entidad que tiene una edad determinada sin revelar datos personales como su fecha de nacimiento.
 
-Para realizar transacciones privadas con Horizen, el usuario se valdrá de un tipo de dirección diferente. En la billetera, el usuario tendrá la opción de generar direcciones T (direcciones transparentes) o direcciones Z (direcciones protegidas). Al enviar fondos a una dirección Z, se registran en la cadena de bloques tanto el remitente como la cantidad, pero no la dirección receptora. Si se reenvían estos fondos a una segunda dirección Z, no se registrará información alguna sobre la transacción, ni el remitente, ni el receptor, ni la cantidad.
+Para realizar transacciones privadas con Horizen, el usuario se valdrá de un tipo de dirección diferente. En la billetera, el usuario tendrá la opción de generar direcciones T (direcciones transparentes) o direcciones Z (direcciones privadas). Al enviar fondos a una dirección Z, se registran en la cadena de bloques tanto el remitente como la cantidad, pero no la dirección receptora. Si se reenvían estos fondos a una segunda dirección Z, no se registrará información alguna sobre la transacción, ni el remitente, ni el receptor, ni la cantidad.
 
 Si usted quiere poner a prueba esta característica, descargue nuestra aplicación, [Sphere by Horizen](https://www.horizen.global/es/wallets/). Asegúrese de activar el modo completo en la sección de ajustes, de otra manera, no será capaz de generar direcciones Z. 
 
-### Summary
+### Resumen
 
 Aunque las criptomonedas no son anónimas por defecto, algunas ofrecen características que hacen posibles las transacciones privadas, lo cual le dificulta a terceros monitorear el historial de las transacciones del usuario. Esta característica es parte íntegra de casi todas las billeteras.
 Es posible también utilizar criptomonedas con medidas de privacidad mejoradas, como la de Horizen, para realizar transacciones absolutamente privadas; esto se logra utilizando otro tipo de dirección (una dirección Z).

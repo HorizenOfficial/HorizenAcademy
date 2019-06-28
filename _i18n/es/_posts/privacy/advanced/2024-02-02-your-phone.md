@@ -1,37 +1,40 @@
 ---
 layout: post
 type: article
-title: "Your Phone"
-description: "This article shows you where your phone is leaking data and what you can do to prevent this data leakage."
+title: "El teléfono del usuario"
+description: "Este artículo le muestra dónde su teléfono está perdiendo datos y qué puede hacer para evitar esta pérdida de datos."
 permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced
-chapter: "Where Your Privacy is Compromised?"
+chapter: "¿Dónde se compromete la privacidad del usuario?"
 further_reads: [your_phone_number_is_all_a_hacker_needs_to_read_texts_listen_to_calls_and_track_you, do_not_let_criminals_steal_your_cellphone_number_with_this_scam]
 ---
 
-In our beginner level article - [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) we touched how privacy is compromised on two most used devices today - a phone and a computer. In this article we will focus on a phone, the most used one of two.
+En nuestro artículo del nivel principiante- [El teléfono y computadora del usuario]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) hablamos de la manera en la que la privacidad del usuario se ve comprometida a través de los dispositivos que más utiliza, su teléfono celular y computadora. En este artículo nos concentraremos en el caso de los celulares, que son el dispositivo más utilizado.
 
-Mobile phones of today are tiny powerful computers - they have tons of storage and processing power available at their disposal and because of portability, ease and frequency of use, there are tons of productivity applications available for smartphones, not seen on a personal computer. Mail, messaging, chat apps, wallets, banking software, personal notes, photos and videos are just a tiny example of what we use or store on our phones. The increased attack surface of smartphones attracts a lot of malevolent interest to them. Let us touch some ways of privacy compromise in details.
+Los teléfonos celulares de la actualidad son computadoras muy poderosas a pequeña escala; tienen disponible una enorme capacidad de almacenamiento y procesamiento y, dada su portabilidad y facilidad y frecuencia de uso, hay disponibles miles de aplicaciones de uso exclusivo en teléfonos inteligentes. Correos, mensajería, aplicaciones de chat, billeteras, software bancario, notas personales, fotos y videos representan solo una fracción de las aplicaciones y usos que el usuario promedio le da a su celular. Ahora que representan una mayor recompensa, los teléfonos inteligentes han empezado a atraer mucho interés malintencionado. Veamos a detalle algunas cuestiones relacionadas a la privacidad del usuario y cómo puede verse comprometida.
 
- - Password/PIN protection is the absolute essential - without this your phone is like an open house, inviting anyone to get their hands on whatever they wish.
- - Applications from unofficial app stores are dangerous too. No one checks the validity and integrity there and attackers often leverage this possibility heavily. Sticking with the official app stores is essential, for any operating system.
- - Cracked applications are another source of privacy compromise. Cracks often include malware undetectable by antivirus and antimalware software which gives attackers the possibility to even take over your device and eavesdrop on you.
- - The so-called jailbreaks are dangerous too because they disable many of the device's security measures and open the core of it for apps to be more accessible.
- - Free Wi-Fi comes at a cost - open Wi-Fi network means the data transmitted is not encrypted and attackers may be able to eavesdrop and hijack important sensitive information such as passwords.
- - And normal software, such as browsers can be used to alter your privacy too. You can read more about them in our tools section: [Browser]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %})
+ - La protección de cualquier contraseña o PIN es absolutamente esencial. Sin ella, el celular del usuario es como una casa con la puerta abierta; lista para que cualquiera entre a tomar lo que desee.
+ - Las aplicaciones descargadas de tiendas no oficiales también son peligrosas; ya que nadie verifica su validez o integridad, los atacantes se sienten atraídos y se aprovechan de la falta de seguridad. Es de suma importancia descargar aplicaciones únicamente de app stores oficiales, sin importar el sistema operativo del teléfono.
+ - Las aplicaciones desbloqueadas o crackeadas también representan un peligro, pues pueden contener malware indetectable que puede llegar a tomar control del teléfono para darle acceso a un tercero sin que el usuario lo sepa.
+ - Los llamados jailbreaks también son peligrosos porque desactivan muchas de las medidas de seguridad del teléfono y lo dejan en esencia abierto a cualquier ataque.
+ - El Wi-Fi gratuito tiene también sus desventajas. Una red de Wi-Fi abierta no encripta los datos que transmite, por lo que un atacante puede espiarlos y apropiarse de información sensible (como las contraseñas del usuario).
+ - Incluso el software normal, como lo son los exploradores, por ejemplo, puede alterar la privacidad de un dispositivo. Lea más al respecto en nuestro artículo sobre exploradores del nivel principiante.
 
-Apart from that, there are other more sophisticated and dangerous methods that can be used to track people on mobile networks, not depending on any security measure user takes on his or her end, not mentioning turning off the phone itself, of course. One of the scariest is a hack that uses a network interchange service called Signalling System No. 7 (SS7). Successfully exploiting it, the attacker can read text messages, listen to calls and track a smartphone based on mobile phone mast triangulation, using only a phone number as an identifier. You can read more about SS7 attack below, in a further reading section.
+Además, hay muchos otros métodos más peligrosos y sofisticados que se emplean para rastrear al usuario a través de redes móviles (aunque claro, el usuario puede tomar medidas para protegerse, como por ejemplo apagar el celular).
 
-Using full device encryption is also a must to avoid any data breach in case of device theft. Both popular operating systems, iOS and Android offer the options for it.
+Uno de los métodos más preocupantes es un hack que se aprovecha de un servicio de intercambio de redes llamado Signalling System No. 7 (SS7). Si logra explotarlo adecuadamente, el atacante puede leer mensajes de texto, escuchar llamadas y rastrear teléfonos inteligentes por medio de la triangulación de antenas celulares, utilizando solo el número de teléfono como identificador. Puede leer sobre los ataques SS7 más adelante.
+
+En resumen, la encriptación total del dispositivo es lo ideal para evitar cualquier violación de la privacidad del usuario si este pierde su teléfono por robo o extravío. Los dos sistemas operativos móviles más populares, iOS y Android, tienen disponible esta opción.
 
 
 
-### Special note about using SMS as a 2FA method
+### Los SMS como método de A2F
 
-We advise you not to use text messages as a 2FA method if possible. There is more than one way an attacker can access text messages or calls your phone is receiving. 
+De ser posible, le sugerimos no utilizar mensajes SMS como método de autenticación de dos factores, pues hay muchas maneras en las que un tercero puede acceder a los mensajes y llamadas entrantes de un teléfono.
 
-The first and most simple method is social engineering. There have been a number of incidents where an attacker managed to convince an employee of a mobile communications company that "his" phone got lost or his SIM card broke and that he needs a replacement immediately. Coincidentally the victim also just moved, so the address is changed and a second SIM card is shipped to the attacker. Although this exploit is unlikely to work first try, by repeatedly calling the service hotline of a phone company eventually the attacker might find an employee willing to do just this. 
+La primera y más sencilla es un método llamado ingeniería social. Ha habido incidentes en los que un atacante ha logrado convencer al empleado de una compañía telefónica de que “su” teléfono se extravió o que su tarjeta SIM se rompió, por lo que necesita un reemplazo inmediatamente. El atacante menciona también que acaba de mudarse, por lo que da una nueva dirección para recibir una segunda tarjeta. Aunque este tipo de ataque no suele funcionar a la primera, el atacante puede llamar repetidamente al número de servicio al cliente de la compañía hasta encontrar a un empleado dispuesto a cumplir con su solicitud.
 
-Another method the attacker might use is to open an account with a different service provider an request your number to be ported. Most providers offer you to keep your number if you switch from let's say Verizon to AT&T. This opens up this simple but effective attack vector. We could go on with the list of possible exploits but the point is: your number is a rather easy target. You can read more about 2FA in our best practices section. 
+Otro método empleado por atacantes es el de contratar a un nuevo proveedor de servicio y pedir que el número de teléfono se transfiera. La mayoría de los proveedores le ofrecen al usuario la opción de conservar su número al cambiarse de proveedor, lo cual deja abierta una ruta de ataque sencilla pero efectiva.
 
+Podríamos continuar enumerando los posibles métodos de ataque, pero lo que importa es recapitular que el número telefónico de usuario es un blanco fácil. Puede leer más sobre la A2F en nuestra sección sobre mejores prácticas.

@@ -38,3 +38,20 @@ menu:
     resources: Resources
   see-all-content: See all Content
 
+
+footer:
+  legal: Legal
+  privacy-policy: Privacy Policy
+  copyright: PAll rights reserved
+
+
+newsletter:
+  name: Tu nombre
+  email: Tu Correo electrónico
+  country: Tu País
+  optional: Optional
+  subscribe: Suscribirse
+  msg-success: Success! Please check your email to confirm we have the right one.
+
+post:
+  further-reading: Lecturas adicionales (inglés)

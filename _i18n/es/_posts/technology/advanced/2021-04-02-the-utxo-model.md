@@ -1,61 +1,65 @@
 ---
 layout: post
 type: article
-title: "The UTXO Model"
-description: "Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works."
+title: "El modelo UTXO"
+description: "La mayoría de las cadenas de bloques emplean el modelo UTXO (Unspent Transaction Output) para rastrear los fondos de un usuario. Aquí explicaremos cómo funciona."
 permalink: /technology/advanced/the-utxo-model/
 topic: technology
 level: advanced
-chapter: "Transactions"
+chapter: "Transacciones"
 ---
 
-Before we get into how transactions (TX's) on a blockchain work and what different types there are, we need to introduce you to the UTXO (Unspent Transaction Output) model.
+Antes de explicar cómo funcionan las transacciones (TX) en la cadena de bloques y qué tipos de transacciones hay, es necesaria una presentación al modelo UTXO (Unspent Transaction Output model).
 
-When you think about how your bank does the accounting for your bank account it is pretty intuitive. You hold a certain amount of funds in your account which has an account number. If you receive an incoming transaction the amount is added to your balance. If you spend money, then the amount you spend gets subtracted from your balance. With cryptocurrencies, the accounting works a little different.
+Pensar en la manera en la que el banco realiza la contabilidad de una cuenta resulta bastante intuitivo. El cuentahabiente posee cierta cantidad de fondos en su cuenta, la cual tiene a su vez un número. Si se recibe una transacción, la cantidad se agrega al saldo. Si se gasta dinero, la cantidad gastada se deduce del saldo. En el caso de las criptomonedas, la contabilidad se hace de una manera un poco diferente.
 
-The blockchain does not create an "account" for you to maintain a balance. There is no final balance stored on the ledger. The blockchain only stores individual transactions and to check your balance, there is an additional step involved. For this step, you are going to use your wallet, which does this automatically whenever you open it and it shows you your balance, or you can do it manually using the block explorer. What happens in the background when you use either of these tools is that they search the ledger for all transactions, that involve your address(es). The wallet (or explorer) then adds all incoming transactions together and subtracts all outgoing transactions to derive your current balance.
+La cadena de bloques nunca crea una cuenta para que sus usuarios mantengan saldos. No hay un balance final almacenado en el libro contable. La cadena únicamente sirve para almacenar transacciones individuales, por lo que el usuario debe tomar un paso adicional para consultar su saldo. Este paso involucra el uso de la billetera, la cual muestra el saldo del usuario con solo abrirla. El saldo se puede consultar también de manera manual utilizando el explorador de bloques.
+
+Lo que sucede de fondo cuando el usuario utiliza cualquiera de estas herramientas es que buscan en el libro contable todas las transacciones relacionadas a las direcciones del usuario. La billetera (o explorador) pasa luego a sumar las transacciones entrantes y sustraer todas las salientes para determinar el saldo actual.
 
 ![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_D.jpg)
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
+![wallet](/assets/post_files/technology/advanced/the-utxo-model/ES_wallet_balance_Int_M.jpg)
 
-Each transaction on the blockchain has one or more inputs and one or more outputs. Let's have a look at an actual example throughout a series of four transactions:
+Cada transacción en la cadena de bloques tiene una o más entradas y una o más salidas. Analicemos un ejemplo real por medio de una serie de cuatro transacciones:
 
-Usually, a block explorer will show you the most recent transactions first. We will go through the transactions for this example the other way around: start with the oldest TX and see what happened with the particular address step by step.
+Generalmente, el explorador de bloques arroja primero las transacciones más recientes. Revisaremos las transacciones de este ejemplo al revés, empezando por la más antigua para ver paso a paso la evolución de esta dirección en particular.
 
-**An Example**
+**Un ejemplo**
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/the-utxo-model/TX1.png" alt="TX">
 </div>
 
-We created this simple example, only involving two different addresses. We shortened the addresses for better readability. The address we are concerned with here is the grey one: znRwe...  Let's say this is Bob and the other one (blue), is Alice.
+Creamos este ejemplo que solo involucra dos direcciones diferentes, y acortamos la extensión de las direcciones para mejorar la lectura. La dirección que nos concierne en este caso es la gris, znRwe… Digamos que esta le pertenece a Bob y que la otra, la azul, es de Alice.
 
-In the first TX (above), Bob's address is funded when he receives 10.2 ZEN. The individual TX has one input and two outputs. The first output (10.2 ZEN) is what Alice actually wanted to transfer to Bob, the second output is called the change. The input that Alice was using, was an output of a transaction she received before. When she still had her funds untouched, it was an Unspent Transaction Output (UTXO). If a transaction output is spent is indicated by the <span class="text-danger">(S)</span>. If the transaction is unspent it is indicated with the <span class="text-success">(U)</span> following the amount. But we will get back to this in a minute. Alice didn't have a UTXO that was exactly 10.2 ZEN so she used one that was larger and sent the remaining ZEN back to herself, just as you would receive change in a store if you were to pay $ 45 with a $ 50 bill.
+En la primera TX (arriba), la dirección de Bob se fondea cuando recibe 10.2 ZEN. La TX individual tiene una entrada y dos salidas. La primera salida (10.2 ZEN) es la cantidad que Alice quería transferir a Bob; la segunda salida es el cambio. La entrada que Alice utilizó fue la salida de la transacción que recibió anteriormente. Cuando tenía sus fondos aún intactos, era un UTXO. Si la salida de una transacción ya se gastó se indica con una (S) junto a la cantidad, si no se ha gastado se indica con una (U); conceptos que retomaremos más adelante. Alice no tenía un UTXO que fuera de exactamente 10.2 ZEN, por lo que usó uno mayor y se envió los ZEN restantes de vuelta. Recibir cambio en una tienda funcionaría de la misma manera si fueran a pagarse $45 con un billete de $50.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/the-utxo-model/TX2.png" alt="TX">
 </div>
 
-In the second transaction, Bob uses his UTXO of 10.2 ZEN to create a TX where he spends 5 ZEN and sends the change of 5.1999 ZEN back to his own address. The difference between inputs and outputs is consumed as the transaction fee. He now owns 5.1999 ZEN on his znRwe... address.
+En esta segunda transacción, Bob utiliza su UTXO de 10.2 ZEN para crear una TX en la que gasta 5 ZEN y envía 5.1999 ZEN de vuelta a su propia dirección. La diferencia entre entradas y salidas se consume como una tarifa de transacción. Ahora Bob es dueño de 5.1999 ZEN en su dirección znRwe…
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/the-utxo-model/TX3.png" alt="TX">
 </div>
 
-In a third transaction, Bob receives another 2 ZEN, increasing his balance to 7.1999 ZEN. He now has two UTXO's at his disposal for further transactions: one of 5.1999 ZEN and another one of 2 ZEN. If he were to open his wallet at that point, it would show him a balance of 7.1999 ZEN by looking at all transactions on the blockchain, filtering out the ones that involve his address and then adding up all incoming TX's and subtracting all outgoing TX's.
+En una tercera transacción, Bob recibe otros 2 ZEN, aumentando su saldo a 7.1999 ZEN. Tiene ahora dos UTXO a su disposición para transacciones posteriores; una de 5.1999 ZEN y otra de 2 ZEN. Si Bob abriera su billetera, vería un saldo de 7.1999 ZEN, el cual resulta de revisar de todas las transacciones de la caden de bloques, filtrar las que involucran su dirección y luego sumar las transacciones entrantes y restar las salientes.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/the-utxo-model/TX4.png" alt="TX">
 </div>
 
-In the last transaction of this example, Bob wants to spend 6 ZEN. Neither of the two UTXO's he has at that point is sufficient for that purpose. Although the block explorer shows only one input for the last transaction the wallet actually used two inputs when creating it. It combined both remaining UTXO's worth 7.1999 and created two outputs with it: the 6 ZEN output he actually wanted to spend and an additional output for the change of 1.1998 (1.1999 minus the transaction fee).
+En la última imagen de esta transacción, Bob quiere gastar 6 ZEN. Ninguno de los UTXO que posee es suficiente para dicha transacción. Aunque el explorador de bloques muestra solo una salida para la última transacción, la billetera en realidad utilizo dos entradas para crearla. Combino ambos UTXO, con un valor de 7.19999 y creó dos salidas con la cantidad combinada: los 6 ZEN de salida que quería gastar y los 1.1998 ZEN de cambio (1.999 menos la tarifa de transacción).
 
-You can see that both TX outputs are spent, indicated by the (S) next to them in the second and third screenshot.
+Es posible observar que ambas TX se han gastado, un estatus indicado por la (S) a su lado en la segunda y tercera capturas de pantalla.
 
-### Summary
+### Resumen
 
-Most blockchains use the UTXO model for accounting. There are a few exceptions, such as Ethereum, which actually uses an account model. The output of a transaction addressed to you is what you will use as an input to create an outgoing transaction.
+La mayoría de las cadenas de bloques emplean el modelo UTXO para llevar a cabo su contabilidad. Hay algunas excepciones, como Ethereum, el cual utiliza un modelo de cuentas. La salida de una transacción dirigida al usuario es lo que este utilizará como entrada para crear una transacción de salida.
 
-When people ask, what a ZEN or Bitcoin actually is, this would be the accurate answer. An unspent transaction output or UTXO that you can unlock with your private key IS your coin. There is no abstraction on top of this. It might take a moment or a second read to get familiar with this, but it's a neat and simple concept and we hope the example above helped you understand what the UTXO model is. If you have fully understood the UTXO model it will help a lot with understanding the following articles.
+Cuando alguien pregunta qué es en realidad un ZEN o una bitcoin, resultaría adecuado responder que las monedas consisten de la salida de una transacción no gastada (o UTXO), la cual puede abrirse con la llave privada. No hay mayores abstracciones por encima de esto. Puede tomar un momento familiarizarse con esta manera de ver las cosas, pero es también un concepto claro y preciso. Esperamos que el ejemplo anterior lo haya ayudado a comprender la naturaleza de un modelo UTXO, pues esto hará mucho más fácil la comprensión de los siguientes artículos.
 
-The next article covers the block explorer, a tool that allows you to access information on a blockchain, like how a web browser lets you access information on the internet. It is what we took the screenshots above with. We encourage you to play around with it as it helps with understanding the UTXO model and blockchains in general if you browse through a few transactions yourself.
+El siguiente artículo trata sobre el explorador de bloques, una herramienta que permite al usuario acceder a la información almacenada en la cadena de bloques al igual que un explorador le permite acceder a la información del internet (fue con un explorador de bloques que tomamos las capturas de pantalla que utilizamos como ejemplos).
+
+Lo exhortamos a experimentar con el explorador visualizando algunas transacciones para profundizar su comprensión del modelo UTXO y de las cadenas de bloques en general.

@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "The Elements of a Blockchain"
+title: "Los elementos de una cadena de bloques"
 description: "En este artículo trataremos sobre los dos agentes más importantes en el ecosistema de una cadena; el minero y el nodo. "
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology

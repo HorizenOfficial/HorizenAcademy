@@ -21,6 +21,6 @@ El dinero del usuario vive en la cadena de bloques. Para poder gastarlo, es nece
 
 En realidad, la mejor manera de entender de cómo funciona la billetera es empezando a utilizarla. Pruebe nuestra billetera, [Sphere by Horizen](https://www.horizen.global/es/wallets/), para aprender cómo enviar una transacción. 
 
-Primero, diríjase a nuestra [Fuente ZEN,](https://getzen.cash/), donde podrá recibir una pequeña cantidad de fondos. Gracias a esta fuente, cada uno de nuestros nuevos usuarios puede empezar a utilizar criptomonedas sin tener que gastar dinero o registrarse en un centro cambiario. 
+Primero, diríjase a nuestra [Fuente ZEN](https://getzen.cash/), donde podrá recibir una pequeña cantidad de fondos. Gracias a esta fuente, cada uno de nuestros nuevos usuarios puede empezar a utilizar criptomonedas sin tener que gastar dinero o registrarse en un centro cambiario. 
 
 La cantidad de ZEN recibida será suficiente para realizar unas cuantas transacciones y probar así el proceso de recibir y enviar criptomonedas por cuenta propia.

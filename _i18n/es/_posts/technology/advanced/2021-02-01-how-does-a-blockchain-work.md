@@ -1,30 +1,30 @@
 ---
 layout: post
 type: intro
-title: "How Does a Blockchain Work?"
-description: "We introduce you to the most important ideas, elements, and entities of a public blockchain starting with an overview."
+title: "¿Cómo funciona una cadena de bloques?"
+description: "En este capítulo del nivel avanzado de tecnología, el usuario conocerá las ideas, elementos y entidades más importantes de una cadena de bloques pública, empezando por una breve vista general."
 permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 ---
 
-In this chapter of our Advanced Level about blockchain technology, we will introduce you to the most important ideas, elements, and entities of a public blockchain starting with an [overview]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).
+En este capítulo del nivel avanzado de tecnología, el usuario conocerá las ideas, elementos y entidades más importantes de una cadena de bloques pública, empezando por una breve [vista general]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).
 
 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="The Elements of a Blockchain" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/elements_of_blockchain.svg" alt="Los elementos de una cadena de bloques" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">The Elements of a Blockchain</h5>
+        <h5 class="intro-article-title">Los elementos de una cadena de bloques</h5>
         <p class="mb-1">
-            In the first article of this chapter we give you an overview of the different elements that make a blockchain work.
+            En este primer artículo se presentarán los diversos elementos que hacen funcionar a la cadena de bloques.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -32,16 +32,16 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Hash Functions" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Funciones hash" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Hash Functions</h5>
+        <h5 class="intro-article-title">Funciones hash</h5>
         <p class="mb-1">
-            Hash Functions are an important part in every blockchain because they are used to verify the integrity of data.
+            Estas funciones son una parte importante de toda cadena de bloques, pues su función es verificar la integridad de los datos que contiene.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -49,16 +49,16 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/pkc.svg" alt="Public Key Cryptography" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/pkc.svg" alt="Criptografía de llave pública" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Public Key Cryptography</h5>
+        <h5 class="intro-article-title">Criptografía de llave pública</h5>
         <p class="mb-1">
-            Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name.
+            Otro elemento importante para la tecnología blockchain es la criptografía de llave pública, la cual se utiliza para verificar propiedad y darle a cada criptomoneda su nombre.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -66,16 +66,16 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/p2p.svg" alt="A Peer-to-Peer (P2P) Network" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/p2p.svg" alt="Redes par a par (P2P)" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">A Peer-to-Peer (P2P) Network</h5>
+        <h5 class="intro-article-title">Redes par a par (P2P)</h5>
         <p class="mb-1">
-            Here we talk about the "physical" infrastructure that blockchains are running on - the Peer-to-Peer Network.
+            Esta sección trata la infraestructura “física” que hace operar a la cadena; la red par a par.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -83,16 +83,16 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/consensus.svg" alt="Consensus Mechanisms" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/consensus.svg" alt="Mecanismos de consenso" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Consensus Mechanisms</h5>
+        <h5 class="intro-article-title">Mecanismos de consenso</h5>
         <p class="mb-1">
-            There are many different parties in a blockchain and all of them need to agree on the transaction history. Here we show you how this is achieved.
+            La cadena de bloques la conforman muchas partes, y todas necesitan ponerse de acuerdo respecto al historial de transacciones. Aquí se explica cómo lo logran.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -100,16 +100,16 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/mining.svg" alt="Mining" />
+            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/mining.svg" alt="Minado" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Mining</h5>
+        <h5 class="intro-article-title">Minado</h5>
         <p class="mb-1">
-            In this last article of the chapter we show you how miners secure the blockchain with their computational power.
+            Este último capítulo desglosa la función que cumplen los mineros al asegurar la cadena de bloques con su poder computacional.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Leer el artículo</a>
         </p>
     </div>
 </div>

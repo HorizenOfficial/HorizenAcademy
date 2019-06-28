@@ -9,7 +9,7 @@ level: beginner
 chapter: "Herramientas para proteger la privacidad"
 ---
 
-Ya discutimos exploradores en el artículo anterior, donde mencionamos también que hay disponibles extensiones que permiten al usuario lograr mayores niveles de privacidad en línea. Hablemos de los más destacados:
+Ya discutimos sobre exploradores, donde mencionamos también que hay disponibles extensiones que permiten al usuario lograr mayores niveles de privacidad en línea. Hablemos de los más destacados:
 
  - Privacy Badger se encuentra disponible en Chrome, Opera y Firefox. Esta extensión inhibe la posibilidad de los anunciantes de rastrear los movimientos del usuario. La extensión también aprende conforme se utiliza, y si un anunciante parece estar rastreando al usuario sin su permiso en sitios diferentes, la extensión le impide automáticamente que continúe mostrándole contenido.
  - uBlock Origin puede descargarse en Chrome, Opera, Firefox, Edge y Safari. Funciona bloqueando cualquier posible violación de privacidad o seguridad de manera generalizada, y utiliza su propio filtro en conjunto con los de otras extensiones similares y servicios y listas de detección de sitios o servidores con malware.

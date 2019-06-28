@@ -1,32 +1,32 @@
 ---
 layout: post
 type: intro
-title: "Best Practices"
+title: "Mejores prácticas"
 description: "We introduce you to two security best practices. Using strong passwords and 2FA to protect your accounts."
 permalink: /privacy/advanced/best-practices/
 topic: privacy
 level: advanced
-chapter: "Best Practices"
+chapter: "Mejores prácticas"
 ---
 
-This is the Advanced Level and is best for users who have a general understanding of digital privacy and the technology that can enable you to control your digital footprint but want to know about it in more detail.
+Este es el nivel avanzado, el cual resulta ideal para el usuario que entiende de manera general el funcionamiento de la privacidad digital y la tecnología que le permite controlar su huella digital, pero que quiere aprender más al respecto.
 
-This section describes personal security best practices and provides you with tools and procedures to get started on your way to controlling your digital footprint.
+Esta sección describe las mejores prácticas de seguridad personal y le proporciona al usuario las herramientas y procedimientos necesarios para que empiece a controlar su huella digital.
 
 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}">
-            <img src="/assets/post_files/privacy/advanced/best-practices/strong_password.svg" alt="Strong Passwords" />
+            <img src="/assets/post_files/privacy/advanced/best-practices/strong_password.svg" alt="Una contraseña segura" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Strong Passwords</h5>
+        <h5 class="intro-article-title">Una contraseña segura</h5>
         <p class="mb-1">
-            There is a difference between passwords that are hard to remember and ones that are safe. Here we show you how to create the latter.
+            Existe una gran diferencia entre una contraseña difícil de recordar y una contraseña segura. Aquí el usuario aprenderá a crear una del segundo tipo.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -38,12 +38,12 @@ This section describes personal security best practices and provides you with to
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">2FA - Two-factor Authentication</h5>
+        <h5 class="intro-article-title">A2F - Autenticación de dos factores</h5>
         <p class="mb-1">
-            Another best practice that we encourage you to use is 2-Factor Authentication or 2FA. This article explains what 2FA is and why it's important.
+            Otra mejor práctica que exhortamos al usuario a utilizar es la autenticación de dos factores, conocida también como AF2. Este artículo habla de ella y su importancia.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication %}">Leer el artículo</a>
         </p>
     </div>
 </div>

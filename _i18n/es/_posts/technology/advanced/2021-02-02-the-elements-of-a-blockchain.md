@@ -1,52 +1,53 @@
 ---
 layout: post
 type: article
-title: "The Elements of a Blockchain"
-description: "In the first article of this chapter we give you an overview of the different elements that make a blockchain work."
+title: "Los elementos de una cadena de bloques"
+description: "En este primer artículo se presentarán los diversos elementos que hacen funcionar a la cadena de bloques."
 permalink: /technology/advanced/the-elements-of-a-blockchain/
 topic: technology
 level: advanced
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity]
 ---
 
-When Satoshi Nakamoto released the Bitcoin whitepaper he presented an innovation composed of several well-known components and as a few new ones. We designed this chapter to explain how a blockchain works and what the individual parts do. We want to put the individual pieces into context before we move on to explaining each concept. 
+Cuando Satoshi Nakamoto publicó el libro blanco de Bitcoin, introdujo una innovación que mezclaba componentes conocidos con varios novedosos. Este capítulo está diseñado para explicar cómo funciona la cadena de bloques y qué función cumple cada parte individual. Nuestro objetivo es contextualizar cada parte antes de explicar a fondo los conceptos.
 
-### Hash Functions
+### Funciones hash
 
-A _hash function_ is a mathematical function with a few special properties but like any other function, it does one job. The hash function takes an input and produces an output (also called hash value, hash digest or a hash).
+Una _función hash_ es una función matemática con algunas propiedades especiales; sin embargo, como cualquier otra función, cumple con un objetivo específico. La función hash recibe una entrada y produce una salida (también llamada valor hash, compendio hash o hash).
 
-The input doesn't have to be a number, it can be any sort of data from a single character up to a large file like a video. The output of a given hash function has a constant length no matter what the input was. There are many hash functions out there and most of them carry the length of the output they produce in their name. One of the most commonly used hash functions is SHA256 (Secure Hash Algorithm 256 bit). The number indicates the output of the hash function will always be 256 bit long no matter the input. The hash value serves as a fingerprint of data. One can verify the integrity of the files or detect if they differ from one another by comparing the hashes. 
+No es obligatorio que la entrada sea un número, puede ser cualquier tipo de información, desde un solo carácter hasta un archivo pesado como un video. La salida de una función hash dada tiene una extensión constante sin importar la entrada. Hay muchos tipos de funciones hash y la mayoría incluyen en su nombre la extensión de la salida que producen. Una de las funciones hash más utilizadas es SHA-256 (Secure Hash Algorithm 256 bit). El número indica que la salida de la función siempre tendrá 256 bits de extensión sin importar la extensión de la entrada. El valor hash funciona como la huella digital de la información. Es posible que el usuario verifique la integridad de los archivos o que detecte si difieren entre sí comparando sus hashes.
 
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_D.jpg)
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_M.jpg)
+![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_hash_D.jpg)
+![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_hash_M.jpg)
 
-### Public-Key Cryptography
+### Criptografía de llave pública
 
-_Public-key cryptography_, also known as asymmetric cryptography. The term asymmetric stems from the property of keys always coming in pairs. If you have encrypted something with one of the keys, you need the other one to decrypt it and vice versa. These keys are the public key and private key (or secret key). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key. Public-key cryptography is also where cryptocurrencies got their name from.
+La _Criptografía de llave pública_, conocida también como criptografía asimétrica, recibe su nombre del hecho de que las llaves se encuentran siempre emparejadas. Si el usuario ha encriptado información con una de las llaves, necesitará la otra para desencriptarla y viceversa. Estas llaves son la llave pública y la llave privada o secreta. Las llaves del usuario se traducen a su identidad en la cadena de bloques, por lo que puede recibir fondos con su llave pública y enviarlos con la privada. La criptografía de llave pública es también el origen del término criptomoneda.
+ 
+![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_asymmetric_D.jpg)
+![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_asymmetric_M.jpg)
 
-![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_D.jpg)
-![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_M.jpg)
+### Redes par a par
 
-### A Peer-to-Peer Network
+El concepto de una red par a par (P2P) es bastante común, en especial en el contexto de servicios de intercambio de archivos como BitTorrent. En una red distribuida, los usuarios no se conectan a un servidor o entidad central para acceder al servicio, sino al resto de sus pares. Los pares son otros participantes de la red que se proporcionan el servicio entre sí. Las redes P2P son resilientes, pues no existen puntos individuales expuestos a fallas. Las cadenas de bloques las emplean regularmente; otra de las razones que las hace tan robustas.
 
-You have probably come across the term Peer-to-Peer (P2P) network before, most likely in the context of file-sharing services like BitTorrent. In a distributed network the users don't connect to a central server or entity to access a service, but to many peers. The peers are other network participants that provide the service to each other. P2P networks are very resilient, as there is no single point of failure. Blockchains make use of this concept and it is one reason why they are so robust. To create a transaction or view your balance you ask other peers, or nodes, on the network that maintain a copy of the blockchain to share the information they store. You will often hear the attributes permissionless and censorship-resistant when reading about the value proposition of blockchain technology. The Peer-to-Peer network plays a significant part in giving blockchains these properties.
+Para que el usuario cree una transacción o consulte su saldo, le pide a los demás pares (o nodos) de la red que conservan una copia de la cadena de bloques que le compartan la información que poseen. Es típico oír hablar de redes libres de permisos o resistentes a la censura al discutir el valor de la tecnología blockchain. Las redes par a par desempeñan un papel importante en darles estas propiedades a las cadenas de bloques.
 
-![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_M.jpg)
+![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_central-distri_D.jpg)
+![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_central-distri_M.jpg)
 
-### Consensus Mechanism
+### Mecanismos de consenso
 
-If you want to build a form of digital cash on a P2P network with many people participating, you will need to build consensus on the order of transactions. If a user has one ZEN and creates two different transactions that spend that same coin simultaneously, some peers will receive version A first, while some others might receive version B first. The network needs to come to an agreement, or consensus, on which of the two transactions happened first. The consensus mechanism is what enables a large number of different entities that neither know, nor trust each other to reach consensus on the order of events.
+Si lo que el usuario desea es crear una especie de moneda digital en una red P2P con muchos participantes, se verá obligado a llegar a un consenso con todos sobre el orden de las transacciones. Si un usuario tiene un ZEN y crea dos transacciones distintas que gastan la misma moneda simultáneamente, habrá pares que reciban primero la versión A, mientras que otros recibirán primero la versión B. La red debe entonces llegar a un acuerdo sobre cuál de las dos transacciones ocurrió primero. El mecanismo de consenso es lo que permite que una multitud de entidades que no se conocen ni se tienen confianza lleguen a un acuerdo sobre lo ocurrido.
 
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_M.jpg)
+![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_consensus_D.jpg)
+![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_consensus_M.jpg)
 
 ### Mining
 
-There are many consensus mechanisms. The "original" that Horizen, Bitcoin and most other cryptocurrencies use is the Proof-of-Work (POW) mechanism. You have probably heard about cryptocurrency mining before and maybe about the miners having to solve a computationally expensive puzzle. We want to show you what this puzzle is, and how solving the puzzle makes the network agree on a given order of transactions.
+Existen muchos mecanismos de consenso. El original, o aquel que utilizan Horizen, Bitcoin y muchas otras criptomonedas es el mecanismo de prueba de trabajo. El concepto de minar una criptomoneda es bastante común, pero lo es un poco menos el de los mineros en competencia para resolver un problema computacionalmente demandante. Queremos darle un ejemplo de este problema y de cómo resolverlo contribuye a que la red llegue a un acuerdo respecto al orden de transacciones.
 
 ### Demo
 
-This is a [great blockchain Demo](https://blockchaindemo.io/). We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand this somewhat complex topic. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
-
+Visite este sitio para encontrar una excelente [demostración de cómo funciona una cadena de bloques](https://blockchaindemo.io/). Lo invitamos a que experimente con ella, ya sea ahorita mismo o una vez que haya concluido esta sección. El simulador obliga al usuario a poner manos a la obra y lo ayuda a terminar de entender este tema bastante complejo. Además, le proporciona una guía que detalla los pasos para ejecutar la cadena de bloques.

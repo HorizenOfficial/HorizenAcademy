@@ -1,40 +1,39 @@
 ---
 layout: post
 type: article
-title: "Hash Functions"
-description: "Hash Functions are an important part in every blockchain because they are used to verify the integrity of data."
+title: "Funciones hash"
+description: "Estas funciones son una parte importante de toda cadena de bloques, pues su función es verificar la integridad de los datos que contiene."
 permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 further_reads: [hash_functions_explained_with_emojis]
 ---
 
-Hash functions are an integral part of blockchain technology and serve many purposes. A hash function is a mathematical function that takes an input of any given length and produces an output of fixed length. The output is often called a hash value, (hash) digest, or hash.
+Las funciones hash son una parte esencial de la tecnología blockchain, por lo que sirven muchos propósitos. Son funciones matemáticas que toman una entrada de cualquier extensión y producen una salida con una extensión predefinida. A la salida suele llamársele valor hash, compendio hash o simplemente hash.
 
-There are [many hash functions](https://en.wikipedia.org/wiki/List_of_hash_functions) and just as many online "calculators" for hash functions such as [this one](https://www.fileformat.info/tool/hash.htm). The calculators allow you to hash any input that you like with different hash functions at the same time. The size of the input can range from a single digit to entire files, but the size of the output will always be the same.
+Hay tantas [funciones hash](https://en.wikipedia.org/wiki/List_of_hash_functions) hay calculadoras en línea para funciones hash (como [esta](https://www.fileformat.info/tool/hash.htm), por ejemplo). Las llamadas calculadoras permiten al usuario aplicarle un hash a una misma entrada utilizando a la vez diferentes funciones. La extensión de la salida puede oscilar desde un solo carácter hasta archivos completos, pero el tamaño de la salida siempre será el mismo por función.
 
-A cryptographic hash function must fulfill the following set of criteria to be viable for use in a blockchain:
+Una función hash criptográfica debe cumplir con los siguientes criterios para utilizarse en una cadena de bloques de manera viable:
 
- - One-wayness - It has to be easy to calculate an output from a given input but impossible to calculate the input from a given output. When we are talking about cryptocurrency mining later in this chapter, this will be an integral part.
- - Pseudo random - A change in the input will produce an unforeseeable change in the output. If the hash value of the input "2" was "4", the hash of the input "3" better not be 6.
- - Collision resistant - It should be hard (read impossible) to find two inputs to a hash function resulting in the same output. 
- - Deterministic - The same input always needs to produce the same output
+ - Unidireccionalidad - Debe ser fácil calcular la salida de una entrada pero imposible calcular la entrada a partir de la salida. Al discutir el minado de criptomonedas más adelante en este mismo capítulo, este principio desempeñará un papel importante.
+ - Seudoaleatoriedad - Un cambio en la entrada produce siempre un cambio impredecible en la salida. Si el valor hash de la entrada 2 fue 4, el hash de la entrada 3 no puede ser 6.
+ - Resistencia a las colisiones - Debe ser muy difícil (entiéndase imposible) encontrar dos entradas que al pasar por una función hash produzcan la misma salida (colisionen).
+ - Determinismo - Dos entradas iguales deben siempre producir también dos salidas iguales.
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_D.jpg)
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_M.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/ES_hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/ES_hash_function_M.jpg)
 
 
 
-The most frequently used hash functions today is SHA-256. SHA is an acronym for Secure Hash Algorithm. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. RIPEMD160 is often used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
+La función hash más utilizada en la actualidad es SHA-256 (Secure Hash Algorithm). El número indica la extensión de la salida en bits. Por ejemplo, hay cuatro extensiones de salida en la familia SHA: 224, 256, 384 y 512 bits. Otro tipo de funciones hash relevantes a las cadenas de bloques son las de la familia RIPEMD. Muchas criptomonedas suelen utilizar RIPEMD160, el cual, como es de esperarse, produce salidas de 160 bits.
 
-Hash values are used for many purposes in cryptocurrencies and blockchains. The most notable use is the process of chaining together the blocks, thus creating the blockchain. We call a hash value a fingerprint of data for its property of being collision resistant. If you were sending a file to another person you can include the hash digest if you hash the file before sending it. The recipient can calculate the hash value for the file after receiving it and by comparing it to the hash value you provided they can check the integrity of the file.
+Los valores hash se utilizan con muchos propósitos en el mundo de criptomonetario y de cadenas de bloques. El más destacado de estos procesos es el encadenamiento de bloques, responsable de crear la blockchain. Al valor hash se le suele llamar también huella de datos por su propiedad de ser resistente a las repeticiones o colisiones. El usuario remitente de un archivo puede también incluir el hash de dicho archivo aplicándole una función hash antes de adjuntarlo. El receptor puede calcular también el valor hash del archivo tras recibirlo y, comparándolo al valor que le proporcionó el usuario, determinar si el archivo recibido le ha llegado íntegro.
 
-Each set of data used as an input can be easily identified by the unique hash that it generates. It is nearly impossible to find two inputs to the hash function, that result in the same output (cause a collision). It would take all the supercomputers on earth combined several thousands of years to create a collision. This is because there is no way to "calculate" a collision. The only way to find one is through a brute-force approach, where you try different inputs until you get a collision by chance.
+Cada conjunto de datos utilizado como entrada puede identificarse fácilmente por medio del hash único que genera. Es casi imposible encontrar dos entradas para una misma función hash que resulten en la misma salida (es decir, que provoquen una colisión). Se requerirían todas las supercomputadoras del mundo y varios miles de años de tiempo para lograr una colisión. Esto se debe a que no hay manera de calcular una colisión, pues se pueden lograr solamente al azar, ingresando entrada tras entrada a la función hash hasta obtener una colisión por casualidad.
 
-### Summary
+### Resumen
 
-Hash Functions are the first cornerstone of blockchain technology. A hash of a file is like a fingerprint. It is easy to detect if two files are identical or not by comparing their hashes. Hash functions "chain" blocks together. You cannot change data from the past without including the hash of the preceding block. If you attempt to change data the references or links will break.
+Las funciones hash son la piedra angular de la tecnología blockchain. El hash de un archivo es como una huella digital. Resulta fácil detectar si dos archivos son idénticos o no comparando sus hashes. Las funciones hash encadenan a los bloques, por lo que no puede modificarse información pasada sin incluir el hash del bloque anterior. Al intentar modificar los datos, las referencias o enlaces se romperán.
 
-In our next article, we will look at public-key cryptography. Public-key cryptography is the second cornerstone of blockchain tech and the concept that makes up your "identity" on the blockchain.
-
+En nuestro próximo artículo veremos a fondo el tema de criptografía de llave pública. Este tipo de criptografía puede considerarse la segunda piedra angular de la tecnología de cadenas de bloques y de la asignación de una identidad dentro de las mismas.

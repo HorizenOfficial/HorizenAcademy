@@ -1,32 +1,32 @@
 ---
 layout: post
 type: intro
-title: "Resources"
-description: "Using additional resources will help you understand the topics blockchain and cryptocurrency better."
+title: "Recursos"
+description: "El uso de recursos adicionales lo ayudará a comprender mejor los temas blockchain y criptomonedas."
 permalink: /resources/
 topic: resources
 ---
 
-A common theme in crypto and blockchain is: Don't trust, verify!  We want you to do the same. Although we have put a lot of effort into creating the content for the Horizen Academy, we might have missed a few errors. 
+Un dicho común en el ámbito cripto y blockchain dice “No confíes, ¡verifica!” Queremos que usted haga precisamente esto, pues aunque le hemos dedicado muchísimo tiempo y esfuerzo a la creación del contenido de Horizen Academy, siempre existe la posibilidad de que hayamos pasado algo por alto.
 
-It is always a good idea to consult with more than one source if you are serious about learning about a topic and blockchain is no exception. In this section, we have collected a number of resources, from great [articles]({{ site.baseurl }}{% post_url /resources/2002-01-01-articles %}) to [books]({{ site.baseurl }}{% post_url /resources/2002-01-02-books %}), [podcasts]({{ site.baseurl }}{% post_url /resources/2002-01-03-podcasts %}) as well as [documentaries and movies]({{ site.baseurl }}{% post_url /resources/2002-01-04-videos-and-movies %}). 
+Siempre es una buena idea consultar más de una fuente si se pretende con seriedad lograr dominar un tema, y las cadenas de bloque ciertamente no son la excepción. En esta sección hemos reunido varios excelentes recursos sobre el tema que abarcan desde [artículos]({{ site.baseurl }}{% post_url /resources/2002-01-01-articles %}), [libros]({{ site.baseurl }}{% post_url /resources/2002-01-02-books %}) y [podcasts]({{ site.baseurl }}{% post_url /resources/2002-01-03-podcasts %}) hasta [documentales y películas]({{ site.baseurl }}{% post_url /resources/2002-01-04-videos-and-movies %}). 
 
-Using additional resources will help you understand the topics blockchain and cryptocurrency better. If you would like to take a look at other, independently maintained resources we have a few suggestions for you here:
+El uso de recursos adicionales le ayudará a comprender mejor todo lo relacionado a los mundos de las criptomonedas y cadenas de bloque. Si desea adentrarse a otros recursos independientes al nuestro, le sugerimos considerar los siguientes:
 
 
 
 <h4><a href="https://lopp.net/bitcoin.html" target="_blank">Jameson Lopp - Bitcoin Resources</a></h4>
 
-Jameson Lopp has put on of the best-curated Resource Lists around Bitcoin, Blockchain and Crypto in general. He lists online courses, the most important forums, podcasts, blogs and much much more. Make sure to check it out, it is a very valuable collection of content.
+Jameson Lopp se ha dado a la tarea de reunir y destacar en una lista los mejores recursos para aprender sobre Bitcoin, cadenas de bloque y criptomonedas en general. Sus listas incluyen cursos en línea, foros destacados, podcasts, blogs y mucho, mucho más. No pierda la oportunidad de conocer este sitio, pues reúne una valiosa colección de contenido.
 
 <h4><a href="https://en.bitcoin.it/wiki/Privacy" target="_blank">Privacy Bitcoin Wiki</a></h4>
 
-While Bitcoin can support strong privacy, many ways of using it are usually not very private. With a proper understanding of the technology, bitcoin can indeed be used in a very private and anonymous way. This Wiki does not only explain the different technological concepts behind Bitcoin but also includes a lot of best-case and worst-case examples of how to use crypto.
+Aunque Bitcoin tiene la capacidad de lograr altos niveles de privacidad, muchos de los usos que pueden dársele no resultan del todo privados. Un conocimiento más profundo de la tecnología Bitcoin le permitirá utilizarlo de una manera mucho más privada y anónima. Esta wiki no solo explica los diferentes conceptos tecnológicos que son el fundamento de Bitcoin sino que también presenta muchos ejemplos de cómo pueden utilizarse las criptomonedas.
 
 <h4><a href="https://www.coindesk.com/" target="_blank">Coindesk</a></h4>
 
-If you want to stay up to date about the blockchain and crypto industry, Coindesk is a good place to start. You will find all the important news about adoption, use-cases, and technical developments. They have become the de-facto industry standard for topic related news.
+La fuente de información por excelencia dentro de la industria; si quiere mantenerse siempre al tanto de lo que sucede en los mundos blockchain y cripto, Coindesk es un buen lugar para empezar. Encontrará notas periodísticas importantes sobre la adopción, casos de uso y desarrollos técnicos de estas tecnologías.
 
 <h4><a href="https://ssd.eff.org/en" target="_blank">Surveillance Self-Defense</a></h4>
 
-A project of the Electronic Frontier Foundation (EFF), an independent non-profit working to protect online privacy for nearly thirty years. This is Surveillance Self-Defense : their expert guide to protecting you and your friends from online spying.
+Un proyecto de la Electronic Frontier Foundation (EFF), una organización independiente que se ha dedicado a la protección de la privacidad en línea durante casi treinta años. Surveillance Self-Defense es su guía experta para que el usuario aprenda a protegerse de ser vigilado.

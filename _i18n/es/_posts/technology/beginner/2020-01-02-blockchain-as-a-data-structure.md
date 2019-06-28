@@ -9,7 +9,7 @@ level: beginner
 chapter: "¿Qué es una cadena de bloques?"
 ---
 
-Bienvenido al primer artículo de la sección de tecnología de Horizen Academy.Los dos artículos introductorios se enfocarán en explicar la naturaleza de la cadena de bloques. Antes de introducir el artículo, resulta pertinente establecer una distinción entre tres conceptos esenciales:
+Bienvenido al primer artículo de la sección de tecnología de Horizen Academy. Los dos artículos introductorios se enfocarán en explicar la naturaleza de la cadena de bloques. Antes de introducir el artículo, resulta pertinente establecer una distinción entre tres conceptos esenciales:
 
 
 <ul class="lead">
@@ -24,7 +24,7 @@ En cuanto a la cadena de bloques y lo que le permite hacer al usuario, la tecnol
 
 Para un ingeniero computacional, una cadena de bloques es fundamentalmente una estructura de datos. La estructura almacena información de manera confiable aun cuando se encuentra en un ambiente digital no asegurado. El concepto de estructura de datos puede sonar técnico, pero suena precisamente a lo que es, una estructura de información. Como referencia, considere que las listas y tablas son un tipo de estructura de datos.
 
-Hay muchos tipos de estructuras de datos en el mundo digital, uno de ellos es la cadena de bloques. Esta nomenclatura procede de la manera en la una cadena estructura su información; pues la toma y la separa en bloques. Cada bloque contiene información sobre el bloque que lo antecede, creando así una cadena. A la declaración de qué bloque precede a cuál se le llama referencia.
+Hay muchos tipos de estructuras de datos en el mundo digital, uno de ellos es la cadena de bloques. Esta nomenclatura procede de la manera en la que una cadena estructura su información; pues la toma y la separa en bloques. Cada bloque contiene información sobre el bloque que lo antecede, creando así una cadena. A la declaración de qué bloque precede a cuál se le llama referencia.
 
 ![List table chain in ES](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/ES_list_table_chain_D.jpg)
 ![List table chain in ES](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/ES_list_table_chain_M.jpg)
@@ -57,6 +57,6 @@ Cada hoja del libro representa un bloque de la cadena, por lo que la cantidad de
 
 ### Resumen
 
-a cadena de bloques es simple y sencillamente una manera de almacenar información, así como lo son las listas y tablas. Las cadenas públicas cuentan con características de seguridad útiles que antes no eran posibles. Gracias a ellas, es imposible modificar la información registrada en la cadena una vez que se ha escrito. Por esta razón, son el medio ideal para dar sustento a un sistema criptomonetario.
+La cadena de bloques es simple y sencillamente una manera de almacenar información, así como lo son las listas y tablas. Las cadenas públicas cuentan con características de seguridad útiles que antes no eran posibles. Gracias a ellas, es imposible modificar la información registrada en la cadena una vez que se ha escrito. Por esta razón, son el medio ideal para dar sustento a un sistema criptomonetario.
 
 Otra manera de entender la cadena de bloques es como un [protocolo para transferir valor]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-03-a-protocol-to-transfer-value %}), así como el internet es un protocolo para transferir información. Se analizará este aspecto de la cadena de bloques en el siguiente artículo.

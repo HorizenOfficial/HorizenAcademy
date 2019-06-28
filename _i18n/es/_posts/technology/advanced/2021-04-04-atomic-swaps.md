@@ -1,70 +1,68 @@
 ---
 layout: post
 type: article
-title: "Atomic Swaps"
-description: "An Atomic Swap, a special type of transaction, lets you exchange two different cryptocurrencies without an exchange."
+title: "Intercambios atómicos"
+description: "Por último, queremos explorar un tipo especial de transacción. Un intercambio atómico (atomic swap) le permite a un usuario intercambiar criptomonedas diferentes sin la intermediación de un centro cambiario."
 permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced
-chapter: "Transactions"
+chapter: "Transacciones"
 further_reads: [atomic_swaps_the_interoperability_revolution_in_cryptos, everything_you_need_to_know_about_atomic_swaps_and_how_komodo_is_advancing_the_technology, atomic_swap_compatibility_of_different_cryptocurrencies]
 ---
 
-The last transaction type that we would like to talk about is the Atomic Swap. It is a type of transaction that touches on the topics of scalability and interoperability at the same time.
+El último tipo de transacción que nos gustaría cubrir es el del intercambio atómico. Este es un tipo de transacción que toca los temas de escalabilidad e interoperabilidad a la vez.
 
-If you want to exchange one cryptocurrency for another one you will most likely go to one of the centralized exchanges. You transfer your funds to their address, which requires you to trust the exchange as a third party. Once you have deposited your funds you have to see, if the exchange offers the trading pair that you are interested in. Most exchanges offer BTC and ETH pairs. To swap two more exotic cryptocurrencies or tokens, you will have to buy Bitcoin first which you will then convert into the desired crypto.
+Si el usuario desea intercambiar una criptomoneda por otra lo más común es dirigirse a uno de los centros cambiarios centralizados disponibles. Los fondos se transfieren a su dirección, lo cual requiere que el usuario confíe en el centro como tercero. Una vez depositados los fondos es necesario verificar que el centro cambiario maneje el par de cambio que le interesa al usuario. La mayoría de los centros ofrecen solo pares BTC y ETH. Para tipos de cambio con criptomonedas más exóticas o tokens, será necesario comprar Bitcoin primero y luego convertirla a la criptomoneda deseada.
 
-Atomic Swaps are a technology that allows you to trade Peer-to-Peer without a third party. They also do away with the trust required for you to arrange a swap with an unknown user. Someone would have to send their funds first, and the counterparty could decide to not fulfill their side of the deal. Atomic Swap enable peers to do a trustless exchange of different currencies according to predefined conditions that they agreed upon without having to fear losing their funds.
+Los intercambios atómicos son una tecnología que le permite al usuario hacer cambios par a par sin la intervención de un tercero. Eliminan también la necesidad de confiar en un usuario para organizar el intercambio. En otros casos, uno de los usuarios debe mandar sus fondos primero; pero su contraparte puede decidir no cumplir con su parte del trato. El intercambio atómico le permite a los pares realizar un intercambio libre de intermediarios entre diferentes monedas de acuerdo a una serie de condiciones predefinidas y acordadas sin miedo a perder sus fondos.
 
-### The Technology Behind Atomic Swaps
+### La tecnología detrás de los intercambios atómicos
 
-Hashed Timelock Contracts (HTLCs) enable atomic swaps. To understand HTLCs we must take a couple steps back to look at state channels.  
-A state channel is a two-way communication channel that allows interaction that would usually happen on-chain, to occur off-chain.  
-One specific type of state channel is the payment channel. As the name suggests, a payment channel is a state channel that deals with payments. You may have heard about payment channels in the context of the lightning network or other so-called second layer solutions. An HTLC (Hashed Time Lock Contract) is a specific type of payment channel that enables the exchange of two different crypto assets off-chain.
+Los contratos con bloqueo temporal de hash (hashed timelock contracts; HTLCs) son la tecnología que hace posibles los intercambios atómicos. Para comprender los HTLC es necesario retroceder unos cuantos pasos para introducir el concepto de canal de estado.
+Un canal de estado es un canal de comunicación de doble sentido que hace posibles fuera de la cadena interacciones que generalmente tendrían que suceder dentro de ella. Un tipo específico de canal de estado es el canal de pago. Como su nombre lo sugiere, el canal de pago es el canal de estado que procesa pagos. Es posible que haya escuchado hablar de los canales de pago en el contexto del Lightning Network o de otras soluciones de segunda capa. Una HTLC es un tipo específico de canal de pago que permite el intercambio de dos activos cripto fuera de la cadena de bloques
 
-![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy_D.jpg)
-![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy_M.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/ES_channel_hierarchy_D.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/ES_channel_hierarchy_M.jpg)
 
-The "Hashed" part of HTLC means, that a hash can serve as a lock for the contract, to protect it from a third party accessing it. The "Timelock" part refers to the contract being able to have an expiration date. We will explain what this means to the user after outlining how you would conduct an Atomic Swap.
+El hash de HTLC quiere decir que es un hash el que sirve como candado del contrato, una medida utilizada para impedir que un tercero pueda accederlo. La parte de bloqueo temporal se refiere al hecho de que el contrato puede tener una fecha de expiración. Explicaremos lo que esto significa para el usuario una vez que delineemos cómo funciona el intercambio atómico.
 
-You must meet two conditions to perform an atomic swap between two assets: Both assets and their underlying blockchain need to support the same hashing algorithm, like SHA-256 in the case of Bitcoin and both blockchains need to support some kind of programmability, that allows an HTLC to be deployed.
+Deben cumplirse dos condiciones para realizar un intercambio atómico entre dos activos: ambos activos y su cadena de bloques subyacente deben admitir el mismo algoritmo hash, como SHA-256 en el caso de Bitcoin. Además, ambas cadenas deben admitir el mismo tipo de programabilidad que permite que se utilice un HTLC.
 
-### The Process
+### El proceso
 
-You can create an HTLC once you meet both conditions. The process of an Atomic Swap would generally look like the following. Let's assume Alice has some BTC and Bob has some ZEN. Both agree to swap a certain amount of their assets
+El usuario es capaz de crear un HTLC una vez cumplidas ambas condiciones. El proceso de un intercambio atómico suele lucir como lo describiremos a continuación. Empecemos por suponer que Alice tiene BTC y Bob tiene algo de ZEN. Ambos acuerdan intercambiar sus monedas.
 
- 1. Alice generates an HTLC that has an address on the Bitcoin blockchain. Smart Contracts generally have an address so you can interact with them and a Hashed Timelock Contract is no exception.
- 2. Alice generates a key (a random number) and derives a hash lock from her key by hashing the random number (key). That way the key fits the lock. This step is similar to generating a private key and deriving an address from it as we explained in our article on public-key cryptography (TI2.3).
- 3. She now deposits the agreed upon amount of BTC in the HTLC.
- 4. Alice locks her funds with the hash lock she created and sends a copy of her lock to Bob.
- 5. Bob creates an HTLC with an address on the Horizen blockchain using Alice's hash lock.
- 6. Bob deposits the agreed upon amount of ZEN in the contract address and locks them up.
+ 1. Alice genera un HTLC con una dirección en la cadena de bloques de Bitcoin. Los contratos inteligentes suelen incluir una dirección para que el usuario pueda interactuar con ellos; los HTLC no son la excepción.
+ 2. Alice genera una llave (un número aleatorio) y deriva el candado hash de su llave hasheando el número aleatorio (la llave), así, es seguro que el candado y la llave coincidirán. Este paso es similar al de crear una llave privada y derivar de ella una dirección, tal como lo explicamos en nuestro artículo sobre criptografía de llave pública.
+ 3. Alice deposita la cantidad acordada de BTC en el HTLC.
+ 4. Alice le pone candado a sus fondos con el candado hash que creó y le envía una copia de este a Bob.
+ 5. Bob crea un HTLC con una dirección en la cadena de bloques de Horizen utilizando el candado hash de Alice.
+ 6. Bob deposita la cantidad acordada de ZEN en la dirección del contrato y le pone candado.
 
-    At this point, both participants have locked up the funds they agreed to exchange. Because both blockchains are public, each of them can verify the amounts deposited. Only Alice has the key to unlock the funds on both chains right now. In case she does not proceed the Timelock would release the funds back to their original owners after a certain period of time. That way she can't trick Bob into losing his funds by locking them up and never receiving the key to unlock them. If she proceeds the next two steps happen almost simultaneously.
+A estas alturas, ambos participantes han guardado los fondos que habían acordado intercambiar. Ya que ambas cadenas de bloques son públicas, cada uno puede verificar que las cantidades han sido depositadas. Solo Alice cuenta con la llave para abrir ambos fondos por el momento, pero en caso de que no lo hiciera, el bloqueo temporal les regresaría los fondos a sus dueños originales tras cierto tiempo. De esta manera, Alice no puede estafar a Bob poniéndole candado a sus fondos sin darle la llave para abrirlos. Si se decide proceder, los dos pasos siguientes suceden de manera casi simultánea:
 
- 7. Alice uses the key to unlock Bob's ZEN and transfers them to an address that she controls. Bob learns about the key when Alice unlocks the funds by monitoring his HTLC.
- 8. Bob uses the key he just learned to unlock Alice's Bitcoin and transfers them to a Bitcoin address he controls.
- 9. Both parties have now successfully exchanged their funds without having to trust each other.
+ 7. Alice utiliza la llave para acceder a los ZEN de Bob y los transfiere a una cuenta bajo su control. Bob se entera de la existencia de llave cuando Alice le quita el candado a sus fondos monitoreando su HTLC.
+ 8. Bob utiliza la llave que acaba de recibir para acceder a las bitcoins de Alice y transferirlas a la dirección Bitcoin que controla.
+ 9. Ambos partidos han intercambiado exitosamente sus fondos sin necesidad de tenerse confianza.
 
-Since this is an automated process steps 7 and 8 happen at the same time and there is no trust required from either party. Either both or none of them get the funds of the other.
+Ya que el proceso es automático, los pasos 7 y 8 suceden simultáneamente, por lo que no se necesita confiar en ninguna de las partes. De esta manera, o ambas partes obtienen sus fondos o ninguna los obtiene.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps_D.jpg)
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps_M.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/ES_swaps_D.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/ES_swaps_M.jpg)
 
-### Atomic Swaps Today
+### Los intercambios atómicos hoy en día
 
-There are few wallets or decentralized exchanges that enable users to do Atomic Swaps. So far there have been only a small number of Atomic Swaps, here is a short history:
+Hay algunas billeteras y centros cambiarios descentralizados que permiten al usuario hacer intercambios atómicos. Hasta ahora, se han llevado a cabo muy pocos intercambios de este tipo. A continuación un breve historial:
 
- - The first on-chain Atomic Swap was done on September 20th, 2017 between Litecoin and Decred
- - The first off-chain Atomic Swap occurred November 2017 between Litecoin and Bitcoin on the Lightning Network
- - A detailed explanation of an Ethereum - Bitcoin Atomic Swap can be found here
- - Most recently on the 7th of December 2018 TenX showcased an ERC20 to Bitcoin Lightning Atomic Swap using their open-source software COMIT
+ - El primer intercambio atómico en la cadena se realizó el 20 de septiembre de 2017 para cambiar Litecoin por Decred.
+ - El primer intercambio atómico fuera de la cadena se realizó en noviembre de 2017 para intercambiar Litecoin por Bitcoin en el Lightning Network.
+ - Puede encontrar una explicación detallada del intercambio atómico Ethereum-Bitcoin aquí.
+ - Más recientemente, el 7 de diciembre de 2018, TenX intercambió ERC20 por Bitcoin en un intercambio atómico de muestra como parte de la demostración de su software de código abierto COMIT.
 
-The technology is very promising, but to achieve adoption wallets as well as exchanges will have to build a user-friendly interface to use Atomic Swaps. 
+Esta tecnología resulta muy prometedora, pero para lograr la adopción general tanto las billeteras como los centros cambiarios tendrán que diseñar interfaces amigables con el usuario que faciliten la realización de intercambios atómicos
 
-### Summary
+### Resumen
 
-Atomic Swaps present an alternative to centralized exchanges used today once they are available between the majority of cryptocurrencies. At no point is there a third party involved that has access to a users funds. The exchange process is entirely trustless and almost instant. Hashed Timelock Contracts are the heart of Atomic Swaps. I suspect that it won't take long until Atomic Swap compatibility will be a necessary feature for a blockchain to gain adoption.
+Los intercambios atómicos representarán una alternativa a los centros cambiarios centralizados utilizados en la actualidad una vez que estén disponibles para la mayoría de las criptomonedas. En ningún momento del intercambio hay terceros con acceso a los fondos de los usuarios. El proceso de intercambio queda libre de terceros y es casi instantáneo. Los HTLC son un tipo de contrato que forman el núcleo de los intercambios atómicos. Es posible que pronto la compatibilidad con intercambios atómicos sea una necesidad par que una cadena de bloques logre adopción.
 
-This was the last article on transactions in the advanced section. To learn more about how transactions work and what types of transactions there are you can visit our expert level. On the advanced level, we will continue with an introduction to privacy-preserving techniques on the blockchain.
-
+Este fue el último artículo sobre transacciones del nivel avanzado. Para aprender más sobre cómo funcionan las transacciones y qué tipo de transacciones existen, puede pasar al nivel experto. En el nivel avanzado, pasaremos a una introducción de las técnicas que ayudan al usuario a mantener su privacidad dentro de la blockchain.

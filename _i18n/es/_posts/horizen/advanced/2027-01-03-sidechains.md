@@ -1,74 +1,78 @@
 ---
 layout: post
 type: article
-title: "Sidechains"
-description: "Sidechains are a promising approach to improve upon blockchains. We explain what sidechains are and their benefits."
+title: "Cadenas laterales"
+description: " Las cadenas laterales son un desarrollo prometedor para las cadenas de bloques. Hablaremos de qué son y cómo pensamos implementarlas."
 permalink: /horizen/advanced/sidechains/
 topic: horizen
 level: advanced
 ---
 
-A sidechain is a blockchain in and of itself with the added feature of being interoperable with the main blockchain. Transactions are the most common interaction with a blockchain facilitating a cryptocurrency, such as our current Horizen blockchain. The Engineering team at Horizen, led by Alberto Garoffolo, has proposed a sidechain construction based on proof-of-stake principles. The main innovation is a new backward transfer protocol that allows transactions from one of the possibly many sidechains back to the mainchain, without the mainchain having to track the sidechain and without introducing a centralized federation of validators. While a reference implementation of a sidechain consensus protocol will be provided, a wide range of sidechain consensus protocols will be possible.
+Una cadena lateral es una cadena de bloques con la función adicional de ser interoperable con la cadena de bloques principal. Las transacciones son la interacción más común en una cadena de bloques que aloja una criptomoneda, como es el caso de la cadena de Horizen. El equipo técnico de Horizen, dirigido por Alberto Garoffolo, ha propuesta la construcción de una cadena lateral con base en principios PoS (de prueba de participación).
 
-Sidechains are a concept that people have been looking into for a while now. The first proposal of sidechains was developed by Back et al. in 2014 and a number of different teams are working on implementing them as a solution to the problems of scaling and interoperability.
+La principal innovación es un nuevo protocolo de transferencia hacia atrás que permite transacciones entre una de muchas posibles cadenas laterales posibles con la cadena principal sin necesidad de que la cadena principal tenga que rastrear a la lateral y sin introducir una federación centralizada de validadores. Aunque se proporcionará una implementación de referencias de un protocolo de consenso de cadena lateral, será posible una amplia gama de protocolos de consenso.
 
-### What is a Sidechain and Why Would You Want One?
+Las cadenas laterales son un concepto que ha interesado al mundo tecnológico por un tiempo. La primera propuesta para una cadena lateral la desarrollaron Back et al. en 2014, y varios equipos diferentes están trabajando para implementarlas como solución a los problemas de escalabilidad e interoperabilidad.
+
+### ¿Qué son las cadenas laterales y por qué resultan deseables?
 
 When Back et al. introduced the concept of sidechains in 2014 they provided the following definition along with it:
 
+**Inglés**
+
 _"A sidechain is a blockchain that validates data from other blockchains. […] A pegged sidechain is a sidechain whose assets can be imported from and returned to other chains; that is, a sidechain that supports two-way pegged assets."_ A. Back et al. — Enabling blockchain innovations with pegged sidechains, 2014
 
-In other words, a sidechain is a blockchain in and of itself, but with the capability to communicate and interoperate with one or more other chains. When you hear the term sidechain today, people are mostly talking about pegged sidechains, which allow you to transfer assets back and forth between chains.
+**Español**
 
-![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains_D.jpg)
-![sidechains](/assets/post_files/horizen/advanced/sidechains/sidechains_M.jpg)
+_"Una cadena lateral es una cadena de bloques que valida los datos de otras cadenas de bloques. […] Una cadena lateral se considera una cadena vinculada, cuando sus activos pueden importarse de y ser devueltos a otras cadenas; es decir, una cadena lateral que permite el intercambio de activos en ambos sentidos."_  A. Back et al. – “Enabling blockchain innovations with pegged sidechains”, 2014
 
-### So What is the Benefit of This Technology?
+En otras palabras, una cadena lateral es una cadena de bloques, pero con la habilidad de comunicarse e interoperar con una o más cadenas. Cuando alguien se refiere a una cadena lateral en la actualidad, generalmente se refieren a una cadena vinculada, las cuales permiten al usuario transferir activos entre cadenas en ambos sentidos.
 
-Most blockchains facilitating cryptocurrencies use the proof-of-work consensus algorithm and have incorporated the core functionalities of the Bitcoin protocol. Therefore they inherited a lot of the constraints from the code created by Satoshi Nakamoto. This includes limited throughput, high latency, and a limited ability to scale. Sidechains present an option to help overcome some of these technological shortcomings, but besides just opening doors to potential technical leaps, they touch on the topic of governance in a way.
+![sidechains](/assets/post_files/horizen/advanced/sidechains/ES_sidechains_D.jpg)
+![sidechains](/assets/post_files/horizen/advanced/sidechains/ES_sidechains_M.jpg)
 
-As debates across the recent years have shown, making changes to the codebase in decentralized projects tends to be a cumbersome process. This is arguably a feature, not a bug. Stability (not in regards to price, but code) is crucial, especially for projects such as Bitcoin, and the overall security of the protocol benefits greatly from the careful consideration of every change applied to the system.
+### ¿Qué beneficios tiene esta tecnología?
 
-Sidechains offer a mechanism to implement features on top of a first layer protocol without compromising the security or stability of said protocol. After an initial fork that includes the capability to deploy sidechains and introduces a way to transfer assets from the mainchain to the sidechain and vice versa, a number of parallel chains can be built, each serving a different purpose, without having to build consensus for each individual feature.
+La mayoría de las cadenas de bloques que alojan criptomonedas emplean un algoritmo de consenso PoW y han incorporado las principales funciones del protocolo Bitcoin, heredando a la vez muchas de las restricciones impuestas por el código creado por Satoshi Nakamoto. Esto incluye un rendimiento limitado, latencia alta y límites de escalabilidad. Las cadenas laterales son una opción para superar algunos de estos impedimentos tecnológicos. Sin embargo, además de abrirles la puerta a posibles avances tecnológicos, tocan también de alguna manera u otra el tema de la gobernanza.
 
-It is important to note that the initial change to the codebase enabling the deployment of sidechains and cross chain transfers has to be done carefully and possible solutions should be evaluated with great caution. If a project manages to deploy those features then developers can start playing around and build on top of projects where changes to the protocol traditionally required consensus building for months and even years. Ideally the sidechain implementation will give developers on the sidechain many degrees of freedom while eliminating the possibility to compromise mainchain security. If a user has no need to use a particular sidechain, he doesn’t have to care.
+Como lo han demostrado los debates recientes, hacerle cambios al código base de un proyecto descentralizado puede ser un proceso tedioso; algo que se considera más una función que un error de programación. La estabilidad (no de precio, sino del código) resulta vital para un proyecto como Bitcoin, y la seguridad general del protocolo se beneficia enormemente de la consideración meticulosa de cada cambio que se la hace al sistema.
 
-### What Can You Do with a Sidechain?
+Las cadenas laterales ofrecen una manera de implementar nuevas funciones sobre una primera capa de protocolo sin comprometer su seguridad o estabilidad. Tras una bifurcación inicial que incluye la habilidad de crear cadenas laterales e introduce una manera de transferir activos de la cadena principal a la lateral y viceversa, pueden construirse un número de cadenas paralelas, cada una con un propósito diferente y sin tener que lograr consenso para implementar cada función individual.
 
-As we said earlier many teams are looking into the technology of sidechains for a variety of purposes. The team behind Rootstock is working on a way, to provide smart contract functionality on top of Bitcoin. They are referring to their sidechains as secondary chains. Polkadot, naming its sidechains Parachains aims to connect permissioned and public blockchains. The general idea of Plasma is also based on sidechains, or child blockchains and here the main goal is scaling. Drivechains are meant to enable BTC to be moved to other software applications, like different public blockchains.
+Es importante remarcar que el cambio inicial al código base que permitirá el uso de cadenas laterales y transferencias entre cadenas debe hacerse con cuidado, y que toda solución posible debe evaluarse meticulosamente. Si un proyecto logra implementar las funciones antes mencionadas, entonces sus desarrolladores pueden empezar a experimentar y a trabajar en proyectos donde cualquier cambio al protocolo tradicionalmente exigiría un consenso, el cual podría tomar meses o años en lograrse. Idealmente, la implementación de cadenas laterales les dará a los desarrolladores en la cadena lateral una mayor libertad sin introducir la posibilidad de comprometer la seguridad de la cadena principal. Si un usuario no utiliza una cadena lateral particular, no tienen por qué importarle los cambios que se le apliquen.
 
-You could make a case of distinguishing between sidechains and drivechains as discussed in this paper by Rootstock. We will pick up on their distinction shortly when talking about how sidechains work.
+### ¿Qué puede hacerse con una cadena lateral?
 
-The general idea is the same though and satisfies the broad definition of a pegged sidechain that Back et al. provided about four years ago.
+Como ya habíamos mencionado, hay muchos equipos de trabajo dedicados a la tecnología de cadenas laterales, cada uno con un propósito diferente. Por ejemplo, el equipo de Rootstock está buscando una manera de proporcionar contratos inteligentes sobre la cadena de Bitcoin, refiriéndose a sus cadenas laterales como ‘cadenas secundarias’. Polkadot, que les ha dado el nombre de ‘paracadenas’, busca conectar cadenas de bloques con y sin permisos. La idea general de Plasma también se basa en las cadenas laterales o ‘cadenas hijas’ y tiene el objetivo principal de lograr escalabilidad. Otras cadenas llamadas ‘drivechains’ tienen el propósito de permitir que se transfieran bitcoins a otras aplicaciones o softwares, como diferentes cadenas de bloques públicas. 
+  
+Puede argumentarse una distinción entre cadenas laterales y drivechains, como lo ha hecho Rootstock en este artículo. Retomaremos esta distinción dentro de pronto al hablar de cómo funcionan las cadenas laterales. La idea es fundamentalmente la misma, sin embargo, y satisface la definición de una cadena lateral vinculada propuesta por Back et al. hace cuatro años.
 
-Critics of the sidechain concept like to point out, that most sidechain implementations currently rely on a set of validators to facilitate cross-chain transactions. Sidechain constructions are often times called trust-minimized instead of trustless. The risk comes down to the ability of the trusted validators to censor transactions from main- to sidechain and vice versa. Our protocol addresses this issue in an elegant way.
+Quienes critican el concepto de las cadenas laterales apuntan al hecho de que muchas de las cadenas laterales implementadas actualmente dependen de un grupo de validadores para facilitar transacciones entre cadenas, por lo que a las construcciones de cadenas laterales se les llama a veces ‘de mínima confianza’ (trust-minimized) en lugar de libres o sin necesidad de confianza (trustless). El riesgo se reduce a la habilidad que poseen los validadores de censurar transacciones entre las cadenas principal y lateral. Nuestro protocolo ataca este problema de una manera elegante.
 
-### Why Does Horizen Look at Sidechains?
+### ¿Qué busca Horizen al implementar cadenas laterales?
 
-The Horizen blockchain project has set itself ambitious goals. We plan on including features such as developing a treasury system for the [DAO]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}) in cooperation with IOHK, a decentralized solution for tracking Secure and Super Nodes and handling their rewards, as well as developing a [Block-DAG]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}) protocol to increase transaction throughput.
+El proyecto de cadenas de bloques de Horizen se ha puesto objetivos muy ambiciosos. Planeamos incluir características como un sistema de tesorería para la OAD (el cual se está desarrollando en colaboración con IOHK), una solución descentralizada para rastrear nodos seguros y súper nodos y sus recompensas y un protocolo de DAG de bloques para incrementar el rendimiento de la cadena en cuanto a transacciones procesadas.
 
-You can probably see the benefits of developing a sidechain first as some of these functionalities would require significant modifications of the core client if implemented directly into the existing codebase.  Building new features and making changes to the protocol, even if they are small, is not just challenging from the aspect of building consensus around them, but it also comes with security risks. Every addition has to be considered carefully.
+Es fácil ver los beneficios de desarrollar primero una cadena lateral, pues algunas de estas funciones requerían hacerle modificaciones significativas al cliente central de implementarse al código base existente. Desarrollar nuevas características y hacer cambios al protocolo, aunque sean mínimos, resulta problemático no solo por la dificultad de lograr consenso, sino también porque implica riesgos de seguridad. Por lo tanto, cada adición debe considerarse cuidadosamente.
 
-The idea is to develop a robust sidechain implementation once and being able to simplify building new features that expand the Horizen ecosystem afterward. Sidechain implementations will be completely decoupled from the mainchain and can, for example, run an entirely different consensus algorithm.
+La idea de Horizen es desarrollar de una sola vez una implementación de cadenas laterales robustas para luego simplificar el desarrollo de nuevas características que expandan el ecosistema Horizen. La implementación de cadenas laterales de desemparejará por completo de la cadena principal y podría, por ejemplo, ejecutar un algoritmo de consenso completamente diferente al de esta. De esta manera, sería posible tener cadenas laterales para la tesorería y sistema de rastreo de nodos con un protocolo de consenso [PoS]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) y conservar a la par la cadena principal [PoW]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}).
 
-That way, it would be possible to run the sidechains facilitating the treasury and node tracking system with a [Proof-of-Stake]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) like consensus protocol, while maintaining the mainchain with “traditional” [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}).
+### Cómo funciona
 
-### How Does It Work Now?
+El desarrollo del modelo de cadenas laterales (sidechains) consiste de dos partes:
 
-The construction of the sidechain model consists of two parts:
+ 1. EL _protocolo de consenso de la cadena lateral (sidechain consensus protocol)_ — SCP
+ 2. El _protocolo de transferencia entre cadenas_ o peg de doble sentido (two-way peg) — CCT
 
- 1. The _sidechain consensus protocol_ — SCP
- 2. The _cross-chain transfer protocol_ or 2-way peg — CCT
+El _protocolo de consenso de la cadena lateral_ gobierna cómo se pone de acuerdo la red respecto a la creación de bloques nuevos y el historial de transacciones. El CTT determina cómo pueden enviarse activos de la cadena principal a la lateral y viceversa. Hablaremos de ambos protocolos a detalle en nuestro [artículo sobre cadenas laterales]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) del nivel experto..
 
-The _sidechain consensus protocol_ governs how the network agrees on new blocks and therefore on the history of transactions. The _cross-chain transfer protocol_ determines how assets can be sent from the mainchain to a sidechain and vice versa. We will look at these two protocols in our [sidechain article in the expert section]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}).
+![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_D.jpg)
+![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_M.jpg)
 
-![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/SCP_CCT_D.jpg)
-![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/SCP_CCT_M.jpg)
+### Resumen
 
-### Summary
+Las cadenas laterales podrían ser una manera elegante de superar algunas de las limitantes actuales respecto a la escalabilidad y gobernanza del ecosistema blockchain. Una cadena lateral puede no solo aumentar el rendimiento, o sea el número de transacciones por segundo (tps), sino también permitir la experimentación sin comprometer la seguridad de la cadena de bloques principal.
 
-Sidechains can be an elegant way to overcome current limitations regarding scalability and governance in the blockchain ecosystem. While you can increase the throughput, so the number of transactions per second (TPS) with sidechains, they also allow experimentation without compromising the security of the main blockchain.
+La habilidad de implementar cadenas laterales aumentará dramáticamente la posibilidad de construir encima de las cadenas de bloques públicas existentes. Uno de los primeros usos que Horizen piensa darle a su cadena lateral tendrá que ver con la tesorería, y será uno de los primeros pasos para hacer de Horizen una organización autónoma descentralizada (OAD).
 
-The ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will likely be the Treasury, moving the organization a step closer to becoming a decentralized autonomous organization (DAO). 
-
-We will continue this article on [article on sidechains in the Expert Section]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}). We will look at how the proposed solution works on a technical level and examine the _sidechain consensus protocol_ and the _cross-chain transfer protocol_.
+Continuaremos hablando de cadenas laterales en el [artículo de las cadenas laterales de la sección experta]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}). Veremos cómo funcionan las soluciones propuestas a nivel técnico y examinaremos el _protocolo de consenso de la cadena lateral (SCP)_ y el de _transferencia entre cadenas (CCT)_.

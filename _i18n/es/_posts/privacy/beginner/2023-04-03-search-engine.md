@@ -13,7 +13,7 @@ En nuestro primer artículo sobre las herramientas disponibles para proteger la 
 
 Todos hemos escuchado historias de cómo los motores de búsqueda importantes rastrean a sus usuarios; tristemente, las historias son ciertas.
 
-No es secreto ya que buscadores como Google, Bing, Yahoo! y otros llevan un registro del 100% de las búsquedas que hace el usuario, ni que utilizan esta y otra información para adecuar los resultados que aparecen en pantalla. Dicho de otra manera, proporcionan resultados personalizados. Esto puede ser conveniente, pero la realidad es que los datos de búsqueda del usuario están siendo explotados para crear publicidad más atractiva mientras este navega el internet.
+No es secreto ya que buscadores como Google, Bing, Yahoo! y otros llevan un registro del 100% de las búsquedas que hace el usuario, y que utilizan esta y otra información para adecuar los resultados que aparecen en pantalla. Dicho de otra manera, proporcionan resultados personalizados. Esto puede ser conveniente, pero la realidad es que los datos de búsqueda del usuario están siendo explotados para crear publicidad más atractiva mientras este navega el internet.
 
 Ya que muchos usuarios utilizan Google como su principal motor de búsqueda, hay una buena probabilidad de que este sea también su caso. Sí es así, le recomendamos visitar https://myactivity.google.com para explorar un historial de su actividad en los servicios de Google y ver de la cantidad de información que se conserva sobre used.
 

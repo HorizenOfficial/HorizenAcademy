@@ -1,35 +1,36 @@
 ---
 layout: post
 type: article
-title: "Virtual Phone Number"
-description: "If you don't want to share your number every time you register for some service a virtual phone number is what you need."
+title: "Números telefónicos virtuales"
+description: "Si no desea compartir su número cada vez que se registre para algún servicio, lo que necesita es un número de teléfono virtual."
 permalink: /privacy/advanced/virtual-phone-number/
 topic: privacy
 level: advanced
-chapter: "Tools to protect your Privacy"
+chapter: "Herramientas para proteger la privacidad"
 ---
 
-A virtual phone number is a number on the internet and is also known as direct inward dialing (DID). The primary function of a virtual phone number is to forward calls to your primary phone number. The caller will never learn your actual phone number during this process. A virtual phone number enables you to have several numbers, in several countries without having to deal with multiple sim cards and service providers.
+Un número telefónico virtual es un número en el internet, y se le conoce también como marcación entrante directa o DID (direct inward dialing). La función principal de estos números es la de redireccionar llamadas entrantes al número telefónico principal del usuario. Quien haga una llamada a un número virtual no sabrá que está siendo redirigido ni conocerá nunca el número telefónico real del usuario. Un número telefónico virtual le permite al usuario tener varios números, incluso en varios países, sin tener que recurrir a un gran número de tarjetas SIM o proveedores de servicio.
 
-Many virtual phone number services also offer more sophisticated functionalities like recording calls, holding virtual phone conferences, texting or allowing for voicemail. If you have ever called a service line that asked you to "Press 1 for Support, press 2 for general inquiries..." and so on, this company most likely uses virtual phone numbers. Once the service line collects all the necessary information from the customer, the system forwards the call to the appropriate employee. You can structure the system to forward some calls to a cellphone instead of a landline in a call center.            
+Muchos servicios de números telefónicos virtuales también ofrecen funciones sofisticadas como la opción de grabar de llamadas, hacer llamadas en conferencia, mandar mensajes de texto y mantener un buzón de voz. Si alguna vez ha llamado a una línea de servicio al cliente que le haya pedido oprimir tal o cual botón para acceder a un servicio particular, lo más probable es que la entidad que proporciona el servicio esté utilizando números virtuales. No es hasta que el servicio recolecta la información suficiente sobre el usuario o la naturaleza de su llamada que la redirige al empleado adecuado. El usuario puede estructurar su sistema de manera que las llamadas se redirigen a su celular en lugar de a una línea fija o centro de atención.
 
-The benefit for companies using such a system is an immense reduction in cost. To achieve this goal on an enterprise level, a company would have to buy a lot of hardware and register a large number of phone numbers with a telecommunication company. With virtual phone numbers, they can set up a complex structure of different numbers forwarded to the right employe. Another benefit is that they can serve customers from different countries without having these customers call an expensive foreign number.
+El beneficio para las empresas que utilizan estos sistemas es una reducción enorme de costos. Para lograr lo mismo a nivel empresarial, la empresa tendría que comprar grandes cantidades de hardware y registrar múltiples números telefónicos con el proveedor de telecomunicaciones. En el caso de los números telefónicos virtuales solo se necesita crear una estructura compleja de números que se redirijan al empleado indicado. Otro beneficio de los número virtuales es que pueden brindarles servicio a clientes de todo el mundo sin que el cliente tenga que llamar a un número en el extranjero.
 
-### Privacy Through Virtual Phone Numbers
+### Privacidad por medio de un número telefónico virtual
 
-When you register for a service or platform you are often times asked to provide a valid phone number. There are legitimate reasons for not wanting to share your private number this way. By using a virtual phone number you can freely hand out a number to any service. If you receive unwanted calls you can either block the caller ID, or change your number altogether. It works just like a burner phone would. Virtual phone numbers also allow you to mask your location. The virtual phone number forwards calls over the internet. If you pick the right provider, nobody will ever know what place a call is actually forwarded to.
+Cuando el usuario se registra para utilizar un servicio o plataforma es común que se le pida que proporcione un número telefónico válido. Hay muchas razones legítimas para no querer compartir un número telefónico personal de esta manera. Utilizando un número virtual se vuelve posible proporcionarle esta información a cualquiera con menos preocupaciones. En caso de recibir llamadas no deseadas, el usuario puede bloquear el número o cambiar el suyo por completo; lo mismo que con un teléfono prepagado. Los números virtuales también le permiten al usuario esconder su ubicación, pues el número virtual redirige la llamada a través del internet. De elegir al proveedor indicado, nadie que llame al usuario podrá saber a qué lugar del mundo se está dirigiendo su llamada.
 
-### Using a Virtual Phone Number
+### Cómo utilizar un número virtual
 
-First, you will need to pick a service that suits your needs. There are different options depending on how long you want your number to be available, how many numbers you would like to have simultaneously and which additional features like texting or voicemail you need.
+Primero, necesitará elegir un servicio que cumpla con sus necesidades. Hay diferentes opciones dependiendo de qué tanto tiempo vaya necesitar hacer uso del número, cuántos números desea tener de manera simultánea y qué funciones adicionales (como mensajería o un buzón de voz) le gustaría tener.
 
-Second, watch out for services that require your personal information to sign up for a virtual phone number. The whole point is to keep your private data to yourself, so be wary if the service provider collects more data than they need. Some services don't even require you to provide your phone number and use their app to forward messages and calls to you.
+Segundo, evite contratar un servicio que le exija proporcionar su información personal al contratar el número telefónico virtual. El punto del número virtual es mantener privada su información personal, así que sospeche si el proveedor de servicio parece estar pidiéndole más datos de los necesarios. Hay servicios que no necesitan siquiera conocer su número telefónico real, pues redirigen las llamadas a su teléfono a través de una aplicación.
 
-Lastly, you should pick a service that you can pay for privately. Using cryptocurrencies or cash cards saves you from revealing more personal data than necessary.
+Por último, elija un servicio que pueda pagar de manera privada. Pagar con cripto o una tarjeta prepagada le ahorra la pena de tener que revelar más datos personales o financieros.
 
-Below we have two articles for you to get you started on your first virtual number.
+A continuación hemos incluido un par de artículos que lo ayudarán a contratar y utilizar su primer número telefónico virtual.
 
-### Virtual Phone Number Resources
+
+### Recursos sobre números telefónicos virtuales (texto en inglés)
 
 {%
   include further_reads/_template.html

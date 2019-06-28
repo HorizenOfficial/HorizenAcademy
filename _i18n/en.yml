@@ -51,3 +51,7 @@ newsletter:
   optional: Optional
   subscribe: Subscribe to updates
   msg-success: Success! Please check your email to confirm we have the right one.
+
+
+post:
+  further-reading: Further Reading

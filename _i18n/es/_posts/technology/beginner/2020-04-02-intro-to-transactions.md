@@ -9,7 +9,7 @@ level: beginner
 chapter: "Transacciones"
 ---
 
-En el primer artículo de nuestra sección sobre tecnología, [¿Qué es una cadena de bloques?]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}), mencionamos que la cadena de bloques es como un libro contable público que mantiene un registro de todas las transacciones que han ocurrido dentro de una red. En el artículo sobre [identidad en la cadena de bloques ]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}) explicamos que cada usuario se identifica por medio un par de llaves individual. Por último, mencionamos que [la billetera es un programa]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) que ayuda al usuario a administrar sus llaves y crear transacciones. 
+En el primer artículo de nuestra sección sobre tecnología, [¿Qué es una cadena de bloques?]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}), mencionamos que la cadena de bloques es como un libro contable público que mantiene un registro de todas las transacciones que han ocurrido dentro de una red. En el artículo sobre [identidad en la cadena de bloques ]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}) explicamos que cada usuario se identifica por medio de un par de llaves individual. Por último, mencionamos que [la billetera es un programa]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) que ayuda al usuario a administrar sus llaves y crear transacciones. 
 
 En este artículo presentaremos un concepto útil de recordar al pensar en las transacciones con criptomonedas y cómo funcionan. Desglosaremos este concepto por medio de una analogía que sacrifica un poco la precisión a favor de la facilidad de comprensión.
 
@@ -23,7 +23,7 @@ Los buzones pueden accederse desde donde sea, en cualquier momento, mientras se 
 
 ### Una dirección como un buzón individual
 
-Consideremos ahora cada buzón individualmente. Explicamos ya en artículos anteriores que la identidad del usuario en una cadena de bloques consta de un par de llaves, una pública y otra privada. Estas llaves siempre se encuentran en conjunto. Dentro de la nuestra analogía, cada buzón individual es la representación de un par de llaves.
+Consideremos ahora cada buzón individualmente. Explicamos ya en artículos anteriores que la identidad del usuario en una cadena de bloques consta de un par de llaves, una pública y otra privada. Estas llaves siempre se encuentran en conjunto. Dentro de nuestra analogía, cada buzón individual es la representación de un par de llaves.
 
 ![Empty in ES](/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_D.jpg)
 ![Empty in ES](/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_M.jpg)

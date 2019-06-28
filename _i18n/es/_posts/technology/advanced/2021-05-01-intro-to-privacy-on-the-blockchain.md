@@ -1,87 +1,93 @@
 ---
 layout: post
 type: intro
-title: "Privacy on the Blockchain"
-description: "Here we introduce you to the different technologies that enable private transactions on a public blockchain."
+title: "Privacidad en la cadena de bloques"
+description: "Aquí le presentamos las diferentes tecnologías que permiten transacciones privadas en una cadena de bloques pública."
 permalink: /technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced
-chapter: "Privacy"
+chapter: "Privacidad"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
-One of the great value propositions of blockchains is the transparency that such public ledgers offer. There are many cases though where it is desirable to conduct private transactions. In this article, we want to introduce you to four concepts that aim to increase the level of privacy for transactions on public blockchains. It is a common misconception that cryptocurrencies are private. Most of them are pseudo-anonymous, meaning that real-world identities are not connected to addresses by default, but can be connected through ongoing data analysis.
+Una de las propuestas de valor más grandes de las cadenas de bloques es la transparencia que ofrecen como libros contables públicos. Sin embargo, hay muchos casos en los que resulta deseable llevar a cabo una transacción privada.
 
-### Why Privacy?
+En este artículo presentaremos cuatro conceptos que tienen como fin aumentar el nivel de privacidad de las transacciones hechas en una cadena de bloques pública. Como ya mencionamos antes, es común pero erróneo creer que las criptomonedas son anónimas. La mayoría son seudoanónimas, es decir que no se relaciona ningún dato identitario con las direcciones, pero que existen maneras de sacar conclusiones a través del análisis de datos.
 
-There are many legitimate reasons to create private transactions on a blockchain. If you have a medical condition and need to purchase your prescriptions on a regular basis you have good reason to do these transactions privately. If you have a business, you don't want to reveal your revenue streams to your competition and if you are buying a present for your spouse, you might not want him or her to see it before they actually get the present. There are many good reasons to wish to transact privately, and we believe that privacy is and should be treated as a basic human right.
+### ¿Por qué privacidad?
 
-For this article, we assume that you are familiar with the UTXO model that many blockchains use for accounting. If you are not, feel free to check out our article on it before you continue reading.
+Existen muchas razones legítimas para llevar a cabo transacciones financieras privadas. Por ejemplo, si un usuario padece alguna condición médica y debe comprar sus medicinas de manera regular, tiene una buena razón para hacer sus compras de manera privada. Si se es dueño de un negocio, no es deseable revelarle a la competencia las fuentes de ingresos, o si se le está comprando un regalo a la pareja, el comprador querrá mantener secreta su compra hasta el momento preciso. En fin, hay muchas razones para hacer transacciones privadas, y creemos que la privacidad es y debe considerarse un derecho humano inviolable.
 
-### Change Addresses
+El contenido de este artículo da por hecho que se encuentra familiarizado ya con el modelo UTXO que muchas cadenas utilizan para hacer su contabilidad. Si no lo está, siéntase libre de retomar nuestro artículo sobre el tema antes de continuar con la lección.
+
+### Direcciones de cambio
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_0.png" alt="Change Addresses">
 </div>
 
-Change addresses were introduced so people you are transacting with don't have access to your entire transaction history just by looking up the address you used for transacting with them. Most modern wallets automatically generate change addresses for you when you create a transaction. In the example above of a regular bitcoin transaction, you can see one input and two outputs to the transaction. The first output went to a different address and is the amount, the user wanted to spend. The remainder of the UTXO went back to the same address the funds originated from.
+Las direcciones de cambio (change addresses) se introdujeron con el propósito de que ningún tercero tenga la habilidad de acceder al historial completo de transacciones del usuario con solo buscar la dirección que utilizó para hacer una transacción. Por suerte, la mayoría de las billeteras disponibles actualmente generan direcciones de cambio de manera automática al crear una transacción. En la imagen superior, una transacción regular de bitcoins, pueden apreciarse una entrada y dos salidas en la transacción. La primera salida se dirigió a otra dirección y contiene la cantidad que el usuario quería gastar. El UTXO restante se regresó a la dirección que originó los fondos.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_1.png" alt="Change Addresses">
 </div>
 
-A wallet that supports change addresses will generate a new address, every time you are receiving funds, no matter if they are change or regular incoming transactions. The example above shows a transaction with the exact same amounts as before, but this time the change went back to a newly created change address. This feature improves privacy by making it harder to trace the transaction history of a given user.
+Una billetera habilitada con direcciones de cambio genera una dirección nueva cada vez que el usuario recibe fondos, indistintamente de si la transacción es regular o contiene el cambio. El ejemplo anterior es de una transacción con los mismos montos que antes, pero en esta ocasión el cambio se envió a una dirección de cambio recién creada. Esta función mejora la privacidad del usuario haciendo más difícil rastrear su historial de transacciones.
 
 ### Coin Mixing
 
-Coin mixing protocols like SharedCoin, TumbleBit or CoinJoin (used by Dash) are the next evolutionary step to improve privacy by mixing several different inputs and outputs in a single transaction, often times during several intermediary transactions.
+Los protocolos de mezclado de monedas (coin mixing protocols) como SharedCoin, TumbleBit o CoinJoin (utilizado por Dash) representan el siguiente paso para mejorar la privacidad del usuario de una cadena de bloques. Su función es mezclar diferentes entradas y salidas en una sola transacción, muchas veces incluso en el caso de varias transacciones intermediarias.
 
-![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_D.jpg)
-![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_M.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_coinjoin_D.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_coinjoin_M.jpg)
 
-Coin mixing transactions don't require any changes to the basic Bitcoin protocol that many other cryptocurrencies (such as Horizen) use. In the graphic above you can see the schematics of a coin mixing transaction. A number of inputs are combined in a mixing pool (center) and later distributed to their destination addresses. A coin mixing transaction makes it harder for an attacker to figure out who was sending money to whom.
+Las transacciones de mezclado de monedas no necesitan que se le haga ningún cambio al protocolo básico de Bitcoin empleado por muchas criptomonedas (como Horizen). En el mapa anterior, puede apreciarse el esquema de una transacción de mezclado. Un número determinado de entradas se combina en un centro de mezclado (mixing pool) y se distribuye luego a sus direcciones destino. Una transacción de mezclado de monedas le dificulta a un atacante saber quién le está mandando dinero a quién.
 
-The level of privacy provided by mixing services is far better than using regular transactions, but one can link input addresses to output addresses easily by monitoring the amounts of coins in a mixing transaction. There are tools available online to do so. Another downside of coin mixing is that many mixers available are centralized and run by a third party that could potentially steal your funds. CoinJoin based techniques prevent this risk of your coins being stolen by having no central party.
+El nivel de privacidad que confieren estos servicios es preferible a la realización de transacciones regulares, pero sigue siendo posible enlazar las direcciones de entrada con las de salida rastreando las cantidades de monedas en una transacción de mezclado, de hecho, hay herramientas en línea que cumplen precisamente esta función. Otra desventaja del mezclado es que muchos de los mezcladores disponibles son entidades centralizadas ejecutadas por terceros que podrían, si así lo quisieran, apropiarse de los fondos del usuario. Las técnicas de mezclado como la de CoinJoin evitan este riesgo al ser descentralizadas.
 
-By now there are many iterations of coin mixing protocols that improved upon the privacy promise step by step. With CoinJoin for example, every user has to send the same amount to the mixing pool, which makes amount tracking significantly harder. Introducing [Confidential Transactions](https://medium.com/@ecurrencyhodler/a-primer-to-confidential-transactions-e6ab3dd2bf1e) will solve this issue by hiding the amounts of transactions. In our advanced section, we will talk about the individual mixers in more detail, but let us move on for now.
+Existen ya muchas versiones de protocolos de mezclado de monedas que han cumplido mejor con su promesa de privacidad. En el caso de CoinJoin, por ejemplo, cada usuario debe enviar la misma cantidad al centro de mezclado, lo cual hace más difícil rastrear los fondos. La introducción de las [transacciones confidenciales](https://medium.com/@ecurrencyhodler/a-primer-to-confidential-transactions-e6ab3dd2bf1e) resolverá este problema escondiendo la cantidad de las transacciones. Hablaremos más de mezcladores individuales más adelante, pero continuemos por ahora.
 
-### Ring Signatures
+### Firmas anulares
 
-Ring Signatures were first introduced by Rivest, Shamir, and Taumann in 2001 and the general idea has been used for a number of privacy protocols since then. We will use the White House Leak Dilemma to demonstrate the value proposition of their concept.
+El concepto de firma anular (ring signature) lo introdujeron Rivest, Shamir y Taumann en 2001, y la idea en general se ha empleado en un gran número de protocolos de privacidad desde entonces. Tomaremos de ejemplo el problema de leaks reciente de la Casa Blanca para demostrar la propuesta de valor de este tipo de firma.
 
-Imagine a high ranking White House official (Alice) wanting to leak a secret to the press about the president. She needs to make sure, the journalist who receives the leak has a way to verify the source of the information without revealing her identity. What she can do is use a Ring Signature to sign the message. To construct the ring signature all she needs is her private key and the public keys of the other possible whistleblowers, e.g. other members of the cabinet (Bob and Carol).
+Imaginemos que un alto funcionario de la Casa Blanca (Alice) quiere divulgar a los medios un secreto sobre el presidente. A Alice le interesa que el periodista que reciba el leak tenga una manera de verificar la fuente de la información sin revelar su identidad. Lo que Alice puede hacer en este caso es utilizar una firma anular para firmar el mensaje. Para construir la la firma, lo único que necesita es su llave privada y las llaves públicas de otros posibles denunciantes (por ejemplo, otros miembros del gabinete; Bob y Carol).
 
-![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_D.jpg)
-![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_M.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_ring_sig_D.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_ring_sig_M.jpg)
 
-The verifier (journalist) can verify that the message was indeed signed by a high ranking official, but he cannot determine who constructed the signature (Alice, Bob or Carol?).
+El verificador (periodista) puede verificar que el mensaje fue firmado por un alto funcionario, pero le resulta imposible determinar cuál de los tres (si Alice, Bob o Carol) construyó la firma.
 
-In the context of cryptocurrencies, a user can collect a bunch of public keys, create a transaction and sign it using his private key. The set of verifiers, being the nodes on the network can verify that the transaction is valid and that one of the group members has signed the message. They cannot tell who signed the transaction, which makes Ring Signatures great for private transactions.
+En el contexto de las criptomonedas, el creador de una firma anular puede tomar un grupo de llaves públicas, crear una transacción y firmarla utilizando su llave privada. Los verificadores, en este caso los nodos de la red, pueden verificar que la transacción es válida y que un miembro del grupo la firmó, pero sin poder determinar quién. Esto hace de las firmas anulares una gran herramienta para llevar a cabo transacciones privadas.
 
-Monero is the most notable cryptocurrency making use of Ring Signatures which are part of the CryptoNote protocol which Monero is built on. The CryptoNote protocol has been build upon and one of the additions is the RingCT protocol. It is a change to the ring signature scheme which does not only conceal the sender of a transaction but also the transferred amount.
+Monero es la cripto más conocida que hace uso de las firmas anulares que forman parte del protocolo CryptoNote, el mismo utilizado por esta divisa. El protocolo CryptoNote se ha ido extendiendo con el tiempo. Una adición importante es la del protocolo RingCT, un cambio en el esquema de la firma anular que no solo esconde la identidad del remitente de la transacción sino también la cantidad transferida.
 
-### Zero-Knowledge Proofs
+### Pruebas de cero conocimiento
 
-Zero-Knowledge Proofs (zk-Proofs) were known long before blockchain technology emerged but with distributed ledgers, a whole new set of possible use-cases came around.
+Las pruebas de cero conocimiento (zk-proofs) se conocían desde antes de la emergencia de la tecnología blockchain, pero con la invención de los libros contables distribuidos surgió en torno a ellas todo un rango de posibilidades de uso.
 
-Simply speaking, a Zero Knowledge Proof lets you prove to a verifier that you know something, without revealing that knowledge. Here is an intuitive, non-digital example of what this might look like. A seeing person is the prover, a blindfolded person is the verifier, and there are two balls of different color. 
+En resumen, una prueba de cero conocimiento permite al usuario demostrarle a un verificador que cuenta con cierta información sin tener que revelársela. Un ejemplo intuitivo y no digital de cómo puede lucir este modelo puede crearse visualizando a una persona vidente (como probador), una persona con los ojos vendados (como verificador) y dos bolas de colores distintos.
 
-The seeing person (prover) wants to convince the blindfolded person (verifier) that the two balls are of different colors, without revealing the colors. They sit down at a table and the blind person shows the prover one of the balls. The blind person continues to put both balls under the table and chooses to show one ball in a second round - either the same one as before or the other one. If he chooses to show the same ball, the prover knows because he sees the same color and he tells the blind person. If the blind person were to show the other ball, the prover could tell with certainty that the verifier (blind person) switched the balls under the table
+La persona vidente (el probador) quiere convencer a la persona invidente (el verificador) de que las bolas son de distintos colores, pero sin revelarle los colores. Ambos se sientan en una mesa y la persona invidente le muestra al probador una de las bolas. La persona invidente vuelve a esconder las bolas y revela una por segunda vez, ya sea la misma bola o la segunda. Si muestra la misma bola, el probador lo sabe por el color y le transmite esta información a la persona invidente. Si la persona invidente muestra la otra bola, el probador puede saber con confianza que que el verificador (la persona invidente) cambió las bolas debajo de la mesa.
 
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_D.jpg)
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_M.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_zkproof_D.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ES_zkproof_M.jpg)
 
-In the second round, the prover would have a fifty-fifty chance of getting the right answer if they had to guess. They would have to guess in case the claim that he is trying to prove (the balls are of a different color) was false. At this point, the blind person cannot be sure if the claim is correct, or if the prover got lucky.
+En la segunda ronda, el probador tiene una oportunidad del 50% de adivinar si tuviera que hacerlo. Tendría que adivinar en caso de que la aseveración que busca comprobar (que las bolas son de diferentes colores) fuera falsa. En este momento de la prueba, la persona invidente no puede estar segura de si la aseveración es correcta o si el probador tuvo suerte.
 
-If they repeat the game several times, the chance of getting the answer right every time through guessing decreases exponentially. After just ten rounds of the game, the chance of calling the right ball every time through pure luck has decreased to 1 in 1024 (1 / 2^10). The blind person can be pretty sure by now, that the two balls are of different colors although the prover has not shared any information about the colors themselves.
+Si el juego se repite varias veces, la probabilidad de adivinar correctamente todas las veces disminuye exponencialmente. Tras solo diez rondas del juego, la probabilidad de adivinar la bola correcta se reduce a 1 de 1021 (1/2^10). La persona invidente puede entonces estar bastante segura de que las bolas son de colores distintos a pesar de que el probador no ha compartido ninguna información sobre los colores en sí.
 
-The idea of using Zero-Knowledge Proofs for cryptocurrency transactions is the following: You construct a proof that the transaction you want to send would be considered valid by a verifying node without revealing any of the actual transaction data. This allows the sender, receiver, and the amount to remain private. Another use-case that is perfect for the application of zk-Proofs is identity verification. E.g. you can prove to an entity that you are of a certain age without revealing any personal data like your DOB. Horizen uses zkSNARKs for it's shielded transactions. zkSNARKs are a special type of Zero-Knowledge Proofs, namely _Zero-Knowledge Succinct Non-interactive ARguments of Knowledge_.
+El objetivo de utilizar pruebas de cero conocimiento en transacciones criptomonetarias es el siguiente: Puede construirse una prueba de que la transacción que el usuario quiere realizar será considerada válida por un nodo verificador sin revelar ningún dato sobre la transacción en sí. Esto permite que el remitente, receptor y la cantidad se mantengan privados.
 
- - Succinct refers to the proofs being short in the sense of easy to compute and verify.
- - Non-interactive means that the prover and verifier don't have to be online at the same time. With the ball-example above, prover and verifier have to go back and forth several times before the verifier actually has proof of the claim. With non-interactive proofs, the prover can construct the proof entirely on his own without the need for communication in the process.
- - Arguments of knowledge describes the proof being computationally sound, i.e. no adversary can construct a false proof even if he has access to huge computational resources.
- - To use private transactions with Horizen, you will use a different address type. In your wallet, you can either generate t-Addresses (transparent Addresses) or z-Addresses (shielded Addresses). When you sent funds to a z-Address, the amount and sender are recorded on the blockchain, but not the receiving address. If you forward the funds to a second z-Address no information about the transaction gets recorded, neither the sender, receiver nor the amount. If you want to try this feature, you can download our Flagship App Sphere by Horizen (Link to wallet download). Make sure to activate full mode in the settings otherwise, you won't be able to generate z-Addresses.
+Otro caso donde resulta perfecta la aplicación de pruebas de cero conocimiento es en la verificación de identidades; un usuario, por ejemplo, podría comprobarle a una entidad que tiene una edad determinada sin revelar datos personales como su fecha de nacimiento.
 
-### Summary
+Horizen hace uso de algo llamado zkSNARK para sus transacciones protegidas. Los zkSNARK, o argumentos de conocimiento sucintos no interactivos de cero conocimiento  (zero-knowledge succinct non-interactive arguments of knowledge) son una especie de prueba de cero conocimiento.
 
-There are many ways to reclaim your privacy on a public blockchain. The approaches like Change Addresses and Coin Mixers don't provide strong privacy, but they help make it harder to trace transactions to their origin and link real-world identities to addresses on the blockchain. Ring Signatures and Zero-Knowledge Proofs are more advanced concepts, that actually allow you to transact entirely private, even on fully open and public blockchains.
+ - Sucinto se refiere al hecho de que las pruebas son cortas (pueden calcularse y verificarse fácilmente).
+ - No interactivos quiere decir que el probador y verificador no tienen que estar en línea al mismo tiempo. Con ejemplo de las bolas de color que utilizamos anteriormente, el probador y verificador deben realizar la prueba varias veces antes de que el verificador logre obtener una prueba de la declaración. En el caso de las pruebas no interactivas, el probador es capaz de construir la prueba por sí solo sin necesidad de comunicarse con el verificador durante el proceso.
+ - Argumento de conocimiento describe que la prueba se hace de manera computacionalmente sólida, es decir, ningún adversario puede construir pruebas falsas aun cuando tiene acceso a una gran cantidad de recursos computacionales.
+ - Para hacer transacciones privadas con Horizen, el usuario utiliza un tipo de dirección diferente. En su billetera, este tiene la opción de generar direcciones T (direcciones transparentes) o direcciones Z (direcciones protegidas). Al enviar fondos a una dirección Z, la cantidad y el remitente se registran en la cadena de bloques, pero no la dirección del receptor. Si los fondos de reenvían a una segunda dirección Z, no se registra ninguna información sobre la transacción; ni el remitente, receptor o cantidad se revelan. Si quiere poner a prueba esta característica, descargue nuestra aplicación, Sphere by Horizen. Asegúrese de activar el modo completo en la sección de ajustes, de otra manera, no será capaz de generar direcciones Z.
+
+### Resumen
+
+El usuario cuenta con muchas maneras de recuperar su privacidad en una cadena de bloques pública. Acercamientos como los de direcciones de cambio y mezcladores de moneda no aseguran mucha privacidad, pero sí hacen más difícil rastrear el origen de una transacción y relacionar las direcciones en la cadena de bloques con identidades personales. Los conceptos de firmas anulares y pruebas de cero conocimiento son técnicas más avanzadas que permiten al usuario realizar transacciones completamente privadas, incluso en cadenas de bloques abiertas y públicas.

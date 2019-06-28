@@ -1,80 +1,86 @@
 ---
 layout: post
 type: article
-title: "Guaranteed Execution with Smart Contracts"
-description: "Cryptocurrencies are sometimes referred to as programmable money. Smart Contracts allow this programmability."
+title: "Ejecución garantizada con contratos inteligentes"
+description: "Las criptomonedas a veces se denominan dinero programable. Los contratos inteligentes permiten esta programabilidad."
 permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
-chapter: "What is a Blockchain?"
+chapter: "¿Qué es una cadena de bloques?"
 further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 
-We have looked at blockchain in two different ways. First as a data structure and second as a protocol to transfer value. For the last article of this chapter about what a blockchain is we want to talk about smart contracts. Besides AI, IoT, and blockchain, smart contracts have been one of the hottest topics over the last two years in the tech world. They are software on the blockchain.
+Nos hemos acercado a la tecnología blockchain desde dos perspectivas. Primero como una estructura de datos y segundo como un protocolo para transferir valor. En el último artículo de este capítulo sobre las cadenas de bloques hablaremos de contratos inteligentes. Junto con la inteligencia artificial, el internet de las cosas y la blockchain, los contratos inteligentes han sido uno de los temas más debatidos del mundo tecnológico. En resumen, son un tipo de software en la cadena de bloques. 
 
-A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to an agreement. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
+Una cadena de bloques es capaz de contener no solo información simple como transacciones, sino también pequeños programas llamados contratos inteligentes (smart contracts), los cuales son en esencia un software más alojado en la cadena. En general, un contrato es un acuerdo entre dos partes que las une en un acuerdo. En este caso, inteligente se refiere a la ejecución automática de estos contratos digitales, pues consisten de una serie de órdenes “if, then” (si, entonces) escritas y hechas valer por el código. El contrato se ejecuta de manera automática en cuanto sus condiciones se cumplen. 
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_smart_contract_M.jpg)
 
-### The Promise of Smart Contracts
+### La promesa de los contratos inteligentes
 
-Smart contracts promise to eliminate the need for middlemen, such as lawyers or notaries, and thereby reduce the cost of transactions. Most importantly they save participants time by disposing of middlemen. Smart contracts could not only govern the transfer of digital assets such as cryptocurrencies in the future, but they could govern everything of value, such as equity bonds and physical property (like real estate).
+Estos contratos prometen eliminar la necesidad de intermediarios, como abogados o notarios, para así reducir no solo el costo de muchas transacciones sino también el tiempo necesario para realizarlas.
 
-For example, a landlord and a tenant could use a smart contract to govern the rental agreement. The smart contract could automatically lock the tenant out of the apartment if the tenant fails to pay rent. The if-then statement, in this case, would look something like:
+En teoría, un contrato inteligente podría determinar la transferencia de activos digitales como criptomonedas, pero podría también aplicar a cualquier objeto de valor, como acciones, bonos o bienes físicos (como bienes raíces, por ejemplo).
 
-*If the contract address receives amount X by the 3rd of each month from address Y, grant Y access to the apartment. If payment fails for 2 consecutive months, revoke the right of Y to unlock the apartment.*
+En un caso hipotético, el propietario y arrendatario de un inmueble podrían utilizar un contrato inteligente para regir su acuerdo de arrendamiento. Por ejemplo, el contrato podría cerrar los candados de la casa automáticamente si la renta no se pagara a tiempo. En este caso, la declaración “if, then”, luciría algo así:
 
-Another potential use case for smart contracts would be a decentralized eBay. One could construct a smart contract with an expiry date defining the time period of the auction and a starting bid. The highest bidder would receive the item at the end of the auction period in exchange for their money. The losing bidders would be automatically refunded by the smart contract. Such a decentralized version of eBay would be considered a dApp or decentralized App.
+*Si la dirección del contrato recibe X cantidad antes del tercer día de cada mes de la cuenta con la dirección Y, entonces darle a Y acceso al departamento. Si esta cantidad no se recibe durante dos meses consecutivos, entonces negarle a Y acceso al departamento.*
+
+Otro posible uso de los contratos inteligentes sería el de una especie de eBay descentralizada. El vendedor podría elaborar un contrato con una fecha de expiración que definiera la duración de la subasta y el monto inicial. El interesado recibiría su compra al final de la subasta a cambio del dinero ofrecido. Por su parte, los demás postores recibirán de manera automática una devolución de parte del contrato inteligente. Dicha versión descentralizada de eBay se consideraría un app descentralizada, o dApp.
 
 ### dApps
 
-A decentralized application or dApp is a more sophisticated use case for smart contracts. Most apps and websites use API's (application programming interfaces) to communicate with their underlying database. A well-written API makes it easier for developers to offer a service by defining the communication between the various components of a system such as the operating system, a database or a software library.
+Una aplicación descentralizada (dApp) es un argumento más sofisticado a favor de los contratos inteligentes. La mayoría las apps y sitios webs utilizan API (application programming interfaces) para comunicarse con su base de datos subyacente. Un API bien escrito le hace más a un desarrollador ofrecer un servicio al definir la comunicación entre los componentes de un sistema, como el sistema operativo, base de datos o biblioteca de software.
 
-Dapps use smart contracts to communicate with the underlying blockchain. Imagine a future where smart contract libraries with a large number of template contracts that can be used for various purposes. We are already seeing a trend towards this scenario with smart contract platforms such as Ethereum.
+Las dApps hacen uso de contratos inteligentes para comunicarse con su cadena de bloques. En un futuro, podrían surgir receptáculos de plantillas de contratos inteligentes para diversos fines. Este futuro ya está empezando a materializarse gracias a plataformas de contratos inteligentes como Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_D.jpg)
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_M.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_dapp_D.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_dapp_M.jpg)
 
-### Smart Contract Platform
+### Plataformas de contratos inteligentes
 
-There are many smart contract platforms out there besides Ethereum, which is the most popular one today and has the most developer activity on top of it. Other platforms include Lisk, NEM and Hyperledger, a modified version of Ethereum designed for corporate use.
+Hay muchas plataformas para contratos inteligentes además de Ethereum, sin duda la más popular y utilizada hoy en día. Algunas otras incluyen Lisk, NEM y Hyperledger, una versión modificada de Ethereum diseñada para uso empresarial.
 
-Few people know that Bitcoin also allows the deployment of smart contracts. Bitcoin has a built-in programming language called Script. It is a rudimentary programming language compared to Solidity, which is used to write smart contracts on Ethereum. Solidity is a Turing-complete programming language, that enables more complex contracts compared to Bitcoins Script. The cost of being more complex comes at being harder to write, analyze and secure.
+Se encuentran también los pocos que saben que Bitcoin permite también la creación de contratos inteligentes. El lenguaje de programación nativo de Bitcoin, Script, es un lenguaje de programación rudimentario comparable a Solidity, el lenguaje empleado para redactar contratos inteligentes en Ethereum. Solidity es un lenguaje de programación Turing completo, el cual hace posibles contratos más complejos que Script. Obviamente, esta complejidad significa también que son más difíciles de escribir, analizar y asegurar.
 
-Security in the context of smart contracts means considering every possible way in which a contract could execute and to account for each of these scenarios. Smart contracts on Bitcoin written in Script allow for less complexity compared to ones written in Solidity on Ethereum. This limits their potential use cases but makes the possible states of the contract (or program) easier to enumerate, examine, and account for resulting in easier to secure contracts.
+En el caso de los contratos inteligentes, la seguridad implica considerar todas las maneras en las que el contrato podría ejecutarse, así como asegurarse de cubrir todas las posibles consecuencias. Los contratos seguros de Bitcoin escritos en Script permiten menor complejidad a comparación de los escritos en Solidity para Ethereum; esto limita los casos en los que pueden utilizarse, pero hace más fácil enumerar, examinar y rendir cuentas, resultando en contratos más fáciles de asegurar.
 
-It is interesting to note, that the most commonly used smart contract templates on Ethereum, namely the ERC20 and ERC721 standard, do not require Turing completeness. Almost all tokens deployed on the Ethereum blockchain use one of these two standards, as they allow for easier integration with different wallets and exchanges.
+Vale la pena mencionar que las plantillas de contratos inteligentes más usados en Ethereum, en especial en el estándar ERC20 y ERC721 no requieren ser sistemas Turing completos. Casi todos los tokens creados en la cadena de bloques de Ethereum emplean uno de estos dos estándares, pues son más fáciles de integrar con distintas billeteras y centros cambiarios.
 
-### Are They Really Trustless?
+### ¿En serio es un sistema libre de intermediarios?
 
-The promise of smart contracts is to allow trustless execution with automatically enforced rules. But can they actually live up to this promise?
+La promesa de los contratos inteligentes es ejecutarse sin ningún tipo de intermediario (trustless) por medio de un reglamento aplicado automáticamente. Queda por verse si realmente pueden cumplir con este promesa.
 
-Almost all types of assets are subject to the local jurisdiction you are in. This means a contract, no matter if smart or not, requires additional trust in the jurisdiction besides the trust put in the contract itself. Possession in a smart contract does not equal possession in the real world. Just as with regular contracts, the terms can be subject to changing circumstances and interpretation thereof. An illegal contract is not legally binding.
+Casi cualquier tipo de activo queda sujeto a la jurisdicción local del usuario. Esto quiere decir que cualquier contrato, inteligente o no, requiere que el usuario confíe en esta jurisdicción además de en el contrato en sí. La posesión de un contrato inteligente no significa posesión en el mundo real. Al igual que con un contrato regular, las condiciones quedan sujetas a la interpretación y a circunstancias cambiantes. Un contrato ilegal, por ejemplo, no tiene validez alguna. 
 
-One must consider that writing traditional contracts takes years of studying the framework regulating the different areas of contractual law. Writing smart contracts is even more difficult, as one needs to understand the technical dimension behind them. We will need to see an entirely new generation of tech-savvy lawyers emerge to enable a meaningful adoption of legally binding smart contracts.
+El usuario debe considerar que la aptitud para escribir contratos tradicionales surge de años de estudiar el marco legal que regula los ámbitos cubiertos por el contrato. Redactar un contrato inteligente resulta aún más complicado, pues debe considerarse el aspecto técnico del que dependen. Será necesaria una nueva generación de abogados letrados en el mundo digital para que se les pueda dar un uso más extendido a contratos inteligentes con validez legal.
 
-There is another major challenge to overcome. The digital world needs to learn about real-world events in order for a smart contract to function and execute. An oracle is an entity submitting data to a blockchain or smart contract. The trust problem is referred to as the Oracle Problem. Imagine a smart contract running a betting platform in a trustless environment. An oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because an Oracle determines what a smart contract sees, it also controls what it does.
+Hay incluso un obstáculo más por afrontar. El ámbito digital del contrato debe mantenerse al tanto de eventos reales para que los contratos inteligentes puedan funcionar y ejecutarse. Se le llama oráculo a una entidad que introduce este tipo de datos a una cadena de bloques o contacto inteligente. Al problema que surge de la necesidad de depositar confianza en esta entidad se le denomina problema del oráculo. 
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_D.jpg)
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_M.jpg)
+Si hay un contrato inteligente ejecutando una plataforma de apuestas en un ambiente sin intermediarios, es deber del oráculo introducir el resultado del partido para que el contrato pueda distribuirles los fondos a los ganadores. Ya que el oráculo determina lo que el contrato ve, también controla lo que hace.
 
-Centralized Oracles are not considered a solution to the Oracle Problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. No matter if centralized or decentralized, an oracle will always come at a cost. Acting honestly must always be the most profitable strategy and therefore strong incentives must be in place. This is another problem that needs game theoretic evaluation and incentive design, just like the incentives for miners that we talked about in our last article.
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_oracle_D.jpg)
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/ES_oracle_M.jpg)
 
-Projects such as Augur and Gnosis are working on decentralized solutions to the Oracle Problem via prediction markets. Before these prediction markets gain serious adoption they will remain easy to game. And since prediction markets have the potential to influence the outcome of an event as Dan Finley suggests it remains to be seen if they can become a solution.
+Los oráculos centralizados no se consideran una solución al problema del oráculo. Sin importar la implementación práctica, los incentivos para introducir al sistema datos falsos pueden superar los beneficios de actuar con honradez en algunas ocasiones. Sea o no centralizado, un oráculo siempre tiene un costo. Proceder de manera honesta debe siempre ser la estrategia más provechosa, por lo que debe haber incentivos fuertes. Este es otro de los problemas que requiere de la evaluación de la teoría de juegos y de un diseño que incluya incentivos similares a los que reciben los mineros de una cadena.
+
+Algunos proyectos como Augur y Gnosis están buscando encontrar soluciones descentralizadas al problema del oráculo a través de mercado predictivo. Antes de que dichos mercados se adopten de manera general, sin embargo, permanecerán fáciles de engañar. Además, ya que los mercados predictivos tienen el potencial de influenciar el resultado de un evento, es incierto aún si pueden convertirse en una solución; en palabras del desarrollador Dan Finlay:
 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maybe/Theory: Since decentralized prediction markets can influence the incentives around an event’s probability, they are never just prediction tools, and should always be treated as incentivization tools.</p>&mdash; Dan Finlay (@danfinlay) <a href="https://twitter.com/danfinlay/status/1089550845698396167?ref_src=twsrc%5Etfw">January 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-Before solving the problem of creating legally binding smart contracts and the Oracle Problem, the use of smart contracts will be limited to small experimental fields with low risk involved. An example of a potential use case would be in-game payments triggered by certain achievements that are objectively verifiable by code.
+*Teoría: Ya que los mercados predictivos descentralizados pueden influenciar los incentivos de la probabilidad de un evento, nunca son solo herramientas de predicción, por lo que deben tratarse siempre como herramientas de incentivación*
 
-As Jimmy Song puts it: "A smart contract that trusts a third party removes the killer feature of trustlessness." There is a long way to go before we will see the broad use of trustless smart contracts across different domains, but they are most definitely a concept worth exploring.
+Antes de verse resueltos los problemas de crear contratos inteligentes con validez legal y el llamado problema del oráculo, el uso de este tipo de documentos se verá limitado a ámbitos experimentales donde las posibles pérdidas sean bajas. Un posible uso sería el de recompensas entregadas dentro de un videojuego, donde el pago se haría al usuario al ser activado por un logro objetivamente verificable en el código del juego.
 
-### Summary
+En palabras de Jimmy Song, “Un contrato inteligente que confía en un tercero deshace la indispensable característica de no intermediarios”. Falta mucho aún antes de que el consejo de una empresa tenga la confianza de usar un contrato inteligente en diferentes ámbitos, pero son sin duda un concepto que vale la pena explorar.
 
-You should have a good idea of what a blockchain is. We looked at it as a data structure and as a set of rules. A blockchain can store data reliably due to the distributed nature of the ledger. Anybody can participate in the network without any permission or registration as long as he follows the rules of the protocol. This makes public blockchains censorship-resistant, permissionless, trustless, and valuable. It can not only store pieces of data but also programs running in a distributed fashion.  
-Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and safe time. They will most likely foster a closer connection between software developers and the judicial system. Before we can see widespread adoption we have to overcome some hurdles. Regulators have to create a framework to allow deployment of legally binding smart contracts and decentralized oracles need to be developed.
+### Resumen
 
-This was the last article in the chapter on what a blockchain is and what it can do. In the next chapter, we will take a look at how blockchains work.
+Habiendo completado esta lección, ya debe tener una buena idea de la naturaleza de una cadena de bloques, pues la hemos como estructura de datos y como un conjunto de reglas. La cadena puede almacenar información confiablemente dada la naturaleza distribuida del libro contable. Todos pueden participar en la red sin permiso o registro alguno mientras se apeguen a las reglas del protocolo. Así, se logra que las cadenas de bloques sean resistentes a la censura, sin permisos, libres de intermediarios y, sobre todo, muy valiosas. Una blockchain puede no solo almacenar pedazos de información sino también programas ejecutados de manera distribuida.
 
+Los contactos inteligentes pueden asegurar ejecución objetiva de un contrato a partir de términos previamente acordados y hechos valer por el código mismo. Poseen el potencial de eliminar intermediarios y así disminuir costos y pérdidas de tiempo. Asimismo, es probable que incentiven una relación más estrecha entre desarrolladores de software y el sistema judicial. Habrá que superar varios obstáculos para que la tecnología se adopte de manera general, si embargo. Los reguladores tendrán que crear un marco que permita la implementación de contratos inteligentes con validez y tendrán que desarrollarse oráculos descentralizados.
+
+Este fue el último artículo en nuestro capítulo sobre la cadena de bloques y sus capacidades. En el siguiente capítulo, veremos a fondo cómo es que funcionan.

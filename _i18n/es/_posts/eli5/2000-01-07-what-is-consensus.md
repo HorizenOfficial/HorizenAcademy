@@ -12,7 +12,7 @@ further_reads: [consensus_for_kids]
     <tr>
         <td class="icon"><img src="/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
         <td>
-            La <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">cadena de bloques</a> registra todas las transferencias de dinero. Si el usuario cuenta con solo un ZEN y crea dos transacciones simultáneas gastando la misma moneda, es deber de la red determinar cuál de las dos sucedió primero y por ende es válida.
+            La <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">cadena de bloques</a> registra todas las transferencias de dinero. Si el usuario cuenta con solo un ZEN y crea dos transacciones simultáneas gastando la misma moneda, es deber de la red determinar cuál de las dos sucedió primero y por ende la válida.
         </td>
     </tr>
 </table> 

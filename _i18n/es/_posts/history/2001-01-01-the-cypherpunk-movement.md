@@ -24,7 +24,7 @@ El Dr. David Chaum empezó a escribir sobre temas como el dinero digital anónim
 
 ### Los Cypherpunks
 
-No fue hasta 1992 cuando un grupo de criptógrafos en San Francisco comenzó a reunirse frecuentemente para discutir su trabajo e ideas afines. Fueron ellos quienes cimentaron las bases de años de investigación criptográfica por venir. Además de sus reuniones recurrentes, empezaron también la lista de correo Cypherpunk, en la que discutieron ideas varias, incluyendo las que detonaron el nacimiento de Bitcoin. A finales de 1992, Eric Hughes, uno de los primeros Cypherpunks; escribió ["A Cypherpunks's Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) exponiendo la visión e ideales del movimiento.
+No fue hasta 1992 cuando un grupo de criptógrafos en San Francisco comenzó a reunirse frecuentemente para discutir su trabajo e ideas afines. Fueron ellos quienes cimentaron las bases de años de investigación criptográfica por venir. Además de sus reuniones recurrentes, empezaron también la lista de correo Cypherpunk, en la que discutieron ideas varias, incluyendo las que detonaron el nacimiento de Bitcoin. A finales de 1992, Eric Hughes, uno de los primeros Cypherpunks; escribió ["A Cypherpunk’s Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) exponiendo la visión e ideales del movimiento.
 
 _Nota: Lo exhortamos a leer el manifiesto, pues su contenido y postulados continúan siendo extremadamente relevantes hoy en día. La lectura toma solo unos pocos minutos y captura la admirable visión que tuvieron los primeros cypherpunks en una época en la que muchos no podían ni concebir aún lo que era computadora._ 
 

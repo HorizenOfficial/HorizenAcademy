@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "A Protocol to Transfer Value"
+title: "La cadena como protocolo para transferir valor"
 description: "Comparamos la cadena de bloques como protocolo para transferir dinero con el internet como protocolo para transferir información."
 permalink: /technology/beginner/a-protocol-to-transfer-value/
 topic: technology
@@ -28,7 +28,7 @@ Las firmas también funcionan de manera diferente a lo esperado, pero los aspect
 
 ### Resumen
 
-Es posible considerar al sistema de correos como un protocolo para transferir bienes físicos, mientras que el internet, con su protocolo TCP/IP subyacente, permite al usuario transferir información. La tecnología blockchain y criptomonedas le dan al usuario un protocolo para poder transferir valor sin intermediarios. Discutiremos el aspecto de una transacción y los datos necesarios para completarla en nuestro [artículo dedicado a las transacciones.]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
+Es posible considerar al sistema de correos como un protocolo para transferir bienes físicos, mientras que el internet, con su protocolo TCP/IP subyacente, permite al usuario transferir información. La tecnología blockchain y criptomonedas le dan al usuario un protocolo para poder transferir valor sin intermediarios. Discutiremos el aspecto de una transacción y los datos necesarios para completarla en nuestro [artículo dedicado a las transacciones]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
 
 Por ahora, sin embargo, es momento de descubrir [cómo funciona una cadena de bloques]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
 

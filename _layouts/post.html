@@ -16,7 +16,7 @@ layout: default
 
     {% if page.further_reads %}
     <div class="further-reading-wrapper">
-        <h3>Further Reading</h3>
+        <h3>{% t post.further-reading %}</h3>
 
         {% for further_read in page.further_reads %}
             {% include further_reads/{{ further_read }}.md %}

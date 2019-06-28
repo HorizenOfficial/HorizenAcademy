@@ -38,7 +38,7 @@ Una **transacción** es un mensaje estandarizado para la red. El mensaje incluye
 
 Una firma digital funciona de manera similar a la autorización de transacciones en la vida real utilizando tu firma física. Aun con las supercomputadoras de la actualidad, no es viable intentar falsificar este tipo de firma digital, por lo que la criptografía de llave pública es uno de los medios de encriptación más seguros actualmente disponibles.
 
-Todo esto sería difícil de hacer de manera manual y requeriría una buena cantidad de conocimientos. Por suerte, existen las billeteras, las cuales realizan todo el proceso sin necesidad de que el usuario entienda lo entienda. Las billeteras generan y administran el par de llaves (pública y privada) y hacen lo necesario para encriptar y desencriptar. Es importante recalcar que la llave privada del usuario autoriza el gasto de sus fondos. Mantenerla segura es de suma importancia. Perder las llaves es perder los fondos asociados, y una vez perdidas no pueden recuperarse.
+Todo esto sería difícil de hacer de manera manual y requeriría una buena cantidad de conocimientos. Por suerte, existen las billeteras, las cuales realizan todo el proceso sin necesidad de que el usuario lo entienda. Las billeteras generan y administran el par de llaves (pública y privada) y hacen lo necesario para encriptar y desencriptar. Es importante recalcar que la llave privada del usuario autoriza el gasto de sus fondos. Mantenerla segura es de suma importancia. Perder las llaves es perder los fondos asociados, y una vez perdidas no pueden recuperarse.
 
 ### Resumen
 

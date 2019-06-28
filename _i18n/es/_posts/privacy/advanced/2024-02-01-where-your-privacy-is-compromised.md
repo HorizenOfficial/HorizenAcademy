@@ -1,32 +1,32 @@
 ---
 layout: post
 type: intro
-title: "Where Your Privacy is Compromised?"
-description: "In this chapter we show you how your online privacy is compromised on your phone as well as on your computer."
+title: "¿Dónde se compromete la privacidad del usuario?"
+description: "En este capítulo, le mostramos cómo se compromete su privacidad en línea en su teléfono y en su computadora."
 permalink: /privacy/advanced/where-your-privacy-is-compromised/
 topic: privacy
 level: advanced
-chapter: "Where Your Privacy is Compromised?"
+chapter: "¿Dónde se compromete la privacidad del usuario?"
 ---
 
-The amount of time people spend using their computers and phones is incredible! Not only do you use your devices for several hours a day on average, but you also produce a large amount of data during that time.
+La cantidad de tiempo que pasamos en nuestras computadoras y celulares es increíble. No solo utilizamos estos dispositivos varias horas al día, sino que producimos enormes cantidades de dato durante ese tiempo.
 
-Much of this data is rather sensitive. Most people wouldn't want to give a stranger access to their smartphone with private conversations, pictures, and contacts. Yet, few people take measures against sharing all this sensitive data with tech giants like Google, Apple or Facebook. Not only do those tech companies collect every piece of information on you they can get their hands on, but so do governments around the world, some more, some less.
+Muchos de estos datos son bastante sensibles. A cualquiera le desagradaría que un desconocido tuviera acceso a su smartphone repleto de conversaciones privadas, fotos y contactos personales. Sin embargo, pocos usuarios emplean medidas para proteger esta misma información de gigantes tecnológicos como Google, Apple o Facebook. Y no son solo empresas como estas quienes recopilan todo dato posible sobre el usuario, lo hacen también muchos gobiernos a mayor o menor medida.
 
 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">
-            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/phone.svg" alt="Your Phone" />
+            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/phone.svg" alt="Su teléfono" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Your Phone</h5>
+        <h5 class="intro-article-title">Su teléfono</h5>
         <p class="mb-1">
-            This article shows you where your phone is leaking data and what you can do to prevent that.
+            En este artículo analizamos qué partes del dispositivo móvil del usuario liberan datos sensibles y cómo impedirlo.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -34,16 +34,16 @@ Much of this data is rather sensitive. Most people wouldn't want to give a stran
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}">
-            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/computer.svg" alt="Your Computer" />
+            <img src="/assets/post_files/privacy/advanced/where-your-privacy-is-compromised/computer.svg" alt="Su computadora" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Your Computer</h5>
+        <h5 class="intro-article-title">Su computadora</h5>
         <p class="mb-1">
-            The second device most people use on a daily basis is their computer. Here we look at steps you can take to protect it.
+            Después del celular, la computadora es el dispositivo más utilizado por el usuario promedio. Veremos qué medidas pueden tomarse para protegerla.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-03-your-computer %}">Leer el artículo</a>
         </p>
     </div>
 </div>

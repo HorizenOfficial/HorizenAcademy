@@ -1,8 +1,8 @@
 ---
 layout: post
 type: article
-title: "Messaging"
-description: "Instant messaging is the most used forms of communication today. You should pick a messenger that respects your privacy."
+title: "Mensajería"
+description: "La mensajería instantánea es uno de los medios de comunicación eminentes de la actualidad, razón suficiente para que el usuario elija una aplicación de mensajería que respete su privacidad."
 permalink: /privacy/beginner/messaging/
 topic: privacy
 level: beginner
@@ -40,7 +40,7 @@ Puede leer más a detalle sobre ZenChat en nuestras secciones sobre Horizen en l
 
 Aunque su creador lo considera un experimento, Ricochet utiliza la red de Tor para conectarse con los contactos del usuario sin depender de servicios de mensajería. Ricochet crea un servicio oculto para para permitir interacciones sin revelar ubicación o direcciones IP. En vez de un nombre, el usuario recibe una dirección del tipo “ricochet:rs7ce36ksk24ogfw”. Otros usuarios de Ricochet pueden utilizar esta dirección para enviar una solicitud de contacto y pedirle a ese usuario formar parte de su lista de contactos. Los usuarios pueden ver quién se encuentra en línea y mandarles mensajes y, próximamente, archivos. La lista de contactos la conoce solo la computadora del usuario, y nunca se revela a ningún servidor o rastreador de tráfico. Toda la información se encripta de punto a punto y se anonimiza, por lo que solo el receptor del mensaje puede leerlo, y nadie sabe adónde va ni de dónde viene.
 
-En cuanto a una selección más convencional de aplicaciones de mensajería, las más destacables son aquellas con servicios para conservar la privacidad como Signal, Threema y Wire. Securemessagingapps.com incluye una buena comparación de estas aplicaciones con otras de uso común como Telegram, Skype, Whatsapp, Messenger, etc. Le recomendamos visitar el sitio y comparar usted mismo las características de estos distintos servicios.
+En cuanto a una selección más convencional de aplicaciones de mensajería, las más destacables son aquellas con servicios para conservar la privacidad como Signal, Threema y Wire. Securemessagingapps.com incluye una buena comparativa de estas aplicaciones con otras de uso común como Telegram, Skype, Whatsapp, Messenger, etc. Le recomendamos visitar el sitio y comparar usted mismo las características de estos distintos servicios.
 
 ![Ricochet](/assets/post_files/privacy/beginner/messaging/ricochet.png)
 

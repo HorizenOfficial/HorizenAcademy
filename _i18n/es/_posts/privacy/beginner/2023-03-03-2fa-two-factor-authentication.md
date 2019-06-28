@@ -1,12 +1,12 @@
 ---
 layout: post
 type: article
-title: "2FA - Two-factor Authentication"
-description: "This article explains another best practice that we encourage you to use: 2-Factor Authentication or 2FA."
+title: "A2F - Autenticación de dos factores"
+description: "Otra mejor práctica que exhortamos al usuario a utilizar es la autenticación de dos factores, conocida también como AF2 (two-factor authentication; 2FA). Este artículo habla de ella y su importancia."
 permalink: /privacy/beginner/2fa-two-factor-authentication/
 topic: privacy
 level: beginner
-chapter: "Best Practices"
+chapter: "Mejores prácticas"
 further_reads: [how_to_set_up_2fa_using_google_authenticator]
 ---
 

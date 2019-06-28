@@ -47,13 +47,13 @@ El argumento “No tengo nada que ocultar” propone que acciones invasivas como
     <tr>
         <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Las redes sociales acumulan muchísima información"></td>
         <td>
-            <strong>Las redes sociales acumulan muchísima información</strong>: Las páginas a las que les un usuario les da like o las aplicaciones que utiliza en redes sociales determinan el tipo de publicidad que verá el usuario. Asimismo, su edad, género, ocupación y otro millar de detalles también se toman en cuenta para dirigirse más personalmente al usuario. Las redes sociales son ya la plataforma de marketing más exitosa, pues no solo pueden controlar la publicidad que muestran, sino incluso los precios a los que ofrecen sus servicios o productos.
+            <strong>Las redes sociales acumulan muchísima información</strong>: Las páginas a las que un usuario les da like o las aplicaciones que utiliza en redes sociales determinan el tipo de publicidad que verá el usuario. Asimismo, su edad, género, ocupación y otro millar de detalles también se toman en cuenta para dirigirse más personalmente al usuario. Las redes sociales son ya la plataforma de marketing más exitosa, pues no solo pueden controlar la publicidad que muestran, sino incluso los precios a los que ofrecen sus servicios o productos.
         </td>
     </tr>
     <tr>
         <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Hasta el último dato cuenta:"></td>
         <td>
-            <strong>Every little bit counts</strong>: Algunas empresas guardan la cuenta de correo electrónico del usuario, algunas otras registran la ubicación de dónde compra o come. Algunos buscadores conservan historiales de búsqueda enteros conforme se van usando. Sumada, esta información puede formar una imagen casi completa del usuario; desde quién es hasta adónde va, qué hace y con quiénes habla. Si suena escalofriante, es porque lo es.
+            <strong>Hasta el último dato cuenta:</strong>: Algunas empresas guardan la cuenta de correo electrónico del usuario, algunas otras registran la ubicación de dónde compra o come. Algunos buscadores conservan historiales de búsqueda enteros conforme se van usando. Sumada, esta información puede formar una imagen casi completa del usuario; desde quién es hasta adónde va, qué hace y con quiénes habla. Si suena escalofriante, es porque lo es.
         </td>
     </tr>
     </tbody>

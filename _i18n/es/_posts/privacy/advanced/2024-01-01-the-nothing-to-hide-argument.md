@@ -1,73 +1,73 @@
 ---
 layout: post
 type: intro
-title: 'The "Nothing to Hide" Argument'
-description: 'First we talk about why privacy is important and why the "Nothing to Hide" argument is fundamentally flawed.'
+title: 'El argumento de: "No tengo nada que ocultar"'
+description: 'Primero, hablamos sobre por qué la privacidad es importante y por qué el argumento "Si no has hecho nada malo, no tienes nada que esconder" es fundamentalmente incorrecto.'
 permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced
-chapter: "Why Privacy?"
+chapter: "¿Por qué privacidad?"
 further_reads: [im_not_an_international_drug_dealer, i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy]
 ---
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), "The nothing to hide argument states that government surveillance programs do not threaten privacy unless they uncover illegal activities and that if they do uncover illegal activities, the person committing these activities does not have the right to keep them private. Hence, a person who favours this argument may state "I've got nothing to hide" and therefore does not express opposition to government surveillance. An individual using this argument may say that a person should not worry about government or surveillance if he/she has "nothing to hide."
+Acorde a [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), El argumento "Si no has hecho nada malo, no tienes nada que esconder" propone que acciones invasivas como los programas de vigilancia en masa del gobierno no amenazan la privacidad de la persona salvo que revelen actividades ilegales, en cuyo caso la persona cometiendo dichas actividades no tendría el derecho de mantenerlas privadas. Por lo tanto, alguien a favor de este argumento puede declarar “No tengo nada que ocultar” y así no expresar oposición a la vigilancia gubernamental. De acuerdo con el argumento, quien no tenga nada que ocultar no tiene que preocuparse por ser vigilado.
 
 <table class="table table-borderless mb-4">
     <tbody>
     <tr>
         <td style="width: 65px;"></td>
         <td>
-            <h5>We think this argument is very flawed because:</h5>
+            <h5>Consideramos equivocado este argumento por las siguientes razones:</h5>
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="Privacy is not about hiding, it is about protecting"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="La privacidad no se trata de esconder, sino de proteger"></td>
         <td>
-            <strong>Privacy is not about hiding, it is about protecting</strong>: Would you give passwords to your email and other accounts to anyone? Would you allow everyone to read your social media messages? Would you love to have someone always around who eavesdrops each and every conversation of yours, see your medical records and know about your appointments with your doctor? Or let's go very trivial - why do you ever have curtains on the shady side of your house or even wear pants?
+            <strong>La privacidad no se trata de esconder, sino de proteger</strong>: Considérelo. ¿Le daría a cualquiera la contraseña de su correo electrónico y otras cuentas?, ¿dejaría que cualquiera leyera sus mensajes de redes sociales?, ¿le encantaría que alguien estuviera siempre al tanto de sus conversaciones, leyera su historial médico o lo acompañara a sus citas con el doctor?; ¿para qué usar cortinas en casa, o pantalones al salir a la calle?
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="Privacy is a fundamental human right"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="La privacidad es un derecho humano fundamental"></td>
         <td>
-            <strong>Privacy is a fundamental human right</strong>: The right to free speech and the right to assemble are the basic fundamental human rights even if you do not have anything to say or protest now. So is privacy. Think about voting, medical information, and banking information. It is obvious that you wish them to be kept private.
+            <strong>La privacidad es un derecho humano fundamental</strong>: El derecho de todos a expresarse y congregarse libremente resulta fundamental aun cuando no se está llevando a cabo una protesta. Pasa lo mismo con la privacidad. Hay cosas que, instintivamente, se quieren mantener privadas; cosas como el voto, historial médico o información bancaria.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="Lack of privacy is harmful"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="La falta de privacidad es perjudicial"></td>
         <td>
-            <strong>Lack of privacy is harmful</strong>: You might get discriminated or harassed based on your personal information or become a victim of identity theft or impersonation.
+            <strong>La falta de privacidad es perjudicial</strong>: Si los datos del usuario no están protegidos, es mucho más fácil que se le discrimine con base en sus datos personales o que se vea expuesto al robo o suplantación de identidad.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Location data is sensitive"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Los datos de ubicación pueden ser sensibles"></td>
         <td>
-            <strong>Location data is sensitive</strong>: It can determine where you live, where you work, where you shop and hang out with friends. Every modern smartphone detects home and workplace just after several days of usage.
+            <strong>Los datos de ubicación pueden ser sensibles</strong>: Estos datos pueden revelar información sobre el usuario, como por ejemplo dónde vive, trabaja, hace las compras o se reúne con amigos. Todo smartphone moderno es capaz de determinar el domicilio y lugar de trabajo de su usuario a los pocos días de uso.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Social media gathers even more"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Las redes sociales acumulan muchísima información"></td>
         <td>
-            <strong>Social media gathers even more</strong>: What you like or follow and what applications you use on social media determine what types of ads you will see. Your age, sex, occupation, job title, and every other little detail can also be taken into account for ad targeting. Social media is the best marketing platform we have seen to date. Not only do those details determine what kind of ads you see, but sometimes also what price is shown to you. Especially when you book flights your metadata determines what prices will be available.
+            <strong>Las redes sociales acumulan muchísima información</strong>: Las páginas a las que les un usuario les da like o las aplicaciones que utiliza en redes sociales determinan el tipo de publicidad que verá el usuario. Asimismo, su edad, género, ocupación y otro millar de detalles también se toman en cuenta para dirigirse más personalmente al usuario. Las redes sociales son ya la plataforma de marketing más exitosa, pues no solo pueden controlar la publicidad que muestran, sino incluso los precios a los que ofrecen sus servicios o productos.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Every little bit counts"></td>
+        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Hasta el último dato cuenta:"></td>
         <td>
-            <strong>Every little bit counts</strong>: Some companies gather emails while others locate where you go shop or eat. Some large search engines even keep your search history if you use their account. Others aggregate all the data and form a complete picture of who you are, where you go and with whom and what you do. As the great article over spreadprivacy.com says - If that feels creepy, it’s because it is.
+            <strong>Hasta el último dato cuenta</strong>: Algunas empresas guardan la cuenta de correo electrónico del usuario, algunas otras registran la ubicación de dónde compra o come. Algunos buscadores conservan historiales de búsqueda enteros conforme se van usando. Sumada, esta información puede formar una imagen casi completa del usuario; desde quién es hasta adónde va, qué hace y con quiénes habla. Si suena escalofriante, es porque lo es.
         </td>
     </tr>
     </tbody>
 </table>
 
 
-The "Nothing to hide" argument is flawed and irrelevant today. People who think they have nothing to hide essentially say that they are so harmless and uninteresting person that it means nothing for them if someone eavesdrops on their lives constantly, which, if explained in detail, will obviously be unacceptable.
+Por estas razones, el argumento “No tengo nada que ocultar” resulta tanto impreciso como irrelevante. Quienes creen que no tienen nada que ocultar están expresando que se consideran personas tan inocuas o poco interesantes que no les afecta en lo más mínimo que se les esté patrullando constantemente, lo cual, de conocer la realidad, les parecería inaceptable.
 
-Even though privacy is being invaded left and right, you still have the power to protect it in many ways. There are simple steps you can follow to regain control and dramatically increase your privacy level:
+Aunque en la actualidad la privacidad del usuario se ve atacada a diestra y siniestra, existen muchas medios que le permiten protegerla. Hay algunos pasos sencillos de tomar que le permitirán retomar el control e incrementar drásticamente su nivel de privacidad:
 
- - **Encrypt emails, messages, and calls**
- - **Change privacy settings on your devices and software**
- - **Use different, more private tools and applications**
- - **Learn more about privacy protection techniques and advanced methodologies**
+ - **Encriptar correos electrónicos, mensajes y llamadas**
+ - **Actualizar los ajustes de privacidad de dispositivos y software**
+ - **Empezar a utilizar herramientas y aplicaciones más seguras**
+ - **Aprender técnicas y metodologías avanzadas para proteger información**
 
 <hr class="mt-5 mb-5">
 
@@ -76,9 +76,8 @@ Even though privacy is being invaded left and right, you still have the power to
     <tr>
         <td style="width: 80px;"><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/privacy.svg" alt="Privacy"></td>
         <td>
-            Follow our articles in the privacy section to learn more about <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">where and how your privacy is compromised</a>, read about <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">best practices</a> and different <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">tools you can use to protect your privacy</a>.
+            Siga nuestros artículos en la sección de privacidad para obtener más información sobre <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">dónde y cómo se compromete su privacidad</a>, lea <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">las mejores prácticas</a> y las diferentes <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">herramientas que puede usar para proteger su privacidad</a>.
         </td>
     </tr>
     </tbody>
 </table>
-

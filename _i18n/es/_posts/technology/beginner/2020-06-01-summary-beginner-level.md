@@ -34,7 +34,7 @@ Los [nodos]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-el
 ![Nodes in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_D.jpg)
 ![Nodes in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_M.jpg)
 
-La llave pública del usuario equivale a su dirección en la cadena de bloques, mientras que su llave privada es la contraseña que se utilizar para acceder a los fondos que contiene. El usuario hace uso de su llave pública para recibir fondos, y de la privada para transferir los propios. En conjunto, representan [la identidad del usuario en la cadena de bloques.]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). El par de llaves es parte de un esquema de encriptación llamado criptografía de llave pública o criptografía asimétrica, uno de los principales pilares de la tecnología blockchain.
+La llave pública del usuario equivale a su dirección en la cadena de bloques, mientras que su llave privada es la contraseña que se utiliza para acceder a los fondos que contiene. El usuario hace uso de su llave pública para recibir fondos, y de la privada para transferir los propios. En conjunto, representan [la identidad del usuario en la cadena de bloques.]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). El par de llaves es parte de un esquema de encriptación llamado criptografía de llave pública o criptografía asimétrica, uno de los principales pilares de la tecnología blockchain.
 
 ![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_D.jpg)
 ![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_M.jpg)
@@ -52,7 +52,7 @@ Una manera sencilla de racionalizar una [transacción ]({{ site.baseurl }}{% pos
 Para acceder a la información almacenada en una cadena de bloques, puede utilizarse un [explorador de bloques]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}). Así como un explorador web permite al usuario acceder a información en internet, el explorador de bloques le permite acceder a la información de la cadena de bloques. Es posible buscar direcciones individuales, transacciones o bloques enteros.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Explorer address summary">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.png" alt="Explorer address summary">
 </div>
 
 Si bien las criptomonedas no son anónimas por defecto, algunas ofrecen características que posibilitan transacciones privadas. Para aumentar el nivel de privacidad, el usuario debe utilizar una dirección diferente para cada transacción entrante. Esto hace más difícil que un tercero pueda obtener un historial de sus transacciones, por lo que la mayoría de las billeteras implementan esta función de manera automática. El usuario también puede decidir utilizar criptomonedas con características de privacidad mejoradas. Horizen, por ejemplo, emplea pruebas de cero conocimiento para hacer posibles transacciones completamente privadas, algo que se logra utilizando un tipo diferente de dirección dentro de la misma billetera (direcciones Z).
