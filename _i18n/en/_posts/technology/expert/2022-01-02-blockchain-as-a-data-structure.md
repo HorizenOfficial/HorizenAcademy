@@ -7,7 +7,6 @@ permalink: /technology/expert/blockchain-as-a-data-structure/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
-published: false
 ---
 
 The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
