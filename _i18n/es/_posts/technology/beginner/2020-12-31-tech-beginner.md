@@ -21,7 +21,7 @@ level: beginner
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/beginner/intro/what_is_a_blockchain.svg" alt="¿Qué es una cadena de bloques? />
+            <img src="/assets/post_files/technology/beginner/intro/what_is_a_blockchain.svg" alt="¿Qué es una cadena de bloques?" />
         </a>
     </div>
     <div class="col-md-9">
