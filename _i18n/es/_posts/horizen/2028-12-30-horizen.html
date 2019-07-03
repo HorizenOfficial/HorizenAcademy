@@ -1,0 +1,59 @@
+---
+layout: default
+type: intro
+title: "Horizen"
+description: "Esta sección presenta los esfuerzos individuales que conforman la plataforma Horizon Blockchain."
+permalink: /horizen/
+topic: horizen
+css: |
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+---
+
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h2 class="post-title text-uppercase">{{ page.title }}</h2>
+        </div>
+        <div class="col-md-8 welcome-text">
+            <p>
+                Aquí cubriremos los esfuerzos individuales que conforman la plataforma de la cadena de bloques Horizen. Hablaremos de cómo opera la organización, cómo fondeamos el proyecto en la actualidad y cómo, en un futuro cercano, lo haremos a través de nuestro modelo de fondeo sustentable con la
+                <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">OAD</a>. Los artículos de este nivel se encuentran disponibles en tres niveles, para usuarios principiantes, avanzados y expertos, cada uno con su contenido respectivo. En los niveles superiores, se incluyen explicaciones con más detalles y términos técnicos.
+            </p>
+        </div>
+    </div>
+
+    <hr class="mt-5 mb-5">
+
+    <div class="post-content">
+
+        <img src="/assets/post_files/horizen/beginner/ES_dao-decentralized-autonomous-organization/DAO_D.jpg" alt="OAD - ORGANIZACIÓN AUTÓNOMA DESCENTRALIZADA">
+        <img src="/assets/post_files/horizen/beginner/ES_dao-decentralized-autonomous-organization/DAO_M.jpg" alt="OAD - ORGANIZACIÓN AUTÓNOMA DESCENTRALIZADA">
+
+        <p>
+            Esta sección cubre los dos retos técnicos más grandes a los que se enfrenta Horizen en la actualidad, así como sus posibles soluciones. Ambos acercamientos presentados tienen como objetivo la expansión de las capacidades de nuestra cadena de bloques, pues la mayoría de las cadenas actuales son capaces de procesar solo unas cuantas transacciones por segundo. Así, hemos implementado algunas medidas para lograr escalar nuestra cadena de bloques:
+        </p>
+
+        <ul>
+            <li>Estructura <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}">DAG de bloques</a>.</li>
+            <li>Construcción de <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-03-sidechains %}">cadenas laterales (sidechains)</a>.</li>
+        </ul>
+
+        <p>
+            Introduciremos también la primera aplicación de nuestra plataforma blockchain.
+        </p>
+
+        <ul>
+            <li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}">ZenChat</a> es un servicio de mensajería con encriptación de primer grado para mantener conversaciones privadas. ZenChat está disponible ya de manera integrada en nuestra app insignia, Sphere by Horizen.
+            {% comment %}<li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-05-horizen-vpn %}">Horizen VPN</a> is our second application. It will make use of our node network, the largest node network in the industry, to offer a decentralized VPN service. Node Operators will have the opportunity to offer their nodes as an endpoint for the VPN service and earn money for providing this service. This application is not live yet, but we are working on it already.</li>{% endcomment %}
+        </ul>
+
+    </div>
+</div>

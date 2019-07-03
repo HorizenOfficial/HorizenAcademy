@@ -55,28 +55,28 @@ css: |
 
     {% include search.html %}
 
-    <h2 class="post-title">CONTENT OVERVIEW</h2>
+    <h2 class="post-title">{% t content-overview.title %}</h2>
 
     <div class="post-content">
         <section class="content-overview">
             <ul class="nav nav-pills nav-fill mb-3" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="label-technology" data-toggle="pill" href="#tab-technology" role="tab" aria-controls="tab-technology" aria-selected="true">Technology</a>
+                    <a class="nav-link active" id="label-technology" data-toggle="pill" href="#tab-technology" role="tab" aria-controls="tab-technology" aria-selected="true">{% t topics.technology %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="label-privacy" data-toggle="pill" href="#tab-privacy" role="tab" aria-controls="tab-privacy" aria-selected="false">Privacy</a>
+                    <a class="nav-link" id="label-privacy" data-toggle="pill" href="#tab-privacy" role="tab" aria-controls="tab-privacy" aria-selected="false">{% t topics.privacy %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="label-horizen" data-toggle="pill" href="#tab-horizen" role="tab" aria-controls="tab-horizen" aria-selected="false">Horizen</a>
+                    <a class="nav-link" id="label-horizen" data-toggle="pill" href="#tab-horizen" role="tab" aria-controls="tab-horizen" aria-selected="false">{% t topics.horizen %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="label-history" data-toggle="pill" href="#tab-history" role="tab" aria-controls="tab-history" aria-selected="false">History</a>
+                    <a class="nav-link" id="label-history" data-toggle="pill" href="#tab-history" role="tab" aria-controls="tab-history" aria-selected="false">{% t topics.history %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="label-eli5" data-toggle="pill" href="#tab-eli5" role="tab" aria-controls="tab-eli5" aria-selected="false">ELI5</a>
+                    <a class="nav-link" id="label-eli5" data-toggle="pill" href="#tab-eli5" role="tab" aria-controls="tab-eli5" aria-selected="false">{% t content-overview.eli5 %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="label-resources" data-toggle="pill" href="#tab-resources" role="tab" aria-controls="tab-resources" aria-selected="false">Resources</a>
+                    <a class="nav-link" id="label-resources" data-toggle="pill" href="#tab-resources" role="tab" aria-controls="tab-resources" aria-selected="false">{% t topics.resources %}</a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -85,19 +85,19 @@ css: |
                         <thead>
                         <tr class="text-uppercase">
                             <th scope="col">
-                                Chapter
+                                {% t content-overview.chapter %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
-                                Beginner
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
+                                {% t levels.beginner %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
-                                Advanced
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
+                                {% t levels.advanced %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
-                                Expert
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="{% t levels.expert %}" class="icon-level">
+                                {% t levels.expert %}
                             </th>
                         </tr>
                         </thead>
@@ -156,19 +156,19 @@ css: |
                         <thead>
                         <tr class="text-uppercase">
                             <th scope="col">
-                                Chapter
+                                {% t content-overview.chapter %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
-                                Beginner
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
+                                {% t levels.beginner %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
-                                Advanced
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
+                                {% t levels.advanced %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
-                                Expert
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="{% t levels.expert %}" class="icon-level">
+                                {% t levels.expert %}
                             </th>
                         </tr>
                         </thead>
@@ -228,16 +228,16 @@ css: |
                         <thead>
                         <tr class="text-uppercase">
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="Beginner" class="icon-level">
-                                Beginner
+                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
+                                {% t levels.beginner %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="Advanced" class="icon-level">
-                                Advanced
+                                <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
+                                {% t levels.advanced %}
                             </th>
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/expert-4.svg" alt="Expert" class="icon-level">
-                                Expert
+                                <img src="/assets/img/icons/levels/expert-4.svg" alt="{% t levels.expert %}" class="icon-level">
+                                {% t levels.expert %}
                             </th>
                         </tr>
                         </thead>

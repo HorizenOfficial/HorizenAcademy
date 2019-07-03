@@ -1,3 +1,9 @@
+
+// plugins
+$(function () {
+    $('.js-Select2').select2();
+});
+
 $(function () {
 
     var articleNav = $("#article-nav");
@@ -51,6 +57,11 @@ $(function () {
             "top": "headroom--top",
             "notTop": "headroom--not-top"
         }
+    });
+
+    $(".toggle-languages").click(function (e) {
+        e.preventDefault();
+        $(".language-select").toggleClass("show");
     });
 
 

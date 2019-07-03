@@ -9,4 +9,4 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}
