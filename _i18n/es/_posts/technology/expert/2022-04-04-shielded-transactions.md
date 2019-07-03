@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Shielded Transactions"
+title: "Transacciones Privadas"
 permalink: /technology/expert/shielded-transactions/
 topic: technology
 level: expert
-chapter: "Transactions"
+chapter: "Transacciones"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "DDOS Attack"
+title: "Ataque DDOS"
 permalink: /technology/expert/ddos-attack/
 topic: technology
 level: expert
-chapter: "Attacks"
+chapter: "Ataques"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

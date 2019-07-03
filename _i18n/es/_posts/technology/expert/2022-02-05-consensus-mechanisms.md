@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Consensus Mechanisms"
+title: "Mecanismos de consenso"
 permalink: /technology/expert/consensus-mechanisms/
 topic: technology
 level: expert
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

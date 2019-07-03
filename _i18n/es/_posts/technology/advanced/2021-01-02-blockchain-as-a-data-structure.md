@@ -43,7 +43,7 @@ Cada bloque puesto encima de un bloque existente se conoce comúnmente como una 
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_broken_D.jpg)
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_broken_M.jpg)
 
-as referencias entre bloques no solo dependen del orden de los mismos, sino también de los datos que cada uno contiene. No es para nada fácil agregar o borrar datos de un bloque, y esta propiedad es el fundamento de la confianza que tienen los usuarios de la cadena de que su información se encuentra almacenada de manera segura.
+Las referencias entre bloques no solo dependen del orden de los mismos, sino también de los datos que cada uno contiene. No es para nada fácil agregar o borrar datos de un bloque, y esta propiedad es el fundamento de la confianza que tienen los usuarios de la cadena de que su información se encuentra almacenada de manera segura.
 
 Al mismo tiempo, es fácil agregar datos en un nuevo bloque de la cadena, pues cualquier usuario tiene la capacidad de agregar una transacción nueva a una cadena criptomonetaria. La transacción del usuario resulta fácil de verificar porque todas las transacciones registradas anteriormente son inmutables. Si la dirección Y quiere gastar una cantidad, significa que ha recibido por lo menos esa cantidad en transacciones pasadas y no ha gastado aún esos fondos.
 

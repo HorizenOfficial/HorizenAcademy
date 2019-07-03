@@ -14,7 +14,7 @@ Es momento de abordar la cadena de bloques desde otra perspectiva, una que consi
 
 > “[The] Bitcoin protocol and network today [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
 
-> “El protocolo Bitcoin y su red son hoy en día una red para transferir valor. Más allá, es un importante servicio de seguridad que es la columna de la aseguración de contratos, propiedad física y digital, patrimonio, bonos, inteligencia artificial y una número enorme de aplicaciones que no se han concebido aún." - Jeff Garzik, Desarrollador de Bitcoin Core
+> “El protocolo Bitcoin y su red son hoy en día una red para transferir valor. Más allá, es un importante servicio de seguridad que es la columna de la aseguración de contratos, propiedad física y digital, patrimonio, bonos, inteligencia artificial y un número enorme de aplicaciones que no se han concebido aún." - Jeff Garzik, Desarrollador de Bitcoin Core
 
 El protocolo es un grupo de reglas que gobierna la validad de las transacciones y el funcionamiento general de la cadena de bloques. La [definición de Technopedia](https://www.techopedia.com/definition/12938/network-protocols) de un protocolo de red es la siguiente:
 
@@ -22,7 +22,7 @@ El protocolo es un grupo de reglas que gobierna la validad de las transacciones 
 
 > "Los protocolos de red son estándares y políticas formales compuestos de reglas, procedimientos y formatos que definen la comunicación entre dos o más dispositivos dentro de una red. Los protocolos de red rigen de principio a fin los procesos que permiten la comunicación oportuna, segura y administrada de datos o comunicaciones entre redes."
 
-La creación de la cadena de bloques define este conjunto de reglas, procedimientos y formato. La única manera de alterar las reglas es si una mayoría de los participantes de la red decide hacerlo. Las cadenas de bloques públicas hacen necesario lograr un consenso, lo a su vez requiere la cuidadosa consideración de cada cambio propuesto; una característica deseable que sirve para crear una fundación robusta para los usuarios.
+La creación de la cadena de bloques define este conjunto de reglas, procedimientos y formato. La única manera de alterar las reglas es si una mayoría de los participantes de la red decide hacerlo. Las cadenas de bloques públicas hacen necesario lograr un consenso, lo que a su vez requiere la cuidadosa consideración de cada cambio propuesto; una característica deseable que sirve para crear una fundación robusta para los usuarios.
 
 ### Protocolos de red
 
@@ -77,7 +77,7 @@ El protocolo de una cadena de bloques es un conjunto de reglas que aplica a todo
 
 Para concluir esta lección de la manera en que empezó, tomemos otra cita de Jeff Garzik.
 
-> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
+> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee Transacciones, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
 > "No hay por qué atiborrar el protocolo Bitcoin. Déjenlo hacer lo que mejor hace. Se deben construir sobre Bitcoin sistemas que aprovechen sus fortalezas....  Incluir en la blockchain de Bitcoin todas las compraventas de café, operaciones bursátiles del mundo y muestreos de todo el internet de las cosas es un esfuerzo equivocado." - Jeff Garzik
 

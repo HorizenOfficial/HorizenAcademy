@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Mixing-based Protocols"
+title: "Protocolos basado en el mezclado de monedas"
 permalink: /technology/expert/mixing-based-protocols/
 topic: technology
 level: expert
-chapter: "Privacy"
+chapter: "Privacidad"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "How Does a Blockchain Work?"
+title: "¿Cómo funciona una cadena de bloques?"
 permalink: /technology/expert/how-does-a-blockchain-work/
 topic: technology
 level: expert
-chapter: "How Does a Blockchain Work?"
+chapter: "¿Cómo funciona una cadena de bloques?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

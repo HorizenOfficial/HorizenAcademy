@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "State/Payment Channels"
+title: "Canales de Estado/Pago"
 permalink: /technology/expert/state-payment-channels/
 topic: technology
 level: expert
-chapter: "Transactions"
+chapter: "Transacciones"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

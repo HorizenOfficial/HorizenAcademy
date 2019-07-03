@@ -31,7 +31,7 @@ Otro posible uso de los contratos inteligentes sería el de una especie de eBay 
 
 ### dApps
 
-Una aplicación descentralizada (dApp) es un argumento más sofisticado a favor de los contratos inteligentes. La mayoría las apps y sitios webs utilizan API (application programming interfaces) para comunicarse con su base de datos subyacente. Un API bien escrito le hace más a un desarrollador ofrecer un servicio al definir la comunicación entre los componentes de un sistema, como el sistema operativo, base de datos o biblioteca de software.
+Una aplicación descentralizada (dApp) es un argumento más sofisticado a favor de los contratos inteligentes. La mayoría las apps y sitios webs utilizan API (application programming interfaces) para comunicarse con su base de datos subyacente. Un API bien escrito le hace más fácil a un desarrollador ofrecer un servicio al definir la comunicación entre los componentes de un sistema, como el sistema operativo, base de datos o biblioteca de software.
 
 Las dApps hacen uso de contratos inteligentes para comunicarse con su cadena de bloques. En un futuro, podrían surgir receptáculos de plantillas de contratos inteligentes para diversos fines. Este futuro ya está empezando a materializarse gracias a plataformas de contratos inteligentes como Ethereum.
 
@@ -46,7 +46,7 @@ Se encuentran también los pocos que saben que Bitcoin permite también la creac
 
 En el caso de los contratos inteligentes, la seguridad implica considerar todas las maneras en las que el contrato podría ejecutarse, así como asegurarse de cubrir todas las posibles consecuencias. Los contratos seguros de Bitcoin escritos en Script permiten menor complejidad a comparación de los escritos en Solidity para Ethereum; esto limita los casos en los que pueden utilizarse, pero hace más fácil enumerar, examinar y rendir cuentas, resultando en contratos más fáciles de asegurar.
 
-Vale la pena mencionar que las plantillas de contratos inteligentes más usados en Ethereum, en especial en el estándar ERC20 y ERC721 no requieren ser sistemas Turing completos. Casi todos los tokens creados en la cadena de bloques de Ethereum emplean uno de estos dos estándares, pues son más fáciles de integrar con distintas billeteras y centros cambiarios.
+Vale la pena mencionar que las plantillas de contratos inteligentes más usados en Ethereum, en especial los estándares ERC20 y ERC721 no requieren ser sistemas Turing completos. Casi todos los tokens creados en la cadena de bloques de Ethereum emplean uno de estos dos estándares, pues son más fáciles de integrar con distintas billeteras y centros cambiarios.
 
 ### ¿En serio es un sistema libre de intermediarios?
 
@@ -79,8 +79,8 @@ En palabras de Jimmy Song, “Un contrato inteligente que confía en un tercero 
 
 ### Resumen
 
-Habiendo completado esta lección, ya debe tener una buena idea de la naturaleza de una cadena de bloques, pues la hemos como estructura de datos y como un conjunto de reglas. La cadena puede almacenar información confiablemente dada la naturaleza distribuida del libro contable. Todos pueden participar en la red sin permiso o registro alguno mientras se apeguen a las reglas del protocolo. Así, se logra que las cadenas de bloques sean resistentes a la censura, sin permisos, libres de intermediarios y, sobre todo, muy valiosas. Una blockchain puede no solo almacenar pedazos de información sino también programas ejecutados de manera distribuida.
+Habiendo completado esta lección, ya debe tener una buena idea de la naturaleza de una cadena de bloques, pues la hemos analizado como estructura de datos y como un conjunto de reglas. La cadena puede almacenar información confiablemente dada la naturaleza distribuida del libro contable. Todos pueden participar en la red sin permiso o registro alguno mientras se apeguen a las reglas del protocolo. Así, se logra que las cadenas de bloques sean resistentes a la censura, sin permisos, libres de intermediarios y, sobre todo, muy valiosas. Una blockchain puede no solo almacenar pedazos de información sino también programas ejecutados de manera distribuida.
 
-Los contactos inteligentes pueden asegurar ejecución objetiva de un contrato a partir de términos previamente acordados y hechos valer por el código mismo. Poseen el potencial de eliminar intermediarios y así disminuir costos y pérdidas de tiempo. Asimismo, es probable que incentiven una relación más estrecha entre desarrolladores de software y el sistema judicial. Habrá que superar varios obstáculos para que la tecnología se adopte de manera general, si embargo. Los reguladores tendrán que crear un marco que permita la implementación de contratos inteligentes con validez y tendrán que desarrollarse oráculos descentralizados.
+Los contactos inteligentes pueden asegurar la ejecución objetiva de un contrato a partir de términos previamente acordados y hechos valer por el código mismo. Poseen el potencial de eliminar intermediarios y así disminuir costos y pérdidas de tiempo. Asimismo, es probable que incentiven una relación más estrecha entre desarrolladores de software y el sistema judicial. Habrá que superar varios obstáculos para que la tecnología se adopte de manera general, si embargo. Los reguladores tendrán que crear un marco que permita la implementación de contratos inteligentes con validez y tendrán que desarrollarse oráculos descentralizados.
 
 Este fue el último artículo en nuestro capítulo sobre la cadena de bloques y sus capacidades. En el siguiente capítulo, veremos a fondo cómo es que funcionan.

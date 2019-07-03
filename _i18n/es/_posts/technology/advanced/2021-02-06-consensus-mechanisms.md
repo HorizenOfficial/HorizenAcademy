@@ -16,7 +16,11 @@ Cuando el participante de una red crea una transacción, la transacción se prop
 
 Hay muchas maneras de lograr consenso en una red distribuida, pero las dos más utilizadas son los algoritmos de prueba de trabajo y prueba de participación. Tomemos esta generalización formulada por Demiro Massessi:
 
-_"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
+**Inglés**
+
+_"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of Transacciones. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
+
+**Español**
 
 _"La principal diferencia entre mecanismos de consenso es la manera en la que delegan y recompensan la verificación de transacciones. […] De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario."_
 
@@ -41,11 +45,15 @@ Todos los nodos y mineros verifican la validez de un bloque nuevo en cuanto se d
 
 **La regla de la cadena más larga**
 
-Now you can imagine a scenario in which two miners find a block at the same time. In this case, all the nodes and miners on the network save both versions of the block. This is a tie situation: both blocks are valid at this point, but somehow they must break the tie. We need a single version of the truth. The miners will start building on top of the block they received first. The tie is broken when the miners find the next block. The block of the two competing versions that is built on top of will become accepted as the single truth by all miners and nodes. The block that is disregarded is called an _orphan block_. This procedure of breaking a tie between to concurring blocks is called the Longest Chain Rule or Nakamoto Consensus.
+Imaginemos una situación en la que dos mineros encuentran un bloque al mismo tiempo. En este caso, todos los nodos y mineros de la red almacenan ambas versiones del bloque. A esta situación se le llama empate, pues ambos bloques son válidos al momento de ser creados. Sin embargo, el empate debe romperse de alguna manera, pues es necesaria una sola versión de la verdad. Los mineros empiezan a construir sobre el bloque que reciben primero. El empate se rompe cuando un minero encuentra el siguiente bloque. Uno de los dos bloques será aceptado como el único verdadero por todos los mineros y nodos, mientras que el otro se hará de lado; estos bloques sin cadena se denominan bloques huérfanos. A este tipo de procedimiento para romper empates entre bloques coincidentes se le llama regla de la cadena más larga (longest chain rule) o consenso de Nakamoto.
 
-If 80% of miners receive block A first and the other 20% block B, then the chances of block A getting extended are 80% (assuming all miners have the same computational power). In a way, the miners vote with their computational power on one version of the history. This aligns perfectly with our quote from the beginning of the article:
+Si el 80% de los mineros recibieron primero el bloque A y el otro 20% el bloque B, las probabilidades de que la cadena se extienda partiendo del bloque A son del 80% (suponiendo que todos los mineros poseen el mismo poder computacional). De cierta manera, los mineros votan con su poder computacional por una sola versión del historial, replicando así la realidad descrita en nuestra cita inicial:
+
+**Inglés**
 
  _"In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
+
+**Español**
 
  _“De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario.”_
 
@@ -75,7 +83,7 @@ Los escépticos cuestionan la seguridad del modelo de consenso PoS porque no se 
 
 Otra diferencia entre las cadenas PoW y PoS es que en la segunda cada nodo validador debe ser identificable, pues sus monedas en participación deben utilizarse para compensar por actos maliciosos. En una cadena PoW no es necesario tener mineros o nodos identificables. Al contrario, una de sus características es que cuando un nodo recibe un bloque, no se incluye información sobre quién lo minó. Puede haber sido el mismo nodo el que haya transmitido el bloque, o puede que este se haya relevado varias veces antes de alcanzar al usuario; no importa ni debe importar la identidad del minero. Lo único importante es que la solución al acertijo y todas las transacciones en el bloque sean válidas. En el caso de las pruebas de trabajo, solo es necesario confiar en las matemáticas.
 
-Quienes apoyan las cadenas PoS se remiten al alto costo y rendimiento limitado de las cadenas PoW, y consideran por lo tanto el mecanismo PoS como el má sustentable. Por el momento, no hay disponible ninguna cadena de bloques PoS que pueda cumplir con sus promesas de seguridad durante un tiempo extendido. En cambio, existe el precedente de Bitcoin, cuya cadena PoW se ha ejecutado durante más de diez años sin ninguna violación de seguridad significativa. Será el tiempo el que decida si las cadenas PoS pueden cumplir con la promesa de ser igual de seguras pero más escalables que una cadena PoW.
+Quienes apoyan las cadenas PoS se remiten al alto costo y rendimiento limitado de las cadenas PoW, y consideran por lo tanto el mecanismo PoS como el más sustentable. Por el momento, no hay disponible ninguna cadena de bloques PoS que pueda cumplir con sus promesas de seguridad durante un tiempo extendido. En cambio, existe el precedente de Bitcoin, cuya cadena PoW se ha ejecutado durante más de diez años sin ninguna violación de seguridad significativa. Será el tiempo el que decida si las cadenas PoS pueden cumplir con la promesa de ser igual de seguras pero más escalables que una cadena PoW.
 
 Retomaremos esta discusión en la conclusión de nuestro artículo sobre el minado de criptomonedas. Los argumentos respectivos de las comunidades PoS y PoW tendrán mayor sentido una vez que quede claro de qué trata el proceso de minado.
 

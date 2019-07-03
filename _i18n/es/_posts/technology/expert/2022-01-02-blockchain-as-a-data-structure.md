@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Blockchain as a Data Structure"
+title: "La cadena de bloques como estructura de datos"
 permalink: /technology/expert/blockchain-as-a-data-structure/
 topic: technology
 level: expert
-chapter: "What is a Blockchain?"
+chapter: "¿Qué es una cadena de bloques?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

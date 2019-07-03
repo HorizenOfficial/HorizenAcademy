@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "Privacy on the Blockchain"
+title: "Privacidad en la Blockchain"
 permalink: /technology/expert/privacy-on-the-blockchain/
 topic: technology
 level: expert
-chapter: "Privacy"
+chapter: "Privacidad"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

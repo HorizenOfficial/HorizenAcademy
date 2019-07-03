@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Overview of Privacy Preserving Techniques"
+title: "Vista general de técnicas para preservar la privacidad"
 permalink: /technology/expert/overview-of-privacy-preserving-techniques/
 topic: technology
 level: expert
-chapter: "Privacy"
+chapter: "Privacidad"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

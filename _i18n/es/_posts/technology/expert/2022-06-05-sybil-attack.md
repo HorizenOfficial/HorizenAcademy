@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Sybil Attack"
+title: "Ataque Sybil"
 permalink: /technology/expert/sybil-attack/
 topic: technology
 level: expert
-chapter: "Attacks"
+chapter: "Ataques"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

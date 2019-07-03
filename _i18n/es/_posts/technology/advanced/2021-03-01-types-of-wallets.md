@@ -9,7 +9,7 @@ level: advanced
 chapter: "Billeteras"
 ---
 
-Una billetera es una programa que genera, administra y almacena un par de llaves criptográficas. El usuario puede revisar su saldo y recibir y enviar fondos desde su billetera; (si no le quedan claras las funciones principales de la billetera, lo invitamos a leer nuestro artículo de nivel principiante sobre el tema). En resumen, sin embargo, la principal diferencia entre los distintos tipos de billetera es la ubicación física en la que se almacenan las llaves del usuario.
+Una billetera es una programa que genera, administra y almacena un par de llaves criptográficas. El usuario puede revisar su saldo, recibir y enviar fondos desde su billetera; (si no le quedan claras las funciones principales de la billetera, lo invitamos a leer nuestro artículo de nivel principiante sobre el tema). En resumen, sin embargo, la principal diferencia entre los distintos tipos de billetera es la ubicación física en la que se almacenan las llaves del usuario.
 
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
@@ -30,7 +30,7 @@ Esto nos lleva a una distinción entre billeteras web hosteadas y no hosteadas. 
 ![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/ES_hosted_webwallet_D.jpg)
 ![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/ES_hosted_webwallet_M.jpg)
 
-Una ventaja de una billetera web hosteada es que le da al usuario la opción de recuperar su contraseña si la olvida. En cualquier otro caso, la pérdida de la una llave privada (junto con su frase mnemónica) resulta en la pérdida de todos los fondos del usuario.
+Una ventaja de una billetera web hosteada es que le da al usuario la opción de recuperar su contraseña si la olvida. En cualquier otro caso, la pérdida de la llave privada (junto con su frase mnemónica) resulta en la pérdida de todos los fondos del usuario.
 
 Esta característica puede darle tranquilidad al usuario, pero las billeteras hosteadas (también llamadas hot wallets o cloud wallets) también tienen desventajas. Es importante recordar que si el usuario no controla sus llaves, no controla sus fondos. Involucrar a un tercero siempre tiene sus riesgos, sin importar qué tan confiable pueda considerarse. Primeramente, son un objetivo más atractivo para los hackers que un individuo, pues el botín que ofrecen es mucho mayor. Segundo, en el caso improbable de un cambio regulatorio, podría resultarle imposible al usuario retirar sus fondos; una situación poco común, pero no imposible. Tercero, nunca puede descartarse la posibilidad de que la entidad en cuestión quiebre o, peor aún, hurte los fondos de sus usuarios. En el caso de los centros cambiarios que ya mencionamos, no es probable que esto suceda, pero el riesgo permanece.
 
@@ -94,7 +94,7 @@ Pasemos a las consentidas de todos, las billeteras hardware. En una billetera ha
 
 Ahora lo interesante, ¿cómo funciona una billetera de este tipo?
 
-La interfaz de la billetera genera una dirección a partir de la llave pública del usuario cuando este quiere recibir fondos. Utilizar esta función es fácil. Si el usuario le da clic al botón de “Recibir” la interfaz responde arrojando la dirección que se debe compartir con el remitente. Si el usuario desde enviar fondos, la aplicación crea una transacción formal que debe firmarse. La transacción sin firmar se envía a la billetera de hardware, donde la llave privada almacenada en el dispositivo la firma. La firma regresa a la computadora, donde la transacción completa, incluyendo la firma, se propaga a la red.
+La interfaz de la billetera genera una dirección a partir de la llave pública del usuario cuando este quiere recibir fondos. Utilizar esta función es fácil. Si el usuario le da clic al botón de “Recibir” la interfaz responde arrojando la dirección que se debe compartir con el remitente. Si el usuario desea enviar fondos, la aplicación crea una transacción formal que debe firmarse. La transacción sin firmar se envía a la billetera de hardware, donde la llave privada almacenada en el dispositivo la firma. La firma regresa a la computadora, donde la transacción completa, incluyendo la firma, se propaga a la red.
 
 ![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/ES_signing_hardware_wallet_D.jpg)
 ![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/ES_signing_hardware_wallet_M.jpg)

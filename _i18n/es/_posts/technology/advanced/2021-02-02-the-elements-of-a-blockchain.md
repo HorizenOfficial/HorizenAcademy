@@ -44,9 +44,9 @@ Si lo que el usuario desea es crear una especie de moneda digital en una red P2P
 ![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/ES_consensus_M.jpg)
 
-### Mining
+### Minado
 
-Existen muchos mecanismos de consenso. El original, o aquel que utilizan Horizen, Bitcoin y muchas otras criptomonedas es el mecanismo de prueba de trabajo. El concepto de minar una criptomoneda es bastante común, pero lo es un poco menos el de los mineros en competencia para resolver un problema computacionalmente demandante. Queremos darle un ejemplo de este problema y de cómo resolverlo contribuye a que la red llegue a un acuerdo respecto al orden de transacciones.
+Existen muchos mecanismos de consenso. El original, o aquel que utilizan Horizen, Bitcoin y muchas otras criptomonedas es el mecanismo de prueba de trabajo. El concepto de minar una criptomoneda es bastante común, pero lo es un poco menos el de los mineros en competencia para resolver un problema computacionalmente demandante.Queremos darle un ejemplo de este problema y de cómo resolverlo, ya que lo anterior contribuye a que la red llegue a un acuerdo respecto al orden de transacciones.
 
 ### Demo
 

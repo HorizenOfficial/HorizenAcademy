@@ -8,7 +8,7 @@ topic: horizen
 level: advanced
 ---
 
-Una cadena lateral es una cadena de bloques con la función adicional de ser interoperable con la cadena de bloques principal. Las transacciones son la interacción más común en una cadena de bloques que aloja una criptomoneda, como es el caso de la cadena de Horizen. El equipo técnico de Horizen, dirigido por Alberto Garoffolo, ha propuesta la construcción de una cadena lateral con base en principios PoS (de prueba de participación).
+Una cadena lateral es una cadena de bloques con la función adicional de ser interoperable con la cadena de bloques principal. Las transacciones son la interacción más común en una cadena de bloques que aloja una criptomoneda, como es el caso de la cadena de Horizen. El equipo técnico de Horizen, dirigido por Alberto Garoffolo, ha propuesto la construcción de una cadena lateral con base en principios PoS (de prueba de participación).
 
 La principal innovación es un nuevo protocolo de transferencia hacia atrás que permite transacciones entre una de muchas posibles cadenas laterales posibles con la cadena principal sin necesidad de que la cadena principal tenga que rastrear a la lateral y sin introducir una federación centralizada de validadores. Aunque se proporcionará una implementación de referencias de un protocolo de consenso de cadena lateral, será posible una amplia gama de protocolos de consenso.
 
@@ -55,7 +55,7 @@ El proyecto de cadenas de bloques de Horizen se ha puesto objetivos muy ambicios
 
 Es fácil ver los beneficios de desarrollar primero una cadena lateral, pues algunas de estas funciones requerían hacerle modificaciones significativas al cliente central de implementarse al código base existente. Desarrollar nuevas características y hacer cambios al protocolo, aunque sean mínimos, resulta problemático no solo por la dificultad de lograr consenso, sino también porque implica riesgos de seguridad. Por lo tanto, cada adición debe considerarse cuidadosamente.
 
-La idea de Horizen es desarrollar de una sola vez una implementación de cadenas laterales robustas para luego simplificar el desarrollo de nuevas características que expandan el ecosistema Horizen. La implementación de cadenas laterales de desemparejará por completo de la cadena principal y podría, por ejemplo, ejecutar un algoritmo de consenso completamente diferente al de esta. De esta manera, sería posible tener cadenas laterales para la tesorería y sistema de rastreo de nodos con un protocolo de consenso [PoS]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) y conservar a la par la cadena principal [PoW]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}).
+La idea de Horizen es desarrollar de una sola vez una implementación de cadenas laterales robustas para luego simplificar el desarrollo de nuevas características que expandan el ecosistema Horizen. La implementación de cadenas laterales se desemparejará por completo de la cadena principal y podría, por ejemplo, ejecutar un algoritmo de consenso completamente diferente al de esta. De esta manera, sería posible tener cadenas laterales para la tesorería y sistema de rastreo de nodos con un protocolo de consenso [PoS]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) y conservar a la par la cadena principal [PoW]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}).
 
 ### Cómo funciona
 
@@ -64,7 +64,7 @@ El desarrollo del modelo de cadenas laterales (sidechains) consiste de dos parte
  1. EL _protocolo de consenso de la cadena lateral (sidechain consensus protocol)_ — SCP
  2. El _protocolo de transferencia entre cadenas_ o peg de doble sentido (two-way peg) — CCT
 
-El _protocolo de consenso de la cadena lateral_ gobierna cómo se pone de acuerdo la red respecto a la creación de bloques nuevos y el historial de transacciones. El CTT determina cómo pueden enviarse activos de la cadena principal a la lateral y viceversa. Hablaremos de ambos protocolos a detalle en nuestro [artículo sobre cadenas laterales]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) del nivel experto..
+El _protocolo de consenso de la cadena lateral_ gobierna cómo se pone de acuerdo la red respecto a la creación de bloques nuevos y el historial de transacciones. El CTT determina cómo pueden enviarse activos de la cadena principal a la lateral y viceversa. Hablaremos de ambos protocolos a detalle en nuestro [artículo sobre cadenas laterales]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) del nivel experto.
 
 ![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_D.jpg)
 ![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_M.jpg)

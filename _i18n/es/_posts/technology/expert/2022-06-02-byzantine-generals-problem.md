@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Byzantine Generals Problem"
+title: "El problema de los generales bizantinos"
 permalink: /technology/expert/byzantine-generals-problem/
 topic: technology
 level: expert
-chapter: "Attacks"
+chapter: "Ataques"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

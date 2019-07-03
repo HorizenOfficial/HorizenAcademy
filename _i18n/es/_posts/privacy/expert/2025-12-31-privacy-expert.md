@@ -7,4 +7,4 @@ topic: privacy
 level: expert
 ---
 
-## Coming Soon!
+## ¡Proximamente privacidad nivel experto!

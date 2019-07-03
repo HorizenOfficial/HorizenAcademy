@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Block Explorer Continued"
+title: "El explorador de bloques"
 description: "El explorador de bloques es una herramienta que permite al usuario navegar la información contenida en la cadena. Este artículo habla del tipo de información que encontrará el usuario."
 permalink: /technology/advanced/block-explorer-continued/
 topic: technology
@@ -27,7 +27,7 @@ El usuario verá un resumen de los bloques más recientes en la página de inici
 
  - **Altura (Height)**: La altura es el número asociado al bloque. El primer bloque creado tiene por número “#0”, le siguió el “#1” y luego el “#2”. Como puede verse en la tabla, al momento de redactarse este artículo se habían minado ya muchos bloques.
  - **Edad (Age)**: Es la edad del bloque. Aunque esta característica se explica sola, hay algo de información interesante entrelíneas; como usted ya sabrá, el tiempo de bloque, el intervalo entre el minado de dos bloques, es de 10 minutos en el caso de Bitcoin. ¿Por qué tomó entonces solo 6 minutos minar el bloque 539.772 y 9 minar el 539.771? Esto se debe a que el tiempo de bloque es un promedio. Siempre habrá bloques más lentos de crear y otros pocos que se producirán con mayor rapidez, pero en promedio el proceso tomará 10 minutos. En nuestro artículo sobre minado explicamos cómo se autoajusta el tiempo de bloque.
- - **Transacciones (Transactions)**: El número de transacciones incluidas en el bloque. Esto quiere decir que en los 6 minutos que tomó minar el bloque 539.772 se realizaron 1500 transacciones.
+ - **Transacciones (Transacciones)**: El número de transacciones incluidas en el bloque. Esto quiere decir que en los 6 minutos que tomó minar el bloque 539.772 se realizaron 1500 transacciones.
  - **Total enviado (Total Sent)**: Las 1547 transacciones que sucedieron suman un envío de casi 4700 bitcoins.
  - **Transmitido por (Relayed By)**: El minero (o colectivo de mineros) que resolvió el bloque y obtuvo la recompensa de bloque.
  - **Tamaño (Size)**: La cantidad de almacenamiento que ocupa un bloque determinado.
@@ -53,7 +53,7 @@ Como ya hemos discutido la altura del bloque, pasaremos a hablar de la marca de 
 
 El campo de “Transmitido por” contiene información sobre el minero del bloque. Los grupos de minería de la actualidad, así como sus direcciones de recompensa, suelen ser de conocimiento público. De esta manera, el explorador de bloques sabe quién minó el bloque; compara las direcciones que recibieron las monedas recién generadas (1A1zP1…) en la transacción coinbase con los números de las direcciones de grupos de minería conocidos. En este caso, conocemos la identidad del minero aunque el explorador del bloque no nos la proporciona; el mismo Satoshi Nakamoto.
 
-Hablamos de _dificultad_ a más detalle en nuestro [artículo sobre minería]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}). La dificultad describe qué tan difícil es el acertijo que deben resolver los mineros, y se refiere al número de ceros iniciales en el hash del bloque. Como podemos apreciar a la derecha, el hash del bloque génesis tenía diez ceros iniciales. Hoy en día (al momento de redactar el artículo) un bloque como el 539.772 exige por lo menos 18 ceros iniciales. Entre mayor el número de ceros, mayor la dificultad del acertijo.
+Hablamos de _dificultad_ a más detalle en nuestro [artículo sobre minería]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}). La dificultad describe qué tan difícil es el acertijo que deben resolver los mineros, y se refiere al número de ceros iniciales en el hash del bloque. Como podemos apreciar a la derecha, el hash del bloque génesis tenía diez ceros iniciales. Hoy en día (al momento de redactar el artículo) un bloque como el 539772 exige por lo menos 18 ceros iniciales. Entre mayor el número de ceros, mayor la dificultad del acertijo.
 
 Los bits, el tamaño y el peso se refieren al tamaño de los datos de un bloque determinado, nada espectacular. La versión se refiere al software que se ejecutó en el momento en que se creó el bloque.
 
@@ -66,7 +66,7 @@ La función más común del explorador de bloques es la de revisar el estatus de
 Si queremos visitar la primera transacción de criptomonedas de la historia tenemos que remitirnos al bloque #170, donde se incluyó la primera transacción de bitcoins entre Satoshi Nakamoto y Hal Finney.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
+    <img src="/assets/post_files/technology/advanced/block-explorer-continued/Transacciones.png" alt="Bitcoin Transaction">
 </div>
 
 Este bloque es el primero en la cadena de bloques de Bitcoin que contiene más de una transacción. La transacción coinbase aparece arriba, como es de esperarse, y debajo de esta se registra la primera transacción; una persona enviándole monedas a otra.

@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Guaranteed Execution with Smart Contracts"
+title: "Ejecución garantizada con contratos inteligentes"
 permalink: /technology/expert/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: expert
-chapter: "What is a Blockchain?"
+chapter: "¿Qué es una cadena de bloques?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

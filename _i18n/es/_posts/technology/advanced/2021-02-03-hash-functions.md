@@ -12,7 +12,7 @@ further_reads: [hash_functions_explained_with_emojis]
 
 Las funciones hash son una parte esencial de la tecnología blockchain, por lo que sirven muchos propósitos. Son funciones matemáticas que toman una entrada de cualquier extensión y producen una salida con una extensión predefinida. A la salida suele llamársele valor hash, compendio hash o simplemente hash.
 
-Hay tantas [funciones hash](https://en.wikipedia.org/wiki/List_of_hash_functions) hay calculadoras en línea para funciones hash (como [esta](https://www.fileformat.info/tool/hash.htm), por ejemplo). Las llamadas calculadoras permiten al usuario aplicarle un hash a una misma entrada utilizando a la vez diferentes funciones. La extensión de la salida puede oscilar desde un solo carácter hasta archivos completos, pero el tamaño de la salida siempre será el mismo por función.
+Hay tantas [funciones hash](https://en.wikipedia.org/wiki/List_of_hash_functions) que hay calculadoras en línea para funciones hash (como [esta](https://www.fileformat.info/tool/hash.htm), por ejemplo). Las llamadas calculadoras permiten al usuario aplicarle un hash a una misma entrada utilizando a la vez diferentes funciones. La extensión de la salida puede oscilar desde un solo carácter hasta archivos completos, pero el tamaño de la salida siempre será el mismo por función.
 
 Una función hash criptográfica debe cumplir con los siguientes criterios para utilizarse en una cadena de bloques de manera viable:
 

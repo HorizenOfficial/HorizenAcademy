@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "A Protocol to Transfer Value"
+title: "La cadena como protocolo para transferir valor"
 permalink: /technology/expert/a-protocol-to-transfer-value/
 topic: technology
 level: expert
-chapter: "What is a Blockchain?"
+chapter: "¿Qué es una cadena de bloques?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

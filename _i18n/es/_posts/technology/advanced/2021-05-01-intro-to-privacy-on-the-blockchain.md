@@ -81,7 +81,7 @@ El objetivo de utilizar pruebas de cero conocimiento en transacciones criptomone
 
 Otro caso donde resulta perfecta la aplicación de pruebas de cero conocimiento es en la verificación de identidades; un usuario, por ejemplo, podría comprobarle a una entidad que tiene una edad determinada sin revelar datos personales como su fecha de nacimiento.
 
-Horizen hace uso de algo llamado zkSNARK para sus transacciones protegidas. Los zkSNARK, o argumentos de conocimiento sucintos no interactivos de cero conocimiento  (zero-knowledge succinct non-interactive arguments of knowledge) son una especie de prueba de cero conocimiento.
+Horizen hace uso de algo llamado zkSNARK para sus transacciones privadas. Los zkSNARK, o argumentos de conocimiento sucintos no interactivos de cero conocimiento  (zero-knowledge succinct non-interactive arguments of knowledge) son una especie de prueba de cero conocimiento.
 
  - Sucinto se refiere al hecho de que las pruebas son cortas (pueden calcularse y verificarse fácilmente).
  - No interactivos quiere decir que el probador y verificador no tienen que estar en línea al mismo tiempo. Con ejemplo de las bolas de color que utilizamos anteriormente, el probador y verificador deben realizar la prueba varias veces antes de que el verificador logre obtener una prueba de la declaración. En el caso de las pruebas no interactivas, el probador es capaz de construir la prueba por sí solo sin necesidad de comunicarse con el verificador durante el proceso.
