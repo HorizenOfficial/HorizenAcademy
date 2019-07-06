@@ -67,7 +67,8 @@ while (number of tickets sold <= max. amount of tickets available for the event)
   	}
 }
 ```
-	
+**Something about secondary market**
+
 While this is obviously an overly simplified example with a sketchy logic, it should be enough to give you an idea of the kind of logic used in smart contracts. Execution of certain actions is triggered by *messages*. These messages can be transactions transferring money, but they could also be messages only transferring data. We will get back to smart contracts getting triggered by data later. When a large set of conditions is combined to enable an application one might call this collection of smart contracts a dApp. The line seperating simple smart contracts and dApps is somewhat blurry. 
 
 ### dApps
