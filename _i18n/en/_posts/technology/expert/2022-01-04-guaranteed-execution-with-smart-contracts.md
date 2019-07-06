@@ -95,7 +95,7 @@ We wanted to include this little excursion to account for the multi-disciplinary
 
 ### Scaling with Smart Contracts
 
-Smart contracts put an additional burden on the limited throughput of a blockchain. Not only does it need to store transactions and data clearly visible to the user. Many "hidden" transactions are used for the communication between smart contracts. The launch of the [CryptoKitties](https://www.cryptokitties.co/) put a lot of stress on the Ethereum blockchain, resulting in a rise in gas cost and long confirmation times.
+Smart contracts put an additional burden on the limited throughput of a blockchain. Not only does it need to store transactions and data clearly visible to the user. Many "hidden" transactions are used for the communication between smart contracts. The launch of [CryptoKitties](https://www.cryptokitties.co/) put a lot of stress on the Ethereum blockchain, resulting in a sharp rise in gas cost and long confirmation times.
 
 There are two different balance or accounting systems in blockchains - the UTXO model and the Account-based Model. We dedicate [an entire article]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) in the transactions chapter to them. For now the following quote should suffice to differentiate between them.
 
