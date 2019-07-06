@@ -115,7 +115,7 @@ A dApp can be launched on a sidechain, possibly even running a different **conse
 
 There are many approaches to enable scalable smart contract platforms, often times also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the *oracle problem*.
 
-### The Oracle Problem - Are They Really Trustless?
+### The Oracle Problem
 
 The promise of smart contracts is to allow trustless execution with automatically enforced rules. But can they actually live up to this promise?
 
