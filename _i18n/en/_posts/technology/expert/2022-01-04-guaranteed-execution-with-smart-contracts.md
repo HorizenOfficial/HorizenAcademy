@@ -43,28 +43,28 @@ program Ticketing
 while (number of tickets sold <= max. amount of tickets available for the event)
 {
 	if only personalized tickets can be issued
-  {
+	{
 		ask buyer for personal details
-    safe personal details
+    		safe personal details
 		link details to address and put address on a whitelist
-   }
+   	}
 	if amount x is received from address Y
-  {
+  	{
 		if Y is not on the whitelist
-    {
-      refund address Y
-      end program
-    }
-		set limit to 5 tickets per address		
-		send Y the correct amount of tickets as per the amount of money received
-		increment "number of tickets sold"
-  }
+    		{
+      			refund address Y
+      			end program
+    		}
+	set limit to 5 tickets per address		
+	send Y the correct amount of tickets as per the amount of money received
+	increment "number of tickets sold"
+  	}
 	if address Y sends message "I want to sell" 
-  {
+  	{
 		refund Address Y, 
 		invalidate ticket  
 		decrement "number of tickets sold"
-  }
+  	}
 }
 ```
 	
