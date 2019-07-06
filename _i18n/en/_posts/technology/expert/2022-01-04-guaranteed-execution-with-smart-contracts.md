@@ -17,7 +17,7 @@ There is a tradeoff between simple languages or scripting systems and more sophi
 
 Security in the context of smart contracts means considering every possible way in which a contract could execute and to account for each of these scenarios. Simple smart contract languages have fewer potential use cases but make the possible states of the contract (or program) easier to enumerate, examine, and account for resulting in easier to secure contracts.
 
-#### What is a Smart Contract}
+### What is a Smart Contract
 
 Smart contracts are most often discussed in the context of decentralized applications or dApps. A dApp can be pretty much everything, from a decentralized exchange to an auctioning platform or a games. You can find an extensive overview on [State of the dApps](https://www.stateofthedapps.com/) of what is on the market today.
 
@@ -32,7 +32,7 @@ The term smart contract can have two meanings. It can either refer to static cod
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
 
-#### The Promise of Smart Contracts
+### The Promise of Smart Contracts
 
 Smart contracts promise to eliminate the need for middlemen, such as lawyers or notaries, and thereby reduce the cost of transactions. Most importantly they save participants time by disposing of middlemen. Many use cases can be constructed that achieve just that.
 
@@ -70,7 +70,7 @@ while (number of tickets sold <= max. amount of tickets available for the event)
 	
 While this is obviously an overly simplified example with a sketchy logic, it should be enough to give you an idea of the kind of logic used in smart contracts. Execution of certain actions is triggered by *messages*. These messages can be transactions transferring money, but they could also be messages only transferring data. We will get back to smart contracts getting triggered by data later. When a large set of conditions is combined to enable an application one might call this collection of smart contracts a dApp. The line seperating simple smart contracts and dApps is somewhat blurry. 
 
-#### dApps
+### dApps
 
 A dApp - or decentralized application - allows its users to perform a group of coordinated functions, tasks, or activities, just like any other application you are used to. A traditional application uses API's  - application programming interfaces - to communicate with its various components, such as social media integrations or underlying databases.
 
@@ -81,7 +81,7 @@ A dApp uses one or more smart contracts to communicate with it's underlying bloc
 
 Currently we are still in the early stages of decentralized applications. Their have been and will be many growing pains such as bugs that cause loss of funds and inefficient usage of on-chain transactions. While well developed and audited smart contract libraries will make the development of smart contracts easier and more secure, scaling methods like [state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) will allow the communication of smart contracts off-chain. Smart contract platforms are specifically designed to enable not just money on the blockchain, but also the deployment of smart contracts and dApps.
 
-#### Smart Contract Platforms
+### Smart Contract Platforms
 
 This section is a little excursion beyond the tech. If that is not for you, feel free to skip and continue with **scaling with smart contracts**.
 
@@ -93,7 +93,7 @@ But there might be an important differentiator to the centralized web of today: 
 
 We wanted to include this little excursion to account for the multi-disciplinary nature of blockchain technology. It's not just technology. It's a mix of economics, socio-economics, game theory, computer science and much more. In order to consider yourself an "expert" in the field, you should at least be aware of some of the discussions and thought experiments that go beyond the tech itself. But let's move on...
 
-#### Scaling with Smart Contracts
+### Scaling with Smart Contracts
 
 Smart contracts put an additional burden on the limited throughput of a blockchain. Not only does it need to store transactions and data clearly visible to the user. Many "hidden" transactions are used for the communication between smart contracts. The launch of the [CryptoKitties](https://www.cryptokitties.co/) put a lot of stress on the Ethereum blockchain, resulting in a rise in gas cost and long confirmation times.
 
@@ -115,7 +115,7 @@ A dApp can be launched on a sidechain, possibly even running a different **conse
 
 There are many approaches to enable scalable smart contract platforms, often times also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the *oracle problem*.
 
-#### The Oracle Problem - Are They Really Trustless?
+### The Oracle Problem - Are They Really Trustless?
 
 The promise of smart contracts is to allow trustless execution with automatically enforced rules. But can they actually live up to this promise?
 
@@ -130,7 +130,7 @@ Centralized oracles are not considered a solution to the oracle problem. No matt
 
 No matter if centralized or decentralized, an oracle will always come at a cost. Acting honestly must always be the most profitable strategy and therefore strong incentives need to be in place. This is another problem that needs game theoretic evaluation and incentive design.\\
 
-#### Prediction Markets
+### Prediction Markets
 
 A decentralized approach to solving the oracle problem is using [*prediction markets*](https://www.getsmarter.com/blog/wp-content/uploads/2017/07/mit_prediction_markets_report.pdf). A prediction market generally works by first creating a market for a specific event. Let's assume an event with a binary outcome: does team X or team Y win the Superbowl. A participant buys in for $1 and gets two *futures contracts*, one for each outcome. The futures contract whose outcome materialized pays $1, the other one $0.
 
@@ -144,7 +144,7 @@ Projects such as [Augur](https://www.augur.net) and [Gnosis](https://gnosis.io/)
 
 Before solving the problem of creating legally binding smart contracts and the Oracle Problem, the use of smart contracts will be limited to small experimental fields with low risk involved. An example of a potential use case would be in-game payments triggered by certain achievements that are objectively verifiable by code. As Jimmy Song puts it: “A smart contract that trusts a third party removes the killer feature of trustlessness.” 
 
-#### Summary
+### Summary
 
 Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and save time. They will most likely foster a closer connection between software developers and the judicial system.
 
