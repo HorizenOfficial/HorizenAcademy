@@ -21,7 +21,7 @@ This chapter is by far the most extensive chapter in our Expert Section, but for
 
 4/ A Peer-to-Peer (P2P) network forms the infrastructure of a public blockchain. They allow for a permissionless digital money to function without the need for a central provider of infrastructure.
 
-5/ One of the great innovations introduced with blockchain was solving the *Byzantine Generals Problem*: coming to *consensus* in a setting with many unknown and potentially untrustworthy actors. *Consensus mechanism* allow blockchains to achieve just that.
+5/ One of the great innovations introduced with blockchain was solving the *Byzantine Generals Problem*: coming to *consensus* in a setting with many unknown and potentially untrustworthy actors. *Consensus mechanisms* allow blockchains to achieve just that.
 
 6/ Without a central party coordinating software development, updates and the release of new features, new types of decentralized governance have emerged. We take a look at some of the decision making processes in public blockchain protocols.
 
