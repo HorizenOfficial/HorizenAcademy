@@ -49,10 +49,10 @@ Technically, a blockchain is the most simple form of a DAG. It is a linear struc
 
 There are two different ways to set up a DAG to be used to run a cryptocurrency. The nodes can comprise individual transactions or they can be blocks, containers for a set of transactions. The first notable DAG protocol was IOTA's [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). In the Tangle, each node is made up of a transaction. Each transaction references two prior transactions and has a small [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-proof-of-work %}) attached to it. 
 
-Horizen is considering the use of a Block-DAG protocol. Each node in the DAG is a block, similar to a block in the blockchain. It also consists of a  block header and a set of transactions. The main difference, when compared to a block in the blockchain, is that a block in the Block-DAG can contain references to more than one predecessors. 
+Horizen is considering the use of a Block-DAG protocol. Each node in the DAG is a block, similar to a block in the blockchain. It also consists of a  block header and a set of transactions. The main difference, when compared to a block in the blockchain, is that a block in the Block-DAG can contain references to more than one predecessors. Miners don't have to choose a single predecessor to reference, but instead include references to all previously unconfirmed blocks, the *leaves* of the DAG.
 
-![chain DAG](/assets/post_files/horizen/advanced/block-dag/chain_dag_D.jpg)
-![chain DAG](/assets/post_files/horizen/advanced/block-dag/chain_dag_M.jpg)
+![leaves](/assets/post_files/horizen/advanced/block-dag/leaves_D.jpg)
+![leaves](/assets/post_files/horizen/advanced/block-dag/leaves_M.jpg)
 
 This allows the [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) to become two-dimensional when compared to the one-dimensional or linear data structure of a blockchain. We change the data structure compared to a blockchain and have to adapt the consensus mechanism, the *longest chain rule* (more precisely the *heaviest chain rule*) or Nakamoto Consensus to have the network agree on a single transaction history.
 The *sybil-resistance mechanism*, Proof-of-Work remains the same.
@@ -76,7 +76,7 @@ This little excursion should prove valuable to following along on a short histor
 
 ### Block DAGs
 
-**Note:** there are no production level block DAG protocols in existence today. This article is meant to lay out the considerations that go into building such a protocol, rather than the actual implementation details. 
+**Note:** there are no production block DAG protocols live today. This article is meant to lay out the considerations that go into building such a protocol, rather than the actual implementation details. 
 
 #### GHOST
 
@@ -84,7 +84,7 @@ A first step towards Block-DAG protocols was the [*Greedy Heaviest Observable Su
 
 ++++ Graphic Ghost 
 
-A more intuitive description might be finding the subtree of greatest cardinality (here we make the same assumption as before when distinguishing between longest- and heaviest-chain rule). The structure on the image above is moving into DAG territory, rather than just being a blockchain with orphaned blocks (also there is no such clear distinction). Technically, it is still a *tree* and not a DAG though. The two differ in trees being able to branch off in the direction of the edges, but branches not merging together later on. DAGs on the other hand can do both, branch off and merge.
+A more intuitive description might be finding the subtree of greatest cardinality (here we make the same assumption as before when distinguishing between longest- and heaviest-chain rule). The structure on the image above is moving into DAG territory, rather than just being a blockchain with orphaned blocks (also there is no such clear distinction). Technically, it is still a *tree* and not a DAG though. The two differ in trees being able to branch off in the direction of the edges, but branches not merging together later on. DAGs on the other hand can do both, branch off and merge. Trees are a subcategory of DAGs, in that every tree is a DAG, but not every DAG is a tree.
 
 ++++ Graphic tree vs GAG
 
@@ -94,80 +94,53 @@ In the beginning of this article we said decreasing the blocktime and increasing
 
 #### SPECTRE
 
-Another evolutionary step in the development of a Block DAG was the *Serialization of Proof-of-work Events: Confirming Transactions via Recursive Elections* or *SPECTRE* protocol, which actually builds a DAG. This allows block creation in parallel. It seperates the mining protocol from the consensus protocol in that miners don't have to choose which blocks to build on top of according to the consensus rules. While the protocol suggests building new blocks on the *leaves*of the DAG, the set of unconfirmed blocks, a valid block can be build on any set of blocks in the DAG. The consensus mechanism determines the order of blocks in a second step, via a *recursive election*.
+Another evolutionary step in the development of a Block DAG was the [*Serialization of Proof-of-work Events: Confirming Transactions via Recursive Elections* - *SPECTRE* protocol](https://eprint.iacr.org/2016/1159.pdf), which actually builds a DAG structure. This allows block creation in parallel at a high rate. It seperates the mining protocol from the consensus protocol in that miners don't have to choose which blocks to build on top of according to the consensus rules. While the protocol suggests building new blocks on the *leaves* of the DAG, the set of unconfirmed blocks, a valid block can be build on any set of blocks in the DAG. The consensus mechanism determines the order of blocks in a second step, via a *recursive election*.
 
-Determining an order throughout the blocks is an important step. If two blocks contain conflicting transactions, you want the transaction made first to be the valid one and have the double spend transaction rejected. Each block is casting a vote on the order, and the tally result determines the final order. The blocks don't really contain a vote on the order themselves, but all nodes storing a copy of the DAG can compute a vote on behalf of each block according to the protocol.
+Determining an order throughout the blocks is an important step. If two blocks contain conflicting transactions, you want the transaction made first to be the valid one and have the double spend transaction rejected. The recursive election is a type of voting scheme.
+
+> " In this voting scheme, each block will identify a preference ordering over pairs of blocks based on which block they believe occurred first. The final ordering is taken as a majority vote on pairwise orderings across all blocks." - Drew Stone
  
 +++ graphic recursive election
 
-Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol. First, the blocks that reference only one of the two blocks cast a vote. Blocks 6, 7 and 8 don't reference *Y* at all, so they for *X*. Blocks 9, 10 and 11 don't reference, or don't *see*, block *X*, so they vote for *Y*.
+Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol. First, the blocks that reference only one of the two blocks cast a vote on which block came first. Blocks 6, 7 and 8 don't reference *Y* at all, so they for *X*. Blocks 9, 10 and 11 don't reference, or don't *see*, block *X*, so they vote for *Y*.
 
 Next, the blocks that have a connection to both blocks in question cast a vote. Block 12 references both, *X* and *Y*, and therefore takes itself out of the equation. It looks at the blocks it references and which have a connection to *X* and *Y* (6, 7, 8, and 9) and adapts the majority vote, which is 3 to 1 for *X*.
 All blocks (1-5) which preceded the two blocks in question adapt the majority vote of the other blocks. 
 If there is a tie situation, the next block that is added to the DAG determines the order, just like in a fork of a blockchain.
 
-If a malicious miner were to mine hidden blocks only to reveal them later, they would have no references and therefore would always be voted on as coming last. This makes double spend attacks much harder.
+If a malicious miner were to mine hidden blocks only to reveal them later, they would have no references and therefore would always be voted on as coming last. This makes double spend attacks much harder, even if an attacker controls a large share of the hash power. 
 
-"SPECTRE prioritizes quickness over powerfulness in terms of sheer mining power."\\
+A weakness of the SPECTRE approach to ordering blocks is that it cannot guarantee linear block ordering. Although great effort is put into avoiding this, the [*Condorcet's Paradox*](https://en.wikipedia.org/wiki/Condorcet_paradox) which origins in social choice theory, can occur with the recursive election approach. It is a situation where a majority vote can order A < B, B < C, and yet C < A.
 
+Because linear block ordering cannot be guaranteed, the protocol doesn't satisfy the *liveness* property. *Liveness* and *safety* are properties distributed systems must display in order to securely support a cryptocurrency. More complex use cases like [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) are completely incompatible with SPECTRE.
 
-Although great efffort is put into avoiding this, the Condorcet's Paradox **TKKG**, only weak liveness
-
-
-
-
-"To execute a double-spend, a 50\% attacker’s main objective is to overwrite, previously written blocks. In order to do so, an attacker is incentivized to dedicate all its computational power to the blockchain it wants to extend. Since the consensus rule is resolved by subtrees and not chains however, the attacker can never reliably extend an attacker chain without consistently contributing to the honest blockchain." - spectre overview medium
-
-
-"started by analyzing Bitcoin’s longest chain rule and GHOST’s heaviest subtree rule. These protocols built tree structures by design and \textbf{differed primarily in fork selection}. The first blockDAG protocol that we looked at, SPECTRE, abstracts away from this to build a directed acyclic graph structure over blocks. It provides separate mechanisms for mining and consensus on valid transactions, which allows the end user an extra dosage of freedom in the transactions they want to accept./ phantom overview medium\\
-
-Spectre "there is no guarantee that any linear ordering over blocks and transactions exists without double-spend transactions."\\
+Aviv Zohar, co-author of all protocols mentioned in this article, gave a presentation on GHOST and SPECTRE at the 6th Technion Summer School on Cyber and Computer Security that you [can find here](https://www.youtube.com/watch?v=5mEaBXl3BMM). He also wrote a detailed [summary of SPECTRE](https://medium.com/@avivzohar/the-spectre-protocol-7dbbebb707b5) on Medium.
 
 #### PHANTOM
 
-[PHANTOM](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475)
+The last protocol worth mentioning in the context of Block DAGs is the [PHANTOM protocol](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475). It can guarantee linear block ordering and therefore satifies the liveness condition at the expense of speed. Speed relates to the time it takes all nodes on the network to reach consensus.
 
-"PHANTOM sacrifices speed for the ability to totally order blocks and transactions." security assumption based on min of 50\% honest miners\\
-
-Instead of pairwise ordering (which allowed the Condorcet's Paradox to occur) PHANTOM uses clusters to order blocks
-
-
+The security assumptions for PHANTOM are based on an honest majority of peers. The mechanism used to establish a final block ordering is first defining a cluster of blocks in the DAG. Finding this cluster is an [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness), which means it cannot directly be solved but needs to be approximated. Once these clusters are defined (or approximated), a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) is performed to establish an order. The details of this algorithm extend the scope of this article. If you are interested, we refer you to the actual [paper](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475) of the protocol or a [detailed summary](https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7) written by Drew Stone.
 
 ### Our Block-DAG Protocol
 
 **Shorten this**
 
-There will also be miners in our Block-DAG protocol that perform the Proof-of-Work. 
-
-Algo: Mining node collects set all leaves, $B$. Includes $B$ in header of their block $b$ and compute hashes $h$ until they find an $h \leq \text{target}$. Once found they broadcast $b$.\\
-
-"The mining is similar to a regular POW blockchain. A miner begins creating a block by collecting the leaves of the DAG that do not contain conflicting transactions. Two conflicting transactions would try to perform a double spend. Next, the miner collects the unconfirmed transactions from the mempool and verifies their validity. Finally, the miner combines the references to the set of leaf blocks they see. The miner forms unconfirmed transactions into a new block and starts working on finding a valid proof-of-work. If the miner receives a new block before finding a solution they drop the block and start over again. If the miner finds a valid POW before receiving another block, they will broadcast the block with its proof to the network.\\
-
-You might ask yourself why a miner would drop their block instead of continuing to work on it. This is because Proof-of-Work is approximation-free. There is no "being close" to finding a solution to the Proof-of-Work, you have either found one or not. No matter how much time a miner has spent finding a solution to a block, the chances of finding a solution with the next attempt don't change if the miner switches to finding a solution for a different block.\\
-
-We are expecting more independent miners because there will be less need to join mining pools with an overall greater number of blocks mined at a lower difficulty. This leads to a greater decentralization with regards to the distribution of newly mined coins. We talk about the mining difficulty later in this article."\\
-
-
-
-
-With a change in the data structure, the incentive system needs to be adjusted as well. A difference in the reward structure of our DAG compared to a blockchain is that not only the miner that solves a block gets a reward for that particular block but also a number of miners that confirm that block, later on, will receive a reward. This incentivizes the miners to reference all unreferenced blocks. Newly created blocks that are not referenced yet are called leaves of the DAG.
-
-Mining in the Horizen Block-DAG will be similar to traditional mining but we expect more blocks to be mined in total with an overall lower difficulty which should lead to greater mining decentralization as fewer miners will need to join mining pools.
-
-![leaves](/assets/post_files/horizen/advanced/block-dag/leaves_D.jpg)
-![leaves](/assets/post_files/horizen/advanced/block-dag/leaves_M.jpg)
+With a change in the data structure, form linear chain to DAG, the incentive system needs to be adjusted as well. A difference in the reward structure of our DAG compared to a blockchain is that not only the miner that solves a block gets a reward for that particular block but also a number of miners that confirm that block, later on, will receive a reward. This incentivizes the miners to reference all *leaves*. 
 
 In a DAG there is a slightly more complex algorithm than the Longest Chain Rule determining the validity of two conflicting blocks, based on how often they were confirmed. The basic principle of the Longest Chain Rule or Nakamoto Consensus remains. The more confirmations a block in the DAG has, the higher the probability of it being the valid block out of two conflicting ones.
 
 ### Difficulty Adjustment
 
-The difficulty determines how hard it is to create a new block by adjusting the *target* based on the average block production time. This affects how many blocks are created in a given amount of time. 
+Mining in the Horizen Block-DAG will be similar to traditional mining but we expect more blocks to be mined in total with an overall lower difficulty which should lead to greater mining decentralization as fewer miners will need to join mining pools. The difficulty determines how hard it is to create a new block by adjusting the *target* based on the average block production time. This affects how many blocks are created in a given amount of time. 
 
-For a Block-DAG not only on the time it takes to mine new blocks but also the size of the last blocks can be factored in for the difficulty adjustment. When several blocks hit the block size limit in a row, this is an indicator of high network activity. In a DAG the difficulty can decrease in case of high network activity, which allows miners to produce more blocks within the same period of time. As a result, more transactions can be processed per time unit and overall throughput is increased. This mechanism allows a DAG to dynamically handle varying network activity without sacrificing security.
+For a DAG not only on the time it takes to mine new blocks but also the size of the last blocks can be factored in for the difficulty adjustment. When several blocks hit the block size limit in a row, this is an indicator of high network activity. The difficulty can decrease in case of high network activity, which allows miners to produce more blocks within the same period of time. As a result, more transactions can be processed per time unit and overall throughput is increased. This mechanism allows a DAG to dynamically handle varying network activity without sacrificing security.
 
-### The Main Challenge
+As we have learned from looking at previous attempts to build Block DAG protocols, from an engineering perspective the main challenge to solve is establishing an order throughout all blocks. Block ordering in our DAG will be based on the intersection of blocks. A valid transaction can be included in two different valid blocks. By looking at the "overlap" in transactions of a set of blocks, one can establish a final order throughout the set. 
 
-From an engineering perspective, there is one main challenge to solve with Block-DAG protocols: establishing an order throughout all blocks. While the order of blocks is always given in a linear blockchain, it needs to be established by a set of predefined rules in a DAG. Block ordering in our DAG will be based on the intersection of blocks. A valid transaction can be included in two different valid blocks. By looking at the "overlap" in transactions of a set of blocks, one can establish a final order throughout the set. 
+At this point our DAG protocol is still being researched and analysed using theoretical methods. As soon as there will be  reliable results, a paper on the protocol will be published and this article will be updated.
+
+### Summary
 
 
 ### FR
@@ -182,12 +155,5 @@ https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol
 
 https://medium.com/@avivzohar/the-spectre-protocol-7dbbebb707b5
 
-all papers
 
-Ghost: Greedy Heaviest observable sub tree \url{https://eprint.iacr.org/2013/881.pdf}\\
-
-Spectre: Serialization of Proof-of-work Events: Confirming Transactions via
-Recursive Elections \url{https://eprint.iacr.org/2016/1159.pdf}\\
-
-Phantom: \url{https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475}\\
 
