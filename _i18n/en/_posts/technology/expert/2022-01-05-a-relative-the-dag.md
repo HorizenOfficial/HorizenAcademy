@@ -13,7 +13,7 @@ One of the main engineering challenges in the blockchain space is scalability. S
 
 ### The Scalability Challenge
 
-factors affecting a protocols scalibility:
+The main factors affecting a blockchains protocol scalibility regarding transaction throughput are:
 
 - the size of a single transaction (byte)
 - the block size (byte -> transactions per block)
@@ -26,11 +26,11 @@ This can be shown with Bitcoin as an example. Whereas Bitcoin activated SegWit t
 
 The problem is the following: transaction size can only be decreased by so much, as transactions are quite compact already, and even if you could shrink a transaction to a tenth of its size, this would only increase throughput from 7 to 70 transactions per second (for Bitcoin). Not exactly Visa level. Raising the block size limit comes at the expanse of mining centralization, as fewer people can compete in the competitive mining industry, when hardware and network requirements increase. Decreasing the block interval leads to more orphaned blocks and is limited by network synchronization time across the globe. An increase in block size also increases the orphan rate because propagation time is increased linearly with it. A high rate of orphaned blocks reduce the overall security of the protocol, because honest hash power is "wasted" and does not contribute to the security of the ledger.
 
-There are generally three approaches to scalability:
-
 +++ Graphic Scaling
 
-- Second-layer technologies like [payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) which are used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
+There are generally three approaches to scalability:
+
+- Second-layer technologies like [payment- or state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) which are used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
 
 - [*Sidechain*]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) approaches, which can best be described as a parallelization of blockchains. Assets can be transferred from one chain to another via a *two-way peg* (2WP) and the transactional load is shared between the mainchain and its sidechains.
 
@@ -129,17 +129,17 @@ The security assumptions for PHANTOM are based on an honest majority of peers. T
 
 ### Our Block-DAG Protocol
 
-**Shorten this**
-
 With a change in the data structure, form linear chain to DAG, the incentive system needs to be adjusted as well. A difference in the reward structure of our DAG compared to a blockchain is that not only the miner that solves a block gets a reward for that particular block but also a number of miners that confirm that block, later on, will receive a reward. This incentivizes the miners to reference all *leaves*. 
 
 In a DAG there is a slightly more complex algorithm than the Longest Chain Rule determining the validity of two conflicting blocks, based on how often they were confirmed. The basic principle of the Longest Chain Rule or Nakamoto Consensus remains. The more confirmations a block in the DAG has, the higher the probability of it being the valid block out of two conflicting ones.
 
-### Difficulty Adjustment
+#### Difficulty Adjustment
 
 Mining in the Horizen Block-DAG will be similar to traditional mining but we expect more blocks to be mined in total with an overall lower difficulty which should lead to greater mining decentralization as fewer miners will need to join mining pools. The difficulty determines how hard it is to create a new block by adjusting the *target* based on the average block production time. This affects how many blocks are created in a given amount of time. 
 
 For a DAG not only on the time it takes to mine new blocks but also the size of the last blocks can be factored in for the difficulty adjustment. When several blocks hit the block size limit in a row, this is an indicator of high network activity. The difficulty can decrease in case of high network activity, which allows miners to produce more blocks within the same period of time. As a result, more transactions can be processed per time unit and overall throughput is increased. This mechanism allows a DAG to dynamically handle varying network activity without sacrificing security.
+
+#### Block Ordering
 
 As we have learned from looking at previous attempts to build Block DAG protocols, from an engineering perspective the main challenge to solve is establishing an order throughout all blocks. Block ordering in our DAG will be based on the intersection of blocks. A valid transaction can be included in two different valid blocks. By looking at the "overlap" in transactions of a set of blocks, one can establish a final order throughout the set. 
 
