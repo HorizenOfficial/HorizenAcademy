@@ -102,9 +102,14 @@ Determining an order throughout the blocks is an important step. If two blocks c
  
 +++ graphic recursive election
 
-Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol. First, the blocks that reference only one of the two blocks cast a vote on which block came first. Blocks 6, 7 and 8 don't reference *Y* at all, so they for *X*. Blocks 9, 10 and 11 don't reference, or don't *see*, block *X*, so they vote for *Y*.
+Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol. 
+
+**Check with Zohar Summary**
+
+First, the blocks that reference only one of the two blocks cast a vote on which block came first. Blocks 6, 7 and 8 don't reference *Y* at all, so they for *X*. Blocks 9, 10 and 11 don't reference, or don't *see*, block *X*, so they vote for *Y*.
 
 Next, the blocks that have a connection to both blocks in question cast a vote. Block 12 references both, *X* and *Y*, and therefore takes itself out of the equation. It looks at the blocks it references and which have a connection to *X* and *Y* (6, 7, 8, and 9) and adapts the majority vote, which is 3 to 1 for *X*.
+
 All blocks (1-5) which preceded the two blocks in question adapt the majority vote of the other blocks. 
 If there is a tie situation, the next block that is added to the DAG determines the order, just like in a fork of a blockchain.
 
