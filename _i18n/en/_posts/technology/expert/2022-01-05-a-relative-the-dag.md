@@ -20,17 +20,17 @@ factors affecting a protocols scalibility:
 - block time, the interval in which blocks are created (time -> blocks per time unit -> transactions per time unit)
 - propagation delay on the network (seconds)
 
-To increase the throughput of a linear blockchain on the protocol level (not through hardware improvements) one can either decrease the size of transactions themselves or the interval in which blocks are created. Alternatively, the block size can be increased.
+To increase the throughput of a linear blockchain on the protocol level (read: through software improvements) one can either decrease the size of transactions themselves or the interval in which blocks are created. Another option would be to increase the block size.
 
-This can be shown with Bitcoin as an example. Whereas Bitcoin activated SegWit to decrease the size of individual transactions, Bitcoin Cash went the other way and decided to increase the block size. The closely related Litecoin Protocol, on the other hand, reduced the block interval from 10 to 2.5 min.
+This can be shown with Bitcoin as an example. Whereas Bitcoin activated SegWit to decrease the size of individual transactions, the closely related Litecoin Protocol, on the other hand, reduced the block interval from 10 to 2.5 min. Bitcoin Cash went the other way and decided to increase the block size.
 
-The problem is the following: transaction size can only be decreased by so much, as they are quite compact already, and even if you could shrink a transaction to a tenth of its size, this would only increase throughput from 7 to 70 transactions per second (for Bitcoin). Not exactly Visa level. Increasing the block size comes at the expanse of mining centralization. Decreasing the block interval leads to more orphaned blocks and is limited by network synchronization time across the globe.
-
-**TKKG** orphaned blocks decrease security
+The problem is the following: transaction size can only be decreased by so much, as transactions are quite compact already, and even if you could shrink a transaction to a tenth of its size, this would only increase throughput from 7 to 70 transactions per second (for Bitcoin). Not exactly Visa level. Raising the block size limit comes at the expanse of mining centralization, as fewer people can compete in the competitive mining industry, when hardware and network requirements increase. Decreasing the block interval leads to more orphaned blocks and is limited by network synchronization time across the globe. An increase in block size also increases the orphan rate because propagation time is increased linearly with it. A high rate of orphaned blocks reduce the overall security of the protocol, because honest hash power is "wasted" and does not contribute to the security of the ledger.
 
 There are generally three approaches to scalability:
 
-- Second-layer technologies like [payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
++++ Graphic Scaling
+
+- Second-layer technologies like [payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) which are used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
 
 - [*Sidechain*]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) approaches, which can best be described as a parallelization of blockchains. Assets can be transferred from one chain to another via a *two-way peg* (2WP) and the transactional load is shared between the mainchain and its sidechains.
 
@@ -38,57 +38,86 @@ There are generally three approaches to scalability:
 
 ### What is a DAG
 
-Strictly speaking a DAG are a mathematical concept and nothing new. The structure on the far left of the image below is a simple graph made up of nodes, or *vertices*, and *edges* connecting the vertices. In a directed graph each edge has a direction, indicated by the arrows. A directed acyclic graph (DAG) does not allow cyclic relationships of nodes like the one you can see in the bottom part of the directed graph in the middle. In technical terms one would say the Graph *G = (V, E)* is defined as the set of vertices *V* and edges *E*. DAGs allow *topological sorts*, an ordering of vertices in the graph *G* which are connected by an *edge* to have a defined order. 
+Strictly speaking a DAG is a mathematical concept and nothing particularly innovative in an of itself. The structure on the  left in the image below is a *graph* made up of *nodes*, or *vertices*, and *edges* connecting the vertices. In a *directed graph* each edge has a direction, indicated by the arrows. A *directed acyclic graph* (DAG) does not allow cyclic relationships of nodes, like the one you can see in the bottom part of the directed graph in the middle. In technical terms one would say the Graph *G = (V, E)* is defined as the set of vertices *V* and edges *E*. DAGs allow *topological sorts*, an ordering of vertices in the graph *G* connected by *edges*, because edges have a direction in the time dimension. 
 
 ![DAG](/assets/post_files/horizen/advanced/block-dag/dag_D.jpg)
 ![DAG](/assets/post_files/horizen/advanced/block-dag/dag_M.jpg)
 
-Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes and edges that have a direction on no cyclic relationships. The **innovation** (ref Protocol section) introduced with Bitcoin and blockchain technology in general was achieving consensus in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
+Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes (the blocks), and edges (the references) that have a direction on no cyclic relationships. The [**innovation**]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) introduced with Bitcoin and blockchain technology in general was achieving consensus and Sybil-resistance in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
 
 > "Both [, Blockchains and DAGs,] are digital ledgers. Both may be distributed. Both may be decentralized. Both may have token-economic incentive-mechanisms. They are both subject to immutability attributes as defined by their networks/communities. And finally each network is comprised by its constituents, including users, devs, miners, and other stakeholders" - Bunny Hernandez
 
-There are two different ways to set up a DAG to be used for a cryptocurrency. The nodes can be comprised of individual transactions or they can be blocks containing a number of transactions. The first notable DAG protocol was IOTA's [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). In the Tangle, each node is made up of a transaction. Each transaction references two prior transactions and has a small [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-proof-of-work %}) attached to it. 
+There are two different ways to set up a DAG to be used to run a cryptocurrency. The nodes can comprise individual transactions or they can be blocks, containers for a set of transactions. The first notable DAG protocol was IOTA's [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). In the Tangle, each node is made up of a transaction. Each transaction references two prior transactions and has a small [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-proof-of-work %}) attached to it. 
 
-Horizen is considering the use of a Block-DAG protocol. Each node in the DAG is a block, similar to a block in the blockchain. It also consists of a  block header and a set of transactions. The main difference, when compared to a block in a blockchain, is that a block in the Block-DAG can contain references to more than one predecessors. This allows the [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) to become two-dimensional when compared to the one-dimensional or linear data structure of a blockchain. We only change the data structure compared to a blockchain but keep the same consensus mechanism, Proof-of-Work with an adapted form of the longest chain rule or Nakamoto Consensus to have the network agree on a single transaction history.
+Horizen is considering the use of a Block-DAG protocol. Each node in the DAG is a block, similar to a block in the blockchain. It also consists of a  block header and a set of transactions. The main difference, when compared to a block in the blockchain, is that a block in the Block-DAG can contain references to more than one predecessors. 
 
 ![chain DAG](/assets/post_files/horizen/advanced/block-dag/chain_dag_D.jpg)
 ![chain DAG](/assets/post_files/horizen/advanced/block-dag/chain_dag_M.jpg)
 
-### Block-DAGs
+This allows the [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) to become two-dimensional when compared to the one-dimensional or linear data structure of a blockchain. We change the data structure compared to a blockchain and have to adapt the consensus mechanism, the *longest chain rule* (more precisely the *heaviest chain rule*) or Nakamoto Consensus to have the network agree on a single transaction history.
+The *sybil-resistance mechanism*, Proof-of-Work remains the same.
 
-ghost -> spectre -> phantom
+### Consensus vs. Sybil Resistance
 
+**Maybe have this section somewhere else and ref to it**
 
+We would like to introduce a distinction between *consensus mechanisms* and a *Sybil-resistance mechanisms* at this point. Most likely you came across the terms [*Proof-of-Work*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-proof-of-work %}) (PoW), [*Proof-of-Stake*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-052-proof-of-stake %}) (PoS) or [Proof-of-*something-else*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-053-other-consensus-mechanisms %}) labeled as consensus mechanisms before. We are guilty of using that label ourselves, for it has become a convention that we used to reduce confusion, against our better knowledge.
+
+PoW and it's realtives are actually Sybil-resistance mechanisms. In a **Sybil Attack**, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results. 
+
+Sybil-resistance mechanism prevent this by tying an entities voting power to a scarce resource, that is harder to obtain than fake user-accounts or IP-addresses. 
+
+In PoW the scarce resource voting power is tied to is computational power. Your voting power is the share of computing power you control, relative to the total computing power of the network.
+In PoS, your voting power is tied to the share of native currency you own, relative to the circulating supply on the network, or more precisely, to the actually *staked* supply on the network.
+
+While these mechanisms prevent malicious actors from exerting undue influence on the network, they don't help achieving consensus on a single transaction history in and off themselves. This is what the actual consensus mechanism does. In most cases this is the longest-chain rule (heaviest-chain rule), also called Nakamoto Consensus. The term heaviest chain rule is more precise, as the rule is defined by the amount of aggregated work that went into building a branch, rather than the number of blocks. Theoretically, there could be a fork with two branches, where the shorter branch has more aggregate work to it. In this case the shorter branch would be considered valid. In practice, this does not make much of a difference because there is little to no variety in the PoW attached to blocks on major blockchains.
+
+This little excursion should prove valuable to following along on a short history of Block DAG protocols.
+
+### Block DAGs
+
+**Note:** there are no production level block DAG protocols in existence today. This article is meant to lay out the considerations that go into building such a protocol, rather than the actual implementation details. 
 
 #### GHOST
 
-A first step in the development of Block-DAGS was the [Ghost Protocol](https://eprint.iacr.org/2013/881.pdf). The Greedy Heaviest Observable Sub Tree (GHOST)
+A first step towards Block-DAG protocols was the [*Greedy Heaviest Observable Sub Tree* (GHOST) Protocol](https://eprint.iacr.org/2013/881.pdf). The consensus mechanism in GHOST is not based on the longest-chain criterion. Instead, the subtree with the greatest combined Proof-of-Work or difficulty is considered the valid branch by protocol design. 
 
-aggregate chain work vs aggregate subtree work
+++++ Graphic Ghost 
 
-++++ Ghost image
+A more intuitive description might be finding the subtree of greatest cardinality (here we make the same assumption as before when distinguishing between longest- and heaviest-chain rule). The structure on the image above is moving into DAG territory, rather than just being a blockchain with orphaned blocks (also there is no such clear distinction). Technically, it is still a *tree* and not a DAG though. The two differ in trees being able to branch off in the direction of the edges, but branches not merging together later on. DAGs on the other hand can do both, branch off and merge.
 
-with dags liveness is easy but persistence is the challenge\\
+++++ Graphic tree vs GAG
 
-"To execute a double-spend, a 50\% attacker’s main objective is to overwrite, previously written blocks. In order to do so, an attacker is incentivized to dedicate all its computational power to the blockchain it wants to extend. Since the consensus rule is resolved by subtrees and not chains however, the attacker can never reliably extend an attacker chain without consistently contributing to the honest blockchain." - spectre overview medium
+In the beginning of this article we said decreasing the blocktime and increasing the block size leads to a higher orphan rate and reduced security. In GHOST, [this effect is eliminated](https://medium.com/@drstone/an-overview-of-proof-of-work-based-blockchain-consensus-protocols-part-1-e04102885093) by introducing a different mechanism to elect valid forks. An attacker would also need to control more relative hash power to perform double spends (>51%), than he would need to with the longest chain rule (51%) as consensus mechanism.
 
+> "Each of these mechanisms share similar quantitative notions of a blocks aggregate proof of work/hash power but differ qualitatively: aggregate chain work vs aggregate subtree work." - Drew Stone
 
-block throughput and block size can be increased without reducing security. but, implementation more complex (???)
+#### SPECTRE
 
-#### SPECRTE
+Another evolutionary step in the development of a Block DAG was the *Serialization of Proof-of-work Events: Confirming Transactions via Recursive Elections* or *SPECTRE* protocol, which actually builds a DAG. This allows block creation in parallel. It seperates the mining protocol from the consensus protocol in that miners don't have to choose which blocks to build on top of according to the consensus rules. While the protocol suggests building new blocks on the *leaves*of the DAG, the set of unconfirmed blocks, a valid block can be build on any set of blocks in the DAG. The consensus mechanism determines the order of blocks in a second step, via a *recursive election*.
 
-[SPECTRE]https://eprint.iacr.org/2016/1159.pdf
+Determining an order throughout the blocks is an important step. If two blocks contain conflicting transactions, you want the transaction made first to be the valid one and have the double spend transaction rejected. Each block is casting a vote on the order, and the tally result determines the final order. The blocks don't really contain a vote on the order themselves, but all nodes storing a copy of the DAG can compute a vote on behalf of each block according to the protocol.
+ 
++++ graphic recursive election
 
-With SPECTRE mining and consensus seperated. leads to weak liveness (\textbf{why?}). Property of TX being included at some point.
+Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol. First, the blocks that reference only one of the two blocks cast a vote. Blocks 6, 7 and 8 don't reference *Y* at all, so they for *X*. Blocks 9, 10 and 11 don't reference, or don't *see*, block *X*, so they vote for *Y*.
+
+Next, the blocks that have a connection to both blocks in question cast a vote. Block 12 references both, *X* and *Y*, and therefore takes itself out of the equation. It looks at the blocks it references and which have a connection to *X* and *Y* (6, 7, 8, and 9) and adapts the majority vote, which is 3 to 1 for *X*.
+All blocks (1-5) which preceded the two blocks in question adapt the majority vote of the other blocks. 
+If there is a tie situation, the next block that is added to the DAG determines the order, just like in a fork of a blockchain.
+
+If a malicious miner were to mine hidden blocks only to reveal them later, they would have no references and therefore would always be voted on as coming last. This makes double spend attacks much harder.
 
 "SPECTRE prioritizes quickness over powerfulness in terms of sheer mining power."\\
 
 
-++++ recursive voting graphic
+Although great efffort is put into avoiding this, the Condorcet's Paradox **TKKG**, only weak liveness
 
-SPECTRE pairwise ordering through recursice voting. "The authors of SPECTRE make it clear that the pairwise ordering relation is not transitive, i.e. not always a linear ordering. The idea is that some DAG states may exhibit cases of [Condorcet’s Paradox](https://en.wikipedia.org/wiki/Condorcet_paradox), a paradox in social choice theory around cycles of pairwise preferences."
 
-Without proper ordering throughout all pairs of blocks - complete vs. weak liveness - SPECTRE cannot support cryptocurrency networks where strict ordering among TXs is necessary.\\
+
+
+"To execute a double-spend, a 50\% attacker’s main objective is to overwrite, previously written blocks. In order to do so, an attacker is incentivized to dedicate all its computational power to the blockchain it wants to extend. Since the consensus rule is resolved by subtrees and not chains however, the attacker can never reliably extend an attacker chain without consistently contributing to the honest blockchain." - spectre overview medium
+
 
 "started by analyzing Bitcoin’s longest chain rule and GHOST’s heaviest subtree rule. These protocols built tree structures by design and \textbf{differed primarily in fork selection}. The first blockDAG protocol that we looked at, SPECTRE, abstracts away from this to build a directed acyclic graph structure over blocks. It provides separate mechanisms for mining and consensus on valid transactions, which allows the end user an extra dosage of freedom in the transactions they want to accept./ phantom overview medium\\
 
@@ -100,10 +129,13 @@ Spectre "there is no guarantee that any linear ordering over blocks and transact
 
 "PHANTOM sacrifices speed for the ability to totally order blocks and transactions." security assumption based on min of 50\% honest miners\\
 
+Instead of pairwise ordering (which allowed the Condorcet's Paradox to occur) PHANTOM uses clusters to order blocks
 
 
 
-### The Miners of a Block-DAG
+### Our Block-DAG Protocol
+
+**Shorten this**
 
 There will also be miners in our Block-DAG protocol that perform the Proof-of-Work. 
 
@@ -135,4 +167,27 @@ For a Block-DAG not only on the time it takes to mine new blocks but also the si
 
 ### The Main Challenge
 
-From an engineering perspective, there is one main challenge to solve with Block-DAG protocols: establishing an order throughout all blocks. While the order of blocks is always given in a linear blockchain, it needs to be established by a set of predefined rules in a DAG. Block ordering in our DAG will be based on the intersection of blocks. A valid transaction can be included in two different valid blocks. By looking at the "overlap" in transactions of a set of blocks, one can establish a final order throughout the set.
+From an engineering perspective, there is one main challenge to solve with Block-DAG protocols: establishing an order throughout all blocks. While the order of blocks is always given in a linear blockchain, it needs to be established by a set of predefined rules in a DAG. Block ordering in our DAG will be based on the intersection of blocks. A valid transaction can be included in two different valid blocks. By looking at the "overlap" in transactions of a set of blocks, one can establish a final order throughout the set. 
+
+
+### FR
+
+new analysis framework for blockchain protocols focusing on trees of blocks as opposed to chains: On Trees, Chains and Fast Transactions in the Blockchain https://eprint.iacr.org/2016/545.pdf
+
+https://medium.com/@drstone/an-overview-of-proof-of-work-based-blockchain-consensus-protocols-part-1-e04102885093
+
+https://medium.com/@drstone/an-overview-of-spectre-a-blockdag-consensus-protocol-part-2-36d3d2bd33fc
+
+https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7
+
+https://medium.com/@avivzohar/the-spectre-protocol-7dbbebb707b5
+
+all papers
+
+Ghost: Greedy Heaviest observable sub tree \url{https://eprint.iacr.org/2013/881.pdf}\\
+
+Spectre: Serialization of Proof-of-work Events: Confirming Transactions via
+Recursive Elections \url{https://eprint.iacr.org/2016/1159.pdf}\\
+
+Phantom: \url{https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475}\\
+
