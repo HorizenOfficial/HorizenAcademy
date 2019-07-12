@@ -125,7 +125,13 @@ Aviv Zohar, co-author of all protocols mentioned in this article, gave a present
 
 The last protocol worth mentioning in the context of Block DAGs is the [PHANTOM protocol](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475). It can guarantee linear block ordering and therefore satifies the liveness condition at the expense of speed. Speed relates to the time it takes all nodes on the network to reach consensus.
 
-The security assumptions for PHANTOM are based on an honest majority of peers. The mechanism used to establish a final block ordering is first defining a cluster of blocks in the DAG. Finding this cluster is an [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness), which means it cannot directly be solved but needs to be approximated. Once these clusters are defined (or approximated), a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) is performed to establish an order. The details of this algorithm extend the scope of this article. If you are interested, we refer you to the actual [paper](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475) of the protocol or a [detailed summary](https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7) written by Drew Stone.
+The security assumptions for PHANTOM are based on an honest majority of peers. The mechanism used to establish a final block ordering is first defining a cluster of blocks in the DAG. Finding this cluster is an [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness), which means it cannot directly be solved but needs to be approximated. Once these clusters are defined (or approximated), a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) is performed to establish an order. 
+
+**TKKG** lay out approach, add graphic. one section max. to complex, unneccessary
+
+Because PHANTOM allows for linear block ordering, the protocol is suitable for advanced applications such as smart contracts. In order to correctly execute a smart contract.
+
+The details of this algorithm extend the scope of this article. If you are interested, we refer you to the actual [paper](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475) of the protocol or a [detailed summary](https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7) written by Drew Stone.
 
 ### Our Block-DAG Protocol
 
