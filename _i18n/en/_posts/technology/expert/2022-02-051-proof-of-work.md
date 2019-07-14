@@ -12,6 +12,9 @@ published: false
 
 ## Consensus in Distributed Systems
 
+Intro: Not sure if one ever fully understands consensus, so many intricacies, so multidisciplinary. (?)
+
+
 Def distributed Systems:
 
 set of processes/computers trying to achieve common goal through coordination and communication. The gommon goal can be facilitating a system to exchange files or to enable a global digital form of money.
@@ -74,6 +77,13 @@ Safety if all non-faulty processes agree on the same output/agrees on a new glob
 Liveness simple explanation: system doesn't stall. Every non-faulty process eventually decides on some output/eventually computes a new state.
 
 #### pBFT
+
+https://blockonomi.com/practical-byzantine-fault-tolerance/
+http://pmg.csail.mit.edu/papers/osdi99.pdf
+
+"It requires a lot of communication overhead between participants, so it is only practical for small groups." - on consensus
+
+"Since the participants must be identified, pBFT is not open and permissionless, but rather a permission based system."
 
 Asynchronous and Byzantine Fault Tolerant for security
 Liveness only under sychrony assumptions
