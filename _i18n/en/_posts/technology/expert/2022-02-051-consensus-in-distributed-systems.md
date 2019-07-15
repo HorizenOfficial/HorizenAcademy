@@ -63,33 +63,56 @@ As you can imagine, building a distributed system (which relies on communication
 
 To recap: We want to use a distributed system for its resilience and lack of single points of failure. Our System needs to handle the individual components failing, through either crash, omission or Byzantine behavior. It also needs to handle the communication in an unreliable environment, so at least a *partially sychronous* message propagation, where delivery time is bound, but unknown or - even better - a  *asynchronous* environment, where one cannot be sure if messages ever arrive, or in which order they will arrive.
 
-#### Different tiers of "Fault-Tolerance"
+#### The Different Levels of "Fault-Tolerance"
 
-* (Simple) Fault-Tolerance: Nodes work or crash
-* Byzantine Fault-Tolerance: Nodes may display byzantine or malicious behavior but the system still achieves it's goal
-* Byzantine-Altruistic-Rational Fault-Tolerance (some count it in, but addressed via incentives rather than system design)
+Depending on which assumptions one uses to design a system, the result can display different levels of fault-tolerance. If the system assumes that all nodes either function and follow the protocol or crash-fail, the system is *Simple Fault-Tolerant*. Depending on the context, this might be a sufficiently safe assumption. In a permissioned network, e.g. with the production line of a factory, one does not have to account for malicious behavior.
 
-consensusnode_failure
+A system that can also handle the random and malicious behavior of a *byzantine* participant, is called *Byzantine Fault-Tolerant*. Because we want blockchains to be permissionless so that anybody can join the network at will, we have to account for malicious actors that will try to game the system. This means we do require a BFT consensus mechanism.
 
-### Replicated State Machine
+Sometimes you might also hear the term BAR-FT - *Byzantine-Altruistic-Rational Fault Tolerance*. Participants in a permissionless network can be one of three things: 
 
-Many types of hardware and Software architectures for distributed computing. Most common model: *Replicated State Machine*
+- byzantine or malicious
+- altruistic or honest
+- or rational 
 
-- defined by what it does, not by how it is achieved (?)
-- deterministic, each state transition has finality
-- TX is atomic operation. It either succeeds or fails.
-- transactions/messages cause state transition defined by *state transission logic*
-- each process computes new state
-- all of them must agree (safety)
-- must accept state transitions (linevess)
-- challenges from above apply
+Rational means that they will follow the protocol, as long as it is the most profitable strategy for them. If deviation from the protocol is more profitable for them, they will deviate. In the context of blockchains this is addressed via the incentive design, rather then the consensus mechanism. The two are closely related and connected and therefore can't be viewed in isolation.
 
-Definition of consensus: *Agreement* (same state) and *Termination* (state transition eventually happens).
-Sometimes also validity: all processes decide on a value that is valid given the process’s input value
+As we said before, building a system under the assumption that communication between nodes works flawlessly makes things significantly more easy. Therefore, the level auf fault-tolerance a system achieves has to be evaluated based on the underlying assumption for the message propagation model. 
 
-**Byzantine Tolerant consensus mechanism, that works in an asynchronous environment, and can guarantee agreement/safety as well as termination/liveness is holy grail in distributed computing**
+The holy grail of consensus mechanisms is to achieve consensus in an environment with malicious actors and an unreliable message propagation protocol. Using the terminology we just introduced, this means achieving consensus in a  *Byzantine Fault-Tolerant* system in an *asynchronous* environment.
 
-"In their 1985 paper “Impossibility of Distributed Consensus with One Faulty Process,” researchers Fischer, Lynch, and Paterson (aka FLP) show how even a single faulty process makes it impossible to reach consensus among deterministic asynchronous processes."
+### What is Consensus?
+
+Before we move on it is time to precisely define what "achieving consensus" actually means. Although most of you might have an intuition for what consensus is by now, from this point onwards it will be handy to have an exact definition, so that we can evaluate potential candidates for a suitable consensus mechanism objectively. To establish a clear definition it helps to introduce a simplified model of a blockchain - the *finite state machine*. It is a mathematical model of computation. It does does away with the complexity of the blockchain and reduces the functionality to the core.
+
+A *finite state machine* starts in a *initial state* and can be in one state at any given time. A state *transition*  happens in response to some external event. The *state transition logic* defines how a new state is computed based on a given external event. An event, a message or a transaction is an *atomic event*: It either succeds, or it fails completely. In the context of distributed systems, one speaks of a *replicate state machine* if all nodes on the network are ident copies of each other.
+
+Consensus between the different nodes of a replicate state machine can be defined via two properties: *liveness* and *safety*.
+
+- *Liveness* (or *termination*) means that all non-faulty nodes eventually compute a new state according to the state transition logic when an external event happens. In simple terms it means, the system doesn't halt and reacts to events.
+
+- *Safety* (or *agreement*) means that all non-faulty nodes transition to the same state after a given external event. This means, all nodes will be in synch eventually. 
+
+A blockchain can be viewed a replicate state machine in that it also starts with an initial state - the genesis block. The external events in a blockchain are transactions between users. State transitions happen in intervals - one transition with each new block. All non-faulty nodes reach a new state eventually (liveness), and all nodes agree on a new block (safety). With this new terminology, we can refine our definition of the holy grail of consensus mechanisms:
+
+**Building a Byzantine Fault-Tolerant consensus mechanism, that works in an asynchronous environment, and can guarantee safety as well as liveness is the holy grail in distributed computing.**
+
+Alright, now we know what consensus means and what kind of failures a robust consensus mechanism has to tolerate. But how do we get there?
+
+### Designing Consensus Mechanisms
+
+While one might think all this is cutting edge stuff from the 21st century, people have been studying distributed consensus for decades! A milestone in the exploration of distributed computation was a paper from 1985 written by Fischer, Lynch and Paterson witht the title “*Impossibility of Distributed Consensus with One Faulty Process*” 
+
+
+
+
+show how even a single faulty process makes it impossible to reach consensus among deterministic asynchronous processes."
+
+explain determinism
+explain synchrony (again)
+
+this stands, so what do we do? Give up?
+
 
 Approach 1: change synchrony assumptions
 Approach 2: use non-determinism
