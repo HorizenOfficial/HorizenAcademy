@@ -101,59 +101,59 @@ Alright, now we know what consensus means and what kind of failures a robust con
 
 ### Designing Consensus Mechanisms
 
-While one might think all this is cutting edge stuff from the 21st century, people have been studying distributed consensus for decades! A milestone in the exploration of distributed computation was a paper from 1985 written by Fischer, Lynch and Paterson witht the title “*Impossibility of Distributed Consensus with One Faulty Process*” 
+While one might think all this is cutting edge stuff from the 21st century, people have been studying distributed consensus for decades! A milestone in the exploration of distributed computing was a paper from 1985 written by Fischer, Lynch and Paterson with the title “*Impossibility of Distributed Consensus with One Faulty Process*”.
+
+It concluded that a single faulty process can make it impossible to reach *deterministic consensus* in an asynchronous environment. We already know that asynchronity refers to the network being unreliable in terms of consistent message propagation. But what does deterministic mean in this context?
+
+Deterministic consensus means every state transition has instant finality. When nodes compute a new state (liveness) and agree on it (safety) they can be 100% certain that this state is final and won't change anymore.
+
+#### Assuming Synchrony
+
+The findings of Fischer, Lynch and Paterson hold, so one has two options to reach Byzantine Fault-Tolerance in a distributed system: One can use synchrony assumptions or one can follow a non-deterministic approach to consensus. In first attempts to solve the dilemma, researcherd tried to work with synchrony assumptions.
+
+##### Paxos
+
+One of the early attempts to reaching distributed consensus was the [*Paxos* protocol family](https://en.wikipedia.org/wiki/Paxos_(computer_science)?source=post_elevate_sequence_page). Paxos achieves consensus in an asynchronous settings, but can not handle Byzantine behavior. Transitioning from one state to another requires a lot of communication overhead. The transition logic happens in three steps comprising a preparation phase, and accepting phase, and lastly a learning phase.
+
+If a transition fails or halts, there is a timeout mechanism after which the process restarts. Because of the multi-step process of state transitions, Paxos is hard to understand as well as hard to implement.
+
+##### Raft
+
+[*Raft*](https://raft.github.io/?source=post_elevate_sequence_page) was another consensus mechanism published in 2013. It set out to be more easy to understand and implement than Paxos. It also uses timeouts in case a state trasition fails and can therefore handle asynchrocnous environments. But just like Paxos it fails to achieve consensus with Byzantine actors and is only simple fault-tolerant. Handling Byzantine bahivor is so much more difficult, because parties can not only be live or offline, but can also lie, coordinate or act arbitrarily.
+
+The challenge of handling Byzantine actors is widely researched. It is referred to as [*The Byzantine Generals Problem*](https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf?source=post_elevate_sequence_page) in a paper by Lamport, Shostak and Pease. A major contribution of their work was precisely defining the number of Byzantine Nodes a system can handle and still reach consensus. This calculation comes down to less than a third of the nodes: *(n-1)/3* where *n* is the total number of nodes.
+
+The argumentation is easy. If *x* is the number of byzantine nodes, the system must work if they are unresponsive, so with *(n-x)* nodes. But it's possible that the unresponsive nodes suffered from crash-faults and all *x* byzantine nodes are live. In this case *(2x)* nodes are not unresponsive or byzantine. Because a majority of honest nodes is required to achieve consensus we need a total of *n = 3x + 1* nodes, which in turn means *(n-1)/3* nodes can be byzantine.
+
+What we have learned from looking at Paxos, Raft and the Byzantine Generals problem is that handling byzantine behavior in a asynchronous environment is a hard problem. Furthermore, we learned that the threshold for the maximum share of byzantine participants on the network is rather low at one third of the total node count.
+
+##### DLS
+
+When we talked about the different assumptions for the network reliability, we mentioned the *partially synchronous* model, where messages are assumed to be delivered in *bounded time*, but the *bound* is unknown. This model was introduced with the [*DLS algorithm*](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) after Dwork, Lynch and Stockmeyer. It also introduced the terms liveness and safety that we already introduced. Liveness is the property of the system working and not coming to a halt in case of failures, while safety was the agreement of the network on a single current state.
 
 
-
-
-show how even a single faulty process makes it impossible to reach consensus among deterministic asynchronous processes."
-
-explain determinism
-explain synchrony (again)
-
-this stands, so what do we do? Give up?
-
-
-Approach 1: change synchrony assumptions
-Approach 2: use non-determinism
-
-#### Approach 1: change synchrony assumptions
-
-- Paxos/Raft: consensus in asynchronous environment (through timeout and a sort of restart) but not Byzantine.
-- DLS: Byzantine and in *partially synchronous* environment
-
-DLS introduced safety/liveness
-
-Safety if all non-faulty processes agree on the same output/agrees on a new global state, system stays in synch. A violation means more than one valid chain. Chain split/network segregation
-
-Liveness simple explanation: system doesn't stall. Every non-faulty process eventually decides on some output/eventually computes a new state.
+The DLS algorithm contributed greatly to the development of consensus research, in that it established a new network model (partial synchrony) and achieved safety and liveness in a byzantine environment. It however failed to do so in an asynchronous setting and it also came with a non-starter that led to it never being implemented in a meaningful way. It assumed a synchronized clock between all nodes, an assumption that is just not realistic in a permissionless system.
 
 #### pBFT
 
-https://blockonomi.com/practical-byzantine-fault-tolerance/
-http://pmg.csail.mit.edu/papers/osdi99.pdf
+In 1999 yet another consensus algorithm was published - [*practical Byzantine Fault-Tolerance*](http://pmg.csail.mit.edu/papers/osdi99.pdf) (pBFT) by Castro and Liskov. It got pretty close to achieving the end goal: handling malicious actors in an unreliable communication network while ensuring safety and liveness. We used the distinction between *consensus* and *liveness and safety* deliberately in this case. While pBFT can guarantee safety under all circumstances (assuming a maximum of *(n-1)/3* byzantine nodes), it relies on the synchronous model to achieve liveness. Put differently, in an unreliable communication network the system might halt. pBFT also suffers scalibility issues: the number of messages needed to keep the network in synch grows exponentially with the number of nodes. It is therefore impractical for public blockchains.
 
-"It requires a lot of communication overhead between participants, so it is only practical for small groups." - on consensus
+### Changing the Definition of Consensus
 
-"Since the participants must be identified, pBFT is not open and permissionless, but rather a permission based system."
+Obviously the problem of achieving consensus reliably has been solved, otherwise we wouldn't be here. But how did Satoshi do this?
 
-Asynchronous and Byzantine Fault Tolerant for security
-Liveness only under sychrony assumptions
+The important leap was moving away from a deterministic definition of consensus. While some might argue this sounds like moving goalposts, in practice this is what makes public blockchains work - a non-deterministic definition of consensus. Using determinism means, that each new state is decided on by all nodes in a binary or boolean fashion: correct or false.
+The consensus mechanism therefore had nodes agreed on some fixed new state.
 
-#### Approach 2: use non-determinism
+In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being the correct one surely but slowly approaches 1.
 
-Instead of using sychrony assumptions one can define consensus differently. 
+It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received.
 
-moving goalposts?
+##### Nakamoto Consensus
 
-Consensus not defined in a deterministic, in this case binary fashion: agreed or not.
+But wait, how does the Nakamoto consensus actually achieve consensus.
 
-Rather high probability when state transition happens. Every additional state transition increases confidence.
-
-before the consensus mechanism had nodes agreed on some fixed new state.
-now the consensus mechanism lets all nodes agree on the probability of new state being the global state.
-
-### Nakamoto Consensus
+all have in common-> vote...
 
 PoW + longest chain rule.
 
