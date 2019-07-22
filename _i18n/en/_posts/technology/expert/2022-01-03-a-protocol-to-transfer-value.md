@@ -14,7 +14,7 @@ While this section of the Horizen Academy is focused on the technology, we want 
 
 Before Bitcoin digital scarcity didn't exist. Digital goods were infinitely copyable, so their natural value was (theoretically) zero, as you have unlimited supply and limited demand. Today the exchange of value works similar to the exchange of information pre-Internet; from point-to-point, involving middleman and third parties. Cryptocurrencies present an innovation to value transfer, just like the internet revolutionized the exchange of information; from peer-to-peer without the need for middleman.
 
-> “Bitcoin is network money for a network economy” - @goorha
+**Add** [Tweet](https://twitter.com/obiwankenobit/status/1130885906938753025?s=21)
 
 A well designed system for a global exchange of value also enables greater *social scalability*. When we say system, we implicitly say protocol, as the protocol defines the system. The term *social scalability* refers to the ability of large groups to cooperate effectively, or as Nick Szabo, who coined the term, puts it in one of [his best known essays](https://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html):
 
