@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Advanced"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we show you howour organization woks, how we are funded, and some of the engineering challenges we are facing today at an advanced level."
 permalink: /horizen/advanced/
 topic: horizen
 level: advanced
@@ -9,20 +10,78 @@ level: advanced
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/horizen-logo-blueprint.svg" alt="Horizen blueprint"/>
+        <img src="/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
     </div>
 </div>
 
-We look at the two main engineering challenges we are combating. Both approaches aim to expand the capacities of our blockchain. Most blockchains can only handle a handful of transactions per second today. There are many approaches to make blockchains scale. We review our solutions to these issues.
 
- - [Block-DAG]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}) structure
- - [Sidechain]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}) construction.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">
+            <img src="/assets/post_files/horizen/advanced/intro/dao.svg" alt="DAO - Decentralized Autonomous Organization" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">DAO - Decentralized Autonomous Organization</h5>
+        <p class="mb-1">
+            We want to transition our foundation to a DAO over time, a Decentralized Autonomous Organization. This article shows you what this means.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
-We also show you the first applications on our blockchain platform. 
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}">
+            <img src="/assets/post_files/horizen/advanced/intro/sidechains.svg" alt="Sidechains" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Sidechains</h5>
+        <p class="mb-1">
+            Sidechains are a promising approach to improve blockchains. Here we show you what sidechains are and how we plan to use them.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
- - [ZenChat]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}) is a messenger that allows state of the art encryption for your private conversations. ZenChat is live and integrated into our Flagship App Sphere by Horizen.
- - [Horizen VPN]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-05-horizen-vpn %}) is our second application. It will make use of our node network, the largest node network in the industry, to offer a decentralized VPN service. Node Operators will have the opportunity to offer their nodes as an endpoint for the VPN service and earn money for providing this service. This application is not live yet, but we are working on it already.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">
+            <img src="/assets/post_files/horizen/advanced/intro/dag.svg" alt="Block DAG" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Block DAG</h5>
+        <p class="mb-1">
+            Horizen is working on a Block-DAG protocol in cooperation with IOHK. This article explains what a DAG is and why it is interesting to us.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">Read Article</a>
+        </p>
+    </div>
+</div>
 
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">
+            <img src="/assets/post_files/horizen/advanced/intro/zenchat.svg" alt="ZenChat" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">ZenChat</h5>
+        <p class="mb-1">
+            ZenChat is the first application aside from our cryptocurrency, ZEN, that is running on top of the Horizen Blockchain.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">Read Article</a>
+        </p>
+    </div>
+</div>

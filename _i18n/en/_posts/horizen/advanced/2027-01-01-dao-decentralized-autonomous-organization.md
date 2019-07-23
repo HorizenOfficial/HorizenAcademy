@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "DAO - Decentralized  Autonomous Organization"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. Over time our foundation will become a Decentralized Autonomous Organization (DAO). We discuss this technology at an advanced level in this article."
 permalink: /horizen/advanced/dao-decentralized-autonomous-organization/
 topic: horizen
 level: advanced
@@ -13,7 +14,7 @@ The rules and procedures that govern the organization are written in code when t
 
 ![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
 
-For this decentralized decision making, there needs to be a voting system in place. This voting system needs to be reliable and we decided to implement it on a dedicated sidechain which will be running in parallel to our main blockchain. We will talk more about sidechains (ZI3) in a dedicated article.
+For this decentralized decision making, there needs to be a voting system in place. This voting system needs to be reliable and we decided to implement it on a dedicated sidechain which will be running in parallel to our main blockchain. We will talk more about sidechains in a [dedicated article]({{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}).
 
 For an effective voting system, one should leverage the expertise of individual experts without disenfranchising the "regular" user. If you are a developer, you will likely cast a vote for all proposals regarding new code. At the same time, you may not be very experienced when it comes to marketing and feel that other people should make decisions regarding which conferences to attend and events to support. A marketing expert will want to decide on which conferences to attend but might not have a strong opinion about what code to implement.
 

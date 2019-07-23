@@ -2,11 +2,37 @@
 layout: default
 type: intro
 title: "ELI5"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, we explain blockchain and related topics in a simple and easily understandable way."
 permalink: /eli5/
 topic: eli5
+css: |
+  .site-content-wrapper {
+    background: url(/assets/img/bkg/bg-eli5-p1.jpg) no-repeat top left;
+  }
+  .site-content-wrapper > .container-fluid {
+    background: url(/assets/img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+  }
+  @media (max-width: 991px) {
+    .site-content-wrapper > .container-fluid {
+      background-size: 55% auto;
+    }
+  }
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+  .list-eli5-articles a {
+    color: #041742;
+    font-weight: bold;
+  }
 ---
 
 <div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
     <div class="row align-items-center">
         <div class="col-md-4">
             <h2 class="post-title text-uppercase">{{ page.title }}</h2>
@@ -23,7 +49,7 @@ topic: eli5
 
     <hr class="mt-5 mb-5">
 
-    <div class="post-content">
+    <div class="post-content mb-5 mb-md-0">
 
         <p class="d-none"></p>
 

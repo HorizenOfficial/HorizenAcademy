@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Block Explorer Introduction"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we introduce block explorers at a beginner level."
 permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner
@@ -12,11 +13,15 @@ A block explorer is a tool that lets you browse the blockchain, like how a web b
 
 This is what you can expect when you are searching for an address with a block explorer. Most block explorers function similarly. The address that was looked up for this example on a Horizen block explorer is at the top: znf7... Let's say this is Bob's address.
 
-![Explorer address summary](/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Explorer address summary">
+</div>
 
 On the top of the page, you will find a summary of the addresses activity. The information provided here will include the total amount received and sent from this address, as well as the current balance. The address we are looking at received a total of 42 ZEN. Bob hasn't sent any ZEN to other addresses yet and therefore still has a balance of 42 ZEN.
 
-![Explorer address tx](/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_tx.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_tx.png" alt="Explorer address tx">
+</div>
 
 You will find all the transactions that involved this address below the address summary. This address was only part of a single transaction thus far. A transaction is characterized by its transaction ID - the cryptic blue string at the top of the grey box (a46f...). 
 

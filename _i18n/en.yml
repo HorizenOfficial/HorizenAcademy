@@ -1,7 +1,67 @@
-global:
 titles:
   homepage: Horizen Academy
+  content-overview: Content Overview
 descriptions:
-  homepage: Horizen is a highly usable cryptocurrency and a leading-edge technology platform. Our technology runs on zk-SNARKs and is powered by our Super Nodes and Secure Nodes. Using our cryptocurrency (ZEN), users can perform both private and anonymous, untraceable transactions. Horizen provides everyone with privacy and complete control of their digital footprint using our Responsible Privacy(™) framework. Horizen’s Decentralized Autonomous Organization will give everyone a voice, and let anyone submit proposals to our platform.
+  homepage: The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. Our platform ensures everyone can learn about these topics regardless of their comfort level and experience and is always free to use.
+  content-overview: Horizen Academy Content Overview
 keywords:
-  homepage: Horizen, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+  homepage: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+  content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+
+
+nav:
+  home: Home
+  built: Built on Horizen
+  get-zen: Get ZEN
+  use-zen: Use ZEN
+  earn-zen: Earn ZEN
+  mine-zen: Mine ZEN
+  secure-nodes: Secure Nodes
+  super-nodes: Super Nodes
+  faucet: ZEN Faucet
+  forum: Submit a Proposal
+  community: Community
+  academy: Academy
+
+levels:
+  beginner: Beginner
+  advanced: Advanced
+  expert: Expert
+
+topics:
+  technology: Technology
+  privacy: Privacy
+  horizen: Horizen
+  history: History
+  eli5: "Explain it Like I'm 5"
+  resources: Resources
+
+menu:
+  see-all-content: See all Content
+
+
+footer:
+  legal: Legal
+  privacy-policy: Privacy Policy
+  copyright: All rights reserved
+  share-this-article: 'Share this article:'
+
+
+newsletter:
+  name: Name
+  email: Email
+  country: Country
+  optional: Optional
+  subscribe: Subscribe to updates
+  msg-success: Success! Please check your email to confirm we have the right one.
+
+
+post:
+  further-reading: Further Reading
+
+
+# pages
+content-overview:
+  title: CONTENT OVERVIEW
+  eli5: ELI5
+  chapter: Chapter

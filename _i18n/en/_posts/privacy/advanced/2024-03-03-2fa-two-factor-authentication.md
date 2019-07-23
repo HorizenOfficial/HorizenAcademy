@@ -2,10 +2,12 @@
 layout: post
 type: article
 title: "2FA - Two-factor Authentication"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we expain why using 2-factor authentification (2FA) is important at an advanced level."
 permalink: /privacy/advanced/2fa-two-factor-authentication/
 topic: privacy
 level: advanced
 chapter: "Best Practices"
+further_reads: [how_to_set_up_2fa_using_google_authenticator, simplify_and_secure_your_online_logins_with_a_yubikey]
 ---
 
 Two-factor Authentication or in short, 2FA is a way to let users access a service using a combination of two authentication methods. This may be an additional PIN code or a password, a one-time password (OTP), a fingerprint or other biometric data or even an additional security chip or token inside your device.
@@ -14,7 +16,8 @@ We already use 2FA in real life. A notable example is using an ATM to withdraw c
 
 The good news is that almost every service in a blockchain world has an optional 2FA built in. It became a de-facto standard in this sphere. Enabling 2FA is one of the best security best practices you can employ as it protects you even in cases of platform-level hacks when the passwords get exposed. Of course, considering that the platform itself has the 2FA implemented correctly. 2FA works by requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like Microsoft Authenticator, Google Authenticator or others. 
 
-![2FA](/assets/post_files/privacy/advanced/2FA/2FA.jpg)
+![2FA](/assets/post_files/privacy/advanced/2fa/2fa_D.jpg)
+![2FA](/assets/post_files/privacy/advanced/2fa/2fa_M.jpg)
 
 ### 2FA Through Text Messages
 
@@ -39,25 +42,4 @@ Most methods offer a way to restore your 2FA codes, in case you accidentally del
 ### Summary
 
 Enabling 2FA with all accounts that support it substantially improves security. Try not to use text messages as a 2FA method, because this is a vulnerable method with many attack vectors. Using a 2FA app or even hardware device is a better choice. Don't forget to create backups for the method you decided to use.
-
-
-### Further Reading
-
-{%
-  include further_reading.html
-  title="How To Set up 2FA Using Google Authenticator"
-  summary="This guide explains what the Google Authenticator App is, how you set it up and what you need to do in case your device breaks."
-  author="Harsh Agrawal"
-  url="https://coinsutra.com/google-authenticator-setup-guide/"
-  image="https://coinsutra.com/wp-content/uploads/2018/01/Set-up-2FA-Using-Google-Authenticator.jpg"
-%}
-
-{%
-  include further_reading.html
-  title="Simplify and Secure Your Online Logins with a YubiKey"
-  summary="In this article, you will learn what a YubiKey is, which one you should get and how you get started using it."
-  author="Josie Colt"
-  url="https://www.wired.com/story/how-to-use-a-yubikey/"
-  image="https://media.wired.com/photos/5ad53457f962fc0661ab9847/master/w_582,c_limit/yubikey.jpg"
-%}
 

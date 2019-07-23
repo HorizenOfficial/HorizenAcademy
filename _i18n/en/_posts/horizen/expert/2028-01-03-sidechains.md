@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Sidechains"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we explain what sidechains are and how they can improve blockchain ecosystems at an expert level."
 permalink: /horizen/expert/sidechains/
 topic: horizen
 level: expert
@@ -9,7 +10,8 @@ level: expert
 
 In our [Advanced Section]({{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}) we talked about why sidechains are an elegant way to overcome current limitations regarding scalability, interoperability, and governance in the blockchain ecosystem. This article is the second part to our advanced take on the topic. If you are not familiar with the concept of sidechains you might want to catch up on it before starting with this article
 
-![sidechains](/assets/post_files/horizen/expert/sidechains/sidechains.jpg)
+![sidechains](/assets/post_files/horizen/expert/sidechains/sidechains_D.jpg)
+![sidechains](/assets/post_files/horizen/expert/sidechains/sidechains_M.jpg)
 
 Having the ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will be the Treasury (Whitepaper), moving the organization a step closer to its goal of becoming a [decentralized autonomous organization or DAO]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).
 
@@ -26,7 +28,8 @@ The CCT consists of two sub-protocols that we want to introduce shortly.
 
 The first sub-protocol deals with _forward transactions_, which are transactions from mainchain to sidechain. The second sub-protocol deals with _backward transactions_, which are transactions from sidechain to mainchain.
 
-![SCP_CCT](/assets/post_files/horizen/expert/sidechains/SCP_CCT.jpg)
+![SCP_CCT](/assets/post_files/horizen/expert/sidechains/SCP_CCT_D.jpg)
+![SCP_CCT](/assets/post_files/horizen/expert/sidechains/SCP_CCT_M.jpg)
 
 The first design decision to make is whether the mainchain should be aware of the sidechains. The team led by Alberto Garoffolo decided to develop the SCP and CCT independently of each other.
 
@@ -52,7 +55,8 @@ The proposed SCP is based on the Ouroboros Protocol developed by IOHK for the Ca
  - Before an epoch begins, there is a Slot Leader Selection Procedure that assigns one slot leader per slot for the next epoch (in our example 8 slot leaders will be selected per selection procedure/epoch).
  - If a slot leader misses their time slot to forge a block, the next slot leader will include the transactions that weren’t included previously.
 
-![epoch](/assets/post_files/horizen/expert/sidechains/epoch.jpg)
+![epoch](/assets/post_files/horizen/expert/sidechains/epoch_D.jpg)
+![epoch](/assets/post_files/horizen/expert/sidechains/epoch_M.jpg)
 
 #### Modifications of the Ouroboros Protocol
 
@@ -102,7 +106,8 @@ It is the goal to enable cross-chain transfers, so there must be a form of commu
 
 The enablement of forward transactions is achieved through full referencing. It solves two problems at once: enabling transfers from the main- to the sidechain in a straightforward fashion and dealing with finality (or lack thereof).
 
-![full referencing](/assets/post_files/horizen/expert/sidechains/full_referencing.jpg)
+![full referencing](/assets/post_files/horizen/expert/sidechains/full_referencing_D.jpg)
+![full referencing](/assets/post_files/horizen/expert/sidechains/full_referencing_M.jpg)
 
 > Full referencing implies that the sidechain blocks contain the full chain of the mainchain block references. Even if some block forger missed his opportunity to include a reference to the newly generated MC [mainchain] block, some of the following block forgers will include the missed mainchain reference. - Sidechain Whitepaper; Garoffolo, Viglione
 
@@ -113,7 +118,8 @@ So how does full referencing achieve the goals mentioned above? The references c
 
 Sidechain nodes can easily verify the transfers by including the block header and Merkle path of forward transactions. You could think of the two ledgers, sidechain and mainchain, as two separate books. Since the sidechain bookkeepers constantly monitor the main(chain) book, they can easily add cross chain transactions to their book. By including the transactions together with their Merkle paths and the corresponding block header, every entity on the sidechain will be able to verify the transaction is valid for themselves without having to check in with the mainchain.
 
-![forward](/assets/post_files/horizen/expert/sidechains/forward.jpg)
+![forward](/assets/post_files/horizen/expert/sidechains/forward_D.jpg)
+![forward](/assets/post_files/horizen/expert/sidechains/forward_M.jpg)
 
 Enabling the forward transfer protocol implies making changes to the current mainchain logic. A new type of transaction needs to be introduced, that burns coins and provides a set of metadata which allows the user to claim the same amount (minus the TX fee) of newly created coins on the sidechain. The same goes for backward transactions: coins on the sidechain are burned and an equivalent amount minus TX fees created on the mainchain. A construction with a locking and unlocking procedure is also feasible.
 
@@ -133,7 +139,8 @@ We decided on developing the SCP and CCP independently of each other. Since it i
 
 From a data point of view, to make all of this work there needs to be a transfer mechanism, initiated on the sidechain, that informs the mainchain of incoming backward transactions. This is done by introducing a new type of data container called Cross-Chain Certificates (CCCert’s).
 
-![CCCert](/assets/post_files/horizen/expert/sidechains/CCCert.jpg)
+![CCCert](/assets/post_files/horizen/expert/sidechains/CCCert_D.jpg)
+![CCCert](/assets/post_files/horizen/expert/sidechains/CCCert_M.jpg)
 
 The CCCert contains basic information, such as the sidechain identifier (SCid) and the CCCert ID as a header. The Backward Transfer List  collects all cross-chain transactions. The last three data fields concern the **certifiers** that fulfill the role of the validators mentioned in the quote above.
 

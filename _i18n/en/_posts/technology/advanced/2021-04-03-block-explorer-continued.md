@@ -1,7 +1,8 @@
 ---
 layout: post
 type: article
-title: "Block Explorer Continued"
+title: "The Block Explorer"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn how a block explorer lets you browse the data on a blockchain and the kind of data you will find."
 permalink: /technology/advanced/block-explorer-continued/
 topic: technology
 level: advanced
@@ -16,7 +17,9 @@ If you know how to navigate one block explorer, you will know how to navigate al
 
 The information that you will find in a block explorer is structured either by the blocks, by addresses or individual transactions. Let's look into a first example to make all this more tangible.
 
-![Latest blocks](/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
+</div>
 
 There are a number of block explorers out there, often times several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers out there: blockchain.com.
 
@@ -34,7 +37,9 @@ You will see an overview of the most recently created blocks on the landing page
 
 Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first bitcoin block that was ever mined, we can use the search function and enter "0". If you haven't opened the site yet this link will take you directly to the genesis block, that is what the very first block of a given chain is always called.
 
-![The Genesis Block](/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
+</div>
 
 Let us go through the information we can find here. It might seem overwhelming at first, but going through the information step by step you will see that it is quite simple to make sense of.
 
@@ -60,7 +65,9 @@ What you will most likely use a block explorer for is checking a transaction sta
 
 If we want to look at the very first cryptocurrency transaction ever done we need to go to Block #170, where the first bitcoin transaction from Satoshi Nakamoto to Hal Finney is included.
 
-![Bitcoin Transaction](/assets/post_files/technology/advanced/block-explorer-continued/transactions.png)
+<div class="my-4">
+    <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
+</div>
 
 It is the first block on the bitcoin blockchain that contains more than one transaction. We can find the coinbase transaction on the very top. Below is the first transaction as you would expect it. One person sending coins to another one.
 

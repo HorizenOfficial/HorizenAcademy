@@ -1,23 +1,53 @@
 <footer class="site-footer-wrapper">
+    <div class="footer-share-social site-wrapper text-right">
+        {% capture share_link %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+        <div class="container-fluid">
+            {% t footer.share-this-article %}
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url={{ share_link }}&text={{ page.title }}&hashtags=Horizen" target="_blank">
+                <img src="/assets/img/icons/socials/twitter-grey.svg" alt="Twitter" class="icon-grey" />
+                <img src="/assets/img/icons/socials/twitter-color.svg" alt="Twitter" class="icon-color" />
+            </a>
+
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u={{ share_link }}" target="_blank">
+                <img src="/assets/img/icons/socials/facebook-grey.svg" alt="Facebook" class="icon-grey" />
+                <img src="/assets/img/icons/socials/facebook-color.svg" alt="Facebook" class="icon-color" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_link }}" target="_blank">
+                <img src="/assets/img/icons/socials/linkedin-grey.svg" alt="LinkedIn" class="icon-grey" />
+                <img src="/assets/img/icons/socials/linkedin-color.svg" alt="LinkedIn" class="icon-color" />
+            </a>
+
+            <!-- Reddit -->
+            <a href="http://reddit.com/submit?url={{ share_link }}&title={{ page.title }}" target="_blank">
+                <img src="/assets/img/icons/socials/reddit-grey.svg" alt="Reddit" class="icon-grey" />
+                <img src="/assets/img/icons/socials/reddit-color.svg" alt="Reddit" class="icon-color" />
+            </a>
+        </div>
+    </div>
+
     <div class="footer-subscribe site-wrapper">
         <div class="container-fluid">
             <form action="https://zencash.us15.list-manage.com/subscribe/post?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" method="post" id="mc-footer-subscribe-form">
                 <div class="row">
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <input name="MERGE1" type="text" class="form-control" placeholder="Name">
+                            <input name="MERGE1" type="text" class="form-control" placeholder="{% t newsletter.name %}">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <input name="MERGE0" type="email" class="form-control" placeholder="Email">
+                            <input name="MERGE0" type="email" class="form-control" placeholder="{% t newsletter.email %}">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <select name="MERGE6" class="form-control">
-                                <option value="">Country</option>
-                                <option selected value="">Country (Optional)</option>
+                            <select name="MERGE6" class="form-control js-Select2" data-placeholder="{% t newsletter.country %} ({% t newsletter.optional %})">
+                                <option></option>
                                 {% for country in site.data.countryNames %}
                                 <option value="{{country[1]}}">{{country[1]}}</option>
                                 {% endfor %}
@@ -26,7 +56,7 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                            <button class="btn btn-info btn-block text-uppercase" type="submit">Subscribe to updates</button>
+                            <button class="btn btn-info btn-block text-uppercase" type="submit">{% t newsletter.subscribe %}</button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +68,7 @@
                     Your browser blocked the form submit. You can <a href="https://zencash.us15.list-manage.com/subscribe?u=a2e6f8a8a8a21683874d560ea&id=281e1f8cee" target="_blank">sign up here instead</a>.
                 </p>
                 <p class="email-success" style="display: none;">
-                    Success! Please check your email to confirm we have the right one.
+                    {% t newsletter.msg-success %}
                 </p>
                 <p class="email-feedback"></p>
             </div>
@@ -48,11 +78,11 @@
 
     <div class="site-footer text-center site-wrapper">
         <div class="container-fluid">
-            <p class="copyright">© 2019 Horizen. All rights reserved.</p>
+            <p class="copyright">© 2019 Horizen. {% t footer.copyright %}.</p>
             <p class="links">
-                <a href="#">Legal</a>
+                <a href="#">{% t footer.legal %}</a>
                 |
-                <a href="#">Privacy Policy</a>
+                <a href="#">{% t footer.privacy-policy %}</a>
             </p>
         </div>
     </div>

@@ -1,21 +1,11 @@
 var gulp = require('gulp'),
-    // pump = require('pump'),
-    // watch = require('gulp-watch'),
-    // rename = require('gulp-rename'),
-    // cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     cp = require('child_process'),
-    // s3 = require('gulp-s3-upload')(
-    //   {useIAM:true},  // or {} / null
-    //   { /* S3 Config */ }
-    // ),
     browserSync = require('browser-sync').create();
-    // stream = browserSync.stream;
 
 var paths = {
     dev: './_dev/',
@@ -75,7 +65,7 @@ gulp.task('sass', function () {
         }))
         .pipe(autoprefixer({ browsers: [ 'ie >= 10', 'android >= 4.1' ] }))
         .pipe(sourcemaps.write('/maps'))
-        // .pipe(sourcemaps.write('/assets/css/maps'))
+        .pipe(sourcemaps.write('/assets/css/maps'))
         .pipe(gulp.dest('_site/assets/css'))
         // .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
@@ -89,7 +79,6 @@ gulp.task('concat', function() {
         paths.bower + 'jquery/dist/jquery.min.js',
 
         paths.bower + 'popper.js/dist/umd/popper.min.js',
-        paths.bower + 'bootstrap/js/bootstrap.min.js',
         paths.bower + 'bootstrap/dist/js/bootstrap.min.js',
 
         // paths.bower + 'underscore/underscore-min.js',
@@ -104,13 +93,15 @@ gulp.task('concat', function() {
         // paths.bower + 'bLazy/blazy.min.js',
         // paths.bower + 'aos/dist/aos.js',
         // paths.bower + 'lity/dist/lity.js',
-        // paths.bower + 'select2/dist/js/select2.min.js',
+        paths.bower + 'select2/dist/js/select2.min.js',
         paths.bower + 'ajaxchimp/jquery.ajaxchimp.js',
         // paths.bower + 'js-cookie/src/js.cookie.js',
         // paths.bower + 'moment/moment.js',
         // paths.src + 'js/vendor/*.js',
 
         paths.bower + 'jquery.nicescroll/dist/jquery.nicescroll.min.js',
+
+        paths.bower + 'algoliasearch/dist/algoliasearchLite.min.js',
 
         paths.src + 'js/vendor/headroom.min.js',
         paths.src + 'js/vendor/jQuery.headroom.min.js',
@@ -132,18 +123,6 @@ gulp.task('concat', function() {
 });
 
 
-// Compression images
-// gulp.task('img', function() {
-// 	return gulp.src('assets/img/**/*')
-// 		.pipe(imagemin({
-// 			interlaced: true,
-// 			progressive: true,
-// 			svgoPlugins: [{removeViewBox: false}]
-// 		}))
-//     .pipe(gulp.dest('_site/assets/img'))
-//     .pipe(browserSync.reload({stream:true}));
-// });
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -163,6 +142,11 @@ gulp.task('watch', function () {
     ], ['jekyll-rebuild']);
 });
 
+// shortcut
+gulp.task('b', ['jekyll-build']);
+gulp.task('js', ['concat']);
+gulp.task('css', ['sass']);
+
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
@@ -172,16 +156,3 @@ gulp.task('default', [
     'watch'
 ]);
 
-// AWS_PROFILE=zen gulp upload
-
-// gulp.task('upload', function() {
-//     gulp.src(paths.site + '**')
-//         .pipe(s3({
-//             Bucket: 'zen-website', //  Required
-//             ACL:    'public-read'  //  Needs to be user-defined
-//         }, {
-//             // S3 Constructor Options, ie:
-//             maxRetries: 5
-//         }))
-//     ;
-// });

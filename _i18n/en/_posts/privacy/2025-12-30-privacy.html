@@ -2,11 +2,57 @@
 layout: default
 type: intro
 title: "Privacy"
+description: "We believe in the human right to privacy and want to share our knowledge on how to preserve your online privacy here."
 permalink: /privacy/
 topic: privacy
+css: |
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+  .post-section .post-content .icon-level {
+    height: 50px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .table-levels {
+    border-spacing: 16px 0;
+    border-collapse: separate;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .table-levels td {
+    border-left: 1px solid #f5f6fa;
+    border-right: 1px solid #f5f6fa;
+    padding: 0.6rem 1.2rem;
+  }
+  .table-levels tr:first-child td {
+    border-top: 1px solid #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+  .table-levels tr:last-child td {
+    border-bottom: 1px solid #f5f6fa;
+    background-color: #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .table-levels tr:last-child td {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  .table-levels a {
+    text-decoration: none;
+    color: #041742;
+  }
 ---
 
 <div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
     <div class="row align-items-center">
         <div class="col-md-4">
             <h2 class="post-title text-uppercase">{{ page.title }}</h2>

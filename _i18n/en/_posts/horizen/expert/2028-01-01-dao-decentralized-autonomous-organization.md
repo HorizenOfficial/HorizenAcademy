@@ -2,16 +2,18 @@
 layout: post
 type: article
 title: "DAO - Decentralized  Autonomous Organization"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. Over time our foundation will become a Decentralized Autonomous Organization (DAO). We discuss this technology at an expert level in this article."
 permalink: /horizen/expert/dao-decentralized-autonomous-organization/
 topic: horizen
 level: expert
 ---
 
-IOHK’s Roman Oliynykov published a paper in cooperation with Bingsheng Zhang and Hamed Balogun from Lancaster University describing a treasury system that could be deployed on various cryptocurrencies regardless of the consensus mechanism used. A prototype has been implemented in Scala over the Scorex 2.0 framework. You can find a detailed presentation here. Rob Viglione explained the implications in a short video on Twitter. Horizen is working towards implementing the proposed treasury system to decide upon and distribute our treasury funds in a decentralized fashion.
+IOHK’s Roman Oliynykov published a paper in cooperation with Bingsheng Zhang and Hamed Balogun from Lancaster University describing a treasury system that could be deployed on various cryptocurrencies regardless of the consensus mechanism used. A prototype has been implemented in Scala over the Scorex 2.0 framework. Horizen is working towards implementing the proposed treasury system to decide upon and distribute our treasury funds in a decentralized fashion.
 
 We summarize the paper and provide some context in this article.
 
-![DAO](/assets/post_files/horizen/expert/dao/DAO.jpg)
+![DAO](/assets/post_files/horizen/expert/dao/DAO_D.jpg)
+![DAO](/assets/post_files/horizen/expert/dao/DAO_M.jpg)
 
 ### Introduction
 
@@ -59,7 +61,8 @@ Liquid Democracy (LD) can be understood as a dynamic hybrid of the two establish
 
 A key difference is, that you can delegate your vote to whomever you like, be it your brother that is really knowledgable on a given topic or anybody else and you can withdraw your delegation at any given time - making the whole process liquid. This reduces the barrier to entry and keeps delegates accountable because they can lose delegations at any time.
 
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/liquid_democracy.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/liquid_democracy_M.jpg)
 
 ### The Different Entities
 
@@ -76,7 +79,8 @@ Anybody can submit a proposal for funding and become a project owner. Anybody th
 
 There are three epochs in each treasury period. During the **pre-voting epoch** all the project owners have time to submit their encrypted proposals. All proposals will be decrypted at once when the proposing stage ends. This increases fairness and prevents tactical timing of proposal submissions. During the pre-voting epoch, the community members also have time to register as a voter or an expert by submitting a special kind of transaction.
 
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs.jpg)
+![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_D.jpg)
+![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_M.jpg)
 
 During the **voting epoch** the voting committee is selected, a voting key is set up and the ballot is held. For the **committee selection** “…a set of voting committees will be randomly selected from the registered voters who are willing to be considered for the committee selection. The probability of being selected is proportional to their locked stake.”
 
@@ -86,19 +90,23 @@ Voting in private is achieved by all voters and experts encrypting their vote wi
 
 The voters and experts cast their votes during the **ballot casting stage**. Each vote is represented as a vector. Since there are three possible votes — Yes, No, Abstain — there are three possible vectors that can be submitted.
 
-![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain.jpg)
+![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_D.jpg)
+![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_M.jpg)
 
 The concept works like this: In the example below there are 4 votes, 2 voted Yes on the proposal, 1 No and 1 Abstain.
 
-![votes](/assets/post_files/horizen/expert/dao/votes.jpg)
+![votes](/assets/post_files/horizen/expert/dao/votes_D.jpg)
+![votes](/assets/post_files/horizen/expert/dao/votes_M.jpg)
 
 If you are familiar with the concept of vector addition it is easy to tell the sum of those four vectors. One of the Yes votes is canceled out by the No vote. The remaining Yes vote added together with the Abstain vote yields the diagonal vector shown below. For the tally, only the x-axis is considered. The final result of this proposal revealed in the **tally stage** would be a Yes.
 
-![votes sum](/assets/post_files/horizen/expert/dao/votes_sum.jpg)
+![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_D.jpg)
+![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_M.jpg)
 
 More specifically, a score for each proposal will be calculated by taking the number of Yes votes minus the number of No votes. The resulting difference has to account for at least 10% of all the votes submitted to be considered for funding. If 100 votes are cast (without Abstain votes), there have to be at least 55 Yes votes to reach that threshold. The highest scoring proposals will be funded until the treasury is depleted for the month.
 
-![score](/assets/post_files/horizen/expert/dao/score.jpg)
+![score](/assets/post_files/horizen/expert/dao/score_D.jpg)
+![score](/assets/post_files/horizen/expert/dao/score_M.jpg)
 
 The **post-voting** epoch consists of the tally stage and execution stage. Note that each vector is submitted in an encrypted fashion and only in the **tally stage** the committee jointly reveals all the casted votes. The score for each proposal will be calculated and the proposals ranked according to their score.
 

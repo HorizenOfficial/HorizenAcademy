@@ -1,0 +1,76 @@
+---
+layout: default
+type: intro
+title: "ELI5"
+description: "Aquí explicamos blockchain y algunos temas relacionados de la manera más sencilla que podamos encontrar."
+permalink: /eli5/
+topic: eli5
+css: |
+  .site-content-wrapper {
+    background: url(/assets/img/bkg/bg-eli5-p1.jpg) no-repeat top left;
+  }
+  .site-content-wrapper > .container-fluid {
+    background: url(/assets/img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+  }
+  @media (max-width: 991px) {
+    .site-content-wrapper > .container-fluid {
+      background-size: 55% auto;
+    }
+  }
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+  .list-eli5-articles a {
+    color: #041742;
+    font-weight: bold;
+  }
+---
+
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h2 class="post-title text-uppercase">{{ page.title }}</h2>
+        </div>
+        <div class="col-md-8 welcome-text">
+            <p>
+                Los artículos ELI5 o Explain it Like I’m 5 (Explicamelo como si tuviera 5 años) tienen la intención de dar la explicación más breve y sencilla de un tema. ¿El secreto? Usar analogías y abstracciones que transmiten la idea básica de un concepto de tal manera que hasta un niño de 5 años lo podría entender.
+            </p>
+            <p>
+                Hemos seleccionado algunos cuantos conceptos y tecnologías importantes y los hemos desglosado para explicarlos de la manera más fácil posible.
+            </p>
+        </div>
+    </div>
+
+    <hr class="mt-5 mb-5">
+
+    <div class="post-content mb-5 mb-md-0">
+
+        <p class="d-none"></p>
+
+        <ul class="list-eli5-articles">
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">¿Qué es una cadena de bloques?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">¿Qué es una criptomoneda?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-03-what-is-the-benefit-of-cryptocurrencies %}">¿Qué beneficios tienen las criptomonedas?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-04-what-is-a-wallet %}">¿Qué es una billetera?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-05-what-is-a-transaction %}">¿Qué es una transacción?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-06-what-is-a-peer-to-peer-network %}">¿Qué es una red par a par?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">¿Qué es el consenso?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-08-what-is-mining %}">¿Qué es el minado?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-09-what-is-a-hash-function %}">¿Qué es una función hash?</a></li>
+            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">¿Qué es criptografía de llave pública?</a></li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+
+

@@ -2,10 +2,12 @@
 layout: post
 type: intro
 title: "Intro to Privacy on the Blockchain"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we introduce privacy and how it works on the blockchain at a beginner level."
 permalink: /technology/beginner/intro-to-privacy-on-the-blockchain/
 topic: technology
 level: beginner
 chapter: "Privacy"
+further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
 It is a common misconception that Bitcoin and other cryptocurrencies are an anonymous means of payment. In fact, they are not anonymous, but pseudonymous. 
@@ -29,7 +31,8 @@ A Zero-Knowledge Proof lets you prove to a verifier that you know something, wit
 
 The seeing person (prover) wants to convince the blind person (verifier) that the two balls are of different colors, without revealing the colors. They sit down at a table and the blind person shows the prover one of the balls. The blind person continues to put both balls under the table and chooses to show one ball in a second round - either the same one as before or the other one. If he chooses to show the same ball, the prover knows because he sees the same color and he tells the blind person. If the blind person were to show the other ball, the prover could tell with certainty that the verifier (blind person) switched the balls under the table.
 
-![zkproof](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof.jpg)
+![zkproof](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_D.jpg)
+![zkproof](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_M.jpg)
 
 In the second round, the prover would have a fifty-fifty chance of getting the right answer if he had to guess. He would have to guess in case the claim that he is trying to prove (the balls are of a different color) was false. At this point, the blind person cannot be sure if the claim is correct, or if the prover got lucky.
 
@@ -45,11 +48,3 @@ While cryptocurrencies are not anonymous by default, some of them offer features
 
 In our advanced section, we will look at a few more privacy conserving concepts.
 
-{%
-  include further_reading.html
-  title="How Zcoin's Privacy Technology Compares to the Competition"
-  summary="An extensive comparison of different privacy mechanisms on the blockchain used by different Cryptocurrencies"
-  author="Reuben Yap, Zcoin"
-  url="https://zcoin.io/zcoins-privacy-technology-compares-competition/"
-  image="https://zcoin.io/wp-content/uploads/2018/01/privacy_comparison2-01.jpg"
-%}

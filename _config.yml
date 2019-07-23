@@ -1,34 +1,15 @@
 ---
-title: Horizen Labs
+title: Horizen Academy
 timezone: America/New_York
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    permalink: "/blog/:title/"
-    featured-image: ''
-    posts:
-    -
-    -
-    -
-email: info@horizenlabs.io
-description: Horizen Labs
+email: info@horizen.global
+description: Horizen Academy
 baseurl: ""
-url: https://horizenlabs.io
-logo: /assets/img/zencash-stacked.jpg
+url: https://academy.horizen.global
+logo: /assets/img/Logo-beta.svg
 author:
-  name: Horizen Labs
-  email: info@horizenlabs.io
-  uri: https://horizenlabs.io
+  name: Horizen Academy
+  email: info@horizen.global
+  uri: https://academy.horizen.global
   bio:
   facebook: https://www.facebook.com/horizenglobal/
   twitter: horizenglobal
@@ -45,39 +26,22 @@ links:
   medium: https://medium.com/zencash
   reddit: https://www.reddit.com/r/Horizen/
   discord: https://horizen.global/invite/discord
-  slack: https://slackinvite.zensystem.io/
   telegram: https://horizen.global/invite/telegram
   twitter: https://twitter.com/horizenglobal
   youtube: https://www.youtube.com/channel/UCQ0v_lUnZHIKUQUXJzfgqOg
-  whitepaper: /assets/Zen-White-Paper.pdf
   store: https://store.horizen.global/
   support: https://support.horizen.global
+algolia:
+  application_id: LAIP286P46
+  search_only_api_key: 5ab28de7858bf585159b2d4f8272d060
+  index_name: horizen_academy
 future: true
-show_drafts: true
-lsi: false
 permalink: pretty
-paginate: 6
-paginate_path: "/blog/page:num/"
 excerpt_separator:
 markdown: kramdown
-cloudinary:
-  cloud_name: dw4i3sw5c
-  verbose: true
-  presets:
-    default:
-      min_width: 320
-      max_width: 1600
-      fallback_max_width: 800
-      steps: 5
-      sizes: "(min-width: 50rem) 50rem, 90vw"
 plugins:
-- jekyll-feed
-- jekyll-gist
-- jekyll-paginate
 - jekyll-last-modified-at
 - jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-sass-converter
 - jekyll-multiple-languages-plugin
 exclude:
 - _dev
@@ -93,5 +57,5 @@ exclude:
 - README.md
 - vendor
 
-languages: ["en"]
+languages: ["en", "es"]
 exclude_from_localizations: ["assets"]

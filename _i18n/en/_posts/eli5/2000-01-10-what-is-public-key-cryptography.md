@@ -2,11 +2,19 @@
 layout: post
 type: article
 title: "What is Public-Key Cryptography?"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about public-key cryptography in a simple, understandable way."
 permalink: /eli5/what-is-public-key-cryptography/
 topic: eli5
 ---
 
-Blockchains use Public-Key Cryptography to identify the rightful owner of their money. Every user creates two keys when they join the network, a public, and a private key. 
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
+        <td>
+            Blockchains use Public-Key Cryptography to identify the rightful owner of their money. Every user creates two keys when they join the network, a public, and a private key.
+        </td>
+    </tr>
+</table>  
 
 The public key is like an email address that someone uses to receive money. If a friend wants to send you some cryptocurrency you will show them your public key. Your friend uses your public key to send you some money.
 

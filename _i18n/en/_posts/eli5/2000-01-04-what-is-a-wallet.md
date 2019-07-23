@@ -2,11 +2,20 @@
 layout: post
 type: article
 title: "What is a Wallet?"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency wallets in a simple, understandable way."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
 ---
 
-A wallet is a program on your computer or phone, that lets you receive and send money. In order to do that, it needs access to [your keys]({{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}). A wallet will help you create and manage your public and private key that work like your email address and your password for it. An important difference to a regular wallet you are using every day is that you don't keep your money in your wallet.
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
+        <td>
+            A wallet is a program on your computer or phone, that lets you receive and send money. In order to do that, it needs access to <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">your keys</a>. A wallet will help you create and manage your public and private key that work like your email address and your password for it. An important difference to a regular wallet you are using every day is that you don't keep your money in your wallet.
+        </td>
+    </tr>
+</table> 
+
 
 Your money lives on the blockchain. In order to spend your money, you must use your private key to unlock it. A wallet is more similar to a keychain than an actual wallet in this sense.
 

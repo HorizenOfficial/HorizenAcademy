@@ -1,11 +1,3 @@
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
-
-
 .btn {
   border-radius: 0;
 }
@@ -30,21 +22,19 @@ a {
   color: #0e9de5;
 }
 
+blockquote {
+  border-left: 4px solid #a3e5ff;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
 .table-layout-fixed {
   table-layout: fixed;
 }
 
-
-@mixin list-blue-bullet() {
-  list-style: none; /* Remove default bullets */
-  li {
-    &:before {
-      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-      color: #0e9de5; /* Change the color */
-      font-weight: bold; /* If you want it to be bold */
-      display: inline-block; /* Needed to add space between the bullet and the text */
-      width: 1em; /* Also needed for space (tweak if needed) */
-      margin-left: -1em; /* Also needed for space (tweak if needed) */
-    }
+.select2-container--default .select2-selection--single {
+  border-radius: 0;
+  .select2-selection__rendered {
+    padding: 0 .75rem 0 0;
   }
 }

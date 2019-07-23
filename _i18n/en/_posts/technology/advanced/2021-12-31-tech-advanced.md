@@ -2,15 +2,138 @@
 layout: post
 type: intro
 title: "Technology Advanced"
+description: "The Horizen Academy is an educational platform on blockchain technology, cryptocurrency, and privacy. Our blockchain technology content for advanced users includes: What a blockchain is, how it works, cryptocurrency wallets and more."
 permalink: /technology/advanced/
 topic: technology
 level: advanced
 ---
 
-We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are interested in learning about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+<div class="row mb-3">
+    <div class="col-md-3">
+        <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
+    </div>
+    <div class="col-md-9 lead">
+        We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are interested in learning about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
+    </div>
+</div>
 
-This section is designed for Advanced users and is best for users with a basic understanding of the technology, but which are not yet confident in their ability to apply this knowledge.
 
-The articles in this level take approximately 10 minutes to read and introduce you to the frequently used technical terms.
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">
+            <img src="/assets/post_files/technology/advanced/intro/what_is_blockchain.svg" alt="What is a Blockchain" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">What is a Blockchain?</h5>
+        <p class="mb-1">
+            In the first chapter of this section, we talk about how blockchains store transactions, why this allows you to transfer value, and what smart contracts are.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
 
-If you have been following our Beginner section content, this section will look similar. We cover the same topics, but in more depth using more technical terms. If you start reading an article and feel overwhelmed you can go back to the [Beginner Level]({{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}). If you find the content too trivial move up one level and read about the same topic in more detail in our [Expert Level]({{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}).
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">
+            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">How Does a Blockchain Work?</h5>
+        <p class="mb-1">
+            Next, we will bring you up to speed on the different elements that make blockchains work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">
+            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Wallets" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Wallets</h5>
+        <p class="mb-1">
+            In order to receive and send cryptocurrencies you will use a wallet. In the third chapter we will show you the different types of wallets.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">
+            <img src="/assets/post_files/technology/advanced/intro/transactions.svg" alt="Transactions" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Transactions</h5>
+        <p class="mb-1">
+            After we covered wallets, the interfaces you use to create transactions, we will take a closer look at what transactions are and how they work.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">
+            <img src="/assets/post_files/technology/advanced/intro/privacy.svg" alt="Privacy" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Privacy</h5>
+        <p class="mb-1">
+            While most cryptocurrencies are not private by default, you have the option to create truly private transactions. This chapter introduces the different methods that achieve privacy on the blockchain.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">
+            <img src="/assets/post_files/technology/advanced/intro/attacks.svg" alt="Attacks" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Attacks</h5>
+        <p class="mb-1">
+            Blockchains are a secure way to store data but there are ways to attack a blockchain. We show you the most common attacks and how their risk is mitigated.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">
+            <img src="/assets/post_files/technology/advanced/intro/summary.svg" alt="Summary" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Summary</h5>
+        <p class="mb-1">
+            We end the Advanced Level of the Technology section with a summary of all the previous chapters.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">Read the Summary</a>
+        </p>
+    </div>
+</div>
+

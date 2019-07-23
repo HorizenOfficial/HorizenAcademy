@@ -13,9 +13,7 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="left-menu" id="left-menu">
-        {% include left-menu.html %}
-    </div>
+    {% include left-menu.html %}
 
     <div class="site-wrapper">
         <div class="site-content-wrapper">
@@ -39,6 +37,8 @@ layout: compress
     </div>
 
     {% include footer.html %}
+
+    {% include language-sidebar.html %}
 
     <script type="text/javascript" src="{{ "/assets/js/scripts.js" | prepend: site.baseurl_root }}?{{site.time | date: '%s%N'}}"></script>
 

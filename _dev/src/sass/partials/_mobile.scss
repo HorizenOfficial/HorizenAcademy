@@ -1,5 +1,5 @@
 body {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 .navbar-brand {
@@ -17,6 +17,20 @@ body {
   width: 200px;
 }
 
+#left-menu-overlay {
+  display: block;
+  visibility: hidden;
+  background-color: #0a2153;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 #left-menu {
   left: -350px;
   z-index: 100;
@@ -24,19 +38,18 @@ body {
   transition: left 0.5s ease-in-out;
   &.open {
     left: 0;
+    & + #left-menu-overlay {
+      opacity: 0.5;
+      visibility: visible;
+    }
   }
 }
 
 .article-nav {
   height: auto;
+  min-height: calc(100vh - 105px);
 }
 
 .site-wrapper {
   padding-left: 0;
 }
-
-
-#homepage .intro {
-  padding: 0 0 1rem;
-}
-

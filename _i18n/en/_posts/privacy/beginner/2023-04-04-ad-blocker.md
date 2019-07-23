@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Ad Blocker"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we review online ads and how to protect yourself from malicious code with ad blockers."
 permalink: /privacy/beginner/ad-blocker/
 topic: privacy
 level: beginner

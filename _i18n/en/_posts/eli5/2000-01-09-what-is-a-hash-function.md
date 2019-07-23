@@ -2,11 +2,20 @@
 layout: post
 type: article
 title: "What is a Hash Function?"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about hash functions in a simple, understandable way."
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
+further_reads: [hashing]
 ---
 
-A hash function is something that we use to create a fingerprint of a file. You can use a hash function to create a fingerprint for every type of file you can imagine.  
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td>
+            A hash function is something that we use to create a fingerprint of a file. You can use a hash function to create a fingerprint for every type of file you can imagine.
+        </td>
+    </tr>
+</table>   
 
 Let's say I want to send you a text file and don't want you to change it. I could use a hash function to create a fingerprint of the text before I send it to you. 
 
@@ -16,13 +25,3 @@ In a blockchain, we use hash functions to create a fingerprint of the transactio
 
 We explain hash functions in our [Advanced Technology section]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}).
 
-### Further Reading
-
-{%
-  include further_reading.html 
-  title="Hashing" 
-  summary="This article is starting with a gentle introduction of what a hash function is. The video in this article does a great job of explaining this." 
-  author="Lisk Academy" 
-  url="https://lisk.io/academy/blockchain-basics/how-does-blockchain-work/what-is-hashing" 
-  image="https://lisk.io/content/5-academy/2-blockchain-basics/4-how-does-blockchain-work/5-what-is-hashing/11a-hashing.gif"
-%}

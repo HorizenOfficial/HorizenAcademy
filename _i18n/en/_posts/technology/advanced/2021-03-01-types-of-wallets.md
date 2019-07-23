@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Types of wallets"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article. you will learn about the different types of cryptocurrency wallets at an advanced level."
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
@@ -10,13 +11,15 @@ chapter: "Wallets"
 
 A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our introduction to wallets. The main differentiator between the different types of wallets is the physical location your keys are stored in.
 
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_AW.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
 
 ### The Different Types of Wallets
 
 This article should give you a better understanding of what types of wallets are available and help you identify a given wallet between the types described below. Let's have a look at this overview of the different wallet types before we go into the individual wallets in detail.
 
-![overview](/assets/post_files/technology/advanced/types-of-wallets/overview.jpg)
+![overview](/assets/post_files/technology/advanced/types-of-wallets/overview_D.jpg)
+![overview](/assets/post_files/technology/advanced/types-of-wallets/overview_M.jpg)
 
 ### Hosted Web Wallets
 
@@ -24,7 +27,8 @@ Before getting into web wallets, let us remember that a wallet is an interface t
 
 This leads us to a distinction between hosted and non-hosted web wallets. With hosted web wallets, your keys are stored online by a trusted third party. These parties are mostly exchanges such as Coinbase, Binance or Bittrex. When you create an account with these entities they will create an entry in their internal database linking your account to a set of key pairs for the different coins they have listed.
 
-![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet_D.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/hosted_webwallet_M.jpg)
 
 An advantage with a hosted web wallet is the option to recover your password in case you forget or misplace it. Losing your private keys (together with your mnemonic phrase respectively) leads to lost funds in all other cases.
 
@@ -36,7 +40,8 @@ You will need to keep some funds on an exchange permanently if you plan to trade
 
 Besides hosted web wallets there is also a range of non-hosted web wallets. The most popular non-hosted web wallet is likely MyEtherWallet, which can store Ether (ETH) and all ERC-20 tokens (tokens that are "living" on the Ethereum blockchain). Those wallets provide an interface to check your funds or create transactions in your web browser, but you have to provide the keys with each login.
 
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet.png)
+![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_D.jpg)
+![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_M.jpg)
 
 There is a range of options to access your wallet with MyEtherWallet (often abbreviated as MEW). The first option requires your address but only lets you view your funds. MetaMask is a browser plugin that provides the option to make ETH payments within your browser and the ability to login to MEW. It also provides a function detecting phishing sites and warning you when you are about to open one.
 
@@ -89,7 +94,8 @@ Now let's get to the interesting part: how does such a wallet actually work?
 
 The interface generates an address from your public key if you want to receive funds. Using this feature is pretty straightforward: if you click the receive button the process runs in the background and the address is displayed for you to share it with the sender. If you want to send funds the app creates the formal transaction that needs to be signed. The unsigned transaction is now sent to your hardware wallet, where it gets signed with your private key on the device. The signature is then returned to your computer and the complete transaction including the signature broadcasted to the network.
 
-![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet_D.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/signing_hardware_wallet_M.jpg)
 
 Your private key(s) do not leave the device, so they are not visible to the computer you are using your hardware wallet with at any time. This is why a hardware wallet is considered the most secure way of storing crypto, especially large amounts.
 

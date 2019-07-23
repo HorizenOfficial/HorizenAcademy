@@ -2,15 +2,17 @@
 layout: post
 type: article
 title: "A Protocol to Transfer Value"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we compare blockchains as protocols to transfer money with the internet as a protocol to transfer information at an advanced level."
 permalink: /technology/advanced/a-protocol-to-transfer-value/
 topic: technology
 level: advanced
 chapter: "What is a Blockchain?"
+further_reads: [why_bitcoin_lightning_network_is_ingenious]
 ---
 
 We will now look at blockchain from a different perspective. This perspective considers the use of blockchain technology as a settlement network for financial transactions and the rules and conventions that make a blockchain work. 
 
-> “[The] Bitcoin protocol and network today [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
+> “[The] Bitcoin protocol and network today is [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
 
 The protocol is a set of rules that governs the validity of transactions and the overall workings of the blockchain. [Techopedia's definition](https://www.techopedia.com/definition/12938/network-protocols) of a network protocol goes as follows:
 
@@ -32,7 +34,8 @@ SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted li
 
 The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly. 
 
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols.png)
+![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_D.jpg)
+![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_M.jpg)
 
 Throughout the history of the internet, people have defined standards for the exchange of various types of data. It's important to note that it was not always the best protocol which gained mass adoption. People are unlikely to switch to a different protocol once they begin using and building upon one unless it is leagues better. Developers become attracted to the increasing libraries and tools available on these protocols. This cycle repeats itself until a protocol eventually becomes a standard.
 
@@ -52,7 +55,8 @@ Another subset of rules is concerned with the structure of a valid block. Rememb
 
 Following the block header, the block contains all the transactions that were included.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_D.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_M.jpg)
 
 Now there needs to be a set of rules describing what an individual transaction must look like. We will talk about transactions in detail in a dedicated article but for now, it should suffice to know that a transaction needs to include the sender, the recipient, the amount of the transfer, and a digital signature. The digital signature is a way to authorize the spending of your funds. The private key of a user creates this digital signature. We explain this process further in our article on public-key cryptography.
 
@@ -68,15 +72,5 @@ The protocol of a blockchain is a set of rules that all participants need to fol
 
 I would like to end this article the same way it began, with a quote from Jeff Garzik, one of Bitcoins better-known developers.
 
-> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik, Bitcoin Core Developer
+> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Why Bitcoin's Lightning Network is Ingenious"
-  summary="A short history of accounting and why Bitcoin can be understood as the first occasion of Triple-Entry Bookkeeping. Brilliant take on the value of distributed ledgers for financial transactions."
-  author="Todd Kronenberg"
-  url="https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae"
-  image="https://cdn-images-1.medium.com/max/1200/1*LRthxmnfHZiP1GSpwpuE4g.jpeg"
-%}

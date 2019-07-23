@@ -2,10 +2,12 @@
 layout: post
 type: article
 title: "Encrypted Email"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn about encrypted emails. Sending encrypted emails reduces the risk of somebody snooping in on your mail and is easier to set up than most think."
 permalink: /privacy/advanced/encrypted-email/
 topic: privacy
 level: advanced
 chapter: "Tools to protect your Privacy"
+further_reads: [email_glossary, how_to_use_pgp_encryption_with_gmail, 6_best_encrypted_email_software_to_protect_your_data]
 ---
 
 For a sophisticated hacker, it is incredibly easy to intercept your emails if you are the target. The easiest way to get your hands on somebody else's email is to gain access to that person's email account. If you follow the best practices we introduced in the last chapter, namely choosing a secure password for your email account and activating 2FA this becomes much harder already. Still, there are ways to intercept your email traffic. Using unsecured wifi networks is another attack vector for an adversary to access your online correspondence.
@@ -38,30 +40,3 @@ We won't go through the setup procedure for your new account, because almost eve
 
 Below we have a few resources that will help you pick an email provider that suits you.
 
-### Encrypted Email Resources
-
-{%
-  include further_reading.html
-  title="Email Glossary"
-  summary="If you find the terms used by privacy-centric email providers confusing, here is a glossary that explains the terminology used in this context."
-  author="That One Privacy Guy"
-  url="https://thatoneprivacysite.net/email-glossary/"
-  image=""
-%}
-
-{%
-  include further_reading.html
-  title="How to use PGP encryption with Gmail"
-  summary="Josh Lake reviews different add-ons that can be used to send encrypted mails via Gmail."
-  author="Josh Lake" url="https://www.comparitech.com/blog/information-security/pgp-encryption-gmail/"
-  image="https://cdn.comparitech.com/wp-content/uploads/2018/10/gmail-logo.jpg"
-%}
-
-{%
-  include further_reading.html
-  title="6 best encrypted email software to protect your data"
-  summary="The author reviews six solutions to used encrypted mails in this article."
-  author="Costea Lestoc"
-  url="https://windowsreport.com/encrypted-email-software/"
-  image="https://cdn.windowsreport.com/wp-content/uploads/2018/02/encrypted-email-software-1.jpg"
-%}

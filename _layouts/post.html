@@ -2,7 +2,10 @@
 layout: default
 ---
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{ page.level | default: 'none' }}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{ page.level | default: '' }}" data-url="{% if site.default_lang != site.lang %}/{{ site.lang }}{% endif %}{{page.url}}">
+
+    {% include search.html %}
+
     <h2 class="post-title">{{ page.title }}</h2>
 
     <div class="post-content">
@@ -10,5 +13,15 @@ layout: default
     </div>
 
     {% include post-bottom-nav.html %}
+
+    {% if page.further_reads %}
+    <div class="further-reading-wrapper">
+        <h3>{% t post.further-reading %}</h3>
+
+        {% for further_read in page.further_reads %}
+            {% include further_reads/{{ further_read }}.md %}
+        {% endfor %}
+    </div>
+    {% endif %}
 
 </div>

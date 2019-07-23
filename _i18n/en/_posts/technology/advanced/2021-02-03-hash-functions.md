@@ -2,10 +2,12 @@
 layout: post
 type: article
 title: "Hash Functions"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn why hash functions are an important part in every blockchain because they are used to verify the integrity of data."
 permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
+further_reads: [hash_functions_explained_with_emojis]
 ---
 
 Hash functions are an integral part of blockchain technology and serve many purposes. A hash function is a mathematical function that takes an input of any given length and produces an output of fixed length. The output is often called a hash value, (hash) digest, or hash.
@@ -19,11 +21,12 @@ A cryptographic hash function must fulfill the following set of criteria to be v
  - Collision resistant - It should be hard (read impossible) to find two inputs to a hash function resulting in the same output. 
  - Deterministic - The same input always needs to produce the same output
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_M.jpg)
 
 
 
-The most frequently used hash functions today is SHA-256. SHA is an acronym for Secure Hash Algorithm. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. RIPEMD160 is often used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
+The most frequently used hash function today is SHA-256. SHA is an acronym for Secure Hash Algorithm. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. RIPEMD160 is often used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
 
 Hash values are used for many purposes in cryptocurrencies and blockchains. The most notable use is the process of chaining together the blocks, thus creating the blockchain. We call a hash value a fingerprint of data for its property of being collision resistant. If you were sending a file to another person you can include the hash digest if you hash the file before sending it. The recipient can calculate the hash value for the file after receiving it and by comparing it to the hash value you provided they can check the integrity of the file.
 
@@ -35,13 +38,3 @@ Hash Functions are the first cornerstone of blockchain technology. A hash of a f
 
 In our next article, we will look at public-key cryptography. Public-key cryptography is the second cornerstone of blockchain tech and the concept that makes up your "identity" on the blockchain.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Hash functions explained with Emojis"
-  summary="A playful approach at explaining hash functions and their importance for blockchains."
-  author="Patrick Woodhead"
-  url="https://medium.com/swlh/this-simple-yet-powerful-invention-is-changing-the-world-d04688c25f13"
-  image="https://cdn-images-1.medium.com/max/1200/1*rONjogTs70KIuLyAO_oy_g.png"
-%}

@@ -2,6 +2,7 @@
 layout: post
 type: article
 title: "Virtual Phone Number"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we explain how virtual phone numbers can protect your privacy."
 permalink: /privacy/advanced/virtual-phone-number/
 topic: privacy
 level: advanced
@@ -31,7 +32,7 @@ Below we have two articles for you to get you started on your first virtual numb
 ### Virtual Phone Number Resources
 
 {%
-  include further_reading.html
+  include further_reads/_template.html
   title="Ways To Use A Virtual Number"
   summary="An article describing different use cases for virtual phone numbers."
   author="Matthew Gates"
@@ -40,9 +41,10 @@ Below we have two articles for you to get you started on your first virtual numb
 %}
 
 {%
-  include further_reading.html
+  include further_reads/_template.html
   title="How to Get an Anonymous Virtual Phone Number"
   summary="An article comparing different virtual phone services, listing their pros, cons, features and subscription models."
-  author="Nadeem Unuth" url="https://www.lifewire.com/anonymous-virtual-phone-numbers-3426548"
+  author="Nadeem Unuth"
+  url="https://www.lifewire.com/anonymous-virtual-phone-numbers-3426548"
   image="https://www.lifewire.com/thmb/_jowhdPuS0PFBkdLOwh8yhq5IYg=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/digital-communication--illustration-623682169-5b92e4b846e0fb00505b3faf.jpg"
 %}

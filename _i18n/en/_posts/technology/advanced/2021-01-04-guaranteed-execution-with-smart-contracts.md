@@ -2,17 +2,20 @@
 layout: post
 type: article
 title: "Guaranteed Execution with Smart Contracts"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn why cryptocurrencies are sometimes referred to as programmable money."
 permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
 chapter: "What is a Blockchain?"
+further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 
 We have looked at blockchain in two different ways. First as a data structure and second as a protocol to transfer value. For the last article of this chapter about what a blockchain is we want to talk about smart contracts. Besides AI, IoT, and blockchain, smart contracts have been one of the hottest topics over the last two years in the tech world. They are software on the blockchain.
 
-A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to an agreement. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
+A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. Smart contracts are essentially software running on the blockchain. A contract, in general, is an agreement between parties that binds them to something happening in the future. The "smart" comes from the automatic execution of these digital contracts. They consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
 
 ### The Promise of Smart Contracts
 
@@ -30,7 +33,8 @@ A decentralized application or dApp is a more sophisticated use case for smart c
 
 Dapps use smart contracts to communicate with the underlying blockchain. Imagine a future where smart contract libraries with a large number of template contracts that can be used for various purposes. We are already seeing a trend towards this scenario with smart contract platforms such as Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_D.jpg)
+![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_M.jpg)
 
 ### Smart Contract Platform
 
@@ -52,9 +56,10 @@ One must consider that writing traditional contracts takes years of studying the
 
 There is another major challenge to overcome. The digital world needs to learn about real-world events in order for a smart contract to function and execute. An oracle is an entity submitting data to a blockchain or smart contract. The trust problem is referred to as the Oracle Problem. Imagine a smart contract running a betting platform in a trustless environment. An oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because an Oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle.jpg)
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_D.jpg)
+![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_M.jpg)
 
-Centralized Oracles are not considered a solution to the Oracle Problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. No matter if centralized or decentralized, an oracle will always come at a cost. Acting honestly must always be the most profitable strategy and therefore strong incentives must be in place. This is another problem that needs game theoretic evaluation and incentive design, just like the incentives for miners that we talked about in our **last article**.
+Centralized Oracles are not considered a solution to the Oracle Problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. No matter if centralized or decentralized, an oracle will always come at a cost. Acting honestly must always be the most profitable strategy and therefore strong incentives must be in place. This is another problem that needs game theoretic evaluation and incentive design, just like the incentives for miners that we talked about in our last article.
 
 Projects such as Augur and Gnosis are working on decentralized solutions to the Oracle Problem via prediction markets. Before these prediction markets gain serious adoption they will remain easy to game. And since prediction markets have the potential to influence the outcome of an event as Dan Finley suggests it remains to be seen if they can become a solution.
 
@@ -69,23 +74,7 @@ As Jimmy Song puts it: "A smart contract that trusts a third party removes the k
 ### Summary
 
 You should have a good idea of what a blockchain is. We looked at it as a data structure and as a set of rules. A blockchain can store data reliably due to the distributed nature of the ledger. Anybody can participate in the network without any permission or registration as long as he follows the rules of the protocol. This makes public blockchains censorship-resistant, permissionless, trustless, and valuable. It can not only store pieces of data but also programs running in a distributed fashion.  
-Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and safe time. They will most likely foster a closer connection between software developers and the judicial system. Before we can see widespread adoption we have to overcome some hurdles. Regulators have to create a framework to allow deployment of legally binding smart contracts and decentralized oracles need to be developed.
+Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middleman and thereby reduce cost and save time. They will most likely foster a closer connection between software developers and the judicial system. Before we can see widespread adoption we have to overcome some hurdles. Regulators have to create a framework to allow deployment of legally binding smart contracts and decentralized oracles need to be developed.
 
 This was the last article in the chapter on what a blockchain is and what it can do. In the next chapter, we will take a look at how blockchains work.
 
-### Further Reading
-
-{% include further_reading.html 
-title="The Oracle Problem" 
-summary="An article about the challenge of submitting truthful real-world data to blockchains." 
-author="Delphi" 
-url="https://medium.com/@DelphiSystems/the-oracle-problem-856ccbdbd14f" 
-image="https://cdn-images-1.medium.com/max/800/1*YrDfK0COoy1JnkJXyj68Vg.png" %}
-
-
-{% include further_reading.html 
-title="The Truth about Smart Contracts" 
-summary='Jimmy Song is a well-known technical writer in the blockchain industry and explains the challenges of implementing "trustless" Smart Contracts.'
-author="Jimmy Song" 
-url="https://medium.com/@jimmysong/the-truth-about-smart-contracts-ae825271811f" 
-image="https://cdn-images-1.medium.com/max/800/0*3ZFzH_sf5kXtbsxC.jpg" %}

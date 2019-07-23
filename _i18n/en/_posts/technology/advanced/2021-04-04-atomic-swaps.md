@@ -2,10 +2,12 @@
 layout: post
 type: article
 title: "Atomic Swaps"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn about atomic swaps at an advanced level."
 permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced
 chapter: "Transactions"
+further_reads: [atomic_swaps_the_interoperability_revolution_in_cryptos, everything_you_need_to_know_about_atomic_swaps_and_how_komodo_is_advancing_the_technology, atomic_swap_compatibility_of_different_cryptocurrencies]
 ---
 
 The last transaction type that we would like to talk about is the Atomic Swap. It is a type of transaction that touches on the topics of scalability and interoperability at the same time.
@@ -20,7 +22,8 @@ Hashed Timelock Contracts (HTLCs) enable atomic swaps. To understand HTLCs we mu
 A state channel is a two-way communication channel that allows interaction that would usually happen on-chain, to occur off-chain.  
 One specific type of state channel is the payment channel. As the name suggests, a payment channel is a state channel that deals with payments. You may have heard about payment channels in the context of the lightning network or other so-called second layer solutions. An HTLC (Hashed Time Lock Contract) is a specific type of payment channel that enables the exchange of two different crypto assets off-chain.
 
-![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy_D.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/channel_hierarchy_M.jpg)
 
 The "Hashed" part of HTLC means, that a hash can serve as a lock for the contract, to protect it from a third party accessing it. The "Timelock" part refers to the contract being able to have an expiration date. We will explain what this means to the user after outlining how you would conduct an Atomic Swap.
 
@@ -37,7 +40,7 @@ You can create an HTLC once you meet both conditions. The process of an Atomic S
  5. Bob creates an HTLC with an address on the Horizen blockchain using Alice's hash lock.
  6. Bob deposits the agreed upon amount of ZEN in the contract address and locks them up.
 
-At this point, both participants have locked up the funds they agreed to exchange. Because both blockchains are public, each of them can verify the amounts deposited. Only Alice has the key to unlock the funds on both chains right now. In case she does not proceed the Timelock would release the funds back to their original owners after a certain period of time. That way she can't trick Bob into losing his funds by locking them up and never receiving the key to unlock them. If she proceeds the next two steps happen almost simultaneously.
+    At this point, both participants have locked up the funds they agreed to exchange. Because both blockchains are public, each of them can verify the amounts deposited. Only Alice has the key to unlock the funds on both chains right now. In case she does not proceed the Timelock would release the funds back to their original owners after a certain period of time. That way she can't trick Bob into losing his funds by locking them up and never receiving the key to unlock them. If she proceeds the next two steps happen almost simultaneously.
 
  7. Alice uses the key to unlock Bob's ZEN and transfers them to an address that she controls. Bob learns about the key when Alice unlocks the funds by monitoring his HTLC.
  8. Bob uses the key he just learned to unlock Alice's Bitcoin and transfers them to a Bitcoin address he controls.
@@ -45,7 +48,8 @@ At this point, both participants have locked up the funds they agreed to exchang
 
 Since this is an automated process steps 7 and 8 happen at the same time and there is no trust required from either party. Either both or none of them get the funds of the other.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps_D.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/swaps_M.jpg)
 
 ### Atomic Swaps Today
 
@@ -64,31 +68,3 @@ Atomic Swaps present an alternative to centralized exchanges used today once the
 
 This was the last article on transactions in the advanced section. To learn more about how transactions work and what types of transactions there are you can visit our expert level. On the advanced level, we will continue with an introduction to privacy-preserving techniques on the blockchain.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Atomic Swaps - The Interoperability Revolution in Cryptos"
-  summary="An overview of Atomic Swap integrations and the benefits as well as drawbacks of the technology."
-  author="Faisal Khan"
-  url="https://medium.com/datadriveninvestor/atomic-swaps-the-interoperability-revolution-in-cryptos-f7ddf1381d47"
-  image="https://cdn-images-1.medium.com/max/800/0*2BCpfDnLJoSKI6P4"
-%}
-
-{%
-  include further_reading.html
-  title="Everything You Need to Know about Atomic Swaps, and How Komodo is Advancing the Technology"
-  summary="A timeline of Atomic Swaps and an outlook on what this means for decentralized exchanges."
-  author="Komodo Platform"
-  url="https://medium.com/@komodoplatform/everything-you-need-to-know-about-atomic-swaps-and-how-komodo-is-advancing-the-technology-cadaec50da7c"
-  image="https://cdn-images-1.medium.com/fit/c/50/50/1*WEC_feWnTjLuc6acdYSjlQ.png"
-%}
-
-{%
-  include further_reading.html
-  title="Atomic Swap compatibility of different cryptocurrencies."
-  summary="This website shows which crypto pairs already support Atomic Swaps"
-  author=""
-  url="https://swapready.net/"
-  image=""
-%}

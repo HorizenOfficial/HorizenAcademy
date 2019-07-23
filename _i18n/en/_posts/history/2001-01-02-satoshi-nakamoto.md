@@ -2,9 +2,11 @@
 layout: post
 type: article
 title: "Satoshi Nakamoto"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we learn more about Satoshi Nakamoto - The creator of Bitcoin."
 permalink: /history/satoshi-nakamoto/
 topic: history
 chapter: "From Cypherpunks to Horizen"
+further_reads: [planting_bitcoin]
 ---
 
 Bitcoin just celebrated its 10th birthday, but the creator of the first cryptocurrency blockchain still remains anonymous. There have been many attempts to identify the man/woman/group behind the pseudonym, Satoshi Nakamoto, none of them successful.
@@ -19,7 +21,7 @@ On January 3rd, 2009 the Genesis Block of Bitcoin was mined and the first 50 bit
 
 <h3 class="text-center font-italic">"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."</h3>
 
-![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor_AW.jpg)
+![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
 
 Choosing to include this headline suggests that one of the main motivations to build Bitcoin was to create an alternative to the fractional reserve banking system that provably destabilizes the economy and arguably disenfranchises the general public.
 
@@ -45,13 +47,3 @@ Another benefit of Satoshis anonymity is that bitcoin is evaluated based on the 
 
 If you are still out there and happen to stumble across this article: Thank you Satoshi!
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Planting Bitcoin"
-  summary="A brilliant article examining the different factors that contributed to Bitcoins success. Dan Held is one of the best writers in the blockchain space and compares the evolutionary steps of the Bitcoin protocol to the different phases of planting a tree."
-  author="Dan Held"
-  url="https://medium.com/@danhedl/planting-bitcoin-56bd1459cb23"
-  image="https://cdn-images-1.medium.com/max/1200/1*ndsz9PCJFuRuqv2Ayb3Vkw.png"
-%}

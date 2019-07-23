@@ -2,10 +2,12 @@
 layout: post
 type: article
 title: "The Elements of a Blockchain"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you will learn the role miners and nodes play in a blockchain ecosystem at a beginner level."
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner
 chapter: "How Does a Blockchain Work?"
+further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity, blockchain_technology_explained_introduction_meaning_and_applications]
 ---
 
 The last articles stated that on one hand, the blockchain is a data structure, a way to store information. On the other hand, it is a protocol to transfer value and the miners are the bookkeepers of a blockchain. We want to discuss the parties that play a part in the blockchain ecosystem in this article. Let's first talk about the term protocol again before we discuss that.
@@ -15,7 +17,7 @@ A protocol is like a set of rules. These rules implemented govern a given blockc
  - If you have 1 Coin, 1 Coin is the most you can spend.
  - If you try to spend the same Coin twice, the first transaction that spends it will be valid. The second transaction will be invalid.
 
-Now that you know that a protocol, a term you will hear quite often is just a set of rules let's take a look at the individuals that play a part in a blockchain ecosystem.
+Now that you know that a protocol, a term you will hear quite often, is just a set of rules let's take a look at the individuals that play a part in a blockchain ecosystem.
 
 ### Nodes
 
@@ -27,7 +29,8 @@ Similarly, in the distributed network of a blockchain, the _full nodes_ are up a
 
 You can run a full node, and you should if you want to contribute to the stability and security of your network, but to use cryptocurrencies you don't have to. Most wallets out there are light nodes, which means they store your keys but don't maintain a copy of the blockchain. With our flagship app Sphere by Horizen, you can choose to run a full node or not, making it a "hybrid node".
 
-![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes.png)
+![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_D.jpg)
+![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_M.jpg)
 
 ### Miner
 
@@ -37,11 +40,12 @@ Leaving the technical details aside, for now, their actual purpose for the netwo
 
 But why do you need the puzzle? Each miner might have a slightly different block than the other miners. This is because it takes some time for a new transaction to spread across the entire network, and different miners might receive those transactions in a different order.
 
-![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner.jpg)
+![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_D.jpg)
+![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_M.jpg)
 
 The miners start solving a new puzzle (working on the next block) immediately after solving the previous block. They gather all the transactions on the network that have not been included in a block yet and put them in their version of the next block. The miner who solves the puzzle first gets to write the history for the last few minutes. This person broadcasts their block to the network together with the solution they found for the puzzle. All nodes, no matter if they are mining or not verify if the solution to the puzzle is correct, and if it is they add the new block to their copy of the blockchain. Now the cycle starts all over again. 
 
-This is how the network comes to agreement or **consensus** on what has happened in the past. If you wonder why we said "around 2.5 min", this is because it actually varies. All the miners start to solve the puzzle right after the previous block was solved and broadcasted. The time it takes the miners to solve the puzzle depends on how difficult it is. If there are more people trying to solve the puzzle at the same time they will solve it faster on average.
+This is how the network comes to agreement or **consensus** on what has happened in the past. If you wonder why we said "around 2.5 min", this is because it actually varies. All the miners start to solve the puzzle right after the previous block was solved and broadcast. The time it takes the miners to solve the puzzle depends on how difficult it is. If there are more people trying to solve the puzzle at the same time they will solve it faster on average.
 
 The protocol increases the difficulty of the puzzle when new miners join the network. It will take the miners roughly 2.5 min again to solve the puzzle. This is another example of the protocol being a set of rules:
 
@@ -59,22 +63,3 @@ This process generates new coins and creates an incentive for people to create a
 
 In conclusion, miners and node operators are the two main entities in a blockchain. The nodes make up the infrastructure of the network. Miners are the bookkeepers that make the decisions regarding the order of events. They receive a reward for their efforts. The reward generates new coins. The next article is going to tackle the question of how [identity works in the context of the blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). It will cover the keys that we mentioned in this article and what they are for.
 
-### Further Reading
-
-{%
-  include further_reading.html
-  title="Three Elements to Understanding Blockchain & Its Greatest Opportunity"
-  summary="A different take on the elements of the blockchain. The author names openness, consensus and gamification as the three main components of blockchain technology."
-  author="Brad Arlen"
-  url="https://medium.com/coinmonks/three-elements-to-understanding-blockchain-its-greatest-opportunity-e9d89086692a"
-  image="https://cdn-images-1.medium.com/max/1200/1*3S5O0k-Ee65N-AmbbWw-Lg.png"
-%}
-
-{%
-  include further_reading.html
-  title="Blockchain Technology Explained: Introduction, Meaning, and Applications"
-  summary="The author explains the pieces that make blockchain work and gives a few examples of potential use cases for the technology."
-  author="Mayank Pratap"
-  url="https://hackernoon.com/blockchain-technology-explained-introduction-meaning-and-applications-edbd6759a2b2"
-  image="https://cdn-images-1.medium.com/max/1200/1*9wK0VOvs0fjJ_PjAvz-MoQ.jpeg"
-%}

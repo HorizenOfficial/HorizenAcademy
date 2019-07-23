@@ -2,6 +2,7 @@
 layout: post
 type: intro
 title: "Resources"
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. We have compiled a list of resources for users who would like to learn more about our base technologies."
 permalink: /resources/
 topic: resources
 ---
@@ -14,18 +15,18 @@ Using additional resources will help you understand the topics blockchain and cr
 
 
 
-#### [Jameson Lopp - Bitcoin Resources](https://lopp.net/bitcoin.html)
+<h4><a href="https://lopp.net/bitcoin.html" target="_blank">Jameson Lopp - Bitcoin Resources</a></h4>
 
 Jameson Lopp has put on of the best-curated Resource Lists around Bitcoin, Blockchain and Crypto in general. He lists online courses, the most important forums, podcasts, blogs and much much more. Make sure to check it out, it is a very valuable collection of content.
 
-#### [Privacy Bitcoin Wiki](https://en.bitcoin.it/wiki/Privacy)
+<h4><a href="https://en.bitcoin.it/wiki/Privacy" target="_blank">Privacy Bitcoin Wiki</a></h4>
 
 While Bitcoin can support strong privacy, many ways of using it are usually not very private. With a proper understanding of the technology, bitcoin can indeed be used in a very private and anonymous way. This Wiki does not only explain the different technological concepts behind Bitcoin but also includes a lot of best-case and worst-case examples of how to use crypto.
 
-#### [Coindesk](https://www.coindesk.com/)
+<h4><a href="https://www.coindesk.com/" target="_blank">Coindesk</a></h4>
 
 If you want to stay up to date about the blockchain and crypto industry, Coindesk is a good place to start. You will find all the important news about adoption, use-cases, and technical developments. They have become the de-facto industry standard for topic related news.
 
-#### [Surveillance Self-Defense](https://ssd.eff.org/en)
+<h4><a href="https://ssd.eff.org/en" target="_blank">Surveillance Self-Defense</a></h4>
 
 A project of the Electronic Frontier Foundation (EFF), an independent non-profit working to protect online privacy for nearly thirty years. This is Surveillance Self-Defense : their expert guide to protecting you and your friends from online spying.
