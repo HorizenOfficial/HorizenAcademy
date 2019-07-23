@@ -152,11 +152,10 @@ Obviously the problem of achieving consensus reliably has been solved, otherwise
 The important leap was moving away from a deterministic definition of consensus. While some might argue this sounds like moving goalposts, in practice this is what makes public blockchains work - a non-deterministic definition of consensus. Using determinism means, that each new state is decided on by all nodes in a binary or boolean fashion: correct or false.
 The consensus mechanism therefore had nodes agreed on some fixed new state.
 
-In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being the correct one surely but slowly approaches 1.
-
+In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* surely but slowly approaches 1.
 ++++ graphic nakamoto
 
-It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received.
+It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach to partition the ledger into individual *shards*. Without finality, this becomes practically infeasible.
 
 ##### Nakamoto Consensus
 
