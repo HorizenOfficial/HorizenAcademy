@@ -17,12 +17,3 @@ The blockchain documents every transfer of money. This ensures, that nobody can 
 
 Blockchains solved a major problem in the digital world. When I send you a picture in an email, I actually just send you a copy of that picture and afterward, we both have a copy. I could send the same picture to another person later on. Blockchains allow digital things to exist only once. This is one of the main reasons blockchains are innovative. Digital money would not work if I could send you a copy of my money and spend it a second time later on.
 
-
-When \\(a \ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are
-
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-And if you know Albert Einstein and his Famous Formula, you should know Jonas:
-
-$$E = mc^2 = a \cdot \frac{n^3i + n{i+1}}{jonas}$$
-
