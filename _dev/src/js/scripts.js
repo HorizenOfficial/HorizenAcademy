@@ -44,20 +44,37 @@ $(function () {
         });
 
         // zoom image on mobile
-        var fullZoom = $("#full-screen-image-zoom");
-        fullZoom.find('.panzoom').panzoom({
-            $zoomIn: fullZoom.find(".zoom-in"),
-            $zoomOut: fullZoom.find(".zoom-out")
-        });
+        var pswpElement = document.querySelectorAll('.pswp')[0];
         $(".post-content img").click(function (e) {
-            fullZoom.show();
-            fullZoom.find("img").attr("src", $(this).attr("src"));
-        });
-        fullZoom.find(".zoom-close").click(function (e) {
-            fullZoom.hide();
-        });
-        fullZoom.find("img").click(function (e) {
-            e.stopPropagation();
+            var img = this; $img = $(this);
+
+            // build items array
+            var items = [
+                {
+                    src: $img.attr("src"),
+                    w: img.naturalWidth,
+                    h: img.naturalHeight
+                }
+            ];
+
+            // define options (if needed)
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: 0, // start at first slide
+                bgOpacity: 0.75,
+                history: false,
+                tapToClose: true,
+
+                fullscreenEl: false,
+                captionEl: false,
+                shareEl: false,
+                zoomEl: false,
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
         });
 
     });

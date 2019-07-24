@@ -31,6 +31,7 @@
     "aos": "^2.2.0",
     "lity": "^2.3.0",
     "select2": "^4.0.5",
-    "algoliasearch": "^3.32.0"
+    "algoliasearch": "^3.32.0",
+    "photoswipe": "^4.1.3"
   }
 }

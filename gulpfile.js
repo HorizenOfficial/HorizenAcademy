@@ -106,8 +106,9 @@ gulp.task('concat', function() {
         paths.src + 'js/vendor/headroom.min.js',
         paths.src + 'js/vendor/jQuery.headroom.min.js',
 
-        // mobile zoom image
-        paths.src + 'js/vendor/jquery.panzoom.js',
+        // zoom image
+        paths.bower + 'photoswipe/dist/photoswipe.min.js',
+        paths.bower + 'photoswipe/dist/photoswipe-ui-default.min.js',
 
         paths.src + 'js/scripts.js'
     ];
