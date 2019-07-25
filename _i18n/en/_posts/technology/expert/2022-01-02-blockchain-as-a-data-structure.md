@@ -9,4 +9,4 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}

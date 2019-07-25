@@ -16,7 +16,7 @@ Es posible explicar la tecnología blockchain de muchas maneras. Hasta hace poco
 Como estructura de datos y en el contexto de las ciencias computacionales, una cadena de bloques es una manera de almacenar, organizar y administrar información. Una estructura de datos le permite al usuario acceder, modificar y buscar los datos que contiene. Algunas de las estructuras de datos más básicas y comunes son las matrices y listas enlazadas. Una matriz es un conjunto de elementos enumerados. Estos elementos pueden ser números, letras, palabras o incluso archivos. Los índices permiten al usuario acceder a cualquier elemento individualmente, por lo que si el usuario desea cambiar la entrada de una matriz y conoce su ubicación, tiene un acceso directo a ella.
 
 {%
-  include image_caption.html
+  include blocks/image_caption.html
   image="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_D.jpg"
   image2="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_M.jpg"
   caption="One-dimensional array with six elements"
