@@ -93,7 +93,7 @@ gulp.task('concat', function() {
         // paths.bower + 'bLazy/blazy.min.js',
         // paths.bower + 'aos/dist/aos.js',
         // paths.bower + 'lity/dist/lity.js',
-        // paths.bower + 'select2/dist/js/select2.min.js',
+        paths.bower + 'select2/dist/js/select2.min.js',
         paths.bower + 'ajaxchimp/jquery.ajaxchimp.js',
         // paths.bower + 'js-cookie/src/js.cookie.js',
         // paths.bower + 'moment/moment.js',
@@ -138,6 +138,11 @@ gulp.task('watch', function () {
         'feeds/*'
     ], ['jekyll-rebuild']);
 });
+
+// shortcut
+gulp.task('b', ['jekyll-build']);
+gulp.task('js', ['concat']);
+gulp.task('css', ['sass']);
 
 /**
  * Default task, running just `gulp` will compile the sass,

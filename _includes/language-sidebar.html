@@ -1,0 +1,16 @@
+<div class="language-select">
+  <button class="toggle-languages btn btn-close">
+    <span class="x"></span><span class="x x2"></span>
+  </button>
+  {% for language in site.data.languages %}
+  {% if language[0] == site.default_lang %}
+      <a href="{{ site.baseurl_root }}{{ page.url }}" class="language-item {% if site.lang == site.default_lang %}active{% endif %}">
+      {{ language[1] }}
+      </a>
+  {% else %}
+    <a href="{{ site.baseurl_root }}/{{ language[0] }}{{ page.url }}" class="language-item {% if site.lang == language[0] %}active{% endif %}">
+      {{ language[1] }}
+    </a>
+  {% endif %}
+  {% endfor %}
+</div>
