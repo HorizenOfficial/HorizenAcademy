@@ -195,6 +195,10 @@ body::after{
 .site-content-wrapper {
 }
 
+.site-content {
+  padding-bottom: 4rem;
+}
+
 .article-nav {
   padding-right: 15px;
   padding-left: 15px;
@@ -452,7 +456,8 @@ body::after{
 }
 
 .footer-share-social {
-  padding: 2rem 0;
+  position: absolute;
+  top: -3rem;
   img {
     height: 32px;
   }
