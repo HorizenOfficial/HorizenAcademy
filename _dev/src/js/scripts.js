@@ -403,23 +403,30 @@ $(function () {
             $(".js-SelectLevel[data-level='" + btn.data("level") + "']").click();
         });
 
-        // open nav on mobile
-        enquire.register("screen and (max-width: 991px)", function () {
+        // On mobile
+        enquire.register("screen and (max-width: 767px)", function () {
             $(".js-Home-SelectLevel").click(function (e) {
-                $("#left-menu").addClass("open");
-                $("#mobile-left-menu-toggler").addClass("open");
-            });
-        });
-
-        // show button on desktop
-        enquire.register("screen and (min-width: 992px)", function () {
-            $(".js-Home-SelectLevel").click(function (e) {
+                // $("#left-menu").addClass("open");
+                // $("#mobile-left-menu-toggler").addClass("open");
                 var btnLevel = $(this);
-
                 $(".js-Home-SelectTopic").each(function (_, topic) {
                     topic = $(topic);
                     topic.attr("href", topic.data("url-" + btnLevel.data("level")));
                 });
+
+                $(".home-topics").show();
+            });
+        });
+
+        // show button on desktop
+        enquire.register("screen and (min-width: 768px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                // var btnLevel = $(this);
+                //
+                // $(".js-Home-SelectTopic").each(function (_, topic) {
+                //     topic = $(topic);
+                //     topic.attr("href", topic.data("url-" + btnLevel.data("level")));
+                // });
             });
         });
     }
