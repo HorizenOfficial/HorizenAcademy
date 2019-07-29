@@ -28,7 +28,7 @@ A blockchain is a data structure in the eyes of a computer scientist. This struc
 
 
 ##### A Database: Efficient but Centralized
-A database is a highly efficient data structure. Databases are an excellent way to store large amounts of data but are usually operated by a central entity. Your bank, your favorite social network, or online merchant, uses databases to store your data.
+A database is a highly efficient data structure. Databases are an excellent way to store large amounts of data but are usually operated by a central entity. Your bank, your favorite social network, or online merchant, all use databases to store your data.
 
 This entity decides who can add data to the database and who can access it, but it also has the power to change or delete data. You can edit your social media profile. Your friends can see that information, but if you violate the site's Terms of Agreement they can delete your post. The central entity has the last say in what stays on the platform. This can be both good and bad when it comes to a social network, but this would not be a good feature when looking at data structures that store your money.
 
@@ -36,7 +36,7 @@ This entity decides who can add data to the database and who can access it, but 
 ##### A blockchain: Less Efficient, but Decentralized
 Many different entities, or peers, operate a blockchain. These peers don't know or trust each other (therefore "trustless"). The good thing is that they *don't need to trust each other*. Many peers keep a copy of the data and no single peer has the power to change or censor the data. Participants (or nodes in technical terms) communicate constantly to keep each other updated on new events. Events on the blockchain are most commonly transactions.
 
-There is no centralized entity, like a bank or clearinghouse, responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding by the rules of the protocol can create a wallet and send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network and every participant (or node, or peer) keeps a copy of it. A node can be an operated by an individual person, a store accepting crypto, or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database, but a more secure way to store data.
+There is no centralized entity, like a bank or clearinghouse, responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding by the rules of the protocol can create a wallet and send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network and every participant (or node, or peer) keeps a copy of it. A node can be an operated by an individual person, a store accepting crypto, or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database, but makes it more secure.
 
 ![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_D.jpg)
 ![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_M.jpg)
