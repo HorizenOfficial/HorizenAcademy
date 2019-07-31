@@ -16,6 +16,8 @@ Before Bitcoin digital scarcity didn't exist. Digital goods were infinitely copy
 
 **Add** [Tweet](https://twitter.com/obiwankenobit/status/1130885906938753025?s=21)
 
+https://twitter.com/obiwankenobit/status/1130885906938753025?s=21
+
 A well designed system for a global exchange of value also enables greater *social scalability*. When we say system, we implicitly say protocol, as the protocol defines the system. The term *social scalability* refers to the ability of large groups to cooperate effectively, or as Nick Szabo, who coined the term, puts it in one of [his best known essays](https://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html):
 
 > "Social scalability is the ability of an institution - a relationship or shared endeavor, in which multiple people repeatedly participate, and featuring customs, rules, or other features which constrain or motivate participants' behaviors - to overcome shortcomings in human minds and in the motivating or constraining aspects of said institution that limit who or how many can successfully participate."
