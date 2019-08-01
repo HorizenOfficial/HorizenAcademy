@@ -44,6 +44,8 @@ Now, a miner builds a *merkle tree* of all transactions included in her block an
 
 Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
+++++ hash_cash_pow
+
 Once such a block, or better nonce, is found, the miner will broadcast his block to the network, where nodes as well as other miners check, if the block contains conflicting transactions and if the hash is below the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block and start working on a new one.
 
 The terms target and *difficulty* are often times used interchangeably. Technically, they are not equivalent though. The target is a value, that the block hash has to be equal to or below in order to be considered valid. The difficulty, is a measure of how difficult it is to find a hash below a given target. The highest possible target in Bitcoin (1) is defined as
