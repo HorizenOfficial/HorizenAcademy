@@ -68,7 +68,7 @@ Los oráculos centralizados no se consideran una solución al problema del orác
 Algunos proyectos como Augur y Gnosis están buscando encontrar soluciones descentralizadas al problema del oráculo a través de mercado predictivo. Antes de que dichos mercados se adopten de manera general, sin embargo, permanecerán fáciles de engañar. Además, ya que los mercados predictivos tienen el potencial de influenciar el resultado de un evento, es incierto aún si pueden convertirse en una solución; en palabras del desarrollador Dan Finlay:
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maybe/Theory: Since decentralized prediction markets can influence the incentives around an event’s probability, they are never just prediction tools, and should always be treated as incentivization tools.</p>&mdash; Dan Finlay (@danfinlay) <a href="https://twitter.com/danfinlay/status/1089550845698396167?ref_src=twsrc%5Etfw">January 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include blocks/tweet.html id="1089550845698396167" %}
 
 
 *Teoría: Ya que los mercados predictivos descentralizados pueden influenciar los incentivos de la probabilidad de un evento, nunca son solo herramientas de predicción, por lo que deben tratarse siempre como herramientas de incentivación*

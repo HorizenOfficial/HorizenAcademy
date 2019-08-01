@@ -486,6 +486,23 @@ $(function () {
 });
 
 
+// Twitter
+$(function () {
+    twttr.ready(function () {
+        $(".js-TwitterTweet").each(function (_, el) {
+            var tOptions = {
+                conversation : 'none',
+                lang: el.getAttribute("data-tweet-lang") || "en"
+            };
+            twttr.widgets.createTweet(
+                el.getAttribute("data-tweet-id"), el, tOptions);
+            // .then (function (el) {
+            //     el.contentDocument.querySelector(".footer").style.display = "none";
+            // });
+        });
+    });
+});
+
 // Search function
 $(function () {
     var algoliaData = $("#algolia-data");

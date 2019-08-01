@@ -49,4 +49,4 @@ The blockchain is a method to store data in the context of computer science. The
 
 We would like to end this section with a tweet that distilled the implications of the properties of blockchain technology in the context of data structures.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Blockchains don’t guarantee truth; they preserve truth &amp; lies from later alteration, allowing one to securely analyze them and be more confident in uncovering the lies. Typical computers are computational etch-a-sketch, while blockchains are computational amber.&quot; - <a href="https://twitter.com/NickSzabo4?ref_src=twsrc%5Etfw">@NickSzabo4</a></p>&mdash; Jameson Lopp (@lopp) <a href="https://twitter.com/lopp/status/1059227449232445440?ref_src=twsrc%5Etfw">November 4, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include blocks/tweet.html id="1059227449232445440" %}

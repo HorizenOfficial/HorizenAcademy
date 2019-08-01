@@ -55,6 +55,6 @@ La cadena de bloques es un método de almacenamiento de datos en el contexto de 
 
 Nos gustaría cerrar esta sección con un tuit de Nick Szabo, el cual que consideramos destila las implicaciones de las propiedades de la tecnología blockchain en el contexto de las estructuras de datos.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Blockchains don’t guarantee truth; they preserve truth &amp; lies from later alteration, allowing one to securely analyze them and be more confident in uncovering the lies. Typical computers are computational etch-a-sketch, while blockchains are computational amber.&quot; - <a href="https://twitter.com/NickSzabo4?ref_src=twsrc%5Etfw">@NickSzabo4</a></p>&mdash; Jameson Lopp (@lopp) <a href="https://twitter.com/lopp/status/1059227449232445440?ref_src=twsrc%5Etfw">November 4, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include blocks/tweet.html id="1059227449232445440" %}
 
 _“Las cadenas de bloques no garantizan la verdad; evitan que tanto verdad como mentira sean alteradas, permitiendo que cualquiera las analice e identifique con confianza las mentiras. Una computadora típica es como un juguete Etch A Sketch, mientras que las cadenas de bloques son el ámbar computacional.”_
