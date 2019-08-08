@@ -215,5 +215,6 @@ In our next article, we will look at Proof-of-Work, the mechanisms that provides
 https://hackernoon.com/consensus-mechanisms-as-detailed-and-concise-as-possible-b3da79f85f66
 bitcoins security is fine
 
+https://medium.com/untitled-inc/decentralized-consensus-technology-enabling-the-world-of-networks-3c3ac06824a0
 
 
