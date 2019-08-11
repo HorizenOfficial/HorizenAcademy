@@ -148,9 +148,11 @@ On a high level, miners are rewarded with a ledger entry for spending real world
 
 But PoW also has some vulnerabilities. No system is unfailable. In our last article we looked at [consensus mechanisms in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) in general. We learned that it is hard to achieve Byzantine Fault-Tolerance in the first place, let alone tolerating a large share of byzantine actors. Simply speaking byzantine behavior means random or malicious bahavior. Building a system that demonstrates *liveness*, as well as *safety* with more than one third of the network acting *byzantine* took many years. Proof of Work together with the *longest chain rule* make up the *Nakamoto consensus*. It can tolerate byzantine hash contributions of up to 49%.
 
+**TKKG** 2f + 1 resilience. Incentive compatibility. Salfish mining, 25% attack. ref to mining.
+
 If an attacker controls the majority of hash rate he can reliably perform 51\% attacks. This means building a malicious chain faster, than the honest partition of the network. According to the longest chain rule, the honest and rational actors of the network will accept the malicious chain as valid, once it is broadcast. This allows the malicious actor to perform double spends.
 
-**DOUBLE SPEND GIF**
+++++ graphic DOUBLE SPEND GIF
 
  He spends coins in a transaction that is included in the honest chain. Later, he rewrites this part of the transaction history with his own blocks, which don't include his spending transaction. He is now in control of his founds again and spend them a second time - a double spend.
 
