@@ -153,6 +153,7 @@ The important leap was moving away from a deterministic definition of consensus.
 The consensus mechanism therefore had nodes agreed on some fixed new state.
 
 In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* surely but slowly approaches 1.
+
 ++++ graphic nakamoto
 
 It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach to partition the ledger into individual *shards*. Without finality, this becomes practically infeasible.
@@ -180,6 +181,8 @@ The longest chain rule is applied in case two miners find valid blocks at roughl
 ++++ graphic longest chain rule
 
 The resulting chain of state transitions - the blockchain - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power. This means, that on it's way to solving one of the more difficult problems in computer science, the Byzantine Generals Problem, Nakatomo Consensus also raised the bar for byzantine tolerance. Instead of being able to handle rougly 33% of participants being byzantine, it can handle 49%, although this is defined via the share of hash power rather than nodes on the network.
+
+**TKKG* (2*f* + 1) resilience vs (3*f* + 1) resilience.
 
 This last part of the sentence is very important. PoW and it's relatives can be seen as Sybil-resistance mechanisms. In a **Sybil Attack**, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
 
