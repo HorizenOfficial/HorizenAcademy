@@ -16,7 +16,7 @@ When a network participant creates a transaction, the transaction is then broadc
 
 There are many approaches to achieving consensus in a distributed network but the two most commonly used ones are the Proof-of-Work and Proof-of-Stake algorithm. I like the generalization Demiro Massessi has formulated:
 
-_"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_ - Demiro Massessi
+> "The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control." - Demiro Massessi
 
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_M.jpg)
