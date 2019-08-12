@@ -23,7 +23,7 @@ The input doesn't have to be a number, it can be any sort of data from a single 
 
 ### Public-Key Cryptography
 
-_Public-key cryptography_, also known as asymmetric cryptography. The term asymmetric stems from the property of keys always coming in pairs. If you have encrypted something with one of the keys, you need the other one to decrypt it and vice versa. These keys are the public key and private key (or secret key). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key. Public-key cryptography is also where cryptocurrencies got their name from.
+_Public-key cryptography_, is also known as asymmetric cryptography. The term asymmetric stems from the property of keys always coming in pairs. If you have encrypted something with one of the keys, you need the other one to decrypt it and vice versa. These keys are the public key and private key (or secret key). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key. Public-key cryptography is also where cryptocurrencies got their name from.
 
 ![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_D.jpg)
 ![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_M.jpg)
