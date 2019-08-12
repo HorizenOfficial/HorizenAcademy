@@ -71,7 +71,7 @@ Projects such as Augur and Gnosis are working on decentralized solutions to the 
 
 Before solving the problem of creating legally binding smart contracts and the oracle problem, the use of smart contracts will be limited to small experimental fields with low risk involved. An example of a potential use case would be in-game payments triggered by certain achievements that are objectively verifiable by code.
 
-As Jimmy Song puts it: "A smart contract that trusts a third party removes the killer feature of trustlessness." There is a long way to go before we will see the broad use of trustless smart contracts across different domains, but they are most definitely a concept worth exploring.
+As Jimmy Song puts it: ["A smart contract that trusts a third party removes the killer feature of trustlessness."](https://medium.com/@jimmysong/the-truth-about-smart-contracts-ae825271811f) There is a long way to go before we will see the broad use of trustless smart contracts across different domains, but they are most definitely a concept worth exploring.
 
 ### Summary
 
