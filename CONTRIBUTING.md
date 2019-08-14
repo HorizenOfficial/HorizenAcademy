@@ -103,7 +103,7 @@ If you have found a bug on the Horizen Academy website, please use the dedicated
 
 ### Correcting Minor Errors
 
-To correct minor errors like typos, duplicate words or wrong punctuation please follow our guide on [How to fix minor errors](HOW-TO-FIX-MINOR-ERRORS.md). It doesn't matter if you are on GitHub for the very first time, this guide will make it easy for you to make your first open-source contribution. 
+To correct minor errors like typos, duplicate words or wrong punctuation please follow our guide on [How to fix minor errors](HOW_TO_FIX_MINOR_ERRORS.md). It doesn't matter if you are on GitHub for the very first time, this guide will make it easy for you to make your first open-source contribution. 
 If you already know how GitHub works, just do your think - fork, fix, PR.
 
 ### Suggesting Additional Content
