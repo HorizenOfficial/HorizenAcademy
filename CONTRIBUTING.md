@@ -16,7 +16,8 @@ The following list is a set of guidelines, for contributing to the Horizen Acade
 [I don't want to read all this I just want to ask a question!](#i-dont-want-to-read-all-this-I-just-want-to-ask-a-question)
 
 [The Horizen Academy Structure](#the-horizen-academy-structure)
- *[Languages](#languages)
+
+  * [Languages](#languages)
   * [Levels](#levels)
   * [Topics](#topics)
   * [Chapters](#chapters)
