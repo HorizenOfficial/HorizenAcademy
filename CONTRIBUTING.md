@@ -36,7 +36,7 @@ This project and everyone participating in it is governed by the [Horizen Academ
 
 ### I don't want to read all this I just want to fix a typo!
 
-We have created a very simple guide on [How to fix a typo?](HOW_TO_FIX_TYPOS.md). No matter if you are on GitHub for the very first time, this guide will make it easy for you to make your first open-source contribution. 
+We have created a very simple guide on [How to fix a typo?](HOW-TO-FIX-MINOR-ERRORS.md). No matter if you are on GitHub for the very first time, this guide will make it easy for you to make your first open-source contribution. 
 If you already know how GitHub works, just do your think - fork, fix, PR.
 
 ### I don't want to read all this I just want to ask a question!
