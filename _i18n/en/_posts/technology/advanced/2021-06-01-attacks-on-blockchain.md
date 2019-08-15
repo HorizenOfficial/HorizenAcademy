@@ -31,7 +31,8 @@ Blockchain technology claims to have solved this issue.
 
 Each General now has a ledger of events that is always synchronized with the other General's ledgers without a central party being in charge of the coordination. Every time a block gets mined, all the participants agree on the order of events for the last couple of minutes. Getting back to our general's problem, now they have a way of knowing if all of them are going to attack, or if they should retread collectively.
 
-Critics might point out that a Proof-of-Work blockchain is not truly Byzantine Fault Tolerant because there is no finality to the consensus. The more confirmations a transaction, or more generally speaking a piece of information contained in a block, has, the higher the probability of this information being final. But there is always a non-zero probability, that a fork will occur, and a different, longer chain will replace the old one. If you are not familiar with the longest chain rule have a look at our article about consensus mechanisms/mining.
+Critics might point out that a Proof-of-Work blockchain is not truly Byzantine Fault Tolerant because there is no finality to the consensus. The more confirmations a transaction, or more generally speaking a piece of information contained in a block, has, the higher the probability of this information being final. But there is always a non-zero probability, that a fork will occur, and a different, longer chain will replace the old one. If you are not familiar with the longest chain rule have a look at our article about consensus <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms.md %}">mechanisms</a>
+/<a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-2021-02-07-mining.md %}">mining</a>.
 
 Looking at PoW blockchains with a lot of hash rate, such as the Bitcoin blockchain, the chances of a fork to occur after a block has 6 confirmations on top of it are considered to be small enough to call the block final. In our article on 51% Attacks in the advanced section, we will take a look at the math behind calculating those chances.
 
@@ -78,7 +79,7 @@ Once the attacker has received the good or other currency bought with their coin
 
 This has happened to many smaller blockchains in the past. In fact, Horizen suffered from a 51% attack in early June 2018. We immediately started to work on a solution to mitigate the risk of a 51% attack on smaller blockchains that are not secured by as much computing power as for example the Bitcoin blockchain.
 
-[We came up with a solution](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) that penalizes delayed block submissions. There is no legitimate reason for a miner, to broadcast several blocks to the network at once. Our protection mechanism makes these attacks very costly. So costly that it does not make any economic sense to perform such an attack on our network. Many other blockchains are now looking to implement a similar protection mechanism with their protocol. You can find the whitepaper to our protection mechanism here.
+[We came up with a solution](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) that penalizes delayed block submissions. There is no legitimate reason for a miner, to broadcast several blocks to the network at once. Our protection mechanism makes these attacks very costly. So costly that it does not make any economic sense to perform such an attack on our network. Many other blockchains are now looking to implement a similar protection mechanism with their protocol.
 
 ### Summary
 
