@@ -9,7 +9,7 @@ level: advanced
 chapter: "Wallets"
 ---
 
-A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our introduction to wallets. The main differentiator between the different types of wallets is the physical location your keys are stored in.
+A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets.md %}">introduction to wallets</a>. The main differentiator between the different types of wallets is the physical location your keys are stored in.
 
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
@@ -88,7 +88,7 @@ There is only one thing left to do: send funds to the public key. After that, yo
 
 ### Hardware Wallets
 
-Moving on to everybody's darling: hardware wallets. With a hardware wallet, your keys are stored on the device in something called the "secure element". The secure element is a place to store data that cannot be directly accessed by your computer or any other device once connected. Although it does look like a simple USB drive, it can actually do a little more than just providing storage for your keys. To use a hardware wallet you usually have a few options of which interface to use with it. Like MyEtherWallet, a few other wallets offer hardware wallet support. Additionally, you have the native wallet apps provided by the producer. In the case of Ledger, for example, the native App is called Ledger Live.
+Moving on to everybody's darling: hardware wallets. With a hardware wallet, your keys are stored on the device in something called the "secure element". The secure element is a place to store data (here, keys) that cannot be directly accessed by your computer or any other device even when it is connected. Although it does look like a simple USB drive, it can actually do a little more than just providing storage for your keys. To use a hardware wallet you usually have a few options of which interface to use with it. Like MyEtherWallet, a few other wallets offer hardware wallet support. Additionally, you have the native wallet apps provided by the producer. In the case of Ledger, for example, the native App is called Ledger Live.
 
 Now let's get to the interesting part: how does such a wallet actually work?
 
