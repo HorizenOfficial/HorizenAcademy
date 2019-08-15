@@ -16,7 +16,7 @@ One of the great value propositions of blockchains is the transparency that such
 
 There are many legitimate reasons to create private transactions on a blockchain. If you have a medical condition and need to purchase your prescriptions on a regular basis you have good reason to do these transactions privately. If you have a business, you don't want to reveal your revenue streams to your competition and if you are buying a present for your spouse, you might not want him or her to see it before they actually get the present. There are many good reasons to wish to transact privately, and we believe that privacy is and should be treated as a basic human right.
 
-For this article, we assume that you are familiar with the UTXO model that many blockchains use for accounting. If you are not, feel free to check out our article on it before you continue reading.
+For this article, we assume that you are familiar with the UTXO model that many blockchains use for accounting. If you are not, feel free to check out <a href="{{ site.baseurl }}{% post_url technology/advanced/2021-04-02-the-utxo-model.md %}">our article</a> on it before you continue reading.
 
 ### Change Addresses
 
