@@ -46,9 +46,10 @@ If 80% of miners receive block A first and the other 20% block B, then the chanc
 ![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_D.jpg)
 ![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_M.jpg)
 
-Proof-of-Work is one of the most secure consensus mechanisms. This mechanism is only feasible if there is a sufficient amount of computing power (_hash rate_) in the network. The Bitcoin protocol has proved how secure Proof-of-Work consensus is for over 10 years, given enough computing power on the network. We already talked about game theory in our article describing blockchain as a **protocol to transfer value** and in the article on **smart contracts**. Game theory "is the study of mathematical models of strategic interaction between rational decision-makers" according to Wikipedia. Miners are a group of rational decision makers in a PoW blockchain. The incentives, to act according to the rules of the mining protocol are embedded in the protocol itself. This is what makes a mature PoW blockchain so robust.
+Proof-of-Work is one of the most secure consensus mechanisms. This mechanism is only feasible if there is a sufficient amount of computing power (_hash rate_) in the network. The Bitcoin protocol has proved how secure Proof-of-Work consensus is for over 10 years, given enough computing power on the network. We already talked about game theory in our article describing blockchain as a [protocol to transfer value]]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value.md %})
+ and in the article on [smart contracts]({{ site.baseurl }}{% post_url technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts.md %}). Game theory "is the study of mathematical models of strategic interaction between rational decision-makers" according to Wikipedia. Miners are a group of rational decision makers in a PoW blockchain. The incentives, to act according to the rules of the mining protocol are embedded in the protocol itself. This is what makes a mature PoW blockchain so robust.
 
-In our article on **mining**, we will talk about this process in more detail and you will learn what the puzzle that we are talking about in the context of PoW is.
+In our article on [mining]({{ site.baseurl }}{% post_url technology/advanced/2021-02-07-mining.md %}), we will talk about this process in more detail and you will learn what the puzzle that we are talking about in the context of PoW is.
 
 ### Proof-of-Stake - PoS
 
