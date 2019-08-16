@@ -9,7 +9,7 @@ level: advanced
 chapter: "Wallets"
 ---
 
-A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets.md %}">introduction to wallets</a>. The main differentiator between the different types of wallets is the physical location your keys are stored in.
+A wallet is a program to generate, manage, and store a pair of cryptographic keys. You can check your balance, receive, and send funds within a wallet. If you are unsure about a wallets main functionality you can read our [introduction to wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets.md %}). The main differentiator between the different types of wallets is the physical location your keys are stored in.
 
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
