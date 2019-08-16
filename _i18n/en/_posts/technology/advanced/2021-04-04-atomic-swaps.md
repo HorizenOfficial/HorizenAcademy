@@ -34,7 +34,7 @@ You must meet two conditions to perform an atomic swap between two assets: Both 
 You can create an HTLC once you meet both conditions. The process of an Atomic Swap would generally look like the following. Let's assume Alice has some BTC and Bob has some ZEN. Both agree to swap a certain amount of their assets
 
  1. Alice generates an HTLC that has an address on the Bitcoin blockchain. Smart Contracts generally have an address so you can interact with them and a Hashed Timelock Contract is no exception.
- 2. Alice generates a key (a random number) and derives a hash lock from her key by hashing the random number (key). That way the key fits the lock. This step is similar to generating a private key and deriving an address from it as we explained in our article on <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography.md %}">public-key cryptography</a>.
+ 2. Alice generates a key (a random number) and derives a hash lock from her key by hashing the random number (key). That way the key fits the lock. This step is similar to generating a private key and deriving an address from it as we explained in our article on [public-key cryptography]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography.md %}).
  3. She now deposits the agreed upon amount of BTC in the HTLC.
  4. Alice locks her funds with the hash lock she created and sends a copy of her lock to Bob.
  5. Bob creates an HTLC with an address on the Horizen blockchain using Alice's hash lock.
