@@ -21,7 +21,7 @@ The information that you will find in a block explorer is structured either by t
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
 </div>
 
-There are a number of block explorers out there, often times several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers out there: blockchain.com.
+There are a number of block explorers out there, often times several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers [out there](https://www.blockchain.com/explorer) .
 
 You will see an overview of the most recently created blocks on the landing page. Let's go through what we see here:
 
@@ -35,7 +35,7 @@ You will see an overview of the most recently created blocks on the landing page
 
 ### The Genesis Block
 
-Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first bitcoin block that was ever mined, we can use the search function and enter "0". If you haven't opened the site yet this link will take you directly to the genesis block, that is what the very first block of a given chain is always called.
+Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first bitcoin block that was ever mined, we can use the search function and enter "0". If you haven't opened the site yet [this link](https://www.blockchain.com/fr/btc/block-height/0) will take you directly to the genesis block, that is what the very first block of a given chain is always called.
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
