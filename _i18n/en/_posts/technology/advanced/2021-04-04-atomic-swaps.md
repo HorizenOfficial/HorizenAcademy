@@ -34,7 +34,7 @@ You must meet two conditions to perform an atomic swap between two assets: Both 
 You can create an HTLC once you meet both conditions. The process of an Atomic Swap would generally look like the following. Let's assume Alice has some BTC and Bob has some ZEN. Both agree to swap a certain amount of their assets
 
  1. Alice generates an HTLC that has an address on the Bitcoin blockchain. Smart Contracts generally have an address so you can interact with them and a Hashed Timelock Contract is no exception.
- 2. Alice generates a key (a random number) and derives a hash lock from her key by hashing the random number (key). That way the key fits the lock. This step is similar to generating a private key and deriving an address from it as we explained in our article on public-key cryptography (TI2.3).
+ 2. Alice generates a key (a random number) and derives a hash lock from her key by hashing the random number (key). That way the key fits the lock. This step is similar to generating a private key and deriving an address from it as we explained in our article on [public-key cryptography]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography.md %}).
  3. She now deposits the agreed upon amount of BTC in the HTLC.
  4. Alice locks her funds with the hash lock she created and sends a copy of her lock to Bob.
  5. Bob creates an HTLC with an address on the Horizen blockchain using Alice's hash lock.
@@ -57,7 +57,7 @@ There are few wallets or decentralized exchanges that enable users to do Atomic 
 
  - The first on-chain Atomic Swap was done on September 20th, 2017 between Litecoin and Decred
  - The first off-chain Atomic Swap occurred November 2017 between Litecoin and Bitcoin on the Lightning Network
- - A detailed explanation of an Ethereum - Bitcoin Atomic Swap can be found here
+ - A detailed explanation of an Ethereum - Bitcoin Atomic Swap can be found [here](https://medium.com/coblox/connect-all-the-blockchains-atomic-swap-78b38fff42e)
  - Most recently on the 7th of December 2018 TenX showcased an ERC20 to Bitcoin Lightning Atomic Swap using their open-source software COMIT
 
 The technology is very promising, but to achieve adoption wallets as well as exchanges will have to build a user-friendly interface to use Atomic Swaps. 
