@@ -10,7 +10,7 @@ chapter: "Privacy"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
-It is a common misconception that Bitcoin and other cryptocurrencies are an anonymous means of payment. In fact, they are anything but. The blockchain is a public, fully transparent ledger. Anybody can browse the data of a blockchain using a [block explorer]({{ site.baseurl }}{% post_url /technology/beginner/2021-04-03-block-explorer-introduction %}) and see which addresses transferred how much money at what time.
+It is a common misconception that Bitcoin and other cryptocurrencies are an anonymous means of payment. In fact, they are anything but. The blockchain is a public, fully transparent ledger. Anybody can browse the data of a blockchain using a [block explorer]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}) and see which addresses transferred how much money at what time.
 
 While this generally holds true for most blockchains, there are several ways to achieve financial privacy - even on a fully transparent ledger.
 To transact privately, there can't be any information about the sender and receiver of a transaction. You need an address to transact on a blockchain. Because this address doesn't carry any information about their owner we say they are pseudonymous. Your address acts like a pseudonym, similar to how you pick a username in a forum.
