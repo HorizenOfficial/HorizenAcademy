@@ -46,7 +46,7 @@ Your public key is like your address on the blockchain and your private key is t
 
 A [transaction]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}) is a message to the network informing all participants that some money has changed hands. If you want to send a transaction you must unlock your money with your private key first. Then you what address(es) will receive how much of your money. The transaction is basically a message saying "Alice sent Bob 10 ZEN". This statement is what represents Bob's coins. 
 
-**NEW**
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
 
 To access the information stored on a blockchain you use a [block explorer]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}). Like how a web browser lets you access information on the internet, the block explorer lets you access information on the blockchain. You can look up addresses, transactions, or entire blocks.
 

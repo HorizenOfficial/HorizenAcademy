@@ -13,29 +13,29 @@ Digital money would be pretty useless if there was no way to send it from one pe
 
 In the [very first article]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}) of the Technology Section we said that the blockchain is a public ledger that keeps track of all the transactions that ever happened on the network. In the last article, we stated that a [wallet]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) is an app, that helps you with managing your keys and creating transactions.
 
-G1
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T1_balance_D.jpg)
 
 A wallet gets your balance from monitoring the blockchain for any transactions that involve your address. Initially, all transactions are cryptographically locked. The lock is based on the address the transaction is sent to, and can only be unlocked with the corresponding private key.
 
 Now let's assume this is your wallet. You received a total of 20 ZEN in two different transactions of 10 ZEN each. Now you want to spend 2 ZEN on lunch. Your wallet starts with a blank transaction and in a first step chooses one of your prior transactions to spend. In this case, both transactions are of sufficient value so your wallet might randomly choose the first one.
 
-G2
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_input_D.jpg)
 
 The money that is being spent in a transaction is called the *input* and the money that is being received is called the *output*.
 Your wallet places one of the outputs you own in the empty transaction and uses your private key to unlock it so it becomes spendable - this is what we called *signing* the transaction. The unlocked output is now used as an input to a new transaction.
 
-G3
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_outputs_D.jpg)
 
 Next, your wallet creates the *outputs*. It asks you for an address to send money to and an amount. You want to send 2 ZEN to address XYZ to pay for your lunch, so your wallet creates the first output accordingly.
 The second output is generated automatically - its called the *change output*.
 Outputs are similar to cash denominations. If you need to pay $2 USD but only have a $10 bill, you expect to get $8 in change. Your wallet automatically includes the change in the transaction. The newly generated outputs are locked by default.
 
-G4
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
 
 Lastly, your wallet broadcasts the transaction to the network, where all nodes and miners will verify if the signature you used to unlock your money is valid. If it is, miners will include your transaction in the next block. The output of 10 ZEN you used is from now on publicly visible as *spent*. The to newly created outputs of 2 and 8 ZEN are included in a new block and locked - or *unspent*.
 Then you come across the term *UTXO* - Unspent Transaction Output - this is what it refers to.
 
-G5
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T5_confirmed_D.jpg)
 
 When you own 10 ZEN, it means you received 10 ZEN in a transaction and you have not unlocked and spent that output, yet.
 
