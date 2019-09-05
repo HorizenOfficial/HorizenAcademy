@@ -33,7 +33,7 @@ The process of an Atomic Swap would generally look like the following. Let's ass
 First, Alice creates an HTLC on the Bitcoin Blockchain that we will simply call contract. The contract comes with an address, otherwise, you could not interact with it. Next, Alice generates or picks a secret - in this example her secret is *XYZ*. Using a [hash function]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) she generates a lock (here: *1b9f...*), which is simply the hash of the secret.
 Now she deposits the amount of bitcoin she and Bob agreed to exchange in the contract where they are locked. Lastly, she sends the lock to Bob.
 
-The contract can enforce two outcomes: 
+The contract can enforce two outcomes:
 
 - If nothing happens for some time, say 24 hours, the money is returned to Alice. This is necessary, so she doesn't lose her money in case Bob never responds. It is the *timelock* component of the HTLC.
 - If Bob can provide the secret, the contract will automatically transfer the bitcoin to his address. Because hash functions are one-way functions, Bob doesn't know the secret yet, although he knows its hash.
@@ -57,10 +57,10 @@ If Alice would not redeem her ZEN, then both of them would automatically get ref
 
 There are few wallets that enable users to do Atomic Swaps, yet. So far there have been only a small number of Atomic Swaps completed. Here is a short list:
 
- - The first on-chain Atomic Swap was done on September 20th, 2017 between Litecoin and Decred
- - The first off-chain Atomic Swap occurred November 2017 between Litecoin and Bitcoin on the Lightning Network
- - A detailed explanation of an Ethereum - Bitcoin Atomic Swap can be found [here](https://medium.com/coblox/connect-all-the-blockchains-atomic-swap-78b38fff42e)
- - Most recently on the 7th of December 2018 TenX showcased an ERC20 to Bitcoin Lightning Atomic Swap using their open-source software COMIT
+- The first on-chain Atomic Swap was done on September 20th, 2017 between Litecoin and Decred
+- The first off-chain Atomic Swap occurred November 2017 between Litecoin and Bitcoin on the Lightning Network
+- A detailed explanation of an Ethereum - Bitcoin Atomic Swap can be found [here](https://medium.com/coblox/connect-all-the-blockchains-atomic-swap-78b38fff42e)
+- Most recently on the 7th of December 2018 TenX showcased an ERC20 to Bitcoin Lightning Atomic Swap using their open-source software COMIT
 
 The technology is very promising, but to achieve adoption wallets will have to build a user-friendly interface to use Atomic Swaps. This will take a while, but the technology is very promising and could very well enable a new class of use cases for cryptocurrencies.
 
