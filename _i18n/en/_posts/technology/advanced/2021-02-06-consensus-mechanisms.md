@@ -53,11 +53,11 @@ If 80% of miners receive block A first and the other 20% block B, then the chanc
 ![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_D.jpg)
 ![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_M.jpg)
 
-Proof of Work is one of the most secure consensus mechanisms but it is only secure if there is a sufficient amount of hash rate on the network. The Bitcoin protocol has proven how secure Proof of Work consensus can be for over 10 years. We already talked about game theory in our article describing blockchain as a [protocol to transfer value]]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value.md %}) and in the article on [smart contracts]({{ site.baseurl }}{% post_url technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts.md %}). 
+Proof of Work is one of the most secure consensus mechanisms but it is only secure if there is a sufficient amount of hash rate on the network. The Bitcoin protocol has proven how secure Proof of Work consensus can be for over 10 years. We already talked about game theory in our article describing blockchain as a [protocol to transfer value]]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}) and in the article on [smart contracts]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}). 
 
 Game theory "is the study of mathematical models of strategic interaction between rational decision-makers" ([Wikipedia](https://en.wikipedia.org/wiki/Game_theory)). Miners are rational decision-makers in a PoW blockchain. The incentives, to act according to the rules of the mining protocol are embedded in the protocol itself and outweigh the potential gains of behaving maliciously. This is what makes a mature PoW blockchain so robust.
 
-In our article on [mining]({{ site.baseurl }}{% post_url technology/advanced/2021-02-07-mining.md %}), we will talk about this process in more detail and you will learn what the puzzle that we are talking about in the context of PoW is.
+In our article on [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), we will talk about this process in more detail and you will learn what the puzzle that we are talking about in the context of PoW is.
 
 ### Proof of Stake - PoS
 

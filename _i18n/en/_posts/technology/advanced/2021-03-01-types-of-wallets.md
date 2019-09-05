@@ -14,7 +14,7 @@ A wallet is an app for generating, managing, and storing cryptographic keys - yo
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
 
-If you are unsure about a wallets main functionality you can read our [introduction to wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets.md %}). The main differentiator between the different types of wallets is the physical location your keys are stored in.
+If you are unsure about a wallets main functionality you can read our [introduction to wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). The main differentiator between the different types of wallets is the physical location your keys are stored in.
 
 ### Your Mnemonic Phrase
 
