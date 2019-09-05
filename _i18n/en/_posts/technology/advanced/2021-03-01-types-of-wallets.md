@@ -39,9 +39,9 @@ We can distinguish between hosted and non-hosted web wallets. With hosted web wa
 
 An advantage with a hosted web wallet is the option to recover your password in case you forget or misplace it. Losing your private keys (together with your mnemonic phrase) leads to a loss of funds in all other cases.
 
-While this may sound reassuring, there are some drawbacks with hosted wallets (also called hot wallets/cloud wallets). Remember: if you don't control your keys, you don't control your funds. There is always a third party risk, no matter how trustworthy the party might seem. 
-First, they are a more attractive target for hackers than individuals because their honeypot is much bigger. 
-Second, a sudden change in regulation might not allow them to have you withdraw your funds in a worst-case scenario. It is unlikely, but definitely not impossible. 
+While this may sound reassuring, there are some drawbacks with hosted wallets (also called hot wallets/cloud wallets). Remember: if you don't control your keys, you don't control your funds. There is always a third party risk, no matter how trustworthy the party might seem.
+First, they are a more attractive target for hackers than individuals because their honeypot is much bigger.
+Second, a sudden change in regulation might not allow them to have you withdraw your funds in a worst-case scenario. It is unlikely, but definitely not impossible.
 Thirdly, there is always a chance of an entity going bankrupt or stealing money. With the major exchanges like the ones mentioned above this risk seems small, but it does exist. Just ask former [Mt. Gox](https://en.wikipedia.org/wiki/Mt._Gox) customers. For the reasons above we do advise everybody to store the keys to their funds themselves. This means storing them in a wallet where you have control over your private keys. There is a responsibility that comes with being in charge of the safety of your funds yourself, but enabling you to do this is one of the main motivations for the existence of cryptocurrencies!
 
 You will need to keep some funds on an exchange permanently if you plan to trade often. If you want to do this right, then your level of expertise should be exceeding this article by far anyways.
@@ -87,7 +87,7 @@ Grabbing our golden thread again and asking "where are the keys" give you a simp
 When printing your paper wallet you shouldn't use a shared printer like the one in your office. In a best-case scenario, the printer doesn't even have an internet connection. Printers usually keep a copy of the files they printed last, and an attacker might exploit this.
 You will end up with something looking like this after printing the wallet.
 
-![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.jpg)
+![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.png)
 
 There is only one thing left to do: send your coins to the public key. After that, you have a perfect gift or long term storage for your coins. The main risk with a paper wallet is you actually losing or destroying the wallet by accident. If you don't have a mnemonic phrase to recover the private key you are at risk of losing all funds on the wallet by accident. So choose wisely where to store your paper wallet. Print several copies if you feel uncomfortable having only one and store all of them in separate, safe places.
 
