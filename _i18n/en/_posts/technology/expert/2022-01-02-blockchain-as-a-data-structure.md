@@ -11,11 +11,11 @@ chapter: "What is a Blockchain?"
 
 The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
 
-A first step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used. By storing all transactions that ever happened in a digital ledger, every account balance could be computed at any time. The digital ledger used to facilitate a digital currency needs a set of properties, that were not achievable before blockchain came along. In this article we will look at what features this digital ledger - the blockchain - needs to make decentralized money possible and how this translates to the way data is handled on a blockchain.
+A first step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). By storing all transactions in a digital ledger, every account balance can be computed at any time. The digital ledger used to facilitate a digital currency needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at what features this digital ledger - the blockchain - needs to have in order to make decentralized money possible and how this translates to the way data is handled on a blockchain.
 
 ## Common Data Structures
 
-Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones used.
+Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones.
 
 #### Arrays
 
