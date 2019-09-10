@@ -7,6 +7,7 @@ permalink: /technology/expert/consensus-in-distributed-systems/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 ## Consensus in Distributed Systems
@@ -21,7 +22,7 @@ I'm not sure if one ever fully understands consensus. There are so many intricac
 
 Let us first define what a distributed system is. 
 
-> A distributed system is a set of *processes*, distributed across many locations, trying to achieve a common goal through coordination and communication via *messages*. 
+A distributed system is a set of *processes*, distributed across many locations, trying to achieve a common goal through coordination and communication via *messages*. 
 
 Ok, now let's take this apart, shall we? 
 
