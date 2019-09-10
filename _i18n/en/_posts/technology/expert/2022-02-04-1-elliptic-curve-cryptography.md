@@ -28,7 +28,7 @@ RSA and its modular-arithmetic-based friends are still important today, and are 
 
 ![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
 
-Above is a rudimentary example of encrypting a *message* (2) with a public key that comprises a tuple of two values: the *encryptor* E and the *modulus* N. The *cipher* (4) is later decrypted using the corresponding private key, the tupel *decryptor* D and the same *modulus* N. The obviously interesting part is  the relation between the three value E, D and N. We would like to refer the interested reader to this [**very understandable article**](\url{https://hackernoon.com/how-does-rsa-work-f44918df914b}) for an explanation of how these values are related. A simple RSA implementation accompanied by python code **can be found here**.\url{https://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/}
+Above is a rudimentary example of encrypting a *message* (2) with a public key that comprises a tuple of two values: the *encryptor* E and the *modulus* N. The *cipher* (4) is later decrypted using the corresponding private key, the tupel *decryptor* D and the same *modulus* N. The obviously interesting part is  the relation between the three value E, D and N. We would like to refer the interested reader to this [very understandable article](https://hackernoon.com/how-does-rsa-work-f44918df914b) for an explanation of how these values are related. A simple RSA implementation accompanied by python code [can be found here](https://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/).
 
 ### ECC - Elliptic Curve Cryptography
 
@@ -44,7 +44,7 @@ On the elliptic curve any point can be viewed as an arrow pointing in a certain 
 
 Multiplication and division are also defined on the curve. But whereas the multiplication of a point on the curve with a *scalar* is easy to perform, the division of a point is a computationally hard problem. Remember how it is crucial for any PKC scheme to be able to easily compute a public key from a private key but the reverse operation must be infeasible? By being able to easily perform multiplications on a curve but unable to perform division (efficiently) we have the basic building block of building a PKC scheme.
 
-The infeasibility of performing division on the elliptic curve is called the *discrete logarithm problem* \footnote{\url{https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html}} or sometimes also the *elliptic curve discrete logarithm problem* (ECDLP).
+The infeasibility of performing division on the elliptic curve is called the [*discrete logarithm problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html) or sometimes also called *elliptic curve discrete logarithm problem* (ECDLP).
 
 While all this might sound very complex at first you will see shortly that a graphical approach is sufficient to develop an intuition for the math used on elliptic curves. This intuition should lead you to an understanding of the security assumption and serve as a basis for an understanding of the following two articles on how a given public-private key pair is related and how digital signatures work.
 
@@ -183,4 +183,3 @@ When you are transferring cryptocurrencies you generally use addresses and not y
 Animations!!! \url{https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/}
 
 \url{https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3}
-

@@ -141,7 +141,7 @@ An adversary doesn't know *r* and cannot derive it from *R* either (discrete log
 
 To recap what we did:
 
-- First, we used the distributive property\footnote{\url{https://en.wikipedia.org/wiki/Distributive_property}} to build an equality.
+- First, we used the [distributive property](https://en.wikipedia.org/wiki/Distributive_property) to build an equality.
 - Next, we multiplied both sides with with \\(\text{hash} (m, r \cdot P)\\)
 - Then we replaced the variable *n* with our private key *sk* and the expression \\(n \cdot P\\) which represents the product of our private key *sk* with the base point *P* with the public key *PK*.
 - We defined *R* to be the product \\(r \cdot P\\)

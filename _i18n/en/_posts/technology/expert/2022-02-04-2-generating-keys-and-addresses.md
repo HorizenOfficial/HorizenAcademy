@@ -30,9 +30,9 @@ By now you are aware of the purpose a private key serves: proving ownership of a
 Private keys are sometimes also called *secret keys* or *spending keys*. When doing ECC math, the spending key is usually abbreviated with *sk* for that reason. A spending key comprises 32 bytes, or 256 bits of data. This has two important implications:
 
 - the SHA256 hash function used in most cryptocurrencies produces 256 bit outputs, which makes them a suitable candidate for private keys
-- the elliptic curve used in many cryptocurrencies, scp256k1 has an [order of 256 bits](\footnote{\url{https://bitcoin.stackexchange.com/questions/21907/what-does-the-curve-used-in-bitcoin-secp256k1-look-like}}), which means it consumes 256 bit inputs and produces 256 bit outputs.
+- the elliptic curve used in many cryptocurrencies, scp256k1 has an [order of 256 bits](https://bitcoin.stackexchange.com/questions/21907/what-does-the-curve-used-in-bitcoin-secp256k1-look-like), which means it consumes 256 bit inputs and produces 256 bit outputs.
 
-A private key can be represented in many formats, such as a binary string of 1's and 0's, a [*Base64*]\footnote{\url{https://en.wikipedia.org/wiki/Base64}} string, a *mnemonic phrase* or a hex string.
+A private key can be represented in many formats, such as a binary string of 1's and 0's, a [*Base64*]\(https://en.wikipedia.org/wiki/Base64) string, a *mnemonic phrase* or a hex string.
 
 ![Key Formats](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/key_formats_D.jpg)
 
