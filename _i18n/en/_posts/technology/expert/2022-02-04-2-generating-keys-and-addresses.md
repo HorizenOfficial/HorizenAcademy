@@ -7,7 +7,6 @@ permalink: /technology/expert/generating-keys-and-addresses/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 Keys and addresses

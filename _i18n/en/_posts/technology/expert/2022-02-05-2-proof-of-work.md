@@ -7,7 +7,6 @@ permalink: /technology/expert/proof-of-work/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 

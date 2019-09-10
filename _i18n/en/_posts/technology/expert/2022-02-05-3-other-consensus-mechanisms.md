@@ -7,7 +7,6 @@ permalink: /technology/expert/other-consensus-mechanisms/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 A blockchain shows it's strength when out in the wild, living on a permissionless, distributed network. The biggest challenge when designing such a multi-agent system is achieving *consensus* among its participants.

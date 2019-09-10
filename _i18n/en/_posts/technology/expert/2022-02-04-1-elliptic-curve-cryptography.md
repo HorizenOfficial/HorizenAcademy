@@ -7,7 +7,6 @@ permalink: /technology/expert/elliptic-curve-cryptography/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 All public-key cryptography (PKC) schemes have in common that they are based on key pairs - a public and a private key. This is also referred to as asymmetric cryptography.
