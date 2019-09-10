@@ -9,4 +9,4 @@ level: expert
 chapter: "Privacy"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}
