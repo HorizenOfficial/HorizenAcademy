@@ -19,16 +19,16 @@ Before we look at the blockchain itself, lets try to develop an understanding of
 
 #### Arrays
 
-*Arrays* are one of the most simple forms to store data. Arrays are useful, when you know how many data elements you need to store, and how large each data element will be. From those inputs, your computer will calculate the total storage needed and set it aside so no other program can access this partition of your hard drive or RAM. If you want to expand the array by an element later on, the reserved partition in memory might become to small so the entire array is moved to a different location in memory.
+*Arrays* are one of the most simple forms to store data. Arrays are useful, when you know how many data elements you need to store, and how large each data element will be. From those inputs, your computer will calculate the total storage needed and set it aside so no other program can access this partition of your memory. If you want to expand the array by an element later on, the reserved partition in memory might be to small so the entire array is moved to a different location.
 
-Each element has an index, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
+Each element of an array has an index, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
 
 ![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_D.jpg)
 ![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_M.jpg)
 
 #### Linked List
 
-When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data is stored in *nodes* which can contain several data elements of different types each. The first element of a linked list is called the *head*, the last one is called the *tail* If you need to store information about cars, you could define a node as the set of information: brand, model, year produced and license plate.
+When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data is stored in *nodes* which can contain several data elements of different types. The first element of a linked list is called the *head*, the last one is called the *tail* If you need to store information about cars, you could define a node as the set of information about the brand, model, year produced, and license plate.
 
 ![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_D.jpg)
 ![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_M.jpg)
