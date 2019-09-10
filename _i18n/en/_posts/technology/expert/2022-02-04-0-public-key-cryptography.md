@@ -15,7 +15,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-041-elliptic-curve-cryptography %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
         </a>
     </div>
@@ -25,7 +25,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
             First, we will explain ECC in general and show you the basics of how math on an elliptic curve works. We look at basic mathematical operations and examine the complexity of performing those operations.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-041-elliptic-curve-cryptography %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -33,7 +33,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-042-generating-keys-and-addresses %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
         </a>
     </div>
@@ -43,7 +43,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
             Next, we demonstrate how we use ECC to first derive a public key from your private key and in a second step your address from your public key.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-041-generating-keys-and-addresses %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -51,7 +51,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-043-digital-signatures %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
         </a>
     </div>
@@ -61,7 +61,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
             Lastly, we explain how one can prove ownership of a private key without revealing any information about it by creating a digital signature with it. We also show how a verifier can validate the digital signature only knowing your public  key.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-043-digital-signatures %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">Read Article</a>
         </p>
     </div>
 </div>

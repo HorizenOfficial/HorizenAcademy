@@ -27,7 +27,7 @@ The limited resource in a PoW blockchain is computational power. In other *Proof
 
 ### How does a Miner perform the PoW?
 
-After we have talked about [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail and covered [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) explaining PoW is straight forward:
+After we have talked about [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail and covered [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) explaining PoW is straight forward:
 
 A miner starts creating a block by including the *coinbase* transaction as the first transaction. The coinbase transaction is a special one that does not have any inputs, but an output sending coins to an address controlled by the himself. This output is worth the current *block subsidy* (12.5 ZEN at the time of writing) together with the *transaction fees* of all included transactions. The sum of the block subsidy and the transaction fees make up the block reward.
 
@@ -145,7 +145,7 @@ Proof of Work in cryptocurrencies has an intricate but ingenious incentive syste
 
 On a high level, miners are rewarded with a ledger entry for spending real world resources in the form of electricity in order to earn said ledger entries. PoW therefore builds a bridge between the digital and the real world.
 
-But PoW also has some vulnerabilities. No system is unfailable. In our last article we looked at [consensus mechanisms in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) in general. We learned that it is hard to achieve Byzantine Fault-Tolerance in the first place, let alone tolerating a large share of byzantine actors. Simply speaking byzantine behavior means random or malicious bahavior. Building a system that demonstrates *liveness*, as well as *safety* with more than one third of the network acting *byzantine* took many years. Proof of Work together with the *longest chain rule* make up the *Nakamoto consensus*. It can tolerate byzantine hash contributions of up to 49%.
+But PoW also has some vulnerabilities. No system is unfailable. In our last article we looked at [consensus mechanisms in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in general. We learned that it is hard to achieve Byzantine Fault-Tolerance in the first place, let alone tolerating a large share of byzantine actors. Simply speaking byzantine behavior means random or malicious bahavior. Building a system that demonstrates *liveness*, as well as *safety* with more than one third of the network acting *byzantine* took many years. Proof of Work together with the *longest chain rule* make up the *Nakamoto consensus*. It can tolerate byzantine hash contributions of up to 49%.
 
 **TKKG** 2f + 1 resilience. Incentive compatibility. Salfish mining, 25% attack. ref to mining.
 

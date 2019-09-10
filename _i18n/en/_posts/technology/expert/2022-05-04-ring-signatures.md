@@ -9,6 +9,6 @@ level: expert
 chapter: "Privacy"
 ---
 
-{% include tech-not-available.md %}
+{% tf tech-not-available.md %}
 
 [Tweet](https://twitter.com/mihailobjelic/status/1126878887886106629?s=21) that links to [paper](https://eprint.iacr.org/2019/455.pdf) on [Monero Traceability]
