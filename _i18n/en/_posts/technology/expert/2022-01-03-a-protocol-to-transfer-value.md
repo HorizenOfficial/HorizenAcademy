@@ -16,7 +16,7 @@ Before Bitcoin digital scarcity didn't exist. Digital goods were infinitely copy
 
 **Add** [Tweet](https://twitter.com/obiwankenobit/status/1130885906938753025?s=21)
 
-{% include blocks/tweet.html id="1130885906938753025?s=21" %}
+{% include blocks/tweet.html id="1130885906938753025" %}
 
 A well designed system for a global exchange of value also enables greater *social scalability*. When we say system, we implicitly say protocol, as the protocol defines the system. The term *social scalability* refers to the ability of large groups to cooperate effectively, or as Nick Szabo, who coined the term, puts it in one of [his best known essays](https://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html):
 
@@ -26,7 +26,7 @@ A blockchain can be seperated into two layers: the *application layer* and the *
 
 > "The application layer handles tasks like transaction management, blockchain processing, and mining. [...] The network layer handles communication between nodes, which occurs over a P2P network of inter-node TCP connections. - [Dandelion Paper](https://arxiv.org/pdf/1701.04439.pdf)
 
-In this article we focus on the protocol of a blockchain at the application layer. In the article on the **P2P networks** we look at the network layer.
+In this article we focus on the protocol of a blockchain at the application layer. In the article on the **link P2P networks** we look at the network layer.
 
 ### Network Protocols
 
@@ -47,9 +47,7 @@ Generally you can distinguish between several broad types of networking protocol
 - Network management protocols such as SNMP and ICMP (simple network management protocol/internet control message protocol)
 - Value transfer protocols such as Horizen or Bitcoin
  
-
-\includegraphics[width=12cm]{images/protocols.jpg}
-
+![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg)
 
 Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through the internet.
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used when you transmit sensitive information like payment details online. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes).
@@ -71,17 +69,14 @@ First, all miners and full nodes maintain the so-called *mempool*, which contain
 
 The *consensus mechanism* determines how the process of adding new blocks to the chain works and how the network agrees on a single version of the history. The *longest chain rule* or *Nakamoto Consensus* determines which block is valid in case two miners find two valid blocks shortly after another, creating a tie situation.
 
-
-\includegraphics[width=12cm]{images/longest_chain.jpg}
-
+![Longest Chain Rule](/assets/post_files/technology/expert/1.2-protocol/longest_chain_D.jpg)
+![Longest Chain Rule](/assets/post_files/technology/expert/1.2-protocol/longest_chain_M.jpg)
 
 To keep the growth of the blockchain stable with regards to the number of blocks added per time unit, a *difficulty adjustment* is in place. The more **miners** support a network with their hashpower, the faster they would find blocks on average if there was no counter measure in place. If the total hashrate increases, the block difficulty does, too. The average *block time* is kept more or less constant via this mechanism.
 
 Lastly, the monetary policy is defined in the protocol. Most cryptocurrencies have a maximum circulating supply defined with their inception. By cutting the *block subsidy* in half regularly (with Horizen every 840,000 blocks, with Bitcoin every 210,000 blocks, both are roughly equal to 4 years) the total circulating supply asymptotically approaches its limit but never crosses it.
 
-
-\includegraphics[width=12cm]{images/circulating_supply.png}
-
+![Circulating Supply](/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg)
 
 This type of monetary schedule is referred to as [*disinflationary*](https://www.investopedia.com/terms/d/disinflation.asp). As per Investopedia:
 
@@ -123,7 +118,7 @@ As Satoshi Nakamoto formulated it in his Bitcoin Whitepaper:
 
 The attacker now has to balance the cost of an attack on the blockchain, the likely hood of it being successful and the potential upside versus the benefit on just spending the same amount of electricity on honest mining and collecting the mining reward. The key takeaway from this should be the following: the protocol of a blockchain is self-enforcing, as long as the incentives are set correctly. This is what lets rational agents decline invalid blocks and transactions and secure the network with their computing power.
 
-#### Digital Scarcity 
+#### Digital Scarcity
 
 Bitcoin was the first technology that solved the double spend problem. This is, before it was not possible to be sure a digital object existed only once. When you transfer a unit of cryptocurrency, you hand over the ownership of a digital object and the receiver can be sure he is the new, sole owner of that digital object. Often times the property of being double-spend-resistant is referred to as digital scarcity.
 
@@ -131,13 +126,13 @@ Bitcoin was the first technology that solved the double spend problem. This is, 
 
 Over time accounting has evolved in three steps. First single entry accounting was used, double entry bookkeeping sparked the first revolution in trade, and Bitcoin introduced triple entry bookkeeping in 2009, which might spark another revolution in commerce, trade and accounting.
 
-*Single entry bookkeeping* is what you use for your personal finance. You record incoming and outgoing transactions as positive or negative transactions and can calculate your current balance at any time. It does not work for commerce though, as you can't trust another entity's ledger. It is easy to create fraudulent activities while they are hard to detect.\\
+*Single entry bookkeeping* is what you use for your personal finance. You record incoming and outgoing transactions as positive or negative transactions and can calculate your current balance at any time. It does not work for commerce though, as you can't trust another entity's ledger. It is easy to create fraudulent activities while they are hard to detect.
 
 *Double entry bookkeeping* posed a revolution in commerce. Each participant creates two entries per transaction in their books: a debit and a credit. Any credit to yourself has to match a debit from another party. Frauds are easy to detect, once you compare the books of interacting parties, but you have to rely on a third party acting as a validator to actually audit the books. It is still possible to cheat the system though, but you have to create a whole history of fake transactions in order to do so.
 
 *Triple entry bookkeeping* now makes it impossible to create funds out of thin air, assuming the overall network is controlled by a majority of honest participants. Each transaction comes with three entries: a credit to the recipient, a debit to the payer, and a public receipt, the recorded transaction on the ledger. Because everyone can keep a copy of the entire transaction history, no actor can create a fraudulent credit for themselves. You can trust *the system itself* instead of having to trust a third party like auditors or banks.
 
-**triple entry graphic**
+![Triple Entry Bookkeeping](/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg)
 
 Triple entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article "Why Bitcoin’s Lightning Network is Ingenious" that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double entry bookkeeping system on top of the blockchain - a second layer solution like the **Lightning Network**.
 
@@ -145,9 +140,7 @@ Triple entry bookkeeping still comes with a downside: the total transaction thro
 
 Historically it is the exception to have central banks making monetary policies with the scope it's done today. This has led to a lot of abuse of power and inflation that devalues the state issued currency over time. We don't want to start an economic discussion here, as this is a topic in and off its own, but it surely can't hurt to have a decentralized, permissionless and independent form of money as an alternative to the legacy financial system. Competition is always good for the service, and we believe we will soon see cryptocurrencies compete with state issued fiat currencies.
 
-
 Each of the ideas above is worth it's own book and this brief overview doesn't do justice to the relevance and intricacies of cryptocurrencies. We wanted to mention a few aspects nonetheless, to give you an orientation and a basis to research the different aspects if you are interested. None of the concepts above work in isolation. They are mostly interrelated but can be approached from different angles. When we extend the scope of blockchain beyond cryptocurrencies, we can find more interesting developments.
-
 
 ### Non-Financial Incentives to Maintain a Blockchain
 
@@ -157,3 +150,5 @@ When many parties that do not trust each other want to maintain a shared and con
 This incentive can also be of a non-financial nature if for example a group of businesses value a shared database. Supply chain management is a good example: the producers want to prove they have send a good in time, the logistics company wants to prove when it received and delivered a shipment, and the customer wants to see if and when his goods changed hands. When every handoff is signed by the two directly interacting parties, it is easy to ascribe the blame in case of a late delivery. One could argue that the underlying incentive is of a financial nature, but this benefit results from efficiency improvements rather than direct monetary benefits.
 
 ### Summary
+
+**TKKG**

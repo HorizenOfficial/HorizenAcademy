@@ -29,8 +29,8 @@ The term smart contract can have two meanings. It can either refer to static cod
 
 > "One can think of a smart contract instance as a trusted third party to which users can send coins, and that can distribute coins between the parties, according to conditions written in its [static] code." - Dziembowski, Faust, Hostáková, State Channel Paper\\
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
+![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_M.jpg)
 
 ### The Promise of Smart Contracts
 
@@ -77,8 +77,8 @@ A dApp - or decentralized application - allows its users to perform a group of c
 
 A dApp uses one or more smart contracts to communicate with it's underlying blockchain. The smart contracts can be used to detect incoming payments from users, issue payments to its users, to serve as an escrow or to trigger an action based on some form of submitted data.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_D.jpg)
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_M.jpg)
+![dApp](/assets/post_files/technology/expert/1.3-smart-contracts/dapp_D.jpg)
+![dApp](/assets/post_files/technology/expert/1.3-smart-contracts/dapp_M.jpg)
 
 Currently we are still in the early stages of decentralized applications. Their have been and will be many growing pains such as bugs that cause loss of funds and inefficient usage of on-chain transactions. While well developed and audited smart contract libraries will make the development of smart contracts easier and more secure, scaling methods like [state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) will allow the communication of smart contracts off-chain. Smart contract platforms are specifically designed to enable not just money on the blockchain, but also the deployment of smart contracts and dApps.
 
@@ -112,7 +112,7 @@ Another scaling approach besides moving interactions off-chain on a second layer
 
 A dApp can be launched on a sidechain, possibly even running a different **consensus mechanism** than the mainchain. Depending on the specific construction, incentives might have to be provided in order for nodes to run sidechains (in a PoS sidechain model) or for miners to perform merged mining (in a PoW sidechain model).
 
-+++scaling_contracts.jpeg
+![Scaling](/assets/post_files/technology/expert/1.3-smart-contracts/scaling_contracts_D.jpg)
 
 There are many approaches to enable scalable smart contract platforms, often times also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the *oracle problem*.
 
@@ -124,8 +124,8 @@ Most assets are subject to the local jurisdiction you are in. This means a contr
 
 The other another major challenge to overcome is called the oracle problem. A smart contract needs to learn about real-world events (depending on the use case) in order for it to function and execute. An oracle is an entity submitting data to a smart contract. The trust problem that comes with this is referred to as the oracle problem. Imagine a smart contract running a betting platform in a supposedly trustless environment. An oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because an Oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_D.jpg)
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_M.jpg)
+![Oracles](/assets/post_files/technology/expert/1.3-smart-contracts/oracle_D.jpg)
+![Oracles](/assets/post_files/technology/expert/1.3-smart-contracts/oracle_M.jpg)
 
 Centralized oracles are not considered a solution to the oracle problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. And what is the point of having trustless execution on the basis of information provided by a trusted third party?
 
@@ -135,7 +135,7 @@ No matter if centralized or decentralized, an oracle will always come at a cost.
 
 A decentralized approach to solving the oracle problem is using [*prediction markets*](https://www.getsmarter.com/blog/wp-content/uploads/2017/07/mit_prediction_markets_report.pdf). A prediction market generally works by first creating a market for a specific event. Let's assume an event with a binary outcome: does team X or team Y win the Superbowl. A participant buys in for $1 and gets two *futures contracts*, one for each outcome. The futures contract whose outcome materialized pays $1, the other one $0.
 
-+++ prediction_market.png
+![Prediction Markets](/assets/post_files/technology/expert/1.3-smart-contracts/prediction_markets_D.jpg)
 
 With an equally likely outcome, a participant wouldn't know which contract to keep and which to sell. Both should trade at around $0.50. If a participant has high confidence in out outcome, let's say team X wins, he will sell the contract paying in case Y wins. If many people think alike, this creates increasing demand for contract X and increasing supply for contract Y. Futures contract X rises in price, while Y gets cheaper, e.g. $0.70 vs. $0.30. The price of the futures contracts can be interpreted as the likelyhood of the respective event happening, in this case a 70% chance of team X winning.
 

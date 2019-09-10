@@ -23,21 +23,17 @@ Before we look at the blockchain itself, lets try to develop an understanding of
 
 Each element of an array has an index, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
 
-![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_D.jpg)
-![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_M.jpg)
+![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
 
 #### Linked List
 
 When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data is stored in *nodes* which can contain several data elements of different types. The first element of a linked list is called the *head*, the last one is called the *tail* If you need to store information about cars, you could define a node as the set of information about the brand, model, year produced, and license plate.
 
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_D.jpg)
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_M.jpg)
+![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
 
 Each node contains, besides the actual data, a *pointer* to the next node. The *pointer* tells your computer where the next node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
-
-\includegraphics[width=12cm]{images/array_vs_list.jpeg}
-
+![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
 
 While a linked list gives you more flexibility compared to an array in terms of expanding the list later on by adding new nodes, it doesn't give you instant access. When you look for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the second node is stored and so on, until it finds the desired data. This is what we called *sequential lookup* earlier.
 
@@ -54,9 +50,7 @@ If the hash table is well-dimensioned, the *cost* (or number of instructions/com
 **TKKG**
 Array for buckets because known space of hash function. instant access per bucket. linked list to expand single elements of the array.
 
-
-\includegraphics[width=12cm]{images/hash_table.png}
-
+![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
 
 There are many different data structures out there. Each of them comes with some trade-offs and depending on the use case one might choose one or the other. Sophisticated data structures often times leverage several more simple concepts in combination to achieve the set of desired properties. The three previous examples were chosen, because an array and a linked list can be used to build a hash table.
 
@@ -68,15 +62,13 @@ The data within a blockchain is also split into subsets, the *blocks*, which are
 
 The main difference between a blockchain and a linked list is that the *references*, in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of data. The secured references between blocks establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added to the front with new blocks.
 
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_data_D.jpg)
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_data_M.jpg)
+![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
 
 The hash of the previous block header is included in the next block serving as the reference, and because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
 
 The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but it would be very hard (read: infeasible) to make the next block (3) reference your newly inserted block.
 
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_broken_D.jpg)
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_broken_M.jpg)
+![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg)
 
 Each new block built on top of an existing block is commonly known as a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult as you have to create additional new valid references. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate one valid reference. With each confirmation, you have to recreate an additional reference. The older the block, the more certain you can be that no changes to the block will occur.
 
@@ -117,8 +109,7 @@ After we looked at the properties that result from the design, lets take a look 
 Blocks consist of a header which contains important data about the block - a sort of summary. Some applications only require the block headers to interact with the blockchain. The largest part of a block in terms of storage usually (depending on network activity) comprises the transactions.
 
 
-\includegraphics[width=12cm]{images/block.jpg}
-
+![Block](/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg)
 
 
 #### The Block Header
@@ -145,9 +136,7 @@ A *merkle tree* is a data structure in and off itself, which is used within bloc
 
 Constructing a merkle tree goes like this: The *coinbase transaction* is placed first, followed by all other transactions in the block. First, each leave, or transaction, is hashed. Next, the hashes of two transactions are concatenated and hashed again. If the number of transactions is odd, the last transactions hash is concatenated with a copy of itself.This process continous until only a single hash is left - the merkle root.
 
-
-\includegraphics[width=12cm]{images/merkle_tree.jpeg}
-
+![Merkle Tree](/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg)
 
 While most merkle trees are binary, one can also think of non-binary merkle trees concatenating more than two hashes per step, but the idea remains the same. Trying to change a single transaction in an already confirmed block results in a different merkle tree and as a consequence a different header. This is one mechanism that ensures tamper evidence.\\
 
@@ -157,10 +146,7 @@ Another advantage resulting from the use of merkle trees is a reduction in the c
 
 The *merkle path* is simply the set of transactions needed to reconstruct the entire tree. The *merkle path* for transaction$_K$ consists of the hash of transaction L $H_L$ it is first concatenated with and the combined hashes $H_{IJ}$, $H_{MNOP}$ and lastly, $H_{ABCDEFGH}$.
 
-
-
-\includegraphics[width=12cm]{images/merkle_path.png}
-
+![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg)
 
 The sidechain node can reconstruct the merkle tree with this limited set of information and verify that it matches the root included in the mainchain block header. It is all it needs to know in order to be sure a given *cross-chain transaction* is valid according to the mainchain consensus rules. This method efficiently reduces the communication between mainchain and sidechain nodes without sacrificing security.
 
@@ -197,11 +183,7 @@ In the last chapter of the Expert Section we will also take a look at *Script* w
 
 ### Summary
 
-
-
-**missing**
-
-
+**TKKG**
 
 We would like to end this section with a tweet that distilled the implications of the properties of blockchain technology in the context of data structures.
 
