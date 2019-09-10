@@ -34,9 +34,11 @@ Above is a rudimentary example of encrypting a *message* (2) with a public key t
 
 Elliptic curve cryptography is based on discrete math. In *discrete mathematics* elements can only take on certain - *discrete* - values. Boolean algebra is an example where the possible values are only zero and one which are usually interpreted as true and false.
 
-Math on the elliptic curve uses familiar mathematical operations such as addition and subtraction, but the effect of these operations is defined by the curve rather that the arithmetic you are used to. Instead of having the set of rational or whole numbers as possible values, the allowed discrete values are defined by the curve itself. Any point on the curve is a possible value, so the number space is the set of points that make up the curve. Each value is a *double* that comprises an x- and y-coordinate.
+Math on the elliptic curve uses familiar mathematical operations such as addition and subtraction, but the effect of these operations is defined by the curve rather that the arithmetic you are used to. Instead of having the set of rational or whole numbers as possible values, the allowed discrete values are defined by the curve itself. Any point on the curve is a possible value, so the number space is the set of points that make up the curve. Each value is a *double* that comprises an two values.
 
-A point on the curve can also be interpreted as a *vector*. Vectors represent quantities that have both, a direction and a magnitude. On the elliptic curve any point can be viewed as an arrow pointing in a certain direction and having a defined magnitude or length - a vector. A *scalar* on the other hand is a number, like an integer that only has a magnitude but no direction. We will pick up on this distinction in a bit.
+A point on the curve can be interpreted as a *vector*. Vectors represent quantities that have both, a direction and a magnitude. The double describing the two-dimensional vector in the graphic below can be one of two things: either a pair of x- and y-coordinates, or and angle \\(\alpha\\) (enclosed between the arrow and x-axis) and the length of the arrow.
+
+On the elliptic curve any point can be viewed as an arrow pointing in a certain direction and having a defined magnitude or length - a vector. A *scalar* on the other hand is a number, like an integer that only has a magnitude but no direction. We will pick up on this distinction in a bit.
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_D.jpg)
 
