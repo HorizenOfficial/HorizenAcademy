@@ -176,6 +176,7 @@ difference staking / secure nodes: incentive to provide infrastructure with capa
 
 
 ### POI - NEM
+
 \url{https://www.mycryptopedia.com/proof-of-importance/}
 \url{https://nem.io/wp-content/themes/nem/files/NEM_techRef.pdf}\\
 

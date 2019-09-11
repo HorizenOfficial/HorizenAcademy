@@ -159,7 +159,7 @@ Horizen has a [mechanism in place](https://www.horizen.global/assets/files/A-Pen
 
 In the graphic above, the malicious chain was broadcast with a delay of 4 blocks. The delay is the amount of honest blocks mined on top of the last common block before the fork. The block acceptance delay modifies the longest chain rule. The malicious chain is not immediately recognized by the other nodes, just because it is longer. Instead, a penalty is calculated based on the delay *n*, using a delay function *DF*. Let's consider a rather simple delay function
 
-**DF(n) = \frac{n}{2} (n+1)**
+$$DF(n) = \frac{n}{2} (n+1)$$
 
 For a 4 block delay, an additional 10 confirmations are required in order for the rest of the network to accept the fork. For a short delay of one block time, the delay function gives a penalty of one block - this situation turns out to be equivalent to the longest chain rule where an additional confirmation will break the tie between two blocks of the same height.
 
