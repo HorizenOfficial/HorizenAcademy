@@ -31,6 +31,8 @@ Graph $G = (V, E)$ defined as set of vertices $V$ and edges $E$. Each edge has a
 
 Nodes are vertices and edges are peer connections.
 
+++++ Graph graphic
+
 similar to dag article. there it referred to data structure at application layer. Here it refers to network structure at network layer.
 
 Go online, node connects to first node.. what happens next -> node discovery story
@@ -54,6 +56,8 @@ message propagation time in decentralized networks affects network security thro
 
 \url{https://twitter.com/lopp/status/1077587277990244353?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1077587277990244353&ref_url=https%3A%2F%2Fmedium.com%2Fmedia%2F694c69b73e31a4f020bf123fd01bdc45%3FpostId%3D9d58e9ab4bf0}
 
+{% include blocks/tweet.html id="1077587277990244353" %}
+
 
 - important step, affects global consistency of network
 - cryptocurrency can be abstracted into two layers: application and networking layer
@@ -68,7 +72,7 @@ To assess security properties one assumes there are two types of nodes: honest o
 
 Flooding, diffusion, Dandelion (completely rebuilt networking stack.)
 
-![Spy vs. Eavesdropper](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
+![Broadcasting Mechanism](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
 
 ### Flooding
 
