@@ -39,11 +39,11 @@ Next, miners collect new and unconfirmed transactions in their block. If there a
 
 Now, a miner builds a *merkle tree* of all transactions included in her block and includes the *merkle root* in the block header. She adds all the other necessary data, such as the hash of the previous block and some other meta data.
 
-++++ merkle tree
+![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
 
 Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
-++++ hash_cash_pow
+![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
 Once such a block, or better nonce, is found, the miner will broadcast his block to the network, where nodes as well as other miners check, if the block contains conflicting transactions and if the hash is below the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block and start working on a new one.
 
@@ -119,6 +119,8 @@ An algorithm designed for a Proof of Work has to make tradeoffs between the two.
 
 ### The Generalized Birthday Problem
 
+**TKKG shorten a lot, full section moved to mining article**
+
 Let us take a look at the parameters of a PoW scheme, that allow us to tune it. The most intuitive parameter to understand is the target. Because cryptographic hash functions map their inputs evenly distributed across the output range, lowering the threshold a hash has to be smaller than makes the task of finding an according input more difficult. The more hash power is on the network, the lower the average time until such an input is found. This means shorter block times. Lowering the target naturally increases the block time.
 
 There are much more complex PoW algorithms though. One of the more widely used ones is [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf), which is based on the *Generalized Birthday Problem* and used by the Horizen blockchain.
@@ -151,7 +153,7 @@ But PoW also has some vulnerabilities. No system is unfailable. In our last arti
 
 If an attacker controls the majority of hash rate he can reliably perform 51\% attacks. This means building a malicious chain faster, than the honest partition of the network. According to the longest chain rule, the honest and rational actors of the network will accept the malicious chain as valid, once it is broadcast. This allows the malicious actor to perform double spends.
 
-++++ graphic DOUBLE SPEND GIF
+![Double Spend Attack](/assets/post_files/technology/expert/2.4.2-pow/percent.gif)
 
  He spends coins in a transaction that is included in the honest chain. Later, he rewrites this part of the transaction history with his own blocks, which don't include his spending transaction. He is now in control of his founds again and spend them a second time - a double spend.
 

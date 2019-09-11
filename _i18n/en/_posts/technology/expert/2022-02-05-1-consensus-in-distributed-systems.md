@@ -45,7 +45,7 @@ We will mostly be concerned with the last two challenges: making the system faul
 - *Omission* means that a node sends a message, which is not received by its peers for some reason.
 - Lastly, *Byzantine* failures are the hardest to address. They refer to radom bahavior that can be guided by malicious intentions or simply malfunctioning clients. Any malicious actor trying to attack the system by deviating from the [*protocol*] in one way or another would be an example of a Byzantine failure. This could happen through not forwarding or altering messages, or any other means.
 
-+++ Graphic node_failures
+![Node Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_D.jpg)
 
 The system should be fault tolerant, in that it continues to work regardless of the different types of failures occuring or not. Depending on which type of failures it can handle, it can be classified as either *simple fault tolerant* where it handles the first two failures, crash and omission, or *Byzantine Fault-Tolerant* where it can handle all three types of failures.
 
@@ -57,7 +57,7 @@ There are three models for how well the message propagation works, which effect 
 - If message propagation is *partially synchronous* messages are assumed to be delivered in *bounded time*, so within a fixed timeframe, but the *bound* is unknown.
 - *Asynchronous* message delivery assumes that messages might never reach their destination, are duplicated or received in a different order than sent. 
 
-+++ graphic network failure
+![Network Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_D.jpg)
 
 As you can imagine, building a distributed system (which relies on communication!) around an asynchronous message passing model poses the greatest challenge. But if one manages to make the system work based on this assumption, it will be highly robust!
 
@@ -137,7 +137,7 @@ When we talked about the different assumptions for the network reliability, we m
 
 The DLS algorithm contributed greatly to the development of consensus research, in that it established a new network model (partial synchrony) and achieved safety and liveness in a byzantine environment. It however failed to do so in an asynchronous setting and it also came with a non-starter that led to it never being implemented in a meaningful way. It assumed a synchronized clock between all nodes, an assumption that is just not realistic in a permissionless system.
 
-++++ graphic DLS
+![Dwork, Lynch and Stockmeyer Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_D.jpg)
 
 #### pBFT
 
@@ -154,7 +154,7 @@ The consensus mechanism therefore had nodes agreed on some fixed new state.
 
 In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* surely but slowly approaches 1.
 
-++++ graphic nakamoto
+![Nakamoto Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_D.jpg)
 
 It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach to partition the ledger into individual *shards*. Without finality, this becomes practically infeasible.
 
@@ -178,11 +178,11 @@ The consensus mechanism is composed of two parts. One is the Proof-of-Work compo
 
 The longest chain rule is applied in case two miners find valid blocks at roughly the same time - a tie situation because both blocks are valid according to the [protocol]. Miners start building on the block they received first, but keep the second one in memory. Different miners can have different vies of which block came first, depending on their geographical location and their connectivity in the network graph. The tie is broken once the next block is found and the winner is the block that was build on top of.
 
-++++ graphic longest chain rule
+![Longest Chain Rule](/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_D.jpg)
 
 The resulting chain of state transitions - the blockchain - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power. This means, that on it's way to solving one of the more difficult problems in computer science, the Byzantine Generals Problem, Nakatomo Consensus also raised the bar for byzantine tolerance. Instead of being able to handle rougly 33% of participants being byzantine, it can handle 49%, although this is defined via the share of hash power rather than nodes on the network.
 
-**TKKG* (2*f* + 1) resilience vs (3*f* + 1) resilience.
+**TKKG** \\((2*f* + 1)\\) resilience vs \\((3*f* + 1)\\) resilience.
 
 This last part of the sentence is very important. PoW and it's relatives can be seen as Sybil-resistance mechanisms. In a **Sybil Attack**, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
 
