@@ -22,5 +22,3 @@ There are several approaches to achieve truly private transactions on public blo
 4/ Confidential transactions are based on cryptographic proofs. Plaintext UTXO's as they are used in most cryptocurrencies are replaced by Pederson Commitments. They allow a user to prove that the inputs and outputs of a transaction add up without actually revealing them.
 
 5/ zkSNARKs - zero knowledge succinct non-interactive arguments of knowledge - are the technology used on the Horizen blockchain to enable private - or as we call them - shielded transactions.
-
-6/ Lastly, we will look at STARKS **TKKG**.

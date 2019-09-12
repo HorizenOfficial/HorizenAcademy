@@ -9,4 +9,14 @@ level: expert
 chapter: "Privacy"
 ---
 
-{% tf tech-not-available.md %}
+\url{https://medium.com/@yi.sun/privacy-in-cryptocurrencies-mixing-based-approaches-ce08d0040c88}\\
+
+short article, don't take away too much from CT article.\\
+
+CT's will improve massively upon this, linking inputs outputs more difficult.
+
+\url{https://medium.com/scalar-capital/behind-mimblewimble-cd9da78a00e9}
+
+non-interactive coinjoin, owas one way aggregated signatures\\
+
+"As just mentioned, MimbleWimble collapses all transactions within a block into a single block-wide transaction. The structure and transaction boundaries are removed. "\\
