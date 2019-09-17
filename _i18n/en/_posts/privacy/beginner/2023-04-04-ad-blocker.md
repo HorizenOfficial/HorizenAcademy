@@ -9,7 +9,7 @@ level: beginner
 chapter: "Tools to protect your Privacy"
 ---
 
-We talked about browsers, the most frequently used software to access content over the Internet in <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser.md %}">the browser article</a> and mentioned that there are some add-ons available that help enhance your privacy experience. Let's talk about the most notable ones:
+We talked about browsers, software used to access content over the Internet in [the browser article]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser.md %}) and mentioned that there are some add-ons available that help enhance your privacy experience. Let's talk about the most notable ones:
 
  - Privacy Badger is available for Chrome, Opera and Firefox. This add-on inhibits tracking from advertisers. Privacy Badger also learns as you surf - if an advertiser seems to be tracking you without your permission across multiple websites, the add-on automatically blocks him from showing more content.
  - uBlock Origin is available for Chrome, Opera, Firefox, Microsoft Edge, and Safari. It works similarly to a wide-spectrum blocker. It uses Origin's own filter list and lists of other similar add-ons including EasyList, EasyPrivacy, Peter Lowe’s ad/tracking/malware servers, and various lists of malware sites.
