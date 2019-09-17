@@ -10,23 +10,27 @@ chapter: "What is a Blockchain?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
 ---
 
-One of the great innovations of the blockchain boils down to it being a protocol to transfer value. Andreas Antonopoulos calls Bitcoin "a language to communicate value", which feels like an accurate description to me.
+One of the great innovations of the blockchain boils down to it being a protocol to transfer value. Andreas Antonopoulos calls Bitcoin "a language to communicate value", which feels like a very accurate description.
 
-An analogy that might help you understand this concept is how the mail works. Let's forget about the post as an entity actually operating the mail service for a minute and think about it this way:  
-The mail is permissionless in the sense that anybody who wants to send a letter to someone can find a postbox near him or her and drop the letter in there. It will arrive at its destination a few days later. You don't need to ask for anybody's permission to do so. The "protocol" for sending a letter comprises two things: you must put a stamp of sufficient value on it and you must provide the recipient's address. The standard address format is a name, address and the country if you want to send the letter abroad.  
-When a blockchain facilitates a cryptocurrency, the network (← a decentralized "post-like" service) delivers your transaction (← letter) to the recipient. The protocol requires you to add a small transaction fee (← stamp) and provide the necessary information in a standardized way: your address, the recipient's address, the amount to transfer and your signature.
+### The Internet - A Protocol to Transfer Information
+
+When many people want to cooperate there always needs to be a set of standards in place about how to cooperate exactly. This is the same whether they want to exchange information via the internet or cryptocurrency via the blockchain. The internet protocol - TCP/IP - defines standards for how data is split up and transferred from a server to your computer, e.g. when you access this website. A blockchain is defined by a protocol that determines how its participants exchange value.
+
+### The Mail - A “Protocol” to Transfer Physical Goods
+
+A very simple analogy would be comparing blockchain to the mail - a "protocol" to transfer physical goods. Let's forget about the post as an entity actually operating the mail service for a minute and think about it this way:
+
+The mail is permissionless in the sense that anybody who wants to send a letter to someone can find a postbox near them and drop the letter in there. It will arrive at its destination a few days later. You don't need to ask for anybody's permission to do so. The "protocol" for sending a letter comprises two things: you must put a stamp of sufficient value on it and you must provide the recipient's address. The standard address format is a name, address and the country if you want to send the letter abroad.
+
+When you are sending some cryptocurrency, the decentralized network transfers your money to the recipient. The protocol requires you to add a small transaction fee - similar to a stamp - and provide the necessary information in a standardized way: the recipient's address, the amount to transfer and your *signature*.
 
 ![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_D.jpg)
 ![Mail protocol](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_M.jpg)
 
-Addresses on a blockchain are of course a little different to real-life addresses. They look like this: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX. 
-Signatures are also different from what you know. We will talk more about addresses and signatures throughout the next articles in this section.
-
-Cryptocurrency [wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) help you create an address and send transactions.
+[Wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) make it easy to receive and send transactions. They also create your signature for you, without you even noticing, so don't worry if this sounds complex at first.
+Addresses on a blockchain are of course a little different to addresses that you are used to - they look like this: *znWPHuCGsgnJ5nsdu9AJdDcxDPWdrESoMNT*.
+Signatures are also different from what you know. We will talk more about addresses and signatures in the next chapter on [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}).
 
 ### Summary
 
-We can consider the mail to be a "protocol" to transfer physical goods, while the internet with its underlying TCP/IP protocol enables you to transfer information. Blockchain technology and cryptocurrencies provide a protocol to transfer value directly from one person to another, without any intermediaries. We will discuss what an actual transaction looks like, and the data needed to complete a transaction, in a dedicated [article about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
-
-Let's first have a look at [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}).
-
+We can consider the mail to be a "protocol" to transfer physical goods and the internet with its underlying TCP/IP protocol as a protocol to transfer information. Blockchain technology and cryptocurrencies provide a protocol to transfer value - from one person to another, without any intermediaries. The protocol of a blockchain defines a set of standards. It determines what a block or transaction must look like to be considered valid.

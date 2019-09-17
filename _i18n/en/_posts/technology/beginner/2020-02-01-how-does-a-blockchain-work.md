@@ -21,7 +21,7 @@ After reading our first two articles about what a blockchain is, you know that i
     <div class="col-md-9">
         <h5 class="intro-article-title">The Elements of a Blockchain</h5>
         <p class="mb-1">
-            In this article we want to discuss two important parties that play a part in a blockchain ecosystem: Miners and Nodes.
+            In this article, we want to discuss two important parties that play a part in a blockchain ecosystem: Miners and Nodes.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}">Read Article</a>
@@ -38,7 +38,7 @@ After reading our first two articles about what a blockchain is, you know that i
     <div class="col-md-9">
         <h5 class="intro-article-title">Identity in Blockchain</h5>
         <p class="mb-1">
-            Next we talk about where cryptography enters the scene and what this has to do with your identity. Without identity there can't be ownership.
+            Next, we talk about where cryptography enters the scene and what this has to do with your identity. Without a concept of identity there can't be ownership.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}">Read Article</a>
