@@ -43,6 +43,40 @@ $(function () {
             $("#mobile-left-menu-toggler").removeClass("open");
         });
 
+        // zoom image on mobile
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        $(".post-content img").click(function (e) {
+            var img = this; $img = $(this);
+
+            // build items array
+            var items = [
+                {
+                    src: $img.attr("src"),
+                    w: img.naturalWidth,
+                    h: img.naturalHeight
+                }
+            ];
+
+            // define options (if needed)
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: 0, // start at first slide
+                bgOpacity: 0.75,
+                history: false,
+                tapToClose: true,
+
+                fullscreenEl: false,
+                captionEl: false,
+                shareEl: false,
+                zoomEl: false,
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        });
+
     });
 
 
@@ -403,23 +437,30 @@ $(function () {
             $(".js-SelectLevel[data-level='" + btn.data("level") + "']").click();
         });
 
-        // open nav on mobile
-        enquire.register("screen and (max-width: 991px)", function () {
+        // On mobile
+        enquire.register("screen and (max-width: 767px)", function () {
             $(".js-Home-SelectLevel").click(function (e) {
-                $("#left-menu").addClass("open");
-                $("#mobile-left-menu-toggler").addClass("open");
-            });
-        });
-
-        // show button on desktop
-        enquire.register("screen and (min-width: 992px)", function () {
-            $(".js-Home-SelectLevel").click(function (e) {
+                // $("#left-menu").addClass("open");
+                // $("#mobile-left-menu-toggler").addClass("open");
                 var btnLevel = $(this);
-
                 $(".js-Home-SelectTopic").each(function (_, topic) {
                     topic = $(topic);
                     topic.attr("href", topic.data("url-" + btnLevel.data("level")));
                 });
+
+                $(".home-topics").show();
+            });
+        });
+
+        // show button on desktop
+        enquire.register("screen and (min-width: 768px)", function () {
+            $(".js-Home-SelectLevel").click(function (e) {
+                // var btnLevel = $(this);
+                //
+                // $(".js-Home-SelectTopic").each(function (_, topic) {
+                //     topic = $(topic);
+                //     topic.attr("href", topic.data("url-" + btnLevel.data("level")));
+                // });
             });
         });
     }
@@ -444,6 +485,23 @@ $(function () {
 
 });
 
+
+// Twitter
+$(function () {
+    twttr.ready(function () {
+        $(".js-TwitterTweet").each(function (_, el) {
+            var tOptions = {
+                conversation : 'none',
+                lang: el.getAttribute("data-tweet-lang") || "en"
+            };
+            twttr.widgets.createTweet(
+                el.getAttribute("data-tweet-id"), el, tOptions);
+            // .then (function (el) {
+            //     el.contentDocument.querySelector(".footer").style.display = "none";
+            // });
+        });
+    });
+});
 
 // Search function
 $(function () {

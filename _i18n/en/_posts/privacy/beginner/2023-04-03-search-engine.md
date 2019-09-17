@@ -13,7 +13,7 @@ In our first article about the tools to protect your privacy, we talked about th
 
 You might have heard that major search engines track their users and those stories are right. It is no secret today that search engines like Google, Bing, Yahoo! and others track almost 100% of search queries you do and tailor the results you see on your screen specifically for you. In other words, they give you personalized results. On the other hand, your search data is being exploited to serve relevant ads to you while you browse the Internet.
 
-As most of us use Google for our searching needs, there is a big chance you do too. So head over at https://myactivity.google.com and have a look at your activity across different Google services and get amazed at how much data is being gathered about you. It is also worth mentioning that to abide the modern regulations Google and others offer the option to delete your history and it is recommended that you use this feature regularly, to prevent the accumulation of massive data about your activities.
+As most of us use Google for our searching needs, there is a big chance you do too. So head over [to your google activity](https://myactivity.google.com) to have a look at your activity across different Google services and get amazed at how much data is being gathered about you. It is also worth mentioning that to abide the modern regulations Google and others offer the option to delete your history and it is recommended that you use this feature regularly, to prevent the accumulation of massive data about your activities.
 
 We recommend three search engines that preserve your privacy:
 

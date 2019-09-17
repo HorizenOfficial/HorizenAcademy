@@ -34,7 +34,6 @@ Add additional notes about how to deploy this on a live system
 
 * [Jekyll](https://jekyllrb.com/) - Static site generator
 * [Gulp](http://gulpjs.com/) - Task/Build runner
-* [Siteleaf](https://www.siteleaf.com/) - Cloud CMS
 
 ## Contributing
 

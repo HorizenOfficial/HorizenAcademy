@@ -10,43 +10,46 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity]
 ---
 
-When Satoshi Nakamoto released the Bitcoin whitepaper he presented an innovation composed of several well-known components and as a few new ones. We designed this chapter to explain how a blockchain works and what the individual parts do. We want to put the individual pieces into context before we move on to explaining each concept. 
+When Satoshi Nakamoto released the Bitcoin whitepaper he presented an innovation comprising several well-known components in a new composition. This chapter explains how a blockchain works and what its individual parts do. We want to put the individual pieces into context before we move on to explaining each concept separately.
 
 ### Hash Functions
 
-A _hash function_ is a mathematical function with a few special properties but like any other function, it does one job. The hash function takes an input and produces an output (also called hash value, hash digest or a hash).
+A [*hash function*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) is a mathematical function with a few special properties but like any other function, it does one job. The hash function takes an *input* and produces an *output* (also called *hash value, hash digest* or simply *hash*).
 
-The input doesn't have to be a number, it can be any sort of data from a single character up to a large file like a video. The output of a given hash function has a constant length no matter what the input was. There are many hash functions out there and most of them carry the length of the output they produce in their name. One of the most commonly used hash functions is SHA256 (Secure Hash Algorithm 256 bit). The number indicates the output of the hash function will always be 256 bit long no matter the input. The hash value serves as a fingerprint of data. One can verify the integrity of the files or detect if they differ from one another by comparing the hashes. 
+The input doesn't have to be a number, it can be any sort of data from a single character up to a large file like a video. The output of a given hash function has a constant length no matter the input. There are many hash functions out there and most of them carry the length of the output they produce in their name.
+
+One of the most commonly used hash functions is SHA256 (Secure Hash Algorithm 256 bit). The number indicates the output of the hash function has 256 bit. A hash value can serve as a fingerprint of data. One can verify the integrity of files and detect changes by comparing their hashes.
 
 ![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_D.jpg)
 ![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_M.jpg)
 
 ### Public-Key Cryptography
 
-_Public-key cryptography_, also known as asymmetric cryptography. The term asymmetric stems from the property of keys always coming in pairs. If you have encrypted something with one of the keys, you need the other one to decrypt it and vice versa. These keys are the public key and private key (or secret key). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key. Public-key cryptography is also where cryptocurrencies got their name from.
+[*Public-key cryptography*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}) is also known as *asymmetric cryptography*. The term asymmetric stems from the property of keys always coming in pairs and them being used complementary. If you encrypt something with one of the keys, you need the other one to decrypt it and vice versa. The keys are called *public key* and *private key* (also *spending key* or *secret key*). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key.
 
 ![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_D.jpg)
 ![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_M.jpg)
 
 ### A Peer-to-Peer Network
 
-You have probably come across the term Peer-to-Peer (P2P) network before, most likely in the context of file-sharing services like BitTorrent. In a distributed network the users don't connect to a central server or entity to access a service, but to many peers. The peers are other network participants that provide the service to each other. P2P networks are very resilient, as there is no single point of failure. Blockchains make use of this concept and it is one reason why they are so robust. To create a transaction or view your balance you ask other peers, or nodes, on the network that maintain a copy of the blockchain to share the information they store. You will often hear the attributes permissionless and censorship-resistant when reading about the value proposition of blockchain technology. The Peer-to-Peer network plays a significant part in giving blockchains these properties.
+You have probably come across the term [*Peer-to-Peer*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}) (P2P) network before, most likely in the context of file-sharing services like BitTorrent. In a distributed P2P network the users don't connect to a central server to access a service but to many peers. The peers are other network participants and all of them provide the service to each other. P2P networks are very resilient, as there is no single point of failure.
+
+Blockchains make use of this concept and it is one reason why they are so robust. You will often hear the attributes *permissionless* and *censorship-resistant* when reading about the value propositions of public blockchains. The Peer-to-Peer network plays a significant part in giving blockchains these properties.
 
 ![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_D.jpg)
 ![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_M.jpg)
 
 ### Consensus Mechanism
 
-If you want to build a form of digital cash on a P2P network with many people participating, you will need to build consensus on the order of transactions. If a user has one ZEN and creates two different transactions that spend that same coin simultaneously, some peers will receive version A first, while some others might receive version B first. The network needs to come to an agreement, or consensus, on which of the two transactions happened first. The consensus mechanism is what enables a large number of different entities that neither know, nor trust each other to reach consensus on the order of events.
+If you want to build a form of digital money on a P2P network with many unknown participants, you will need to build *consensus* on the order of transactions. If a user has one ZEN and creates two different transactions that spend that same coin simultaneously, some peers will receive version A first, while others might receive version B first. The network needs to come to an agreement, or consensus, on which of the two transactions happened first and is valid. The [*consensus mechanism*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) is what enables a large number of different entities that neither know, nor trust each other to agree on a single version of the blockchain.
 
 ![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_M.jpg)
 
 ### Mining
 
-There are many consensus mechanisms. The "original" that Horizen, Bitcoin and most other cryptocurrencies use is the Proof-of-Work (POW) mechanism. You have probably heard about cryptocurrency mining before and maybe about the miners having to solve a computationally expensive puzzle. We want to show you what this puzzle is, and how solving the puzzle makes the network agree on a given order of transactions.
+There are many consensus mechanisms. The "original" introduced with Bitcoin is the Proof of Work (PoW) mechanism. You have probably heard about cryptocurrency [*mining*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}) before and about the miners having to solve a computationally expensive puzzle. We want to explain what this puzzle is, and how solving the puzzle makes the network agree on a given order of transactions.
 
 ### Demo
 
-This is a [great blockchain Demo](https://blockchaindemo.io/). We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand this somewhat complex topic. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
-
+This is a [great blockchain demo](https://blockchaindemo.io/). We invite you to go play around with it, either now, or after you have finished this chapter. The demonstration is hands-on and really helps to understand how a blockchain is built. The demo provides a guide that will lead you through the processes running on a blockchain step-by-step.
