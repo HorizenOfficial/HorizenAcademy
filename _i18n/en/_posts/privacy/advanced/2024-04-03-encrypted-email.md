@@ -10,7 +10,7 @@ chapter: "Tools to protect your Privacy"
 further_reads: [email_glossary, how_to_use_pgp_encryption_with_gmail, 6_best_encrypted_email_software_to_protect_your_data]
 ---
 
-For a sophisticated hacker, it is incredibly easy to intercept your emails if you are the target. The easiest way to get your hands on somebody else's email is to gain access to that person's email account. If you follow the best practices we introduced in the last chapter, namely choosing a [secure password]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords.md %}) for your email account and [activating 2FA]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication.md %}) this becomes much harder already. Still, there are ways to intercept your email traffic. Using unsecured wifi networks is another attack vector for an adversary to access your online correspondence.
+For a sophisticated hacker, it is incredibly easy to intercept your emails if you are the target. The easiest way to get your hands on somebody else's email is to gain access to that person's email account. If you follow the best practices we introduced in the last chapter, namely choosing a [secure password]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-02-strong-passwords %}) for your email account and [activating 2FA]({{ site.baseurl }}{% post_url /privacy/advanced/2024-03-03-2fa-two-factor-authentication %}) this becomes much harder already. Still, there are ways to intercept your email traffic. Using unsecured wifi networks is another attack vector for an adversary to access your online correspondence.
 
 Encrypted emails resolve this problem and are much easier to use than one might think.
 
