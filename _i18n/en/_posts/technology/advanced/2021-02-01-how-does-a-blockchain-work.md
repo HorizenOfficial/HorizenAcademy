@@ -21,7 +21,7 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
     <div class="col-md-9">
         <h5 class="intro-article-title">The Elements of a Blockchain</h5>
         <p class="mb-1">
-            In the first article of this chapter we give you an overview of the different elements that make a blockchain work.
+            In the first article of this chapter, we give you an overview of the different elements that make a blockchain work.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Read Article</a>
@@ -38,7 +38,7 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
     <div class="col-md-9">
         <h5 class="intro-article-title">Hash Functions</h5>
         <p class="mb-1">
-            Hash Functions are an important part in every blockchain because they are used to verify the integrity of data.
+            Hash Functions are an important part of every blockchain because they are used to verify the integrity of data.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Read Article</a>
@@ -55,7 +55,7 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
     <div class="col-md-9">
         <h5 class="intro-article-title">Public Key Cryptography</h5>
         <p class="mb-1">
-            Another major element is Public-Key Cryptography. It is used to verify ownership and gave cryptocurrencies their name.
+            Another major element is public-key cryptography. It is used to verify ownership and gave cryptocurrencies their name.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Read Article</a>
@@ -106,7 +106,7 @@ In this chapter of our Advanced Level about blockchain technology, we will intro
     <div class="col-md-9">
         <h5 class="intro-article-title">Mining</h5>
         <p class="mb-1">
-            In this last article of the chapter we show you how miners secure the blockchain with their computational power.
+            In this last article of the chapter, we show you how miners secure the blockchain with their computational power.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Read Article</a>
