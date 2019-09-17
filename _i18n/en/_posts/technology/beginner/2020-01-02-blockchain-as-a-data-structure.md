@@ -19,9 +19,7 @@ This article provides an introduction to what a blockchain in general is, and wh
 
 ### The Blockchain is a Type of Data Structure
 
-A blockchain is a data structure in the eyes of a computer scientist. This structure stores information reliably regardless of being run in a trustless environment. Here trustless means, that you can't trust the other network participants, simply because you don't know them.
-
-A data structure may sound technical at first, but its function is exactly that. It structures your data. Lists or tables are familiar types of data structures. You likely use one of these two structures anytime you write down something on paper. There are many types of data structures in the digital world, including blockchain. The term blockchain comes from the data being separated into many blocks. Every block states which block came before it, creating a "chain" of blocks. Stating which block came previously is commonly called to as referencing.
+A blockchain is a data structure in the eyes of a computer scientist. This structure stores information reliably regardless of being in a trustless environment. A data structure may sound technical at first, but its function is exactly that. It structures your data. Lists or tables are familiar types of data structures. You likely use one of these two methods each time you write down information on paper. There are many types of data structures in the digital world, including blockchain. The term blockchain comes from the structure that stores your data. All data becomes separated into blocks. Every block states which block came before it creating a "chain" of blocks. Stating which block came previously is commonly referred to as referencing.
 
 ![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_D.jpg)
 ![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_M.jpg)
@@ -32,9 +30,9 @@ Most traditional databases use very efficient data structures. Databases are an 
 
 This entity decides who can add data to the database and who can access it, but it also has the power to change or delete data. You can edit your social media profile. Your friends can see that information, but if you violate the site's Terms of Agreement they can delete your post. The central entity has the last say in what stays on the platform. This can be both good and bad when it comes to a social network, but this would not be a good feature when looking at data structures that store your money. Centralized databases are a lot more efficient not only because of the way they store data but mostly because the database is maintained by a single entity.
 
-#### A Blockchain: Less Efficient, but Decentralized
+##### A Blockchain: Less Efficient, but Decentralized
 
-Many different entities, or *peers*, operate a blockchain. These peers don't know or trust each other (therefore "trustless"). The good thing is that they *don't need to trust each other*. All peers keep a copy of the data and no single peer has the power to change the data or censor what gets added. Participants (or *nodes* in technical terms) communicate constantly to keep each other updated on new events. Events on the blockchain are most commonly transactions.
+Many different entities, or peers, operate a blockchain. These peers don't know or trust each other (therefore "trustless"). The good thing is that they *don't need to trust each other*. Many peers keep a copy of the data and no single peer has the power to change or censor the data. Participants (or nodes in technical terms) communicate constantly to keep each other updated on new events. Events on the blockchain are most commonly transactions.
 
 There is no centralized entity, like a bank or clearinghouse, responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding by the rules of the protocol can create a wallet and send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network and every participant, or node, keeps a copy of it. A node can be operated by an individual person, a store accepting crypto or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database, but a more secure way to store data. For a global and secure type of money, this is a crucial set of traits.
 
