@@ -14,7 +14,7 @@ level: advanced
     </div>
     <div class="col-md-9 lead">
         We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are interested in learning about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
-        If you prefer reading locally, you can [download the entire Advanced Level as a pdf document here]().
+        If you prefer reading locally, you can download the entire Advanced Level as a pdf document [here](https://github.com/ZencashOfficial/HorizenAcademy/raw/develop/_pdf_documents/Horizen-Academy-Tech-Advanced.pdf).
     </div>
 </div>
 
