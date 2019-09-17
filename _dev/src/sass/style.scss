@@ -8,6 +8,9 @@ The main SCSS file for everything, yep
 @import "../../bower_components/animate.css/animate";
 @import "../../bower_components/select2/dist/css/select2";
 
+@import "../../bower_components/photoswipe/dist/photoswipe";
+@import "../../bower_components/photoswipe/dist/default-skin/default-skin";
+
 
 @import "partials/variables";
 @import "partials/mixins";

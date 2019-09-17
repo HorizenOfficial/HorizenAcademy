@@ -13,7 +13,7 @@ A blockchain works like a large book on the internet. This book keeps track of h
 ![What is a Blockchain](/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_D.jpg)
 ![What is a Blockchain](/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_M.jpg)
 
-The blockchain documents every transfer of money. This ensures, that nobody can spend their money twice. If you have one ZEN a send it to a friend or an online shop, the other person is now in control of that ZEN and you cannot use it anymore. 
+The blockchain documents every transfer of money. This ensures, that nobody can spend their money twice. If you have one ZEN and send it to a friend or an online shop, the other person is now in control of that ZEN and you cannot use it anymore. 
 
 Blockchains solved a major problem in the digital world. When I send you a picture in an email, I actually just send you a copy of that picture and afterward, we both have a copy. I could send the same picture to another person later on. Blockchains allow digital things to exist only once. This is one of the main reasons blockchains are innovative. Digital money would not work if I could send you a copy of my money and spend it a second time later on.
 
