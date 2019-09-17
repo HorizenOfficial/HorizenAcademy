@@ -9,4 +9,10 @@ level: expert
 chapter: "Transactions"
 ---
 
-{% tf tech-not-available.md %}
+Digital money would be pretty useless if there was no way to transfer it. Fortunately, there is not just one way to transfer cryptocurrencies but many more advanced, *second layer*, technologies that allow a transfer of value with slightly different properties.
+
+1/ In order to have users transfer money, they need some concept of an "account balance" in the first place. We compare two different accounting methods(?) in the first article of this chapter.
+
+2/ As you have probably heard before, blockchains are very secure, but not very efficient or fast. In order to facilitate widespread adoption of cryptocurrencies as a payment method, different scaling solutions are being worked on. A very promising approach is posed by *second layer solutions* using a technology called *payment channels*.
+
+3/ The last article in this chapter explains *Hashed Timelock Contracts* or *HTLCs*, which allow for the trustless exchange of cryptocurrencies without a centralized exchange serving as a custodian for your funds during the exchange process.
