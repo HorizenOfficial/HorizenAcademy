@@ -56,7 +56,7 @@ We recommend three search engines that preserve your privacy:
     <div class="col-md-9">
         <h5>searX</h5>
         <p>
-            Searx is a metasearch engine, aggregating the results of other search engines while not storing information about its users. It does not store any information about you, does not track you or personalize results. What's more, Searx is a free software, the code is 100% open and you can help to make it better. See more at GitHub.
+            Searx is a metasearch engine, aggregating the results of other search engines while not storing information about its users. It does not store any information about you, does not track you or personalize results. What's more, Searx is a free software, the code is 100% open and you can help to make it better. See more at [GitHub](https://github.com/asciimoo/searx).
         </p>
         <p class="mt-4">
             <a class="btn btn-info" target="_blank" href="https://searx.me/">Visit searX</a>
