@@ -9,23 +9,26 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-read bottom part here on gossip \url{https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95}
+read bottom part here on gossip https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95
 
-Infrastructure. Communication protocol.
+Resilient Infrastructure. Communication protocol.
 
 p2p network protocols mostly designed to efficiently discover content stored with one of its nodes. The protocol should ensure, that querying a small fraction of nodes (logarithmic to node count or similar) is enough to find this information stored on a subset of all nodes. With blockchains, there is only one piece of data that you care about: the blockchain, and it is stored with every full node. Peer discovery is more important than content discovery in terms of what to optimize the protocol for. (sinngemäß Ethereum Eclipse paper)
 
-In the article on the blockchain as a Protocol to transfer value we looked at the \textbf{application layer}. \textbf{Here we focus on the protocol of a blockchain at the network layer.
+In the article on the blockchain as a Protocol to transfer value we looked at the *application layer*. Here we focus on the protocol of a blockchain at the *network layer*.
+
+"The application layer handles tasks like transaction management, blockchain processing, and mining. Nodes are identified by their public keys in the application layer. The network layer handles communication between nodes, which occurs over a P2P network of inter-node TCP connections. In the network layer, nodes are identified by their IP addresses. As we shall see momentarily, a node’s IP address and public key should re- main unlinkable for privacy reasons." Dandelion Paper p. 2
 
 ### Properties of P2P Networks
 
 resilient, robust, example filesharing, hard to take down
-redundand, not the most performant
+medium bittorrent article https://medium.com/@simonhmorris/why-bittorrent-mattered-bittorrent-lessons-for-crypto-1-of-4-fa3c6fcef488.
 
-graph structure/dynamicity: "We assume that the network can change the graph at varying rates to control the adversary’s ability to learn it. We consider two extremes on this spectrum: static graphs and dynamic graphs. In static graphs, the network never changes the graph, so the adversary learns it fully over time. In dynamic graphs, the graph is changed at a rate such that the adversary only knows its local neighborhood at any given point in time."
+redundand, not the most performant
 
 ### Graph Construction
 
+graph structure/dynamicity: "We assume that the network can change the graph at varying rates to control the adversary’s ability to learn it. We consider two extremes on this spectrum: static graphs and dynamic graphs. In static graphs, the network never changes the graph, so the adversary learns it fully over time. In dynamic graphs, the graph is changed at a rate such that the adversary only knows its local neighborhood at any given point in time."
 
 Graph $G = (V, E)$ defined as set of vertices $V$ and edges $E$. Each edge has a time delay $d$
 
@@ -34,6 +37,14 @@ Nodes are vertices and edges are peer connections.
 ++++ Graph graphic
 
 similar to dag article. there it referred to data structure at application layer. Here it refers to network structure at network layer.
+
+Not only does the consensus mechanism have to account for *node failures* and *network failures*, but so does the P2P network itself.
+
++++ node failure
+one sentence about node failures
+
+++++ network failures
+one sentence about it
 
 Go online, node connects to first node.. what happens next -> node discovery story
 
@@ -45,12 +56,12 @@ Desirable Properties:
 - Fairness: All nodes should experience roughly the same latency
 - Anonymity: a potential adversary should be unable to link transaction messages and therefore the associated public keys to the ip address the message originated from. 
 
-Mixing as well as "new address for each incoming TX" doesn't help if messages can be linked to ip address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30\% accuracy in linking messages to ip addresses. 
-\footnote{A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security, pages 15–29. ACM, 2014.}
+Mixing as well as "new address for each incoming TX" doesn't help if messages can be linked to ip address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to ip addresses. [[1]](#sources)
 
 "Precision and recall are natural performance metrics. Recall is simply the probability of detection, a common anonymity metric that captures completeness of the estimator, whereas precision captures the exactness." - dandelion paper
 
-broadcasting mechanism effects the order in which peers receive messages. It's efficiency determines the message propagation time.
+broadcasting mechanism effects the order in which peers receive messages. 
+It's efficiency determines the message propagation time.
 
 message propagation time in decentralized networks affects network security through data consistency. The faster a message propagates throughout the network the faster a consistent state is reached and the lower the stale rate. less wasted pow. 
 
@@ -60,9 +71,6 @@ message propagation time in decentralized networks affects network security thro
 
 
 - important step, affects global consistency of network
-- cryptocurrency can be abstracted into two layers: application and networking layer
-- "The application layer handles tasks like transaction management, blockchain processing, and mining. Nodes are identified by their public keys in the application layer. The network layer handles communication between nodes, which occurs over a P2P network of inter-node TCP connections. In the network layer, nodes are identified by their IP addresses. As we shall see momentarily, a node’s IP address and public key should re- main unlinkable for privacy reasons." Dandelion Paper p. 2
-- currently \textit{diffusion} in most currencies
 
 
 To assess security properties one assumes there are two types of nodes: honest ones and colluding, adversarial ones trying to deanonymize  users.
@@ -78,10 +86,9 @@ Flooding, diffusion, Dandelion (completely rebuilt networking stack.)
 
 propagation delay deterministic along edges (longer edge, longer delay) and constant delay in nodes.
 
-"if node v is the source, then the adversarial nodes re- ceive all messages from v in a deterministic timing pattern. Moreover, the adversary can predict this pattern from the structure of the graph, due to the fixed nature of flooding."
+"if node v is the source, then the adversarial nodes receive all messages from v in a deterministic timing pattern. Moreover, the adversary can predict this pattern from the structure of the graph, due to the fixed nature of flooding."
 
-
-
+- currently diffusion in most currencies
 
 ### Diffusion
 
@@ -94,8 +101,6 @@ Lesson: Random forwarding delays are not powerful enough to provide anonymity ag
 
 improvement: diffusion by proxy. First just send message to random node who then runs diffusion.
 
-"We subsequently assume that the spreading phase can be fully deanonymized; i.e., the node that launches the diffusion process can be identified. As such, we only need to analyze the precision and recall of the anonymity phase."
-
 
 ### Dandelion
 
@@ -103,12 +108,16 @@ improvement: diffusion by proxy. First just send message to random node who then
 
 "Dandelion consists of two phases. In the first phase, each transaction is propagated on a random line; that is, each relay passes the message to exactly one (random) node for a random number of hops. In the second phase, the mes- sage is broadcast as fast as possible using diffusion."
 
+first phase anonymity phase. "We subsequently assume that the spreading phase can be fully deanonymized; i.e., the node that launches the diffusion process can be identified. As such, we only need to analyze the precision and recall of the anonymity phase."
+
 " The core idea behind our proposed networking stack is moving-target defense: we harness randomness in both the graph structure and the spreading protocol, thus making it difficult for adversaries to infer the source of a transaction. The key is to do so without harming latency and fairness guarantees." - dandelion plusplus
 
 \url{https://arxiv.org/pdf/1701.04439.pdf}
 dandelion used in beam/grin
 
 ### Communication Standards
+
+Learned about topology of network, about how data is passed along. but what data is being passed
 
 Communication via Messages
 
@@ -131,21 +140,26 @@ Data messages, requesting info from other nodes, e.g. most recent block.
 Bitcoin basically no incentive except for verifying instead of trusting. Full Node only needed to securely receive TX. 
 Light client enough to safely send funds.
 no financial incentive
-lightning might change this (payment routing fees)
+Payment channel networks like lightning where a fee is charged based on volume of the transaction not data size might change this. But not every lightning node is a bitcoin full node and vice versa. (payment routing fees)
 
 ### Secure and Super Nodes
 
-Secure/Super Nodes not for the sake of masternodes but to achieve network stability
+Secure/Super Nodes not for the sake of masternodes but to achieve network stability. 
+minimum requirements, TLS, blabla
 
 also just fair, takes time and cost (VPS)
 
 market should find an equilibrium between network security/stability and incentive by number of nodes and coin price
-minimum requirements, TLS, blabla
 opt-in/out to support dapps, model needs to be evaluated
 
 fair, building a business or dapp on public infrastructure, one should have to pay for it in some form or another.
 
 ### Summary
+
+
+### Sources
+
+[1]: A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security, pages 15–29. ACM, 2014.
 
 \subsubsection*{FR}
 \url{https://bitcoin.org/en/developer-reference#p2p-network}
