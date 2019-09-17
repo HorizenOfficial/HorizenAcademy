@@ -7,6 +7,7 @@ permalink: /technology/expert/state-payment-channels/
 topic: technology
 level: expert
 chapter: "Transactions"
+published: false
 ---
 
 

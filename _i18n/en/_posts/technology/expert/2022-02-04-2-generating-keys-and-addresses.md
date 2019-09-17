@@ -7,6 +7,7 @@ permalink: /technology/expert/generating-keys-and-addresses/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 When you install and set up a wallet on your phone or computer the first thing you will do is actually fund your wallet by transferring some crypto to your address. In this article we will take a look under the hood of your wallet to understand where your address is coming from and how it is related to your private key.

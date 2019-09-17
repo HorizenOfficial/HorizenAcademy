@@ -7,6 +7,7 @@ permalink: /technology/expert/blockchain-governance/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 \url{https://bitcoin.org/en/developer-reference#block-versions}\\

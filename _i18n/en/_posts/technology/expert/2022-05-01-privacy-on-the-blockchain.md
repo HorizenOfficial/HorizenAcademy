@@ -7,6 +7,7 @@ permalink: /technology/expert/privacy-on-the-blockchain/
 topic: technology
 level: expert
 chapter: "Privacy"
+published: false
 ---
 
 Digital privacy has been a concern for a long time in many circles. The Cypherpunks stated in their **Manifesto** that the need for privacy is what motivates them to develop cryptographic tools for the general public. Many ideas that were later implemented in Bitcoin originated from this group of activists.

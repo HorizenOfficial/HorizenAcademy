@@ -7,6 +7,7 @@ permalink: /technology/expert/transactions/
 topic: technology
 level: expert
 chapter: "Transactions"
+published: false
 ---
 
 Digital money would be pretty useless if there was no way to transfer it. Fortunately, there is not just one way to transfer cryptocurrencies but many more advanced, *second layer*, technologies that allow a transfer of value with slightly different properties.

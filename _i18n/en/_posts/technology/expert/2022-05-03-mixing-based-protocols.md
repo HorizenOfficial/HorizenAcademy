@@ -7,6 +7,7 @@ permalink: /technology/expert/mixing-based-protocols/
 topic: technology
 level: expert
 chapter: "Privacy"
+published: false
 ---
 
 \url{https://medium.com/@yi.sun/privacy-in-cryptocurrencies-mixing-based-approaches-ce08d0040c88}\\

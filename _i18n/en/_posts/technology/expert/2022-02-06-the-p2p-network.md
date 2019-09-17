@@ -7,6 +7,7 @@ permalink: /technology/expert/the-p2p-network/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 read bottom part here on gossip \url{https://medium.com/s/story/lets-take-a-crack-at-understanding-distributed-consensus-dad23d0dc95}

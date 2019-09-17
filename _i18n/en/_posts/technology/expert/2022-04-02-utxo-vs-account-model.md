@@ -7,6 +7,7 @@ permalink: /technology/expert/utxo-vs-account-model/
 topic: technology
 level: expert
 chapter: "Transactions"
+published: false
 ---
 
 \url{https://hackernoon.com/utxo-and-account-model-comparison-v-2-cdf9669c6c0d}\\

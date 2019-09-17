@@ -7,6 +7,7 @@ permalink: /technology/expert/blockchain-as-a-data-structure/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+published: false
 ---
 
 {% tf tech-not-available.md %}
