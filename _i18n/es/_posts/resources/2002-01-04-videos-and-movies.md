@@ -20,9 +20,7 @@ topic: resources
         <p>
             Bitcoin es quizás el invento más disruptivo desde la invención del Internet y, hoy en día, un campo de batalla entre utopistas radicales y el capitalismo dominante. La película presenta a algunas de las personas que se encuentran en proceso de definir cómo esta tecnología cambiará la manera en la que vivimos.
         </p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tmxqlSevtkQ?rel=0" allowfullscreen></iframe>
-        </div>
+        {% include blocks/youtube.html v="tmxqlSevtkQ" %}
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.netflix.com/title/80154500" target="_blank">Ver en Netflix</a>
         </p>
@@ -39,9 +37,7 @@ topic: resources
         <p>
             Este documental examina la historia del dinero y patrones de innovación tecnológica para explicar cómo funciona la controvertida criptomoneda. ¿Qué es Bitcoin; el futuro del dinero o la receta perfecta para un desastre económico?
         </p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lUF6klWuB38?rel=0" allowfullscreen></iframe>
-        </div>
+        {% include blocks/youtube.html v="lUF6klWuB38" %}
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.amazon.com/Bitcoin-End-Money-As-Know/dp/B013HU3WX6" target="_blank">Ver en Amazon</a>
         </p>
@@ -58,9 +54,7 @@ topic: resources
         <p>
             Este documental explora la revolución digital encabezada por las divisas digitales, en especial Bitcoin. ¿Es Bitcoin el único camino viable en materia financiera dada la actual inestabilidad económica? Magic Money argumenta que es posible un futuro en el que el control del dinero se le arrebate a las instituciones globales y se le devuelva al usuario.
         </p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PVo5wCSnmSs?rel=0" allowfullscreen></iframe>
-        </div>
+        {% include blocks/youtube.html v="PVo5wCSnmSs" %}
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.youtube.com/watch?v=PVo5wCSnmSs" target="_blank">Ver en YouTube</a>
         </p>
@@ -83,9 +77,7 @@ topic: resources
         <p>
             La meta de Mike Maloney es despejar la niebla que rodea a la economía moderna para demostrarle a la persona promedio que aunque la economía mundial se encuentra en peligro, en cada crisis puede haber oportunidades. ¿La misión de la serie? Dejarle claro al mundo que la prosperidad verdadera puede alcanzarse solo a través de la libertad individual, mercados libres y dinero sostenible.
         </p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DyV0OfU3-FU?rel=0" allowfullscreen></iframe>
-        </div>
+        {% include blocks/youtube.html v="DyV0OfU3-FU" %}
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.youtube.com/playlist?list=PLE88E9ICdiphYjJkeeLL2O09eJoC8r7Dc" target="_blank">Ver en YouTube</a>
         </p>
@@ -102,9 +94,7 @@ topic: resources
         <p>
             Andreas M. Antonopoulos es autor de bestsellers, ponente, educador y, por si fuera poco, uno de los expertos preeminentes en temas de Bitcoin y cadenas de bloques. Es conocido por sus pláticas electrizantes que combinan conceptos tomados de la economía, psicología, tecnología y teoría de juegos con eventos actuales, anécdotas personales y nuestros antecedentes históricos para trasladar los complejos temas del mundo de la tecnología blockchain del mundo de lo abstracto al mundo real.
         </p>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AecPrwqjbGw?rel=0" allowfullscreen></iframe>
-        </div>
+        {% include blocks/youtube.html v="AecPrwqjbGw" %}
         <p class="mt-3">
             <a class="btn btn-info" href="https://www.youtube.com/playlist?list=PLPQwGV1aLnTthcG265_FYSaV24hFScvC0" target="_blank">Ver en YouTube</a>
         </p>

@@ -13,7 +13,7 @@ In our first article about the tools to protect your privacy, we talked about th
 
 You might have heard that major search engines track their users and those stories are right. It is no secret today that search engines like Google, Bing, Yahoo! and others track almost 100% of search queries you do and tailor the results you see on your screen specifically for you. In other words, they give you personalized results. On the other hand, your search data is being exploited to serve relevant ads to you while you browse the Internet.
 
-As most of us use Google for our searching needs, there is a big chance you do too. So head over at https://myactivity.google.com and have a look at your activity across different Google services and get amazed at how much data is being gathered about you. It is also worth mentioning that to abide the modern regulations Google and others offer the option to delete your history and it is recommended that you use this feature regularly, to prevent the accumulation of massive data about your activities.
+As most of us use Google for our searching needs, there is a big chance you do too. So head over [to your google activity](https://myactivity.google.com) to have a look at your activity across different Google services and get amazed at how much data is being gathered about you. It is also worth mentioning that to abide the modern regulations Google and others offer the option to delete your history and it is recommended that you use this feature regularly, to prevent the accumulation of massive data about your activities.
 
 We recommend three search engines that preserve your privacy:
 
@@ -56,7 +56,7 @@ We recommend three search engines that preserve your privacy:
     <div class="col-md-9">
         <h5>searX</h5>
         <p>
-            Searx is a metasearch engine, aggregating the results of other search engines while not storing information about its users. It does not store any information about you, does not track you or personalize results. What's more, Searx is a free software, the code is 100% open and you can help to make it better. See more at GitHub.
+            Searx is a metasearch engine, aggregating the results of other search engines while not storing information about its users. It does not store any information about you, does not track you or personalize results. What's more, Searx is a free software, the code is 100% open and you can help to make it better. See more at [GitHub](https://github.com/asciimoo/searx).
         </p>
         <p class="mt-4">
             <a class="btn btn-info" target="_blank" href="https://searx.me/">Visit searX</a>
