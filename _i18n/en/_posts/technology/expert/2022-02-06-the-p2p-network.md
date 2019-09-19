@@ -55,18 +55,41 @@ A graph \\(G = (V, E)\\) defined as set of vertices $V$ and edges $E$. Each edge
 There are two extremes when it comes to the dynamicity of the network graph. A fully static graph never changes, which means an adversary can learn the entire graph over time. This means he is in a good position to link IP addresses to public keys.
 A fully dynamic graph changes at a rate that prevents an adversary from learning the graph structure and in turn link IP addresses to public keys. He will only ever know his local graph environment.
 
+When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) we introduced two types of malfunctions at the network layer: *node failures* and *network failures*.
+
+![Node Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/node_failures_D.jpg)
+
+Node can crash or go offline, they can have trouble receiving or processing messages or they display Byzantine behaviour. When nodes act Byzantine, this means they act randomly and derive from the protocol. Usually the term is used to refer to malicious behaviour.
+
+![Network Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/network_failures_D.jpg)
+
+Network failures are not classified by the reason that led to the failure but rather to the effect on message propagation. Usually one og the following models is assumed, and other design decision regarding the network architecture are based on that assumption. 
+In the *synchronous* model, all messages arrive with a known and bounded delay. In the *partially synchronous* model arrive with a bounded delay, but the bound is not known. In the *asynchronous* model, the message delay is unknwon and unbound. This makes the asynchronous model the hardest assumption to build a reliable system on.
+
+Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case one of it's peers goes offline? What happens when it recieves malicious requests from one or more of its peers?
+
+### Peer Discovery
+
+As we said before, peer discovery is more important than content discovery in terms of a blockchain network protocol. Lets assume you set up a node for the very first time. As soon as you are done, your node need to connect to other nodes in order to start downloading the blockchain and to become fully functional.
+
+When your node goes live for the first time the client determines it's own IP address. Next it needs the IP addresses of some peers on the network to get started. There are two ways for a node to get an initial set of addresses.
+The client contains a list of host names for DNS addresses that each contain a list of IP addresses for some seed nodes. The client issues a DNS request and receives a list of peer nodes in return.
+If this should fail for any reason, the client usually contains a list of hard coded IP addresses of some well-known nodes. All IP addresses a node receives are being timestamped.
+
+Once the client has connected to an initial set of nodes, either via a DNS request or the hard-coded seed addresses, it can request more addresses by sending out a *getaddr* request. When a node receives a *getaddr* request, it determines how many addresses it currently maintains that have a recent timestamp. The client selects those addresses, up to a maximum number of 2500, and returns them in an *addr* message.
+An *addr* message may also arrive unsolicitated, e.g. a node advertises its own address to its peers about every 24 h.
+
+When your node has been offline for a while it tries to connect to the peers it still has in its "address book". Even if only a few nodes are still active, the client can request a new set of addresses by sending out *getaddr* messages.
+
+If you want to connect to 
 
 
 
-When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) we introduced two types of malfunctions at the network layer: *node failures* and *network failures*. Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself.
 
-+++ node failure
-one sentence about node failures
 
-++++ network failures
-one sentence about it
 
-Go online, node connects to first node.. what happens next -> node discovery story
+
+
 
 ### Broadcasting mechanism
 
