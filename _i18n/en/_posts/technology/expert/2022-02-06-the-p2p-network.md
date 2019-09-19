@@ -9,12 +9,15 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-There are many ways to classify and differentiate between blockchains. One of them is to differentiate between public and permissioned blockchains. Permissioned blockchains are meant for a defined group of people, often times a consortium of companies wanting to share data. Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the *Peer-to-Peer* (P2P) network is highly resilient.
+There are many ways to classify and differentiate between blockchains. One of them is to differentiate between public and permissioned blockchains. Permissioned blockchains are meant for a defined group of people, often times a consortium of companies wanting to share data. Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the distributed *Peer-to-Peer* (P2P) network is highly resilient.
+
+![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
+![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
 
 In the article on the blockchain as a protocol to transfer value we looked at the protocol at the [*application layer*](https://en.wikipedia.org/wiki/Application_layer). In this article, we focus on the protocol of a blockchain at the [*network and transport layer*](https://en.wikipedia.org/wiki/Network_layer).
 
 At the application layer tasks like transaction management, blockchain processing, and mining are handeled. On this layer, nodes are identified using public keys and addresses.
-At the network layer peers are identified by their IP addresses. It handles the communication between nodes which happens via inter-node TCP connections - read: the internet.
+At the network layer peers are identified by their IP addresses. It handles the communication between nodes which happens via inter-node TCP connections - read: the internet. It is desirable to keep IP addresses and publik keys unlinkable for privacy reasons.
 
 ### The Purpose of P2P Networks
 
@@ -39,21 +42,23 @@ Second, it provides a high level of resilience and the more people join the netw
 
 A similar development could be observed with the [BitTorrent protocol](https://en.wikipedia.org/wiki/BitTorrent) used for P2P filesharing. Although there was much interest in shutting the network down by the entertainment industry, all attempts failed. Simon Morris wrote [a very interesting and insightful piece](https://medium.com/@simonhmorris/why-bittorrent-mattered-bittorrent-lessons-for-crypto-1-of-4-fa3c6fcef488) on the history of Bittorrent that is definitely worth a read.
 
-The two aforementioned reasons for using P2P networks to run public blockchains are compelling, and there are not many alternatives (if any), but distributed systems do come with a major trade-off. While security benefits from the redundancy of many copies being maintained simultaneously, this comes at the cost of performance. In order to achieve a high level of decentralization the minimal requirements to run a node should not pose a high barrier to entry for any participant. This, in turn, means, that the least performant nodes (in terms of bandwidth and/or computational power) limit the network as a whole.
+The two aforementioned reasons for using P2P networks to run public blockchains are compelling, and there are not many alternatives (if any), but distributed systems do come with a trade-off. While security benefits from the redundancy of many copies being maintained simultaneously, this comes at the cost of performance. In order to achieve a high level of decentralization the minimal requirements to run a node should not pose a high barrier to entry for any participant. This, in turn, means, that the least performant nodes (in terms of bandwidth and/or computational power) limit the network as a whole.
 
 ### Graph Construction
 
-graph structure/dynamicity: "We assume that the network can change the graph at varying rates to control the adversary’s ability to learn it. We consider two extremes on this spectrum: static graphs and dynamic graphs. In static graphs, the network never changes the graph, so the adversary learns it fully over time. In dynamic graphs, the graph is changed at a rate such that the adversary only knows its local neighborhood at any given point in time."
+To illustrate a distributed network we use a *graph*. This term sounds very simple at first but there is a bit more to it. The field of *graph theory* is a mathematical discipline studying the [different types of graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). We touched on graph theory before in our article on [*Directed Acyclic Graphs*]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) or DAGs. There we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
 
-Graph $G = (V, E)$ defined as set of vertices $V$ and edges $E$. Each edge has a time delay $d$
+++++ Graph-distributed-network
 
-Nodes are vertices and edges are peer connections.
+A graph \\(G = (V, E)\\) defined as set of vertices $V$ and edges $E$. Each edge connects two vertices and has a time delay $d$ it takes a message to travel along that path. The graph of a distributed network changes constantly. This happens when nodes go offline and their peers reconnect to different nodes, or when new nodes join the P2P network. The rate of change can vary, and this has implications on the privacy of each node.
 
-++++ Graph graphic
+There are two extremes when it comes to the dynamicity of the network graph. A fully static graph never changes, which means an adversary can learn the entire graph over time. This means he is in a good position to link IP addresses to public keys.
+A fully dynamic graph changes at a rate that prevents an adversary from learning the graph structure and in turn link IP addresses to public keys. He will only ever know his local graph environment.
 
-similar to dag article. there it referred to data structure at application layer. Here it refers to network structure at network layer.
 
-Not only does the consensus mechanism have to account for *node failures* and *network failures*, but so does the P2P network itself.
+
+
+When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) we introduced two types of malfunctions at the network layer: *node failures* and *network failures*. Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself.
 
 +++ node failure
 one sentence about node failures
