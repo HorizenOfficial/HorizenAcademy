@@ -14,7 +14,7 @@ level: beginner
     </div>
     <div class="col-md-9 lead">
         In this level we want to give you a gentle introduction to blockchain technology, the technology that makes cryptocurrencies possible and powerful. We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology: this project is for you.
-        If you prefer reading locally, you can download the entire Beginner Level as a pdf document [here](https://github.com/ZencashOfficial/HorizenAcademy/raw/develop/_pdf_documents/Horizen-Academy-Tech-Beginner.pdf).
+        If you prefer reading locally, you can download the entire Beginner Level as a pdf document <a href="{{site.url}}/assets/files/pdf_documents/Horizen-Academy-Tech-Beginner.pdf">here</a>..
     </div>
 </div>
 
