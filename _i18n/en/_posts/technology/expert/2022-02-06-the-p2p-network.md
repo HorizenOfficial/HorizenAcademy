@@ -16,8 +16,8 @@ There are many ways to classify and differentiate between blockchains. One of th
 
 In the article on the blockchain as a protocol to transfer value we looked at the protocol at the [*application layer*](https://en.wikipedia.org/wiki/Application_layer). In this article, we focus on the protocol of a blockchain at the [*network and transport layer*](https://en.wikipedia.org/wiki/Network_layer).
 
-At the application layer tasks like transaction management, blockchain processing, and mining are handeled. On this layer, nodes are identified using public keys and addresses.
-At the network layer peers are identified by their IP addresses. It handles the communication between nodes which happens via inter-node TCP connections - read: the internet. It is desirable to keep IP addresses and publik keys unlinkable for privacy reasons.
+At the application layer, tasks like transaction management, blockchain processing, and mining are handeled and nodes are identified by their public keys or addresses.
+At the network layer, peers are identified by their IP addresses. It handles the communication between nodes which happens via inter-node TCP connections - read: the internet. It is desirable to keep IP addresses and publik keys unlinkable for privacy reasons.
 
 ### The Purpose of P2P Networks
 
@@ -28,25 +28,26 @@ Data on a blockchain is secure, because many copies of it exist. Those copies ne
 
 The communication between nodes usually happens entirely via [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol), a main protocol of the internet protocol suite at the transport layer. Additionally, the communication between noden can be secured using [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) a cryptographic protocol at the application layer to provide private and secure communication. The communication between [Secure Nodes](https://www.horizen.global/securenodes/) and [Super Nodes](https://www.horizen.global/supernodes/) on the Horizen blockchain is secured using TLS.
 
-P2P network protocols are designed to efficiently discover content stored with one of its nodes. The protocol should ensure, that querying a small fraction of nodes (e.g. logarithmic to the total node count) is enough to find information stored on a subset of all nodes. With blockchains the situation is slightly different. All nodes store a copy of the blockchain. This is the second main purpose of the P2P network: maintaining a large number of independent copies of the same data.
+Most P2P network protocols are designed to efficiently discover content stored with one of its nodes. The protocol should ensure, that querying a small fraction of nodes (e.g. logarithmic to the total node count) is enough to find information stored on a subset of all nodes. With blockchains the situation is slightly different. All nodes store a copy of the blockchain. This is the second main purpose of the P2P network: maintaining a large number of independent copies of the same data.
 
 Because every node stores a copy of the blockchain, *peer discovery* is more important than *content discovery* in terms of what to optimize the network protocol for.
 
 ### Properties of P2P Networks
 
-When you put yourself into the position of somebody wanting to launch a distributed system - like a blockchain - running it on a P2P network is the obvious choice for a few reasons.
+When you put yourself into the position of someone wanting to launch a distributed system - like a blockchain - running it on a P2P network is the obvious choice for at least two reasons.
 
-First, it doesn't require many resources. The P2P network can be spun up with only a handful of nodes at near zero cost. Once the network gains traction new nodes can be added seamlessly.
+First, it doesn't require many resources to bootstrap. The P2P network can be spun up with only a handful of nodes at near zero cost. Once the network gains traction new nodes can be added seamlessly.
 
-Second, it provides a high level of resilience and the more people join the network, the more resilient it becomes. One of the stated goals of Bitcoin from the very beginning was to be able to withstand state level actors trying to attack the network. In the very beginning, when there were only a few nodes this was not the case, but at the same time the incentives for potential attackers to target the network were very small or even non-existant. The more people joined the network and the more value it accrued, the higher the incentives to target the network but at the same time the more resilient the network. You could say the robustness of a P2P network naturally scales proportional to the potential attackers incentives to actually perform an attack.
+Second, it provides a high level of resilience and the more people join the network, the more resilient it becomes. One of the stated goals of Bitcoin from the very beginning was to be able to withstand state level actors trying to attack the network. In the very beginning, when there were only a few nodes this was not the case, but at the same time the incentives for potential attackers to target the network were very small or even non-existant. The more people joined the network and the more value it accrued, the higher the incentives to target the network but at the same time the more resilient it was. You can say the robustness of a P2P network naturally scales proportionally to the incentives to actually perform an attack.
 
 A similar development could be observed with the [BitTorrent protocol](https://en.wikipedia.org/wiki/BitTorrent) used for P2P filesharing. Although there was much interest in shutting the network down by the entertainment industry, all attempts failed. Simon Morris wrote [a very interesting and insightful piece](https://medium.com/@simonhmorris/why-bittorrent-mattered-bittorrent-lessons-for-crypto-1-of-4-fa3c6fcef488) on the history of Bittorrent that is definitely worth a read.
 
-The two aforementioned reasons for using P2P networks to run public blockchains are compelling, and there are not many alternatives (if any), but distributed systems do come with a trade-off. While security benefits from the redundancy of many copies being maintained simultaneously, this comes at the cost of performance. In order to achieve a high level of decentralization the minimal requirements to run a node should not pose a high barrier to entry for any participant. This, in turn, means, that the least performant nodes (in terms of bandwidth and/or computational power) limit the network as a whole.
+The two aforementioned reasons for using P2P networks to run public blockchains are compelling, and there are not many alternatives (if any), but distributed systems do come with trade-offs.
+While the overall security benefits from the redundancy of many copies being maintained simultaneously, this comes at the cost of performance. In order to achieve a high level of decentralization the minimal requirements to run a node should not pose a high barrier to entry for any participant. This, in turn, means, that the least performant nodes (in terms of bandwidth and/or computational power) limit the network as a whole.
 
 ### Graph Construction
 
-To illustrate a distributed network we use a *graph*. This term sounds very simple at first but there is a bit more to it. The field of *graph theory* is a mathematical discipline studying the [different types of graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). We touched on graph theory before in our article on [*Directed Acyclic Graphs*]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) or DAGs. There we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
+To illustrate distributed networks we use *graphs*. This term sounds very simple at first but there is a bit more to it. The field of *graph theory* is a mathematical discipline studying the [different types of graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). We touched on graph theory before in our article on [*Directed Acyclic Graphs*]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) or DAGs. There we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
 
 ++++ Graph-distributed-network
 
@@ -59,14 +60,14 @@ When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /tech
 
 ![Node Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/node_failures_D.jpg)
 
-Node can crash or go offline, they can have trouble receiving or processing messages or they display Byzantine behaviour. When nodes act Byzantine, this means they act randomly and derive from the protocol. Usually the term is used to refer to malicious behaviour.
+Nodes can crash or go offline, they can have trouble receiving or processing messages or they can display *Byzantine* behaviour. When nodes act Byzantine, this means they act randomly and derive from the protocol. Usually the term is used to refer to malicious behaviour.
 
 ![Network Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/network_failures_D.jpg)
 
-Network failures are not classified by the reason that led to the failure but rather to the effect on message propagation. Usually one og the following models is assumed, and other design decision regarding the network architecture are based on that assumption. 
-In the *synchronous* model, all messages arrive with a known and bounded delay. In the *partially synchronous* model arrive with a bounded delay, but the bound is not known. In the *asynchronous* model, the message delay is unknwon and unbound. This makes the asynchronous model the hardest assumption to build a reliable system on.
+Network failures are not classified by the reason that led to the failure but rather to the effect on message propagation. Usually one of the following models is assumed, and other design decision regarding the network architecture are based on this assumption.
+In the *synchronous* model, all messages arrive with a known and bounded delay. In the *partially synchronous* model, messages arrive with a bounded delay, but the bound is not known. In the *asynchronous* model, the message delay is unknwon and unbound. This makes the asynchronous model the "hardest assumption" to build a reliable system on.
 
-Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case one of it's peers goes offline? What happens when it recieves malicious requests from one or more of its peers?
+Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case one of it's peers goes offline? And how does it find a first set of nodes to connect to?
 
 ### Peer Discovery
 
@@ -79,129 +80,109 @@ If this should fail for any reason, the client usually contains a list of hard c
 Once the client has connected to an initial set of nodes, either via a DNS request or the hard-coded seed addresses, it can request more addresses by sending out a *getaddr* request. When a node receives a *getaddr* request, it determines how many addresses it currently maintains that have a recent timestamp. The client selects those addresses, up to a maximum number of 2500, and returns them in an *addr* message.
 An *addr* message may also arrive unsolicitated, e.g. a node advertises its own address to its peers about every 24 h.
 
-When your node has been offline for a while it tries to connect to the peers it still has in its "address book". Even if only a few nodes are still active, the client can request a new set of addresses by sending out *getaddr* messages.
+When your node has been offline for a while it tries to connect to the peers it still has in its "address book". Even if only a few nodes are still active, the client can request a new set of addresses by sending *getaddr* messages.
+A single node stores many IP addresses of other nodes once it is in synch. This means a single peer going offline does not pose a problem as it will be replaced shortly.
 
-If you want to connect to 
-
-
-
-
-
-
-
-
-
-### Broadcasting mechanism
-
-As we shall see momentarily, a node’s IP address and public key should re- main unlinkable for privacy reasons." Dandelion Paper p. 2
-
-
-Desirable Properties: 
-
-- Low Latency: maximum time for a message to reach all nodes should be bounded and small. If not, risk of reaching inconsistent state.
-- Fairness: All nodes should experience roughly the same latency
-- Anonymity: a potential adversary should be unable to link transaction messages and therefore the associated public keys to the ip address the message originated from. 
-
-Mixing as well as "new address for each incoming TX" doesn't help if messages can be linked to ip address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to ip addresses. [[1]](#sources)
-
-"Precision and recall are natural performance metrics. Recall is simply the probability of detection, a common anonymity metric that captures completeness of the estimator, whereas precision captures the exactness." - dandelion paper
-
-broadcasting mechanism effects the order in which peers receive messages. 
-It's efficiency determines the message propagation time.
-
-message propagation time in decentralized networks affects network security through data consistency. The faster a message propagates throughout the network the faster a consistent state is reached and the lower the stale rate. less wasted pow. 
-
-\url{https://twitter.com/lopp/status/1077587277990244353?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1077587277990244353&ref_url=https%3A%2F%2Fmedium.com%2Fmedia%2F694c69b73e31a4f020bf123fd01bdc45%3FpostId%3D9d58e9ab4bf0}
-
-{% include blocks/tweet.html id="1077587277990244353" %}
-
-
-- important step, affects global consistency of network
-
-
-To assess security properties one assumes there are two types of nodes: honest ones and colluding, adversarial ones trying to deanonymize  users.
-
-
-![Spy vs. Eavesdropper](/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_D.jpg)
-
-Flooding, diffusion, Dandelion (completely rebuilt networking stack.)
-
-![Broadcasting Mechanism](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
-
-### Flooding
-
-propagation delay deterministic along edges (longer edge, longer delay) and constant delay in nodes.
-
-"if node v is the source, then the adversarial nodes receive all messages from v in a deterministic timing pattern. Moreover, the adversary can predict this pattern from the structure of the graph, due to the fixed nature of flooding."
-
-- currently diffusion in most currencies
-
-### Diffusion
-
-in 2015 BTC changed propagation from trickle propagation (fixed 200 ms delay) to diffusion with random delay - dan.++
-
-"Diffusion is a natural successor to flooding; instead of us- ing deterministic delays, it uses random ones"
-
-"All of these results rely on the intuition that diffusion spreads con- tent symmetrically. Because of this, the source node appears at the center of the adversary’s observed spreading pattern, and can be identified. Diffusion is therefore not a satisfac- tory solution to this problem.
-Lesson: Random forwarding delays are not powerful enough to provide anonymity against spreading protocols that spread content symmetrically."
-
-improvement: diffusion by proxy. First just send message to random node who then runs diffusion.
-
-
-### Dandelion
-
-"Dandelion spreading forwards each message on a randomly-selected line before diffusing it to the rest of the network."
-
-"Dandelion consists of two phases. In the first phase, each transaction is propagated on a random line; that is, each relay passes the message to exactly one (random) node for a random number of hops. In the second phase, the mes- sage is broadcast as fast as possible using diffusion."
-
-first phase anonymity phase. "We subsequently assume that the spreading phase can be fully deanonymized; i.e., the node that launches the diffusion process can be identified. As such, we only need to analyze the precision and recall of the anonymity phase."
-
-" The core idea behind our proposed networking stack is moving-target defense: we harness randomness in both the graph structure and the spreading protocol, thus making it difficult for adversaries to infer the source of a transaction. The key is to do so without harming latency and fairness guarantees." - dandelion plusplus
-
-\url{https://arxiv.org/pdf/1701.04439.pdf}
-dandelion used in beam/grin
+If you want your node to connect to a specific peer, e.g. because you run several nodes and you want them to talk directly to each other, you can manually specify those connections via the *addnode* command line argument.
 
 ### Communication Standards
 
-Learned about topology of network, about how data is passed along. but what data is being passed
+After taking a look at the topology of network and how connections between different peers are established let's talk about how data is being transmitted.
+Communication generally happens via messages. In the article on [the data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) of a blockchain, we already introduced some conventions that effect the communication between peers. Most messages on a P2P network of a blockchain are transactions broadcast between nodes.
+What a message or transaction needs to look like at the application layer was covered in the aforementioned article. Here we will explain how peers exchange those standardized messages. Just like a block - each message is essentially a container that holds some data.
 
-Communication via Messages
+The first part of each message is a header that contains some metadata about the message. It begins with a *start string* to indicate if the message originates from mainnet or a testnet. After that the *command name* specifies what type of message this is. The next field - *payload size* - indicates how much data the message carries in total and lastly a checksum is added.
 
-In the article on **Blockchain as a Data Structure** we already introduced some conventions that effect the communication between peers. Most messages on a P2P network of a blockchain are transactions. Also blocks
+There are some messages that don't have any payload. The *getaddr* message used to request the IP addresses of a set of nodes on the network from another peers inventory does for example not have any payload. It's entire purpose is to notify a peer about the request for addresses.
 
-What a message or transaction needs to look like was covered in the aforementioned article. Here we will explain how peers exchange those standardized messages.
+To get back to the example used in the previous section, imagine you just set up a node. After the peer discovery stage you have a bunch of IP addresses but still need to get in synch with all other nodes. This means you have to download all blocks of the blockchain.
+In order to do so, the client will wirst send a *getheaders* message to your peers. This triggers the receiving node to reply with a list of block headers - up to 2,000 in one message.
 
-- Start String to indicate if the message is originating from Mainnet/Testnet/Regtest
-- Header: start string, command name, payload size (max. 32 MiB), checksum (first 4 bytes SHA256)
+Next your node with compare the list of headers with its existing inventory of headers. Since your node just got started, there is no inventory so the client proceeds with requesting the actual blocks.
 
-Data messages, requesting info from other nodes, e.g. most recent block.
+To do so, it creates and sends a *getblocks* message. The receiving node will reply with its inventory of block header hashes. After comparing the list with its empty inventory, your node will request all blocks to get up to speed. This is done by sending a *getdata* that requests one or more specific data objects from another node - in this case the actual block data. After a while, your node will have received all blocks this way. A block header hash is much smaller in size than a full block. In order to reduce communication overhead, peers always exchange the identifiers (hashes) of data objects first, before sending the actual data. Otherwise much data would be send only figure out it is already in the inventory of the receiving node later on.
 
-"Bitcoin’s “headers first” feature, in which block propagation was split into two separate messages, Block and Header. Nodes only ask for Block after Header passes the PoW checks AND it is a longest (or longer) chain." - \url{https://medium.com/@dsl_uiuc/fake-stake-attacks-on-chain-based-proof-of-stake-cryptocurrencies-b8b05723f806}
+The *getdata* message can not only be used to request blocks, but also transactions and other data objects. All of them have an identifier - their hash - by which they can be requested specifically after they were identified as missing in a nodes own inventory.
 
-- GetBlocks: requesting block header hashes (inv-message/inventory). Node that was off-line needs headers to request rest of data
-- GetData: can request a TX, a Block or some other types.
+### Broadcasting Mechanism
+
+After a node is in synch with the network, the main influx of information happens via unsolicited messages. Freshly created transactions need to be broadcast to all nodes in as little time as possible, just like new blocks.
+
+The basic function of the broadcasting mechanism is to define a set of rules for how messages are distributed among all nodes on the network. As we said earlier, the main purpose of the P2P network is to facilitate the communication between peers so all of them are in synch. In a network that is not centrally planned but organically grown, a somewhat flexible broadcasting mechanism needs to be in place, that ensures messages reach all nodes within some time period. The broadcasting mechanism effects the order in which peers receive messages and the time it takes nodes to receive messages.
+
+It is desirable for the broadcasting mechanism to display the following properties:
+
+- *Low latency* - The maximum time for a message to reach all nodes should be bounded and small. This in turn effects the overall network security as data consistency among nodes is crucial. The lower the latency of the broadcasting mechanism the lower the risk of reaching an inconsistent state. A low latency spreading mechanism also means a lower stale rate and less wasted [PoW]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}).
+- *Fairness* - All nodes should experience roughly the same latency, assuming they have the same bandwidth.
+- *Anonymity* - A potential adversary should be unable to link transaction messages and therefore the associated public keys to the IP address the message originated from.
+
+There are three broadcasting mechanisms we want to introduce you to in this article: flooding, diffusion, and the Dandelion protocol.
+
+![Broadcasting Mechanism](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
+
+#### Flooding
+
+Lets consider a node creating a transaction and and wanting to broadcast it to the network so it is included in the next block. In a first step, it sends it to all its peers it has an active connection with. In the flooding model, each of those receiving nodes forwards this transaction with a constant time delay. Once forwarded a message travels along an edge with a deterministic delay, this means the longer the edge, the greater the time delay. A message sent from New Zealand to Austria takes longer than a message sent from SF to San Diego. Although information travels with the speed of light, over long distances these differences becom noticeable.
+
+What all this implies, is that flooding produces the most predictable spreading pattern. An adversarial node will receive all messages from a given node in a deterministic timing pattern. Knowledge of these timing patterns together with (parts of) the graph structure allows a Byzantine actor to link IP addresses to public keys. This is undesirable.
+
+#### Diffusion
+
+Diffusion is a refined version of flooding. The time it takes a message to travel along an edge is still deterministic - physics work either way - but the transmission delay is random. This means a node that receives a message doesn't forward it to all its peers simultaneously at a constant speed but adds random delays to it.
+
+Currently diffusion is used in most public blockchains. In 2015 BTC changed the propagation mechanism from trickle propagation with a fixed 200 ms delay to diffusion with random delay.
+
+While diffusion makes it harder to derive information from the timing pattern of messages it still follows a simple intuition: If you imagine a very large graph with thousands of nodes and the source of a message at the center, the message still spreads point-symmetric around its origin. With sophisticated chain analysis and a realistically rather static than dynamic graph topology, an adversary can still derive much information from timing and spreading patterns of messages. This holds especially true for nodes that create many transctions and therefore produce much data to analyse.
+
+A logical thing for one of these active nodes would be to use a proxy to broadcast messages - *diffusion by proxy*. But there is another iteration of broadcasting mechanisms: welcome Dandelion.
+
+#### Dandelion
+
+Instead of using a single node as a proxy to forward messages, in diffusion spreading happens in two phases: the *anonymity phase* and the *spreading phase*.
+
+During the anonymity phase a message is forwarded via a randomly-selected line. Each relayer passes the message to exactly one of its randomly selected peers for a random number of hops. When the anonymity phase is over and the spreading phase beginns, the message is broadcast to the entire network using diffusion.
+
+> "The core idea behind our proposed networking stack is moving-target defense: we harness randomness in both the graph structure and the spreading protocol, thus making it difficult for adversaries to infer the source of a transaction. The key is to do so without harming latency and fairness guarantees." - Viswanath, Redesigning P2P Networking Stack of Cryptocurrencies for Anonymity.
+Dandelion is implemented in Beam and Grin, two different implementations of the MimbleWimble protocol.
+
+### Privacy and Security
+
+Most privacy preserving techniques are not effective, if messages can be linked to IP address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to ip addresses. [[1]](#sources) To quantify the *anonymity* a spreading mechanism provides two metrics can be applied.
+
+> *"Precision and recall are natural performance metrics. Recall is simply the probability of detection, a common anonymity metric that captures completeness of the estimator, whereas precision captures the exactness."* - [Bojja, Fanti, Viswanath - Dandelion: Redesigning the Bitcoin Network for Anonymity](https://arxiv.org/pdf/1701.04439.pdf)
+
+To assess the security and privacy properties of the broadcasting mechanism, one assumes there are two types of nodes: honest ones and colluding, adversarial ones trying to deanonymize users. An attacker can apply two different techniques to deanonymize users.
+
+![Spy vs. Eavesdropper](/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_D.jpg)
+
+The spy-based adversary corrupts a fraction of nodes...
+
+The eavesdropper connects to as many nodes as possible and...
 
 ### Incentivizing Infrastructure
 
-Bitcoin basically no incentive except for verifying instead of trusting. Full Node only needed to securely receive TX. 
-Light client enough to safely send funds.
-no financial incentive
-Payment channel networks like lightning where a fee is charged based on volume of the transaction not data size might change this. But not every lightning node is a bitcoin full node and vice versa. (payment routing fees)
+Most blockchains provide little incentive to run nodes on the network. In the early days of Bitcoin, most nodes where also mining and therefore regularly collected the block reward. Since mining has become a highly competitive business few nodes are actually mining. Another good reason to run a node is to safely accept payments. Most wallets are actually light nodes. They connect to a full node in order to "speak" with the blockchain. This means they have to trust the node operator to feed them truthful information.
+By running a full node yourself, you don't have to trust anybody - you can verify. Still, few people transact regularly enough to run a full node themselves or the technical barrier to entry is to high.
 
-### Secure and Super Nodes
+#### Secure and Super Nodes
 
-Secure/Super Nodes not for the sake of masternodes but to achieve network stability. 
-minimum requirements, TLS, blabla
+Horizen decided to incentivize node operators for facilitating the infrastructure of its ecosystem. Rewarding node operators seems just fair when you consider that setting up a node up as well as maintaining it takes some time, and running it on a VPS comes at an additional cost.
+Secure and Super Node operators receive a share of the mining reward that would usually go to the miners entirely. Each node class is incentivized with 10% of the total block subsidy.
+Because Horizen wants not just many, but capable and robust nodes, a node has to fulfull a set of minimum requirements in order to be eligible to receive the node rewards. Each node needs a valid TLS certificate, needs to be up and running for at least 92% of time and meet certain requirements regarding memory and computational power. You can find out more about the requirements for [Secure Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872258/Secure+Node+Criteria+and+Reward+Eligibility) and [Super Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872071/Super+Node+Criteria+and+Reward+Eligibility) here.
 
-also just fair, takes time and cost (VPS)
+Those computational requirements are verified using an interactive challenge-response protocol - a type of Proof of Work if you will. Nodes receive computational challenges on a regular basis and by monitoring the time it takes them to respond to these challenges, one can derive an estimate on their capabilities. Nodes need to meet a certain target with their response time, otherwise they are not eligible for node reward payments.
 
-market should find an equilibrium between network security/stability and incentive by number of nodes and coin price
-opt-in/out to support dapps, model needs to be evaluated
-
-fair, building a business or dapp on public infrastructure, one should have to pay for it in some form or another.
+Secure and Super Nodes are not just a means to create some sort of *masternodes*, they will be crucial for our [Sidechain model]. Each node will be able to choose if it wants to support sidechains, and if so, which ones. We expect to see some interesting economic models with dApps build on our sidechains. dApps should incentivize node operators to support their sidechain, just like they would usually pay for the infrastructure their service is build on in one way or another.
 
 ### Summary
 
+graph of nodes
+purpose communication
+properties resilient, scales, although not the most efficient.
+peer discovery
+messages containers used for different purpose, can be empty or up to 32mb of payload.
+broadcasting mechanism
+incentives, secure and super
 
 ### Sources
 

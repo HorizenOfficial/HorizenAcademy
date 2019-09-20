@@ -65,7 +65,7 @@ While a Proof of Work System typically uses hash functions, a proof of work algo
 The most used type of Proof of Work is a Hashcash style PoW. Hashcash was introduced in 1997 by Adam Back as a measure to prevent spam. Recipients would require the sender to perform a proof of work in order to accept the mail. While this does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above, performing repeated hashing until the resulting hash is less than some target value.
 
 In general a Proof of Work can be one of two things: a non-interactive *solution-verification protocol* or an interactive *challenge-response protocol*. Horizen uses both, each for a different purpose.
- 
+
 Just like Bitcoin and most other blockchains, mining is done via a solution-verification protocol. Miners find a solution to a problem. All nodes can verify the solution at any point in time. Even a node that has been offline for months can verify if the blocks it receives during synchronization from an untrusted node are valid or not. It is non-interactive.
 
 Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain requirements for nodes in order to be eligible to get rewarded. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a form of Proof of Work as well.
@@ -73,7 +73,6 @@ Nodes on the Horizen network are incentivized by getting a share of the block su
 ### What Constitutes a good Proof of Work?
 
 Some criteria for a good PoW for a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
-
 
 - *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example we covered already, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For *54,063,013* this becomes a much more difficult task but verification can be done with any rudimentary calculator.
 
@@ -103,7 +102,7 @@ Most PoW schemes are CPU-bound. Some algorithms, sometimes referred to as ASIC r
 
 **TKKG** An interesting sidenote is that bandwith is a consideration in the IOTA [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). The Tangle is a [Directed Acyclic Graph (DAG)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) consisting of individual transactions. Each transaction has a small proof of work attached. The protocols security is based on the assumption that honest participants will make up the majority of transactions and the majority of computational power. If the Tangle was to be adopted widely for micro-payments in the IOT sector, not only would computational power secure the network, but also the bandwidth restraints of a single attacker. It will be infeasible to amass more bandwith than all honest devices will have combined. In order to broadcast a majority of transactions one needs a majority of computing power and bandwidth in this setting. In a transaction DAG security can have both, a CPU-bound and a network-bound component.
 
-#### Metrics to Assess Computational Hardness}
+#### Metrics to Assess Computational Hardness
 
 Their are two different metrics to rate the difficulty of a computational task: time complexity and space complexity.
 
