@@ -50,16 +50,8 @@ The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSup
 
 Signalling vs. voting... voting in btc is closer to signaling(?)\\
 
-
-\begin{itemize}
-\item EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
-\item core repo is focal/schelling point for btc development.
-\item 
-\end{itemize}
-
-### Permissioned Governing Structure
-
-Ripple, Stellar
+- EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
+- core repo is focal/schelling point for btc development.
 
 ### Delegated Decentralized Governance
 
