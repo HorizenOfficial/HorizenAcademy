@@ -94,7 +94,7 @@ All of them have certain advantages and shortcomings. The CPU-bound approach giv
 
 The memory-bound "approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." [Source](https://medium.com/@jeffrey.emanuel/loaded-pow-a-new-direction-in-proof-of-work-algorithms-ae15ae2ae66a)
 
-With recently the author refers to the emergence of ASIC miners for the Equihash mining algo.
+With recently the author refers to the emergence of ASIC miners for the Equihash mining algorith.
 
 Network-bound approaches are less hardware intensive and rely more on operational expenditures than capital expenditures. At the same time they are more vulnerable to attacks, such as [**DOS**] attacks and bandwidth is geographically not as evenly available as CPU power or memory.
 
