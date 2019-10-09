@@ -120,6 +120,8 @@ An algorithm designed for a Proof of Work has to make tradeoffs between the two.
 
 **TKKG shorten a lot, full section moved to mining article**
 
+**PULL UPDATED VERSION FROM MINING**
+
 Let us take a look at the parameters of a PoW scheme, that allow us to tune it. The most intuitive parameter to understand is the target. Because cryptographic hash functions map their inputs evenly distributed across the output range, lowering the threshold a hash has to be smaller than makes the task of finding an according input more difficult. The more hash power is on the network, the lower the average time until such an input is found. This means shorter block times. Lowering the target naturally increases the block time.
 
 There are much more complex PoW algorithms though. One of the more widely used ones is [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf), which is based on the *Generalized Birthday Problem* and used by the Horizen blockchain.
