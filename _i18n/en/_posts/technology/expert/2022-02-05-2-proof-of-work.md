@@ -148,6 +148,8 @@ Another interesting concept was presented with ProgPoW. Its algorithm is designe
 
 **TKKG: Include Link??? Check paragraph above for accuracy** https://medium.com/@ifdefelse/understanding-progpow-performance-and-tuning-d72713898db3
 
+
+
 ### Incentives and Vulnerabilities
 
 Proof of Work in cryptocurrencies has an intricate but ingenious incentive system in place. Miners are rewarded with the *block reward* which comprises the *block subsidy* as well as the *transaction fees* attached to each transaction.
