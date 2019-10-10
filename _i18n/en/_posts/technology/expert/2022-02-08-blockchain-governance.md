@@ -14,24 +14,26 @@ chris burniske on zcash halving and dev fund \url{https://forum.zcashcommunity.c
 Nic Carter, master thesis:  A Cross-Sectional Overview of Cryptoasset Governance
 and Implications for Investors \url{https://coinmetrics.io/papers/dissertation.pdf}
 
-### Intro
-
-> "Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?" - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
-
 **incentives_stakeholders.png**
+
+
+
+
+### Intro
 
 "While there is usually much focus on how decentralized the block generation process is, the manner in which the rules are interpreted and then encoded is nearly as important, and also usually less decentralized."\\
 
-The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSuperMajority() after the function added to Bitcoin Core to manage those soft forking changes. See BIP34 for a full description of this method.\\
+> "Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?" - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
 
-"As of this writing, a newer method called version bits is being designed to manage future soft forking changes, although it’s not known whether version 4 will be the last soft fork to use the IsSuperMajority() function. Draft BIP9 describes the version bits design as of this writing, although it is still being actively edited and may substantially change while in the draft state."\\
+In order to address these question practically, they have to be approached in reverse order. First you need to determine how to choose the deciders, then choose them and lastly have them make decisions.
 
-"Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Lopp\\
 
-Signalling vs. voting... voting in btc is closer to signaling(?)\\
 
-- EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
-- core repo is focal/schelling point for btc development.
+
+
+
+
+
 
 ### Delegated Decentralized Governance
 
@@ -44,14 +46,41 @@ code changes in the hands of a few\\
 
 ### Decentralized Governance
 
-Bitcoin
-\url{https://bitcoin.org/en/developer-reference#block-versions}\\
+https://blog.lopp.net/who-controls-bitcoin-core-/
 
-\url{https://medium.com/@lopp/who-controls-bitcoin-core-c55c0af91b8a} Lopp article\\
+https://blog.bitmex.com/bitcoin-cores-competition/ to do
+
+Bitcoin most organic, had the most time to evolve and the least attention at launch, no precendent...
+
+maintainer have to sign merge commits, trusted pgp keys. otherwith github employees...
+while keys can be stolen, better
+
+layered security, prs, releases
+
+monitor changes, chain of signed commits verified, test run, determinism is checked 
+
+no formal specification, no one has authority to write one. code of dev focal point closest thing
+
+principle of least privilege
+
 
 \url{https://blog.bitmex.com/bitcoin-cores-competition/}\\
 
 Version bits to signal soft fork readiness \url{https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/}\\
+
+
+
+- core repo is focal/schelling point for btc development.
+
+
+"Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Lopp\\
+
+Signalling vs. voting... voting in btc is closer to signaling(?)\\
+
+
+The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSuperMajority() after the function added to Bitcoin Core to manage those soft forking changes. See BIP34 for a full description of this method.\\
+
+"As of this writing, a newer method called version bits is being designed to manage future soft forking changes, although it’s not known whether version 4 will be the last soft fork to use the IsSuperMajority() function. Draft BIP9 describes the version bits design as of this writing, although it is still being actively edited and may substantially change while in the draft state."\\
 
 
 ### Improvement Proposal Processes
@@ -62,11 +91,17 @@ BIPs, EIPs, ZIPs, ZenIPs
 
 \url{https://www.zfnd.org/blog/new-zip-process/}\\
 
+- EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
+
+
 describe the process -> summary of ZenIP.md
 
 
-
 get involved, check repo, even create ZenIP, can be process or non-code-related
+
+### Horizen Governance
+
+
 
 #### ZenIP Process
 
@@ -76,7 +111,7 @@ get involved, check repo, even create ZenIP, can be process or non-code-related
 
 
 
-### DAO - Decentralized Autonomous Organization
+#### DAO - Decentralized Autonomous Organization
 
 \url{https://en.wikipedia.org/wiki/Electoral_system#Systems_used_outside_politics}\\
 
@@ -100,8 +135,50 @@ downward compatible or not
 
 #### Soft Forks
 
-UASF
-\url{https://www.mycryptopedia.com/uasf-user-activated-soft-fork-explained/}\\
+
+backwards compatible
+
+transition to new set of consensus rules
+
+**UASF**
+
+UASF is mechanism by which changes are implemented
+
+flag date, afterward changes enforced by nodes. won't accept "old" blocks, miners adhere because invalid blocks cost
+
+user activated because node operators need to upgrading
+
+first time bip16 p2sh
+
+miners included /P2SH/ in coinbase tx
+
+Voting period and threshold defined
+
+uasf 2017, segwit...power of users
+proposed segwit in bip148, forcing miners to activate aug. 1st
+
+forked code, created Bitcoin UASF and made it publicly available
+
+gained traction, created pressure on miners to adopt bip-91 (segwit bip) and activate fork before 148 deadline
+
+
+
+
+**MASF**
+
+bip34 introduced MASF, version number
+
+miners signal readiness with hash power, changing version bits, When a certain percentage of produced blocks have signalled acceptance, full nodes can then enforce rule changes accordingly
+
+2 more times -> version number 4 right now
+
+version number -> version bits, bip0009 https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki
+
+more info, can signal for up to 29 soft forks at once
+
+#### Hard Forks
+
+
 
 
 
