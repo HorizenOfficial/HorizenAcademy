@@ -50,6 +50,14 @@ Signature Scripts (in code scriptSig) used to satisfy spending condition.\\
 
 "The Account/Balance Model, on the other hand, keeps track of the balance of each account as a global state. The balance of an account is checked to make sure it is larger than or equal to the spending transaction amount." -> \\
 
+tx -> state transition. 
+
+not feasible to transition after every single tx, especially as the execution of a smart contract can involve a large number of atomic transitions.
+
+transitions in block intervalls.
+
+++++  graphic state transition in figma academy graphics.
+
 
 \begin{itemize}
 \item two types of accounts, private key controlled user accounts and contract-code controlled accounts (smart contracts)
