@@ -47,6 +47,9 @@ effects on cencorship resistance
 
 robustness as single points of control create single points of failure
 
+depending on usecase, different levels of decentralization required or desireable for different usecases.
+for a network mainly providing verifiable scarcity for CryptoKitties decentralization is arguably less important than a global Store of Value (SOV).
+
 
 #### Delegated Decentralized Governance
 
@@ -61,9 +64,19 @@ code changes in the hands of a few
 
 #### Decentralized Governance
 
-https://blog.lopp.net/who-controls-bitcoin-core-/
 
 https://blog.bitmex.com/bitcoin-cores-competition/ to do
+
+
+"A truly
+decentralized system is characterized by decentralization at the node, miner/staker, and
+governance level. While this model flows logically from an analysis of power structures typified
+in the bitcoin model discussed in this paper, theoretical support comes from Schneider (2003).
+Schneider, responding to conceptual confusion in academia over political decentralization, finds
+that decentralization is political, administrative, and fiscal. Within the Bitcoin network, decisionmaking structures (chiefly orchestrated by Core developers) can be understood as political,
+nodes enforcing rulesets can be understood as administrators, and fiscal power is wielded by
+miners." - Nic Carter, A Cross-Sectional Overview of Cryptoasset Governance
+and Implications for Investors https://coinmetrics.io/papers/dissertation.pdf
 
 Bitcoin most organic, had the most time to evolve and the least attention at launch, no precendent...
 
@@ -92,6 +105,7 @@ Version bits to signal soft fork readiness \url{https://bitcoincore.org/en/2016/
 "Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Lopp
 
 
+> "No one controlls Bitcoin." - Jameson Lopp, [Who Controls Bitcoin Core](https://blog.lopp.net/who-controls-bitcoin-core-/)
 
 The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSuperMajority() after the function added to Bitcoin Core to manage those soft forking changes. See BIP34 for a full description of this method.
 
@@ -175,6 +189,12 @@ forked code, created Bitcoin UASF and made it publicly available
 gained traction, created pressure on miners to adopt bip-91 (segwit bip) and activate fork before 148 deadline
 
 
+"To push this change through anyway, some Bitcoin users installed a client that threatened to, once again, suspend
+Nakamoto consensus by ignoring blocks from miners who refused SegWit after a certain
+date. Had miners let this play out, it would have resulted in contentious fork from the main
+network. The threat to Bitcoin’s utility and value was serious enough to the miner’s bottom
+lines that they finally gave up their resistance against the SegWit update"
+
 
 
 **MASF**
@@ -206,6 +226,8 @@ other projects more progressive, need faster decision making
 sandbox stage
 
 ### FR
+
+https://uncommoncore.co/wp-content/uploads/2019/10/A-model-for-Bitcoins-security-and-the-declining-block-subsidy.pdf
 
 \url{https://medium.com/blockchain-capital-blog/grin-governance-a-novel-approach-154aca07291b}
 Interesting approach regarding Asics. touches on governance in one way or another. Avoids the inevitable discussion about mining hardware by a proactive decision. 

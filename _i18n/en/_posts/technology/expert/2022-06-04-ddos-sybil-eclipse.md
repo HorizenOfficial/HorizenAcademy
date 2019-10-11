@@ -9,4 +9,9 @@ level: expert
 chapter: "Attacks"
 ---
 
-{% tf tech-not-available.md %}
+stubborn mining = selfish mining + eclipse attack
+https://eprint.iacr.org/2015/796.pdf
+
+"We show, surprisingly, that given the attacker’s
+best strategy, in some cases victims of an eclipse attack can
+actually benefit from being eclipsed!"
