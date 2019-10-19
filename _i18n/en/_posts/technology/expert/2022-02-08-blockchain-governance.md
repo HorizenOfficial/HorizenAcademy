@@ -9,56 +9,78 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-chris burniske on zcash halving and dev fund \url{https://forum.zcashcommunity.com/t/placeholder-considerations-resources-governance-and-legitimacy-in-nu4/34045} .
+One of the most highly valued properties of a public blockchain protocol is its level of decentralization. Usually there is much focus on how decentralized the block generation process is but not as much on how code and other changes are decided upon. Governance is the keyword here. While there is no deterministic way of assigning a "decentralization score" to a given project, some projects certainly seem to be goverened by a larger and more diverse group of people than others.
 
-Nic Carter, master thesis:  A Cross-Sectional Overview of Cryptoasset Governance
-and Implications for Investors \url{https://coinmetrics.io/papers/dissertation.pdf}
+> *"Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?"* - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
 
-**incentives_stakeholders.png**
-
-
-
-
-### Intro
-
-"While there is usually much focus on how decentralized the block generation process is, the manner in which the rules are interpreted and then encoded is nearly as important, and also usually less decentralized."
-
-> "Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?" - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
-
-In order to address these question practically, they have to be approached in reverse order. First you need to determine how to choose the deciders, then choose them and lastly have them make decisions.
-
+In order to address these question practically, they have to be approached in reverse order. First you need to determine how to choose the deciders, then choose them and lastly, have them make decisions.  
+In this article, we want to give an overview of what types of mechanisms there are to make the decisions mentioned above and explain how we at Horizen think about governance.
 
 ### How are the Deciders Chosen?
 
-Ecosystem around project chooses or gravitates toward focal point for development
+In a perfect world everybody has a say when it comes to how the deciders of a project are chosen and ideally there would be some sort of "fair" vote on it - whatever that means.
 
-by supporting a given project the user (conciously or not) is signalling a choice for who deciders are chosen.
+Realistically, there can not always be a process in place for how to choose the deciders. Most projects in the blockchain space started with a few like-minded people having an idea for what their idea cryptocurrency, dApp or platform should look like. Often times they found each other in a project similar to their idea, or the oldest blockchain and largest community around - Bitcoin.
 
-can be a purely organic process, can be a large and diverse community or small team. All these are legitimate approaches 
+All of them started working on making their idea become a reality at some point. The group of people that has formed around an idea will than gravitate towards a focal point for the development of the project. Often times this is a distinct GitHub organization. No matter what this group looks like in the beginning and how it has formed, generally this sort of entrepreneurial spirit should be welcomed.
+
+At the time people start putting actual work into the realization of the project idea, individuals will start to build a reputation - good or bad - and this will most likely be the organic way of how deciders emerge from the group. People that put in more time, more work and have the better ideas will naturally be recognized as the thought leaders of this project. They will usually take on leading roles in the development process, becoming repository maintainers or admins. **TKKG merge access**
+
+Once such a public open-source project gains momentum and people outside the initial group start to become aware, some of them will consequently get involved. By supporting a given project an individual is (conciously or not) signalling her support for the direction of the project and the approach the project has taken on governace thus far.
+
+I am currently not aware of a blockchain project, which has a dedicated process in place for how to chose the people that have more controll than others.
+**TKKG: usually reputation/track record**
+
 
 
 ### Who gets to Decide?
+
+those who emerged from the founding stage with the best reputation and largest social capital will have to make certain decision in the beginning.
+
+At this time not critical, design decision but no money involved yet. Which is not to say that decision made at the early stages of a blockchain project cannot have far reaching consequences later on.
+
+
+
+at their discretion can introduce processes for decision making - improvement proposal processes one example we will look at more closely later in this article.
+
+But what does decide mean anyways? What types of decisions have to be made?
+
+categorized by "effekt": some decisions can be made simultaneously. two different clients. BTC many clients, but core emerged as focal point.
+
+wide range: small design decision 
+
+can still have consequences.
+
+If a project is build from scratch ... language core client (for pr build from scratch) effects on developer adoption
+
+usually code fork and modification. Extending the deamon with usefull libraries, APIs attractiveness for devs.
+
+bigger decision: PoW Algo
+
+
+So far different takes on scaling approaches have produced the biggest controversies
+
+
 
 different approaches
 
 some more company, some more community, some can barely be explained in a book.
 
-effects on cencorship resistance
-
-robustness as single points of control create single points of failure
-
 depending on usecase, different levels of decentralization required or desireable for different usecases.
 for a network mainly providing verifiable scarcity for CryptoKitties decentralization is arguably less important than a global Store of Value (SOV).
+
+robustness as single points of control create single points of failure
 
 
 #### Delegated Decentralized Governance
 
 2 paragraph max.
 
-similar to representative democracies, not fixed terms.
+on paper similar to representative democracies, but without fixed terms fixed terms.
 EOS 21, Steem 50, Tron 27 parties.
+usually closer to corporate structures - business after all
 
-originally block production. but this goes hand in hand with consensus 
+originally block production. but this goes hand in hand with consensus rules
 
 code changes in the hands of a few
 
@@ -80,9 +102,10 @@ and Implications for Investors https://coinmetrics.io/papers/dissertation.pdf
 
 Bitcoin most organic, had the most time to evolve and the least attention at launch, no precendent...
 
-core repo is focal/schelling point for btc development.
+core repo is schelling point for btc development.
 
 maintainer have to sign merge commits, trusted pgp keys. otherwith github employees...
+"Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Lopp
 while keys can be stolen, better
 
 layered security, prs, releases
@@ -94,15 +117,12 @@ no formal specification, no one has authority to write one. code of dev focal po
 principle of least privilege
 
 
-\url{https://blog.bitmex.com/bitcoin-cores-competition/}
 
 Version bits to signal soft fork readiness \url{https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/}
 
 
 
 
-
-"Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Lopp
 
 
 > "No one controlls Bitcoin." - Jameson Lopp, [Who Controls Bitcoin Core](https://blog.lopp.net/who-controls-bitcoin-core-/)
@@ -115,6 +135,7 @@ The mechanism used for the version 2, 3, and 4 upgrades is commonly called IsSup
 
 \url{https://en.wikipedia.org/wiki/Electoral_system#Systems_used_outside_politics}
 
+Users. DAO only possible if a general framework is agreed upon beforehand. after that code runs the organization
 
 Voting in some form or another. Many voting schemes to choose from, each coming with a number of pros and cons. We chose LD. A thorough discussion of voting schemes and electoral systems would blow the scope of this article. Still I'd like to outline the core ideas behind LD.
 
@@ -129,8 +150,11 @@ A key difference is, that you can delegate your vote to whomever you like, be it
 
 ### What to do?
 
+Now that we have looked at different models of who gets to make decision, we have to figure out what to do
+
 #### Improvement Proposal Processes
 
+just a more formal way of suggesting changes and a more formal way of handling those suggestions from idea to activation.
 BIPs, EIPs, ZIPs, ZenIPs
 
 \url{https://medium.com/@dhsue/an-analysis-of-zcash-governance-692793f9c9ef}
@@ -140,23 +164,22 @@ BIPs, EIPs, ZIPs, ZenIPs
 - EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
 
 
-describe the process -> summary of ZenIP.md
+describe the overall process -> summary of ZenIP.md
 
+transition to ZenIP
+
+#### ZenIP Process
+
+owners and editors
+
+![ZenIP Status Flow](/assets/post_files/technology/expert/2.7-governance/zenip_status.png)
+
+status flow -> community discussion at what stages
 
 get involved, check repo, even create ZenIP, can be process or non-code-related
 
 
-
-
-#### ZenIP Process
-
-
-![ZenIP Status Flow](/assets/post_files/technology/expert/2.7-governance/zenip_status.png)
-
-
-
-
-### How to do it?
+### How to Implement the changes?
 
 downward compatible or not
 
@@ -231,3 +254,8 @@ https://uncommoncore.co/wp-content/uploads/2019/10/A-model-for-Bitcoins-security
 
 \url{https://medium.com/blockchain-capital-blog/grin-governance-a-novel-approach-154aca07291b}
 Interesting approach regarding Asics. touches on governance in one way or another. Avoids the inevitable discussion about mining hardware by a proactive decision. 
+
+chris burniske on zcash halving and dev fund \url{https://forum.zcashcommunity.com/t/placeholder-considerations-resources-governance-and-legitimacy-in-nu4/34045} .
+
+Nic Carter, master thesis:  A Cross-Sectional Overview of Cryptoasset Governance
+and Implications for Investors \url{https://coinmetrics.io/papers/dissertation.pdf}
