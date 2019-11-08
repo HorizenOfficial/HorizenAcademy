@@ -9,6 +9,8 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
+**TKKG** Add little section on where funding comes from
+
 One of the most highly valued properties of public blockchain protocols are their level of decentralization. Usually there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here. 
 While there is no deterministic way of assigning a "decentralization score" to a given project, some projects certainly seem to be goverened by a larger and more diverse group of people than others and you might consider these more decentralized.
 
@@ -100,7 +102,10 @@ The most notable attempt at creating a decentralized autonomous organization was
 
 #### The Horizen Treasury DAO
 
-Horizen is dedicated to building a DAO as a [sidechain]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) application. It will enable decentralized, community based governance, especially with regards to resource allocation. The basic model of the treasury system is described in [a paper][https://www.lancaster.ac.uk/staff/zhangb2/treasury.pdf] written by our research and development partner, Input Output Hong Kong (IOHK) in collaboration with the Lancaster University.
+
+
+Horizen is dedicated to building a DAO as a [sidechain]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) application. It will enable decentralized, community based governance, especially with regards to resource allocation. Part of the Horizen block subsidy goes to the Zen Blockchain Foundation treasury (at the time of writing 20%), from where it gets distributed to fund the development of the protocol, the sidechain implementation, marketing as well as business development.
+The basic model of the treasury system is described in [a paper][https://www.lancaster.ac.uk/staff/zhangb2/treasury.pdf] written by our research and development partner, Input Output Hong Kong (IOHK) in collaboration with the Lancaster University.
 
 The general idea of the Horizen DAO is to have stakeholders in the Horizen ecosystem vote on what the treasury funds at the Zen Blockchain Foundations disposal are spent on. Anyone in the community can submit a proposal for consideration. Stakeholders can review the proposals that get passed on, and then they get sent to the next stage where ZEN holders can vote on where funding gets placed. There are many types of voting mechanisms and electoral systems in general to choose from when building such a system. The Horizen DAO will use a form of Liquid Democracy as the mechanism for voting. A thorough discussion of voting schemes would blow the scope of this article. Still, we would like to outline the core idea behind liquid democracy.
 
@@ -109,102 +114,62 @@ The two existing forms of democracy we know from traditional governance processe
 ![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
 ![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
 
-Liquid Democracy can be understood as a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an "expert" that represents your views without your delegation being tied to election terms of any kind. A key difference is that you can delegate your vote to whomever you like and you can withdraw your delegation at any given time - making the whole process very fluid - or *liquid*. This reduces the barrier to entry for people willing to get involved in the governance process and keeps delegates accountable because they can lose delegations at any time. Alternatively, you can decide to vote on any given issue yourself.
+Liquid Democracy can be understood as a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an "expert" that represents your views without your delegation being tied to election terms of any kind. A key difference is that you can delegate your vote to whomever you like and you can withdraw your delegation at any given time - making the whole process very fluid - or *liquid*. This reduces the barrier to entry for people willing to get involved in the governance process and keeps delegates accountable because they can lose delegations at any time. Alternatively, you can decide to vote on any given issue yourself. A detailed summary of the IOHK paper can be found [here](https://medium.com/coinmonks/about-a-treasury-system-for-cryptocurrencies-ecd9913fe0cc).
 
-As we said earlier, DAOs are still experimental at this point in time. There are many unknowns around a DAOs legal status and how to best set it up, as there is little to no precedent of a DAO working for a sustained period of time. Nonetheless the concept is highly interesting from our perspective and promises big advancement in terms of [social scalability](https://hackernoon.com/social-scalability-the-most-important-idea-in-cryptocurrency-73d60e08b85a) if implemented correctly. Thus we consider it an effort worth making to build a DAO to govern the Zen Blockchain Foundation's finances. 
+As we said earlier, DAOs are still experimental at this point in time. There are many unknowns around a DAOs legal status and how to best set it up, as there is little to no precedent of a DAO working for a sustained period of time. Nonetheless the concept is highly interesting from our perspective and promises big advancement in terms of [social scalability](https://hackernoon.com/social-scalability-the-most-important-idea-in-cryptocurrency-73d60e08b85a) if implemented correctly. Thus we consider it an effort worth making to build a DAO to govern the Zen Blockchain Foundation's finances.
 
 ### Decision Making
 
-Now that we have looked at different models of who gets to make decision, we have to figure out what to do. There are different processes the "decision makers" can follow to decide, and one of the most widely used processes are improvement proposals. They come in different flavors and vary to some degree, but the general idea remains the same.
+Now that we have looked at different models of who gets to make decisions, we have to figure out what to do. There are different processes the "decision makers" can follow to decide, and one of the most widely used processes are improvement proposals. They come in different flavors and vary to some degree, but the general idea remains the same.
 
 #### Improvement Proposal Processes
 
-just a more formal way of suggesting changes and a more formal way of handling those suggestions from idea to activation.
-BIPs, EIPs, ZIPs, ZenIPs
+Improvement proposals processes are mainly a formalized way of suggesting changes and handling those suggestions from idea to activation. Many blockchain projects have developed their own flavor of this process. Bitcoin's BIPs, Ethereum's EIPs, Zcash's ZIPs, and Horizen's ZenIPs are among them. Aragon, a platform specifically built to providing organizations with blockchain based governance tool calls their version *Aragon Governance Proposals* or AGPs.
 
-\url{https://medium.com/@dhsue/an-analysis-of-zcash-governance-692793f9c9ef}
-
-\url{https://www.zfnd.org/blog/new-zip-process/}
-
-- EIP 1234 reducing block reward from 3 to 2 ETH per block. also delayed difficulty bomb.
-
-
-describe the overall process -> summary of ZenIP.md
-
-transition to ZenIP
-
-Aragon Governance Proposals https://github.com/aragon/AGPs
-
+Following the improvement proposal process is usually no requirement for suggesting changes to the project, but especially for contributors without an existing track record of valuable contributions, following the *X*IP process will increase the chances of the proposal being at least considered. We will explain the ZenIP process in more detail to give you an idea of what such an improvement proposal process entails.
 
 #### ZenIP Process
 
-owners and editors
+It has been the stated goal of Horizen from the very beginning to build a decentralized platform, where not just the infrastructure is distributed, but also the funding and decision making. 
 
-![ZenIP Status Flow](/assets/post_files/technology/expert/2.7-governance/zenip_status.png)
+The ZenIP process will be an important step towards a decentralized decision making process for the Horizen ecosystem. Similar processes have proven to work well for decentralized blockchain projects, hence it should be the best way to distribute influence and power towards the broader community of open source contributors and stakeholders.
 
-status flow -> community discussion at what stages
+ZenIPs are meant to standardize the process of suggesting major changes to the Horizen code base and processes. A ZenIP in and of itself is a document that describes a new feature. It explains the rationale behind the proposed feature and elaborates on why certain design decisions were made. Each ZenIP starts with an *Owner* proposing a new idea in the form of a ZenIP. After investigating if the idea is original and if it has chances of being accepted the idea is put in the form of a ZenIP.
 
-get involved, check repo, even create ZenIP, can be process or non-code-related
+The document needs to contain an abstract, a section about the motivation for the proposed change, a specification as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/ZencashOfficial/ZenIPs). 
 
++++++++ graphic ZenIP flow
+
+*Editors* act as the repository maintainers and merge the pull request in draft status when they deem the document complete. Once there is rough consensus on the forums where the ZenIP in question is discussed and the document is complete the status can be changed from *Draft* to *Proposed* by a supermajority of editors.
+Next, code-related ZenIPs change status from *Proposed* to *Implemented* once the Owner provides a reference implementation of their proposal.
+A ZenIP becomes *Final* when its associated protocol change is activated on Horizen's mainnet.
+
+A Process or Informational ZenIP may change status from Proposed to Active when it achieves rough consensus on the forum or pull request. Such a proposal is said to have rough consensus if it has been open to discussion for at least one month, and no person maintains any unaddressed substantiated objections to it.
+We invite you to check out the [ZenIP repository](https://github.com/ZencashOfficial/ZenIPs) and get involved in the discussions around it and propose your ideas to the Horizen community.
 
 ### Implementing Changes
 
-downward compatible or not
+Now, that we have answered our three initial questions of how deciders are chosen, who gets to decide, and what is done we need to look at how agreed upon changes can be implemented. The biggest consideration is if the changes can be implemented in a downward compatible upgrade, a *soft fork* or in a non-backward compatible upgrade, a *hard fork*.
 
 #### Soft Forks
 
+Soft forks are backward compatible upgrades to a blockchain, think a WhatsApp update. Just because your friends run the latest version you can run an older one and still be able to chat with them. A soft fork can be triggered either by the users or nodes - a *user activated soft fork* (UASF), or it can be triggered by miners in a *miner activated soft fork* (MASF).
 
-backwards compatible
+**UASFs**
 
-transition to new set of consensus rules
+The most notable example of a user activated soft fork was the activation of *Segregated Witness* (SegWit) on the Bitcoin blockchain. SegWit fixes [*transaction malleability*](https://en.bitcoin.it/wiki/Transaction_malleability) and increases the block capacity. It had long been discussed with a non-significant amount of opposition, especially from miners, before a contributor eventually forked the Bitcoin Core client, built the *Bitcoin UASF* client and made it publicly available.
 
-**UASF**
+The new client gained traction and created pressure on miners to adopt the changes. Miners need to produce valid blocks in order to be compensated for their efforts and by not upgrading to enable SegWit they would have risked to have their blocks rejected by the majority of nodes. After a certain date, the Bitcoin UASF client would have rejected blocks by miners that refused SegWit. This could have led to a contentious fork of the network. Miners considered the threat to the networks utility (and hence value) serious enough to follow the majority of nodes and activate SegWit eventually. An important learning at that time was that the miners influence on the network can be overruled by its users when there is strong consensus among them.
 
-UASF is mechanism by which changes are implemented
+**MASFs**
 
-flag date, afterward changes enforced by nodes. won't accept "old" blocks, miners adhere because invalid blocks cost
+In a miner activated soft fork the block producers signal their readiness for an update by including some metadata in a blocks header. [BIP-0034](https://github.com/bitcoin/bips/blob/master/bip-0034.mediawiki) introduced this concept on the Bitcoin blockchain. The initial mechanism for MASFs had miners increment a blocks *version* number by one in order to support a soft fork. Once 95% of the most recent 1000 blocks would signal readiness to upgrade, all blocks with the previous version number would be rejected.
 
-user activated because node operators need to upgrading
-
-first time bip16 p2sh
-
-miners included /P2SH/ in coinbase tx
-
-Voting period and threshold defined
-
-uasf 2017, segwit...power of users
-proposed segwit in bip148, forcing miners to activate aug. 1st
-
-forked code, created Bitcoin UASF and made it publicly available
-
-gained traction, created pressure on miners to adopt bip-91 (segwit bip) and activate fork before 148 deadline
-
-Actually, in the summer of 2017, in some ways, a client competing with Bitcoin Core, Bitcoin UASF, overthrew Bitcoin Core and deliberately changed the networks consensus rules. Therefore, concluding that Bitcoin Core is all powerful, is the wrong lesson to learn from the blocksize war. - bitmex
-
-
-"To push this change through anyway, some Bitcoin users installed a client that threatened to, once again, suspend
-Nakamoto consensus by ignoring blocks from miners who refused SegWit after a certain
-date. Had miners let this play out, it would have resulted in contentious fork from the main
-network. The threat to Bitcoin’s utility and value was serious enough to the miner’s bottom
-lines that they finally gave up their resistance against the SegWit update"
-
-
-
-**MASF**
-
-bip34 introduced MASF, version number
-
-miners signal readiness with hash power, changing version bits, When a certain percentage of produced blocks have signalled acceptance, full nodes can then enforce rule changes accordingly
-
-2 more times -> version number 4 right now
-
-version number -> version bits, bip0009 https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki
-
-more info, can signal for up to 29 soft forks at once
+This initial mechanism was updated to use [*version bits*](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki) instead of the version number. By interpreting the individual bits of the *nVersion* data field in the block header as a bit vector, a single block header can signal acceptance or rejection for up to 29 forks at once. When a sufficiently large share of hash power has signalled readiness for a fork, full nodes will enforce those rule changes acccordingly.
 
 #### Hard Forks
 
-
+Hard 
 
 ### Horizen Governance
 
