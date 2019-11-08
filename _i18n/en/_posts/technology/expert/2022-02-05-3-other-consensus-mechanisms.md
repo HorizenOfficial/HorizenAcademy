@@ -9,6 +9,9 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
+**TKKG** https://medium.com/@abhisharm/understanding-proof-of-stake-through-its-flaws-part-2-nothing-s-at-stake-8d12d826956c
+How nothing at stake is addressed.
+
 A blockchain shows it's strength when out in the wild, living on a permissionless, distributed network. The biggest challenge when designing such a multi-agent system is achieving *consensus* among its participants.
 
 > "All blockchains are fundamentally a deterministic state machine acted upon by transactions. Consensus is the process of agreeing on a deterministic order of transactions and filtering invalid transactions." - Dan Larimer
