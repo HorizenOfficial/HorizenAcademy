@@ -110,24 +110,6 @@ Building a DAO is no simple endeavour. The code governing a DAO is public and an
 
 The most notable attempt at creating a decentralized autonomous organization was [*The DAO*](https://en.wikipedia.org/wiki/The_DAO_(organization)) on the Ethereum blockchain. It was launched with US$150 million of assets under control in 2016 as a venture capital fund and immediately got hacked. About US$50 million in cryptoassets were stolen by the hackers. The hack was reverted by reorganizing the Ethereum blockchain, which in turn led to a chain split. The Ethereum Classic chain is the Ethereum chain where the hack was not reverted, while investors on the Ethereum chain were refunded.
 
-#### The Horizen Treasury DAO
-
-
-
-Horizen is dedicated to building a DAO as a [sidechain]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) application. It will enable decentralized, community based governance, especially with regards to resource allocation. Part of the Horizen block subsidy goes to the Zen Blockchain Foundation treasury (at the time of writing 20%), from where it gets distributed to fund the development of the protocol, the sidechain implementation, marketing as well as business development.
-The basic model of the treasury system is described in [a paper][https://www.lancaster.ac.uk/staff/zhangb2/treasury.pdf] written by our research and development partner, Input Output Hong Kong (IOHK) in collaboration with the Lancaster University.
-
-The general idea of the Horizen DAO is to have stakeholders in the Horizen ecosystem vote on what the treasury funds at the Zen Blockchain Foundations disposal are spent on. Anyone in the community can submit a proposal for consideration. Stakeholders can review the proposals that get passed on, and then they get sent to the next stage where ZEN holders can vote on where funding gets placed. There are many types of voting mechanisms and electoral systems in general to choose from when building such a system. The Horizen DAO will use a form of Liquid Democracy as the mechanism for voting. A thorough discussion of voting schemes would blow the scope of this article. Still, we would like to outline the core idea behind liquid democracy.
-
-The two existing forms of democracy we know from traditional governance processes are *representative democracy* and *direct democracy*. The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they don’t scale well with an increasing number of participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process there are issues with regards to the transparency of representatives’ votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
-
-![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
-
-Liquid Democracy can be understood as a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an "expert" that represents your views without your delegation being tied to election terms of any kind. A key difference is that you can delegate your vote to whomever you like and you can withdraw your delegation at any given time - making the whole process very fluid - or *liquid*. This reduces the barrier to entry for people willing to get involved in the governance process and keeps delegates accountable because they can lose delegations at any time. Alternatively, you can decide to vote on any given issue yourself. A detailed summary of the IOHK paper can be found [here](https://medium.com/coinmonks/about-a-treasury-system-for-cryptocurrencies-ecd9913fe0cc).
-
-As we said earlier, DAOs are still experimental at this point in time. There are many unknowns around a DAOs legal status and how to best set it up, as there is little to no precedent of a DAO working for a sustained period of time. Nonetheless the concept is highly interesting from our perspective and promises big advancement in terms of [social scalability](https://hackernoon.com/social-scalability-the-most-important-idea-in-cryptocurrency-73d60e08b85a) if implemented correctly. Thus we consider it an effort worth making to build a DAO to govern the Zen Blockchain Foundation's finances.
-
 ### Decision Making
 
 Now that we have looked at different models of who gets to make decisions, we have to figure out what to do. There are different processes the "decision makers" can follow to decide, and one of the most widely used processes are improvement proposals. They come in different flavors and vary to some degree, but the general idea remains the same.
@@ -136,26 +118,7 @@ Now that we have looked at different models of who gets to make decisions, we ha
 
 Improvement proposals processes are mainly a formalized way of suggesting changes and handling those suggestions from idea to activation. Many blockchain projects have developed their own flavor of this process. Bitcoin's BIPs, Ethereum's EIPs, Zcash's ZIPs, and Horizen's ZenIPs are among them. Aragon, a platform specifically built to providing organizations with blockchain based governance tool calls their version *Aragon Governance Proposals* or AGPs.
 
-Following the improvement proposal process is usually no requirement for suggesting changes to the project, but especially for contributors without an existing track record of valuable contributions, following the *X*IP process will increase the chances of the proposal being at least considered. We will explain the ZenIP process in more detail to give you an idea of what such an improvement proposal process entails.
-
-#### ZenIP Process
-
-It has been the stated goal of Horizen from the very beginning to build a decentralized platform, where not just the infrastructure is distributed, but also the funding and decision making. 
-
-The ZenIP process will be an important step towards a decentralized decision making process for the Horizen ecosystem. Similar processes have proven to work well for decentralized blockchain projects, hence it should be the best way to distribute influence and power towards the broader community of open source contributors and stakeholders.
-
-ZenIPs are meant to standardize the process of suggesting major changes to the Horizen code base and processes. A ZenIP in and of itself is a document that describes a new feature. It explains the rationale behind the proposed feature and elaborates on why certain design decisions were made. Each ZenIP starts with an *Owner* proposing a new idea in the form of a ZenIP. After investigating if the idea is original and if it has chances of being accepted the idea is put in the form of a ZenIP.
-
-The document needs to contain an abstract, a section about the motivation for the proposed change, a specification as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/ZencashOfficial/ZenIPs). 
-
-![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
-
-*Editors* act as the repository maintainers and merge the pull request in draft status when they deem the document complete. Once there is rough consensus on the forums where the ZenIP in question is discussed and the document is complete the status can be changed from *Draft* to *Proposed* by a supermajority of editors.
-Next, code-related ZenIPs change status from *Proposed* to *Implemented* once the Owner provides a reference implementation of their proposal.
-A ZenIP becomes *Final* when its associated protocol change is activated on Horizen's mainnet.
-
-A Process or Informational ZenIP may change status from Proposed to Active when it achieves rough consensus on the forum or pull request. Such a proposal is said to have rough consensus if it has been open to discussion for at least one month, and no person maintains any unaddressed substantiated objections to it.
-We invite you to check out the [ZenIP repository](https://github.com/ZencashOfficial/ZenIPs) and get involved in the discussions around it and propose your ideas to the Horizen community.
+Following the improvement proposal process is usually no requirement for suggesting changes to the project, but especially for contributors without an existing track record of valuable contributions, following the *X*IP process will increase the chances of the proposal being at least considered. We will explain the ZenIP process in more detail later, to give you an idea of what such an improvement proposal process entails.
 
 ### Implementing Changes
 
@@ -179,24 +142,59 @@ This initial mechanism was updated to use [*version bits*](https://github.com/bi
 
 #### Hard Forks
 
-A hard fork is a downward incompatible upgrade to a blockchain, think a new Playstation. With your old console you won't be able to play the new games developed for Playstation 4. The two most notable hardforks in the blockchain ecosystem have been the Ethereum and Ethereum Classic 
+A hard fork is a downward incompatible upgrade to a blockchain, think a new Playstation. With your old console you won't be able to play the new games developed for Playstation 4. The two most notable hardforks in the blockchain space have been the Ethereum and Ethereum Classic hardfork that reverted the DAO  hack and the Bitcoin and Bitcoin Cash hardfork. Bcash increased the maximum block size. The Bitcoin client won't recognize these larger blocks as valid, hence it is backward incompatible. In case of the Ethereum hardfork the two versions didn't share a common transaction history anymore, hence the incompatibility.
 
 ### Horizen Governance
 
-ZenIP
-ZBF
-HL(?)
+Now, that we have established an understanding of the most important concepts around blockchain governance let us take a look at the governance within the Horizen ecosystem.
 
+#### ZenIP Process
+
+It has been the stated goal of Horizen from the very beginning to build a decentralized platform, where not just the infrastructure is distributed, but also the funding and decision making.
+
+The ZenIP process will be an important step towards a decentralized decision making process for the Horizen ecosystem. Similar processes have proven to work well for decentralized blockchain projects, hence it should be the best way to distribute influence and power towards the broader community of open source contributors and stakeholders.
+
+ZenIPs are meant to standardize the process of suggesting major changes to the Horizen code base and processes. A ZenIP in and of itself is a document that describes a new feature. It explains the rationale behind the proposed feature and elaborates on why certain design decisions were made. Each ZenIP starts with an *Owner* proposing a new idea in the form of a ZenIP. After investigating if the idea is original and if it has chances of being accepted the idea is put in the form of a ZenIP.
+
+The document needs to contain an abstract, a section about the motivation for the proposed change, a specification as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/ZencashOfficial/ZenIPs). 
+
+![The ZenIP Workflow](/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
+
+*Editors* act as the repository maintainers and there are currently three of them, one representing the Zen Blockchain Foundation, another one representing the *Horizen Community Council* and one for *Horizen Labs*.
+They merge the pull requests in draft status when they deem the document complete. Once there is rough consensus on the forums where the ZenIP in question is discussed and the document is complete the status can be changed from *Draft* to *Proposed* by a supermajority of editors.
+Next, code-related ZenIPs change status from *Proposed* to *Implemented* once the Owner provides a reference implementation of their proposal.
+A ZenIP becomes *Final* when its associated protocol change is activated on Horizen's mainnet.
+
+A Process or Informational ZenIP may change status from Proposed to Active when it achieves rough consensus on the forum or pull request. Such a proposal is said to have rough consensus if it has been open to discussion for at least one month, and no person maintains any unaddressed substantiated objections to it.
+We invite you to check out the [ZenIP repository](https://github.com/ZencashOfficial/ZenIPs) and get involved in the discussions around it and propose your ideas to the Horizen community.
+
+#### The Horizen Treasury DAO
+
+Horizen is dedicated to building a DAO as a [sidechain]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) application. It will enable decentralized, community based governance, especially with regards to resource allocation. Part of the Horizen block subsidy goes to the Zen Blockchain Foundation treasury (at the time of writing 20%), from where it gets distributed to fund the development of the protocol, the sidechain implementation, marketing as well as business development.
+The basic model of the treasury system is described in [a paper][https://www.lancaster.ac.uk/staff/zhangb2/treasury.pdf] written by our research and development partner, Input Output Hong Kong (IOHK) in collaboration with the Lancaster University.
+
+The general idea of the Horizen DAO is to have stakeholders in the Horizen ecosystem vote on what the treasury funds at the Zen Blockchain Foundations disposal are spent on. Anyone in the community can submit a proposal for consideration. Stakeholders can review the proposals that get passed on, and then they get sent to the next stage where ZEN holders can vote on where funding gets placed. There are many types of voting mechanisms and electoral systems in general to choose from when building such a system. The Horizen DAO will use a form of Liquid Democracy as the mechanism for voting. A thorough discussion of voting schemes would blow the scope of this article. Still, we would like to outline the core idea behind liquid democracy.
+
+The two existing forms of democracy we know from traditional governance processes are *representative democracy* and *direct democracy*. The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they don’t scale well with an increasing number of participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process there are issues with regards to the transparency of representatives’ votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
+
+![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
+
+Liquid Democracy can be understood as a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an "expert" that represents your views without your delegation being tied to election terms of any kind. A key difference is that you can delegate your vote to whomever you like and you can withdraw your delegation at any given time - making the whole process very fluid - or *liquid*. This reduces the barrier to entry for people willing to get involved in the governance process and keeps delegates accountable because they can lose delegations at any time. Alternatively, you can decide to vote on any given issue yourself. A detailed summary of the IOHK paper can be found [here](https://medium.com/coinmonks/about-a-treasury-system-for-cryptocurrencies-ecd9913fe0cc).
+
+As we said earlier, DAOs are still experimental at this point in time. There are many unknowns around a DAOs legal status and how to best set it up, as there is little to no precedent of a DAO working for a sustained period of time. Nonetheless the concept is highly interesting from our perspective and promises big advancement in terms of [social scalability](https://hackernoon.com/social-scalability-the-most-important-idea-in-cryptocurrency-73d60e08b85a) if implemented correctly. Thus we consider it an effort worth making to build a DAO to govern the Zen Blockchain Foundation's finances.
 
 ### Summary
 
-"In fact, the search of a perfect organizational structure for cryptocurrency governance, may not be that different from the search for the best ways for governing human societies." Ken Alabs
+Open source protocol governance is something that’s constantly iterated and improved upon. The blockchain space is relatively young, and compared to  traditional governance processes so is open source software in general. The large number of different projects represent a huge real-worl sandbox environment. Many differents attempts at creating fair governance are being tried in parallel at this stage, and only experimentation and constant iteration will improve governance by making it more transparent, efficient and hopefully fairer.
 
-"Overall, open source protocol governance is something that’s constantly iterated and improved upon. There is no shortcut or short-term fix. It’s strengthened through awareness, education, and active community participation." - Derek Hsue, grin governance article
+> "In fact, the search of a perfect organizational structure for cryptocurrency governance, may not be that different from the search for the best ways for governing human societies." - Ken Alabs
 
-Maybe no perfect in this context. Depends on use case: BTC SOV, conservative governance expected and needed.
-other projects more progressive, need faster decision making
-sandbox stage
+The quote above might be the ultimate truth when it comes to governance. Arguably, such a process will never be perfect. Some stakeholders will always see room for improvement even when others are completely in line with the current process. It is difficult to determine what perfect means on paper, let alone implementing such a system.
+
+Projects with different goals will also require different approaches to governance. While a global store of value such as Bitcoin needs a conservative approach to governance, moving carefully and slow, new projects working on cutting edge technological advances need faster decision making in order to realize their goals. The entire blockchain space is still young enough to be considered in a sandbox stage.
+
+Hence, governance needs to be project specific, accounting for the goals and the existing community. Time will tell what the "best" approaches to governance in the open source arena are.
 
 ### FR
 
