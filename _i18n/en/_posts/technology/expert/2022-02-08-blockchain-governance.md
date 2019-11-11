@@ -11,8 +11,18 @@ chapter: "How Does a Blockchain Work?"
 
 **TKKG** Add little section on where funding comes from
 
-One of the most highly valued properties of public blockchain protocols are their level of decentralization. Usually there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here. 
-While there is no deterministic way of assigning a "decentralization score" to a given project, some projects certainly seem to be goverened by a larger and more diverse group of people than others and you might consider these more decentralized.
+**TKKG** "To conclude, a majority hashrate cannot override consensus rules, confiscate any bitcoiner’s coins, or change the monetary policy" add somewhere, power limited. 
+
+ create a network and community that can grow long after the initial team stops working on the project. https://medium.com/@arjunblj/zcash-the-founder-incentive-trilemma-fe7689fc8293
+
+
+
+
+
+
+One of the most highly valued properties of public blockchain protocols are their level of decentralization. Usually there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here.
+
+While there is no deterministic way of assigning a "decentralization score" to a given project (yet), some projects certainly seem to be goverened by a larger and more diverse group of people than others and you might consider these more decentralized. This doesn't mean that there have been no attempts at quantifying decentralization, introducing metrics such as the [*minimum Nakamoto coefficient*](https://news.earn.com/quantifying-decentralization-e39db233c28e) based on the ideas of the *Gini Coefficient* and *Lorenz Curves*. It is determined by assigning a decentralization score to the different subsystems of a blockchain (mining, clients, developers, exchanges, nodes and wallet distribution) and aggregating those scores into an overall score.
 
 > *"Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?"* - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
 
@@ -138,7 +148,7 @@ ZenIPs are meant to standardize the process of suggesting major changes to the H
 
 The document needs to contain an abstract, a section about the motivation for the proposed change, a specification as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/ZencashOfficial/ZenIPs). 
 
-+++++++ graphic ZenIP flow
+![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
 
 *Editors* act as the repository maintainers and merge the pull request in draft status when they deem the document complete. Once there is rough consensus on the forums where the ZenIP in question is discussed and the document is complete the status can be changed from *Draft* to *Proposed* by a supermajority of editors.
 Next, code-related ZenIPs change status from *Proposed* to *Implemented* once the Owner provides a reference implementation of their proposal.
@@ -169,7 +179,7 @@ This initial mechanism was updated to use [*version bits*](https://github.com/bi
 
 #### Hard Forks
 
-Hard 
+A hard fork is a downward incompatible upgrade to a blockchain, think a new Playstation. With your old console you won't be able to play the new games developed for Playstation 4. The two most notable hardforks in the blockchain ecosystem have been the Ethereum and Ethereum Classic 
 
 ### Horizen Governance
 
