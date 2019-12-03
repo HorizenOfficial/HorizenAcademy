@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Beginner"
-description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we show you howour organization woks, how we are funded, and some of the engineering challenges we are facing today at a beginner level."
+description: The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we show you how our organization woks, how we are funded, and some of the engineering challenges we are facing today, at a beginner level.
 permalink: /horizen/beginner/
 topic: horizen
 level: beginner
@@ -13,7 +13,7 @@ level: beginner
         <img src="/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
-        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
+        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via a <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
     </div>
 </div>
 
