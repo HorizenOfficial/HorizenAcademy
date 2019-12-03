@@ -16,7 +16,7 @@ chapter: "How Does a Blockchain Work?"
  create a network and community that can grow long after the initial team stops working on the project. https://medium.com/@arjunblj/zcash-the-founder-incentive-trilemma-fe7689fc8293
 
 
-
+Bitcoin Governance: https://medium.com/@pierre_rochard/bitcoin-governance-37e86299470f
 
 
 
