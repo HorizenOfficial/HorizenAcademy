@@ -69,7 +69,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2021-01-05-a-relative-the-dag %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}">
             <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
         </a>
     </div>
@@ -79,7 +79,7 @@ In this first chapter we will look at what a blockchain is in general from four 
             Lastly, we look at DAGs - directed acyclic graphs. A blockchain is the most simple form of a DAG, which is a term used in mathematics to describe a structure of elements in a certain relation to one another. How the concept of blockchain and decentralized consensus can be extended to other data structures is covered in this article.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2021-01-05-a-relative-the-dag %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}">Read Article</a>
         </p>
     </div>
 </div>
