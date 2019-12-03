@@ -11,11 +11,11 @@ A transaction is when you send money to someone else. When you create a transact
 
 For example, Alice could send one ZEN to her friend Bob. Alice will send a message to everyone on the network that she just sent Bob one ZEN.
 
-When Bob wants to spend that one ZEN, he will create a new message to the network. This message will say: I want to send one ZEN  to someone. This is how you send money from one person to another without the help of anybody else. 
+When Bob wants to spend that one ZEN, he will create a new message to the network. This message will say: "I received one ZEN from Alice and I am sending that one ZEN  to someone else now". 
 
-This is similar to how you get a dollar bill from somebody and hand it to the next person when you want to spend it.
+This is how money is sent from one person to another without the help of a central third party.
 
 ![Transaction](/assets/post_files/eli5/what-is-a-transaction/transaction_D.jpg)
 ![Transaction](/assets/post_files/eli5/what-is-a-transaction/transaction_M.jpg)
 
-We talk [more about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-01-transactions %}) in our Technology Section.
+In our Technology section, we talk [more about transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-01-transactions %}).
