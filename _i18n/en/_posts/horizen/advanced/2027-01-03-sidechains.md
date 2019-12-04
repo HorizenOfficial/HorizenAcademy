@@ -37,7 +37,7 @@ It is important to note that the initial change to the codebase enabling the dep
 
 As we said earlier many teams are looking into the technology of sidechains for a variety of purposes. The team behind Rootstock is working on a way, to provide smart contract functionality on top of Bitcoin. They are referring to their sidechains as secondary chains. Polkadot, naming its sidechains Parachains aims to connect permissioned and public blockchains. The general idea of Plasma is also based on sidechains, or child blockchains and here the main goal is scaling. Drivechains are meant to enable BTC to be moved to other software applications, like different public blockchains.
 
-You could make a case of distinguishing between sidechains and drivechains as discussed in this paper by Rootstock. We will pick up on their distinction shortly when talking about how sidechains work.
+You could make a case of distinguishing between sidechains and drivechains as discussed in [this paper](https://docs.rsk.co/Drivechains_Sidechains_and_Hybrid_2-way_peg_Designs_R9.pdf) by Rootstock. We will pick up on their distinction shortly when talking about how sidechains work.
 
 The general idea is the same though and satisfies the broad definition of a pegged sidechain that Back et al. provided about four years ago.
 
@@ -69,6 +69,6 @@ The _sidechain consensus protocol_ governs how the network agrees on new blocks 
 
 Sidechains can be an elegant way to overcome current limitations regarding scalability and governance in the blockchain ecosystem. While you can increase the throughput, so the number of transactions per second (TPS) with sidechains, they also allow experimentation without compromising the security of the main blockchain.
 
-The ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will likely be the Treasury, moving the organization a step closer to becoming a decentralized autonomous organization (DAO). 
+The ability to deploy sidechains will dramatically enhance the possibilities of building on top of existing public blockchains. One of the first use-cases of a sidechain for the Horizen project will likely be the Treasury, moving the organization a step closer to becoming a decentralized autonomous organization (DAO).
 
 We will continue this article on [article on sidechains in the Expert Section]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}). We will look at how the proposed solution works on a technical level and examine the _sidechain consensus protocol_ and the _cross-chain transfer protocol_.
