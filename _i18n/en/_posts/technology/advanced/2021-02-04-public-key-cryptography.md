@@ -119,4 +119,4 @@ We cover how digital signatures work and how you can prove that you know the pri
 
 When you set up a wallet the software will first generate a large random number that is your private key. The base point P on the elliptic curve is multiplied with your private key to get your public key, another point on the curve. Your public key is then hashed and the characters I, l, 0 and O are removed to improve readability. To spend your money you need to provide a digital signature that proves your knowledge of the private key that belongs to your address.
 
-Our next article is about the [Peer-to-Peer network]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}: The infrastructure public blockchains are built upon.
+Our next article is about the [Peer-to-Peer network]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}): The infrastructure public blockchains are built upon.
