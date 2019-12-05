@@ -20,8 +20,8 @@ The input doesn't have to be a number, it can be any sort of data from a single 
 
 One of the most commonly used hash functions is SHA256 (Secure Hash Algorithm 256 bit). The number indicates the output of the hash function has 256 bit. A hash value can serve as a fingerprint of data. One can verify the integrity of files and detect changes by comparing their hashes.
 
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_D.jpg)
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash_M.jpg)
+![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash2_D.jpg)
+![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash2_M.jpg)
 
 ### Public-Key Cryptography
 

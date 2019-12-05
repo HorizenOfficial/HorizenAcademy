@@ -10,7 +10,8 @@ level: advanced
 
 Horizen has the long-term goal of moving its organizational structure towards a DAO. A DAO, or Decentralized Autonomous Organization, is software that acts as an organization with a number of predefined rules and procedures.
 
-The rules and procedures that govern the organization are written in code when the DAO is created. The main goal of our DAO is to decentralize the decision making regarding how we spend the funds of our non-profit organization. All community members will be able to submit proposals to receive funding. Proposals can be, for example, a new feature for a wallet or attending a conference.
+
+The rules and procedures that govern the organization are written in code when the DAO is created. The main goal of our DAO is to decentralize the decision making regarding how we spend the funds of our non-profit organization. All community members will be able to submit proposals to receive funding. For example, this could be for developing a new feature for a wallet or covering the cost of attending a conference.
 
 ![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
 
@@ -22,7 +23,7 @@ Liquid democracy is a concept that promises to solve this problem in a fair and 
 
 ### Liquid Democracy
 
-The two existing forms of democracy are representative democracy and direct democracy. The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they became more difficult to manage as more people participated. With a growing number of issues arising, voting on every single one becomes unfeasible for most participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process, there are issues in regard to the transparency of representatives' votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
+The two most common forms of democracy are representative democracy and direct democracy. The first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they didn't scale well with an increasing number of participants. With a growing number of issues arising, voting on every single one becomes unfeasible for most participants. Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process, there are issues in regards to the transparency of representatives' votes and decisions, the accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
 
 Liquid Democracy is a dynamic hybrid of the two established branches of democracy, direct and representative. Liquid democracy combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an expert who represents your views. Alternatively, you can decide to vote on any given issue yourself. This means you can freely choose your level of involvement and there is a low barrier to entry if you wish to function as a delegate.
 
@@ -32,7 +33,7 @@ In liquid democracy, there are no election terms. You can delegate your vote to 
 
 ### Entities
 
-The different entities in our treasury system are the following
+The different entities in our treasury system are the following:
 
  - _Project Owners_ - The people who have submitted a proposal to be funded. Anybody can submit a proposal but has to pay a little fee in order to reduce the likelihood of spam.
  - _Voting committees_ - Stakeholders that are willing to help with the voting process. They help with the voting process, e.g. during the tally phase, where votes are counted.
@@ -51,4 +52,4 @@ We aim to reduce rational ignorance by providing incentive to encourage voters t
 
 In the first step towards becoming a DAO, we want to decentralize the decision making about our treasury funds. Users will be able to submit proposals, and the community will vote on which proposals should receive funding. The infrastructure for the voting process and the distribution of funds will be built on a sidechain. The voting mechanism we are implementing is a liquid democracy-based system, where a voter can choose to vote on issues directly, or they can delegate their vote to an expert. To combat voter apathy, we plan to incentivize participation in the decision-making process with financial rewards.
 
-For a detailed explanation of our planned treasury system go see our article on it on the [expert level]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).
+For a detailed explanation of our planned treasury system, please refer to this article at the [expert level]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).

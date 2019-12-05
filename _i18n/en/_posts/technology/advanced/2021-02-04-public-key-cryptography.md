@@ -109,9 +109,9 @@ You can generate as many addresses as you like from a single private key, and wa
 
 ### Digital Signature
 
-To wrap up this article we want to come back to digital signatures. You might hear that your keys are used to encrypt and decrypt messages. This is not really the case. The information contained within transactions is not encrypted in any way. It is available to anyone on the blockchain, which makes the system so transparent.
+To wrap up this article we want to come back to digital signatures. You might hear that your keys are used to encrypt and decrypt messages. This is true, but it is not why we use public-key cryptography on the blockchain. The information contained within transactions is not encrypted in any way. It is available to anyone on the blockchain, which makes the system so transparent.
 
-What your private key is actually used for is signing transactions. You can only spend funds you received in a transaction if you provide a digital signature that proves your knowledge of the private key corresponding to the address used to receive the funds.
+What your private key is actually necessary for on the blockchain is _signing_ transactions. You can only spend funds you received in a transaction if you provide a digital signature that proves your knowledge of the private key corresponding to the address used to receive the funds.
 
 We cover how digital signatures work and how you can prove that you know the private key without revealing any information about it in our Expert Section. We combine the concept of hash functions and point multiplication on the curve for this. Although it is not exactly rocket science it is a rather complex matter.
 
@@ -119,4 +119,4 @@ We cover how digital signatures work and how you can prove that you know the pri
 
 When you set up a wallet the software will first generate a large random number that is your private key. The base point P on the elliptic curve is multiplied with your private key to get your public key, another point on the curve. Your public key is then hashed and the characters I, l, 0 and O are removed to improve readability. To spend your money you need to provide a digital signature that proves your knowledge of the private key that belongs to your address.
 
-Our next article is about the [Peer-to-Peer network]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}: The infrastructure public blockchains are built upon.
+Our next article is about the [Peer-to-Peer network]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}): The infrastructure public blockchains are built upon.
