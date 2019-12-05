@@ -10,7 +10,6 @@ level: advanced
 
 Horizen has the long-term goal of moving its organizational structure towards a DAO. A DAO, or Decentralized Autonomous Organization, is software that acts as an organization with a number of predefined rules and procedures.
 
-
 The rules and procedures that govern the organization are written in code when the DAO is created. The main goal of our DAO is to decentralize the decision making regarding how we spend the funds of our non-profit organization. All community members will be able to submit proposals to receive funding. For example, this could be for developing a new feature for a wallet or covering the cost of attending a conference.
 
 ![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
