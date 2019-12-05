@@ -2,7 +2,7 @@
 layout: post
 type: intro
 title: "Horizen Beginner"
-description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article we show you howour organization woks, how we are funded, and some of the engineering challenges we are facing today at a beginner level."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we show you how our organization woks, how we are funded, and some of the engineering challenges we are facing today, at a beginner level."
 permalink: /horizen/beginner/
 topic: horizen
 level: beginner
@@ -13,7 +13,8 @@ level: beginner
         <img src="/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
-        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model.
+        This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works,           how we fund our project currently, and how we will fund our project in the future via <a href="{{ site.baseurl }}{% post_url                         /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">DAO</a> a sustainable funding model.
+
     </div>
 </div>
 
@@ -61,7 +62,7 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">Block DAG</h5>
         <p class="mb-1">
-            Horizen is working on a Block-DAG protocol in cooperation with IOHK. This article explains what a DAG is and why it is interesting to us.
+            Horizen is working on a Block-DAG protocol in cooperation with IOHK, a premier blockchain and cryptocurrency R&D company. This article explains what a DAG is and why it is interesting to us.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}">Read Article</a>
@@ -78,7 +79,7 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">ZenChat</h5>
         <p class="mb-1">
-            ZenChat is the first application aside from our cryptocurrency, ZEN, that is running on top of the Horizen Blockchain.
+            ZenChat is the first application that runs on top of the Horizen Blockchain. It uses our own ZEN currency.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}">Read Article</a>
