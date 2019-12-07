@@ -10,7 +10,7 @@ chapter: "What is a Blockchain?"
 ---
 
 Welcome to our Expert Section on blockchain technology!
-In this first chapter we will look at what a blockchain is in general from four different perspectives;
+In this first chapter we will look at what a blockchain is and how the concept of distributed databases can be extended;
 
 <div class="row mt-5">
     <div class="col-md-3">
@@ -69,7 +69,7 @@ In this first chapter we will look at what a blockchain is in general from four 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Smart Contracts" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/dag-thumbnail.png" alt="DAG" />
         </a>
     </div>
     <div class="col-md-9">
