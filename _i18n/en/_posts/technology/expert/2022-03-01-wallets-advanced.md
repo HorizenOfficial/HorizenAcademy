@@ -13,8 +13,7 @@ By now you most likely know what a wallet is and what it does. A wallet generate
 
 In case this is completely new to you, please take a look at the Beginner or Advanced level articles on wallets. You can do so by simply adjusting the level in the top left corner of the sidebar (or within the menu if you are on mobile).
 
-In this article, we want to introduced some of the more advanced technical concepts that are applied in modern wallets. First we will show you how your mnemonic phrase is generated and how it is related to your actual private key. Depending on the wallet implementation, the process for generating your address from a private key looks slightly different. Next, we look at multi signature schemes, where more than one digital signature is required to access funds.
-Lastly, we will look at *simple payment verification* (SPV) as it is used for most wallets running on mobile and desktop.
+In this article, we want to introduced some of the more advanced technical concepts that are applied in modern wallets. First we will show you how your mnemonic phrase is generated and how it is related to your actual private key. Depending on the wallet implementation, the process for generating your address from a private key looks slightly different. We also look at multi signature schemes, where more than one private key and digital signature is required to spend money.
 
 ### Generating Entropy
 
@@ -140,7 +139,7 @@ Most blockchains also support a more complex type of transaction verification, b
 
 First, by requiring several valid signatures the responsibility for keeping a set of coins canbe divided between several people. A married couple where both partners have their own private keys could have two MultiSig "Accounts". One could act as a spendings account and the money from it can be spend by either one of their two keys. A seperate spendings account could require both of them to sign off on any outgoing transaction.
 
-The spendings account in this example would be called a 1-of-2 scheme: There is a total of 2 keys that can provide valid signatures and 1 of them is required to authorize a transaction. 
+The spendings account in this example would be called a 1-of-2 scheme: There is a total of 2 keys that can provide valid signatures and 1 of them is required to authorize a transaction.
 The savings account is a 2-of-2 scheme: 2 keys can provide a valid signature, and both are required to sign a valid transaction.
 
 Generally speaking, multi signature accounts follow an *M-of-N* scheme, where *N* is the total number of keys that can provide valid signatures and *M* is the required number of signatures to create a valid transaction.
@@ -157,89 +156,46 @@ The spending conditions of a [UTXO] are defined in the [*pubkey script*](https:/
 
 A regular "single-signature" transaction only involves the verification of one signature, defined in the pubkey script. The redeem script of a multi-sig account entails the minimum number of signatures *M* that must be provided, as well as the set of keys *N* that can provide a valid signature. Redeem scripts can also involve other conditions, such as a time-sensitive component like in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock), where funds are only spendable after a certain amount of time has elapsed.
 
-Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig setup:
+#### Creating a Multi Signature Address
+
+Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig setup. This means she needs to create a multi signature address and withdraw her funds to it.
+
+![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation.jpg)
 
 * First, she generates a set of private keys. The number of keys generated depends on the MultiSig scheme she wants to use. Let us assume she wants to setup a simple 1-of-2 scheme, so she generates two keys, one of which is sufficient to sign a transaction. 
-* Second, she creates the redeem script.
+* Second, she creates the redeem script. It contains the information about the scheme used, 1-of-2 in Alice's case, and the two public keys corresponding to the two private keys generated in the first step.
+* Third, she hashes the redeem script. The hash of the redeem script is encoded into an address. This type of address is called *pay to script hash* (P2SH) address.
+* Lastly, she withdraws her money from the exchange to her P2SH address.
 
-The hash of the redeem script is encoded into a *pay to script hash* (P2SH) address that she will send her funds to. A P2SH address is not obtained by performing ECC math on a private key. Instead, they are the hash of the redeem script. 
+There are several wallet implementations that offer multi signature support. This means, the wallet takes care of generating the keys and subsequently the redeem script. It also stores the (unhashed) redeem script. This is necessary because it is a requirement to provide the redeem script to be able to spend the funds and the full redeem script only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time. It is also possible to regenerate it on demand, based on the *N* defined public keys.
 
+#### Spending from a Multi Signature Address
 
+Verification of a transaction from a P2SH address involves checking if the full redeemScript hashes to the redeem script hash of the UTXO being spent. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public-key-based spending conditions included in the full redemm script.
 
-There are several wallet implementations that offer multi signature support. Alice is storing the redeemScript in the meantime. This is necessary because the full redeemScript only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time.
+![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address.jpg)
 
-++++ multi sig address generation
+To spend from a P2SH address, the following steps are necessary:
 
-When Alice wants to spend her money, she includes the full redeemScript in the transaction, together with the required signature(s).
+* First, Alice will take the UTXO that was created when she withdrew from the exchange and use it as an input to her spending transaction.
+* Second, she places the full redeem script in the *signature script* part of the output.
+* Third, she creates the required amount of digital signatures using her private keys. If we follow the example from above, she is using a 1-of-2 signature scheme, so a single signatures created with either key A or key B will suffice.
+* Lastly the transaction is broadcast to the network.
 
+When the transaction is broadcast, the full redeem script becomes public. This means that an observer will know the address being used is a MultiSig address and he will also learn about the different spending conditions. This is undesirabel, as it might expose the user to attack vectors and compromises his privacy in general. Two improvements are actively being worked on and are likely being implemented in the not-so-distant future.
 
-with an input whose *scriptSig* contains the full redeemScript she created earlier.  The wallet will usually store the redeemScript for Alice, but she could also store it externally. It is also possible to regenerate it on demand, based on the *N* defined public keys.
-
-The signature(s) and the full redeem script are part of the *Signature Script*, the redeemScript Hash is included in the *PubKey Script*. 
-
-Full redeemScript becomes public, other conditions for spending the UTXO. Undesirable, attack vector and general privacy.
-Two improvements are actively being worked on and have a fair chance of being implemented in the not-so-far future. 
-
-First one called *Merkelized Abstract Syntax Trees* (MAST). Conditions are arranged in a merkle tree and only the root is included. By providing the fulfilled scrip conditions (redeemScripts) and the merkle path a node can verify the TX is valid but does not learn anything about the other conditions.
+The first one is called *Merkelized Abstract Syntax Trees* (MAST). Here, the spending conditions are arranged in a [merkle tree] structure and the merkle root is included instead of the redeem script hash. By providing the fulfilled scrip conditions (redeemScripts) and the merkle path a node can verify if a transaction is valid but does not learn anything about the other (unfulfilled) spending conditions.
 
 The second improvement over traditional multi signature transactions come with [*Schnorr signatures*](https://hackernoon.com/the-future-of-bitcoin-schnorr-signatures-key-aggregation-and-interactive-aggregate-signatures-ias-wbk36po). They comprise two main aspects: *signature aggregation* and *key pair concealment*.
 
-Signature aggregation allows several signatures to be combined into a single signature. better privacy, less data.
+Signature aggregation allows several signatures to be combined into a single signature. This provides better privacy, as the aggregate public key is undistiguishable from a regular private key and an observer cannot link several public keys to one another. Schnorr signatures also come with increased efficiency. They produce much less data compared to an un-aggregated multi signature transaction.
+
 Key pair concealment allows the modification of private keys and public keys. As [Aaron van Wirdum](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin/) puts it:
 
 > "As a simplified example, a private key and its corresponding public key could be tweaked by multiplying both by two. The “private key x 2” and the “public key x 2” would still correspond, and the “private key x 2” could still sign messages that could be verified with the “public key x 2.” Anyone unaware that the original key pair was tweaked wouldn’t even see any difference; the tweaked keys look like any other key pair."
 
-
-
-Verification of the transaction involves checking if the full redeemScript hashes to the redeem script hash. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public key based spending conditions included in the full redemm script. 
-
-
-
-
-
-
-trade-off security conveniece. before hot vs cold wallet. now number of sigs.
-
-Casa 3-of-5 explained: Mobile App and desktop (easy access), one in office and one in bank (medium access), one with casa.
-
-one sentece about schnorr?
-
-schnorr article https://hackernoon.com/the-future-of-bitcoin-schnorr-signatures-key-aggregation-and-interactive-aggregate-signatures-ias-wbk36po
-
-### SPV - Simple Payment Verification
-
-Maybe move this section to transactions?
-
-"It is possible to verify payments without running a full network node. A user only needs to keep
-a copy of the block headers of the longest proof-of-work chain, which he can get by querying
-network nodes until he's convinced he has the longest chain, and obtain the Merkle branch
-linking the transaction to the block it's timestamped in." - BTC Whitepaper
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\url{https://en.bitcoin.it/wiki/Deterministic_wallet}
-receiving and spending essential feature. can be two programs, one for distributing pub keys and one for signing/spending.
-
-
-Need to interact with P2P network to receive info and broadcast transactions. this part can also be outsources. three separable parts: a public key distribution program, a signing program, and a networked program
-
-
+Using a multi signature scheme to secure your funds comes with a security-convenience trade-off. The more keys *M* are required to sign a transaction, the more cumbersome the process of spending money. The larger the total number of keys *N* included in the MultiSig scheme, the more devices and backups you will maintain. 
+At the same time the overall security of the account is increased with a larger *M*. The difference between *M* and *N* is the number of keys a user can loose while being able to recover her funds. It is up to the individual user to determine if the added complexity is justified by the amount of money kept in a given account.
 
 ### Summary
-
-\subsubsection*{FR}
-
-BIP0032 \url{https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki}
-
 
