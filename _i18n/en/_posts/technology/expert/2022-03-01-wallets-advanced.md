@@ -136,36 +136,44 @@ In order to spend an [*Unspent Transaction Output* (UTXO)]({{ site.baseurl }}{% 
 
 Most blockchains also support a more complex type of transaction verification, based on several digital signatures. These multi signature transactions, mostly called *MultiSig*, rely one more than one signature (as the name suggests) and have several useful applications.
 
+#### Dividing Responsibility
+
 First, by requiring several valid signatures the responsibility for keeping a set of coins canbe divided between several people. A married couple where both partners have their own private keys could have two MultiSig "Accounts". One could act as a spendings account and the money from it can be spend by either one of their two keys. A seperate spendings account could require both of them to sign off on any outgoing transaction.
 
 The spendings account in this example would be called a 1-of-2 scheme: There is a total of 2 keys that can provide valid signatures and 1 of them is required to authorize a transaction. 
 The savings account is a 2-of-2 scheme: 2 keys can provide a valid signature, and both are required to sign a valid transaction.
 
+Generally speaking, multi signature accounts follow an *M-of-N* scheme, where *N* is the total number of keys that can provide valid signatures and *M* is the required number of signatures to create a valid transaction.
+
+#### Avoiding Single Points of Failure
+
+Second, you reduce the risk of losing access to your money or being hacked, by keeping funds in a MultiSig address, and storing your keys in different locations. You could store your money in a 2-of-3 address and keep the three keys on your laptop, your phone and a hardware wallet. If one of those devices breaks you can still access your funds and an attacker would need to compromise two devices to steal money. Hence, this setup eliminates single points of failure.
+
+For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.casa/) offers solutions 3-of-5 MultiSig schemes where they store one key for you. As long as you have access to two of your keys, you will alwasy be able to recover your funds.
+
+#### How it Works
+
+The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction. The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script), which serves the same function as the pubkey script: defining the spending conditions of the UTXO in question.
+
+A regular "single-signature" transaction only involves the verification of one signature, defined in the pubkey script. The redeem script of a multi-sig account entails the minimum number of signatures *M* that must be provided, as well as the set of keys *N* that can provide a valid signature. Redeem scripts can also involve other conditions, such as a time-sensitive component like in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock), where funds are only spendable after a certain amount of time has elapsed.
+
+Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig setup:
+
+* First, she generates a set of private keys. The number of keys generated depends on the MultiSig scheme she wants to use. Let us assume she wants to setup a simple 1-of-2 scheme, so she generates two keys, one of which is sufficient to sign a transaction. 
+* Second, she creates the redeem script.
+
+The hash of the redeem script is encoded into a *pay to script hash* (P2SH) address that she will send her funds to. A P2SH address is not obtained by performing ECC math on a private key. Instead, they are the hash of the redeem script. 
 
 
-Whats is MultiSig, regular tx is "single sig" *M-of-N* transactions. more than one.
 
-divide responsibility for posession
+There are several wallet implementations that offer multi signature support. Alice is storing the redeemScript in the meantime. This is necessary because the full redeemScript only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time.
 
-avoid single point of failure
+++++ multi sig address generation
 
-*M-of-N* backup
+When Alice wants to spend her money, she includes the full redeemScript in the transaction, together with the required signature(s).
 
-2-of-3 with a laptop, a phone and a hardware wallet. two hardware wallets from different manufacturers, e.g. Trezor and Ledger. 
 
-The spending conditions of a [UTXO] are defined in the *redeemScript*. It essentially determines the verification process of the transaction. Where a regular "single-signature" transaction only involves the verification of a single signature, more complex redeemScripts can involve a time-sensitive components as in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock) where funds can only be spent after a certain amount of time has elapsed. 
-
-The redeem script of a UTXO addressed to a multi-sig address entails the number of signatures *M* that must be provided, as well as the set of public keys that can provide a valid signature *N*.
-
-Alice bought funds on an exchange and wants to store them using a secure multi-sig setup. She creates the redeemScript and its hash. The hash of the redeemScript is encoded into a P2SH address that she will send her funds to.
-
-"Script addresses are not made through the usual process of elliptic curve cryptography but are instead the hash of the <ScriptPubKey> of a multi signature transaction."
-
-wallet handles this for you.
-
-++++ multi sig graphic
-
-When she wants to spend her money later on, she creates a transaction with an input whose *scriptSig* contains the full redeemScript she created earlier. Alice is storing the redeemScript in the meantime. This is necessary because the full redeemScript only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time. The wallet will usually store the redeemScript for Alice, but she could also store it externally. Its also possible to regenerate it on demand, based on the *N* defined keys.
+with an input whose *scriptSig* contains the full redeemScript she created earlier.  The wallet will usually store the redeemScript for Alice, but she could also store it externally. It is also possible to regenerate it on demand, based on the *N* defined public keys.
 
 The signature(s) and the full redeem script are part of the *Signature Script*, the redeemScript Hash is included in the *PubKey Script*. 
 
@@ -180,6 +188,11 @@ Signature aggregation allows several signatures to be combined into a single sig
 Key pair concealment allows the modification of private keys and public keys. As [Aaron van Wirdum](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin/) puts it:
 
 > "As a simplified example, a private key and its corresponding public key could be tweaked by multiplying both by two. The “private key x 2” and the “public key x 2” would still correspond, and the “private key x 2” could still sign messages that could be verified with the “public key x 2.” Anyone unaware that the original key pair was tweaked wouldn’t even see any difference; the tweaked keys look like any other key pair."
+
+
+
+Verification of the transaction involves checking if the full redeemScript hashes to the redeem script hash. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public key based spending conditions included in the full redemm script. 
+
 
 
 
