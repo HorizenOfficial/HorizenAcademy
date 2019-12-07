@@ -128,13 +128,64 @@ The concatenation of \\(PK_0\\) and *i* as out data and once again \\(c_0\\) as 
 
 Spending funds received at an address derived from a first-level public key derived using this method works with \\(sk_0\\), as the first-level public key obtained using NPKD is equivalent to the first-level public key produced with the NSKD method. A proof for why this is would blow the scope of this article, but can be found [here](https://privatekeys.org/2017/09/12/key-derivation-in-bitcoin-wallets-as-defined-in-bip-0032/).
 
-### Multi Signature Schemes
+### Multi Signature Functionality
 
-Whats is MultiSig
+*Why is this section in wallet article?*
+
+In order to spend an [*Unspent Transaction Output* (UTXO)]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), a valid cryptographic signature is required. It can only be provided if the private key corresponting to the address the UTXO was sent to is known. Most transactions have a single digital signature attached and hence we could call them "single signature transactions".
+
+Most blockchains also support a more complex type of transaction verification, based on several digital signatures. These multi signature transactions, mostly called *MultiSig*, rely one more than one signature (as the name suggests) and have several useful applications.
+
+First, by requiring several valid signatures the responsibility for keeping a set of coins canbe divided between several people. A married couple where both partners have their own private keys could have two MultiSig "Accounts". One could act as a spendings account and the money from it can be spend by either one of their two keys. A seperate spendings account could require both of them to sign off on any outgoing transaction.
+
+The spendings account in this example would be called a 1-of-2 scheme: There is a total of 2 keys that can provide valid signatures and 1 of them is required to authorize a transaction. 
+The savings account is a 2-of-2 scheme: 2 keys can provide a valid signature, and both are required to sign a valid transaction.
+
+
+
+Whats is MultiSig, regular tx is "single sig" *M-of-N* transactions. more than one.
+
+divide responsibility for posession
+
+avoid single point of failure
+
+*M-of-N* backup
+
+2-of-3 with a laptop, a phone and a hardware wallet. two hardware wallets from different manufacturers, e.g. Trezor and Ledger. 
+
+The spending conditions of a [UTXO] are defined in the *redeemScript*. It essentially determines the verification process of the transaction. Where a regular "single-signature" transaction only involves the verification of a single signature, more complex redeemScripts can involve a time-sensitive components as in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock) where funds can only be spent after a certain amount of time has elapsed. 
+
+The redeem script of a UTXO addressed to a multi-sig address entails the number of signatures *M* that must be provided, as well as the set of public keys that can provide a valid signature *N*.
+
+Alice bought funds on an exchange and wants to store them using a secure multi-sig setup. She creates the redeemScript and its hash. The hash of the redeemScript is encoded into a P2SH address that she will send her funds to.
+
+"Script addresses are not made through the usual process of elliptic curve cryptography but are instead the hash of the <ScriptPubKey> of a multi signature transaction."
+
+wallet handles this for you.
 
 ++++ multi sig graphic
 
-What it is used for
+When she wants to spend her money later on, she creates a transaction with an input whose *scriptSig* contains the full redeemScript she created earlier. Alice is storing the redeemScript in the meantime. This is necessary because the full redeemScript only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time. The wallet will usually store the redeemScript for Alice, but she could also store it externally. Its also possible to regenerate it on demand, based on the *N* defined keys.
+
+The signature(s) and the full redeem script are part of the *Signature Script*, the redeemScript Hash is included in the *PubKey Script*. 
+
+Full redeemScript becomes public, other conditions for spending the UTXO. Undesirable, attack vector and general privacy.
+Two improvements are actively being worked on and have a fair chance of being implemented in the not-so-far future. 
+
+First one called *Merkelized Abstract Syntax Trees* (MAST). Conditions are arranged in a merkle tree and only the root is included. By providing the fulfilled scrip conditions (redeemScripts) and the merkle path a node can verify the TX is valid but does not learn anything about the other conditions.
+
+The second improvement over traditional multi signature transactions come with [*Schnorr signatures*](https://hackernoon.com/the-future-of-bitcoin-schnorr-signatures-key-aggregation-and-interactive-aggregate-signatures-ias-wbk36po). They comprise two main aspects: *signature aggregation* and *key pair concealment*.
+
+Signature aggregation allows several signatures to be combined into a single signature. better privacy, less data.
+Key pair concealment allows the modification of private keys and public keys. As [Aaron van Wirdum](https://bitcoinmagazine.com/articles/taproot-coming-what-it-and-how-it-will-benefit-bitcoin/) puts it:
+
+> "As a simplified example, a private key and its corresponding public key could be tweaked by multiplying both by two. The “private key x 2” and the “public key x 2” would still correspond, and the “private key x 2” could still sign messages that could be verified with the “public key x 2.” Anyone unaware that the original key pair was tweaked wouldn’t even see any difference; the tweaked keys look like any other key pair."
+
+
+
+
+
+trade-off security conveniece. before hot vs cold wallet. now number of sigs.
 
 Casa 3-of-5 explained: Mobile App and desktop (easy access), one in office and one in bank (medium access), one with casa.
 
