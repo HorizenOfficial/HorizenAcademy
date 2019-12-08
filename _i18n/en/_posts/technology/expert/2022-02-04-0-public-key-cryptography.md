@@ -16,7 +16,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/curve.png" alt="Elliptic Curve Cryptography" />
         </a>
     </div>
     <div class="col-md-9">
@@ -34,7 +34,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/keys-and-addresses.png" alt="Generating Keys and Addresses" />
         </a>
     </div>
     <div class="col-md-9">
@@ -52,7 +52,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/digital-signatures.png" alt="Digital Signatures" />
         </a>
     </div>
     <div class="col-md-9">
