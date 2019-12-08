@@ -43,7 +43,7 @@ Now, a miner builds a *merkle tree* of all transactions included in her block an
 
 Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
-![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
+![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
 Once such a block, or better nonce, is found, the miner will broadcast his block to the network, where nodes as well as other miners check, if the block contains conflicting transactions and if the hash is below the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block and start working on a new one.
 
@@ -90,7 +90,7 @@ Proof of Work schemes always involve a computationally hard problem. The term co
 
 All of them have certain advantages and shortcomings. The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called ASICs, can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer a huge advantage in performance. Because ASICs are very specialized and expensive, most regular users don't have easy access to them.
 
-++++ cpu vs asic graphic
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic.jpg)
 
 The memory-bound "approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." [Source](https://medium.com/@jeffrey.emanuel/loaded-pow-a-new-direction-in-proof-of-work-algorithms-ae15ae2ae66a)
 
@@ -170,7 +170,9 @@ Horizen has a [mechanism in place](https://www.horizen.global/assets/files/A-Pen
 
 In the graphic above, the malicious chain was broadcast with a delay of 4 blocks. The delay is the amount of honest blocks mined on top of the last common block before the fork. The block acceptance delay modifies the longest chain rule. The malicious chain is not immediately recognized by the other nodes, just because it is longer. Instead, a penalty is calculated based on the delay *n*, using a delay function *DF*. Let's consider a rather simple delay function
 
-$$DF(n) = \frac{n}{2} (n+1)$$
+$$
+DF(n) = \frac{n}{2} (n+1)
+$$
 
 For a 4 block delay, an additional 10 confirmations are required in order for the rest of the network to accept the fork. For a short delay of one block time, the delay function gives a penalty of one block - this situation turns out to be equivalent to the longest chain rule where an additional confirmation will break the tie between two blocks of the same height.
 
