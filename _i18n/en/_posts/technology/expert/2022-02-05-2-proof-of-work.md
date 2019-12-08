@@ -31,7 +31,7 @@ After we have talked about [hash functions]({{ site.baseurl }}{% post_url /techn
 
 A miner starts creating a block by including the *coinbase* transaction as the first transaction. The coinbase transaction is a special one that does not have any inputs, but an output sending coins to an address controlled by the himself. This output is worth the current *block subsidy* (12.5 ZEN at the time of writing) together with the *transaction fees* of all included transactions. The sum of the block subsidy and the transaction fees make up the block reward.
 
-++++ block reward
+![Block Reward: The sum of block subsidy and transaction fees](/assets/post_files/technology/expert/2.4.2-pow/block-reward.jpg)
 
 By allowing them to include this transaction miners are incentivized to actually perform the computationally expensive task and at the same time new coins are created. Each existing ZEN or BTC started out in a coinbase transaction.
 
