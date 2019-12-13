@@ -9,38 +9,26 @@ level: expert
 chapter: "Transactions"
 ---
 
-\url{https://hackernoon.com/utxo-and-account-model-comparison-v-2-cdf9669c6c0d}
-\url{https://www.mycryptopedia.com/bitcoin-utxo-unspent-transaction-output-set-explained/}
-\url{https://blockonomi.com/utxo-vs-account-based-transaction-models/}
-\url{https://hackernoon.com/lessons-learned-from-bitcoins-and-ethereum-s-programming-models-f9fdbe1a3fdb}
+For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner creating a transaction that informs the network about how much money has changed hands and who the new owners are.
 
-Transferring money
+So far we explained [what data comprises a transaction]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) when we looked at the blockchain as a data structure. When we talked about [public key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}) we covered how ownership on a blockchain is proven and verified, a key aspect of enabling secure transactions.
 
-transaction is message to network - Transactions data level (what data included etc. -> Data Structure Article)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
 
-signing and verifying TX in PKC
+Here we want to look at the accounting or balance models used in blockchains. We already introduced the commonly used *UTXO model* in our Advanced Level and assume basic knowledge of it for this article. The second method to track user balances, as applied in Ethereum for example, is the *account model*.
+First, we will look at their similarities before we take a closer look at each model individually. Lastly, we will compare the two models and briefly show how they can be combined.
 
-How the client handles this data -> programming blockchain
+### The Blockchain is a State Machine
 
-Introduced the UTXO model in our Advanced Level, assume knowledge
+Before we get into the different balance models, it makes sense to take a step back and look at the blockchain in more general terms - as a *state machine*.
 
-Here accounting or balance models compared
+Per Wikipedia "a system is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system." Hence, a blockchain clearly qualifies as a stateful system. It's entire purpose is to record past events and user interactions. With each new block the system undergoes a *state transition* that happens according to the *state transition logic* defined in its [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}).
 
+Every blockchain, no matter if it uses the UTXO or account model, follows this scheme. The user interactions, mostly transactions, are broadcast to the network and with each new block a set of them is permanently recorded. The balances of the transacting parties are updated when the system transitions to the new state.
+The difference between the UTXO and account model lies in the way the state is recorded and how the system transitions from one state to another.
 
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/balance-state.jpg)
 
-+++++ advanced utxo graphic
-
-### State Machine
-
-generally state machine. ref consensus
-
-both are stateful systems... "a system is described as stateful if it is designed to remember preceding events or user interactions;[1] the remembered information is called the state of the system."
-
-both system transition to a new state with every new block. Balances of transacting parties change
-
-state transition logic differently
-
-++++ graphic utxo-vs-account
 
 state transition in UTXO: additional transactions, thereby utxos added to ledger
 state transition in Account: accounts updated.
@@ -50,7 +38,6 @@ state transition in Account: accounts updated.
 
 ### How does the UTXO Model work?
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
 
 balance calculated based on unspend transaction outputs.
 
@@ -123,6 +110,8 @@ transitions in block intervalls.
 
 ### Comparison
 
+The cell model is derived from the UTXO model and is thus a verification model. The account model, in contrast, is a computational model. (?) https://hackernoon.com/lessons-learned-from-bitcoins-and-ethereum-s-programming-models-f9fdbe1a3fdb
+
 account better for smart contracts
 
 * gas fee refund. in eth overestimated, not consumed gas refunded.
@@ -164,9 +153,16 @@ refunding gas via coinbase tx, added consensus rule
 
 
 
-\subsubsection*{FR}
+How the client handles this data -> programming blockchain
+
+
+### FR
 
 \url{https://medium.com/hashex-blog/utxo-and-account-model-comparison-c4098a9bc119}
 
 
 "As just mentioned, MimbleWimble collapses all transactions within a block into a single block-wide transaction. The structure and transaction boundaries are removed. "
+
+\url{https://hackernoon.com/utxo-and-account-model-comparison-v-2-cdf9669c6c0d} - DONE
+
+\url{https://hackernoon.com/lessons-learned-from-bitcoins-and-ethereum-s-programming-models-f9fdbe1a3fdb} - DONE
