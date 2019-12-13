@@ -154,6 +154,9 @@ For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.cas
 
 The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction. The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script), which serves the same function as the pubkey script: defining the spending conditions of the UTXO in question.
 
+**TKKG** pubkey script lock, sig script key, simple graphic
++++++ pubkey-script-lock.jpg
+
 A regular "single-signature" transaction only involves the verification of one signature, defined in the pubkey script. The redeem script of a multi-sig account entails the minimum number of signatures *M* that must be provided, as well as the set of keys *N* that can provide a valid signature. Redeem scripts can also involve other conditions, such as a time-sensitive component like in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock), where funds are only spendable after a certain amount of time has elapsed.
 
 #### Creating a Multi Signature Address
