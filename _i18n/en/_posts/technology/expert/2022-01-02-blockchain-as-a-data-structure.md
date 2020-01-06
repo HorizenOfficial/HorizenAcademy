@@ -11,7 +11,8 @@ chapter: "What is a Blockchain?"
 
 The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
 
-A first step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). By storing all transactions in a digital ledger, every account balance can be computed at any time. The digital ledger used to facilitate a digital currency needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at what features this digital ledger - the blockchain - needs to have in order to make decentralized money possible and how this translates to the way data is handled on a blockchain.
+An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger, every account balance can be computed at any time.
+A digital ledger used for digital money needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
 ## Common Data Structures
 
@@ -21,17 +22,17 @@ Before we look at the blockchain itself, lets try to develop an understanding of
 
 *Arrays* are one of the most simple forms to store data. Arrays are useful, when you know how many data elements you need to store, and how large each data element will be. From those inputs, your computer will calculate the total storage needed and set it aside so no other program can access this partition of your memory. If you want to expand the array by an element later on, the reserved partition in memory might be to small so the entire array is moved to a different location.
 
-Each element of an array has an index, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
+Each element of an array has an *index*, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
 
 #### Linked List
 
-When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data is stored in *nodes* which can contain several data elements of different types. The first element of a linked list is called the *head*, the last one is called the *tail* If you need to store information about cars, you could define a node as the set of information about the brand, model, year produced, and license plate.
+When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data elements of a linked list are called *nodes*. Each node can contain several objects of different types. The first element of a linked list is called the *head*, the last one is called the *tail*. If you were to store information about cars in a linked list, you could define a node as the set of information about the brand, model, year produced, and license plate.
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
 
-Each node contains, besides the actual data, a *pointer* to the next node. The *pointer* tells your computer where the next node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
+Besides the actual data each node contains a *pointer* to the next node. The *pointer* tells your computer where the next node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
 
@@ -39,42 +40,43 @@ While a linked list gives you more flexibility compared to an array in terms of 
 
 #### Hash Table
 
-The last data structure we want to look at before we move on to the blockchain is the *hash table*. The data elements you are storing in a *hash table* are called *keys*. To store a *key* it is first hashed using a hash function. We have talked about hash functions in our advanced technology section but the hash functions used for hash tables are slightly different. We cover [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail in a later article. For now all you need to know is that a hash function uses an *argument* of variable length as an input and produces an output of fixed length. In the example below the output is a three-digit number.
+The last data structure we want to look at before we move on to the blockchain is the *hash table*. The data elements you are storing in a *hash table* are called *keys*. To store a *key* it is first hashed using a hash function that produces an identifier for every key. We [introduce hash functions]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) in our Advanced Level and cover hash functions in detail in a [later article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). For now all you need to know is that a hash function uses an *argument* of variable length as an input and produces an output of fixed length. In the example below the output is a three-digit number.
 
-The *keys* to be stored are mapped to buckets by their hash value. The set of buckets itself might be an array, so an predefined number of elements that allow instant access in memory, or some other data structure. A hash table is useful if you need to store many data elements belonging together, such as in a customer database. Initially you could create a customer ID by hashing the customers name. Now there is a dedicated location to store purchases, refunds or contact information. Whenever you need to access the customer data, your computer would hash the name to find the bucket efficiently and add, change or delete data.
+The *keys* are mapped to buckets by their hash value, e.g. if "Alice" hashes to 152 it is stored in this bucket. The buckets can be stored in an array because the output space of the hash function and therefore the number of elements is known and each bucket can instantly be accessed.
 
-The hash functions used for hash tables are usually not *collision resistant*. This means two *keys* might produce the same hash and would consequently be mapped to the same bucket - that's why the name bucket was chosen in the first place. To solve this, one can use a linked list within a hash table. Bucket 152 can store the *head* of a linked list, storing Alice's data in the first node, together with a pointer to the second node containing Dave's data.
+A hash table is useful when you need to store many related data elements, like in a customer database. Initially you could create a customer ID by hashing the customers name. Now there is a dedicated location to store purchases, refunds or contact information. Whenever you need to access the customer data, your computer would hash the name you are looking for to find the bucket efficiently and add, change or delete data.
 
-If the hash table is well-dimensioned, the *cost* (or number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes is convenient for systems that have to store large amounts of data and access them repeatedly (think a social networks database).
+The hash functions used for hash tables are usually not *collision resistant*. This means two *keys* might produce the same hash and would consequently be mapped to the same bucket - that's why the name bucket was chosen in the first place.
 
-**TKKG**
-Array for buckets because known space of hash function. instant access per bucket. linked list to expand single elements of the array.
+To store several keys within a single bucket a linked list within the hash table is used. In the example below bucket 152 stores a pointer to Alice's data in the first node, which in turn points to the second node containing Dave's data.
+
+If the hash table is well-dimensioned, the *cost* (or number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes is convenient for systems that have to store large amounts of data and access them repeatedly.
 
 ![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
 
-There are many different data structures out there. Each of them comes with some trade-offs and depending on the use case one might choose one or the other. Sophisticated data structures often times leverage several more simple concepts in combination to achieve the set of desired properties. The three previous examples were chosen, because an array and a linked list can be used to build a hash table.
+There are many different data structures, each of them comes with some trade-offs and depending on the use case one might choose one over the other. Sophisticated data structures often leverage several more simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
 
-The blockchain is a rather sophisticated data structure, made up of many sub-structures, that gives us a set of properties which are paramount to building a decentralized ledger that enables global, digital money.
+The blockchain is a rather sophisticated data structure, made up of many sub-structures. It gives us a set of properties which are paramount to building a decentralized ledger for digital money.
 
-#### Blockchain
+#### The Blockchain
 
-The data within a blockchain is also split into subsets, the *blocks*, which are very similar to the nodes in a linked list. Each block contains several elements, generally seperated into header and transactions. Most of the data on a blockchain comprises transactions. The *header* contains some important metadata about each block, like a timestamp, the *block height*, so the position of the block within the chain and the *nonce*, which represents the *Proof of Work*.
+The data within a blockchain is split into subsets, the *blocks*, which are similar to the nodes of a linked list. Each block contains several elements, generally seperated into the *block header* and its transactions which comprisemost of the data. The header contains important metadata about each block, like a timestamp, the *block height*, so the position of the block within the chain and the *nonce*, which represents the *Proof of Work*.
 
-The main difference between a blockchain and a linked list is that the *references*, in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of data. The secured references between blocks establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added to the front with new blocks.
+The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added with new blocks.
 
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
 
-The hash of the previous block header is included in the next block serving as the reference, and because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
+The hash value of the previous block header is included in the next block serving as the reference, and because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
 
-The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but it would be very hard (read: infeasible) to make the next block (3) reference your newly inserted block.
+The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but it would be infeasible to make block 3 reference your newly inserted block.
 
 ![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg)
 
-Each new block built on top of an existing block is commonly known as a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult as you have to create additional new valid references. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate one valid reference. With each confirmation, you have to recreate an additional reference. The older the block, the more certain you can be that no changes to the block will occur.
+Each new block built on top of an existing block is commonly called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult as you have to create additional new valid references. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate one valid reference. With each additional confirmation, you also have to recreate an additional reference. The older the block, the more certain you can be that no changes to the block will ever occur.
 
-At the same time, it is easy to add data in a new block to the chain. For example, you could add a new transaction on a cryptocurrency blockchain. The transaction is easy to verify because all the preceding transactions recorded on the network are immutable.
+**continue**
 
-It is very important to note, that it is not the data structure that makes data on the blockchain immutable. By itself the structure is *tamper evident* only. Changes are easy to detect, but if there are no strong consensus rules in place and a sufficiently large number of nodes on the network there is no *immutability*. The incentives need to be structured so that the majority of participants will follow the *protocol* and reject any invalid blocks. We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interplay of these parts is what makes the blockchain a powerful tool for building trustless digital money.
+It is important to note, that it is not the data structure that makes data on the blockchain immutable. By itself the structure is *tamper evident* only. Changes are easy to detect, but if there are no strong consensus rules in place and a sufficiently large number of nodes on the network there is no *immutability*. The incentives need to be structured so that the majority of participants will follow the *protocol* and reject any invalid blocks. We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interplay of these parts is what makes the blockchain a powerful tool for building trustless digital money.
 
 ### The Properties of Blockchain
 

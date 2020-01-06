@@ -27,17 +27,20 @@ Per Wikipedia "a system is described as stateful if it is designed to remember p
 Every blockchain, no matter if it uses the UTXO or account model, follows this scheme. The user interactions, mostly transactions, are broadcast to the network and with each new block a set of them is permanently recorded. The balances of the transacting parties are updated when the system transitions to the new state.
 The difference between the UTXO and account model lies in the way the state is recorded and how the system transitions from one state to another.
 
+#### Recording the State
+
+The first major difference between the two balance models is how the state of the system is recorded. In the UTXO model the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
+
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/balance-state.jpg)
 
+A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships beween nodes. We take a more detailed look at graphs in a dedicated article that you can find [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
-state transition in UTXO: additional transactions, thereby utxos added to ledger
-state transition in Account: accounts updated.
+The graphic above shows a *directed acyclic graph* of the UTXO model on the left. Each state is equivalent with a block in the blockchain, each UTXO comprises a node in the DAG and each transaction is represented by one or more edges connecting the nodes.
+On the right, the graphics above shows a representation of the different states in the account model. With each new block the state of the system is updated, according to the transactions that are contained in the block.
 
-
-"Currently, two popular balance models are: Unspent Transaction Output (UTXO) and the Account Model. The first model is a directed graph of assets moving between users, the second is a database with the current network state." \url{https://medium.com/hashex-blog/utxo-and-account-model-comparison-c4098a9bc119}
+The conceptual difference is, that the account model updates user balances globally. The UTXO model on the other hand only records transaction receipts and account balances are calculated on the client side by adding up the available (unspent) transaction outputs.
 
 ### How does the UTXO Model work?
-
 
 balance calculated based on unspend transaction outputs.
 
@@ -46,7 +49,7 @@ A transaction output can have one of two distinct states: it can either be *spen
 spend as a whole as records cannot be changed. -> change outputs, excess returned to self-controlled address
 
 
-No need to maintain states for each wallet or address.
+No need to maintain states for each wallet or address. -> client side
 
 refresh, outputs have pukey scripts (in code scriptPubKey) attached in order to be used.
 
@@ -56,8 +59,6 @@ Signature Scripts (in code scriptSig) used to satisfy spending condition.
 
 "A user’s wallet keeps track of a list of unspent transactions associated with all addresses owned by the user, and the balance of the wallet is calculated as the sum of those unspent transactions."
 
-
- UTXO model allows for SPV (?)
 
  Hard to work with smart contract states
 
@@ -69,6 +70,7 @@ How do you model those in a UTXO model where all spending transactions must be e
 
  Allows using multi-threading for computations
  Complete transparency of asset movements
+
  Higher degree of privacy for new addresses, the coin does not have an owner. 
 \end{itemize}
 
@@ -85,6 +87,11 @@ not feasible to transition after every single tx, especially as the execution of
 transitions in block intervalls.
 
 ++++  graphic state transition in figma academy graphics.
+
+tx in account instructs nodes to substract 8 from alice and add them two bob. tx is an instruction for how to transit, actual transition executed by nodes.
+in utxo the record of the transaction being added to the ledger is itself a state transition.
+
+
 
  two types of accounts, private key controlled user accounts and contract-code controlled accounts (smart contracts)
 
