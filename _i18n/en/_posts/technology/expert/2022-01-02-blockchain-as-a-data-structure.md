@@ -14,7 +14,7 @@ The first and until today most dominant use case of blockchain technology is dig
 An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger, every account balance can be computed at any time.
 A digital ledger used for digital money needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
-## Common Data Structures
+### Common Data Structures
 
 Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones.
 
@@ -76,7 +76,7 @@ Each new block built on top of an existing block is commonly called a *confirmat
 
 It is important to note, that it is not the data structure that makes data on the blockchain immutable. By itself the data is *tamper evident* only. Changes are easy to detect, but if there are no strong consensus rules in place and a sufficiently large number of nodes on the network there is no *immutability*. The incentives need to be structured so that the majority of participants will follow the *protocol* and reject invalid blocks. We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interplay of these parts is what makes the blockchain a powerful tool for building trustless digital money.
 
-### The Properties of Blockchain
+### The Properties of Blockchains
 
 Before we take a closer look at the data within a block lets take a look at the properties that a blockchain offers. We assume a decentralized setting without central authority and a strong consensus mechanism.
 
@@ -130,7 +130,7 @@ The block header contains the most important information about a block.
 
 Merkle Trees play an important role in ensuring the integrity of data in the blockchain but are also used in other systems such as IPFS - the InterPlanetary File System and several implementations of NoSQL databases. Let's take a look at how they work and what they do before we continue with what a transaction looks like from a data perspective.
 
-#### Merkle Trees
+#### The Merkle Tree
 
 A *merkle tree* is a data structure used within blocks. The transactions in a block make up the *leaves* of the merkle tree. The resulting *merkle root* serve as a summary of all transactions and is included in the block header.
 
@@ -144,7 +144,7 @@ From a computer scientists perspective it also poses an efficiency improvement: 
 
 Another advantage resulting from the use of merkle trees is a reduction in the communication necessary to verify a transaction. We leverage merkle trees in our **sidechain construction** for that reason. Nodes on a sidechain won't need to monitor the mainchain to verify cross-chain transactions. All they need to know is the *cross-chain transaction* itself, together with its *merkle path* and the block header including the merkle root.
 
-#### Merkle Path
+#### The Merkle Path
 
 The *merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *merkle path* for transaction$_K$ consists of the hash of transaction L $H_L$ it is first concatenated with and the combined hashes $H_{IJ}$, $H_{MNOP}$ and lastly, $H_{ABCDEFGH}$. Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
 
