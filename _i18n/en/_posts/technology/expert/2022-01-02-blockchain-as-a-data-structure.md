@@ -179,7 +179,7 @@ Ok, that was a lot. This passage referred to many concepts already introduced in
 Transactions, being the basic building block of a blockchain, are an example of this:
 
 First, an understanding of the UTXO accounting model is necessary. 
-Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}): private keys, public keys, addresses and digital signatures. Each transaction input includes a signature that authorizes spending and each newly created output includes information about what a signature needs to look like in order to authorize its spending.
+Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}): private keys, public keys, addresses and digital signatures. Each transaction input includes a signature that authorizes spending and each newly created output includes information about what a signature needs to look like in order to authorize its spending. Lastly, the overall structure of the blockchain needs to be understood.
 
 ### Summary
 
