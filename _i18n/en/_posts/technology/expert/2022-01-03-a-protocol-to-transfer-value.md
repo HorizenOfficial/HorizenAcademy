@@ -9,11 +9,9 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-While this section of the Horizen Academy is focused on the technology, we want to account for the multidisciplinary nature of the blockchain and cryptocurrency space with this article. Without the right incentive system and economic considerations global digital money cannot work. Without building a cognitive bridge between the technology and the monetary aspects one is left with an incomplete picture of what a blockchain is.
+While this section of the Horizen Academy is focused on the technology, we want to account for the multidisciplinary nature of the blockchain and cryptocurrency space with this article. Without the right incentive system and economic considerations global digital money cannot work. Without building a cognitive bridge between the technology and the monetary aspects one is left with an incomplete picture of what blockchain can be.
 
-Before Bitcoin digital scarcity didn't exist. Digital goods were infinitely copyable, so their natural value was (theoretically) zero, as you have unlimited supply and limited demand. Today the exchange of value works similar to the exchange of information pre-Internet; from point-to-point, involving middleman and third parties. Cryptocurrencies present an innovation to value transfer, just like the internet revolutionized the exchange of information; from peer-to-peer without the need for middleman.
-
-**Add** [Tweet](https://twitter.com/obiwankenobit/status/1130885906938753025?s=21)
+Before Bitcoin digital scarcity didn't exist. Digital goods were infinitely copyable, so their natural value was (theoretically) zero, as you have unlimited supply and limited demand. Today the exchange of value works similar to the exchange of information pre-Internet; from point-to-point, involving middleman and third parties. Cryptocurrencies present an innovation to value transfer, just like the internet revolutionized the exchange of information; from peer-to-peer with highly reduced need for middleman.
 
 {% include blocks/tweet.html id="1130885906938753025" %}
 
@@ -25,44 +23,41 @@ A blockchain can be seperated into two layers: the *application layer* and the *
 
 > "The application layer handles tasks like transaction management, blockchain processing, and mining. [...] The network layer handles communication between nodes, which occurs over a P2P network of inter-node TCP connections. - [Dandelion Paper](https://arxiv.org/pdf/1701.04439.pdf)
 
-In this article we focus on the protocol of a blockchain at the application layer. In the article on the **link P2P networks** we look at the network layer.
+In this article we focus on the protocol of a blockchain at the application layer. In the article on [P2P networks]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %}) we look at the network layer.
 
 ### Network Protocols
 
 Spoken languages, the internet and blockchains can be understood as network protocols. Each has a set of rules, so they can serve their purpose without the need for a middleman and each is used within a group of participants - the network. All have in common, that abiding the rules yields greater benefit to an individual than breaking the rules.
 
-You could invent your own language in case you don't want to follow the rules of an existing one, but you wouldn't have anybody to talk to. One could also argue that the TCP/IP protocol could be replaced by a more efficient protocol, but if you were the only one to use the new and efficient protocol, it is pointless for there would be nobody to exchange information with more efficiently. The increase is utility with a growing number of participants is called *network effect*.
+You could invent your own language in case you don't want to follow the rules of an existing one, but you wouldn't have anybody to talk to. One could also argue that the TCP/IP protocol could be replaced by a more efficient protocol. But if you were the only one using the new protocol it would be pointless without anybody to exchange information with. The increase in utility with a growing number of participants is called *network effect*.
 
 With cryptocurrencies we have a similar situation. Cryptocurrencies can be viewed as money, and therefore as information. Money is a very specific kind of information, but it can be understood as such. Andreas Antonopoulos [tells this story best](https://www.amazon.com/Internet-Money-Andreas-M-Antonopoulos/dp/1537000454), but in short:
 
 > "At its very basic level, money isn't value. Money represents an abstraction of value; It's a way of communicating value. It's a language." - Andreas M. Antonopoulos
 
-In order to communicate information all participants need a set of rules that they collectively abide. What does a word mean, how do you request information from a server, and what does a transaction look like?This set of rules is what we mean by the protocol of a blockchain. It covers everything from how the **data** is handled, over how the peers communicate in the **Peer-to-Peer Network** to how the network reaches **consensus** on a single history of transactions.
+In order to communicate information all participants need a set of rules that they collectively abide. What does a given word mean? How do you request information from a server? And what does a transaction look like? This set of rules is what we mean by the protocol of a blockchain. It covers everything from how the data is handled, over how the peers communicate in the peer-to-peer network to how the network reaches consensus on a single history of transactions.
 
-Generally you can distinguish between several broad types of networking protocols. There are:
+You can distinguish between several broad types of networking protocols. Some examples include:
 
 - Network communication protocols like TCP/IP (transmission control protocol/internet protocol)
 - Network security protocols like HTTPS and SSL (hypertext transfer protocol secure/secure sockets layer) and
 - Network management protocols such as SNMP and ICMP (simple network management protocol/internet control message protocol)
 - Value transfer protocols such as Horizen or Bitcoin
- 
+
 ![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg)
 
-Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through the internet.
-SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used when you transmit sensitive information like payment details online. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes).
+Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through across the world wide web.
+SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used for the secure transfer of data. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes). Protocols like Bitcoin or Horizen enable the digital transfer of value form peer to peer.
 
-**TKKG**
-
-Protocols like Bitcoin or Horizen enable the digital transfer of value form peer to peer. While Bitcoin has the first mover advantage, the greatest adoption and a track record of stability, it offers  weak privacy by default. We at Horizen aim to position ourselves as the standard for private value transfer. There are many legitimate reasons to transact privately, as we outline in our **Why Privacy?** article.
-
+**continiue**
 
 ### What are the Rules?
 
 Now let's take a look at what the protocol of a blockchain looks like. What are the rules? What needs to be standardized and regulated in order for the system to work?
 
-The main goal is to maintain a consistent ledger of all transactions and there are several rules in place to achieve this. First of all we need certain standards on what a transaction and a block need to look like from a data perspective. Which order the data for a valid transaction is provided in, what formats are used and which structures are used within a block was covered in our last article on the **blockchain as a data structure**. All the conventions we covered in this last article are also defined by the protocol.
+The main goal is to maintain a consistent ledger of all transactions and there are several rules in place to achieve that. First of all we need certain standards on what a transaction and a block need to look like from a data perspective. Which order the data for a valid transaction is provided in, what formats are used and which structures are used within a block was covered in our last article on the [blockchain as a data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}). All the conventions we covered in this article are defined by the protocol.
 
-Now that there's a common language for the software to exchange information, we need rules on how new data is added to the blockchain. Adding data comes at a cost. This cost must be high enough to prevent large amounts of useless data being added, but at the same time it needs to be low enough to not become prohibitively expensive.
+When a common language for the software to exchange information is established, next we need rules on how new data is added to the blockchain. Adding data comes at a cost. This cost must be high enough to prevent large amounts of useless data being added, but at the same time it must not be prohibitively expensive.
 
 First, all miners and full nodes maintain the so-called *mempool*, which contains new and unconfirmed transactions. Once a transaction is included in a finalized block, it is removed from the mempool.
 
@@ -135,7 +130,7 @@ Over time accounting has evolved in three steps. First single entry accounting w
 
 Triple entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article "Why Bitcoin’s Lightning Network is Ingenious" that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double entry bookkeeping system on top of the blockchain - a second layer solution like the **Lightning Network**.
 
-#### Seperation of money and state
+#### Seperation of Money and State
 
 Historically it is the exception to have central banks making monetary policies with the scope it's done today. This has led to a lot of abuse of power and inflation that devalues the state issued currency over time. We don't want to start an economic discussion here, as this is a topic in and off its own, but it surely can't hurt to have a decentralized, permissionless and independent form of money as an alternative to the legacy financial system. Competition is always good for the service, and we believe we will soon see cryptocurrencies compete with state issued fiat currencies.
 
