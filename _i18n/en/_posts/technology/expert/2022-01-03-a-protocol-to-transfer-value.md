@@ -100,6 +100,10 @@ In game theory, games in which cooperative behaviour can only be enforced throug
 
 This is one of the great innovations introduced with Bitcoin; a self-enforcing agreement on a global scale between unknown entities that don't trust each other. This is only possible because of an incentive system that makes honest behavior more profitable than fraudulent behavior.
 
+#### Decentralized Consensus
+
+Before Bitcoin it was not possible to achieve consensus in an environment with untrusted participants showing malicious, or *Byzantine*, behaviour and an unreliable *asynchronous* network. We cover the [evolution of distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in great detail later in this chapter.  
+
 #### Self-Enforcing Agreement
 
 One of the most important incentives in Proof-of-Work blockchains is to have miners spend real world resources (electricity and mining equipment) on securing the ledger and rewarding them with the native currency on that blockchain. This builds a thermodynamic layer of security around the ledger, that is only vulnerable to an entity that is willing to acquire a large amount of computing power and spend large amounts of electricity to break it.
