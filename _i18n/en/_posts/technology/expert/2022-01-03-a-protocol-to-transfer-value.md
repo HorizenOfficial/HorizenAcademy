@@ -144,3 +144,8 @@ But incentives can also be of a non-financial nature. If, for example, a group o
 
 ### Summary
 
+In this article, we looked at the protocol of a blockchain at the application layer and defined it as a value transfer protocol. Some examples of the rules that comprise the protocol we mentioned are the longest chain rule that applies when there is a temporary chain split, the difficulty adjustment to keep the block production rate constant and the disinflationary monetary schedule.
+
+Next, we touched on blockchain governance and continued by listing the major innovations blockchain technology introduced: the self-enforcing agreement between network participants, digital scarcity, tripple-entry bookkeeping, and the seperation of money and state. Lastly, we gave an example of incentives to maintain a blockchain for a different purpose than digital money like a shared dataset.
+
+In the next article, we will look at [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) and their self-enforcing nature.
