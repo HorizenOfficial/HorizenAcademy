@@ -9,32 +9,32 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-A blockchain can not only store data, it can also execute programs. Programs on a blockchain are called smart contracts and need to be written in a specific language defined by the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}). A contract, in general, is an agreement between parties that binds them to something happening in the future. The "smart" comes from the automatic execution of these digital contracts.
+A blockchain can not only store data, it can also execute programs. Programs on a blockchain are called smart contracts and need to be written in a specific language defined by the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}). A contract, in general, is an agreement between parties that binds them to something happening in the future. The term "smart" comes from the automatic execution of these digital contracts.
 
-While the first cryptocurrency, Bitcoin, already supported rudimentary logic to be run on top of it using a scripting system called **Scrypt**, more complex smart contracts are enabled by sophisticated smart contract languages like *Solidity* on smart contract platforms such as [Ethereum](https://www.ethereum.org/).
+While the first cryptocurrency, Bitcoin, already supported rudimentary logic to be run on top of it using a scripting system called *Scrypt*, more complex smart contracts are enabled by sophisticated smart contract languages like *Solidity* on smart contract platforms such as [Ethereum](https://www.ethereum.org/).
 
-There is a tradeoff between simple languages or scripting systems and more sophisticated, [*turing-complete*](https://stackoverflow.com/questions/7284/what-is-turing-complete) ones. While the former does not allow for very complex logic, it is easier to write programms and secure them. More feature-rich languages allow for more complex smart contracts, but they are more error prone and harder to secure.
+There is a tradeoff between simple scripting systems and more sophisticated, [*turing-complete*](https://stackoverflow.com/questions/7284/what-is-turing-complete) ones. While the former does not allow for complex logic, it is easier to write programms and secure them. More feature-rich languages allow for more complex smart contracts, but they are more error prone and harder to secure.
 
-Security in the context of smart contracts means considering every possible way in which a contract could execute and to account for each of these scenarios. Simple smart contract languages have fewer potential use cases but make the possible states of the contract (or program) easier to enumerate, examine, and account for resulting in easier to secure contracts.
+Security in the context of smart contracts means considering every possible way in which a contract could execute and to account for each of these scenarios. Simple smart contract languages have fewer potential use cases but make the possible states of the contract easier to enumerate, examine, and account for resulting in easier to secure contracts.
 
 ### What is a Smart Contract
 
 Smart contracts are most often discussed in the context of decentralized applications or dApps. A dApp can be pretty much everything, from a decentralized exchange to an auctioning platform or a games. You can find an extensive overview on [State of the dApps](https://www.stateofthedapps.com/) of what is on the market today.
 
-Most crypto tokens are issued on the Ethereum blockchain using the [*ERC-20*](https://eips.ethereum.org/EIPS/eip-20) standard. A token is issued within a smart contract which defines the total supply, the conditions for token transfers and many other things. The ERC-20 token standard is a smart contract template, that allows for easy issuance and integration with different wallets and exchanges. If you would like to take a closer look at the process of issuing a token or even try it out for yourself, [here](https://medium.com/coinmonks/6-steps-to-erc20-tokens-and-ico-smart-contracts-e90523afafa1) is a pretty easy to follow guide for you.
+Most crypto tokens are issued on the Ethereum blockchain using the [*Ethereum Request for Comment* (ERC-20) standard](https://eips.ethereum.org/EIPS/eip-20). A token is issued within a smart contract which defines the total supply and the conditions for token transfers among other things. The ERC-20 token standard is a smart contract template, that allows for easy issuance and integration with different wallets and exchanges. If you would like to take a closer look at the process of issuing a token or even try it out for yourself, [here](https://medium.com/coinmonks/6-steps-to-erc20-tokens-and-ico-smart-contracts-e90523afafa1) is an easy to follow guide for you.
 
 Other use cases of smart contracts that are often times omitted, are  [payment and state channels](({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %})) as well as [HTLCs](({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-htlcs %})) - Hashed Timelock Contracts - which enable atomic swaps. In most general terms, they allow for interaction happening off-chain to be just as trustless, as if they were to happen on-chain. The most popular payment channel network is arguably the [Lightning Network](https://lightning.network/) on Bitcoin.
 
 The term smart contract can have two meanings. It can either refer to static code in a given language or a  *contract instance*, a dynamic object that executes the code. There is a similar distinction between programs and processes in operating systems.
 
-> "One can think of a smart contract instance as a trusted third party to which users can send coins, and that can distribute coins between the parties, according to conditions written in its [static] code." - Dziembowski, Faust, Hostáková, State Channel Paper\\
+> "One can think of a smart contract instance as a trusted third party to which users can send coins, and that can distribute coins between the parties, according to conditions written in its static code." - Dziembowski, Faust, Hostáková, [State Channel Paper](https://eprint.iacr.org/2018/320.pdf)
 
 ![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_D.jpg)
 ![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_M.jpg)
 
 ### The Promise of Smart Contracts
 
-Smart contracts promise to eliminate the need for middlemen, such as lawyers or notaries, and thereby reduce the cost of transactions. Most importantly they save participants time by disposing of middlemen. Many use cases can be constructed that achieve just that.
+Smart contracts promise to significantly reduce the need for middlemen, such as lawyers or notaries, and thereby reduce the cost of transacting. Most importantly they save participants time by disposing of middlemen. Many use cases can be constructed that achieve just that.
 
 Imagine a sports club and their ticketing process. Instead of having a third party involved that takes fees it only takes one open source implementation of a ticketing platform to render many ticketing services obsolete. The informal, high-level description of an algorithm is called *pseudocode*. As an example, here is what the pseudocode for a ticketing smart contract could look like:
 
@@ -55,23 +55,21 @@ while (number of tickets sold <= max. amount of tickets available for the event)
       			refund address Y
       			end program
     		}
-	set limit to 5 tickets per address		
-	send Y the correct amount of tickets as per the amount of money received
-	increment "number of tickets sold"
+		send Y the correct amount of tickets as per the amount of money received
+		increment "number of tickets sold"
   	}
 	if address Y sends message "I want to sell" 
   	{
-		refund Address Y, 
+		refund address Y 
 		invalidate ticket  
 		decrement "number of tickets sold"
   	}
 }
-```
-**Something about secondary market**
+````
 
-While this is obviously an overly simplified example with a sketchy logic, it should be enough to give you an idea of the kind of logic used in smart contracts. Execution of certain actions is triggered by *messages*. These messages can be transactions transferring money, but they could also be messages only transferring data. We will get back to smart contracts getting triggered by data later. When a large set of conditions is combined to enable an application one might call this collection of smart contracts a dApp. The line seperating simple smart contracts and dApps is somewhat blurry. 
+Not only could the sale and refund for tickets be realised with smart contracts, but so could an automated secondary market with self-enforcing rules be built. While this is obviously an overly simplified example, it should give you an idea of the kind of logic used in smart contracts. Execution of certain actions is triggered by *messages*. These messages can be transactions transferring money, but they could also be messages only transferring data. We will get back to smart contracts getting triggered by data later. When a set of conditions is combined to enable an application this collection of smart contracts is called a dApp. The line seperating simple smart contracts and dApps is somewhat blurry.
 
-### dApps
+### Decentralized Applications - dApps
 
 A dApp - or decentralized application - allows its users to perform a group of coordinated functions, tasks, or activities, just like any other application you are used to. A traditional application uses API's  - application programming interfaces - to communicate with its various components, such as social media integrations or underlying databases.
 
