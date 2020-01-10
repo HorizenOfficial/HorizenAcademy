@@ -11,27 +11,6 @@ chapter: "What is a Blockchain?"
 
 One of the main engineering challenges in the blockchain space is *scalability*. Scalability refers to the development of technologies or protocols that can handle more transactions in the same amount of time. While traditional payment networks like Visa handle thousands of transactions per second most blockchains can only handle a handful in the same period of time. This comparison is unjust, in that Visa itself can be viewed as a third- or fourth-layer technology (International Bank of Settlements -> National Central Bank -> Retail Bank -> VISA), it is still a significant difference in performance that needs to be addressed.
 
-### What is a DAG
-
-Strictly speaking a DAG is a mathematical concept and nothing particularly innovative in an off itself. The structure on the left in the image below is a *graph* made up of *nodes*, or *vertices*, and *edges* connecting the nodes. In a *directed graph* each edge has a direction, indicated by the arrows. A *directed acyclic graph* (DAG) does not allow cyclic relationships of nodes, like the one you can see in the bottom part of the directed graph in the middle. In technical terms one would say the Graph *G = (V, E)* is defined as the set of vertices *V* and edges *E*.
-
-![DAG](/assets/post_files/technology/expert/1.4-dags/dag_D.jpg)
-![DAG](/assets/post_files/technology/expert/1.4-dags/dag_M.jpg)
-
-Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes (the blocks), and edges (the references) that have a direction and no cyclic relationships. The [innovation introduced with Bitcoin]](https://academy.horizen.global/technology/expert/a-protocol-to-transfer-value/#the-great-innovations-introduced-with-bitcoin) and blockchain technology in general was achieving consensus and Sybil-resistance in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
-
-> "Both [, Blockchains and DAGs,] are digital ledgers. Both may be distributed. Both may be decentralized. Both may have token-economic incentive-mechanisms. They are both subject to immutability attributes as defined by their networks/communities. And finally each network is comprised by its constituents, including users, devs, miners, and other stakeholders" - Bunny Hernandez
-
-There are two different ways to set up a DAG to be used to run a cryptocurrency. The nodes can comprise individual transactions or they can be blocks, containers for a set of transactions. The first notable DAG protocol was IOTA's [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). In the Tangle, each node is made up of a transaction. Each transaction references two prior transactions and has a small [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) attached to it. 
-
-Horizen is considering the use of a Block-DAG protocol. Each node in the DAG is a block, similar to a block in the blockchain. It also consists of a  block header and a set of transactions. The main difference, when compared to a block in the blockchain, is that a block in the Block-DAG can contain references to more than one predecessors. Miners don't have to choose a single predecessor to reference, but instead include references to all previously unconfirmed blocks, the *leaves* of the DAG.
-
-![DAG](/assets/post_files/technology/expert/1.4-dags/leaves_D.jpg)
-![DAG](/assets/post_files/technology/expert/1.4-dags/leaves_M.jpg)
-
-This allows the [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) to become two-dimensional when compared to the one-dimensional or linear data structure of a blockchain. We change the data structure compared to a blockchain and have to adapt the consensus mechanism, the *longest chain rule* (more precisely the *heaviest chain rule*) or Nakamoto Consensus to have the network agree on a single transaction history.
-The consensus mechanism, Proof-of-Work remains the same.
-
 ### The Scalability Challenge
 
 The main factors affecting a blockchains protocol scalibility regarding transaction throughput are:
@@ -57,11 +36,35 @@ There are generally three approaches to scalability:
 
 - *Directed acyclic graphs* (DAGs) have a different [datastructure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) than blockchains. Many blocks can be produced in parallel which requires modifications to the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}).
 
+### What is a DAG
+
+Strictly speaking a DAG is a mathematical concept and nothing particularly innovative in an off itself. The structure on the left in the image below is a *graph* made up of *nodes*, or *vertices*, and *edges* connecting the nodes. In a *directed graph* each edge has a direction, indicated by the arrows. A *directed acyclic graph* (DAG) does not allow cyclic relationships of nodes, like the one you can see in the bottom part of the directed graph in the middle. In technical terms one would say the Graph *G = (V, E)* is defined as the set of vertices *V* and edges *E*.
+
+![DAG](/assets/post_files/technology/expert/1.4-dags/dag_D.jpg)
+![DAG](/assets/post_files/technology/expert/1.4-dags/dag_M.jpg)
+
+Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes (the blocks), and edges (the references) that have a direction and no cyclic relationships. The [innovation introduced with Bitcoin]](https://academy.horizen.global/technology/expert/a-protocol-to-transfer-value/#the-great-innovations-introduced-with-bitcoin) and blockchain technology in general was achieving consensus and Sybil-resistance in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
+
+> "Both [, Blockchains and DAGs,] are digital ledgers. Both may be distributed. Both may be decentralized. Both may have token-economic incentive-mechanisms. They are both subject to immutability attributes as defined by their networks/communities. And finally each network is comprised by its constituents, including users, devs, miners, and other stakeholders" - Bunny Hernandez
+
+There are two different ways to set up a DAG to run a cryptocurrency. The nodes can comprise individual transactions or they can be blocks, containers for a set of transactions. The first notable DAG protocol was IOTA's [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). In the Tangle, each node is made up of a transaction. Each transaction references two prior transactions and has a small [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) attached to it. Many problems with IOTAs architecture have been discussed and at the time of writing the network cannot run reliably without a central coordinator.
+
+Horizen is researching the use of a Block-DAG protocol in cooperation with [IOHK](https://iohk.io/). Each node in this DAG is a block, similar to a block in the blockchain that consists of a block header and transactions. The main difference, when compared to a block in the blockchain, is that a block in the Block-DAG can reference more than one predecessor. Miners don't have to choose a single block to reference, but instead include references to all previously unconfirmed blocks, the *leaves* of the DAG.
+
+![DAG](/assets/post_files/technology/expert/1.4-dags/leaves_D.jpg)
+![DAG](/assets/post_files/technology/expert/1.4-dags/leaves_M.jpg)
+
+This allows the [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) to become two-dimensional when compared to the one-dimensional or linear data structure of a blockchain. When we change the data structure (compared to a blockchain) we also have to adapt the consensus mechanism.
+
+**continue**
+
 ### Consensus vs. Sybil Resistance
 
-We would like to introduce a distinction between *consensus mechanisms* and a *Sybil-resistance mechanisms* at this point. Most likely you came across the terms [*Proof-of-Work*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW), [*Proof-of-Stake*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoS) or [Proof-of-*something-else*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %}) labeled as consensus mechanisms before. We are guilty of using that label ourselves, for it has become a convention that we used to reduce confusion, against our better knowledge.
+We would like to introduce a distinction between *consensus mechanisms* and a *Sybil-resistance mechanisms* at this point. 
 
-PoW and it's realtives are actually Sybil-resistance mechanisms. In a **Sybil Attack**, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
+Most likely you came across the terms [*Proof-of-Work*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW), [*Proof-of-Stake* (PoS) or *Proof-of-something-else*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %}) labeled as consensus mechanisms before. We are guilty of using that label ourselves, for it has become a convention that we used to reduce confusion, against better knowledge.
+
+PoW and it's realtives are actually Sybil-resistance mechanisms. In a *Sybil Attack*, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
 
 Sybil-resistance mechanism prevent this by tying an entities voting power to a scarce resource, that is harder to obtain than fake user-accounts or IP-addresses. 
 
