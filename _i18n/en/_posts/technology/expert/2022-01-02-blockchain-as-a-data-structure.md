@@ -40,22 +40,27 @@ While a linked list gives you more flexibility compared to an array in terms of 
 
 #### Hash Table
 
-The last data structure we want to look at before we move on to the blockchain is the *hash table*. The data elements you are storing in a *hash table* are called *keys*. To store a *key* it is first hashed using a hash function that produces an identifier for every key. We [introduce hash functions]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) in our Advanced Level and cover hash functions in detail in a [later article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). For now all you need to know is that a hash function uses an *argument* of variable length as an input and produces an output of fixed length. In the example below the output is a three-digit number.
+The last data structure we want to look at before we move on to the blockchain is the *hash table*. A hash table is useful when you need to store many related data elements.
 
-The *keys* are mapped to buckets by their hash value, e.g. if "Alice" hashes to 152 it is stored in this bucket. The buckets can be stored in an array because the output space of the hash function and therefore the number of elements is known and each bucket can instantly be accessed.
+The data elements you store in a *hash table* are called *keys*. To store a *key* it is first hashed using a hash function that produces an identifier for every key. Before a key is stored it is hashed with a hash function. A hash function produces an identifier for every key. Hash functions use an *argument* of variable length as an input and produces an output of fixed length. 
 
-A hash table is useful when you need to store many related data elements, like in a customer database. Initially you could create a customer ID by hashing the customers name. Now there is a dedicated location to store purchases, refunds or contact information. Whenever you need to access the customer data, your computer would hash the name you are looking for to find the bucket efficiently and add, change or delete data.
+The hash functions used for hash tables are usually not *collision resistant*. This means two *keys* might produce the same hash and would consequently be mapped to the same bucket. 
 
-The hash functions used for hash tables are usually not *collision resistant*. This means two *keys* might produce the same hash and would consequently be mapped to the same bucket - that's why the name bucket was chosen in the first place.
+*Keys* are mapped to buckets by their hash value. For example: A hash of the word “Alice” equates to 152 it is stored in a bucket. Buckets can then be stored in an array because you now know the output space (and therefore the number of elements) of the hash function. Storing buckets in an array allows each bucket to be accessed instantly.
 
-To store several keys within a single bucket a linked list within the hash table is used. In the example below bucket 152 stores a pointer to Alice's data in the first node, which in turn points to the second node containing Dave's data.
+For example you have a customer database. You can create a customer ID by hashing the customer’s name. Once the hash operation is complete there will be a dedicated location to store purchases, refunds, or contact information related to the customer’s name. Your computer would hash the name you are looking for to find a specific bucket efficiently whenever you need to access the customer data. 
 
-If the hash table is well-dimensioned, the *cost* (or number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes is convenient for systems that have to store large amounts of data and access them repeatedly.
+The *cost* (number of computations/instructions) for each lookup is independent of the total number of elements stored in the table (if the hash table is well-dimensioned). Hash tables give you *instant access* without knowing the location of every element in memory. The location is defined through the data itself, which makes it convenient for systems that have to store large amounts of data and access them repeatedly.
+
+In the example below a linked list within the hash table is used to store several keys in a single bucket. Bucket 152 stores a pointer to Alice's data in the first node which in turn points to the second node containing Dave's data.
 
 ![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
 
-There are many different data structures, each of them comes with some trade-offs and depending on the use case one might choose one over the other. Sophisticated data structures often leverage several more simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
+For more information on [hash functions]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) read our Advanced Hash Functions [article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}).
 
+#### Each Data Structure is Different
+
+There are many different data structures. Each data structure comes with trade-offs. You might choose one data structure over another depending on the use case you are building for. Sophisticated data structures often leverage several simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
 The blockchain is a rather sophisticated data structure, made up of many sub-structures. It gives us a set of properties which are paramount to building a decentralized ledger for digital money.
 
 #### The Blockchain
