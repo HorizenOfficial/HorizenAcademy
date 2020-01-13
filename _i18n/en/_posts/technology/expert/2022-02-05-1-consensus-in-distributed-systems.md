@@ -167,7 +167,7 @@ But wait, how does the Nakamoto consensus actually achieve consensus? In the mec
 
 > "In one way or another, [...] consensus algorithms boil down to some kind of vote [...].”
 
-Nakamoto consensus with [Proof-of-Work] (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and to start proposing blocks. The consensus is based on who can find a nonce, that [hashed]hm together with the proposed block header, yields a block hash below the current target value. The chance of finding such a valid nonce is proportional to the relative hash power - or computing power -  a given miner controls. This means state transitions are voted on with hash power, and the state transition logic is defined by the target a valid block hash has to be smaller than or equal to.
+Nakamoto consensus with [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and to start proposing blocks. The consensus is based on who can find a nonce, that [hashed]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) together with the proposed block header, yields a block hash below the current target value. The chance of finding such a valid nonce is proportional to the relative hash power - or computing power -  a given miner controls. This means state transitions are voted on with hash power, and the state transition logic is defined by the target a valid block hash has to be smaller than or equal to.
 
 At this point, we would like to quote Demiro in full:
 
