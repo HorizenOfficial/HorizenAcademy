@@ -125,7 +125,7 @@ The block header contains the most important information about a block.
 
 - The *Version* indicates which software version was used by the miner of the block and which set of block validation rules was followed.
 
--  The previous block headers hash *hashPrevBlock* serves two purposes. First, it establishes an order throughout the chain of blocks and second, it ensures no previous block can be changed without affecting the current and all subsequent blocks.
+- The previous block headers hash *hashPrevBlock* serves two purposes. First, it establishes an order throughout the chain of blocks and second, it ensures no previous block can be changed without affecting the current and all subsequent blocks.
 
 - The Merkle Root Hash *hashMerkleRoot* represents a summary of all transactions included in the block.
 
