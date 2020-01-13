@@ -74,6 +74,7 @@ Hash functions are also used in *merkle trees*, a construction used to create a 
 Transactions are first hashed and then combined pairwise, until a single hash, the *merkle root* is obtained. If there is an odd number of transactions in a given round, the last transaction is concatenated with itself, as you can see with *H(C)* in the graphic below.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_D.jpg)
+![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_M.jpg)
 
 Hash functions are also an important step in the [**creation of addresses**] and in the authorization of spending funds via [**digital signatures**]. We have dedicated an article each to those use cases and will save a description of them for later.
 
@@ -89,7 +90,8 @@ Specialized hardware is on the market which is optimized for performing hash ope
 
 Processors display trade-offs  between versatility and efficiency. While CPUs - central processing units - can handle many tasks at low efficiency, GPUs - graphical processing units - are more specialized already at the cost of versatility. At the other end of the scale there are ASICs, which are only useful for one specific task, but highly efficient.
 
-![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic.jpg)
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_D.jpg)
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_M.jpg)
 
 We have an article dedicated to [mining] at the end of this chapter. There we will go into more detail on the intricacies of the mining process from a technical as well as economical perspective.
 
