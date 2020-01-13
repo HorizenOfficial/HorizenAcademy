@@ -9,37 +9,46 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
+The first use case for blockchain technology is digital money. To have a monetary system without central control you must have a special and sophisticated way to handle all the data produced with each transfer. Imagine if every person could access and modify the databases kept by banks. It would be a disaster.
 
-An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger, every account balance can be computed at any time.
-A digital ledger used for digital money needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
+In order to make decentralized money a reality a method of accounting had to be developed - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), also referred to as *triple-entry accounting*. Every account balance can be computed at any time by storing all transactions in a digital ledger. 
+
+A digital ledger used for digital money requires a set of properties that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
 ### Common Data Structures
 
-Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones.
+Let’s develop an understanding of data structures before we look at blockchain itself. Here are some of the most common data structures:
 
 #### Arrays
 
-*Arrays* are one of the most simple forms to store data. Arrays are useful, when you know how many data elements you need to store, and how large each data element will be. From those inputs, your computer will calculate the total storage needed and set it aside so no other program can access this partition of your memory. If you want to expand the array by an element later on, the reserved partition in memory might be to small so the entire array is moved to a different location.
+*Arrays* are one of the simplest forms to store data. Arrays are useful when you know how many data elements you need to store and how large each data element will be. Your computer will calculate the total storage needed from those inputs and set it aside preventing other programs from accessing this partition of your memory. The drawback to partitioning memory is that reserved memory may be too small for future expansion. In this case the entire array must be moved to a different location.
 
-Each element of an array has an *index*, starting with 0. If you are looking for an element and know where you stored it, you can instantly access and modify it. If you don't know an elements location, you need to do a *sequential lookup*. This means you check the elements one by one, starting at index 0, until you find it. Arrays are useful for their simplicity and *instant access* property.
+Each element of an array has an *index* that starts at 0. You can instantly access and modify an element if you know where you stored it. If you don't know an element's location you must do a *sequential lookup*. This means you check the elements one by one (starting at index 0) until you find it. 
+
+Arrays are useful for their simplicity and *instant access* property.
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg)
 
 #### Linked List
 
-When a program uses a *linked list* to store data, it doesn't have to know how many data elements you want to store beforehand, but it needs to know what each element consists of. The data elements of a linked list are called *nodes*. Each node can contain several objects of different types. The first element of a linked list is called the *head*, the last one is called the *tail*. If you were to store information about cars in a linked list, you could define a node as the set of information about the brand, model, year produced, and license plate.
+Programs that use a *linked list* to store data don't have to know how many data elements you want to store beforehand, but the linked list does need to know what each element consists of. The data elements of a linked list are called *nodes*. Each node can contain several objects of different types. 
+
+For example, If you were to store information about cars in a linked list, you could define a node as the set of information about the brand, model, year produced, and license plate.
+
+The first element of a linked list is called the head and the last one is called the tail. 
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg)
 
-Besides the actual data each node contains a *pointer* to the next node. The *pointer* tells your computer where the next node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
+Each node also contains a *pointer* to the next node. The *pointer* tells your computer where the following node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg)
 
-While a linked list gives you more flexibility compared to an array in terms of expanding the list later on by adding new nodes, it doesn't give you instant access. When you look for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the second node is stored and so on, until it finds the desired data. This is what we called *sequential lookup* earlier.
+When searching for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
+
+Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access. 
 
 #### Hash Table
 
@@ -196,7 +205,7 @@ The blockchain in itself is a data structure that stores transactions. It is sim
 
 A block consists of a header, and the transactions contained. Inside the block a merkle tree is used to create a 256 bit summary of all transactions, the merkle root, which is included in the block header.
 
-A transaction is a meassage to the network about what unspent transaction outputs (UTXOs) are being spent in a transaction and which new UTXOs are being created.
+A transaction is a message to the network about what unspent transaction outputs (UTXOs) are being spent in a transaction and which new UTXOs are being created.
 
 We would like to end this section with a tweet that distilled the implications of the properties of blockchain technology in the context of data structures.
 
