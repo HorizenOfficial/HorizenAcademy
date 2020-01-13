@@ -114,7 +114,11 @@ If a malicious miner were to mine hidden blocks only to reveal them later, they 
 
 A weakness of the SPECTRE approach to ordering blocks is that it cannot guarantee linear block ordering. Although great effort is put into avoiding this, the [*Condorcet's Paradox*](https://en.wikipedia.org/wiki/Condorcet_paradox) which origins in social choice theory, can occur with the recursive election approach. It is a situation where a majority vote can order A < B, B < C, and yet C < A.
 
-Because linear block ordering cannot be guaranteed, the protocol doesn't satisfy the *liveness* property. *Liveness* and *safety* are properties distributed systems must display in order to securely support a cryptocurrency. More complex use cases like [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) are completely incompatible with SPECTRE.
+Because linear block ordering cannot be guaranteed, the protocol doesn't satisfy the *liveness* property. *Liveness* and *safety* are properties distributed systems must display in order to securely support a cryptocurrency.
+
+- *Liveness* means that all non-faulty nodes eventually compute a new state (read: block). In simple terms it means, the system doesn't halt and reacts to events.
+
+- *Safety* means that all non-faulty nodes transition to the same state after a given external event. This means, all nodes will be in synch eventually.
 
 Aviv Zohar, co-author of all protocols mentioned in this article, gave a presentation on GHOST and SPECTRE at the 6th Technion Summer School on Cyber and Computer Security that you [can find here](https://www.youtube.com/watch?v=5mEaBXl3BMM). He also wrote a detailed [summary of SPECTRE](https://medium.com/@avivzohar/the-spectre-protocol-7dbbebb707b5).
 
@@ -123,8 +127,6 @@ Aviv Zohar, co-author of all protocols mentioned in this article, gave a present
 The last protocol worth mentioning in the context of Block-DAGs is the [PHANTOM protocol](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475). It can guarantee linear block ordering and therefore satifies the liveness condition at the expense of speed. Speed relates to the time it takes all nodes on the network to reach consensus.
 
 The security assumptions for PHANTOM are based on an honest majority of peers. The mechanism used to establish a final block ordering comprises defining a cluster of blocks in the DAG first. Finding this cluster is an [NP-hard problem](https://en.wikipedia.org/wiki/NP-hardness), which means it cannot directly be solved but needs to be approximated. Once these clusters are defined (or approximated), a [breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) is performed to establish an order.
-
-Because PHANTOM allows for linear block ordering, the protocol is suitable for advanced applications such as smart contracts.
 
 The details of this algorithm extend the scope of this article. If you are interested, we refer you to the actual [paper](https://pdfs.semanticscholar.org/bf71/4c9c854b3ef79895b1585bb9ce73584734ba.pdf?_ga=2.37419552.1079935823.1558038475-904529471.1558038475) of the protocol or a [detailed summary](https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7) written by Drew Stone.
 
@@ -148,8 +150,17 @@ At this point our DAG protocol is still being researched and analysed using theo
 
 ### Summary
 
+DAGs might be suited to become the successors of linear blockchains. They mostly differ in that a block in a DAG can reference more than one block at a time. This introduces a sort of two-dimensionality to the data structure.
 
+A DAG can be constructed with entire blocks or individual transactions as nodes or vertices. While there are transaction DAGs live today, they suffer from a lack of decentralization as they need a central coordinator. Currently, there are no production-level Block-DAGs out there but a lot of research has gone into this type of construction. The main challenge from an engineering perspective is to order blocks in a linear fashion.
 
+The first step towards a Block-DAG was introduced with the GHOST paper, where consensus is based on finding the subtree with the greatest combined PoW. 
+The SPECTRE protocol introduced a block ordering mechanism based on recursive elections and satisfied the safety condition but cannot guarantee liveness.
+PHANTOM was the next evolutionary step in Block-DAG research and the protocol allows for linear block ordering. This means the protocol can provide safety and liveness.
+
+IOHK and Horizen are researching the use of a Block-DAG protocol, with a difficulty adjustment based on network activity and block production rate. Linear block ordering will be based on the overlap of transactions in blocks.
+
+A lot of work needs to be done before we will see a first production level Block-DAG, but the data structure is a promising candidate to solve the scalibility issues with distributed ledger technologies in a trustless environment.
 
 ### FR
 
