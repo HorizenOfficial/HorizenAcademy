@@ -7,6 +7,7 @@ permalink: /technology/expert/the-p2p-network/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 There are many ways to classify and differentiate between blockchains. One of them is to differentiate between public and permissioned blockchains. Permissioned blockchains are meant for a defined group of people, often times a consortium of companies wanting to share data. Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the distributed *Peer-to-Peer* (P2P) network is highly resilient.

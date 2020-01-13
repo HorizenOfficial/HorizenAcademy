@@ -9,14 +9,15 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
+The first use case for blockchain technology is digital money. To have a monetary system without central control you must have a special and sophisticated way to handle all the data produced with each transfer. Imagine if every person could access and modify the databases kept by banks. It would be a disaster.
 
-An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger, every account balance can be computed at any time.
-A digital ledger used for digital money needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
+In order to make decentralized money a reality a method of accounting had to be developed - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), also referred to as *triple-entry accounting*. Every account balance can be computed at any time by storing all transactions in a digital ledger. 
+
+A digital ledger used for digital money requires a set of properties that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
 ### Common Data Structures
 
-Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones.
+Let’s develop an understanding of data structures before we look at blockchain itself. Here are some of the most common data structures:
 
 #### Arrays
 
@@ -27,6 +28,7 @@ Each element of an array has an *index* that starts at 0. You can instantly acce
 Arrays are useful for their simplicity and *instant access* property.
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
+![Array](/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg)
 
 #### Linked List
 
@@ -37,10 +39,12 @@ For example, If you were to store information about cars in a linked list, you c
 The first element of a linked list is called the head and the last one is called the tail. 
 
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
+![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg)
 
 Each node also contains a *pointer* to the next node. The *pointer* tells your computer where the following node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
+![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg)
 
 When searching for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
 
@@ -61,6 +65,7 @@ To store several keys within a single bucket a linked list within the hash table
 If the hash table is well-dimensioned, the *cost* (or number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes is convenient for systems that have to store large amounts of data and access them repeatedly.
 
 ![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
+![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg)
 
 There are many different data structures, each of them comes with some trade-offs and depending on the use case one might choose one over the other. Sophisticated data structures often leverage several more simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
 
@@ -73,12 +78,14 @@ The data within a blockchain is split into subsets, the *blocks*, which are simi
 The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added with new blocks.
 
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
+![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg)
 
 The hash value of the previous block header is included in the next block serving as the reference, and because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
 
 The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but it would be infeasible to make block 3 reference your newly inserted block.
 
 ![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg)
+![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg)
 
 Each new block built on top of an existing block is commonly called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult as you have to recreate additional valid references. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate a single valid reference. With each confirmation, you also have to recreate an additional reference. The older the block, the more certain you can be that no changes to the block will ever occur.
 
@@ -94,7 +101,7 @@ It is appropriate to issue certain caveats first. Firstly, development of a bloc
 
 Second, incentive design is an integral part of building a blockchain. There is always a cost associated with adding data to a blockchain. This cost must be high enough to prevent large amounts of useless data being added, but at the same time it needs to be low enough to not become prohibitive. Once deployed, fixing is not easily done for the same reason as above.
 
-Maintaining a blockchain is also orders of magnitude more expensive than a traditional database. Data is not recorded once but thousands of times. Data is also verified by every full node on the network, thousands of times in parallel. Additionally, the transmission of data is inefficient by design, causing the cost of maintenance to rise. This redundancy in every step of using a blockchain makes it hard to scale. We will look at several concepts to make blockchain scale later on, such as **sidechains** and **payment channels**. Most of them are based on the idea to move data off the blockchain rather than actually increasing the throughput of the chain.
+Maintaining a blockchain is also orders of magnitude more expensive than a traditional database. Data is not recorded once but thousands of times. Data is also verified by every full node on the network, thousands of times in parallel. Additionally, the transmission of data is inefficient by design, causing the cost of maintenance to rise. This redundancy in every step of using a blockchain makes it hard to scale. We will look at several concepts to make blockchain scale later on, such as [sidechains](https://academy.horizen.global/horizen/expert/sidechains/) and [payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-and-payment-channels %}). Most of them are based on the idea to move data off the blockchain rather than actually increasing the throughput of the chain.
 
 #### Benefits of Using Blockchain
 
@@ -119,6 +126,7 @@ After we looked at the properties that result from the design, lets take a look 
 Blocks consist of a header which contains important data about the block - a sort of summary. The largest part of a block in terms of storage comprises the transactions.
 
 ![Block](/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg)
+![Block](/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg)
 
 #### The Block Header
 
@@ -145,6 +153,7 @@ A *merkle tree* is a data structure used within blocks. The transactions in a bl
 Constructing a merkle tree goes like this: The *coinbase transaction* rewarding the miner with new coins is placed first, followed by all other transactions in the block. First, each leave (transaction) is hashed. Next, the hashes of two transactions are concatenated and hashed again. If the number of transactions is odd, the last transactions hash is concatenated with a copy of itself.This process continous until only a single hash is left - the merkle root.
 
 ![Merkle Tree](/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg)
+![Merkle Tree](/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_M.jpg)
 
 While most merkle trees are binary, one can also think of non-binary merkle trees concatenating more than two hashes per step, but the idea remains the same. Trying to change a single transaction in an already confirmed block results in a different merkle root and as a consequence a different header. This is one mechanism that ensures tamper evidence.
 
@@ -157,6 +166,7 @@ Another advantage resulting from the use of merkle trees is a reduction in the c
 The *merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *merkle path* for transaction$_K$ consists of the hash of transaction L $H_L$ it is first concatenated with and the combined hashes $H_{IJ}$, $H_{MNOP}$ and lastly, $H_{ABCDEFGH}$. Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
 
 ![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg)
+![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg)
 
 ### What does a Transaction look like?
 
@@ -195,7 +205,7 @@ The blockchain in itself is a data structure that stores transactions. It is sim
 
 A block consists of a header, and the transactions contained. Inside the block a merkle tree is used to create a 256 bit summary of all transactions, the merkle root, which is included in the block header.
 
-A transaction is a meassage to the network about what unspent transaction outputs (UTXOs) are being spent in a transaction and which new UTXOs are being created.
+A transaction is a message to the network about what unspent transaction outputs (UTXOs) are being spent in a transaction and which new UTXOs are being created.
 
 We would like to end this section with a tweet that distilled the implications of the properties of blockchain technology in the context of data structures.
 

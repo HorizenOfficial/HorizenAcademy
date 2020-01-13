@@ -65,7 +65,7 @@ while (number of tickets sold <= max. amount of tickets available for the event)
 		decrement "number of tickets sold"
   	}
 }
-````
+```
 
 Not only could the sale and refund for tickets be realised with smart contracts, but so could an automated secondary market with self-enforcing rules be built. While this is obviously an overly simplified example, it should give you an idea of the kind of logic used in smart contracts. 
 
