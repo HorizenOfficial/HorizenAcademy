@@ -27,6 +27,7 @@ This can be shown with Bitcoin as an example. Whereas Bitcoin activated SegWit t
 The problem is the following: transaction size can only be decreased by so much, as transactions are quite compact already, and even if you could shrink a transaction to a tenth of its size, this would only increase throughput from 7 to 70 transactions per second (for Bitcoin). Not exactly Visa level. Raising the block size limit comes at the expanse of mining centralization, as fewer people can compete in the competitive mining industry, when hardware and network requirements increase. Decreasing the block interval leads to more orphaned blocks and is limited by network synchronization time across the globe. An increase in block size also increases the orphan rate because propagation time is increased linearly with it. A high rate of orphaned blocks reduce the overall security of the protocol, because honest hash power is "wasted" and does not contribute to the security of the ledger.
 
 ![Scaling](/assets/post_files/technology/expert/1.4-dags/scaling_dag_D.jpg)
+![Scaling](/assets/post_files/technology/expert/1.4-dags/scaling_dag_M.jpg)
 
 There are generally three approaches to scalability:
 
@@ -82,10 +83,12 @@ This little excursion should prove valuable to following along on a short histor
 A first step towards Block-DAG protocols was the [*Greedy Heaviest Observable Sub Tree* (GHOST) Protocol](https://eprint.iacr.org/2013/881.pdf). The consensus mechanism in GHOST is not based on the longest-chain rule. Instead, the subtree with the greatest combined Proof-of-Work or difficulty is considered the valid branch by protocol design.
 
 ![Ghost](/assets/post_files/technology/expert/1.4-dags/ghost_D.jpg)
+![Ghost](/assets/post_files/technology/expert/1.4-dags/ghost_M.jpg)
 
 A more intuitive description might be finding the subtree of greatest cardinality (here we make the same assumption as before when distinguishing between longest- and heaviest-chain rule). The structure on the image above is moving into DAG territory, rather than just being a blockchain with orphaned blocks (there is no such clear distinction). Technically, it is still a *tree* and not a DAG though. The two differ in trees being able to branch off in the direction of the edges, but branches not merging together later on. DAGs on the other hand can do both, branch off and merge. Trees are a subcategory of DAGs, in that every tree is a DAG, but not every DAG is a tree.
 
 ![Tree vs. DAG](/assets/post_files/technology/expert/1.4-dags/tree_vs_dag_D.jpg)
+![Tree vs. DAG](/assets/post_files/technology/expert/1.4-dags/tree_vs_dag_M.jpg)
 
 In the beginning of this article we said decreasing the blocktime and increasing the block size leads to a higher orphan rate and reduced security. In GHOST, [this effect is eliminated](https://medium.com/@drstone/an-overview-of-proof-of-work-based-blockchain-consensus-protocols-part-1-e04102885093) by introducing a different mechanism to elect valid forks. An attacker would also need to control more relative hash power to perform double spends (>51%), than he would need to with the longest chain rule (51%) as consensus mechanism.
 
@@ -100,6 +103,7 @@ Determining an order throughout the blocks is an important step. If two blocks c
 > "In this voting scheme, each block will identify a preference ordering over pairs of blocks based on which block they believe occurred first. The final ordering is taken as a majority vote on pairwise orderings across all blocks." - Drew Stone
  
 ![Recursive Election](/assets/post_files/technology/expert/1.4-dags/recursive_election_D.jpg)
+![Recursive Election](/assets/post_files/technology/expert/1.4-dags/recursive_election_M.jpg)
 
 Consider you were to determine the order between block *X* and *Y* in the graphic above with the recursive election protocol.
 
@@ -161,15 +165,3 @@ PHANTOM was the next evolutionary step in Block-DAG research and the protocol al
 IOHK and Horizen are researching the use of a Block-DAG protocol, with a difficulty adjustment based on network activity and block production rate. Linear block ordering will be based on the overlap of transactions in blocks.
 
 A lot of work needs to be done before we will see a first production level Block-DAG, but the data structure is a promising candidate to solve the scalibility issues with distributed ledger technologies in a trustless environment.
-
-### FR
-
-new analysis framework for blockchain protocols focusing on trees of blocks as opposed to chains: On Trees, Chains and Fast Transactions in the Blockchain https://eprint.iacr.org/2016/545.pdf
-
-https://medium.com/@drstone/an-overview-of-proof-of-work-based-blockchain-consensus-protocols-part-1-e04102885093
-
-https://medium.com/@drstone/an-overview-of-spectre-a-blockdag-consensus-protocol-part-2-36d3d2bd33fc
-
-https://medium.com/@drstone/an-overview-of-phantom-a-blockdag-consensus-protocol-part-3-f28fa5d76ef7
-
-https://medium.com/@avivzohar/the-spectre-protocol-7dbbebb707b5
