@@ -23,7 +23,7 @@ Two of the most popular PKC schemes are RSA (Rivest - Shamir - Adleman) and Elli
 
 Before ECC became popular, almost all public-key schemes were built using cryptosystems based on modular arithmetic, such as RSA. The security of all PKC schemes is based on one main assumption: it must be infeasible to derive a private key from it's corresponding public key. As we said before, public keys are usually derived from their private key using a one-way function. The security is therefore based on the [*computational hardness*](https://en.wikipedia.org/wiki/Computational_hardness_assumption) of reversing the used one-way function.
 
-WIth PKC schemes like RSA, using modular arithmetic, the security assumption is based on the assumed hardness of integer factorization (assumed because there no known way of proving (unconditional) hardness. In elliptic curve cryptography the security assumption is based on the hardness of the [*discrete log problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html). But more on that later.
+With PKC schemes like RSA, using modular arithmetic, the security assumption is based on the assumed hardness of integer factorization (assumed because there no known way of proving (unconditional) hardness. In elliptic curve cryptography the security assumption is based on the hardness of the [*discrete log problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html). But more on that later.
 
 RSA and its modular-arithmetic-based friends are still important today, and are often used alongside ECC. The mathematics behind RSA can be easily explained, is widely understood, and rough implementations can be written quite easily.
 
