@@ -10,7 +10,6 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-
 Proof of Work (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).
 
 **TL;DW**: Evidence of Proof of Work can be found in many places, for example in Giza, Egypt. The pyramids don't only serve as a tribute to the Pharaoh, they also demonstrate the capabilities of the civilization that built them. It is immediately recognized by any visitor, that this monument required a large amount of work to be built. It's a proof of work.
