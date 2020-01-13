@@ -40,6 +40,7 @@ Next, miners collect new and unconfirmed transactions in their block. If there a
 Now, a miner builds a *merkle tree* of all transactions included in her block and includes the *merkle root* in the block header. She adds all the other necessary data, such as the hash of the previous block and some other meta data.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
+![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_M.jpg)
 
 Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
