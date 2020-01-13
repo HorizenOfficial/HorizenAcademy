@@ -7,6 +7,7 @@ permalink: /technology/expert/confidential-transactions/
 topic: technology
 level: expert
 chapter: "Privacy"
+published: false
 ---
 
 \url{https://medium.com/scalar-capital/behind-mimblewimble-cd9da78a00e9}\\
