@@ -33,7 +33,7 @@ Private keys are sometimes also called *secret keys* or *spending keys*. When do
 - the SHA256 hash function used in most cryptocurrencies produces 256 bit outputs, which makes them a suitable candidate for private keys
 - the elliptic curve used in many cryptocurrencies, scp256k1 has an [order of 256 bits](https://bitcoin.stackexchange.com/questions/21907/what-does-the-curve-used-in-bitcoin-secp256k1-look-like), which means it consumes 256 bit inputs and produces 256 bit outputs.
 
-A private key can be represented in many formats, such as a binary string of 1's and 0's, a [*Base64*]\(https://en.wikipedia.org/wiki/Base64) string, a *mnemonic phrase* or a hex string.
+A private key can be represented in many formats, such as a binary string of 1's and 0's, a [*Base64*](https://en.wikipedia.org/wiki/Base64) string, a *mnemonic phrase* or a hex string.
 
 ![Key Formats](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/key_formats_D.jpg)
 
@@ -60,6 +60,7 @@ The list of words can be extended by a password if desired and is lastly convert
 Now that we have generated a private key $sk$ we need to derive a public key $PK$ from it. In our **last article** we already distinguished between *scalars* and *vectors*. A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length, the magnitude, and a direction, the angle relative to the positive x-axis. This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values, one for the magnitude and two for the direction (angle relative to x- and z-axis). It is a convention that scalars are written with small letters, like $sk$, while vectors are written with capital letters, like $PK$.
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/scalar_vector_D.jpg)
+![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/scalar_vector_M.jpg)
 
 We added this little discourse because it might help you to keep in mind what are points on the curve and what are just "regular values" or scalars when following along. Especially in our next article on **digital signatures** this will be helpful.
 
@@ -74,6 +75,7 @@ $$y = 32670510020758816978083085130507043184471273380659243275938904335757337482
 The product of your private key *sk* with the base point *P* gives you your *elliptic public key*, *PK*. If you wonder how computationally expensive it is to multiply such a large number (*sk*) with a point on the curve you can check out our last article on **elliptic curve cryptography** where we calculate the number of computational steps needed. An extra byte is added to the front to give you your *full public key*. The extra byte depends on the specific blockchain you are generating an address for. For Bitcoin it is 0x04, for Horizen it is 0x ?? **TKKG**
 
 ![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_D.jpg)
+![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_M.jpg)
 
 We will follow along with an example: Our private key needs to have 32 bytes, which equals 32 UTF-8 characters.
 
@@ -112,8 +114,9 @@ Now this is a valid address, but there is one last step to it. *Base58Check* is 
 Most wallets today are HD wallets - hierarchical deterministic wallets. They use a single seed or *master private key* which can be derived from your mnemonic phrase, to generate a number of private keys. This is done by adding a counter to the seed and incrementing it by one for every new private key generated.
 
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_D.jpg)
+![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_M.jpg)
 
-These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point yields your public key. In our **chapter on wallets** we will look at [HD wallets](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) more closely.
+These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets more closely.
 
 ### Summary
 
@@ -121,7 +124,3 @@ To get from your private key, *sk* to your address you first perform multiplicat
 Lastly, the characters 0, O, I, and l are removed via Base58Check.
 
 In our next article, we will look at how digital signatures are produced and verified without revealing any knowledge about the private key used to produce the signature.
-
-\url{https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki} mnemonic bip
-
-\url{https://medium.freecodecamp.org/how-to-create-a-bitcoin-wallet-address-from-a-private-key-eca3ddd9c05f}
