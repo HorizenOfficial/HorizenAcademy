@@ -111,6 +111,7 @@ Another scaling approach besides moving interactions off-chain to a second layer
 A dApp can be launched on a sidechain, possibly even running a different [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) than the mainchain. Depending on the specific construction, incentives might have to be provided in order for nodes to run sidechains (in a PoS sidechain model) or for miners to perform merged mining (in a PoW sidechain model).
 
 ![Scaling](/assets/post_files/technology/expert/1.3-smart-contracts/scaling_contracts_D.jpg)
+![Scaling](/assets/post_files/technology/expert/1.3-smart-contracts/scaling_contracts_M.jpg)
 
 There are many approaches to enable scalable smart contract platforms, often times also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the *oracle problem*.
 
@@ -136,6 +137,7 @@ No matter if centralized or decentralized, an oracle will always come at a cost.
 A decentralized approach to solving the oracle problem is using [*prediction markets*](https://www.getsmarter.com/blog/wp-content/uploads/2017/07/mit_prediction_markets_report.pdf). A prediction market generally works by first creating a market for a specific event. Let's assume an event with a binary outcome: does team X or team Y win the Superbowl. A participant buys in for $1 and gets two *futures contracts*, one for each outcome. The futures contract whose outcome materialized pays $1, the other one $0.
 
 ![Prediction Markets](/assets/post_files/technology/expert/1.3-smart-contracts/prediction_markets_D.jpg)
+![Prediction Markets](/assets/post_files/technology/expert/1.3-smart-contracts/prediction_markets_M.jpg)
 
 With an equally likely outcome, a participant wouldn't know which contract to keep and which to sell. Both should trade at around $0.50. If a participant has high confidence in out outcome, let's say team X wins, he will sell the contract that pays in case Y wins. If many people think alike, this creates increasing demand for contract X and increasing supply for contract Y. Futures contract X rises in price, while Y gets cheaper, e.g. $0.70 vs. $0.30. The price of the futures contracts can be interpreted as the likelyhood of the respective event happening, in this case a 70% chance of team X winning.
 
