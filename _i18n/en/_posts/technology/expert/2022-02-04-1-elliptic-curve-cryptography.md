@@ -28,6 +28,7 @@ WIth PKC schemes like RSA, using modular arithmetic, the security assumption is 
 RSA and its modular-arithmetic-based friends are still important today, and are often used alongside ECC. The mathematics behind RSA can be easily explained, is widely understood, and rough implementations can be written quite easily.
 
 ![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
+![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_M.jpg)
 
 Above is a rudimentary example of encrypting a *message* (2) with a public key that comprises a tuple of two values: the *encryptor* E and the *modulus* N. The *cipher* (4) is later decrypted using the corresponding private key, the tupel *decryptor* D and the same *modulus* N. The obviously interesting part is  the relation between the three value E, D and N. We would like to refer the interested reader to this [very understandable article](https://hackernoon.com/how-does-rsa-work-f44918df914b) for an explanation of how these values are related. A simple RSA implementation accompanied by python code [can be found here](https://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/).
 
@@ -42,6 +43,7 @@ A point on the curve can be interpreted as a *vector*. Vectors represent quantit
 On the elliptic curve any point can be viewed as an arrow pointing in a certain direction and having a defined magnitude or length - a vector. A *scalar* on the other hand is a number, like an integer that only has a magnitude but no direction. We will pick up on this distinction in a bit.
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_D.jpg)
+![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_M.jpg)
 
 Multiplication and division are also defined on the curve. But whereas the multiplication of a point on the curve with a *scalar* is easy to perform, the division of a point is a computationally hard problem. Remember how it is crucial for any PKC scheme to be able to easily compute a public key from a private key but the reverse operation must be infeasible? By being able to easily perform multiplications on a curve but unable to perform division (efficiently) we have the basic building block of building a PKC scheme.
 
@@ -162,6 +164,7 @@ $$
 where *p* is a large prime. For the curve used in Bitcoin and Horizen, secp256k1, *p* is the largest prime that is below \\(2^{256}\\).
 
 ![Finite Field](/assets/post_files/technology/expert/2.3.1-ecc/finite_D.jpg)
+![Finite Field](/assets/post_files/technology/expert/2.3.1-ecc/finite_M.jpg)
 
 The graph above shows the finite field where each point represents a valid, discrete value of a point on the curve. Notice how the symmetry with regards to the x-axis is preserved. In order to graphically add two points together, one again connects them with a straight line. This line may "wrap around" the field several times before it intersects with another point or discrete value: the result of the addition *R*.
 
@@ -175,12 +178,4 @@ Public-key cryptography is used in secure communication, and sender authenticati
 
 RSA and many of the early PKC schemes are build using *modular arithmetic* and the security is based on the hardness of *integer factorization*. ECC is based on *discrete math*, where value can only take on certain values and the  security is based on the hardness of the *discrete logarithm problem*.
 
-When you are transferring cryptocurrencies you generally use addresses and not your public key. In the next article we will go through the process of of generating an address from scratch, starting with your private key. 
-
-\subsubsection*{FR}
-
-\url{https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/}
-
-Animations!!! \url{https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/}
-
-\url{https://hackernoon.com/what-is-the-math-behind-elliptic-curve-cryptography-f61b25253da3}
+When you are transferring cryptocurrencies you generally use addresses and not your public key. In the next article we will go through the process of of generating an address from scratch, starting with your private key.
