@@ -7,6 +7,7 @@ permalink: /technology/expert/ring-signatures/
 topic: technology
 level: expert
 chapter: "Privacy"
+published: false
 ---
 
 [Tweet](https://twitter.com/mihailobjelic/status/1126878887886106629?s=21) that links to [paper](https://eprint.iacr.org/2019/455.pdf) on [Monero Traceability]

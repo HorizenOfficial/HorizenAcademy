@@ -7,6 +7,7 @@ permalink: /technology/expert/summary/
 topic: technology
 level: expert
 chapter: "Summary"
+published: false
 ---
 
 {% tf tech-not-available.md %}

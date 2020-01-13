@@ -7,6 +7,7 @@ permalink: /technology/expert/how-does-a-blockchain-work/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+published: false
 ---
 
 You do know what a blockchain is by now, and we are sure you have a good idea of how it works if you made it this far. In this chapter we will take a detailed look at each concept that makes a blockchain work individually. It's worth noting that Bitcoin and thus blockchain as we know it is  more than ten years old by now, but most concepts described in this chapter preceded blockchains by years or even decades. The clever combination of these parts in a formerly (pre-Bitcoin) unknown way enabled something truly impressive though.

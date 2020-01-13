@@ -7,6 +7,7 @@ permalink: /technology/expert/utxo-vs-account-model/
 topic: technology
 level: expert
 chapter: "Transactions"
+published: false
 ---
 
 For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner creating a transaction that informs the network about how much money has changed hands and who the new owners are.
