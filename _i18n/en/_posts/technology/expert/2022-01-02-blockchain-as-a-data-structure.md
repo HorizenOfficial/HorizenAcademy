@@ -9,14 +9,14 @@ level: expert
 chapter: "What is a Blockchain?"
 ---
 
-The first and until today most dominant use case of blockchain technology is digital money. In order to have a monetary system without central control one needs a special and sophisticated way to handle all the data that is produced with every transfer of money. Imagine every person could excess and modify the databases kept by banks storing account balances. It would be a disaster.
+The first use case for blockchain technology is digital money. To have a monetary system without central control you must have a special and sophisticated way to handle all the data produced with each transfer. Imagine if every person could access and modify the databases kept by banks. It would be a disaster.
 
-An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger, every account balance can be computed at any time.
-A digital ledger used for digital money needs a set of properties, that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
+An important step to make decentralized money a reality was to understand that a very simple but effective method of accounting could be used - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), sometimes also referred to as *triple-entry accounting*. By storing all transactions in a digital ledger every account balance can be computed at any time.
+A digital ledger used for digital money needs a set of properties that were not achievable before blockchain came along. In this article we will look at how this translates to the way data is handled on a blockchain.
 
 ### Common Data Structures
 
-Before we look at the blockchain itself, lets try to develop an understanding of data structures by looking at some of the most common ones.
+Lets develop an understanding of data structures before we look at blockchain itself. Here are some of the most common data structures:
 
 #### Arrays
 
