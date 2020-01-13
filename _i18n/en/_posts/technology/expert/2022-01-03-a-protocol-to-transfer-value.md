@@ -45,6 +45,7 @@ You can distinguish between several broad types of networking protocols. Some ex
 - Value transfer protocols such as Horizen or Bitcoin
 
 ![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg)
+![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_M.jpg)
 
 Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through across the world wide web.
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used for the secure transfer of data. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes). Protocols like Bitcoin or Horizen enable the digital transfer of value form peer to peer.
@@ -69,6 +70,7 @@ To keep the growth of the blockchain stable with regards to the number of blocks
 Lastly, the monetary policy is defined in the protocol. Most cryptocurrencies have a maximum circulating supply defined with their inception. By cutting the *block subsidy* in half regularly (with Horizen every 840,000 blocks, with Bitcoin every 210,000 blocks, both roughly equal to 4 years) the total circulating supply asymptotically approaches its limit but never crosses it.
 
 ![Circulating Supply](/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg)
+![Circulating Supply](/assets/post_files/technology/expert/1.2-protocol/supply_M.jpg)
 
 This type of monetary schedule is referred to as [*disinflationary*](https://www.investopedia.com/terms/d/disinflation.asp). As per Investopedia:
 
@@ -129,6 +131,7 @@ Over time accounting has evolved in three steps. First single entry accounting w
 *Triple entry bookkeeping* now makes it impossible to create funds out of thin air, assuming the overall network is controlled by a majority of honest participants. Each transaction comes with three entries: a credit to the recipient, a debit to the payer, and a public receipt, the recorded transaction on the ledger. Because everyone can keep a copy of the entire transaction history, no actor can create a fraudulent credit for themselves. You can trust *the system itself* instead of having to trust a third party like auditors or banks.
 
 ![Triple Entry Bookkeeping](/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg)
+![Triple Entry Bookkeeping](/assets/post_files/technology/expert/1.2-protocol/tripple_entry_M.jpg)
 
 Triple entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article ["Why Bitcoin’s Lightning Network is Ingenious"](https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae) that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double entry bookkeeping system on top of the blockchain - a second layer solution like the [Lightning Network]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-and-payment-channels %}).
 
