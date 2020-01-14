@@ -73,27 +73,29 @@ The blockchain is a rather sophisticated data structure, made up of many sub-str
 
 #### The Blockchain
 
-The data within a blockchain is split into subsets, the *blocks*, which are similar to the nodes of a linked list. Each block contains several elements, generally seperated into the *block header* and its transactions which comprisemost of the data. The header contains important metadata about each block, like a timestamp, the *block height* (the position of the block within the chain) and the *nonce*, which represents the *Proof of Work*.
+Blockchain organizes data by splitting it into subsets, referred to as *blocks*. Blocks are similar to the nodes of a linked list. Each block contains several elements. The elements of a block are generally separated into the *block header* and its transactions. While the transactions in a block account for most of the data; the block header contains important metadata about each block such as a timestamp and *block height*. 
 
-The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added with new blocks.
+The secured references establish an order throughout the blocks. This established order effectively makes the blockchain an *append only* data structure. This means that new data can only be added with new blocks.
 
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg)
 
-The hash value of the previous block header is included in the next block serving as the reference, and because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
+The hash value of the previous block header is included in the following block as a reference, because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
 
-The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but it would be infeasible to make block 3 reference your newly inserted block.
+The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block (For example: between Block 1 and 3 in the graphic below) you could include a reference to its predecessor (Block 1), but it would be infeasible to make block 3 reference your newly inserted block.
 
 ![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg)
 ![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg)
 
-Each new block built on top of an existing block is commonly called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult as you have to recreate additional valid references. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate a single valid reference. With each confirmation, you also have to recreate an additional reference. The older the block, the more certain you can be that no changes to the block will ever occur.
+Each new block built on top of an existing block is called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult because you have to recreate additional valid references.. Block 2 in the graphic below has one confirmation. You would have to recreate a single valid reference to tamper with the data of Block 2. You also have to recreate a valid reference with each new confirmation. The older the block, the more certain you can be that no changes to the block will ever occur.
 
-It is important to note, that it is not the data structure that makes data on the blockchain immutable. By itself the data is *tamper evident* only. Changes are easy to detect, but if there are no strong consensus rules in place and a sufficiently large number of nodes on the network there is no *immutability*. The incentives need to be structured so that the majority of participants will follow the *protocol* and reject invalid blocks. We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interplay of these parts is what makes the blockchain a powerful tool for building trustless digital money.
+It is important to note that it is not the data structure that makes data on the blockchain immutable. The data alone is *tamper evident* only. Changes are easy to detect. here is no *immutability* if there are no strong consensus rules in place and a sufficiently large number of nodes on the network. The incentives need to be structured so the majority of participants will follow the *protocol* and reject invalid blocks.
+
+We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interworking of these parts is what makes the blockchain a powerful tool for building trustless digital money.
 
 ### The Properties of Blockchains
 
-Before we take a closer look at the data within a block lets take a look at the properties that a blockchain offers. We assume a decentralized setting without central authority and a strong consensus mechanism.
+Let's take a look at the properties that a blockchain offers before we take a closer look at the data within a block. We will assume a decentralized setting without central authority and a strong consensus mechanism for this article.
 
 #### Current Shortcomings
 
