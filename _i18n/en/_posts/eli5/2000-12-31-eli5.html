@@ -20,12 +20,17 @@ css: |
   .post-section .post-title {
     font-size: 2.5rem;
   }
-  .welcome-text {
+  .welcome-text .lead {
     font-size: 1.2rem;
+    font-weight: normal;
   }
-  .list-eli5-articles a {
-    color: #041742;
-    font-weight: bold;
+  .eli5-article {
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+  .eli5-article > div {
+    padding-right: 5px;
+    padding-left: 5px;
   }
 ---
 
@@ -34,41 +39,158 @@ css: |
     {% include search.html %}
 
     <div class="row align-items-center">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <h2 class="post-title text-uppercase">{{ page.title }}</h2>
+            <div class="welcome-text">
+                <p class="lead">ELI5 - or Explain it Like I'm 5 - articles are meant to provide the shortest and easiest explanation of a topic.</p>
+                <p>Using analogies and abstractions they should convince the basic idea behind a concept so that even children understand what is being talked about.</p>
+                <p>We formulated them as questions and answered them as if a kid had asked them:</p>
+            </div>
         </div>
-        <div class="col-md-8 welcome-text">
-            <p>
-                ELI5 - or Explain it Like I'm 5 - articles are meant to provide the shortest and easiest explanation of a topic. Using analogies and abstractions they should convince the basic idea behind a concept so that even children understand what is being talked about.
-            </p>
-            <p>
-                We have picked a few important concepts and technologies and broke them down as much as we could.
-            </p>
+        <div class="col-md-6">
+            {% include blocks/youtube.html v="zEp-NUw3naU" %}
         </div>
     </div>
 
-    <hr class="mt-5 mb-5">
+    <div class="post-content mb-5 mb-md-0 mt-5">
 
-    <div class="post-content mb-5 mb-md-0">
-
-        <p class="d-none"></p>
-
-        <p>
-            We formulated them as questions and answered them as if a kid had asked them:
-        </p>
-
-        <ul class="list-eli5-articles">
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">What is a Blockchain?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">What is a Cryptocurrency?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-03-what-is-the-benefit-of-cryptocurrencies %}">What is the Benefit of Cryptocurrencies?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-04-what-is-a-wallet %}">What is a Wallet?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-05-what-is-a-transaction %}">What is a Transaction?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-06-what-is-a-peer-to-peer-network %}">What is a Peer-to-Peer Network?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">What is Consensus?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-08-what-is-mining %}">What is Mining?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-09-what-is-a-hash-function %}">What is a Hash Function?</a></li>
-            <li><a href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">What is Public-Key Cryptography?</a></li>
-        </ul>
+        <div class="row list-eli5-articles">
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">
+                            <img src="/assets/post_files/eli5/intro/1BC.svg" alt="What is a Blockchain?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is a Blockchain?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-08-what-is-mining %}">
+                            <img src="/assets/post_files/eli5/intro/6Min.svg" alt="What is Mining?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is Mining?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-08-what-is-mining %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">
+                            <img src="/assets/post_files/eli5/intro/2CC.svg" alt="What is a Cryptocurrency?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is a Cryptocurrency?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-09-what-is-a-hash-function %}">
+                            <img src="/assets/post_files/eli5/intro/7Hash.svg" alt="What is a Hash Function?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is a Hash Function?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-09-what-is-a-hash-function %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-03-what-is-the-benefit-of-cryptocurrencies %}">
+                            <img src="/assets/post_files/eli5/intro/3Ben.svg" alt="What is the Benefit of Cryptocurrencies?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is the Benefit of Cryptocurrencies?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-03-what-is-the-benefit-of-cryptocurrencies %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">
+                            <img src="/assets/post_files/eli5/intro/8Key.svg" alt="What is Public-Key Cryptography?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is Public-Key Cryptography?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-06-what-is-a-peer-to-peer-network %}">
+                            <img src="/assets/post_files/eli5/intro/4P2P.svg" alt="What is a Peer-to-Peer Network?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is a Peer-to-Peer Network?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-06-what-is-a-peer-to-peer-network %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-04-what-is-a-wallet %}">
+                            <img src="/assets/post_files/eli5/intro/9Wall.svg" alt="What is a Wallet?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is a Wallet?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-04-what-is-a-wallet %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-3 eli5-article">
+                    <div class="col-md-4">
+                        <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">
+                            <img src="/assets/post_files/eli5/intro/5Con.svg" alt="What is Consensus?" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="intro-article-title">What is Consensus?</h5>
+                        <p class="mb-0">
+                            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">Read Article</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
