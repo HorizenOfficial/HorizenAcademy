@@ -7,10 +7,8 @@ permalink: /eli5/
 topic: eli5
 css: |
   .site-content-wrapper {
-    background: url(/assets/img/bkg/bg-eli5-p1.jpg) no-repeat top left;
-  }
-  .site-content-wrapper > .container-fluid {
-    background: url(/assets/img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+    background: url(/assets/img/bkg/bg-eli5-1.jpg) no-repeat bottom center;
+    background-size: contain;
   }
   @media (max-width: 991px) {
     .site-content-wrapper > .container-fluid {
@@ -31,6 +29,16 @@ css: |
   .eli5-article > div {
     padding-right: 5px;
     padding-left: 5px;
+  }
+  @media(min-width:1200px) {
+    .eli5-article > .col-md-4 {
+      max-width: 38%;
+      flex: 0 0 38%;
+    }
+    .eli5-article > .col-md-8 {
+      max-width: 62%;
+      flex: 0 0 62%;
+    }
   }
 ---
 
@@ -56,7 +64,7 @@ css: |
 
         <div class="row list-eli5-articles">
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">
                             <img src="/assets/post_files/eli5/intro/1BC.svg" alt="What is a Blockchain?" />
@@ -71,7 +79,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-08-what-is-mining %}">
                             <img src="/assets/post_files/eli5/intro/6Min.svg" alt="What is Mining?" />
@@ -86,7 +94,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">
                             <img src="/assets/post_files/eli5/intro/2CC.svg" alt="What is a Cryptocurrency?" />
@@ -101,7 +109,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-09-what-is-a-hash-function %}">
                             <img src="/assets/post_files/eli5/intro/7Hash.svg" alt="What is a Hash Function?" />
@@ -116,7 +124,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-03-what-is-the-benefit-of-cryptocurrencies %}">
                             <img src="/assets/post_files/eli5/intro/3Ben.svg" alt="What is the Benefit of Cryptocurrencies?" />
@@ -131,7 +139,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-10-what-is-public-key-cryptography %}">
                             <img src="/assets/post_files/eli5/intro/8Key.svg" alt="What is Public-Key Cryptography?" />
@@ -146,7 +154,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-06-what-is-a-peer-to-peer-network %}">
                             <img src="/assets/post_files/eli5/intro/4P2P.svg" alt="What is a Peer-to-Peer Network?" />
@@ -161,7 +169,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-04-what-is-a-wallet %}">
                             <img src="/assets/post_files/eli5/intro/9Wall.svg" alt="What is a Wallet?" />
@@ -176,7 +184,7 @@ css: |
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row mt-3 eli5-article">
+                <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">
                             <img src="/assets/post_files/eli5/intro/5Con.svg" alt="What is Consensus?" />
