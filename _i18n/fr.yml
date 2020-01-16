@@ -1,67 +1,67 @@
 titles:
-  homepage: Horizen Academy
-  content-overview: Content Overview
+  homepage: Académie Horizen
+  content-overview: Vue d'ensemble du contenu
 descriptions:
-  homepage: The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. Our platform ensures everyone can learn about these topics regardless of their comfort level and experience and is always free to use.
-  content-overview: Horizen Academy Content Overview
+  homepage: L'académie Horizen est une plateforme d'éducation gratuite sur la technologie de la blockchain, les cryptomonnaies, et la confidentialité en ligne. Notre plateforme assure que tout le monde peut apprendre sur ces sujets peu importe leur niveau technique et l'expérience, et gratuitement.
+  content-overview: Académie Horizen vue d'ensemble du contenu
 keywords:
-  homepage: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+  homepage: Horizen, Academie, ZenCash, Horizen Global, Zen, zk-SNARKs, transaction protégée, privacy coin, privacy platform
   content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
 
 
 nav:
   home: Home
-  built: Built on Horizen
-  get-zen: Get ZEN
-  use-zen: Use ZEN
-  earn-zen: Earn ZEN
-  mine-zen: Mine ZEN
+  built: Construit sur Horizen
+  get-zen: Obtenir des ZEN
+  use-zen: Utiliser des ZEN
+  earn-zen: Gagner des ZEN
+  mine-zen: Miner des ZEN
   secure-nodes: Secure Nodes
   super-nodes: Super Nodes
-  faucet: ZEN Faucet
-  forum: Submit a Proposal
-  community: Community
-  academy: Academy
+  faucet: Faucet ZEN
+  forum: Soumettre une proposition
+  community: Communauté
+  academy: Académie
 
 levels:
-  beginner: Beginner
-  advanced: Advanced
+  beginner: Débutant
+  advanced: Avancé
   expert: Expert
 
 topics:
-  technology: Technology
-  privacy: Privacy
+  technology: Technologie
+  privacy: Confidentialité
   horizen: Horizen
-  history: History
-  eli5: "Explain it Like I'm 5"
-  resources: Resources
+  history: Histoire
+  eli5: "Explain it Like I'm 5" "Expliquez moi comme si j'avais 5 ans"
+  resources: Ressources
 
 menu:
-  see-all-content: See all Content
+  see-all-content: Voir tout le contenu
 
 
 footer:
-  legal: Legal
-  privacy-policy: Privacy Policy
-  copyright: All rights reserved
-  share-this-article: 'Share this article:'
+  legal: Légal
+  privacy-policy: Politique de confidentialité
+  copyright: Tous droits réservés
+  share-this-article: 'Partager cet article:'
 
 
 newsletter:
-  name: Name
+  name: Nom
   email: Email
-  country: Country
-  optional: Optional
-  subscribe: Subscribe to updates
-  msg-success: Success! Please check your email to confirm we have the right one.
+  country: Pays
+  optional: Optionnel
+  subscribe: Souscrire aux mises-à-jours
+  msg-success: Bravo ! Merci de vérifier votre adresse e-mail.
 
 
 post:
-  further-reading: Further Reading
+  further-reading: Pour aller plus loin
 
 
 # pages
 content-overview:
-  title: CONTENT OVERVIEW
+  title: VUE D'ENSEMBLE
   eli5: ELI5
-  chapter: Chapter
+  chapter: Chapitre
