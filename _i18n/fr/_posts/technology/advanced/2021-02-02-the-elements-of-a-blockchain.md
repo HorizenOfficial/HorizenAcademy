@@ -46,7 +46,7 @@ Si vous voulez construire une forme de monnaie numérique sur un réseau P2P ave
 
 ### Le Minage
 
-Il existe de nombreux mécanismes de consensus. “L'original" qu’Horizen, Bitcoin et la plupart des autres cryptomonnaies utilisent est le mécanisme de preuve du travail (PoW). Vous avez probablement déjà entendu parler de [minage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-miningd %}) de cryptomonnaie avant et du fait que les mineurs ont à résoudre un puzzle de calcul coûteux. Nous voulons vous montrer ce qu'est ce puzzle et comment le résoudre permet au réseau de se mettre d'accord sur un ordre de transactions donné.
+Il existe de nombreux mécanismes de consensus. “L'original" qu’Horizen, Bitcoin et la plupart des autres cryptomonnaies utilisent est le mécanisme de preuve du travail (PoW). Vous avez probablement déjà entendu parler de [minage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}) de cryptomonnaie avant et du fait que les mineurs ont à résoudre un puzzle de calcul coûteux. Nous voulons vous montrer ce qu'est ce puzzle et comment le résoudre permet au réseau de se mettre d'accord sur un ordre de transactions donné.
 
 ### Demonstration
 
