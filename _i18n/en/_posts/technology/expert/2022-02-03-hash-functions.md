@@ -10,7 +10,7 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-The verification of data is an important aspect when building a [data structure] on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information. 
+The verification of data is an important aspect when building a [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.
 Hash functions are mathematical one-way functions used to verify data in blockchains. They are applied in several important steps from creating an address, to proving ownership and verifying the integrity of the blockchain itself.
 
 The use cases of hash functions extent beyond blockchain technology though. In our article on the [data structure] of the blockchain we talked about other common data structures, such as  *hash tables*. As the name suggests, those would not work without hash functions.

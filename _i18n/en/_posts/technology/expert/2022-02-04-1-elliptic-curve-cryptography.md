@@ -11,7 +11,7 @@ published: false
 ---
 
 All public-key cryptography (PKC) schemes have in common that they are based on key pairs - a public and a private key. This is also referred to as asymmetric cryptography.
-While the public key can be distributed openly to any potential sender of an encrypted message, only the owner of the corresponding private key can decrypt those messages. The public key is usually generated from the private key using a mathematical [**one-way function**](https://en.wikipedia.org/wiki/One-way_function). PKC schemes can also be used to create digital signatures. Digital signatures are created using a message to sign and a private key as an input. A verifier can validate the signature using the corresponding public key without gaining knowledge about the private key used to sign the message.
+While the public key can be distributed openly to any potential sender of an encrypted message, only the owner of the corresponding private key can decrypt those messages. The public key is usually generated from the private key using a mathematical [one-way function](https://en.wikipedia.org/wiki/One-way_function). PKC schemes can also be used to create digital signatures. Digital signatures are created using a message to sign and a private key as an input. A verifier can validate the signature using the corresponding public key without gaining knowledge about the private key used to sign the message.
 
 PKC schemes are mostly used for the confidential exchange of information like encrypted emails using [Pretty Good Privacy (PGP)](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) or similar encryption methods, sender authentication using *digital signatures* and verifying ownership in cryptocurrencies.
 
