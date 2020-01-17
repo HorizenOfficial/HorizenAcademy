@@ -1,0 +1,67 @@
+titles:
+  homepage: Académie Horizen
+  content-overview: Vue d'ensemble du contenu
+descriptions:
+  homepage: L'académie Horizen est une plateforme d'éducation gratuite sur la technologie de la blockchain, les cryptomonnaies, et la confidentialité en ligne. Notre plateforme assure que tout le monde peut apprendre sur ces sujets peu importe leur niveau technique et l'expérience, et gratuitement.
+  content-overview: Académie Horizen vue d'ensemble du contenu
+keywords:
+  homepage: Horizen, Academie, ZenCash, Horizen Global, Zen, zk-SNARKs, transaction protégée, privacy coin, privacy platform
+  content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
+
+
+nav:
+  home: Home
+  built: Construit sur Horizen
+  get-zen: Obtenir des ZEN
+  use-zen: Utiliser des ZEN
+  earn-zen: Gagner des ZEN
+  mine-zen: Miner des ZEN
+  secure-nodes: Secure Nodes
+  super-nodes: Super Nodes
+  faucet: Faucet ZEN
+  forum: Soumettre une proposition
+  community: Communauté
+  academy: Académie
+
+levels:
+  beginner: Débutant
+  advanced: Avancé
+  expert: Expert
+
+topics:
+  technology: Technologie
+  privacy: Confidentialité
+  horizen: Horizen
+  history: Histoire
+  eli5: "Explain it Like I'm 5" "Expliquez moi comme si j'avais 5 ans"
+  resources: Ressources
+
+menu:
+  see-all-content: Voir tout le contenu
+
+
+footer:
+  legal: Légal
+  privacy-policy: Politique de confidentialité
+  copyright: Tous droits réservés
+  share-this-article: 'Partager cet article:'
+
+
+newsletter:
+  name: Nom
+  email: Email
+  country: Pays
+  optional: Optionnel
+  subscribe: Souscrire aux mises-à-jours
+  msg-success: Bravo ! Merci de vérifier votre adresse e-mail.
+
+
+post:
+  further-reading: Pour aller plus loin
+
+
+# pages
+content-overview:
+  title: VUE D'ENSEMBLE
+  eli5: ELI5
+  chapter: Chapitre

@@ -236,12 +236,27 @@ button.btn-close {
   }
   .bottom-links {
     padding: 12px;
+    position: relative;
     a {
       display: block;
       color: #3d6892;
       &:hover {
         color: white;
         text-decoration: none;
+      }
+    }
+    .toggle-languages {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      background-color: #084d84;
+      color: white;
+      line-height: 40px;
+      width: 40px;
+      text-align: center;
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
       }
     }
   }

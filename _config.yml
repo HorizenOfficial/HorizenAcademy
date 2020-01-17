@@ -57,5 +57,5 @@ exclude:
 - README.md
 - vendor
 
-languages: ["en", "es"]
+languages: ["en", "es", "fr"]
 exclude_from_localizations: ["assets"]
