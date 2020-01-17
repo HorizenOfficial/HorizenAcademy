@@ -75,7 +75,7 @@ The blockchain is a rather sophisticated data structure, made up of many sub-str
 
 Blockchain organizes data by splitting it into subsets, referred to as *blocks*. Blocks are similar to the nodes of a linked list. Each block contains several elements. The elements of a block are generally separated into the *block header* and its transactions. While the transactions in a block account for most of the data; the block header contains important metadata about each block such as a timestamp and *block height*. 
 
-The secured references establish an order throughout the blocks. This established order effectively makes the blockchain an *append only* data structure. This means that new data can only be added with new blocks.
+The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper evident* whereas the *pointers* in a linked list can be changed at any time without effecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append only* data structure where new data can only be added with new blocks.
 
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
 ![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg)
