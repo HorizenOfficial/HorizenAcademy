@@ -13,7 +13,7 @@ published: false
 The verification of data is an important aspect when building a [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.
 Hash functions are mathematical one-way functions used to verify data in blockchains. They are applied in several important steps from creating an address, to proving ownership and verifying the integrity of the blockchain itself.
 
-The use cases of hash functions extent beyond blockchain technology though. In our article on the [data structure] of the blockchain we talked about other common data structures, such as  *hash tables*. As the name suggests, those would not work without hash functions.
+The use cases of hash functions extent beyond blockchain technology though. In our article on the data structure of the blockchain we talked about other common data structures, such as *hash tables*. As the name suggests, those would not work without hash functions.
 
 ### Properties of Hash Functions
 
@@ -22,13 +22,13 @@ The first notable property of all hash functions is that they consume inputs of 
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_D.jpg)
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_M.jpg)
 
-Hash functions are mathematical one-way functions. This property is also called *preimage resistance*. While it is computationally easy to perform a hash operation, it is computationally infeasible to derive an input, the *preimage* from a given output. While there is no mathematical proof for the one-wayness, the established hash functions like SHA-256 are battle proven for almost two decades now. The SHA-2 family was published in 2001.
+Hash functions are mathematical one-way functions. This property is also called *preimage resistance*. While it is computationally easy to perform a hash operation, it is computationally infeasible to derive an input, the *preimage*, from a given output. While there is no mathematical proof for their one-wayness, the established hash functions like SHA-256 are battle proven for almost two decades (the SHA-2 family was published in 2001).
 
-Cryptographic hash functions are *pseudo random*. This means, one cannot predict the change in the output, from a change of the input. Furthermore, a good hash function should map inputs as evenly as possible over it's output range. To give you a visual representation: the actual output range of the SHA-256 hash function are the values 0 to  $1.1579 \cdot 10^{77}$ which can be written out as:
+Cryptographic hash functions are *pseudo random*. This means, one cannot predict the change in the output, from a change of the input. Furthermore, a good hash function should map inputs as evenly as possible over it's output range. To give you a visual representation: the actual output range of the SHA-256 hash function are the values from 0 to $1.1579 \cdot 10^{77}$ which can be written out as:
 
 115792089237316195423570985008687907853269984665640564039457584007913129639936
 
-The closest thing to understanding what this means is playing with this [interactive scale of the universe](https://scaleofuniverse.com/) and paying attention to the dimensions in the bottom right corner.
+The closest thing to grasping the dimension of this number is to play with this [interactive scale of the universe](https://scaleofuniverse.com/) and paying attention to the dimensions in the bottom right corner.
 
 Because of the enormous output range, hash functions are practically *collision resistant*. It is infeasible to find an input *x'* that maps to the same output as another input *x*. The only strategy would be a brute-force approach, which would take even the most advanced super computers thousands of years.
 
@@ -36,41 +36,54 @@ Lastly, hash functions must be *deterministic*. Hashing a given input must alway
 
 ### Different Types of Hash Functions
 
-Not all hash functions are the same though. As we already said, one differentiator is the output space. As you can imagine this also effects properties such as collision resistance. If the output space was only 10 bit, performing 1024 hash operations would statistically suffice to find a second input *x'* mapping to the same output as *x*.
+Not all hash functions are the same though. One differentiator is the output space which effects the collision resistance. If the output space was only 10 bit, performing 1024 hash operations would statistically suffice to find a second input *x'* mapping to the same output as *x*.
 
-Depending on what a hash function is used for, the required properties vary. When a hash function is used in a [*hash table*] to map *keys* to *buckets*, collision are acceptable.
+Depending on what a hash function is used for, the required properties vary. When a hash function is used in a [*hash table*](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#hash-table) for mapping *keys* to *buckets*, collisions are acceptable. When not all criteria mentioned before are met, hash functions are called *non-cryptographic*.
 
 Some common types of non-cryptographic hash functions are:
 
-- *Perfect hash functions* map each valid input to a different hash value. This does not imply collision resistance, as the property is defined based on the input space. If inputs are limited to a small range (e.g. Customer IDs in a database) one might still be able to find collisions easily by using other inputs. Perfect hash functions are useful for hash tables.
-- *Minimal perfect hash functions* are defined on an input range and map the *n* possible inputs to exactly *n* possible outputs. These are the most useful for hash tables, because they provide single-step lookup and don't leave any empty buckets.
+- *Perfect hash functions* map each valid input to a different hash value. The output space must hence be larger than the input space. This does not imply collision resistance, as the property is defined based on the input space. If inputs are limited to a small range (e.g. Customer IDs in a database) one might still be able to find collisions easily by using other inputs. Perfect hash functions are useful for hash tables.
+- *Minimal perfect hash functions* are defined over a given input range and map the *n* possible inputs to exactly *n* possible outputs. These are the most useful for hash tables, because they provide single-step lookup and don't leave any empty buckets.
 - Hash Functions displaying continuity map similar inputs to similar outputs. While this would be considered a critical bug in cryptographic hash functions, it can be practical for certain applications such as *nearest neighbor searches* in hash tables.
 
-Cryptographic hash functions need to have all properties described in the last section, one-wayness, pseudo randomness, collision resistance and being deterministic. In order to achieve that they need to have a large output space. 
+Cryptographic hash functions need to have all properties described in the last section, one-wayness, pseudo randomness, collision resistance and being deterministic. In order to achieve that they need to have a large output space.
 
 #### Cryptographic Hash Functions
 
 Besides differing in their output size, [cryptographic hash functions](https://en.wikipedia.org/wiki/Comparison_of_cryptographic_hash_functions) inner workings also vary widely. They have different internal state sizes, different padding schemes and vary in the rounds of computing performed.
 
-The SHA-2 - Secure Hash Algorithm 2 - set of hash functions are built using the [*Merkle–Damgård construction*]. It uses a *one-way compression function* at it's core. This compression function consumes two inputs of fixed length and produces a single output of fixed length. In order for a hash function to consume variable length inputs, shorter inputs are *padded* to the fixed length. This means adding data until the required number of bits is achieved. How much data needs to be added depends on the compression function and what kind of data is added depends on the hash function. Larger inputs are split and the compression function is applied to the fragments in sequence.
+The SHA-2 - Secure Hash Algorithm 2 - set of hash functions is built using the [*Merkle–Damgård construction*]. It uses a *one-way compression function* at it's core. This compression function consumes two inputs of fixed length and produces a single output of fixed length.
+In order for a hash function to consume variable length inputs, shorter inputs are *padded* to the fixed length by adding data until the required number of bits is achieved. The amound of data added depends on the compression function and the type of data added depends on the hash function.
+Larger inputs are split and the compression function is applied to the fragments in sequence.
 
-In cryptocurrencies SHA-256 (Secure Hash Algorithm 256), RIPEMD 160 (RACE Integrity Primitives Evaluation Message Digest 160), the BLAKE family and *Keccak* (which is the basis for the SHA-3 family) are used.
+In cryptocurrencies SHA-256 (Secure Hash Algorithm 256), RIPEMD 160 (RACE Integrity Primitives Evaluation Message Digest 160), the BLAKE family and *Keccak* (which is the basis for the SHA-3 family) are the most common hsh functions.
 
-In Bitcoin and related protocols, such as Horizen, [addresses are obtained] through performing a combination of SHA256 and RIPEMD160 on a given public key. One can only [speculate](https://bitcoin.stackexchange.com/questions/16543/why-was-the-ripemd-160-hash-algorithms-chosen-before-sha-1) why Satoshi made that choice, but most likely he did so to mitigate the risk in case one function were to become vulnerable (e.g. break one-wayness).
+In Bitcoin and related protocols, such as Horizen, [addresses are obtained]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}) through performing a combination of SHA256 and RIPEMD160 on a given public key. One can only [speculate](https://bitcoin.stackexchange.com/questions/16543/why-was-the-ripemd-160-hash-algorithms-chosen-before-sha-1) why Satoshi made that choice, but most likely he did so to mitigate the risk of one function becoming vulnerable (e.g. one-wayness is broken).
 
 ### Where are Hash Functions Used?
 
 Hash functions are used for various purposes in blockchains and the examples below are by no means a complete list.
 
-Hash functions are most often talked about in the context of cryptocurrency **mining**. This is not necessarily because it is the most important (though a very important) application of hash functions from a technical perspective. It's also because by now an entire industry has been build around performing hash operations on a large scale.
+#### Mining
+
+Hash functions are most often talked about in the context of cryptocurrency [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}). This is not necessarily because it is the most important (though a very important) application of hash functions from a technical perspective. It's also because by now an entire industry has been build around performing hash operations on a large scale.
 
 Miners continuously hash the block header of new blocks, together with a variable, the *nonce*. The goal is to find a nonce that when hashed together with the rest of the header produces a hash below a certain threshold, the *target*. When that happens, they broadcast the block to the network and it's attached to the blockchain.
 
-Using hash functions makes for a good **Proof-of-Work**, because finding a hash below the target is an optimization and approximation free problem. *Optimization free* means there is no shortcut to using a trial-and error approach. *Approximation free* means, there is no "being close" to solving a block. It's a binary situation, either a solution is found, or not. This has the benefit that miners who simultaneously work on blocks, can drop their blocks once they receive a valid block from the network and start working on the next one. The chance of finding a valid nonce within the next, say minute, does not change in a meaningful way by switching to another block, no matter how long they have been working on the previous candidate.
+Using hash functions makes for a good [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}), because finding a hash below the target is an optimization and approximation free problem.
 
-Another use case for hash functions is creating short, data saving identifiers for blocks, as well as transactions. Block hashes or transaction hashes, usually called Transaction IDs (or TXIDs), can be exchanged instead of the actual blocks or transactions, e.g. when a node is requesting updates from its peers. By only transmitting the TXID first, one can save a lot of bandwidth. Only if the requesting node does not have the block in its blockchain already, the actual data of the block is being transferred.
+- *Optimization free* means there is no shortcut to using a trial-and error approach.
+- *Approximation free* means, there is no "being close" to solving a block. It's a binary situation, either a solution is found, or not.
 
-Hash functions are also used in *merkle trees*, a construction used to create a succinct (256 bit) summary of all transactions in a block, that is included in the block  header.
+Being approximation free has the benefit that miners will drop their current block and start working on a new candidate block once the chain is extended by a different miner. The chance of solving the current block within the next, say minute, does not change meaningfully by switching to another block, no matter how long they have been working on the previous candidate.
+
+#### Block and Transaction Identifiers
+
+Another use case for hash functions is creating short, data saving identifiers for blocks, as well as transactions. Block hashes or transaction hashes, usually called Transaction IDs (or TXIDs), can be exchanged instead of the actual blocks or transactions, e.g. when a node is requesting updates from its peers. By only transmitting the TXID first, one saves bandwidth. Only if the requesting node does not have the block in its blockchain already, the actual data of the block is being transferred.
+
+#### Merkle Trees
+
+Hash functions are also used in [*merkle trees*](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees), a construction used to create a succinct (256 bit) summary of all transactions in a block. This summary is included in the block header.
 Transactions are first hashed and then combined pairwise, until a single hash, the *merkle root* is obtained. If there is an odd number of transactions in a given round, the last transaction is concatenated with itself, as you can see with *H(C)* in the graphic below.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_D.jpg)
@@ -114,3 +127,9 @@ Lastly, we would like to address the concern that quantum computers could one da
 > "Quantum computers do give an increased speed up in the computation of unstructured problems such as hashing, but at the end of the day, they would still be brute forcing an attack the same way a computer today would attempt to do so." - Source\footnote{\url{https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de}}
 
 ### Summary
+
+input to output fixed
+
+criteria to be useful for cryptographic means
+
+Non-cryptographic hash functions are useful for other applications.
