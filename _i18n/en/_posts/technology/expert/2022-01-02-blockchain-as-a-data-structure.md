@@ -146,7 +146,7 @@ The block header contains the most important information about a block.
 
 Merkle Trees play an important role in ensuring the integrity of data in the blockchain but are also used in other systems such as IPFS - the InterPlanetary File System and several implementations of NoSQL databases. Let's take a look at how they work and what they do before we continue with what a transaction looks like from a data perspective.
 
-#### The Merkle Tree
+#### Merkle Trees
 
 A *merkle tree* is a data structure used within blocks. The transactions in a block make up the *leaves* of the merkle tree. The resulting *merkle root* serve as a summary of all transactions and is included in the block header.
 
