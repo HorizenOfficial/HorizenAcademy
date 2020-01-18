@@ -13,7 +13,7 @@ Dans ce dernier article de notre section Technologie Avancé, nous souhaitons r�
 
 ### Qu'est-ce que la Blockchain ?
 
-Dans notre premier chapitre de "Qu'est-ce que la Blockchain", nous l'avons examinée sous trois angles différents. Tout d'abord, nous l'avons regardée du point de vue d’un informaticien et nous avons décrit la blockchain comme [une structure de données]({{ site.baseurl }}{% post_url /es/technology/advanced/2021-01-02-blockchain-as-a-data-structure %}). Une blockchain est comme une liste chaînée, une structure de données commune avec la différence que les références qui relient les blocs individuels sont sécurisés cryptographiquement. Il est donc impossible d'altérer les données enregistrées sur une blockchain.
+Dans notre premier chapitre de "Qu'est-ce que la Blockchain ?", nous l'avons examinée sous trois angles différents. Tout d'abord, nous l'avons regardée du point de vue d’un informaticien et nous avons décrit la blockchain comme [une structure de données]({{ site.baseurl }}{% post_url /es/technology/advanced/2021-01-02-blockchain-as-a-data-structure %}). Une blockchain est comme une liste chaînée, une structure de données commune avec la différence que les références qui relient les blocs individuels sont sécurisés cryptographiquement. Il est donc impossible d'altérer les données enregistrées sur une blockchain.
 
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_broken_D.jpg)
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_broken_M.jpg)

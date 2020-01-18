@@ -12,7 +12,7 @@ further_reads: [is_your_browser_safe_against_tracking, snowden_movie]
 
 Dans notre section pour débutants, nous avons abordé le sujet de la compromission de la vie privée sur les deux appareils les plus utilisés : votre téléphone et votre ordinateur. Dans notre précédent article, nous avons parlé spécifiquement du téléphone et comme les smartphones d'aujourd'hui ne sont presque que de petits ordinateurs, la majorité de l'article s'applique également à celui-ci.
 
-Comme les ordinateurs sont relativement plus ouverts que les smartphones, les vecteurs d'attaque sont également plus importants:
+Comme les ordinateurs sont relativement plus ouverts que les smartphones, les vecteurs d'attaque sont également plus importants :
 
 - La protection par mot de passe/PIN est l'essentiel absolu - sans cela, votre ordinateur est comme une maison ouverte, invitant n'importe qui à mettre la main sur ce qu'il veut.
 - Les applications provenant de boutiques en ligne non officielles et de sites Web non officiels sont également dangereuses. Personne n’en vérifie la validité et l'intégrité et les attaquants tirent souvent parti de cette faille. Pour tout système d'exploitation, il est essentiel de s'en tenir aux boutiques d'applications officielles et aux sites Web officiels également.

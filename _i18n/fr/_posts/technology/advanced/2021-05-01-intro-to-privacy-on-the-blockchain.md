@@ -2,11 +2,11 @@
 layout: post
 type: intro
 title: "Privacidad en la cadena de bloques"
-description: "Aquí le presentamos las diferentes tecnologías que permiten transacciones privadas en una cadena de bloques pública."
+description: "Alors que la plupart des cryptomonnaies ne sont pas privées par défaut, vous avez l’option de créer de véritables transactions privées. Ce chapitre présente les différentes méthodes qui permettent d'assurer le respect de la vie privée sur la blockchain."
 permalink: /technology/advanced/privacy-on-the-blockchain/
 topic: technology
 level: advanced
-chapter: "Privacidad"
+chapter: "La confidentialité en ligne"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
 ---
 
@@ -49,12 +49,12 @@ Le niveau de confidentialité fourni par les services de mixing est bien meilleu
 
 Les _ring signatures_ (traduit littéralement par signature en anneau, mais on utilise le terme ring signature en français) ont été introduites pour la première fois par Rivest, Shamir et Taumann en 2001 et l'idée générale a été utilisée pour un certain nombre de protocoles de confidentialité depuis lors. Nous utiliserons le dilemme de la fuite de la Maison-Blanche pour démontrer la proposition de valeur de leur concept.
 
-Imaginez un haut fonctionnaire de la Maison-Blanche (Alice) voulant révéler un secret à la presse au sujet du président. Elle doit s'assurer que le journaliste qui reçoit la fuite a un moyen de vérifier la source de l'information sans révéler son identité. Ce qu'elle peut faire, c'est utiliser une _ring signature_ pour signer le message. Pour construire la _ring signature_, il lui suffit d'avoir sa clé privée et les clés publiques des autres dénonciateurs possibles, par exemple d'autres membres du cabinet (Bob et Carol).
+Imaginez un haut fonctionnaire de la Maison-Blanche (Alice) voulant révéler un secret à la presse au sujet du président. Elle doit s'assurer que le journaliste qui reçoit la fuite a un moyen de vérifier la source de l'information sans révéler son identité. Ce qu'elle peut faire, c'est utiliser une _ring signature_ pour signer le message. Pour construire la _ring signature_, il lui suffit d'avoir sa clé privée et les clés publiques des autres dénonciateurs possibles, par exemple d'autres membres du cabinet (Bob et Carole).
 
 ![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/FR_ring_sig_D.jpg)
 ![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/FR_ring_sig_M.jpg)
 
-Le vérificateur (journaliste) peut vérifier que le message a bien été signé par un haut fonctionnaire, mais il ne peut déterminer qui a construit la signature (Alice, Bob ou Carol ?).
+Le vérificateur (journaliste) peut vérifier que le message a bien été signé par un haut fonctionnaire, mais il ne peut déterminer qui a construit la signature (parmi Alice, Bob et Carole).
 
 Dans le contexte des cryptomonnaies, un utilisateur peut collecter un ensemble de clés publiques, créer une transaction et la signer en utilisant sa clé privée. L'ensemble des vérificateurs, qui sont les nœuds du réseau, peuvent vérifier que la transaction est valide et qu'un des membres du groupe a signé le message. Ils ne peuvent pas dire qui a signé la transaction, ce qui rend les _ring signatures_ idéales pour les transactions privées. Monero est la cryptomonnaie la plus remarquable utilisant les _ring signatures_ qui font partie du protocole CryptoNote sur lequel Monero est construit.
 
@@ -71,7 +71,7 @@ Au deuxième tour, le prouveur aurait une chance sur deux d'obtenir la bonne ré
 
 S'ils répètent le jeu plusieurs fois, les chances d'obtenir la bonne réponse à chaque fois en devinant diminuent de façon exponentielle. Après seulement dix tours de jeu, la chance de trouver la bonne balle à chaque fois par pure chance a diminué à 1 en 1024 (1 / 2^10). La personne aux yeux bandés peut être certaine que les deux boules sont de couleurs différentes, bien que le prouveur n'ait partagé aucune information sur les couleurs elles-mêmes.
 
-L'idée d'utiliser les Zero-Knowledge Proofs pour les transactions de cryptomonnaie est la suivante : Vous construisez une preuve que la transaction que vous voulez envoyer serait considérée comme valide par un nœud de vérification sans révéler aucune des données réelles de la transaction. Ceci permet à l'expéditeur, au destinataire et au montant de rester privé. Un autre cas d'utilisation qui est parfait pour l'application des zk-Proofs est la vérification d'identité. Par exemple, vous pouvez prouver à une entité que vous êtes d'un certain âge sans révéler aucune donnée personnelle comme votre date de naissance. Horizen utilise les zkSNARKs pour ses transactions protégées. Les zkSNARKs sont un type spécial de Zero-Knowledge Proofs, à savoir _Zero-Knowledge Succinct Non-interactive ARguments of Knowledge_.
+L'idée d'utiliser les Zero-Knowledge Proofs pour les transactions de cryptomonnaie est la suivante : vous construisez une preuve que la transaction que vous voulez envoyer serait considérée comme valide par un nœud de vérification sans révéler aucune des données réelles de la transaction. Ceci permet à l'expéditeur, au destinataire et au montant de rester privé. Un autre cas d'utilisation qui est parfait pour l'application des zk-Proofs est la vérification d'identité. Par exemple, vous pouvez prouver à une entité que vous êtes d'un certain âge sans révéler aucune donnée personnelle comme votre date de naissance. Horizen utilise les zkSNARKs pour ses transactions protégées. Les zkSNARKs sont un type spécial de Zero-Knowledge Proofs, à savoir _Zero-Knowledge Succinct Non-interactive ARguments of Knowledge_.
 
 - _Succinct_ signifie que les preuves sont courtes, c'est-à-dire faciles à calculer et à vérifier.
 - _Non interactif_ signifie que le prouveur et le vérificateur n'ont pas besoin d'être en ligne en même temps. Avec l'exemple ci-dessus, le prouveur et le vérificateur doivent faire plusieurs allers-retours avant que le vérificateur ait sa preuve. Avec les épreuves non interactives, le prouveur peut construire la preuve entièrement seul, sans avoir besoin de communication dans le processus.

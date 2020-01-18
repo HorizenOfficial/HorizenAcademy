@@ -49,11 +49,11 @@ Pour cet article, vous devriez avoir une compréhension des concepts de la techn
 
 Le SCP proposé est basé sur le protocole Ouroboros développé par IOHK pour le projet Cardano avec quelques légères modifications. Il s'agit d'un protocole consensuel fondé sur la preuve d'enjeu qui fait appel au concept de délégation et qui fonctionne généralement comme ceci :
 
-- le temps est divisé en époques de “k” slots. Il n'est pas encore spécifié, mais supposons que “k” sera 8 pour les besoins de la démonstration (et correspondant au graphique ci-dessous);
-- chaque slot représente la possibilité de créer un bloc de sidechain dans une certaine période de temps. Les recherches suggèrent que 20 secondes est un temps raisonnable pour permettre la synchronisation du réseau à travers le monde. Pendant une époque jusqu'à “k” blocs seront forgés;
-- il y a un slot leader pour chaque slot. Le slot leader est autorisé à générer un bloc au cours de cette période de temps.
-Avant qu'une époque ne commence, il y a une Procédure de Sélection des Slot Leaders qui assigne un slot leader par slot pour l'époque suivante (dans notre exemple, 8 slot leaders seront sélectionnés par procédure/époque de sélection);
-- si un slot leader n’arrive pas à forger son bloc dans le temps imparti, le prochain slot leader inclura dans son bloc les transactions qui n'avaient pas été incluses dans le bloc non créé du précédent créneau.
+- Le temps est divisé en époques de “k” slots. Il n'est pas encore spécifié, mais supposons que “k” sera 8 pour les besoins de la démonstration (et correspondant au graphique ci-dessous) ;
+- Chaque slot représente la possibilité de créer un bloc de sidechain dans une certaine période de temps. Les recherches suggèrent que 20 secondes est un temps raisonnable pour permettre la synchronisation du réseau à travers le monde. Pendant une époque jusqu'à “k” blocs seront forgés ;
+- Il y a un slot leader pour chaque slot. Le slot leader est autorisé à générer un bloc au cours de cette période de temps.
+Avant qu'une époque ne commence, il y a une Procédure de Sélection des Slot Leaders qui assigne un slot leader par slot pour l'époque suivante (dans notre exemple, 8 slot leaders seront sélectionnés par procédure/époque de sélection) ;
+- Si un slot leader n’arrive pas à forger son bloc dans le temps imparti, le prochain slot leader inclura dans son bloc les transactions qui n'avaient pas été incluses dans le bloc non créé du précédent créneau.
 
 ![epoch](/assets/post_files/horizen/expert/sidechains/FR_epoch_D.jpg)
 ![epoch](/assets/post_files/horizen/expert/sidechains/FR_epoch_M.jpg)
@@ -137,8 +137,8 @@ La validation des transactions vers l'avant s'effectue par référencement compl
 
 Alors, comment le référencement complet permet-il d'atteindre les objectifs mentionnés ci-dessus ? Les références peuvent être l'une de deux choses suivantes :
 
- - si le bloc de la chaîne principale ne contient aucune transaction vers la sidechain en question, seul le hachage du bloc est utilisé comme référence;
- - s'il y a une ou plusieurs transactions vers l'avant dans le dernier bloc, l'en-tête de bloc entier, la ou les transaction(s) vers l’avant et le chemin de Merkle de la ou des transaction(s) sont utilisés comme référence.
+ - Si le bloc de la chaîne principale ne contient aucune transaction vers la sidechain en question, seul le hachage du bloc est utilisé comme référence;
+ - S'il y a une ou plusieurs transactions vers l'avant dans le dernier bloc, l'en-tête de bloc entier, la ou les transaction(s) vers l’avant et le chemin de Merkle de la ou des transaction(s) sont utilisés comme référence.
 
 Les nœuds de la sidechain peuvent facilement vérifier les transferts en incluant l'en-tête de bloc et le chemin Merkle des transactions vers l'avant. Vous pourriez considérer les deux registres, sidechain et chaîne principale, comme deux registres distincts. Puisque les teneurs de registre de la sidechain surveillent constamment le registre de la chaîne principale, ils peuvent facilement ajouter des transactions inter-chaînes à leur registre. En incluant les transactions avec leurs chemins Merkle et l'en-tête de bloc correspondant, chaque entité de la sidechain pourra vérifier que la transaction est valide par elle-même sans avoir à se connecter à la chaîne principale.
 
@@ -148,7 +148,7 @@ Les nœuds de la sidechain peuvent facilement vérifier les transferts en inclua
 
 L'activation du protocole de transfert vers l'avant implique d'apporter des modifications à la logique actuelle de la chaîne principale. Un nouveau type de transaction doit être introduit, qui brûle les coins et fournit un ensemble de métadonnées qui permet à l'utilisateur de réclamer le même montant (moins les frais de TX) sur la sidechain. Il en va de même pour les transactions vers l'arrière : les coins sur la sidechain sont brûlés et un montant équivalent moins les frais de TX sont créés sur la chaîne principale. Une construction avec une procédure de verrouillage et de déverrouillage est également possible.
 
-L'autre problème qui est résolu concerne le caractère irréversible des blockchains en preuve de travail utilisant le consensus de Satoshi. Il est possible qu'une transaction vers l'avant valide soit d'abord incluse dans un bloc de la chaîne principale, mais que le bloc contenant la transaction soit "forké" (de l'anglais "forked" ndt) et devienne orphelin peu après. Cela pourrait créer la possibilité de faire une double dépense (une fois sur la chaîne principale et une fois sur la sidechain) si la transaction a déjà été ajoutée au registre de la sidechain. La liaison élimine une telle situation. Dans le cas d'un fork de la chaîne principale, les blocs de la sidechain qui se réfèrent au bloc de la chaîne principale forkée seront également inversés.
+L'autre problème qui est résolu concerne le caractère irréversible des blockchains en preuve de travail utilisant le consensus Nakamoto. Il est possible qu'une transaction vers l'avant valide soit d'abord incluse dans un bloc de la chaîne principale, mais que le bloc contenant la transaction soit "forké" (de l'anglais "forked" ndt) et devienne orphelin peu après. Cela pourrait créer la possibilité de faire une double dépense (une fois sur la chaîne principale et une fois sur la sidechain) si la transaction a déjà été ajoutée au registre de la sidechain. La liaison élimine une telle situation. Dans le cas d'un fork de la chaîne principale, les blocs de la sidechain qui se réfèrent au bloc de la chaîne principale forkée seront également inversés.
 
 ### Transactions vers l'arrière et certificateurs
 
@@ -156,7 +156,7 @@ Passons maintenant à la partie la plus intéressante. Comment la chaîne princi
 
 J'aimerais revenir sur le facteur différenciateur des sidechains et des drivechains que j'ai mentionné plus tôt. Pour une construction de sidechain connectée, il existe deux modes opérationnels qui concernent l'exécution des transactions vers l'arrière : synchrone et asynchrone.
 
-**Anglaid**
+**Anglais**
 
 > The synchronous mode implies that both main and sidechains are aware of each other and can verify transfer transactions directly, while the asynchronous mode relies on validators to process transfers. - Sidechain Whitepaper; Garoffolo, Viglione
 
@@ -189,12 +189,12 @@ Si le montant par certificat n'était pas plafonné, il serait possible de bloqu
 
 L'application de cette mesure repose sur l'hypothèse d'une majorité honnête. Comme vous l'avez peut-être remarqué, il y a un champ de données contenu dans la liste des signalements de fraudes de CCCert. Ce champ serait utilisé de la manière suivante en cas de fraude :
 
-un certificat frauduleux CCCert(i) est créé en privé et signé par la majorité des certificateurs du groupe(i);
-le certificat frauduleux CCCert(i) est alors envoyé à la chaîne principale et inclus dans un bloc(i). La chaîne principale n'est pas en mesure de vérifier le certificat et de détecter la fraude elle-même;
-le certificat frauduleux se synchronise dans la sidechain (voir Référencement complet);
-le groupe suivant de certificateurs (i+1) vérifie le CCCert(i) précédent sur la sidechain, détecte la fraude et inclut un rapport de fraude dans leur certificat CCCert(i+1).;
-une fois que la chaîne principale reçoit CCCert(i+1) contenant le rapport de fraude, le groupe de certificateurs - malveillants(i) ne sera pas en mesure de débloquer leur dépôt;
-si le groupe (i+1) n'inclut pas de rapport de fraude, le groupe suivant (i+2) le fera et les deux groupes frauduleux d'avant (i et i+1) perdront leur dépôt.
+- Un certificat frauduleux CCCert(i) est créé en privé et signé par la majorité des certificateurs du groupe(i) ;
+- Le certificat frauduleux CCCert(i) est alors envoyé à la chaîne principale et inclus dans un bloc(i). La chaîne principale n'est pas en mesure de vérifier le certificat et de détecter la fraude elle-même ;
+- Le certificat frauduleux se synchronise dans la sidechain (voir Référencement complet) ;
+- Le groupe suivant de certificateurs (i+1) vérifie le CCCert(i) précédent sur la sidechain, détecte la fraude et inclut un rapport de fraude dans leur certificat CCCert(i+1) ;
+- Une fois que la chaîne principale reçoit CCCert(i+1) contenant le rapport de fraude, le groupe de certificateurs - malveillants(i) ne sera pas en mesure de débloquer leur dépôt ;
+- Si le groupe (i+1) n'inclut pas de rapport de fraude, le groupe suivant (i+2) le fera et les deux groupes frauduleux d'avant (i et i+1) perdront leur dépôt.
 
 En ne signalant pas une fraude détectée, un groupe risquerait de perdre son dépôt, tout comme le groupe initialement malveillant. Il est également important de noter que la conception du protocole rend impossible le fait que les certificateurs d’un groupe se retrouvent dans le groupe de certificateurs suivant.
 

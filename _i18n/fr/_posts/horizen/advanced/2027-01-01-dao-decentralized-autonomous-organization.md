@@ -17,7 +17,7 @@ Les règles et procédures qui régissent l'organisation sont transcrites en cod
 
 Pour que le processus décisionnel soit décentralisé il faut qu'il y ait un système de vote en place. Ce système de vote doit être fiable et nous avons décidé de l'implémenter sur une sidechain qui fonctionnera en parallèle de notre blockchain principale. Nous parlerons davantage des sidechains dans article dédié.
 
-Pour que le système de vote soit optimal, il faudrait pouvoir permettre aux experts d'avoir le plus de poids possible dans le processus décisionnel lorsque les décisions portent sur leurs domaines de compétence, sans pour autant priver de leur droit de vote les utilisateurs non experts. Si vous êtes un développeur, vous voterez probablement à chaque fois que des propositions concernant du nouveau code sont soumises. A contrario, il se peut que vous n'ayez pas de connaissances en marketing et jugiez préférable que d'autres personnes que vous décident des conférences auxquelles participer et des évènements à soutenir. Un expert en marketing voudra décider des conférences auxquelles participer mais ne se sentira pas qualifié pour pouvoir avoir une opinion éclairée concernant l'implémentation de nouveau code.
+Pour que le système de vote soit optimal, il faudrait pouvoir permettre aux experts d'avoir le plus de poids possible dans le processus décisionnel lorsque les décisions portent sur leurs domaines de compétence, sans pour autant priver de leur droit de vote les utilisateurs non experts. Si vous êtes un développeur, vous voterez probablement à chaque fois que des propositions concernant du nouveau code sont soumises. À contrario, il se peut que vous n'ayez pas de connaissances en marketing et jugiez préférable que d'autres personnes que vous décident des conférences auxquelles participer et des évènements à soutenir. Un expert en marketing voudra décider des conférences auxquelles participer mais ne se sentira pas qualifié pour pouvoir avoir une opinion éclairée concernant l'implémentation de nouveau code.
 
 La démocratie liquide est un concept qui promet de résoudre ce problème de façon équitable et efficace.
 
@@ -32,8 +32,8 @@ La démocratie liquide est un hybride dynamique des deux branches établies de l
 Dans une démocratie liquide, il n'y a pas de mandat électoral. Vous pouvez déléguer votre vote à un expert ou le retirer à tout moment. Les experts sont ainsi tenus de rendre des comptes.
 
 
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/FR_liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/horizen/expert/dao/FR_liquid_democracy_M.jpg)
 
 ### Les entités
 

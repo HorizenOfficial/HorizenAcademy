@@ -6,7 +6,7 @@ description: "Les Fonctions de Hachage sont une part importante dans n’importe
 permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [hash_functions_explained_with_emojis]
 ---
 

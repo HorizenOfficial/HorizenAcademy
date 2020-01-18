@@ -9,7 +9,7 @@ level: advanced
 chapter: "Portefeuilles"
 ---
 
-_Note du traducteur: Pour parler des portefeuilles, je parle aussi souvent de wallets, qui en est le mot anglais. En effet, dans le langage courant en français, vous pourrez entendre à la fois wallet, et portefeuille._
+_Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de wallets, qui en est le mot anglais. En effet, dans le langage courant en français, vous pourrez entendre à la fois wallet, et portefeuille._
 
 Un wallet est un programme pour générer, gérer et stocker une paire de clés cryptographiques. Vous pouvez vérifier votre solde, recevoir et envoyer des fonds dans votre wallet.
 
@@ -67,7 +67,7 @@ En conclusion, un web wallet non hébergé est très pratique et tout aussi sûr
 
 Si vous commencez par la question "où sont vos clés", le wallet de bureau et le wallet mobile vous donneront la même réponse : sur l'appareil. Les téléphones et tablettes sont plus puissants que jamais, la différence entre un wallet de bureau et un wallet mobile est marginale. On peut également se demander si l'un est plus sûr que l'autre.
 
-Vous connaissez maintenant les tâches qu'un wallet effectue : visualiser, recevoir et envoyer. Si vous voulez utiliser la crypto pour les transactions quotidiennes, il n'y a presque aucun autre moyen que de garder des fonds dans un wallet mobile. Comme mentionné précédemment, lorsque vous créez votre wallet, vous obtiendrez une phrase mnémonique que vous devez garder en lieu sûr. Habituellement, il y a un PIN, un mot de passe ou une protection Face-/Touch-ID pour accéder au wallet. Vous ne devriez jamais garder plus d'argent dans un wallet mobile que ce que vous êtes prêt à perdre. C'est la même chose qu'avec de l'argent comptant : vous ne transportez pas tout votre argent dans un portefeuille. Vous retirez autant que vous êtes à l'aise avec l'argent comptant et gardez le reste dans votre compte (ou sous le matelas :P).
+Vous connaissez maintenant les tâches qu'un wallet effectue : visualiser, recevoir et envoyer. Si vous voulez utiliser la crypto pour les transactions quotidiennes, il n'y a presque aucun autre moyen que de garder des fonds dans un wallet mobile. Comme mentionné précédemment, lorsque vous créez votre wallet, vous obtiendrez une phrase mnémonique que vous devez garder en lieu sûr. Habituellement, il y a un PIN, un mot de passe ou une protection Face-/Touch-ID pour accéder au wallet. Vous ne devriez jamais garder plus d'argent dans un wallet mobile que ce que vous êtes prêt à perdre. C'est la même chose qu'avec de l'argent comptant : vous ne transportez pas tout votre argent dans un portefeuille. Vous retirez autant que vous êtes à l'aise avec l'argent comptant et gardez le reste dans votre compte (ou sous le matelas :P ).
 
 Avec les wallets de bureau et les wallets mobiles, vous avez le choix entre des options à monnaie unique ou multidevises. Ces termes devraient être assez explicites. Le premier vous permet de stocker un coin spécifique, tandis que le second prend en charge plusieurs devises. Certains des exemples les plus populaires pour le bureau incluent Coinomi et Sphere by Horizen. Pour le mobile, il y a Coinomi, Mycelium ou Paytomat pour n'en citer que quelques-uns.
 
@@ -81,9 +81,9 @@ Si vous avez reçu vos premiers coins sur une plateforme d'échange, je vous rec
 
 ### Les paper wallets (portefeuilles en papier!)
 
-Reprenons notre fil d'or et demandons-nous "où sont les clés". Le [paper wallet](https://zenpaperwallet.com/) vous donne une réponse simple: dans votre main ! Un portefeuille en papier est votre paire de clés publique et privée imprimée sur papier. Presque toutes les cryptomonnaies offrent un générateur de paper wallet. Pour créer une paire de clés, vous devez généralement d'abord créer une certaine entropie (un terme pour désigner le désordre), en d'autres termes : vous voulez que vos clés soient aussi aléatoires que possible. Cela se fait la plupart du temps automatiquement, mais parfois vous trouverez des fonctions où vous devez déplacer votre souris ou appuyer sur les touches de votre clavier au hasard pour créer un effet aléatoire.
+Reprenons notre fil d'or et demandons-nous "où sont les clés". Le [paper wallet](https://zenpaperwallet.com/) vous donne une réponse simple : dans votre main ! Un portefeuille en papier est votre paire de clés publique et privée imprimée sur papier. Presque toutes les cryptomonnaies offrent un générateur de paper wallet. Pour créer une paire de clés, vous devez généralement d'abord créer une certaine entropie (un terme pour désigner le désordre), en d'autres termes : vous voulez que vos clés soient aussi aléatoires que possible. Cela se fait la plupart du temps automatiquement, mais parfois vous trouverez des fonctions où vous devez déplacer votre souris ou appuyer sur les touches de votre clavier au hasard pour créer un effet aléatoire.
 
-Lorsque vous imprimez votre paper wallet, vous ne devriez pas utiliser une imprimante partagée comme celle de votre bureau. Dans le meilleur des cas, l'imprimante ne dispose même pas d'une fonction WiFi/réseau. Les imprimantes conservent généralement une copie des fichiers qu'elles ont imprimés en dernier, et un attaquant pourrait l'exploiter. Vous obtiendrez quelque chose ressemblant à ceci après avoir imprimé le wallet de façon sécuritaire:
+Lorsque vous imprimez votre paper wallet, vous ne devriez pas utiliser une imprimante partagée comme celle de votre bureau. Dans le meilleur des cas, l'imprimante ne dispose même pas d'une fonction WiFi/réseau. Les imprimantes conservent généralement une copie des fichiers qu'elles ont imprimés en dernier, et un attaquant pourrait l'exploiter. Vous obtiendrez quelque chose ressemblant à ceci après avoir imprimé le wallet de façon sécuritaire :
 
 ![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.jpg)
 

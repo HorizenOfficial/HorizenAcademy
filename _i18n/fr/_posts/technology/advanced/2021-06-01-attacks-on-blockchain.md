@@ -30,7 +30,7 @@ La technologie Blockchain prétend avoir résolu ce problème, bien que cela n�
 ![Byzantine](/assets/post_files/technology/advanced/Ataques-on-blockchain/FR_byz_1_D.jpg)
 ![Byzantine](/assets/post_files/technology/advanced/Ataques-on-blockchain/FR_byz_1_M.jpg)
 
- Général a maintenant un registre des événements qui est toujours synchronisé avec les registres de l'autre Général sans qu'une partie centrale ne soit responsable de la coordination. Chaque fois qu'un bloc est miné, tous les participants s'entendent sur l'ordre des événements des deux dernières minutes. Pour en revenir au problème de notre général, ils ont maintenant un moyen de savoir s'ils vont tous attaquer, ou s'ils doivent battre en retraite collectivement. Maintenant que nous avons parlé du problème général qu'un [mécanisme de consensus]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) vise à résoudre, examinons quelques scénarios d'attaque simples et intuitifs et comment nous les abordons.
+Le Général maintenant un registre des événements qui est toujours synchronisé avec les registres de l'autre Général sans qu'une partie centrale ne soit responsable de la coordination. Chaque fois qu'un bloc est miné, tous les participants s'entendent sur l'ordre des événements des deux dernières minutes. Pour en revenir au problème de notre général, ils ont maintenant un moyen de savoir s'ils vont tous attaquer, ou s'ils doivent battre en retraite collectivement. Maintenant que nous avons parlé du problème général qu'un [mécanisme de consensus]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) vise à résoudre, examinons quelques scénarios d'attaque simples et intuitifs et comment nous les abordons.
 
 ### Attaque DDoS
 
@@ -56,7 +56,7 @@ Une façon d'atténuer les attaques Sybil est d'introduire ou d'augmenter le co�
 
 Le type d'attaque le plus connu contre les blockchains publiques en PoW est l'attaque 51 %. L'objectif d'une attaque 51% est de faire des _doubles dépenses_, ce qui signifie dépenser le même coin deux fois. Pour effectuer une attaque 51% sur un réseau blockchain, vous devez contrôler une majorité du taux de hachage ou de la puissance de calcul du réseau, d'où le nom.
 
-Un mineur malveillant souhaitant effectuer une double dépense créera d'abord une transaction régulière en dépensant ses coins pour un bien ou pour une autre devise sur une plateforme d'échange. C'est ce qui se passe dans le bloc 40 ci-dessous. En même temps, il commencera à exploiter une chaîne privée. Cela signifie qu'il suivra le protocole minier habituel à deux exceptions près.
+Un mineur malveillant souhaitant effectuer une double dépense créera d'abord une transaction régulière en dépensant ses coins pour un bien ou pour une autre devise sur une plateforme d'échange. C'est ce qui se passe dans le bloc 40 ci-dessous. En même temps, il commencera à exploiter une chaîne privée. Cela signifie qu'il suivra le protocole minier habituel à deux exceptions près :
 
 - Premièrement, il n'inclura pas ses propres dépenses de transaction de ses coins dans sa chaîne minée en privée.
 - Deuxièmement, il ne diffusera pas les blocs qu'il trouve sur le réseau, c'est pourquoi nous l'appelons la chaîne privée.
@@ -64,7 +64,7 @@ Un mineur malveillant souhaitant effectuer une double dépense créera d'abord u
 ![51% Attack](/assets/post_files/technology/advanced/Ataques-on-blockchain/FR_percent_D.jpg)
 ![51% Attack](/assets/post_files/technology/advanced/Ataques-on-blockchain/FR_percent_M.jpg)
 
-S'il contrôle la majorité de la puissance de calcul, sa chaîne croîtra en moyenne plus vite que la chaîne honnête. La règle de la plus longue chaîne dans les blockchains en PoW, également connue sous le nom de consensus Satoshi, régit ce qui se passe dans le cas d'un tel fork. La branche (le fork), qui a plus de blocs, représente la chaîne créée avec une plus grande puissance de calcul, et est considérée comme la chaîne valide.
+S'il contrôle la majorité de la puissance de calcul, sa chaîne croîtra en moyenne plus vite que la chaîne honnête. La règle de la plus longue chaîne dans les blockchains en PoW, également connue sous le nom de consensus Nakamoto, régit ce qui se passe dans le cas d'un tel fork. La branche (le fork), qui a plus de blocs, représente la chaîne créée avec une plus grande puissance de calcul, et est considérée comme la chaîne valide.
 
 Une fois que l'attaquant a reçu le bien ou une autre devise achetée avec ses coins, il diffuse la branche privée sur l'ensemble du réseau. Tous les mineurs honnêtes lâcheront alors la branche honnête et commenceront de miner au delà de la chaîne malveillante. Le réseau traite la transaction de l'attaquant comme si elle n'avait jamais eu lieu parce que l'attaquant ne l'a pas incluse dans la chaîne malveillante. L'attaquant contrôle toujours ses fonds et peut maintenant les dépenser à nouveau.
 

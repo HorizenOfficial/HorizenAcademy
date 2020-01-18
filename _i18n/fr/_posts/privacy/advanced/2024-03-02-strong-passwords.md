@@ -10,7 +10,7 @@ chapter: "Les bonnes pratiques"
 further_reads: [how_to_create_a_strong_password]
 ---
 
-Réutiliser le même mot de passe sur de nombreux sites Web et applications est la première mauvaise pratique en matière de sécurité. Même les plateformes les plus importantes et les plus robustes sont piratées et les informations d'identification de leurs utilisateurs sont vendues sur le marché noir. Il y a eu des cas où les données volées étaient également accessibles au public. Imaginez si vos informations d'identification se trouvaient dans l'une de ces bases de données; chaque compte pour lequel vous avez utilisé le même mot de passe serait piraté également.
+Réutiliser le même mot de passe sur de nombreux sites Web et applications est la première mauvaise pratique en matière de sécurité. Même les plateformes les plus importantes et les plus robustes sont piratées et les informations d'identification de leurs utilisateurs sont vendues sur le marché noir. Il y a eu des cas où les données volées étaient également accessibles au public. Imaginez si vos informations d'identification se trouvaient dans l'une de ces bases de données ; chaque compte pour lequel vous avez utilisé le même mot de passe serait piraté également.
 
 Il est important que vous utilisiez un mot de passe différent pour chaque site Web ou application pour lequel vous créez un compte. Considérez ceci comme la meilleure pratique de sécurité.
 
@@ -26,9 +26,10 @@ Avec le phishing, un attaquant essaie de vous faire donner votre mot de passe de
 
 Lorsque vous recevez un courriel suspect comme dans l'exemple ci-dessus, veuillez ne pas cliquer sur le lien. En cas de doute, visitez le site Web comme vous le feriez normalement et vérifiez votre compte pour voir si vous avez des notifications concernant la vérification de vos identifiants. Si vous n'avez pas de notification, l'e-mail est très certainement une arnaque.
 
-Si un attaquant ne peut pas vous soutirer votre mot de passe par la ruse, il a deux autres options:
+Si un attaquant ne peut pas vous soutirer votre mot de passe par la ruse, il a deux autres options :
 
 Attaque par dictionnaire - Dans une attaque par dictionnaire, les pirates essaient un grand nombre de mots communs, par exemple à partir d'un dictionnaire. Ils utiliseront non seulement les mots réguliers du dictionnaire Larousse, mais aussi les mots de passe les plus courants. Dans le cas où certains de vos mots de passe ressemblent à : Password123, P4ssword, P4ssw0rt ou Thisismypassword vous êtes très vulnérables à une telle attaque.
+
 Brute Force Attack - Une attaque de force brute se concentre sur votre mot de passe. Bien qu'un attaquant n'utilisera cette méthode que si vous êtes la seule cible. Lors d'une attaque par force brute, le pirate va essayer toutes les combinaisons possibles de caractères, de chiffres et de symboles jusqu'à ce que l'attaquant accède à votre compte.
 
 L'attaquant combinera très probablement l'attaque par dictionnaire et l'attaque par force brute en essayant d'abord les mots de passe les plus courants avant de passer à la devinette aléatoire.
