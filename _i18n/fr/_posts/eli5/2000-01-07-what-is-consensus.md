@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce que le Consensus?"
+title: "Qu'est-ce que le Consensus ?"
 description: "Le mécanisme de consensus s'assure que tout le réseau s'accorde sur un historique unique des transactions."
 permalink: /eli5/what-is-consensus/
 topic: eli5

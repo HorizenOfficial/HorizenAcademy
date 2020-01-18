@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce que le minage (ou mining)? "
+title: "Qu'est-ce que le minage (ou mining) ? "
 description: "Un mineur est quelqu'un qui regarde ce qui se passe sur le réseau et qui enregistre chaque transfert d'argent."
 permalink: /eli5/what-is-mining/
 topic: eli5
@@ -11,7 +11,7 @@ topic: eli5
     <tr>
         <td class="icon"><img src="/assets/post_files/eli5/what-is-mining/Mining.jpg" alt="Mining"></td>
         <td>
-            Le minage fait partie de l'établissement d'un <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">consenso</a> sur une blockchain qui utilise la méthode de la preuve de travail pour déterminer l'ordre des événements.
+            Le minage fait partie de l'établissement d'un <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-07-what-is-consensus %}">consensus</a> sur une blockchain qui utilise la méthode de la preuve de travail pour déterminer l'ordre des événements.
         </td>
     </tr>
 </table> 

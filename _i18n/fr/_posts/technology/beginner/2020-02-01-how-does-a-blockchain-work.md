@@ -1,12 +1,12 @@
 ---
 layout: post
 type: intro
-title: "Comment fonctionne une Blockchain?"
+title: "Comment fonctionne une Blockchain ?"
 description: "Dans ce chapitre, nous vous présenterons les principes de base qui font fonctionner les blockchains. Nous parlerons des parties prenantes qui maintiennent la blockchain et de la propriété sur la blockchain."
 permalink: /technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 Après avoir lu nos deux premiers articles sur ce qu'est une blockchain, vous savez que dans sa forme la plus simple, c'est une méthode pour stocker des données. Cette méthode de traitement des données vous permet de transférer de la valeur sans impliquer une entité centrale. Nous avons comparé le protocole blockchain, qui est un protocole de transfert de valeur, avec le protocole internet, qui vous permet de transférer des informations. Nous avons également comparé la blockchain à la poste qui est un "protocole" pour l'envoi de marchandises physiques.

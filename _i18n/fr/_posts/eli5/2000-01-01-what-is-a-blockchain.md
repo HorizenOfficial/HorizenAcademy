@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce qu'une blockchain?"
+title: "Qu'est-ce qu'une blockchain ?"
 description: "Comparaison de la blockchain et ses blocs avec un livre et ses pages"
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
@@ -12,8 +12,8 @@ Une blockchain fonctionne comme un grand livre sur internet. Ce livre garde la t
 
 Un seul bloc dans la blockchain est comme une seule page dans un livre. Vous ne pouvez faire qu'un nombre limité de transactions sur une page et vous devez utiliser la suivante lorsque la page est pleine.
 
-![What is a Blockchain in FR](/assets/post_files/eli5/what-is-a-blockchain/ES_what_is_blockchain_D.jpg)
-![What is a Blockchain in FR](/assets/post_files/eli5/what-is-a-blockchain/ES_what_is_blockchain_M.jpg)
+![What is a Blockchain in FR](/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_D.jpg)
+![What is a Blockchain in FR](/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_M.jpg)
 
 La blockchain documente chaque transfert d'argent. Cela garantit que personne ne peut dépenser son argent deux fois. Si vous avez un ZEN et que vous l'envoyez à un ami ou à une boutique en ligne, l'autre personne a maintenant le contrôle de ce ZEN et vous ne pouvez plus l'utiliser.
 

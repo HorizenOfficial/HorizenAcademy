@@ -6,15 +6,15 @@ description: "Dans ce premier article de ce chapitre, nous nous intéresserons �
 permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner
-chapter: "Qu’est-ce que la Blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 ---
 
 Bienvenue dans le tout premier article de la section Technologie de notre Académie Horizen. Les deux premiers articles ont pour but d’expliquer ce qu’est une blockchain. Si vous vous êtes déjà informé sur le Bitcoin, la blockchain et les cryptomonnaies, vous devez savoir qu’il y a une distinction à faire entre :
 
 
 <ul class="lead">
-    <li>La technologie blockchain en général;</li>
-    <li>Le protocole, ou les règles, d’une blockchain spécifique;</li>
+    <li>La technologie blockchain en général ;</li>
+    <li>Le protocole, ou les règles, d’une blockchain spécifique ;</li>
     <li>Et la monnaie qui est exploitée sur cette blockchain.</li>
 </ul>
 
@@ -43,7 +43,7 @@ Il n'existe pas d'entité centralisée comme une banque ou une chambre de compen
 ![Decentralised clearing in FR](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_decentralised_clearing_M.jpg)
 
 
-##### D’où vient le terme blockchain?
+##### D’où vient le terme blockchain ?
 La blockchain ne garde pas les données dans un seule registre continu mais sépare les données en blocs. Ces blocs sont reliés les uns aux autres tout comme les pages individuelles qui composent un livre. C’est comme ça que le terme blockchain est né. Imaginez un teneur de registre enregistrer les entrées en utilisant des feuilles de papier au lieu d’un livre. Toutes les quelques minutes, il prend une nouvelle feuille de papier, commençant par une note qui dit "la dernière page que j'ai utilisée est la page X, voici la page Y". Les notes qu'il inclut "enchaînent" les pages ensemble. S'il laisse tomber la pile de pages, il peut plus tard les réarranger parce que chaque page fait référence à la précédente.
 
 
@@ -51,7 +51,7 @@ La blockchain ne garde pas les données dans un seule registre continu mais sép
 ![Book blockchain in FR](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_book_blockchain_M.jpg)
 
 
-Chaque page représente un bloc dans cette comparaison, la pile des pages utilisées représente la blockchain. La référence que la page X vienne avant la page Y est ce qui “enchaîne” les blocs ensemble. A la place d’un teneur de registre, il y en a plusieurs qui travaillent simultanément. Les teneurs de registre d’une blockchain sont appelés les mineurs et nous expliquerons leur rôle dans la section suivante: comment une blockchain fonctionne
+Chaque page représente un bloc dans cette comparaison, la pile des pages utilisées représente la blockchain. La référence que la page X vienne avant la page Y est ce qui “enchaîne” les blocs ensemble. A la place d’un teneur de registre, il y en a plusieurs qui travaillent simultanément. Les teneurs de registre d’une blockchain sont appelés les mineurs et nous expliquerons leur rôle dans la section suivante : comment une blockchain fonctionne
 
 ### Résumé
 
