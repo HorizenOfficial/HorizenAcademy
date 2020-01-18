@@ -83,40 +83,51 @@ Another use case for hash functions is creating short, data saving identifiers f
 
 #### Merkle Trees
 
-Hash functions are also used in [*merkle trees*](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees), a construction used to create a succinct (256 bit) summary of all transactions in a block. This summary is included in the block header.
+Hash functions are also used in [*merkle trees*](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees), a construction used to create a succinct (256 bit) summary of all transactions in a block. This summary is then included in the block header.
 Transactions are first hashed and then combined pairwise, until a single hash, the *merkle root* is obtained. If there is an odd number of transactions in a given round, the last transaction is concatenated with itself, as you can see with *H(C)* in the graphic below.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_D.jpg)
 ![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_M.jpg)
 
-Hash functions are also an important step in the [**creation of addresses**] and in the authorization of spending funds via [**digital signatures**]. We have dedicated an article each to those use cases and will save a description of them for later.
+#### Creating Addresses
 
-Lastly, hash functions are integral to Hash-Locked Contracts (HLCs) and [Hash Time Locked Contracts (HTLCs)]. The general idea is to place a lock on a [UTXO] that is based on a hash value. In order to unlock the UTXO, one has to prove knowledge of the preimage of the hash. Because hash functions are preimage resistant only the rightful owner, who has placed the lock on the UTXO in the first place, can choose to reveal the preimage and have another party unlock the UTXO.
+Hash functions are also an important step in the [creation of addresses]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}) and in the authorization of spending funds via [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}). We have dedicated an article to each of those two use cases and will save a description of them for later.
+
+#### HTLCs
+
+Lastly, hash functions are integral to Hash-Locked Contracts (HLCs) and [Hash Time Locked Contracts (HTLCs)]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-htlcs %}). The general idea is to place a lock on a [UTXO]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) that is based on a hash value. In order to unlock the UTXO, one has to prove knowledge of the preimage of the hash. Because hash functions are preimage resistant only the rightful owner, who has placed the lock on the UTXO in the first place, can choose to reveal the preimage and have another party unlock the UTXO.
 
 There are many other use cases, like privacy features such as *Pederson Commitments*, which rely on hash functions. Throughout the Expert section you will come across many more examples. For now this slection should suffice to understand the importance of the concept to blockchain technology.
 
 ### Hardware for Large-Scale Hashing
 
-As we mentioned above, an entire industry has formed around performing hash functions as efficiently as possible - the mining industry. Not only did the operations actually mining increase in size, but also their hardware suppliers. To have a competitive advantage one seeks to minimize the electricity consumption per performed hash operation - or rather per quadrillion hash operations - a Terahash.
+As we mentioned above, an entire industry has formed around performing hash functions as efficiently as possible - the mining industry. Not only did the operations actually mining increase in size, but so did their hardware suppliers. To have a competitive advantage one seeks to minimize the electricity consumption per performed hash operation - or rather per quadrillion hash operations - a Terahash.
 
-Specialized hardware is on the market which is optimized for performing hash operations with a single specific hash function only, such as SHA256. These specialized processors are called ASICs - application specific integrated circuits.
+Specialized hardware optimized for performing hash operations with a single specific hash function only, such as SHA256, are available on the market. These specialized processors are called ASICs - application specific integrated circuits.
 
-Processors display trade-offs  between versatility and efficiency. While CPUs - central processing units - can handle many tasks at low efficiency, GPUs - graphical processing units - are more specialized already at the cost of versatility. At the other end of the scale there are ASICs, which are only useful for one specific task, but highly efficient.
+Processors display trade-offs between versatility and efficiency. While CPUs - central processing units - can handle many tasks at low efficiency, GPUs - graphical processing units - are more efficient at certain tasks at the cost of overall versatility. At the other end of the scale there are ASICs, which are only useful for one specific task, but highly efficient.
 
 ![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_D.jpg)
 ![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_M.jpg)
 
-We have an article dedicated to [mining] at the end of this chapter. There we will go into more detail on the intricacies of the mining process from a technical as well as economical perspective.
+We have an article dedicated to [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}) at the end of this chapter. There we will go into more detail on the intricacies of the mining process from a technical as well as economical perspective.
 
 ### Attack Vectors
 
-Hash functions are battle tested for many years by now. During those years certain attack vectors have been discovered, but at the same time those can be mitigated quite easily. For the final part we want to give a glimpse on those attack vectors and their mitigation strategies. Note that these attacks do not effect the security of blockchains, but only the hash functions in isolation and some outdated applications of them.
+Hash functions are battle tested for many years by now. During those years certain attack vectors have been discovered, but they can be mitigated quite easily. For the final part we want to give a glimpse on those attack vectors and their mitigation strategies. Note that these attacks do not effect the security of blockchains, but only the hash functions in isolation and some outdated applications of them.
 
-In a [*length extension attack*] an attacker can use the hash of a message *m*, *hash(m)*, and the length of *m* to calculate *hash(m|m')*, where *m'* is a message of the attacker. He doesn't need to know what *m* is, just it's length. The SHA-2 family is vulnerable to this type of attack. There are no known exploits of this vulnerability in cryptocurrencies, but in order to protect against potential threats, most operations that involve hashing are performed twice in a row. An example would be constructing merkle trees. In the graphic used earlier you can see that the hash function *H* is denoted as the double hash, *SHA256(SHA256())*.
+#### Length Extension Attack
 
-What would attack look like? **TKKG**
+In a [*length extension attack*](https://en.wikipedia.org/wiki/Length_extension_attack) an attacker can use the hash of a message *m*, *hash(m)*, and the length of *m* to calculate *hash(m|m')*, where *m'* is a message of the attacker. He doesn't need to know what *m* is, just it's length. The SHA-2 family is vulnerable to this type of attack. There are no known exploits of this vulnerability in cryptocurrencies, but in order to protect against potential threats, most operations that involve hashing are performed twice in a row. An example would be constructing merkle trees. In the graphic used earlier you can see that the hash function *H* is denoted as the double hash, *SHA256(SHA256())*.
 
-Another know attack on hash functions is the *Birthday Attack*. It exploits the mathematics behind the [*birthday problem*] in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
+#### Birthday Attack
+
+**continue**
+
+Another know attack on hash functions is the *Birthday Attack*. It exploits the mathematics behind the [*birthday problem*](https://academy.horizen.global/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
+
+
+++++ birthday problem
 
 This relates to hash functions, because finding collisions in hash functions efficiently might open up potential exploits. The Birthday Attack reduces the number of required hash operations to find a collision (two inputs producing the same output).
 
@@ -133,3 +144,7 @@ input to output fixed
 criteria to be useful for cryptographic means
 
 Non-cryptographic hash functions are useful for other applications.
+
+used for mining, txids, merkle trees and creating addressed from public keys.
+
+attack vectors
