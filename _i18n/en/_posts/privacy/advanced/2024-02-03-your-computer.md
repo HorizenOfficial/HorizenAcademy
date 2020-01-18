@@ -10,7 +10,7 @@ chapter: "Where Your Privacy is Compromised"
 further_reads: [is_your_browser_safe_against_tracking, snowden_movie]
 ---
 
-In our beginner section, we touched the topic of compromising privacy on your phone and computer, two most used devices: [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}). In our article [Your Phone]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}) we talked specifically about a phone and as today's smartphones are almost just small computers, most of that also applies to this article too.
+In our beginner section, we touched the topic of compromising privacy on your two most used devices: [Your Phone and Computer]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}). In our article [Your Phone]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}) we talked specifically about a phone and as today's smartphones are almost just small computers, most of that also applies to this article too.
 
 As the computers are comparatively more open platform than smartphones, attack vectors are also diverse.
 
