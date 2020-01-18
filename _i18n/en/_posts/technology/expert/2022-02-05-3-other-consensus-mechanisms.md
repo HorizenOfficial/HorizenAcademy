@@ -78,6 +78,8 @@ Lastly, PoS eliminates economies of scale from affecting the block production pr
 
 ### Challenges with Proof of Stake
 
+https://blog.positive.com/rewriting-history-a-brief-introduction-to-long-range-attacks-54e473acdba9
+
 All of the above sounds very compelling, but some downsides and challenges come with PoS protocols. 
 
 Most notably, it remains to be seen if a PoS based network capturing significant value will be as robust as the largest PoW blockchains. By adding an external cost to creating blocks, one can prevent even powerful adversaries from attacking the consensus mechanism. 
