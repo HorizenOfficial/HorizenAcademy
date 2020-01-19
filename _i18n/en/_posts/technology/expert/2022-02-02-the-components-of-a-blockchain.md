@@ -15,8 +15,8 @@ This article should provide you with a general overview of what the articles in 
 ### Hash Functions
 
 The verification of data is an important aspect when building a data structure on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.
-Hash functions are mathematical one-way functions used to verify data in blockchains. They are applied in several important steps from creating an address, to proving ownership and verifying the integrity of the blockchain itself.
-Their key properties are being irreversible one-way functions, being pseudo random in that they produce seemingly random outputs from two similar inputs, having a small likelyhood of producing the same output for two different inputs and lastly, being deterministic in that they always produce the same output from a given input.
+Hash functions are mathematical one-way functions used to verify data in blockchains. They are applied in several important steps from creating an address, to proving ownership and verifying the integrity of the blockchain itself. The first notable property of all hash functions is that they consume inputs of variable length and produce an output of fixed length called *hash value*.
+Other key properties are being irreversible one-way functions, being pseudo random in that they produce seemingly random outputs from two similar inputs, having a small likelyhood of producing the same output for two different inputs and lastly, being deterministic in that they always produce the same output from a given input.
 
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_D.jpg)
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_M.jpg)

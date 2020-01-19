@@ -54,7 +54,7 @@ The terms target and *difficulty* are often times used interchangeably. Technica
 
 The difficulty is a relative measure of the current target compared to the easiest target value.
 
-The target is adjusted regularly, with Horizen every 8064 **(?)** blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network valid blocks are found more frequently on average. By increasing the target, the block time can be adjusted upwards or downwards, depending on hash rate.
+The target is adjusted regularly, with Horizen every 8064 blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network valid blocks are found more frequently on average. By increasing the target, the block time can be adjusted upwards or downwards, depending on hash rate.
 
 ### Types of Proof of Work
 
