@@ -17,16 +17,16 @@ Roman Oliynykov, d'IOHK, a publié, en coopération avec Bingsheng Zhang et Hame
 
 Construire une cryptomonnaie demande beaucoup de choses. Cela nécessite :
 
-- des développeurs désireux d'investir leur temps dans le projet;
-- un peu de marketing. Non seulement pour rendre votre coin attrayant pour les utilisateurs potentiels, mais aussi afin d’attirer les développeurs désireux d'investir leur temps dans le projet;
+- des développeurs désireux d'investir leur temps dans le projet ;
+- un peu de marketing. Non seulement pour rendre votre coin attrayant pour les utilisateurs potentiels, mais aussi afin d’attirer les développeurs désireux d'investir leur temps dans le projet ;
 - une équipe juridique - Puisque les régulateurs surveillent de plus près l'espace de la cryptomonnaie. L'équipe juridique s'assurera que tous les efforts sont conformes à la réglementation en vigueur et qu'ils le seront à l'avenir.
 
 Beaucoup de choses pourraient être ajoutées à cette liste, mais la plupart d'entre elles ont une chose en commun : elles nécessitent du financement.
 
 Ce financement devrait être durable à long terme. Trois sources principales de financement sont identifiées dans le rapport, à savoir :
 
-- les mécènes et les dons;
-- une ICO;
+- les mécènes et les dons ;
+- une ICO ;
 - haircut/taxe/récompense des fondateurs (prélevés sur les récompenses des mineurs).
 
 D'autres personnes ont déjà inclus les frais de transaction dans cette liste, mais le montant total des frais de TX en dehors des grands projets comme Bitcoin et Ethereum est loin d'être suffisant pour un développement continu.
@@ -66,7 +66,7 @@ Une différence essentielle est que vous pouvez déléguer votre vote à qui vou
 
 ### Les différentes entités
 
-En se rapprochant de la description du processus de vote lui-même, il est nécessaire de présenter les entités qui y participent:
+En se rapprochant de la description du processus de vote lui-même, il est nécessaire de présenter les entités qui y participent :
 
  - _Les porteurs de projet {O}_ sont les personnes qui ont soumis une proposition. N'importe qui peut soumettre une proposition mais doit payer des frais peu élevés pour éviter le spam.
  - _Les comités de vote {C}_ sont des intervenants qui souhaitent aider à exécuter le processus de vote. Ils sont chargés de générer ensemble une clé publique de vote et d'annoncer le résultat du vote à la fin d'une période de vote.

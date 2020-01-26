@@ -13,9 +13,9 @@ L'explorateur de blocs est un outil graphique pour visualiser et explorer les do
 
 Si vous savez comment naviguer dans un explorateur de blocs, vous saurez comment les naviguer tous. C’est très intuitif et aide à comprendre comment une blockchain est structurée et comment elle fonctionne. Pour vraiment apprécier cet article, vous devez être familier avec les bases d'une blockchain, des transactions et du mining (ou minage, pour rappel, les deux s’utilisent en français). Vous pouvez toujours revenir à l'un de nos articles précédents sur ces sujets si vous n'êtes pas certain de quelque chose. Si vous êtes familier avec le fonctionnement d'une blockchain, cet article devrait vous aider à aller plus loin dans vos connaissances.
 
-### Qu’allez-vous trouver dans un explorateur de bloc?
+### Qu’allez-vous trouver dans un explorateur de bloc ?
 
-Les informations que vous trouverez dans un explorateur de blocs sont structurées soit par blocs, soit par adresses, soit par transactions individuelles. Examinons un premier exemple pour rendre tout cela plus tangible:
+Les informations que vous trouverez dans un explorateur de blocs sont structurées soit par blocs, soit par adresses, soit par transactions individuelles. Examinons un premier exemple pour rendre tout cela plus tangible :
 
 <div class="my-4">
     <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
@@ -26,7 +26,7 @@ Il y a un certain nombre d'explorateurs de blocs, souvent plusieurs versions pou
 Vous verrez un aperçu des blocs les plus récemment créés sur la page d'accueil. Passons en revue ce que nous voyons ici :
 
 - **Height (Hauteur)** : la hauteur est le nombre que porte le bloc. Le tout premier bloc créé a été le bloc #0, suivi du bloc #1 puis du bloc #2. Comme vous pouvez le constater au moment d'écrire ces lignes, il y a eu beaucoup de blocs minés.
-- **Age ( ge)** : C'est l'âge du bloc. C'est explicite, mais il y a une information intéressante entre les lignes : vous savez peut-être que le temps de bloc, l'intervalle dans lequel les nouveaux blocs sont extraits, est de 10 minutes avec Bitcoin. Comment se fait-il qu'il n'a fallu que 6 minutes pour miner le bloc 539.772 et seulement 9 minutes pour le bloc 539.771 ? C'est parce que le temps de bloc est une moyenne. Il y aura toujours des blocs créés plus lentement et quelques-uns qui seront produits beaucoup plus rapidement, mais en moyenne cela prendra 10 minutes. Dans notre article sur le [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), nous vous expliquons comment le temps de bloc est ajusté.
+- **Age (Âge)** : C'est l'âge du bloc. C'est explicite, mais il y a une information intéressante entre les lignes : vous savez peut-être que le temps de bloc, l'intervalle dans lequel les nouveaux blocs sont extraits, est de 10 minutes avec Bitcoin. Comment se fait-il qu'il n'a fallu que 6 minutes pour miner le bloc 539.772 et seulement 9 minutes pour le bloc 539.771 ? C'est parce que le temps de bloc est une moyenne. Il y aura toujours des blocs créés plus lentement et quelques-uns qui seront produits beaucoup plus rapidement, mais en moyenne cela prendra 10 minutes. Dans notre article sur le [mining]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), nous vous expliquons comment le temps de bloc est ajusté.
 - **Transactions** : le nombre de transactions incluses dans ce bloc. Cela signifie que dans les 6 minutes qu'il a fallu pour miner le bloc 539.772 environ 1500 transactions ont été effectuées.
 - **Total Sent (Total des transactions envoyées)** : Les 1547 transactions qui ont eu lieu totalisent près de 4700 Bitcoins envoyés.
 - **Relayed By (Relayé par)** : Le mineur (ou le pool minier) qui a résolu le bloc et qui a gagné la récompense de bloc.

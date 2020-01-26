@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce que la cryptographie à clé publique?"
+title: "Qu'est-ce que la cryptographie à clé publique ?"
 description: "Les blockchains utilisent la cryptographie à clé publique pour identifier le propriétaire légitime de leur argent."
 permalink: /eli5/what-is-public-key-cryptography/
 topic: eli5

@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce qu'une transaction?"
+title: "Qu'est-ce qu'une transaction ?"
 description: "Lorsque vous créez une transaction, vous envoyez un message au réseau, indiquant qu'une partie de votre argent appartient maintenant à quelqu'un d'autre."
 permalink: /eli5/what-is-a-transaction/
 topic: eli5

@@ -6,7 +6,7 @@ description: "Deuxièmement, depuis une perspective plus philosophique; en exami
 permalink: /technology/advanced/a-protocol-to-transfer-value/
 topic: technology
 level: advanced
-chapter: "Qu’est-ce que la blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious]
 ---
 
@@ -28,9 +28,9 @@ La création de la blockchain définit cet ensemble de règles, de procédures e
 
 Vous pouvez distinguer plusieurs grands types de protocoles réseau. Il y a :
 
- - Les protocoles de communication réseau tels que TCP/IP (protocole de contrôle de transmission/ protocole Internet);
- - Les protocoles de sécurité réseau tels que HTTPS et SSL (protocole de transfert hypertexte secure/secure sockets layer);
- - Les protocoles de gestion de réseau tels que SNMP et ICMP (protocole de gestion de réseau simple/ protocole de message de contrôle Internet);
+ - Les protocoles de communication réseau tels que TCP/IP (protocole de contrôle de transmission/ protocole Internet) ;
+ - Les protocoles de sécurité réseau tels que HTTPS et SSL (protocole de transfert hypertexte secure/secure sockets layer) ;
+ - Les protocoles de gestion de réseau tels que SNMP et ICMP (protocole de gestion de réseau simple/ protocole de message de contrôle Internet) ;
  - Les protocoles de transfert de valeur tels que Horizen ou Bitcoin.
 
 Vous trouverez ci-dessous une collection de protocoles, dont beaucoup sont utilisés tous les jours. Par exemple, le protocole TCP/IP spécifie comment décomposer les données en paquets, les adresser et les acheminer par le réseau vers leur destination finale. Vous utilisez la norme TCP/IP chaque fois que vous allez en ligne pour communiquer avec différents serveurs afin de recevoir les informations auxquelles vous voulez accéder.
@@ -76,6 +76,6 @@ Le protocole d'une blockchain est un ensemble de règles que tous les participan
 
 J'aimerais terminer cet article de la même façon qu'il a commencé, avec une citation de Jeff Garzik, l'un des développeurs les plus connus de Bitcoin.
 
-> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
+> "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
-> "N'essayez pas d'insérer toutes les fonctionnalités dans le protocole Bitcoin. Laissez-le faire ce qu'il fait de mieux. Construisez des systèmes sur Bitcoin qui utilisent ses forces...... Mettre toutes les transactions de café du monde, et toutes les transactions boursières du monde, et tous les échantillonnages de dispositifs de l'Internet des objets du monde entier, sur la blockchain Bitcoin semble malavisé" - Jeff Garzik, Développeur Bitcoin Core Developer
+> "N'essayez pas d'insérer toutes les fonctionnalités dans le protocole Bitcoin. Laissez-le faire ce qu'il fait de mieux. Construisez des systèmes sur Bitcoin qui utilisent ses forces... Mettre toutes les transactions de café du monde, et toutes les transactions boursières du monde, et tous les échantillonnages de dispositifs de l'Internet des objets du monde entier, sur la blockchain Bitcoin semble malavisé" - Jeff Garzik, Développeur Bitcoin Core Developer

@@ -6,7 +6,7 @@ description: "Ici, nous parlerons de l'endroit où la cryptographie entre en sc�
 permalink: /technology/beginner/identity-in-blockchain/
 topic: technology
 level: beginner
-chapter: "Comment fonctionne une blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [the_impact_of_digital_identity, how_blockchain_can_solve_identity_management_problems]
 ---
 
@@ -20,7 +20,7 @@ Avec la cryptographie symétrique, vous utilisez la même clé pour chiffrer un 
 ![Symmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_D.jpg)
 ![Symmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_M.jpg)
 
-Avec la cryptographie asymétrique, vous chiffrez et déchiffrez un message en utilisant deux clés différentes, la clé publique, et la clé privée. Les clés viennent toujours par paire. Si vous chiffrez un message avec une clé publique, il devra être déchiffré avec la clé privée correspondante et vice versa. Vous avez toujours une paire de clés. Cela se résume à un concept simple: Votre paire de clé est votre identité sur la blockchain.
+Avec la cryptographie asymétrique, vous chiffrez et déchiffrez un message en utilisant deux clés différentes, la clé publique, et la clé privée. Les clés viennent toujours par paire. Si vous chiffrez un message avec une clé publique, il devra être déchiffré avec la clé privée correspondante et vice versa. Vous avez toujours une paire de clés. Cela se résume à un concept simple : votre paire de clé est votre identité sur la blockchain.
 
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_D.jpg)
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_M.jpg)
@@ -29,11 +29,11 @@ Avec la cryptographie asymétrique, vous chiffrez et déchiffrez un message en u
 
 Votre paire de clés est votre identité
 
-L'idée générale dans les cryptomonnaies est que vous recevez des fonds grâce à votre clé publique et les dépensez avec votre clé privée. Une clé privée sur la blockchain Horizen pourrait ressembler à cela:
+L'idée générale dans les cryptomonnaies est que vous recevez des fonds grâce à votre clé publique et les dépensez avec votre clé privée. Une clé privée sur la blockchain Horizen pourrait ressembler à cela :
 
 Kz6994Ek9L3uzjQo2wANaHguBbEShoHZo6q1Y3r6rXrHfWka1fnx
 
-et la clé publique correspondante ou l’adresse à cela:
+et la clé publique correspondante ou l’adresse à cela :
 
 znSrHR9ssjKMsrYfk5fTmKH4LbgDxXJ3s6j
 

@@ -6,7 +6,7 @@ description: "Premièrement, depuis le point de vue d’un informaticien qui voi
 permalink: /technology/advanced/blockchain-as-a-data-structure/
 topic: technology
 level: advanced
-chapter: "Qu’est-ce que la blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 ---
 
 On peut expliquer la technologie de Blockchain de différentes manières. L'examen de la blockchain sous l'angle des cryptomonnaies a été le récit dominant jusqu'à récemment. Le bitcoin est la première chose que la plupart des gens associeront à la technologie de la blockchain, mais faciliter les transactions de cryptomonnaie n'est qu'un cas d'utilisation parmi tant d'autres. Dans cet article, nous aimerions prendre un peu de recul et examiner la blockchain en termes plus généraux, du point de vue d'un informaticien.
@@ -27,14 +27,14 @@ Ce que vous n'avez pas avec une liste chaînée, c'est un _accès instantané_. 
 ![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_linked_list_D.jpg)
 ![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_linked_list_M.jpg)
 
-La blockchain est comme une liste chaînée dans le contexte des structures de données. La blockchain sépare également les données dans des conteneurs; les _blocs_. Les _blocs_ sont assez semblables aux _nœuds_ d'une liste chaînée. Chaque _bloc_ contient une _référence_, qui est le hachage du bloc précédent. Il sert de lien avec le bloc précédent et établit l'ordre tout au long de la chaîne de blocs (la blockchain).
+La blockchain est comme une liste chaînée dans le contexte des structures de données. La blockchain sépare également les données dans des conteneurs ; les _blocs_. Les _blocs_ sont assez semblables aux _nœuds_ d'une liste chaînée. Chaque _bloc_ contient une _référence_, qui est le hachage du bloc précédent. Il sert de lien avec le bloc précédent et établit l'ordre tout au long de la chaîne de blocs (la blockchain).
 
 ![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_data_D.jpg)
 ![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_data_M.jpg)
 
 La principale différence entre une blockchain et une liste chaînée est que chaque référence dans une blockchain est sécurisée cryptographiquement. Vous pouvez entendre le terme structure de données "append-only" (_traduction: ajout-seulement_) décrivant les blockchains. Cela signifie que vous ne pouvez ajouter des données à une blockchain qu'en les ajoutant à l'avant. La validité des liens sécurisés est constamment vérifiée. Si vous insérez un bloc malveillant au milieu d'une blockchain, par exemple entre les blocs 1 et 3 dans le graphique ci-dessous, vous pouvez inclure une référence à son prédécesseur (bloc 1), mais il serait très difficile (lire : infaisable) de faire du bloc suivant (3) votre nouveau bloc inséré.
 
-Chaque nouveau bloc construit sur un bloc existant est communément appelé _confirmation_. Plus un bloc est vieux, plus il y aura de confirmations. Chaque confirmation rend plus difficile l'altération des données d'un bloc. Le bloc 2 du graphique ci-dessous a une confirmation. Pour falsifier ses données, il faudrait recréer une référence valide. A chaque confirmation, vous devez recréer une référence supplémentaire. Plus le bloc est ancien, plus vous pouvez être certain qu'il n'y aura pas de changements dans le bloc.
+Chaque nouveau bloc construit sur un bloc existant est communément appelé _confirmation_. Plus un bloc est vieux, plus il y aura de confirmations. Chaque confirmation rend plus difficile l'altération des données d'un bloc. Le bloc 2 du graphique ci-dessous a une confirmation. Pour falsifier ses données, il faudrait recréer une référence valide. À chaque confirmation, vous devez recréer une référence supplémentaire. Plus le bloc est ancien, plus vous pouvez être certain qu'il n'y aura pas de changements dans le bloc.
 
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_broken_D.jpg)
 ![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/FR_blockchain_broken_M.jpg)

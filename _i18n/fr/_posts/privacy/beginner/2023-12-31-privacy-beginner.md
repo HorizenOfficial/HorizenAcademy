@@ -21,11 +21,11 @@ level: beginner
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-01-01-the-nothing-to-hide-argument %}">
-            <img src="/assets/post_files/privacy/beginner/intro/why.svg" alt="Pourquoi la confidentialité?" />
+            <img src="/assets/post_files/privacy/beginner/intro/why.svg" alt="Pourquoi la confidentialité ?" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Pourquoi la confidentialité?</h5>
+        <h5 class="intro-article-title">Pourquoi la confidentialité ?</h5>
         <p class="mb-1">
             Tout d'abord, nous expliquons pourquoi la protection de la vie privée est importante et pourquoi l'argument "Rien à cacher" est fondamentalement erroné.
         </p>

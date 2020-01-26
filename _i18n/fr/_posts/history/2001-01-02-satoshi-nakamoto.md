@@ -25,11 +25,11 @@ Finalement, le 3 janvier 2009, le bloc Genesis de Bitcoin a été miné et les p
 
 Choisir ce titre suggère que l'une des principales motivations pour développer Bitcoin était de créer une alternative au système bancaire de réserves qui déstabilise manifestement l'économie et prive, de toute évidence, le grand public de ses droits.
 
-Quelques jours plus tard, le 9 janvier, la version 0.1 de bitcoin est sortie sur Sourceforge.
+Quelques jours plus tard, le 9 janvier, la version 0.1 de Bitcoin est sortie sur Sourceforge.
 
-Via la liste de diffusion mail Cryptography et la fondation P2P, de nombreux cypherpunks ont rejoint la discussion sur bitcoin. Certains d'entre eux, comme Adam Back, Wei Dai et Nick Szabo, avaient déjà travaillé sur des systèmes de paiement électronique et étaient  probablement à l'époque les seuls à pouvoir se prononcer avec compétence sur la question.
+Via la liste de diffusion mail Cryptography et la fondation P2P, de nombreux cypherpunks ont rejoint la discussion sur Bitcoin. Certains d'entre eux, comme Adam Back, Wei Dai et Nick Szabo, avaient déjà travaillé sur des systèmes de paiement électronique et étaient  probablement à l'époque les seuls à pouvoir se prononcer avec compétence sur la question.
 
-L'un des premiers cypherpunks, Hal Finney, a effectué la première transaction de bitcoin le 12 janvier, enregistrée dans le [bloc 170](https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee) de la chaîne Bitcoin (au moment d'écrire ces lignes, nous sommes au bloc 557,200) quand il a reçu 10 BTC de Satoshi Nakamoto.
+L'un des premiers cypherpunks, Hal Finney, a effectué la première transaction de bitcoin le 12 janvier, enregistrée dans le [bloc 170](https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee) de la blockchain Bitcoin (au moment d'écrire ces lignes, nous sommes au bloc 557,200) quand il a reçu 10 BTC de Satoshi Nakamoto.
 
 Il a fallu plusieurs mois, jusqu'au 5 octobre 2009, pour que le premier taux de change du bitcoin contre le dollar américain soit établi. New Liberty Standard a publié ce jour-là un taux de change qui a établi la valeur de 1 USD pour 1.309,03 BTC. Où est cette machine à remonter le temps ?! Le taux de change n'était pas basé sur un marché réel à l'époque, mais sur le coût de l'électricité pour extraire un bitcoin.
 

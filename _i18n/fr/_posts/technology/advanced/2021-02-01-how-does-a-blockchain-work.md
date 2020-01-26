@@ -1,12 +1,12 @@
 ---
 layout: post
 type: intro
-title: "Comment fonctionne une Blockchain?"
+title: "Comment fonctionne une Blockchain ?"
 description: "Dans ce chapitre, nous vous présenterons les principes de base des différents éléments qui font que les blockchains fonctionnent."
 permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 Dans ce chapitre de notre section avancée de la technologie blockchain, nous vous vous présenterons les idées, les éléments et parties prenantes d’une blockchain publique en commençant par une [vue d’ensemble]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).

@@ -53,7 +53,7 @@ Maintenant, les deux contrats sont configurés sur leur blockchain respective. A
 
 Alice va maintenant utiliser le secret qu’elle a choisi plus tôt pour débloquer le hashlock du contrat de Bob fait sur la blockchain Horizen et les ZEN seront libérés pour elle. C’est une opération publique et vérifiable sur la blockchain. Bob peut, ensuite, voir le secret et l’utiliser pour débloquer le bitcoin bloqué dans le contrat d’Alice. En fournissant le secret le HTLC va automatiquement débloquer les fonds à Bob vers l’adresse bitcoin qu’il aura spécifié.
 
-Sans avoir besoin de se faire confiance, Alice et Bob ont maintenant réussi à échanger leurs coins, sans avoir avoir besoin d’un tiers. A aucun moment, l'un des deux ne peut voler l'argent de l'autre. Lorsque Bob reçoit le cadenas d'Alice, il peut vérifier qu'elle a utilisé le même cadenas en observant la blockchain Bitcoin. Si Alice ne voulait pas racheter ses ZEN, les deux seraient automatiquement remboursés. Et Alice ne peut pas revendiquer les ZEN de Bob si Bob n'a pas eu connaissance du secret.
+Sans avoir besoin de se faire confiance, Alice et Bob ont maintenant réussi à échanger leurs coins, sans avoir avoir besoin d’un tiers. À aucun moment, l'un des deux ne peut voler l'argent de l'autre. Lorsque Bob reçoit le cadenas d'Alice, il peut vérifier qu'elle a utilisé le même cadenas en observant la blockchain Bitcoin. Si Alice ne voulait pas racheter ses ZEN, les deux seraient automatiquement remboursés. Et Alice ne peut pas revendiquer les ZEN de Bob si Bob n'a pas eu connaissance du secret.
 
 ### Les Atomic Swaps aujourd'hui
 
@@ -61,7 +61,7 @@ Il y a peu de wallets ou de plateformes d'échange décentralisés qui permetten
 
 - Le premier Atomic Swap sur-chaîne a eu lieu le 20 septembre 2017 entre Litecoin et Decred.
 - Le premier Atomic Swap hors-chaîne a eu lieu en novembre 2017 entre Litecoin et Bitcoin sur le Lightning Network.
-- Une explication détaillée d'un Atomic Swap entre Ethereum et Bitcoin peut être trouvée [ici](https://medium.com/coblox/connect-all-the-blockchains-atomic-swap-78b38fff42e)
+- Une explication détaillée d'un Atomic Swap entre Ethereum et Bitcoin peut être trouvée [ici](https://medium.com/coblox/connect-all-the-blockchains-atomic-swap-78b38fff42e).
 - Plus récemment, le 7 décembre 2018, TenX a présenté un Atomic Swap d’un ERC20 vers Bitcoin Lightning à l'aide de son logiciel open-source COMIT.
 
 La technologie est très prometteuse, mais pour obtenir l'adoption de wallets tout comme celui des plateformes d'échange, il faudra construire une interface conviviale pour utiliser les Atomic Swaps.

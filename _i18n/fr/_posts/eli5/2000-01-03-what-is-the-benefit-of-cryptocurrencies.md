@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Quel est l'avantage des cryptomonnaies?"
+title: "Quel est l'avantage des cryptomonnaies ?"
 description: "Le plus grand bénéfice est que tout le monde peut utiliser de la cryptomonnaie. Cela nécessite uniquement une application."
 permalink: /eli5/what-is-the-benefit-of-cryptocurrencies/
 topic: eli5

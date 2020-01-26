@@ -1,12 +1,12 @@
 ---
 layout: post
 type: intro
-title: "Qu’est-ce que la Blockchain?"
+title: "Qu’est-ce que la Blockchain ?"
 description: "Dans ce premier chapitre de cette section, nous vous expliquons ce qu’est la blockchain et ce qu’elle peut faire. Cela stocke des transactions de manière sécurisée et peut, ainsi, être utilisée comme transfert de valeur."
 permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner
-chapter: "Qu’est-ce que la Blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 ---
 
 La plupart des gens ont entendu le terme blockchain, mais peu peuvent vous dire ce que c'est, et encore moins comment elle fonctionne. Nous vous aiderons à comprendre ce qu'est une blockchain et comment elle fonctionne. Dans le niveau Débutant, nous nous concentrerons sur les idées principales et les propositions de valeur de la Blockchain sans entrer dans les détails techniques. Dans ce premier chapitre, nous examinerons la blockchain de deux façons différentes :

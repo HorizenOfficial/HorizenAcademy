@@ -21,7 +21,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/intro/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain?" />
+            <img src="/assets/post_files/technology/advanced/intro/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">
@@ -38,7 +38,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">
-            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain?" />
+            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">

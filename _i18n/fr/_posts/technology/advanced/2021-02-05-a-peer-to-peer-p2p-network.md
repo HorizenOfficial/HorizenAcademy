@@ -6,7 +6,7 @@ description: "Ici nous parlons de l’infrastructure “physique” sur laquelle
 permalink: /technology/advanced/a-peer-to-peer-p2p-network/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 L'Internet que nous connaissons aujourd'hui est très centralisé. La plupart des données que nous, en tant qu'utilisateurs d'Internet, produisons, finissent entre les mains de quelques grandes entreprises. Mais il y a un certain nombre de systèmes vraiment distribués qui existent sur Internet. Bien que ce ne soit pas exactement la même chose, pour les besoins de cet article, nous utiliserons les termes réseau distribué et réseau peer-to-peer de manière interchangeable.
@@ -43,4 +43,4 @@ Nous croyons que le Web 3.0 bénéficiera largement de l'émergence des réseaux
 
 Les réseaux peer-to-peer offrent une grande robustesse ou une grande tolérance aux pannes au plus haut niveau d'efficacité. Chaque nœud exécute la même tâche sur le réseau et agit en tant que client et serveur en même temps. Si l'un de vos pairs se déconnecte, vous vous connectez à un autre. Si vous administrez un nœud et qu'il vous arrive de vous déconnecter pendant un certain temps, vous devez vous reconnecter à un moment donné pour être mis à jour par vos pairs sur les blocs que vous avez manqués pour redevenir pleinement fonctionnel.
 
-Dans les deux prochains articles, nous vous présenterons les deux mécanismes les plus courants afin de parvenir à un consensus sur l'histoire des événements dans un cadre distribué. Vous avez probablement déjà rencontré les termes preuve de travail et minage (ou mining!). Nous expliquerons ce qu'est la preuve de travail (PoW) et la preuve d'enjeu (PoS) et, par la suite, nous examinerons en détail le processus de minage, y compris le puzzle que les mineurs résolvent.
+Dans les deux prochains articles, nous vous présenterons les deux mécanismes les plus courants afin de parvenir à un consensus sur l'histoire des événements dans un cadre distribué. Vous avez probablement déjà rencontré les termes preuve de travail et minage (ou mining ! ). Nous expliquerons ce qu'est la preuve de travail (PoW) et la preuve d'enjeu (PoS) et, par la suite, nous examinerons en détail le processus de minage, y compris le puzzle que les mineurs résolvent.
