@@ -146,3 +146,5 @@ Hash functions play an integral part in blockchain technology. They are the basi
 Because mining has become an entire industry, application specific integrated circuits (ASICs) for performing hash operations on a large scale have been developed.
 
 While there are attack vectors, these are mitigated by using the same hash function sequentially or using two different hash functions after another.
+
+In our next three articles, we will take an in-depth look at [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}).
