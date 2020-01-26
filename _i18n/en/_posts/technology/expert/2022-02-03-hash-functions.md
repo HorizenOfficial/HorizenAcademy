@@ -122,29 +122,27 @@ In a [*length extension attack*](https://en.wikipedia.org/wiki/Length_extension_
 
 #### Birthday Attack
 
-**continue**
+Another known attack on hash functions is the [*Birthday Attack*](https://en.wikipedia.org/wiki/Birthday_attack). It exploits the mathematics behind the [*birthday problem*](https://academy.horizen.global/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
 
-Another know attack on hash functions is the *Birthday Attack*. It exploits the mathematics behind the [*birthday problem*](https://academy.horizen.global/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
+![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_D.jpg)
+![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_M.jpg)
 
+This relates to hash functions in that finding collisions in hash functions efficiently opens up potential exploits. The Birthday Attack reduces the number of required hash operations to find a collision (two inputs producing the same output).
 
-++++ birthday problem
-
-This relates to hash functions, because finding collisions in hash functions efficiently might open up potential exploits. The Birthday Attack reduces the number of required hash operations to find a collision (two inputs producing the same output).
-
-Lastly, we would like to address the concern that quantum computers could one day break the security of hash function based cryptographic schemes. We quote a section of a well written article on [the state of hashing algorithms] by Raul Jordan to address the quantum-threat:
+Lastly, we would like to address the concern that quantum computers could one day break the security of hash function-based cryptographic schemes. We quote a section of a well written article on [the state of hashing algorithms](https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de) by Raul Jordan to address the quantum-threat:
 
 >  "What quantum computation will be able to break are those problems which have rigorous, underlying mathematical structure founded by neat tricks and theory such as RSA encryption. Hashing algorithms, on the other hand, have less formal structure in their internal constructs."
 
-> "Quantum computers do give an increased speed up in the computation of unstructured problems such as hashing, but at the end of the day, they would still be brute forcing an attack the same way a computer today would attempt to do so." - Source\footnote{\url{https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de}}
+> "Quantum computers do give an increased speed up in the computation of unstructured problems such as hashing, but at the end of the day, they would still be brute forcing an attack the same way a computer today would attempt to do so."
+
+For the foreseeable future, hash functions will continue to present a useful cryptographic primitive that more advanced applications can be built upon.
 
 ### Summary
 
-input to output fixed
+In summary hash functions take different length inputs and compute fixed length outputs. There are many use cases for hash functions but to be useful for cryptographic applications they need to be collision-resistant, preimage-resistant and pseudo-random.
 
-criteria to be useful for cryptographic means
+Hash functions play an integral part in blockchain technology. They are the basis of the mining algorithm used to create new blocks, are used to create succinct transaction and block identifiers and are applied when deriving addresses from public keys.
 
-Non-cryptographic hash functions are useful for other applications.
+Because mining has become an entire industry, application specific integrated circuits (ASICs) for performing hash operations on a large scale have been developed.
 
-used for mining, txids, merkle trees and creating addressed from public keys.
-
-attack vectors
+While there are attack vectors, these are mitigated by using the same hash function sequentially or using two different hash functions after another.
