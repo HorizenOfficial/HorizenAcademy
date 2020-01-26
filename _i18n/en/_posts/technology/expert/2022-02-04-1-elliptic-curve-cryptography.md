@@ -31,7 +31,9 @@ With PKC schemes like RSA, using modular arithmetic, the security is based on th
 
 RSA and its modular-arithmetic-based friends are still important today, and are often used alongside ECC. The mathematics behind RSA can be easily explained and are widely understood. Rough implementations can be build rather easily.
 
-++++ **TODO** fixed RSA graphics. "Public" and "D".
+++++ **TODO** fix RSA graphics. "Public" and "D".
+![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
+![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_M.jpg)
 
 Above is a rudimentary example of encrypting a *message* (2) with a public key that comprises a tuple of two values: the *encryptor* E and the *modulus* N. The *cipher* (4) is later decrypted using the corresponding private key comprising the tupel *decryptor* D and the same *modulus* N. The interesting part is the relation between the three value E, D and N. To keep this article at a reasonable length, we refer the interested reader to this [very understandable article](https://hackernoon.com/how-does-rsa-work-f44918df914b) for an explanation of how these values are related. A simple RSA implementation accompanied by python code [can be found here](https://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/).
 
