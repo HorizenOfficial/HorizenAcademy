@@ -81,7 +81,7 @@ This little excursion should prove valuable to following along on a short histor
 
 One of the first steps towards Block-DAG protocols was the [*Greedy Heaviest Observable Sub Tree* (GHOST) Protocol](https://eprint.iacr.org/2013/881.pdf). The consensus mechanism in GHOST is not based on the longest chain rule. Instead, the subtree with the greatest combined Proof-of-Work or difficulty is considered the valid branch by protocol design.
 
-![Ghost](/assets/post_files/technology/expert/1.4-dags/ghost_D.jpg)
+![Ghost](/assets/post_files/technology/expert/1.4-DAGs/ghost_D.jpg)
 ![Ghost](/assets/post_files/technology/expert/1.4-dags/ghost_M.jpg)
 
 A more intuitive description might be finding the subtree of greatest cardinality (here we make the same assumption as before when distinguishing between longest- and heaviest-chain rule). The structure on the image above is moving into DAG territory, rather than just being a blockchain with orphaned blocks (there is no such clear distinction). Technically, it is still a *tree* and not a DAG though. The two differ in trees being able to branch off in the direction of the edges, but branches not merging together later on. DAGs, on the other hand, can do both, branch off and merge. Trees are a subcategory of DAGs, in that every tree is a DAG, but not every DAG is a tree.
