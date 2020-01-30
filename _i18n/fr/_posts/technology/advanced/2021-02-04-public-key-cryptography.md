@@ -6,11 +6,11 @@ description: "Un autre élément majeur est la Cryptographie à Clé Publique. E
 permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [how_to_create_a_bitcoin_wallet_address_from_a_private_key, what_is_the_math_behind_elliptic_curve_cryptography, elliptic_curve_cryptography_a_gentle_introduction]
 ---
 
-Puisque le but de la conception originale de la blockchain était de permettre une nouvelle forme d'argent équitable, ce serait formidable de pouvoir réellement posséder de l'argent dans ce système, n'est-ce pas ? Il doit y avoir un concept d'identité pour avoir la propriété sur la blockchain; vous ne pouvez pas avoir la propriété s'il n'y a pas de représentation du propriétaire.
+Puisque le but de la conception originale de la blockchain était de permettre une nouvelle forme d'argent équitable, ce serait formidable de pouvoir réellement posséder de l'argent dans ce système, n'est-ce pas ? Il doit y avoir un concept d'identité pour avoir la propriété sur la blockchain ; vous ne pouvez pas avoir la propriété s'il n'y a pas de représentation du propriétaire.
 
 La _cryptographie à clé publique_ permet de représenter l'identité sur la blockchain. C'est la deuxième pierre angulaire de la technologie de la blockchain en plus des [fonctions de hachage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %})  dont nous avons parlé dans le dernier article. Les fonctions de hachage vérifient l’authenticité et l’intégrité de la donnée pendant que la cryptographie à clé publique vérifie la propriété sur la blockchain.
 
@@ -80,7 +80,7 @@ Les coordonnées sont
 
 _x_ = 55066263022277343669578718895168534326250603453777594175500187360389116729240
 
-y
+et
 
 _y_ = 32670510020758816978083085130507043184471273380659243275938904335757337482424
 

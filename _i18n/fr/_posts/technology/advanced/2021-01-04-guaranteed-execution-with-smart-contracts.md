@@ -6,7 +6,7 @@ description: "Enfin, nous parlons des Smart contracts, une technologie que la bl
 permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
-chapter: "Qu’est-ce que la blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 

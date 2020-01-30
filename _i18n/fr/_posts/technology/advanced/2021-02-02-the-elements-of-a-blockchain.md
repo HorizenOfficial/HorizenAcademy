@@ -6,7 +6,7 @@ description: "Dans ce premier article de ce chapitre, nous vous donnons une vue 
 permalink: /technology/advanced/the-elements-of-a-blockchain/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity]
 ---
 

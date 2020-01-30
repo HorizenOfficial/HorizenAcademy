@@ -8,9 +8,9 @@ topic: horizen
 level: beginner
 ---
 
-Como ya mencionamos, una limitante importante para la adopción en masa de la tecnología blockchain es la cuestión de escalabilidad. En la actualidad, una cadena de bloques ordinaria es capaz de manejar unas pocas transacciones por segundo, mientras que la red de pago de VISA procesa miles por segundo.
+Comme nous l'avons déjà mentionné, une limite importante de l'adoption en masse de la technologie blockchain est la scalabilité. Actuellement, une blockchain est capable de traiter une poignée de transactions par seconde, alors que VISA peut en traiter des milliers.
 
-Hay muchas maneras de escalar una blockchain, pero Horizen ha decidido concentrarse en dos por el momento. El artículo anterior trató sobre nuestros esfuerzos en la construcción de un protocolo basado en un DAG de bloques, este artículo tratará sobre el desarrollo de nuestro sistema de cadenas laterales (sidechains).
+Il y a plusieurs manières de rendre une blockchain plus scalable, mais Horizen a décidé de se concentrer sur deux d'entre elles pour le moment. L'article précédent traitait d'un protocole Block-DAG, cet article se concentre sur notre système novateur de sidechains.
 
 ![Sidechains in FR](/assets/post_files/horizen/beginner/sidechains/FR_sidechains_D.jpg)
 ![Sidechains in FR](/assets/post_files/horizen/beginner/sidechains/FR_sidechains_M.jpg)

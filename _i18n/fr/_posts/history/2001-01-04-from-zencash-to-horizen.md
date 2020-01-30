@@ -41,7 +41,7 @@ css: |
   }
 ---
 
-###La naissance de ZenCash
+### La naissance de ZenCash
 
 <div class="rocket-image d-none d-md-block">
     <img src="/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
@@ -53,7 +53,7 @@ ZClassic était un projet communautaire. Bien que Rob et Rolf aient eu de bonnes
 
 Rob et Rolf ont alors forké ZClassic et cofondé ZenCash. Ils ont finalement pu commencer à poursuivre leurs objectifs. Ils ont commencé à mettre en œuvre leurs idées en matière de gouvernance, d'économie, de trésorerie et de protection de la vie privée au niveau du réseau. Le fork a eu lieu 19 mai 2017, à la hauteur du bloc de 110000 de la blockchain ZClassic. La Blockchain ZenCash est né le 30 mai 2017, 23:46:46 UTC.
 
-> Note: Du côté plus technique, c'est le bloc #110000 d'où Rob et Rolf ont réalisé le fork. ZenCash a commencé sa nouvelle blockchain avec un modèle de trésorerie sur le bloc #110001, Notez l'émission de 1,0625 ZEN dans la transaction Coinbase, qui est la partie de la nouvelle émission de coins qui est allée à la trésorerie.
+> Note : D'un côté plus technique, c'est le bloc #110000 d'où Rob et Rolf ont réalisé le fork. ZenCash a commencé sa nouvelle blockchain avec un modèle de trésorerie sur le bloc #110001, notez l'émission de 1,0625 ZEN dans la transaction Coinbase, qui est la partie de la nouvelle émission de coins qui est allée à la trésorerie.
 
 ![History Horizen logos](/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
 
@@ -69,7 +69,7 @@ L'équipe initiale d'Horizen n'était pas sélectionnée. Elle est née de l'eng
 
 Les développeurs communautaires ont joué un rôle important en 2017. Ils ont ajouté des outils importants, tels que Insight API par anarch3, NodeJS ZenChat et Zen Android wallet par Kendricktan, Arizen wallet par Lukas, et Swing Wallet par Vaklinov. Grâce à Hellcatz, ils ont également été en mesure d'identifier et de résoudre des problèmes avec le logiciel de pool de minage.
 
-Janvier 2018 marque une date importante pour ZenCash (maintenant Horizen). L'équipe de direction a été officialisée pour la première fois lors de la conférence de l'IOHK à Lisbonne, au Portugal. Rob, Rosario, Rowan (directeur du développement commercial), Gustavo (directeur de l'expérience utilisateur) et Alberto (directeur de la recherche et du développement) se sont réunis dans l'Airbnb qu'ils louaient comme bureau temporaire. Ils ont discuté et évalué le rendement des bénévoles qui ont reçu des subventions. Ils ont sélectionné les bénévoles les plus actifs et les plus performants et leur ont offert des postes au sein de l'équipe. Pendant ce mois-là, ils ont officiellement accueilli plusieurs nouveaux membres à la fondation Zen Blockchain.
+Janvier 2018 marque une date importante pour ZenCash (maintenant Horizen). L'équipe de direction a été officialisée pour la première fois lors de la conférence IOHK à Lisbonne, au Portugal. Rob, Rosario, Rowan (directeur du développement commercial), Gustavo (directeur de l'expérience utilisateur) et Alberto (directeur de la recherche et du développement) se sont réunis dans l'Airbnb qu'ils louaient comme bureau temporaire. Ils ont discuté et évalué le rendement des bénévoles qui ont reçu des subventions. Ils ont sélectionné les bénévoles les plus actifs et les plus performants et leur ont offert des postes au sein de l'équipe. Pendant ce mois-là, ils ont officiellement accueilli plusieurs nouveaux membres à la fondation Zen Blockchain.
 
 ### Modèle de financement durable
 
@@ -124,7 +124,7 @@ Le réseau zen fut la cible d'une attaque à 51% le 3 juin 2018, vers 00:26 UTC 
 
 L'équipe Horizen l'a su immédiatement grâce au système de tripwire. L'équipe a commencé à exécuter les procédures d'atténuation sur lesquelles elle travaillait afin d'augmenter considérablement la difficulté des attaques futures. Comme notre équipe d'ingénieurs travaillait déjà sur des solutions possibles pour les attaques 51%, nous avons fait le POC et le codage rapidement et avons procédé à la mise à jour du réseau.
 
-Nous avons déterminé que la meilleure solution était d'améliorer la règle de la chaîne la plus longue (Consensus de Satoshi) et d'introduire une pénalité pour les déclarations de bloc retardés. Cela rend les choses exponentiellement plus difficiles et plus coûteuses pour ceux qui cherchent à effectuer une attaque à 51%. Vous pouvez lire notre livre blanc "Solution à 51% des attaques" [ici](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) (sélectionnez l'onglet FR pour le télécharger en français).
+Nous avons déterminé que la meilleure solution était d'améliorer la règle de la chaîne la plus longue (Consensus Nakamoto) et d'introduire une pénalité pour les déclarations de bloc retardés. Cela rend les choses exponentiellement plus difficiles et plus coûteuses pour ceux qui cherchent à effectuer une attaque à 51%. Vous pouvez lire notre livre blanc "Solution à 51% des attaques" [ici](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) (sélectionnez l'onglet FR pour le télécharger en français).
 
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">

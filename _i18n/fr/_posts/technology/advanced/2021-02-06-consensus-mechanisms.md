@@ -6,7 +6,7 @@ description: "Il y a différentes parties dans une blockchain et toutes ont beso
 permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [how_does_distributed_consensus_work]
 ---
 
@@ -47,7 +47,7 @@ Tous les nœuds et les mineurs vérifient la validité d'un nouveau bloc dès qu
 
 **La règle de la chaîne la plus longue**
 
-Maintenant, vous pouvez imaginer un scénario dans lequel deux mineurs trouvent un bloc en même temps. Dans ce cas, tous les nœuds et mineurs du réseau sauvegardent les deux versions du bloc. C'est une situation d'égalité : les deux blocs sont valides à ce stade, mais d'une manière ou d'une autre ils doivent briser l'égalité. Nous avons besoin d'une version unique de la vérité. Les mineurs commenceront à construire sur le bloc qu'ils ont reçu en premier. Le lien est rompu lorsque les mineurs trouvent le bloc suivant. Le bloc des deux versions concurrentes qui est construit sur le dessus sera accepté comme la vérité unique par tous les mineurs et les noeuds. Le bloc qui n'est pas pris en compte s'appelle un _bloc orphelin_. Cette procédure qui consiste à briser l'égalité entre les blocs concurrents s'appelle la _règle de la plus chaîne la plus longue_ ou le _Consensus Satoshi_.
+Maintenant, vous pouvez imaginer un scénario dans lequel deux mineurs trouvent un bloc en même temps. Dans ce cas, tous les nœuds et mineurs du réseau sauvegardent les deux versions du bloc. C'est une situation d'égalité : les deux blocs sont valides à ce stade, mais d'une manière ou d'une autre ils doivent briser l'égalité. Nous avons besoin d'une version unique de la vérité. Les mineurs commenceront à construire sur le bloc qu'ils ont reçu en premier. Le lien est rompu lorsque les mineurs trouvent le bloc suivant. Le bloc des deux versions concurrentes qui est construit sur le dessus sera accepté comme la vérité unique par tous les mineurs et les noeuds. Le bloc qui n'est pas pris en compte s'appelle un _bloc orphelin_. Cette procédure qui consiste à briser l'égalité entre les blocs concurrents s'appelle la _règle de la plus chaîne la plus longue_ ou le _Consensus Nakamoto_.
 
 Si 80 % des mineurs reçoivent d'abord le bloc A et les 20 % restants le bloc B, les chances que le bloc A soit prolongé sont de 80 % (en supposant que tous les mineurs ont la même puissance de calcul). D'une certaine façon, les mineurs votent avec leur puissance de calcul sur une version de l'histoire. Cela correspond parfaitement à notre citation du début de l'article :
 
@@ -65,11 +65,11 @@ Si 80 % des mineurs reçoivent d'abord le bloc A et les 20 % restants le bloc B,
 
 La preuve de travail est l'un des mécanismes de consensus les plus sûrs. Ce mécanisme n'est réalisable que s'il y a une puissance de calcul suffisante (taux de hachage) dans le réseau. Le protocole Bitcoin a prouvé depuis plus de 10 ans à quel point le consensus sur la preuve de travail est sûr, avec une puissance de calcul suffisante sur le réseau. Nous avons déjà parlé de la théorie des jeux dans notre article décrivant la blockchain comme un protocole de transfert de valeur et dans l'article sur les [smart contracts]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}).
 
-La théorie des jeux "est l'étude des modèles mathématiques de l'interaction stratégique entre décideurs rationnels" selon [Wikipedia(_sur la page en anglais, ndt_)](https://en.wikipedia.org/wiki/Game_theory). Les mineurs sont un groupe de décideurs rationnels dans une blockchain en PoW. Les incitations à agir selon les règles du protocole de mining sont intégrées dans le protocole lui-même. C'est ce qui rend une blockchain PoW mature si robuste.
+La théorie des jeux "est l'étude des modèles mathématiques de l'interaction stratégique entre décideurs rationnels" selon [Wikipedia](https://en.wikipedia.org/wiki/Game_theory) (_sur la page en anglais, ndt_). Les mineurs sont un groupe de décideurs rationnels dans une blockchain en PoW. Les incitations à agir selon les règles du protocole de mining sont intégrées dans le protocole lui-même. C'est ce qui rend une blockchain PoW mature si robuste.
 
 Dans notre article sur le [minage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), nous parlerons plus en détail de ce processus et vous apprendrez quel est le puzzle dont nous parlons dans le contexte du PoW.
 
-### La preuve d’enjeu (Proof-of-Stake; PoS)
+### La preuve d’enjeu (Proof-of-Stake: PoS)
 
 Dans un système en preuve d’enjeu, il y a aussi des entités qui collectent les transactions et créent de nouveaux blocs. Le processus, ainsi que la terminologie dans ce contexte, est un peu différent.
 
@@ -89,7 +89,7 @@ Dans le PoW, il y a un coût réel (l'électricité) pour chaque bloc qui est mi
 ![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/FR_compare_D.jpg)
 ![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/FR_compare_M.jpg)
 
-Une autre différence entre le PoW et le PoS est que dans une blockchain PoS chaque nœud de validation doit être identifiable . Les coins misés doivent être tenus responsables de tout acte malveillant. Dans une blockchain en PoW, il n'est pas nécessaire d'avoir des mineurs ou des nœuds identifiables. En fait, c'est une caractéristique, que si un noeud reçoit un bloc, il n'y a aucune information incluse au sujet de qui était le mineur du bloc. Il se peut que ce soit le nœud dont vous venez de recevoir le bloc ou qu'il ait été relayé plusieurs fois avant d'arriver jusqu'à vous. Ce n’est, ni ne devrait avoir d'importance de savoir qui était le mineur. Tout ce qui compte, c'est que la solution au puzzle et que toutes les transactions dans le bloc soient valides. Vous n'avez besoin de faire confiance qu'aux mathématiques et à personne d'autre pour faire confiance à la preuve de travail.
+Une autre différence entre le PoW et le PoS est que dans une blockchain PoS chaque nœud de validation doit être identifiable. Les coins misés doivent être tenus responsables de tout acte malveillant. Dans une blockchain en PoW, il n'est pas nécessaire d'avoir des mineurs ou des nœuds identifiables. En fait, c'est une caractéristique, que si un noeud reçoit un bloc, il n'y a aucune information incluse au sujet de qui était le mineur du bloc. Il se peut que ce soit le nœud dont vous venez de recevoir le bloc ou qu'il ait été relayé plusieurs fois avant d'arriver jusqu'à vous. Ce n’est, ni ne devrait avoir d'importance de savoir qui était le mineur. Tout ce qui compte, c'est que la solution au puzzle et que toutes les transactions dans le bloc soient valides. Vous n'avez besoin de faire confiance qu'aux mathématiques et à personne d'autre pour faire confiance à la preuve de travail.
 
 Les partisans de la preuve d'enjeu se réfèrent au coût élevé de l'énergie et au débit limité des blockchain en PoW et considèrent donc que le mécanisme de consensus du PoS est plus durable. À l'heure actuelle, il n'y a pas de blockchain en PoS disponible qui puisse appuyer ses prétentions de sécurité avec un historique de résultats sur une longue période de temps. Le temps nous dira si les blockchains en PoS peuvent tenir leur promesse d'être également sécurisées tout en étant plus évolutives que les blockchains en PoW.
 

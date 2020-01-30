@@ -6,7 +6,7 @@ description: "Dans cet article, nous voulons discuter de deux parties importante
 permalink: /technology/beginner/the-elements-of-a-blockchain/
 topic: technology
 level: beginner
-chapter: "Comment fonctionne une Blockchain?"
+chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity, blockchain_technology_explained_introduction_meaning_and_applications]
 ---
 
@@ -14,8 +14,8 @@ Le dernier chapitre indiquait que d'une part, la blockchain est une structure de
 
 Un protocole peut être compris comme un ensemble de règles. Ces règles, implémentées dans le logiciel, régissent une blockchain donnée et limitent ce que vous pouvez et ne pouvez pas faire. L'une des règles stipule dans quel ordre vous devez fournir les informations si vous voulez envoyer une transaction. Heureusement, votre portefeuille (wallet) vous aidera à le faire, de sorte que vous n'ayez pas à vous soucier de quelle information est censée être la première et la dernière. Voici un exemple d'autres règles :
 
-Si vous avez un coin, vous pouvez dépenser un coin tout au plus;
-Si vous essayer de dépenser le même coin deux fois, la première transaction effectuée sera la transaction valide, et la seconde sera considérée comme invalide.
+Si vous avez un coin, vous pouvez dépenser un coin tout au plus ;
+Si vous essayez de dépenser le même coin deux fois, la première transaction effectuée sera la transaction valide, et la seconde sera considérée comme invalide.
 
 Maintenant que vous savez qu’un protocole, un terme que vous allez entendre assez souvent, est juste un ensemble de règles, voyons qui joue un rôle dans un écosystème blockchain.
 
@@ -53,9 +53,9 @@ S'il faut moins de 2,5 minutes en moyenne pour résoudre le puzzle, rendez-le pl
 
 Ainsi, les mineurs utilisent l'équipement qui aide à créer un consensus parmi tous les participants sur l'ordre des événements de manière efficace. Imaginez tous ces centaines ou milliers de mineurs, qui ne se connaissent pas, qui discutent de ce qui s'est passé et à quelle heure exactement dans une salle de conférence. Ce serait un désastre. La blockchain introduit un moyen très efficace afin de s'accorder sur l'ordre dans lequel certains événements se sont produits. Ce sont les mineurs qui proposent des suggestions sur l'historique des transactions et si un mineur donné résout le puzzle en premier, sa version sera acceptée par tous les membres du réseau. Bitcoin a en fait introduit le premier protocole de l'histoire de l'humanité, qui pouvait parvenir à un consensus dans un environnement sans confiance et distribué.
 
-Mais pourquoi est-ce que les mineurs font cela?
+Mais pourquoi est-ce que les mineurs font cela ?
 
-Les mineurs sont récompensés lorsqu’ils résolvent le puzzle en premier. Cela crée un incitatif pour les individus afin d'acheter et exploiter le matériel nécessaire afin de résoudre le puzzle cryptographique. Le mineur qui est le premier à résoudre le puzzle est récompensé dans la devise qu'il mine. Il est autorisé à s'envoyer lui-même une transaction avec une certaine quantité de coins, qui n'existait pas auparavant. C’est un autre exemple de règle d’un protocole blockchain:
+Les mineurs sont récompensés lorsqu’ils résolvent le puzzle en premier. Cela crée un incitatif pour les individus afin d'acheter et exploiter le matériel nécessaire afin de résoudre le puzzle cryptographique. Le mineur qui est le premier à résoudre le puzzle est récompensé dans la devise qu'il mine. Il est autorisé à s'envoyer lui-même une transaction avec une certaine quantité de coins, qui n'existait pas auparavant. C’est un autre exemple de règle d’un protocole blockchain :
 Le mineur qui résout le bloc en premier est autorisé à inclure une transaction dans le bloc pour s'envoyer à lui même une partie des coins nouvellement crées.
 
 
@@ -65,4 +65,4 @@ En conclusion, les mineurs et les opérateurs (ou administrateurs) de nœuds son
 
 Afin de réaliser cette tâche de créer le consensus parmi les participants du réseau, les mineurs reçoivent une récompense. Cette récompense génère des nouveaux coins. Chaque ZEN disponible aujourd'hui vient d’une récompense de bloc de mineurs.
 
-L'article suivant va aborder la question du fonctionnement de [l'identité dans le contexte de la blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). Sans le concept d’identité, il ne peut pas y avoir de propriété; et ne serait-il pas merveilleux de pouvoir posséder les cryptomonnaies que vous achetez?
+L'article suivant va aborder la question du fonctionnement de [l'identité dans le contexte de la blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}). Sans le concept d’identité, il ne peut pas y avoir de propriété ; et ne serait-il pas merveilleux de pouvoir posséder les cryptomonnaies que vous achetez ?

@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Qu'est-ce qu'une fonction de hachage?"
+title: "Qu'est-ce qu'une fonction de hachage ?"
 description: "Une fonction de hachage est quelque chose que nous utilisons pour créer l'empreinte digitale d'un fichier."
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5

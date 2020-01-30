@@ -1,12 +1,12 @@
 ---
 layout: post
 type: intro
-title: "Qu’est-ce que la Blockchain?"
+title: "Qu’est-ce que la Blockchain ?"
 description: "Dans ce premier chapitre de cette section, nous vous expliquons comment les blockchains stockent les transactions, pourquoi cela permet de transférer de la valeur, et ce qu’est un smart contract."
 permalink: /technology/advanced/what-is-a-blockchain/
 topic: technology
 level: advanced
-chapter: "Qu’est-ce que la Blockchain?"
+chapter: "Qu’est-ce que la Blockchain ?"
 ---
 
 Nous souhaitons regarder la blockchain depuis trois différentes perspectives dans ce premier chapitre de notre section technologie avancé.

@@ -24,7 +24,7 @@ _"A sidechain is a blockchain that validates data from other blockchains. […] 
 
 **Français**
 
-_"Une sidechain est une blockchain qui valide les données des autres blockchains. Une sidechain connectée est une sidechain dont les actifs peuvent être importés depuis et vers d'autres chaînes; ainsi, la sidechain supporte les actifs 2WP"_  A. Back et al. – “Enabling blockchain innovations with pegged sidechains”, 2014
+_"Une sidechain est une blockchain qui valide les données des autres blockchains. Une sidechain connectée est une sidechain dont les actifs peuvent être importés depuis et vers d'autres chaînes ; ainsi, la sidechain supporte les actifs 2WP"_  A. Back et al. – “Enabling blockchain innovations with pegged sidechains”, 2014
 
 En d'autres termes, une sidechain est une blockchain en soi, mais avec la capacité de communiquer et d'interopérer avec une ou plusieurs autres chaînes. Lorsque vous entendez le terme sidechain aujourd'hui, les gens parlent surtout de sidechains connectées, qui vous permettent de transférer des ressources d'une chaîne à l'autre.
 
@@ -53,7 +53,7 @@ Les critiques du concept de sidechain aiment souligner que la plupart des implé
 
 ### Pourquoi Horizen s'intéresse aux sidechains ?
 
-Le projet Horizen Blockchain s'est fixé des objectifs ambitieux. Nous prévoyons inclure des fonctions telles que le développement d'un système de trésorerie pour la DAO (link to DAO article) en collaboration avec IOHK, une solution décentralisée pour le suivi des Secure Nodes et Super Nodes et le traitement de leurs récompenses, ainsi que le développement d'un protocole Block-DAG afin d’accroître le débit des transactions.
+Le projet Horizen Blockchain s'est fixé des objectifs ambitieux. Nous prévoyons inclure des fonctions telles que le développement d'un système de trésorerie pour la DAO en collaboration avec IOHK, une solution décentralisée pour le suivi des Secure Nodes et Super Nodes et le traitement de leurs récompenses, ainsi que le développement d'un protocole Block-DAG afin d’accroître le débit des transactions.
 
 Vous voyez probablement l’intérêt qu’il y a à développer les sidechains en premier étant donné que certaines de ces fonctionnalités requièrent des modifications importantes du client principal si elles étaient implémentées dans la base de code actuelle. Construire de nouvelles fonctionnalités et apporter des modifications au protocole, même si elles sont petites, n'est pas seulement un défi du point de vue de l'établissement d'un consensus autour d'elles, mais cela comporte aussi des risques pour la sécurité. Chaque ajout doit être considéré avec soin.
 
