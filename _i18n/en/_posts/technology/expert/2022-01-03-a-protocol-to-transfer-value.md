@@ -7,6 +7,7 @@ permalink: /technology/expert/a-protocol-to-transfer-value/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+published: false
 ---
 
 While this section of the Horizen Academy is focused on the technology, we want to account for the multidisciplinary nature of the blockchain and cryptocurrency space with this article. Without the right incentive system and economic considerations global digital money cannot work. Without building a cognitive bridge between the technology and the monetary aspects one is left with an incomplete picture of what blockchain can be.

@@ -59,7 +59,7 @@ construction of network a "modular recursive approach" used, "virtual state chan
 **TODO**
 ![State Channel Construction](/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_D.png)
 {%
-  include image_caption.html
+  include blocks/image_caption.html
   image="/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_D.jpg"
   image2="/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_M.jpg"
   caption="Graphic from State Channel Paper: Virtual State Channels \\(\gamma_i\\) constructed by combining Ledger State Channels \\(P_i\\) with each other and lastly by combining both, virtual and ledger state channels as in the construction of \\(\gamma_3\\)."
@@ -90,7 +90,7 @@ Important that Ingrid can never lose coins.
 **TODO**
 ![Virtual State Channel Construction](/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_D.png)
 {%
-  include image_caption.html
+  include blocks/image_caption.html
   image="/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_D.jpg"
   image2="/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_M.jpg"
   caption="Graphic from State Channel Paper)."

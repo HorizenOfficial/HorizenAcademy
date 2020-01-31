@@ -11,12 +11,12 @@ body{ min-height:100%; position:relative; }
 body::after{
   content:'';
   display:block;
-  height: 360px;
+  height: 263px;
   @media (max-width: 767px) {
-    height: 415px;
+    height: 317px;
   }
   @media (max-width: 575px) {
-    height: 520px;
+    height: 425px;
   }
 }
 .site-footer-wrapper{
@@ -236,12 +236,27 @@ button.btn-close {
   }
   .bottom-links {
     padding: 12px;
+    position: relative;
     a {
       display: block;
       color: #3d6892;
       &:hover {
         color: white;
         text-decoration: none;
+      }
+    }
+    .toggle-languages {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      background-color: #084d84;
+      color: white;
+      line-height: 40px;
+      width: 40px;
+      text-align: center;
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: block;
       }
     }
   }
@@ -257,6 +272,10 @@ button.btn-close {
 }
 
 .site-content-wrapper {
+}
+
+.site-content {
+  padding-bottom: 4rem;
 }
 
 .article-nav {
@@ -523,7 +542,8 @@ button.btn-close {
 }
 
 .footer-share-social {
-  padding: 2rem 0;
+  position: absolute;
+  top: -3rem;
   img {
     height: 32px;
   }
@@ -878,6 +898,53 @@ button.btn-close {
         padding-right: 1.5rem;
         padding-left: 1rem;
       }
+    }
+  }
+}
+
+#full-screen-image-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1050;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+
+  .panzoom {
+    display: flex;
+    align-items: center;
+    img {
+      background: white;
+    }
+  }
+  .zoom-controls {
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    z-index: 1051;
+    .zoom-ctl {
+      background: url(../img/icons/zoom-icons.png) no-repeat;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+    .zoom-in {
+      background-position: 0 0;
+    }
+    .zoom-out {
+      background-position: -30px 0;
+    }
+    .zoom-close {
+      background-position: -90px 0;
     }
   }
 }

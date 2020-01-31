@@ -1,0 +1,242 @@
+---
+layout: default
+type: intro
+title: "Technologie"
+description: "Le contenu de cette section est disponible en trois niveaux de connaissances : Débutant, Avancé et Expert."
+permalink: /technology/
+topic: technology
+css: |
+  .post-section .post-title {
+    font-size: 2.5rem;
+  }
+  .welcome-text {
+    font-size: 1.25rem;
+  }
+  .welcome-text ul {
+    list-style: none;
+  }
+  .welcome-text li:before {
+    content: "\2022";
+    color: #0e9de5;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  .post-section .post-content .icon-level {
+    height: 50px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .table-levels {
+    border-spacing: 16px 0;
+    border-collapse: separate;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .table-levels td {
+    border-left: 1px solid #f5f6fa;
+    border-right: 1px solid #f5f6fa;
+    padding: 0.6rem 1.2rem;
+  }
+  .table-levels tr:first-child td {
+    border-top: 1px solid #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+  .table-levels tr:last-child td {
+    border-bottom: 1px solid #f5f6fa;
+    background-color: #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .table-levels tr:last-child td {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  .table-levels a {
+    text-decoration: none;
+    color: #041742;
+  }
+---
+
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+
+    {% include search.html %}
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+            <h2 class="post-title text-uppercase">{{ page.title }}</h2>
+        </div>
+        <div class="col-md-8 welcome-text">
+            <p>
+                Bienvenue à la section Technologie de l'Académie Horizen. Nous avons créé le contenu que vous trouverez dans notre section Technologie selon deux principes :
+            </p>
+            <ul>
+                <li>Créer du contenu pour tout le monde, peu importe ce que vous savez.</li>
+                <li>Avoir une structure cohérente dans l'ensemble du contenu.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+
+        <hr class="mt-5 mb-5">
+
+
+        <h3>Des connaissances pour tous</h3>
+
+        <p>
+            Le contenu que nous avons préparé pour vous est disponible en trois niveaux de difficulté : Niveau Débutant, Avancé et Expert:
+        </p>
+
+        <div class="table-responsive d-none d-md-block">
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level d-inline"> Débutant
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level d-inline"> Avancé
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level d-inline"> Expert
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Si vous êtes nouveau aux sujets des cryptomonnaies et de la  Blockchain le **niveau débutant** sera pour vous.
+                    </td>
+                    <td>
+                        Si vous avez une compréhension générale de ce que sont les cryptomonnaies et comment fonctionne la blockchain mais que vous souhaitez en savoir plus, nous avons un **niveau avancé** pour vous.
+                    </td>
+                    <td>
+                        Si vous êtes familier avec les aspects techniques de la blockchain, mais que vous voulez en apprendre davantage sur des caractéristiques spécifiques et que vous n'avez pas peur de voir une formule mathématique ou un extrait de code, alors le **niveau Expert** sera votre meilleur choix.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Beaucoup d'analogies, peu de termes techniques.</li>
+                            <li>5 - 10 min par article.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Les termes techniques sont introduits.</li>
+                            <li>8 - 15 min par article.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Termes techniques fréquemment utilisé.</li>
+                            <li>10 - 20 min par article.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive d-block d-md-none">
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Débutant
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Si vous êtes nouveau aux sujets des cryptomonnaies et de la  Blockchain le **niveau débutant** sera pour vous.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Beaucoup d'analogies, peu de termes techniques.</li>
+                            <li>5 - 10 min par article.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Si vous avez une compréhension générale de ce que sont les cryptomonnaies et comment fonctionne la blockchain mais que vous souhaitez en savoir plus, nous avons un **niveau avancé** pour vous.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Les termes techniques sont introduits.</li>
+                            <li>8 - 15 min par article.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td>
+                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Expert
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Si vous êtes familier avec les aspects techniques de la blockchain, mais que vous voulez en apprendre davantage sur des caractéristiques spécifiques et que vous n'avez pas peur de voir une formule mathématique ou un extrait de code, alors le **niveau Expert** sera votre meilleur choix.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Termes techniques fréquemment utilisés.</li>
+                            <li>10 - 20 min par article.</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Si vous lisez un article et que vous vous sentez dépassé, vous pouvez descendre d'un niveau afin de lire le sujet d'une manière plus succincte et avec un langage moins technique. Si vous pensez que l'article que vous lisez ne vous dit rien de nouveau, montez d'un niveau et trouvez une explication plus approfondie du même contenu. Si vous souhaitez vous orienter, vous trouverez ici un <a href="{% tl content-overview %}#tab-technology">aperçu de l'ensemble du contenu.</a>
+        </p>
+
+        <h3>Notre structure</h3>
+
+        <p>
+            La structure générale de nos contenus est la même à tous les niveaux. Vous trouverez les mêmes chapitres du niveau Débutant au niveau Expert. Plus le niveau est élevé, plus vous trouverez d'articles dans chaque chapitre. Nous consacrons des articles entiers aux concepts que nous mentionnons comme notes annexes dans les niveaux précédents. Cela vous permet de passer d'un niveau à l'autre si vous trouvez le contenu trop complexe ou trop trivial.
+        </p>
+
+        <p>
+            Les articles sont conçus pour que vous puissiez les lire dans l'ordre ou individuellement. Si vous voulez avoir une vue d'ensemble, nous vous recommandons de lire du début à la fin. Si vous vous souciez juste d'un concept spécifique que vous recherchez, n'hésitez pas à lire des articles individuels.
+        </p>
+
+
+    </div>
+</div>

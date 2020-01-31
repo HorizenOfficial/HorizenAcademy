@@ -7,6 +7,7 @@ permalink: /technology/expert/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+published: false
 ---
 
 A blockchain can not only store data, but it can also execute programs. Programs on a blockchain are called smart contracts and need to be written in a specific language defined by the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}). A contract, in general, is an agreement between parties that binds them to something happening in the future. The term "smart" comes from the automatic execution of these digital contracts.
