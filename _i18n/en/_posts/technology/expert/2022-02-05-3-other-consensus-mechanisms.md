@@ -10,6 +10,11 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
+**TKKG** https://medium.com/@abhisharm/understanding-proof-of-stake-through-its-flaws-part-2-nothing-s-at-stake-8d12d826956c
+How nothing at stake is addressed. Also read part 3.
+
+https://medium.com/@hugonguyen/proof-of-stake-the-wrong-engineering-mindset-15e641ab65a2 incorporate this.
+
 A blockchain shows it's strength when out in the wild, living on a permissionless, distributed network. The biggest challenge when designing such a multi-agent system is achieving *consensus* among its participants.
 
 > "All blockchains are fundamentally a deterministic state machine acted upon by transactions. Consensus is the process of agreeing on a deterministic order of transactions and filtering invalid transactions." - Dan Larimer
@@ -72,6 +77,8 @@ Deterministic consensus allows for a scaling approach called [*sharding*](https:
 Lastly, PoS eliminates economies of scale from affecting the block production process. Although we concluded that Proof of Work algorithms are *amortization free* - meaning they do not offer an advantage to miners operating on a large scale, this only holds theoretically. While the algorithm itself does not allow for economies of scale, the entirety of the mining process always will. The more miners you buy, the better the price you will get. Cooling and housing are subject to economies of scale as well. This is an inherent caveat to introducing external, real-world costs to the block production process.
 
 ### Challenges with Proof of Stake
+
+https://blog.positive.com/rewriting-history-a-brief-introduction-to-long-range-attacks-54e473acdba9
 
 All of the above sounds very compelling, but some downsides and challenges come with PoS protocols. 
 

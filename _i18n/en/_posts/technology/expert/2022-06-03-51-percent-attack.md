@@ -11,3 +11,8 @@ published: false
 ---
 
 {% tf tech-not-available.md %}
+
+https://arxiv.org/pdf/1702.02867.pdf double spend races.
+Abstract: We correct the double spend race analysis given in Nakamoto’s foundational Bitcoin article and give a closed-form formula for the probability of success
+of a double spend attack using the Regularized Incomplete Beta Function....
+

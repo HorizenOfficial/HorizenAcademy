@@ -10,7 +10,6 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-
 Proof of Work (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).
 
 **TL;DW**: Evidence of Proof of Work can be found in many places, for example in Giza, Egypt. The pyramids don't only serve as a tribute to the Pharaoh, they also demonstrate the capabilities of the civilization that built them. It is immediately recognized by any visitor, that this monument required a large amount of work to be built. It's a proof of work.
@@ -32,7 +31,7 @@ After we have talked about [hash functions]({{ site.baseurl }}{% post_url /techn
 
 A miner starts creating a block by including the *coinbase* transaction as the first transaction. The coinbase transaction is a special one that does not have any inputs, but an output sending coins to an address controlled by the himself. This output is worth the current *block subsidy* (12.5 ZEN at the time of writing) together with the *transaction fees* of all included transactions. The sum of the block subsidy and the transaction fees make up the block reward.
 
-++++ block reward
+![Block Reward: The sum of block subsidy and transaction fees](/assets/post_files/technology/expert/2.4.2-pow/block-reward.jpg)
 
 By allowing them to include this transaction miners are incentivized to actually perform the computationally expensive task and at the same time new coins are created. Each existing ZEN or BTC started out in a coinbase transaction.
 
@@ -41,10 +40,11 @@ Next, miners collect new and unconfirmed transactions in their block. If there a
 Now, a miner builds a *merkle tree* of all transactions included in her block and includes the *merkle root* in the block header. She adds all the other necessary data, such as the hash of the previous block and some other meta data.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
+![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_M.jpg)
 
 Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
-![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
+![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
 Once such a block, or better nonce, is found, the miner will broadcast his block to the network, where nodes as well as other miners check, if the block contains conflicting transactions and if the hash is below the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block and start working on a new one.
 
@@ -54,7 +54,7 @@ The terms target and *difficulty* are often times used interchangeably. Technica
 
 The difficulty is a relative measure of the current target compared to the easiest target value.
 
-The target is adjusted regularly, with Horizen every 8064 **(?)** blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network valid blocks are found more frequently on average. By increasing the target, the block time can be adjusted upwards or downwards, depending on hash rate.
+The target is adjusted regularly, with Horizen every 8064 blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network valid blocks are found more frequently on average. By increasing the target, the block time can be adjusted upwards or downwards, depending on hash rate.
 
 ### Types of Proof of Work
 
@@ -66,7 +66,7 @@ While a Proof of Work System typically uses hash functions, a proof of work algo
 The most used type of Proof of Work is a Hashcash style PoW. Hashcash was introduced in 1997 by Adam Back as a measure to prevent spam. Recipients would require the sender to perform a proof of work in order to accept the mail. While this does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above, performing repeated hashing until the resulting hash is less than some target value.
 
 In general a Proof of Work can be one of two things: a non-interactive *solution-verification protocol* or an interactive *challenge-response protocol*. Horizen uses both, each for a different purpose.
- 
+
 Just like Bitcoin and most other blockchains, mining is done via a solution-verification protocol. Miners find a solution to a problem. All nodes can verify the solution at any point in time. Even a node that has been offline for months can verify if the blocks it receives during synchronization from an untrusted node are valid or not. It is non-interactive.
 
 Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain requirements for nodes in order to be eligible to get rewarded. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a form of Proof of Work as well.
@@ -74,7 +74,6 @@ Nodes on the Horizen network are incentivized by getting a share of the block su
 ### What Constitutes a good Proof of Work?
 
 Some criteria for a good PoW for a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
-
 
 - *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example we covered already, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For *54,063,013* this becomes a much more difficult task but verification can be done with any rudimentary calculator.
 
@@ -92,11 +91,11 @@ Proof of Work schemes always involve a computationally hard problem. The term co
 
 All of them have certain advantages and shortcomings. The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called ASICs, can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer a huge advantage in performance. Because ASICs are very specialized and expensive, most regular users don't have easy access to them.
 
-++++ cpu vs asic graphic
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic.jpg)
 
 The memory-bound "approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." [Source](https://medium.com/@jeffrey.emanuel/loaded-pow-a-new-direction-in-proof-of-work-algorithms-ae15ae2ae66a)
 
-With recently the author refers to the emergence of ASIC miners for the Equihash mining algo.
+With recently the author refers to the emergence of ASIC miners for the Equihash mining algorith.
 
 Network-bound approaches are less hardware intensive and rely more on operational expenditures than capital expenditures. At the same time they are more vulnerable to attacks, such as [**DOS**] attacks and bandwidth is geographically not as evenly available as CPU power or memory.
 
@@ -104,7 +103,7 @@ Most PoW schemes are CPU-bound. Some algorithms, sometimes referred to as ASIC r
 
 **TKKG** An interesting sidenote is that bandwith is a consideration in the IOTA [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). The Tangle is a [Directed Acyclic Graph (DAG)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) consisting of individual transactions. Each transaction has a small proof of work attached. The protocols security is based on the assumption that honest participants will make up the majority of transactions and the majority of computational power. If the Tangle was to be adopted widely for micro-payments in the IOT sector, not only would computational power secure the network, but also the bandwidth restraints of a single attacker. It will be infeasible to amass more bandwith than all honest devices will have combined. In order to broadcast a majority of transactions one needs a majority of computing power and bandwidth in this setting. In a transaction DAG security can have both, a CPU-bound and a network-bound component.
 
-#### Metrics to Assess Computational Hardness}
+#### Metrics to Assess Computational Hardness
 
 Their are two different metrics to rate the difficulty of a computational task: time complexity and space complexity.
 
@@ -120,27 +119,37 @@ An algorithm designed for a Proof of Work has to make tradeoffs between the two.
 
 ### The Generalized Birthday Problem
 
-**TKKG shorten a lot, full section moved to mining article**
-
 Let us take a look at the parameters of a PoW scheme, that allow us to tune it. The most intuitive parameter to understand is the target. Because cryptographic hash functions map their inputs evenly distributed across the output range, lowering the threshold a hash has to be smaller than makes the task of finding an according input more difficult. The more hash power is on the network, the lower the average time until such an input is found. This means shorter block times. Lowering the target naturally increases the block time.
 
 There are much more complex PoW algorithms though. One of the more widely used ones is [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf), which is based on the *Generalized Birthday Problem* and used by the Horizen blockchain.
+
+++++ birthday problem
 
 The [*birthday problem*](\url{https://en.wikipedia.org/wiki/Birthday_problem}) describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
 
 If you find this interesting or have a hard time believing it, you might also want to look at the closely related [*Pigeonhole Principle*](https://en.wikipedia.org/wiki/Pigeonhole_principle) the [*Hilbert's paradox of the Grand Hotel*](https://medium.com/i-math/hilberts-infinite-hotel-paradox-ca388533f05l) or [*The Traveling Salesman Problem*](https://en.wikipedia.org/wiki/Travelling_salesman_problem). Each can turn into a rabbit hole of its own.
 
-The [*generalized birthday problem*](https://en.wikipedia.org/wiki/Birthday_problem#The_generalized_birthday_problem) refers to the difficulty of calculating those probabilities in more general context. We define a time period of *d* days, and ask how many people *n* do we need to have a 50% likelihood of a birthday coincidence. Next, we can increase the number of dimensions for the problem. Instead of looking at a group of *n* people, we could look at two groups of *m* men and *w* women. With a given set of values for *d*, *m* and *w*, what is the likelihood of a man and a woman sharing a birthday.
+++++ birthday problem generalized
+
+The [*generalized birthday problem*](https://en.wikipedia.org/wiki/Birthday_problem#The_generalized_birthday_problem) refers to the difficulty of calculating those probabilities in a more general context. We define a time period of *d* days, and ask how many people *n* do we need to have a 50% likelihood of a birthday coincidence. 
+
+++++ birthday problem gen md
+
+Next, we can increase the number of dimensions for the problem. Instead of looking at a group of *n* people, we could look at *k* groups of \\(n_k\\) group members. With a given set of values for *d*, *k* and \\(n_0, n_1,... n_k\\), what is the likelihood of a man and a woman sharing a birthday?
 
 Starting from the generalized birthday problem, David Wagner devised an algorithm - the *Wagner's Algorithm* - to compute those probabilities for even more complex setting with *k* dimensions (groups of people) and *n*-bit settings (days). The algorithm [was found to be](https://pdfs.semanticscholar.org/06f4/507d9f584b544f96364cae2ad41e78e4035b.pdf) hard on time and space.
 
-++++ birthday problem
-
-The time and space complexity trade-off can be adjusted by the parameter *k*. This means, very loosely speaking, that if one uses the generalized birthday problem for a proof of work algorithm, one can make it more CPU or memory intensive for the computer depending on the number of different groups of people *k* a birthday collision is calculated for.
+The time and space complexity trade-off can be adjusted by the parameter *k*. This means, very loosely speaking, that if one uses the generalized birthday problem for a PoW algorithm, one can make it more CPU or memory intensive depending on the number of groups *k* a birthday collision is calculated for.
 
 Horizen has implemented Equihash with *n*=200 and *k*=9.**???**
 
-Some other examples of computationally hard problems used to create a Proof of Work include finding prime numbers and solving the traveling salesman problem. In Primecoin the PoW task is to find prime number chains e.g. *Cunningham chains* and *Bi-twin chains* where primes roughly double or follow a specific sequence. The [Cuckoo Cycle*] algorithm by Tromp et al. is based on graph theory. It comes down to the traveling salesman Problem and is implemented in Grin and æternity.
+Some other examples of computationally hard problems used to create a Proof of Work include finding prime numbers and solving the traveling salesman problem. In Primecoin the PoW task is to find prime number chains e.g. *Cunningham chains* and *Bi-twin chains* where primes roughly double or follow a specific sequence. The [Cuckoo Cycle*] algorithm by Tromp et al. is based on graph theory. It comes down to the Traveling Salesman Problem and is implemented in Grin and æternity.
+
+Another interesting concept was presented with ProgPoW. Its algorithm is designed to match already available hardware to reverse the scenario that has played out in the past where the companies with the largest budget were able to bring specialized mining hardware for a given algorithm to market first.
+
+**TKKG: Include Link??? Check paragraph above for accuracy** https://medium.com/@ifdefelse/understanding-progpow-performance-and-tuning-d72713898db3
+
+
 
 ### Incentives and Vulnerabilities
 
@@ -162,7 +171,9 @@ Horizen has a [mechanism in place](https://www.horizen.global/assets/files/A-Pen
 
 In the graphic above, the malicious chain was broadcast with a delay of 4 blocks. The delay is the amount of honest blocks mined on top of the last common block before the fork. The block acceptance delay modifies the longest chain rule. The malicious chain is not immediately recognized by the other nodes, just because it is longer. Instead, a penalty is calculated based on the delay *n*, using a delay function *DF*. Let's consider a rather simple delay function
 
-$$DF(n) = \frac{n}{2} (n+1)$$
+$$
+DF(n) = \frac{n}{2} (n+1)
+$$
 
 For a 4 block delay, an additional 10 confirmations are required in order for the rest of the network to accept the fork. For a short delay of one block time, the delay function gives a penalty of one block - this situation turns out to be equivalent to the longest chain rule where an additional confirmation will break the tie between two blocks of the same height.
 

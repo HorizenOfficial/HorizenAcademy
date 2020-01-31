@@ -12,12 +12,12 @@ published: false
 
 An integral part of blockchain technology is public-key cryptography (PKC). There are several PKC schemes in existence but the two most popular ones are RSA (after Rivest, Shamir and  Adleman) and elliptic curve cryptography (ECC). In blockchains elliptic curve cryptography is used to prove and validate ownership of data.
 
-The inner workings of ECC are often treated as a black box and we want to shed some light on the inner workings of the type of cryptography that gave *crypto*currencies their name. To make this topic more digestible we split the topic into three parts.
+The inner workings of ECC are often treated as a black box and we want to shed some light on the type of cryptography that gave *crypto*currencies their name. To make this topic more digestible we split it into three parts.
 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/curve.png" alt="Elliptic Curve Cryptography" />
         </a>
     </div>
     <div class="col-md-9">
@@ -31,11 +31,10 @@ The inner workings of ECC are often treated as a black box and we want to shed s
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/keys-and-addresses.png" alt="Generating Keys and Addresses" />
         </a>
     </div>
     <div class="col-md-9">
@@ -49,11 +48,10 @@ The inner workings of ECC are often treated as a black box and we want to shed s
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/2.3.0-pkc/digital-signatures.png" alt="Digital Signatures" />
         </a>
     </div>
     <div class="col-md-9">

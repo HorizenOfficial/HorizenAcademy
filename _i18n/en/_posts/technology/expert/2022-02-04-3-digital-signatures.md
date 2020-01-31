@@ -21,6 +21,7 @@ While this mechanism is usually treated as a blackbox, we will go into detail on
  A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length, the magnitude, and a direction, the angle \\(\alpha\\) relative to the positive *x*-axis. This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values, one for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). It is a convention that scalars are written with small letters, like *sk*, while vectors are written with capital letters, like *PK*. 
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_D.jpg)
+![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_M.jpg)
 
 It's important to note that the hash of a vector is a scalar. The **hash function** consumes the *tuple* of values as an input and outputs a scalar.
 
@@ -29,6 +30,7 @@ When we use the \\(\bullet\\) operator when we are doing multiplication on the e
 To Recap our previous articles: your secret or private key *sk* is a large random number. If you multiply the base point *P* used for the specific curve (secp256k1) with the private key you get your public key *PK*. You now want to prove to the network that you know *sk* without revealing it, so how does that work?
 
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
+![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
 
 ### Generating the Signature
 

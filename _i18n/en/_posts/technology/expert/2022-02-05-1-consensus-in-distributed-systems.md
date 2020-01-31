@@ -10,8 +10,6 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-## Consensus in Distributed Systems
-
 When you want to create a system for a global, censorship resistant digital money, there is no way around building it on a *distributed system*. Only this design choice allows you to build a strong network or system, without any central party being in control. *Distributed computing* is an area in *computer science* that specifically studies distributed systems. Although such distributed systems have many advantages, they also come with their very own challenges - one of them being reaching *consensus* among its participants.
 
 In this article we want to show you what a distributed system does, what challenges it poses, and how these challenges have been addressed. Bitcoin introduced an innovation to the area of distributed computing, namely the *Nakamoto consensus* that has all peers on the network agree on a single version of the blockchain.
@@ -20,15 +18,15 @@ I'm not sure if one ever fully understands consensus. There are so many intricac
 
 ### What is a Distributed System?
 
-Let us first define what a distributed system is. 
+Let us first define what a distributed system is.
 
-A distributed system is a set of *processes*, distributed across many locations, trying to achieve a common goal through coordination and communication via *messages*. 
+> A distributed system is a set of *processes*, distributed across many locations, trying to achieve a common goal through coordination and communication via *messages*.
 
-Ok, now let's take this apart, shall we? 
+Ok, now let's take this apart, shall we?
 
 The set of *processes* are the different participants of the network. Each computer - or *node* -  on the network that is running the *client* is a single *process* within the distributed system. The gommon goal can be facilitating a system to exchange files or to enable a global digital form of money. The latter is what we will focus on. The processes are separated and are executed on each computer independently, but the system is described as one and acts as a whole. In order to behave that way, the individual parts have to communicate and update each other on recent events. This is done via *messages* that in the context of a blockchain are mostly transactions transferring money, or new blocks.
 
-But why do we need a distributed system to run a blockchain? Firstly, by it's very nature it should enable people across the globe to interact with it. Therefore a communication network that connects the different participants globally is a fundamental requirement. Additionally, distributed systems are more reliable as they don't have a single point of failure. 
+But why do we need a distributed system to run a blockchain? Firstly, by it's very nature it should enable people across the globe to interact with it. Therefore a communication network that connects the different participants globally is a fundamental requirement. Additionally, distributed systems are more reliable as they don't have a single point of failure.
 
 ### Challenges
 
@@ -46,6 +44,7 @@ We will mostly be concerned with the last two challenges: making the system faul
 - Lastly, *Byzantine* failures are the hardest to address. They refer to radom bahavior that can be guided by malicious intentions or simply malfunctioning clients. Any malicious actor trying to attack the system by deviating from the [*protocol*] in one way or another would be an example of a Byzantine failure. This could happen through not forwarding or altering messages, or any other means.
 
 ![Node Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_D.jpg)
+![Node Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_M.jpg)
 
 The system should be fault tolerant, in that it continues to work regardless of the different types of failures occuring or not. Depending on which type of failures it can handle, it can be classified as either *simple fault tolerant* where it handles the first two failures, crash and omission, or *Byzantine Fault-Tolerant* where it can handle all three types of failures.
 
@@ -58,6 +57,7 @@ There are three models for how well the message propagation works, which effect 
 - *Asynchronous* message delivery assumes that messages might never reach their destination, are duplicated or received in a different order than sent. 
 
 ![Network Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_D.jpg)
+![Network Failure](/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_M.jpg)
 
 As you can imagine, building a distributed system (which relies on communication!) around an asynchronous message passing model poses the greatest challenge. But if one manages to make the system work based on this assumption, it will be highly robust!
 
@@ -69,11 +69,11 @@ Depending on which assumptions one uses to design a system, the result can displ
 
 A system that can also handle the random and malicious behavior of a *byzantine* participant, is called *Byzantine Fault-Tolerant*. Because we want blockchains to be permissionless so that anybody can join the network at will, we have to account for malicious actors that will try to game the system. This means we do require a BFT consensus mechanism.
 
-Sometimes you might also hear the term BAR-FT - *Byzantine-Altruistic-Rational Fault Tolerance*. Participants in a permissionless network can be one of three things: 
+Sometimes you might also hear the term BAR-FT - *Byzantine-Altruistic-Rational Fault Tolerance*. Participants in a permissionless network can be one of three things:
 
 - byzantine or malicious
 - altruistic or honest
-- or rational 
+- or rational
 
 Rational means that they will follow the protocol, as long as it is the most profitable strategy for them. If deviation from the protocol is more profitable for them, they will deviate. In the context of blockchains this is addressed via the incentive design, rather then the consensus mechanism. The two are closely related and connected and therefore can't be viewed in isolation.
 
@@ -91,7 +91,7 @@ Consensus between the different nodes of a replicate state machine can be define
 
 - *Liveness* (or *termination*) means that all non-faulty nodes eventually compute a new state according to the state transition logic when an external event happens. In simple terms it means, the system doesn't halt and reacts to events.
 
-- *Safety* (or *agreement*) means that all non-faulty nodes transition to the same state after a given external event. This means, all nodes will be in synch eventually. 
+- *Safety* (or *agreement*) means that all non-faulty nodes transition to the same state after a given external event. This means, all nodes will be in synch eventually.
 
 A blockchain can be viewed a replicate state machine in that it also starts with an initial state - the genesis block. The external events in a blockchain are transactions between users. State transitions happen in intervals - one transition with each new block. All non-faulty nodes reach a new state eventually (liveness), and all nodes agree on a new block (safety). With this new terminology, we can refine our definition of the holy grail of consensus mechanisms:
 
@@ -111,13 +111,13 @@ Deterministic consensus means every state transition has instant finality. When 
 
 The findings of Fischer, Lynch and Paterson hold, so one has two options to reach Byzantine Fault-Tolerance in a distributed system: One can use synchrony assumptions or one can follow a non-deterministic approach to consensus. In first attempts to solve the dilemma, researcherd tried to work with synchrony assumptions.
 
-##### Paxos
+#### Paxos
 
 One of the early attempts to reaching distributed consensus was the [*Paxos* protocol family](https://en.wikipedia.org/wiki/Paxos_(computer_science)?source=post_elevate_sequence_page). Paxos achieves consensus in an asynchronous settings, but can not handle Byzantine behavior. Transitioning from one state to another requires a lot of communication overhead. The transition logic happens in three steps comprising a preparation phase, and accepting phase, and lastly a learning phase.
 
 If a transition fails or halts, there is a timeout mechanism after which the process restarts. Because of the multi-step process of state transitions, Paxos is hard to understand as well as hard to implement.
 
-##### Raft
+#### Raft
 
 [*Raft*](https://raft.github.io/?source=post_elevate_sequence_page) was another consensus mechanism published in 2013. It set out to be more easy to understand and implement than Paxos. It also uses timeouts in case a state trasition fails and can therefore handle asynchrocnous environments. But just like Paxos it fails to achieve consensus with Byzantine actors and is only simple fault-tolerant. Handling Byzantine bahivor is so much more difficult, because parties can not only be live or offline, but can also lie, coordinate or act arbitrarily.
 
@@ -127,10 +127,10 @@ The argumentation is easy. If *x* is the number of byzantine nodes, the system m
 
 What we have learned from looking at Paxos, Raft and the Byzantine Generals problem is that handling byzantine behavior in a asynchronous environment is a hard problem. Furthermore, we learned that the threshold for the maximum share of byzantine participants on the network is rather low at one third of the total node count.
 
+![Paxos and Raft](/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_D.jpg)
+![Paxos and Raft](/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_M.jpg)
 
-++++ graphic paxos_raft
-
-##### DLS
+#### DLS
 
 When we talked about the different assumptions for the network reliability, we mentioned the *partially synchronous* model, where messages are assumed to be delivered in *bounded time*, but the *bound* is unknown. This model was introduced with the [*DLS algorithm*](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) after Dwork, Lynch and Stockmeyer. It also introduced the terms liveness and safety that we already introduced. Liveness is the property of the system working and not coming to a halt in case of failures, while safety was the agreement of the network on a single current state.
 
@@ -138,12 +138,14 @@ When we talked about the different assumptions for the network reliability, we m
 The DLS algorithm contributed greatly to the development of consensus research, in that it established a new network model (partial synchrony) and achieved safety and liveness in a byzantine environment. It however failed to do so in an asynchronous setting and it also came with a non-starter that led to it never being implemented in a meaningful way. It assumed a synchronized clock between all nodes, an assumption that is just not realistic in a permissionless system.
 
 ![Dwork, Lynch and Stockmeyer Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_D.jpg)
+![Dwork, Lynch and Stockmeyer Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_M.jpg)
 
 #### pBFT
 
 In 1999 yet another consensus algorithm was published - [*practical Byzantine Fault-Tolerance*](http://pmg.csail.mit.edu/papers/osdi99.pdf) (pBFT) by Castro and Liskov. It got pretty close to achieving the end goal: handling malicious actors in an unreliable communication network while ensuring safety and liveness. We used the distinction between *consensus* and *liveness and safety* deliberately in this case. While pBFT can guarantee safety under all circumstances (assuming a maximum of *(n-1)/3* byzantine nodes), it relies on the synchronous model to achieve liveness. Put differently, in an unreliable communication network the system might halt. pBFT also suffers scalibility issues: the number of messages needed to keep the network in synch grows exponentially with the number of nodes. It is therefore impractical for public blockchains.
 
-++++ Graphic pBFT
+![Practical Byzantine-Fault Tolerance](/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_D.jpg)
+![Practical Byzantine-Fault Tolerance](/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_M.jpg)
 
 ### Changing the Definition of Consensus
 
@@ -155,16 +157,17 @@ The consensus mechanism therefore had nodes agreed on some fixed new state.
 In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* surely but slowly approaches 1.
 
 ![Nakamoto Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_D.jpg)
+![Nakamoto Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_M.jpg)
 
 It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach to partition the ledger into individual *shards*. Without finality, this becomes practically infeasible.
 
-##### Nakamoto Consensus
+#### Nakamoto Consensus
 
 But wait, how does the Nakamoto consensus actually achieve consensus? In the mechanisms we outlined above you can break down the process of achieving consensus to a *proposer* suggesting a state transition and a group of *acceptors* coordinating to either accept or decline the proposed state. This coordination displays characteristics of a ballot. A shortened Demiro Massessi quote reads:
 
 > "In one way or another, [...] consensus algorithms boil down to some kind of vote [...].”
 
-Nakamoto consensus with [Proof-of-Work] (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and to start proposing blocks. The consensus is based on who can find a nonce, that [hashed]hm together with the proposed block header, yields a block hash below the current target value. The chance of finding such a valid nonce is proportional to the relative hash power - or computing power -  a given miner controls. This means state transitions are voted on with hash power, and the state transition logic is defined by the target a valid block hash has to be smaller than or equal to.
+Nakamoto consensus with [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and to start proposing blocks. The consensus is based on who can find a nonce, that [hashed]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) together with the proposed block header, yields a block hash below the current target value. The chance of finding such a valid nonce is proportional to the relative hash power - or computing power -  a given miner controls. This means state transitions are voted on with hash power, and the state transition logic is defined by the target a valid block hash has to be smaller than or equal to.
 
 At this point, we would like to quote Demiro in full:
 
@@ -179,6 +182,7 @@ The consensus mechanism is composed of two parts. One is the Proof-of-Work compo
 The longest chain rule is applied in case two miners find valid blocks at roughly the same time - a tie situation because both blocks are valid according to the [protocol]. Miners start building on the block they received first, but keep the second one in memory. Different miners can have different vies of which block came first, depending on their geographical location and their connectivity in the network graph. The tie is broken once the next block is found and the winner is the block that was build on top of.
 
 ![Longest Chain Rule](/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_D.jpg)
+![Longest Chain Rule](/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_M.jpg)
 
 The resulting chain of state transitions - the blockchain - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power. This means, that on it's way to solving one of the more difficult problems in computer science, the Byzantine Generals Problem, Nakatomo Consensus also raised the bar for byzantine tolerance. Instead of being able to handle rougly 33% of participants being byzantine, it can handle 49%, although this is defined via the share of hash power rather than nodes on the network.
 
@@ -194,7 +198,7 @@ The longest chain rule is the "actual consensus mechanism" that has nodes agree 
 
 A key takeaway from this article should be the following: You get *immutability* of data only if there is a strong consensus  **and** incentive mechanism in place. It makes its participants agree on a state (safety), enforces the rules of the [protocol] and has the network decline invalid blocks. Without consensus, a blockchain is merely *tamper-evident*, which means alterations are easy to detect. Only because the rules are enforced through strong consensus and a set of well thought-out incentives, we get the immutability property.
 
-### Summary -  Blockchains
+### Summary
 
 Holy, that was a lot... Let's do a quick recap of what just happened.
 
@@ -209,15 +213,3 @@ Every *x* minutes a blockchain demonstrates liveness and every *k * x* minutes i
 A key takeaway from this article should be that without strong consensus and incentives the blockchain is only tamper-evident, and those mechanisms ensure immutability.
 
 In our next article, we will look at Proof-of-Work, the mechanisms that provides Sybil resistance and an incentive system all in one.
-
-
-
-
-## FR
-
-https://hackernoon.com/consensus-mechanisms-as-detailed-and-concise-as-possible-b3da79f85f66
-bitcoins security is fine
-
-https://medium.com/untitled-inc/decentralized-consensus-technology-enabling-the-world-of-networks-3c3ac06824a0
-
-

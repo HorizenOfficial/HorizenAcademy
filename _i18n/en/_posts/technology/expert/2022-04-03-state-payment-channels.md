@@ -10,6 +10,7 @@ chapter: "Transactions"
 published: false
 ---
 
+https://medium.com/coinmonks/till-its-lightning-fast-uncover-the-lightning-network-transactions-f3180e467857
 
 \url{* https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791}
 
