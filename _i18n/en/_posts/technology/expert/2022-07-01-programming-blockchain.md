@@ -7,7 +7,6 @@ permalink: /technology/expert/programming-blockchain/
 topic: technology
 level: expert
 chapter: "Programming Blockchain"
-published: false
 ---
 
 {% tf tech-not-available.md %}

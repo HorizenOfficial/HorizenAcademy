@@ -7,12 +7,6 @@ permalink: /technology/expert/ddos-attack/
 topic: technology
 level: expert
 chapter: "Attacks"
-published: false
 ---
 
-stubborn mining = selfish mining + eclipse attack
-https://eprint.iacr.org/2015/796.pdf
-
-"We show, surprisingly, that given the attacker’s
-best strategy, in some cases victims of an eclipse attack can
-actually benefit from being eclipsed!"
+{% tf tech-not-available.md %}

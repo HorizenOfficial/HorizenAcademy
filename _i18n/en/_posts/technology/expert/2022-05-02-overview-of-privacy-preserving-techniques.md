@@ -10,3 +10,4 @@ chapter: "Privacy"
 published: false
 ---
 
+{% tf tech-not-available.md %}
