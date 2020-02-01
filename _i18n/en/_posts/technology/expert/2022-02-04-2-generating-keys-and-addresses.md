@@ -77,19 +77,7 @@ The product of your private key *sk* with this base point *P* gives you your *el
 ![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_D.jpg)
 ![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_M.jpg)
 
-If you wonder how computationally expensive it is to multiply such a large number (*sk*) with a point on the curve you can check out our last article on [elliptic curve cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) where we calculate the number of computational steps needed. An extra byte is added to the front of your elliptic public key to give you your *full public key*. The extra byte depends on the specific blockchain you are generating an address for. For Bitcoin it is 0x04, for Horizen it is 0x ?? **TKKG**
-
-We will follow along with an example: Our private key needs to have 32 bytes, which equals 32 UTF-8 characters.
-
-    Horizen Academy Testing Address!
-
-The phrase above has 32 characters and converted to hex format it gives us
-
-    486f72697a656e2041636164656d792054657374696e67204164647265737321
-
-We'll use this as our private key for demonstrative purposes.
-
-**TKKG** do this with our test private key from top to bottom.
+If you wonder how computationally expensive it is to multiply such a large number (*sk*) with a point on the curve you can check out our last article on [elliptic curve cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) where we calculate the number of computational steps needed. An extra byte is added to the front of your elliptic public key to give you your *full public key*. The extra byte depends on the specific blockchain you are generating an address for.
 
 ### Compression
 
