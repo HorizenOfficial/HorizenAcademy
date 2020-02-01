@@ -7,7 +7,6 @@ permalink: /technology/expert/byzantine-generals-problem/
 topic: technology
 level: expert
 chapter: "Attacks"
-published: false
 ---
 
 {% tf tech-not-available.md %}
