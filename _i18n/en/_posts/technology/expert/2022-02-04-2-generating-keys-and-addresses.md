@@ -89,15 +89,17 @@ If you throw out the *y*-value all together and add a byte indicating the sign o
 
 ### From Public Key to Address
 
-Your compressed public is now hashed twice in a row, first using SHA256 and second using RIPEMD160. The second round of hashing accomplishes a compression by 37.5% (from 256 to 160bit). What you have now is your *encrypted public key*.
+Your compressed public is now hashed twice in a row, first using SHA256 and second, using RIPEMD160. The second round of hashing accomplishes a compression by 37.5% (from 256 to 160bit). What you have now is your *encrypted public key*.
 
 The next step to getting your address is adding a network byte to the front. Depending on which blockchain you are talking about this can also be two bytes. They indicate if the address is meant to be used on the production network or one of the testnets. Horizen uses two network bytes, which causes the *Base58Check* encoded transparent addresses to start with *zn* while shielded addresses start with *zc*.
 
-After we have added the network byte, a checksum is calculated and concatenated with the address. This serves as a security measure to prevent addresses that were corrupted during transmission to be used by a wallet. The checksum is obtained by hashing the address including the network byte twice and adding the first 4 bytes of the result to the end.
+After we have added the network byte, a checksum is calculated and concatenated with the address. This is a security measure to prevent addresses that were corrupted during transmission from being used by a wallet. The checksum is obtained by hashing the address including the network byte twice and taking the first 4 bytes of the result.
 
     SHA256(SHA256(network byte+encrypted public key))
 
-Now this is a valid address, but there is one last step to it. *Base58Check* is a way to convert bits into alphanumeric characters, but it excludes the four characters 0, O, I, and l. Base58Check removes these characters from your address to reduce errors when copying addresses manually and proofreading them.
+This checksum is then added to the end of the compressed public key.
+
+What we have now is a valid address, but there is one last step to it. *Base58Check* is a way to convert bits into alphanumeric characters, excluding the four characters 0, O, I, and l. Base58Check excludes these characters to reduce errors when copying addresses manually and proofreading them.
 
 ### Hierachichal Deterministic Address Generation}
 
@@ -106,11 +108,11 @@ Most wallets today are HD wallets - hierarchical deterministic wallets. They use
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_D.jpg)
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_M.jpg)
 
-These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets more closely.
+These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets more closely.
 
 ### Summary
 
-To get from your private key, *sk* to your address you first perform multiplication on the curve with the base point *P*. Next you add a leading byte, 0x04 (only bitcoin? what about horizen?) **TKKG** , omit the *y*-value while adding a byte for its sign and perform two hash operations in a row, SHA256 first and RIPEMD160 second. An extra byte is added to indicate if the address is meant for the main- or testnet, giving you the *mainnet encrypted public key*. A checksum is calculated by performing SHA256 twice and the first 4 bytes of that checksum are added to the end of the *mainnet encrypted public key*.
-Lastly, the characters 0, O, I, and l are removed via Base58Check.
+To get from your private key, *sk* to your address you first perform multiplication on the curve with the base point *P*. Next you add a leading byte depending on which blockchain the address is for and omit the *y*-value while adding a byte for its sign. Now two hash operations are performed in a row, SHA256 first and RIPEMD160 second to get your *encrypted public key*. A *network byte* is added to indicate if the address is meant for the main- or testnet, giving you the *mainnet encrypted public key*. A checksum is calculated by performing SHA256 twice and adding the first 4 bytes of that checksum to the end of the *mainnet encrypted public key*.
+Lastly, the characters 0, O, I, and l are removed using *Base58Check*.
 
-In our next article, we will look at how digital signatures are produced and verified without revealing any knowledge about the private key used to produce the signature.
+In our [next article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}), we will look at how digital signatures are produced and later verified without revealing any knowledge about the private key that was used to produce the signature.
