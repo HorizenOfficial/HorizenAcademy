@@ -10,45 +10,52 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-In the great scheme of things Public-Key Cryptography is used to verify ownership in cryptocurrencies. Somehow you need to be able to prove knowledge of a private key corresponding to a public key without revealing any information about it. This is done with a *digital signature*.
+In the great scheme of things Public-Key Cryptography is used to verify ownership in cryptocurrencies. Somehow you need to be able to prove knowledge of a private key corresponding to an address without revealing any information about it. This is done through *digital signatures*.
 
-To create a digital signature one uses a *message*, in most cases a transaction, to be signed and the private key as an input. The verifier uses the message, the public key and the digital signature as an input to the verification algorithm which produces a binary output. Either the signature is valid, or it is not. Every full node and miner on the network will verify each and every single transaction based on this concept.
+To create a digital signature one uses a *message*, in most cases a transaction, to be signed and the private key. The verifier uses the message, the public key and the digital signature as an input to the verification algorithm which produces a binary output: either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction based on this concept.
 
-While this mechanism is usually treated as a blackbox, we will go into detail on the inner workings of this cryptographic method in this section of the Horizen Academy. Before we get into the nitty gritty part, that does require some mathematics to be explained properly we want to repeat a convention we already introduced in our previous articles on elliptic curve cryptography. If you know the difference between a *scalar* and a *vector* feel free to skip the next section.
+While this mechanism is usually treated as a blackbox, we will go into detail on the inner workings of this cryptographic method in this article of the Horizen Academy. Before we get into the nitty gritty part, that requires some mathematics to be explained properly we want to repeat a convention we already introduced in our previous articles on elliptic curve cryptography. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with "Generating the Signature".
 
 ### Scalars and Vectors
 
- A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length, the magnitude, and a direction, the angle \\(\alpha\\) relative to the positive *x*-axis. This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values, one for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). It is a convention that scalars are written with small letters, like *sk*, while vectors are written with capital letters, like *PK*. 
+ A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length, the magnitude, and a direction, the angle \\(\alpha\\) relative to the positive *x*-axis. This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values, one for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). Alternatively, you can use the *x*-, *y*-, and *z*-coordinate to represent a gicen point in three-dimensional space. Either way you need three values.
+ It is a convention that scalars are written with small letters, like the private key *sk*, while vectors are written with capital letters, like your the public key *PK*.
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_D.jpg)
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_M.jpg)
 
-It's important to note that the hash of a vector is a scalar. The **hash function** consumes the *tuple* of values as an input and outputs a scalar.
+It's important to note that the hash of a vector is a scalar. The [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) consumes the *tuple* of values as an input and outputs a scalar.
 
-When we use the \\(\bullet\\) operator when we are doing multiplication on the elliptic curve. When we are performing regular multiplication of scalars, we will use the \\(\cdot\\) operator. We added this little discourse because it should help you to keep track of what are points on the curve and what are just "regular values" or scalars when following along.
+We use the \\(\bullet\\) operator when we are doing multiplication on the elliptic curve. When we are performing regular multiplication of scalars, we will use the \\(\cdot\\) operator. We added this little discourse because it should help you to keep track of what values are points on the curve (vectors) and what are  scalars when following along.
 
-To Recap our previous articles: your secret or private key *sk* is a large random number. If you multiply the base point *P* used for the specific curve (secp256k1) with the private key you get your public key *PK*. You now want to prove to the network that you know *sk* without revealing it, so how does that work?
+To Recap our previous articles: your secret or private key *sk* is a large random number. If you multiply the base point *P* used for the elliptic curve (secp256k1) with a private key you get a public key *PK*. You now want to prove to the network that you know *sk* without revealing it, so how does that work?
 
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
 
 ### Generating the Signature
 
-Generating a digital signature in an elliptic curve cryptography (ECC) scheme is based on the [distributive property](https://en.wikipedia.org/wiki/Distributive_property) for point addition that we introduced in the **article on ECC math** earlier in this chapter.
+Generating a digital signature in an elliptic curve cryptography (ECC) scheme is based on the [distributive property](https://en.wikipedia.org/wiki/Distributive_property) for point addition that we introduced in the [article on ECC math]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) earlier in this chapter.
 
 $$
 n \bullet P + r \bullet P = (n + r) \bullet P
 $$
 
-With a slight modification we get the equation below by multiplying with \\(\text{hash} (m, r \bullet P)\\) on both sides  and factoring out the base point *P* on the right hand side of the equation as we did above. This equation holds for **any** *m*, *r* and *n*.
+We get the equation below by multiplying with \\(\text{hash} (m, r \bullet P)\\) on both sides and factoring out the base point *P* on the right hand side of the equation as we did above. This equation holds for **any** *m*, *r* and *n*.
 
 $$
 \text{hash} (m, r \bullet P) \bullet n \bullet P + r \bullet P = (\text{hash}(m, r \bullet P) \cdot n+r) \bullet P
 $$
 
-We take it slowly from here, baby steps. For math-savvy readers this might be unnecessary but we would like to keep this understandable for the widest audience possible.
+We take it slowly from here, baby steps. For math-savvy readers this might mean some extra steps but we would like to keep this understandable for the widest audience possible.
 
-We learned that \\(sk \bullet P = PK\\). We replace the universal variable *n* with our private key *sk* now, and we can use *PK* to simplify the expression \\(sk \bullet P\\). Lets do this in two steps: first replacing *n*
+We learned that your private key multiplied with the base point yields your public key.
+
+$$
+sk \bullet P = PK
+$$
+
+We replace the universal variable *n* with our private key *sk*, and use *PK* to simplify the expression \\(sk \bullet P\\). Lets do this in two steps: first replacing *n*:
 
 $$
 \text{hash} (m, r \bullet P) \bullet {\color{red} sk} \bullet P + r \bullet P = (\text{hash}(m, r \bullet P) \cdot {\color{red} sk}+r) \bullet P
@@ -60,7 +67,7 @@ $$
 \text{hash} (m, r \bullet P) \bullet {\color{red} PK} + r \bullet P = (\text{hash}(m, r \bullet P) \cdot sk+r) \bullet P
 $$
 
-Next, we will replace \\(r \bullet P\\) with *R*. This follows the convention that *r* is a scalar that multiplied with the base point *P* gives us a point on the curve, the vector *R*.
+Now, we will replace \\(r \bullet P\\) with *R*. This follows the convention that the scalar *r* multiplied with the base point *P* gives us a point on the curve, the vector *R*.
 
 $$
 \text{hash} (m, {\color{red} R}) \bullet (PK + {\color{red} R}) = \text{hash}(m, {\color{red} R}) \cdot (sk+r) \bullet P
@@ -86,16 +93,17 @@ $$
 \text{hash}(m, R) \bullet (PK + R) = s \bullet P
 $$
 
-**then this proves you know the private key *sk* that corresponds to the public key *PK* as in \\(sk \bullet P = PK\\).**
+**this proves you know the private key *sk* that corresponds to the public key *PK* as in** \\(sk \bullet P = PK\\).
 
 Two conditions must be met in order for this to be the case:
 
 - If you know *sk*, then you must be able to provide working values for *m*, *R*, and *s*.
 - If you don't know *sk*, then you must not be able to provide working values for *m*, *R*, and *s*.
 
-#### Condition 1
+#### Condition 1: Providing m, R, and s
 
-Let's assume you know *sk*. First, you choose random value for *r* and a message *m* to sign. Next, you compute \\(R = r \bullet P\\). Lastly, you compute \\(s = \text{hash}(m,R) \cdot (sk + r)\\).
+Let's assume you know *sk*.
+First, you choose random value for *r* and a message *m* to sign. Next, you compute \\(R = r \bullet P\\). Lastly, you compute \\(s = \text{hash}(m,R) \cdot (sk + r)\\).
 
 If you plug these values into the equation
 
@@ -111,7 +119,7 @@ $$
 
 which we said earlier holds for any *m*, *r*, and *sk* (formerly *n*). This satisfies the first condition we need to prove our claim.
 
-#### Condition 2
+#### Condition 2: Not Being Able to Provide m, R, and s in Absence of sk
 
 Now we need to prove the second condition is met as well: If you don't know *sk*, then you must not be able to provide working values for *m*, *R*, and *s*. In order to provide these working values you would have to solve the equation below.
 
@@ -119,7 +127,7 @@ $$
 \text{hash}(m, R) \bullet (PK + R) = s \bullet P
 $$
 
-To do so, you would need to break the preimage resistance property (one-wayness) of the hash function. What this means is you would have to find an input to the **hash function**, specifically an *m* and *R*, that produce a certain output, namely:
+To do so, you would need to break the preimage resistance property (one-wayness) of the [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). What this means is you would have to find an input to the hash function, specifically an *m* and *R*, that produce a certain output, namely:
 
 $$
 \text{hash}(m, R) = \frac{s \bullet P - R}{PK}
