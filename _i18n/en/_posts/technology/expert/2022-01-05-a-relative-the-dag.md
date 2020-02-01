@@ -7,7 +7,6 @@ permalink: /technology/expert/a-relative-the-dag/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
-published: false
 ---
 
 One of the main engineering challenges in the blockchain space is *scalability*. Scalability refers to the development of technologies or protocols that can handle more transactions in the same amount of time. While traditional payment networks like Visa handle thousands of transactions per second most blockchains can only handle a handful in the same period of time. This comparison is unjust, in that Visa itself can be viewed as a third- or fourth-layer technology (International Bank of Settlements -> National Central Bank -> Retail Bank -> VISA), it is still a significant difference in performance that needs to be addressed.
