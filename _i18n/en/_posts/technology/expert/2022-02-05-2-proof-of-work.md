@@ -75,6 +75,8 @@ Nodes on the Horizen network are incentivized by getting a share of the block su
 
 Some criteria for a good PoW for a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
 
+**TKKG** [Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
+
 - *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example we covered already, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For *54,063,013* this becomes a much more difficult task but verification can be done with any rudimentary calculator.
 
 - *Optimization Free*: An optimization free algorithms means, that you cannot improve the efficiency of performing that task through software or algorithmic  improvements. Battle proven one-way functions lend themselves as a good basis for an optimization free algorithm. There is no way around a trial-and-error approach. The [*Generalized Birthday Problem*](https://en.wikipedia.org/wiki/Birthday_problem) is an approach that has been studied for a long time with no optimization in sight. 
