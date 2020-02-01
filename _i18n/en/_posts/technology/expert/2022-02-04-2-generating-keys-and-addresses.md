@@ -64,8 +64,6 @@ This means in two dimensions a vector is a tuple comprising two values, a *doubl
 
 We added this little discourse as it might help you to keep track of where we talk about vectors and scalars. Especially in our next article on [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) this will be helpful.
 
-**continue**
-
 A *generator point* or *base point* is defined for the secp256k1 curve and its coordinates are
 
 $$x = 55066263022277343669578718895168534326250603453777594175500187360389116729240$$
@@ -74,10 +72,12 @@ and
 
 $$y = 32670510020758816978083085130507043184471273380659243275938904335757337482424$$
 
-The product of your private key *sk* with the base point *P* gives you your *elliptic public key*, *PK*. If you wonder how computationally expensive it is to multiply such a large number (*sk*) with a point on the curve you can check out our last article on **elliptic curve cryptography** where we calculate the number of computational steps needed. An extra byte is added to the front to give you your *full public key*. The extra byte depends on the specific blockchain you are generating an address for. For Bitcoin it is 0x04, for Horizen it is 0x ?? **TKKG**
+The product of your private key *sk* with this base point *P* gives you your *elliptic public key*, *PK*. All public keys are computed based on the same generator point.
 
 ![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_D.jpg)
 ![Keys](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/keys_M.jpg)
+
+If you wonder how computationally expensive it is to multiply such a large number (*sk*) with a point on the curve you can check out our last article on [elliptic curve cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) where we calculate the number of computational steps needed. An extra byte is added to the front of your elliptic public key to give you your *full public key*. The extra byte depends on the specific blockchain you are generating an address for. For Bitcoin it is 0x04, for Horizen it is 0x ?? **TKKG**
 
 We will follow along with an example: Our private key needs to have 32 bytes, which equals 32 UTF-8 characters.
 
@@ -97,7 +97,7 @@ We already mentioned that the elliptic curve being symmetric about the *x*-axis 
 
 $$y = \pm \sqrt{x^3 + ax + b}$$
 
-If you throw out the *y*-value all together and add a byte indicating the sign of *y* a reduction in size by almost 50\% is achieved.
+If you throw out the *y*-value all together and add a byte indicating the sign of *y* a reduction in size by almost 50% is achieved.
 
 ### From Public Key to Address
 
