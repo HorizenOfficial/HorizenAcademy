@@ -112,11 +112,8 @@ All of this overhead can only be justified through utility. Having a global mone
 In turn, you can get some special properties with a blockchain, that if needed for the specific use case make it invaluable. The main factor distinguishing a blockchain from a normal database is that there are specific rules about how to add data to the database. This set of rules, or *protocol*, can achieve the following traits:
 
 - *Consistency*: Newly added data cannot conflict with data already in the database.
-
 - *Tamper Evidence*: Append only data structure that makes it immediately apparent if data has been changed. Coupled with a strong consensus mechanism that incentivizes rejection of invalid blocks this results in immutability.
-
 - *Ownable*: Data can be attributed to a sole owner. The data is publicly verifiable but only the owner can make changes to it. In the context of cryptocurrencies, this means everybody can see the transactions, but only with the owner can spend a UTXO.
-
 - *Distributed*: The database is consistent without a central party acting as a gatekeeper. This results from the protocol incentivizing correct behavior. Consensus and fault-tolerance are the holy grail of distributed systems that Bitcoin achieved for the first time in history.
 
 The key takeaway from this first section should be the following: You get **immutability** of data only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks. Otherwise a blockchain is only **tamper-evident**.
@@ -135,15 +132,10 @@ Blocks consist of a header which contains important data about the block - a sor
 The block header contains the most important information about a block.
 
 - The *Version* indicates which software version was used by the miner of the block and which set of block validation rules was followed.
-
 - The previous block headers hash *hashPrevBlock* serves two purposes. First, it establishes an order throughout the chain of blocks and second, it ensures no previous block can be changed without affecting the current and all subsequent blocks.
-
 - The Merkle Root Hash *hashMerkleRoot* represents a summary of all transactions included in the block.
-
 - The *Time* is the [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) when the miner started hashing the header for the mining process.
-
 - The *Bits* or *nBits* are an encoded version of the **current difficulty** of finding a new block.
-
 - The *Nonce* - or *n*umber used *once* - is the variable that miners change to modify the block headers hash in order for its value to meet the difficulty. This process is covered in detail in our article on [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}).
 
 Merkle Trees play an important role in ensuring the integrity of data in the blockchain but are also used in other systems such as IPFS - the InterPlanetary File System and several implementations of NoSQL databases. Let's take a look at how they work and what they do before we continue with what a transaction looks like from a data perspective.
@@ -161,11 +153,9 @@ While most Merkle trees are binary, one can also think of non-binary Merkle tree
 
 From a computer scientist's perspective it also poses an efficiency improvement: transactions can be audited in [logarithmic time instead of linear time](https://en.wikipedia.org/wiki/Time_complexity).
 
-Another advantage resulting from the use of Merkle trees is a reduction in the communication necessary to verify a transaction. We leverage Merkle trees in our **sidechain construction** for that reason. Nodes on a sidechain won't need to monitor the mainchain to verify cross-chain transactions. All they need to know is the *cross-chain transaction* itself, together with its *Merkle path* and the block header including the Merkle root.
-
 #### The Merkle Path
 
-The *Merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *Merkle path* for transaction$_K$ consists of the hash of transaction L $H_L$ it is first concatenated with and the combined hashes $H_{IJ}$, $H_{MNOP}$ and lastly, $H_{ABCDEFGH}$. Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
+The *Merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *Merkle path* for transaction *K* consists of the hash of transaction L \\(H_L\\) it is first concatenated with and the combined hashes \\(H_{IJ}\\), \\(H_{MNOP}\\) and lastly, \\(H_{ABCDEFGH}\\). Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
 
 ![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg)
 ![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg)
@@ -181,15 +171,10 @@ To be precise with our language we introduce a new concept here: *outpoints*. An
 A transaction is a message to the network informing it about a transfer of money. This message is standardized and composed of the following information:
 
 - *Version*: just as every block indicates the software version it was created with, every transaction includes this information.
-
 - *tx\_ in count*: Is the number of Inputs used - so the number of UTXOs consumed.
-
 - *tx\_ in*: Each input used is characterized by four data points: the outpoint it spends, the size of the *signature* required to spend that outpoint, the signature itself and the *sequence number*. The *sequence number* can be used to modify the *spending conditions* of an outpoint, but we are getting ahead of ourselves.
-
 - *tx\_ out count*: Is the number of outputs created in the transaction.
-
 - *tx\_ out*: Transaction outputs. Each Output is characterized by three data points: the amount spent, the size of the *spending condition*, and the spending condition itself that can be satisfied with a [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) based on the new owners private key.
-
 - *lock\_ time*: Is the unix epoch time or block number after which the outputs are spendable. This is optional.
 
 Each transaction is broadcast in a serialized byte format called raw format. It is then hashed twice (*SHA256(SHA256())*) to create its transaction ID - TXID - which as you already know is used to create the Merkle tree.
@@ -198,7 +183,7 @@ Ok, that was a lot. This passage referred to many concepts already introduced in
 
 Transactions, being the basic building block of a blockchain, are an example of this:
 
-First, an understanding of the UTXO accounting model is necessary. 
+First, an understanding of the UTXO accounting model is necessary.
 Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}): private keys, public keys, addresses, and digital signatures. Each transaction input includes a signature that authorizes spending and each newly created output includes information about what a signature needs to look like in order to authorize its spending. Lastly, the overall structure of the blockchain needs to be understood.
 
 ### Summary
