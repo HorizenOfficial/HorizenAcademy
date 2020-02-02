@@ -28,7 +28,7 @@ Channels are implemented using **smart contracts**.
 
 **TODO: Update -> little explanation for each box**
 
-![Channel Hierarchy](/assets/post_files/technology/expert/4.2-state-and-payment-channels/channel_hierarchy_D.jpg)
+![Channel Hierarchy](/assets/post_files/technology/expert/4.2-state-payment-channels/channel_hierarchy_D.jpg)
 
 ### State Channels
 
@@ -56,12 +56,11 @@ construction of network a "modular recursive approach" used, "virtual state chan
 
 "The key observation that enables this recursion is that the state channels $\alpha$ and $\beta$ that are used to build $\gamma$ are accessed in a “black-box” way. In other words, the only property of $\alpha$ and $\beta$ needed in the construction of $\gamma$ is that one can execute off-chain contracts in them. This “black-box” property guarantees that our virtual state channel construction works also if the channels $\alpha$ and $\beta$ are virtual (not ledger), or in case one of them is virtual, and the other one is ledger."
 
-**TODO**
-![State Channel Construction](/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_D.png)
+![State Channel Construction](/assets/post_files/technology/expert/4.2-state-payment-channels/state_channel_construction_D.png)
 {%
   include blocks/image_caption.html
-  image="/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_D.jpg"
-  image2="/assets/post_files/technology/expert/4.2-state-and-payment-channels/state_channel_construction_M.jpg"
+  image="/assets/post_files/technology/expert/4.2-state-payment-channels/state_channel_construction_D.jpg"
+  image2="/assets/post_files/technology/expert/4.2-state-payment-channels/state_channel_construction_M.jpg"
   caption="Graphic from State Channel Paper: Virtual State Channels \\(\gamma_i\\) constructed by combining Ledger State Channels \\(P_i\\) with each other and lastly by combining both, virtual and ledger state channels as in the construction of \\(\gamma_3\\)."
 %}
 
@@ -88,11 +87,11 @@ If they agreed on Alice locking 1 Coin and Bob locking 5 Coins, than Alice locks
 Important that Ingrid can never lose coins.
 
 **TODO**
-![Virtual State Channel Construction](/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_D.png)
+![Virtual State Channel Construction](/assets/post_files/technology/expert/4.2-state-payment-channels/virtual_state_channel_construction_D.png)
 {%
   include blocks/image_caption.html
-  image="/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_D.jpg"
-  image2="/assets/post_files/technology/expert/4.2-state-and-payment-channels/virtual_state_channel_construction_M.jpg"
+  image="/assets/post_files/technology/expert/4.2-state-payment-channels/virtual_state_channel_construction_D.jpg"
+  image2="/assets/post_files/technology/expert/4.2-state-payment-channels/virtual_state_channel_construction_M.jpg"
   caption="Graphic from State Channel Paper)."
 %}
 

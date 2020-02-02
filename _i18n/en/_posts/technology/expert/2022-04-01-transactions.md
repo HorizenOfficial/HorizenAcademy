@@ -31,7 +31,7 @@ Digital money would be pretty useless if there was no way to transfer it. Fortun
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-and-payment-channels %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}">
             <img src="/assets/post_files/technology/expert/4.0-txs/statechannels.png" alt="State- and Payment Channels" />
         </a>
     </div>
@@ -41,7 +41,7 @@ Digital money would be pretty useless if there was no way to transfer it. Fortun
             As you have probably heard before, blockchains are very secure, but not very efficient or fast. In order to facilitate widespread adoption of cryptocurrencies as a payment method, different scaling solutions are being worked on. A very promising approach is posed by *second layer solutions* using a technology called *payment channels*.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-and-payment-channels %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}">Read Article</a>
         </p>
     </div>
 </div>
