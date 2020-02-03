@@ -30,8 +30,8 @@ Les Zero-Knowledge Proofs vous permettent de prouver à un vérificateur que vou
 
 Un exemple intuitif et non numérique de ce à quoi cela peut ressembler peut être construit avec une personne voyante comme prouveur, une personne aveugle comme vérificateur et deux boules de couleur différente. Le voyant (le prouveur) veut convaincre l'aveugle (le vérificateur) que les deux boules sont de couleurs différentes, sans révéler les couleurs. Ils s'assoient à une table et l'aveugle montre au prouveur l'une des boules. L'aveugle continue à placer les deux boules sous la table et choisit de montrer une boule dans un deuxième tour ; soit la même boule qu'avant, soit l'autre. S'il choisit de montrer la même balle, le prouveur le sait parce qu'il voit la même couleur et le dit à l'aveugle. Si la personne aveugle montrait l'autre boule, le prouveur pourrait dire avec certitude que le vérificateur (personne aveugle) a changé les boules sous la table.
 
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_D.jpg)
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_M.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_D.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_M.jpg)
 
 Au deuxième tour, le prouveur aurait une chance sur deux d'obtenir la bonne réponse s'il devait deviner. Il devrait deviner au cas où l'affirmation qu'il essaie de prouver (les boules sont d'une couleur différente) était fausse. À ce stade, l'aveugle ne peut pas être sûr si la demande est correcte, ou si le prouveur a eu de la chance.
 

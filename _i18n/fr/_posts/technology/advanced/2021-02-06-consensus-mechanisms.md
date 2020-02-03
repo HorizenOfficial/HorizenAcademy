@@ -17,7 +17,6 @@ Le mécanisme de consensus d'une blockchain permet au réseau de se mettre d'acc
 
 Il existe de nombreuses approches afin de parvenir à un consensus dans un réseau distribué, mais les deux plus couramment utilisées sont les algorithmes de preuve de travail et de preuve d'enjeu. J'aime la généralisation que Demiro Massessi a formulée :
 
-
 **Anglais**
 
 _"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of Transacciones. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
@@ -29,7 +28,7 @@ _"La principale différence entre les mécanismes de consensus réside dans la m
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/FR_consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/FR_consensus_M.jpg)
 
-### Preuve de travail (Proof-of-work; PoW)
+## Preuve de travail (Proof-of-work; PoW)
 
 Les mineurs sont ceux qui s'efforcent de parvenir à un consensus au sein du réseau dans le cadre d'une blockchain en preuve de travail. Ils rassemblent toutes les transactions qui leur sont transmises par le réseau peer-to-peer et les sauvegardent dans leur _mempool_ (pool de mémoire). Pendant qu'ils recueillent les transactions entrantes, ils vérifient si les transactions sont valides selon le protocole et les ajoutent au bloc sur lequel ils travaillent actuellement. En même temps, ils travaillent à la résolution d'un puzzle coûteux sur le plan informatique. Nous parlerons de ce puzzle dans le prochain article sur le minage.
 
@@ -45,12 +44,11 @@ Les mineurs ont besoin de puissance de calcul parce que le problème qu'ils essa
 Tous les nœuds et les mineurs vérifient la validité d'un nouveau bloc dès que le bloc est découvert et diffusé sur le réseau. Si c'est le cas, ils suppriment toutes les transactions qui sont déjà enregistrées sur la blockchain de leur mempool, qui est le stockage qu
 'ils utilisent pour collecter les transactions. Ils commencent à travailler sur le bloc suivant une fois que leur mempool contient uniquement des transactions qui n'ont pas été minées. C'est ainsi que le réseau s'accorde sur une version unique de l'historique de toutes les transactions d'une blockchain en preuve de travail.
 
-**La règle de la chaîne la plus longue**
+### La règle de la chaîne la plus longue
 
 Maintenant, vous pouvez imaginer un scénario dans lequel deux mineurs trouvent un bloc en même temps. Dans ce cas, tous les nœuds et mineurs du réseau sauvegardent les deux versions du bloc. C'est une situation d'égalité : les deux blocs sont valides à ce stade, mais d'une manière ou d'une autre ils doivent briser l'égalité. Nous avons besoin d'une version unique de la vérité. Les mineurs commenceront à construire sur le bloc qu'ils ont reçu en premier. Le lien est rompu lorsque les mineurs trouvent le bloc suivant. Le bloc des deux versions concurrentes qui est construit sur le dessus sera accepté comme la vérité unique par tous les mineurs et les noeuds. Le bloc qui n'est pas pris en compte s'appelle un _bloc orphelin_. Cette procédure qui consiste à briser l'égalité entre les blocs concurrents s'appelle la _règle de la plus chaîne la plus longue_ ou le _Consensus Nakamoto_.
 
 Si 80 % des mineurs reçoivent d'abord le bloc A et les 20 % restants le bloc B, les chances que le bloc A soit prolongé sont de 80 % (en supposant que tous les mineurs ont la même puissance de calcul). D'une certaine façon, les mineurs votent avec leur puissance de calcul sur une version de l'histoire. Cela correspond parfaitement à notre citation du début de l'article :
-
 
 **Anglais**
 
@@ -69,7 +67,7 @@ La théorie des jeux "est l'étude des modèles mathématiques de l'interaction 
 
 Dans notre article sur le [minage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), nous parlerons plus en détail de ce processus et vous apprendrez quel est le puzzle dont nous parlons dans le contexte du PoW.
 
-### La preuve d’enjeu (Proof-of-Stake: PoS)
+## La preuve d’enjeu (Proof-of-Stake: PoS)
 
 Dans un système en preuve d’enjeu, il y a aussi des entités qui collectent les transactions et créent de nouveaux blocs. Le processus, ainsi que la terminologie dans ce contexte, est un peu différent.
 
@@ -93,7 +91,7 @@ Une autre différence entre le PoW et le PoS est que dans une blockchain PoS cha
 
 Les partisans de la preuve d'enjeu se réfèrent au coût élevé de l'énergie et au débit limité des blockchain en PoW et considèrent donc que le mécanisme de consensus du PoS est plus durable. À l'heure actuelle, il n'y a pas de blockchain en PoS disponible qui puisse appuyer ses prétentions de sécurité avec un historique de résultats sur une longue période de temps. Le temps nous dira si les blockchains en PoS peuvent tenir leur promesse d'être également sécurisées tout en étant plus évolutives que les blockchains en PoW.
 
-### Résumé
+## Résumé
 
 Dans la méthode de la preuve de travail, les mineurs votent sur une version de l'historique avec le poids de la puissance de calcul qu'ils contrôlent. Dans la méthode de la preuve d'enjeu, les validateurs votent sur une version de l'historique avec le poids des fonds ou de l'enjeu qu'ils possèdent sur la blockchain. Bien que le PoW se soit avéré sûr depuis plus d'une décennie maintenant, la sécurité des blockchains en PoS reste à prouver.
 

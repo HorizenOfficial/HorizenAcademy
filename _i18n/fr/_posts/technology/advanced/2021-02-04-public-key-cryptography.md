@@ -86,7 +86,7 @@ _y_ = 32670510020758816978083085130507043184471273380659243275938904335757337482
 
 Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée * P), vous obtenez votre clé publique.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_6.jpg" alt="ECC" style="width: 400px;">
+<img src="/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_M.jpg" alt="ECC" style="width: 400px;">
 
 Pour résumer : Votre clé privée est un grand nombre aléatoire. Votre clé publique est un point sur la courbe elliptique que vous obtenez lorsque vous multipliez le point de base P par votre clé privée.
 
@@ -98,15 +98,14 @@ Une propriété qui est nécessaire pour tout schéma cryptographique à clé pu
 
 Enfin, pour obtenir votre adresse, votre clé publique est maintenant hashée. Tout d'abord, en utilisant la fonction de hachage SHA256, puis une deuxième fois en utilisant RIPEMD160. Après avoir ajouté un octet pour indiquer si cette adresse ira sur le réseau principal ou de test et calculer une somme de contrôle, il y a une dernière étape avant d'obtenir votre adresse.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_7_D.jpg)
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/ES_ecc_7_M.jpg)
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_7_D.jpg)
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_7_M.jpg)
 
 Lorsqu'on examine le fonctionnement d'un ordinateur au niveau matériel, on constate qu'il y a des zéros et des uns. Les données sont toujours stockées dans un format binaire quel que soit le type de données que vous regardez (images, fichiers son, et même votre adresse bitcoin). Il existe différentes façons de convertir une chaîne de bits en données que les humains peuvent lire. Les humains se débrouillent mieux avec une chaîne de chiffres ou de caractères alphanumériques.
 
 Base58Check est un moyen de convertir les bits en caractères alphanumériques, mais il exclut les quatre caractères 0, O, I et l. Base58Check supprime ces caractères de votre adresse afin de réduire les erreurs lors de la copie manuelle des adresses et de leur correction.
 
 Vous pouvez générer autant d'adresses que vous le souhaitez à partir d'une seule clé privée, et la plupart des portefeuilles le font aujourd'hui pour vous. Il s'agit d'une fonction pour améliorer votre vie privée, car il est plus difficile pour une tierce partie de lier tous vos paiements ensemble. Nous parlerons de ce concept et de la façon dont il fonctionne avec les adresses de changement dans le chapitre suivant sur [la vie privée sur la Blockchain]({{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}).
-
 
 ### Signature numérique
 
