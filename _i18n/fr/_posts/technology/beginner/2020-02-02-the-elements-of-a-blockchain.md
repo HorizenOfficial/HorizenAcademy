@@ -19,7 +19,7 @@ Si vous essayez de dépenser le même coin deux fois, la première transaction e
 
 Maintenant que vous savez qu’un protocole, un terme que vous allez entendre assez souvent, est juste un ensemble de règles, voyons qui joue un rôle dans un écosystème blockchain.
 
-### Les Noeuds
+## Les Noeuds
 
 Une blockchain est gérée par un réseau d'ordinateurs ou de serveurs qui communiquent et échangent constamment des informations. Les ordinateurs ou serveurs sont appelés nœuds et constituent l'infrastructure de la blockchain. Un nœud complet est un nœud qui maintient une copie de la blockchain. Un nœud léger ne conserve pas de copie de la blockchain et doit d'abord se connecter à un nœud complet avant de pouvoir interagir avec la blockchain. Vous pouvez comparer le réseau décentralisé d'une blockchain à l'infrastructure supportant votre téléphone mobile.
 
@@ -30,7 +30,7 @@ De même, dans le réseau distribué d'une blockchain, les _nœuds complets_ son
 ![Nodes in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_D.jpg)
 ![Nodes in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_M.jpg)
 
-### Les mineurs
+## Les mineurs
 
 Les mineurs sont aussi des nœuds. Ils soutiennent le réseau en transmettant l’information et en conservant une copie de la blockchain, comme les autres noeuds. En plus, les mineurs sont en charge de la création de nouveaux blocs.
 
@@ -58,8 +58,7 @@ Mais pourquoi est-ce que les mineurs font cela ?
 Les mineurs sont récompensés lorsqu’ils résolvent le puzzle en premier. Cela crée un incitatif pour les individus afin d'acheter et exploiter le matériel nécessaire afin de résoudre le puzzle cryptographique. Le mineur qui est le premier à résoudre le puzzle est récompensé dans la devise qu'il mine. Il est autorisé à s'envoyer lui-même une transaction avec une certaine quantité de coins, qui n'existait pas auparavant. C’est un autre exemple de règle d’un protocole blockchain :
 Le mineur qui résout le bloc en premier est autorisé à inclure une transaction dans le bloc pour s'envoyer à lui même une partie des coins nouvellement crées.
 
-
-### Résumé
+## Résumé
 
 En conclusion, les mineurs et les opérateurs (ou administrateurs) de nœuds sont les deux principales entités d'une blockchain. Les mineurs sont les teneurs de registre qui prennent la décision sur l’ordre des événements.
 

@@ -14,7 +14,6 @@ Nous avons examiné la blockchain de deux façons différentes. D'abord en tant 
 
 Une blockchain peut non seulement héberger des données simples comme des transactions, mais aussi de petits programmes. Nous appelons ces programmes des smart contracts. Un contrat, en général, est un accord entre les parties qui les lie. Le "smart" vient de l'exécution automatique de ces contrats numériques. Il s'agit d'un grand nombre d'énoncés "si, alors" qui sont rédigés et mis en application par le code. Le contrat s'exécute automatiquement si les conditions du contrat sont remplies.
 
-
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_smart_contract_D.jpg)
 ![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_smart_contract_M.jpg)
 
@@ -64,9 +63,7 @@ Les oracles centralisés ne sont pas considérés comme une solution au problèm
 
 Des projets tels qu'Augur et Gnosis travaillent sur des solutions décentralisées au problème d'oracle via des marchés de prédiction. Avant que ces marchés prédictifs ne soient sérieusement adoptés, ils resteront faciles à jouer. Et puisque les marchés prédictifs ont le potentiel d'influencer le résultat d'un événement comme le suggère Dan Finley, il reste à voir s'ils peuvent devenir une solution.
 
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maybe/Theory: Since decentralized prediction markets can influence the incentives around an event’s probability, they are never just prediction tools, and should always be treated as incentivization tools.</p>&mdash; Dan Finlay (@danfinlay) <a href="https://twitter.com/danfinlay/status/1089550845698396167?ref_src=twsrc%5Etfw">January 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 *Théorie : Puisque les marchés prédictifs décentralisés peuvent influencer les incitations à la probabilité d'événements, ils ne sont jamais de simples outils prédictifs, et doivent donc toujours être traités comme des outils d'incitation.*
 

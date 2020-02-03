@@ -12,7 +12,7 @@ further_reads: [the_impact_of_digital_identity, how_blockchain_can_solve_identit
 
 Dans notre dernier article traitant des éléments d'une blockchain, nous avons conclu que les mineurs sont les teneurs de registre d'une cryptomonnaie. Ils font le suivi des fonds disponibles et de leurs propriétaires. Nous devons présenter le concept d’identité pour avoir la propriété. Vous voulez être le seul propriétaire de vos fonds et vos fonds doivent être associés à vous. Parlons donc du moment où la cryptographie entre en scène et de ce que cela a à voir avec votre identité.
 
-### Cryptographie à clé publique
+## Cryptographie à clé publique
 
 L'un des concepts fondamentaux qui font fonctionner les blockchains et les cryptomonnaies est le concept de _cryptographie asymétrique_ aussi connu comme _cryptographie à clé publique_.
 Avec la cryptographie symétrique, vous utilisez la même clé pour chiffrer un texte que vous utiliserez pour le déchiffrer plus tard (comme un cadenas).
@@ -25,7 +25,7 @@ Avec la cryptographie asymétrique, vous chiffrez et déchiffrez un message en u
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_D.jpg)
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_M.jpg)
 
-### Votre paire de clés est votre identité
+## Votre paire de clés est votre identité
 
 Votre paire de clés est votre identité
 
@@ -50,6 +50,6 @@ Une signature digitale fonctionne de la même manière que pour l’autorisation
 
 Tout cela serait fastidieux à faire manuellement et exigerait une certaine habileté. Heureusement, il existe des [portefeuilles]({{ site.baseurl }}{% post_url /privacy/advanced/2020-03-01-wallets %}) qui vous aident à faire tout ce qui précède. Les portefeuilles se chargent de la génération et de la gestion de vos clés ainsi que du chiffrement et du déchiffrement nécessaires. Ce qui est vraiment important, c'est de comprendre que votre clé privée est utilisée pour autoriser l'utilisation de vos fonds. La première leçon, et la plus importante, c'est d'assurer sa sécurité. Personne ne peut vous aider à récupérer vos clés au cas où vous les perdriez. Si quelqu’un était capable de les récupérer pour vous, cela voudrait dire qu’il peut prendre tout vos fonds.
 
-### Résumé
+## Résumé
 
 Votre paire de clé est votre identité sur la blockchain. Votre clé publique est similaire à votre adresse et utilisée pour recevoir des fonds. Alors que votre clé privée est une sorte de mot de passe qui vous permet (ou qui que ce soit qui met la main dessus) de dépenser vos fonds. Protégez toujours vos clés privées et ne les donnez jamais à d'autres personnes ! S'ils vous demandent votre clé privée, c'est très certainement une arnaque.

@@ -41,8 +41,8 @@ Vous avez probablement déjà rencontré le terme de réseau [Peer-to-Peer]({{ s
 
 Si vous voulez construire une forme de monnaie numérique sur un réseau P2P avec beaucoup de participants, vous aurez besoin de construire un consensus sur l'ordre des transactions. Si un utilisateur a un ZEN et crée deux transactions différentes qui dépensent le même coin simultanément, certains pairs recevront d'abord la version A, tandis que d'autres recevront peut-être la version B en premier. Le réseau doit parvenir à un accord, ou à un consensus, sur laquelle des deux transactions a eu lieu en premier. Le [mécanisme de consensus]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) est ce qui permet à un grand nombre d'entités différentes qui ne se connaissent pas et ne se font pas confiance de se mettre d’accord sur une version unique de la blockchain.
 
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/FR_consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/FR_consensus_M.jpg)
+![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/FR_consensus_block_D.jpg)
+![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/FR_consensus_block_M.jpg)
 
 ### Le Minage
 

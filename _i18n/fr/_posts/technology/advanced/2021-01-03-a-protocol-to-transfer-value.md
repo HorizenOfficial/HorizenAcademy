@@ -59,8 +59,8 @@ Un autre sous-ensemble de règles concerne la structure d'un bloc valide. Rappel
 
 Après l'en-tête de bloc, le bloc contient toutes les transactions qui ont été incluses.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_D.jpg)
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_M.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_2_D.jpg)
+![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_2_M.jpg)
 
 Il faut maintenant établir un ensemble de règles décrivant à quoi doit ressembler une transaction individuelle. Nous parlerons des transactions en détail dans un article dédié mais pour l'instant, il devrait suffire de savoir qu'une transaction doit inclure l'expéditeur, le destinataire, le montant du transfert, et une signature numérique. La signature numérique est un moyen d'autoriser l'utilisation de vos fonds. La clé privée d'un utilisateur créée cette signature numérique. Nous expliquons ce processus plus en détail dans notre article sur la cryptographie à clé publique.
 

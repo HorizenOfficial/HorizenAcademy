@@ -15,8 +15,8 @@ Lorsque vous pensez à la façon dont votre banque tient la comptabilité de vot
 
 La blockchain ne crée pas de "compte" pour vous permettre de maintenir un solde. Aucun solde final n'est enregistré dans le registre. La blockchain n'enregistre que les transactions individuelles et pour vérifier votre solde, une étape supplémentaire est nécessaire. Votre portefeuille le fait automatiquement lorsque vous l’ouvrez. Ce qui se passe en arrière-plan c’est que votre portefeuille scan le registre de toutes les transactions de votre (ou vos) adresse(s) et les additionne.
 
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/FR_wallet_balance_Int_M.jpg)
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/FR_wallet_balance_Int_M.jpg)
+![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
+![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
 
 Chaque transaction sur la blockchain a une ou plusieurs entrées et une ou plusieurs sorties. Examinons un exemple réel au cours d'une série de quatre transactions :
 

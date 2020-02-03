@@ -13,9 +13,8 @@ Un bénéfice souvent cité à propos de la technologie blockchain est la transp
 
 Un explorateur de blocs est un outil qui vous permet de parcourir la blockchain, de la même manière qu'un navigateur Web vous permet d'accéder aux informations sur Internet. Vous pouvez voir l’historique des transactions d’une adresse donnée, l’ensemble des transactions contenues dans un bloc aussi bien que le statut de ces transactions. Examinons un exemple concret de la vie quotidienne :
 
-
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/FR_explorer_address_summary.jpg" alt="Résumé de l'adresse du navigateur">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.jpg" alt="Résumé de l'adresse du navigateur">
 </div>
 
 C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse avec un explorateur de blocs. Les explorateurs de blocs fonctionnent tous à peu près de la même façon. L'adresse recherchée pour cet exemple dans un [explorateur de blocs Horizen](https://explorer.zensystem.io/) est en haut : znf7..... Disons que c'est l'adresse de Bob.
@@ -38,7 +37,7 @@ Le nombre de confirmations vous indique l'âge et l'état d'une transaction. Cha
 Enfin, il y a le volume total de la transaction.
 Nous vous encourageons à vous rendre dans [notre explorateur de blocs](https://explorer.zen-solutions.io/) et à commencer à jouer avec. Si vous n'avez pas encore d'adresse à explorer, la page d'accueil vous montrera les dernières transactions en temps réel. Il vous suffit d'en choisir un en cliquant dessus et vous verrez les adresses associées. Vous pouvez commencer à explorer à partir de là.
 
-### Résumé
+## Résumé
 
 L'explorateur de blocs fait pour la blockchain ce qu'un navigateur Web fait pour Internet ; il vous permet d'accéder aux données. Les choses que vous êtes susceptible de rechercher dans un explorateur de blocs sont vos adresses et vos transactions. De plus, vous pouvez ouvrir des blocs entiers et voir toutes les transactions contenues. Lorsque vous envoyez une transaction à un commerçant ou à une plateforme d'échange et que vous n'êtes pas informé immédiatement de la réception de vos fonds, cela peut vous faire un peu peur. En utilisant l'explorateur de blocs pour rechercher votre transaction, vous pouvez vérifier qu'elle est en cours d'exécution et que tout s'est bien passé.
 
