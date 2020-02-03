@@ -17,7 +17,7 @@ Before Bitcoin, digital scarcity didn't exist. Digital goods were infinitely cop
 
 A well designed system for a global exchange of value also enables greater *social scalability*. When we say system, we implicitly say protocol, as the protocol defines the system. The term *social scalability* refers to the ability of large groups to cooperate effectively, or as Nick Szabo, who coined the term, puts it in one of [his best known essays](https://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html):
 
-> "Social scalability is the ability of an institution - a relationship or shared endeavor, in which multiple people repeatedly participate, and featuring customs, rules, or other features which constrain or motivate participants' behaviors - to overcome shortcomings in human minds and in the motivating or constraining aspects of said institution that limit who or how many can successfully participate."
+> "Social scalability is the ability of an institution - a relationship or shared endeavor, in which multiple people repeatedly participate, and featuring customs, rules, or other features which constrain or motivate participants' behaviors - to overcome shortcomings in human minds and in the motivating or constraining aspects of said institution that limit who or how many can successfully participate." - Nick Szabo
 
 A blockchain can be separated into two layers: the *application layer* and the *network layer*.
 
@@ -25,7 +25,7 @@ A blockchain can be separated into two layers: the *application layer* and the *
 
 In this article, we focus on the protocol of a blockchain at the application layer. In the article on [P2P networks]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %}) we look at the network layer.
 
-### Network Protocols
+## Network Protocols
 
 Spoken languages, the internet, and blockchains can be understood as network protocols. Each has a set of rules, so they can serve their purpose without the need for a middleman and each is used within a group of participants - the network. All have in common, that abiding the rules yields greater benefit to an individual than breaking the rules.
 
@@ -50,7 +50,7 @@ You can distinguish between several broad types of networking protocols. Some ex
 Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through across the world wide web.
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used for the secure transfer of data. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes). Protocols like Bitcoin or Horizen enable the digital transfer of value from peer to peer.
 
-### What are the Rules?
+## What are the Rules?
 
 Now let's take a look at what the protocol of a blockchain looks like. What are the rules? What needs to be standardized and regulated in order for the system to work?
 
@@ -78,7 +78,7 @@ This type of monetary schedule is referred to as [*disinflationary*](https://www
 
 The predictable monetary supply is one of the greatest differentiators between government-issued fiat currencies controlled by central banks. Covering all the rules of a given protocol would blow the scope of this article. The key takeaway should be that the somewhat abstract term protocol is a set of rules that defines a given blockchain and all of its bits and pieces.
 
-### How to change the rules of a Blockchain?
+## How to change the rules of a Blockchain?
 
 The initial set of rules for a blockchain is defined with the genesis block. Any changes to it need to be approved by the majority of network participants. In a distributed environment without central control, a consensus has to be built around each proposed change to the protocol. In this respect blockchain development is not too different from many other open source projects. We would like to differentiate between:
 
@@ -94,7 +94,7 @@ Implementing changes can happen via soft forks or hard forks, where soft forks a
 
 A Miner Activated Soft Fork (MASF) does not require the changes to be tied to a specific flag date. Miners can signal readiness for a MASF by changing the [*version bits*](https://bitcoincore.org/en/2016/06/08/version-bits-miners-faq/) in their blocks headers. Once a certain percentage of produced blocks have signaled readiness to update, full nodes can enforce the rule changes accordingly.
 
-### The Great Innovations Introduced with Bitcoin
+## The Great Innovations Introduced with Bitcoin
 
 Even if a perfectly designed set of rules is in place, it still has to be enforced somehow. Without a central authority, external enforcement is not possible. The protocol, therefore, presents a self-enforcing agreement. [Game theory](https://en.wikipedia.org/wiki/Game_theory) is the study of models that describe and predict the strategic interaction between different parties. Evaluating a protocol and its inherent incentives fall into this category:
 
@@ -102,11 +102,11 @@ In game theory, games in which cooperative behavior can only be enforced through
 
 This is one of the great innovations introduced with Bitcoin; a self-enforcing agreement on a global scale between unknown entities that don't trust each other. This is only possible because of an incentive system that makes honest behavior more profitable than fraudulent behavior.
 
-#### Decentralized Consensus
+### Decentralized Consensus
 
 Before Bitcoin it was not possible to achieve consensus in an environment with untrusted participants showing malicious, or *Byzantine*, behavior and an unreliable *asynchronous* network. We cover the [evolution of distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in great detail later in this chapter.  
 
-#### Self-Enforcing Agreement
+### Self-Enforcing Agreement
 
 One of the most important incentives in Proof-of-Work blockchains is to have miners spend real resources (electricity and mining equipment) on securing the ledger and rewarding them with the native currency on that blockchain. This builds a thermodynamic layer of security around the ledger, that is only vulnerable to an entity that is willing to acquire a large amount of computing power and spend large amounts of electricity to break it.
 
@@ -116,11 +116,11 @@ As Satoshi Nakamoto formulated it in his [Bitcoin Whitepaper](https://bitcoin.or
 
 The attacker now has to balance the cost of an attack on the blockchain: the likelihood of the attack being successful and its potential upside versus the benefit of spending the same amount of electricity on honest mining and collecting the block rewards. The key takeaway is the following: the protocol of a blockchain is self-enforcing, as long as the incentives are set correctly. This is what lets rational agents decline invalid blocks and transactions and secure the network with their computing power.
 
-#### Digital Scarcity
+### Digital Scarcity
 
 Bitcoin was the first technology that solved the double-spend problem. Before it was not possible to verify if a digital object existed only once. When you transfer a unit of cryptocurrency, you hand over the ownership of a digital object and the receiver can be sure she is the new, sole owner of that digital object. The property of being double-spend-resistant is also called digital scarcity.
 
-#### Triple Entry Bookkeeping
+### Triple Entry Bookkeeping
 
 Over time accounting has evolved in three steps. First single-entry accounting was used, double-entry bookkeeping sparked the first revolution in trade, and Bitcoin introduced triple-entry bookkeeping in 2009, which might spark another revolution in commerce, trade, and accounting.
 
@@ -135,13 +135,13 @@ Over time accounting has evolved in three steps. First single-entry accounting w
 
 Triple-entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article ["Why Bitcoin’s Lightning Network is Ingenious"](https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae) that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double-entry bookkeeping system on top of the blockchain - a second layer solution like the [Lightning Network]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}).
 
-#### Separation of Money and State
+### Separation of Money and State
 
 Historically, it is the exception to have central banks making monetary policies with the scope it's done today. We don't want to start an economic discussion, as this is a topic in and of its own, but it surely can't hurt to have a decentralized, permissionless and independent form of money as an alternative to the legacy financial system. Competition is always good for service, and we believe we will see cryptocurrencies compete with state-issued fiat currencies soon.
 
 Each of the ideas above is worth its own book and this brief overview doesn't do justice to the relevance and intricacies of cryptocurrencies. We wanted to mention a few aspects nonetheless, to give you an orientation and a basis to research the different aspects you are interested in. None of the concepts above work in isolation. They are interrelated and can be approached from different angles. When we extend the scope of blockchain beyond cryptocurrencies, we can find more interesting developments.
 
-### Non-Financial Incentives to Maintain a Blockchain
+## Non-Financial Incentives to Maintain a Blockchain
 
 While financial applications in the form of digital money and digital proxies of traditional assets were the first and still are the most talked about use case, blockchain can be considered a tool to achieve other means.
 
@@ -149,7 +149,7 @@ When many parties that do not trust each other want to maintain a shared and con
 
 But incentives can also be of a non-financial nature. If, for example, a group of businesses evaluate a shared database. Supply chain management is a good example: the producers want to prove they have sent a good in time, the logistics company wants to prove when it received and delivered a shipment, and the customer wants to see if and when his goods changed hands. When every handoff is signed by the two directly interacting parties, it becomes easier to ascribe the responsibility in case of a late delivery. One could argue that the underlying incentive is of a financial nature, but this benefit results from efficiency improvements rather than direct monetary benefits.
 
-### Summary
+## Summary
 
 In this article, we looked at the protocol of a blockchain at the application layer and defined it as a value transfer protocol. Some examples of the rules that comprise the protocol we mentioned are the longest chain rule that applies when there is a temporary chain split, the difficulty adjustment to keep the block production rate constant and the disinflationary monetary schedule.
 
