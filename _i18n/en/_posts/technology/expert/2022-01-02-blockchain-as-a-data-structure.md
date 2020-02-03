@@ -15,11 +15,11 @@ In order to make decentralized money a reality a method of accounting had to be 
 
 A digital ledger used for digital money requires a set of properties that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
-### Common Data Structures
+## Common Data Structures
 
 Let’s develop an understanding of data structures before we look at blockchain itself. Here are some of the most common data structures:
 
-#### Arrays
+### Arrays
 
 *Arrays* are one of the simplest forms to store data. Arrays are useful when you know how many data elements you need to store and how large each data element will be. Your computer will calculate the total storage needed from those inputs and set it aside preventing other programs from accessing this partition of your memory. The drawback to partitioning memory is that reserved memory may be too small for future expansion. In this case, the entire array must be moved to a different location.
 
@@ -30,7 +30,7 @@ Arrays are useful for their simplicity and *instant access* property.
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
 ![Array](/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg)
 
-#### Linked List
+### Linked List
 
 Programs that use a *linked list* to store data don't have to know how many data elements you want to store beforehand, but the linked list does need to know what each element consists of. The data elements of a linked list are called *nodes*. Each node can contain several objects of different types. 
 
@@ -50,7 +50,7 @@ When searching for a piece of data your computer will check the *head* of the li
 
 Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access. 
 
-#### Hash Table
+### Hash Table
 
 The last data structure we want to look at before we move on to the blockchain is the *hash table*. The data elements you are storing in a *hash table* are called *keys*. To store a *key* it is first hashed using a hash function that produces an identifier for every key. We [introduce hash functions]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) in our Advanced Level and cover hash functions in detail in a [later article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). For now, all you need to know is that a hash function uses an *argument* of variable length as an input and produces an output of fixed length. In the example below the output is a three-digit number.
 
@@ -71,7 +71,7 @@ There are many different data structures, each of them comes with some trade-off
 
 The blockchain is a rather sophisticated data structure, made up of many sub-structures. It gives us a set of properties that are paramount to building a decentralized ledger for digital money.
 
-#### The Blockchain
+### The Blockchain
 
 Blockchain organizes data by splitting it into subsets, referred to as *blocks*. Blocks are similar to the nodes of a linked list. Each block contains several elements. The elements of a block are generally separated into the *block header* and its transactions. While the transactions in a block account for most of the data; the block header contains important metadata about each block such as a timestamp and *block height*. 
 
@@ -93,11 +93,11 @@ It is important to note that it is not the data structure that makes data on the
 
 We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interworking of these parts is what makes the blockchain a powerful tool for building trustless digital money.
 
-### The Properties of Blockchains
+## The Properties of Blockchains
 
 Let's take a look at the properties that a blockchain offers before we take a closer look at the data within a block. We will assume a decentralized setting without central authority and a strong consensus mechanism for this article.
 
-#### Current Shortcomings
+### Current Shortcomings
 
 It is appropriate to issue certain caveats first. The development of a blockchain is stricter and slower compared to traditional databases. A bug that corrupts the integrity of data makes the entire construction useless, hence development must be done very carefully. In a centralized setting, a bug might be easy to fix, but in a distributed environment without a central authority this becomes very difficult.
 
@@ -105,7 +105,7 @@ Second, incentive design is an integral part of building a blockchain. There is 
 
 Maintaining a blockchain is also orders of magnitude more expensive than a traditional database. Data is not recorded once but thousands of times. Data is also verified by every full node on the network, thousands of times in parallel. Additionally, the transmission of data is inefficient by design, causing the cost of maintenance to rise. This redundancy in every step of using a blockchain makes it hard to scale. We will look at several concepts to make blockchain scale later on, such as [sidechains](https://academy.horizen.global/horizen/expert/sidechains/) and [payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}). Most of them are based on the idea to move data off the blockchain rather than actually increasing the throughput of the chain.
 
-#### Benefits of Using Blockchain
+### Benefits of Using Blockchain
 
 All of this overhead can only be justified through utility. Having a global money, a predictable inflation schedule and trustless transactions without central control and single points of failure is arguably enough utility to use a blockchain for this purpose. For many other use cases, time will tell if blockchain poses a suitable solution. Just as with the immutability attribute, it's important to note that the current shortcomings of public blockchains result from being run in a distributed fashion, rather than the data structure. While a high level of redundancy makes the data secure, it is inefficient by definition.
 
@@ -120,14 +120,14 @@ The key takeaway from this first section should be the following: You get **immu
 
 After we looked at the properties that result from the design, let's take a look at how it actually is constructed. First, we look at the blocks themselves. Next, we introduce a concept that allows us to create an efficient summary of all transactions - the *Merkle tree*. Lastly, we look at the transactions themselves that make up the majority of data in a block.
 
-### What does a Block look like?
+## What does a Block look like?
 
 Blocks consist of a header which contains important data about the block - a sort of summary. The largest part of a block in terms of storage comprises the transactions.
 
 ![Block](/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg)
 ![Block](/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg)
 
-#### The Block Header
+### The Block Header
 
 The block header contains the most important information about a block.
 
@@ -140,7 +140,7 @@ The block header contains the most important information about a block.
 
 Merkle Trees play an important role in ensuring the integrity of data in the blockchain but are also used in other systems such as IPFS - the InterPlanetary File System and several implementations of NoSQL databases. Let's take a look at how they work and what they do before we continue with what a transaction looks like from a data perspective.
 
-#### Merkle Trees
+### Merkle Trees
 
 A *Merkle tree* is a data structure used within blocks. The transactions in a block make up the *leaves* of the Merkle tree. The resulting *Merkle root* serves as a summary of all transactions and is included in the block header.
 
@@ -153,14 +153,14 @@ While most Merkle trees are binary, one can also think of non-binary Merkle tree
 
 From a computer scientist's perspective it also poses an efficiency improvement: transactions can be audited in [logarithmic time instead of linear time](https://en.wikipedia.org/wiki/Time_complexity).
 
-#### The Merkle Path
+### The Merkle Path
 
-The *Merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *Merkle path* for transaction *K* consists of the hash of transaction L \\(H_L\\) it is first concatenated with and the combined hashes \\(H_{IJ}\\), \\(H_{MNOP}\\) and lastly, \\(H_{ABCDEFGH}\\). Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
+The *Merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *Merkle path* for transaction *K* consists of the hash of transaction L (\\(H_L\\)) it is first concatenated with and the combined hashes \\(H_{IJ}\\), \\(H_{MNOP}\\) and lastly, \\(H_{ABCDEFGH}\\). Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
 
 ![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg)
 ![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg)
 
-### What does a Transaction look like?
+## What does a Transaction look like?
 
 We introduce the [UTXO model]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}) in our Advanced Technology Section and will cover it in more detail later in this level. If you are not familiar with it already you might want to catch up before you continue reading.
 
@@ -186,7 +186,7 @@ Transactions, being the basic building block of a blockchain, are an example of 
 First, an understanding of the UTXO accounting model is necessary.
 Second, to understand the *ownable* part of the data on a blockchain one needs to understand the basic principles of [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}): private keys, public keys, addresses, and digital signatures. Each transaction input includes a signature that authorizes spending and each newly created output includes information about what a signature needs to look like in order to authorize its spending. Lastly, the overall structure of the blockchain needs to be understood.
 
-### Summary
+## Summary
 
 The blockchain in itself is a data structure that stores transactions. It is similar to a linked list in that the data is split into containers - the blocks. Each block is connected with its predecessor with a cryptographically secured reference. This makes the data structure tamper-evident, changes to old blocks are easy to detect and dismissed. Development and maintenance of a public blockchain are expansive but certain use cases such as digital money can justify this overhead.
 
