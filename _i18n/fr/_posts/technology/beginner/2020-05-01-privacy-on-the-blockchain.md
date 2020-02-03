@@ -30,8 +30,8 @@ Les Zero-Knowledge Proofs vous permettent de prouver à un vérificateur que vou
 
 Un exemple intuitif et non numérique de ce à quoi cela peut ressembler peut être construit avec une personne voyante comme prouveur, une personne aveugle comme vérificateur et deux boules de couleur différente. Le voyant (le prouveur) veut convaincre l'aveugle (le vérificateur) que les deux boules sont de couleurs différentes, sans révéler les couleurs. Ils s'assoient à une table et l'aveugle montre au prouveur l'une des boules. L'aveugle continue à placer les deux boules sous la table et choisit de montrer une boule dans un deuxième tour ; soit la même boule qu'avant, soit l'autre. S'il choisit de montrer la même balle, le prouveur le sait parce qu'il voit la même couleur et le dit à l'aveugle. Si la personne aveugle montrait l'autre boule, le prouveur pourrait dire avec certitude que le vérificateur (personne aveugle) a changé les boules sous la table.
 
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_D.jpg)
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_M.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_D.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_M.jpg)
 
 Au deuxième tour, le prouveur aurait une chance sur deux d'obtenir la bonne réponse s'il devait deviner. Il devrait deviner au cas où l'affirmation qu'il essaie de prouver (les boules sont d'une couleur différente) était fausse. À ce stade, l'aveugle ne peut pas être sûr si la demande est correcte, ou si le prouveur a eu de la chance.
 
@@ -41,6 +41,6 @@ L'idée d'utiliser les Zero-Knowledge Proofs pour les transactions de cryptomonn
 
 Pour utiliser des transactions privées avec Horizen, vous utiliserez un type d'adresse différent. Dans votre portefeuille, vous pouvez soit générer des adresses T (adresses transparentes), soit des adresses Z (adresses protégées). Lorsque vous avez envoyé des fonds à une adresse Z, le montant et l'expéditeur sont enregistrés sur la blockchain, mais pas l'adresse de réception. Si vous transmettez les fonds à une deuxième adresse Z, aucune information sur la transaction n'est enregistrée, ni l'expéditeur, ni le destinataire, ni le montant. Si vous voulez essayer cette fonctionnalité, vous pouvez télécharger notre application phare [Sphere by Horizen](https://www.horizen.global/wallets/ ). Assurez-vous d'activer le mode complet dans les paramètres sinon vous ne pourrez pas générer d'adresses Z.
 
-### Résumé
+## Résumé
 
 Bien que les cryptomonnaies ne soient pas anonymes par défaut, certaines d'entre elles offrent des fonctionnalités qui vous permettent de faire des transactions privées. Pour augmenter le niveau de confidentialité, vous devez utiliser des adresses différentes pour chaque transaction entrante. Il est donc plus difficile pour un adversaire de suivre l'historique de vos transactions. La plupart des wallets le feront automatiquement pour vous. Vous pouvez utiliser des cryptomonnaies avec des fonctions de confidentialité améliorées, comme Horizen, pour effectuer des transactions entièrement privées.

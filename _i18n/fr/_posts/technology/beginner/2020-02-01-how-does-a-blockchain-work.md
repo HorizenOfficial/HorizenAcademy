@@ -11,7 +11,6 @@ chapter: "Comment fonctionne une Blockchain ?"
 
 Après avoir lu nos deux premiers articles sur ce qu'est une blockchain, vous savez que dans sa forme la plus simple, c'est une méthode pour stocker des données. Cette méthode de traitement des données vous permet de transférer de la valeur sans impliquer une entité centrale. Nous avons comparé le protocole blockchain, qui est un protocole de transfert de valeur, avec le protocole internet, qui vous permet de transférer des informations. Nous avons également comparé la blockchain à la poste qui est un "protocole" pour l'envoi de marchandises physiques.
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-02-the-elements-of-a-blockchain %}">

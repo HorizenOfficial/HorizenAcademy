@@ -25,7 +25,7 @@ Les adresses sur la blockchain sont bien sûr un peu différentes des adresses r
 
  Les [portefeuilles ]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) de cryptomonnaie vous aident à créer une adresse et envoyer des transactions.
 
-### Résumé
+## Résumé
 
 Tout comme le courrier est une sorte de "protocole" qui vous permet d'envoyer des biens physiques et Internet (avec son protocole TCP/IP sous-jacent) vous permet de transférer des informations, les cryptomonnaies et leur blockchain sous-jacente fournissent un protocole pour transférer de la valeur. Nous parlerons plus en détail de ce à quoi ressemble réellement une transaction et du type de données nécessaires dans l'article sur [les transactions]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}).
 
