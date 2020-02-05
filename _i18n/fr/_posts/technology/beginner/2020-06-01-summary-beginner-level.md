@@ -46,8 +46,7 @@ Les [Les portefeuilles (les wallets)]({{ site.baseurl }}{% post_url /technology/
 
 Une [transaction]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}) est un message vers le réseau qui informe tous les participants que de l’argent a changé de mains. Si vous souhaitez envoyer une transaction, vous devez débloquer votre argent grâce à votre clé privée. Ensuite vous choisissez l’adresse (ou les adresses) qui va (vont) recevoir le montant déterminé. La transaction est tout simplement un message qui dit “Alice envoie 10 ZEN à Bob”. Cette déclaration est ce qui représente les coins de Bob.
 
-![Sent in FR](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_sent_D.jpg)
-![Sent in FR](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_sent_M.jpg)
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
 
 Afin d'accéder à l'information sur la blockchain, vous utiliserez un [explorateur de bloc]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}). Tel un navigateur qui va vous permettre d’accéder aux informations sur internet, l’explorateur de bloc va vous permettre d’accéder aux informations de la blockchain. Vous pouvez chercher des adresses, des transactions, ou des blocs entiers.
 
@@ -57,8 +56,8 @@ Afin d'accéder à l'information sur la blockchain, vous utiliserez un [explorat
 
 Bien que les cryptomonnaies ne soient pas anonymes par défaut, certaines d'entre elles offrent des fonctionnalités qui vous permettent de faire des transactions privées. Pour augmenter le niveau de confidentialité, vous devez utiliser des adresses différentes pour chaque transaction entrante. Il est donc plus difficile pour un adversaire de suivre l'historique de vos transactions. La plupart des wallets le feront automatiquement pour vous. Vous pouvez utiliser des cryptomonnaies avec des fonctions de confidentialité améliorées, comme Horizen, qui offre les Zero-Knowledge Proofs, pour effectuer des transactions entièrement privées. En utilisant un différent type d’adresse (adresse Z) avec le même portefeuille, vos transactions deviennent privées.
 
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_D.jpg)
-![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_M.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_D.jpg)
+![zkproof in FR](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/zkproof_M.jpg)
 
 ### Remarques finales
 
@@ -66,6 +65,6 @@ Les cryptomonnaies et la blockchain ne sont pas un sujet facile. Dans cette lign
 
 Si vous vous sentez à l'aise avec tout ce que vous avez lu et que vous aimeriez continuer à apprendre : il y a plus ! Montez d'un niveau et consultez nos [articles avancés]({{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}). Nous les avons structuré de la même manière, mais nous avons ajouté plus de détails à tous les sujets et nous les avons divisé pour examiner de plus près les différentes composantes. Nous avons conçu le contenu de manière à ce que vous puissiez le lire de haut en bas (ce que nous ne pouvons que recommander) ou sauter aux articles qui vous intéressent particulièrement.
 
-Nous espérons que vous avez aimé cette série d'articles. Veuillez nous faire savoir s'il y a quelque chose que vous trouvez déroutant. Le contenu fourni est et sera en cours d'élaboration pendant un certain temps. Nous sommes toujours ouverts aux suggestions et aux commentaires constructifs, alors envoyez-nous un message à [academy@horizen.global](mailto:academy@horizen.global) si vous voulez partager vos idées avec nous.
+Nous espérons que vous avez aimé cette série d'articles. Veuillez nous faire savoir s'il y a quelque chose que vous trouvez déroutant. Le contenu fourni est et sera en cours d'élaboration pendant un certain temps. Nous sommes toujours ouverts aux suggestions et aux commentaires constructifs, alors envoyez-nous un message à [academy@horizen.global](mailto:jonas@horizen.global) si vous voulez partager vos idées avec nous.
 
 **Votre équipe Horizen**

@@ -12,8 +12,8 @@ L'objectif à long terme d'Horizen est de faire évoluer sa structure organisati
 
 Les règles et procédures qui régissent l'organisation sont transcrites en code lorsque le DAO est créé. L'objectif principal de notre DAO est de décentraliser le processus décisionnel concernant la façon dont est dépensé le budget de notre organisation à but non lucratif. Tous les membres de la communauté auront la possibilité de soumettre des propositions et d'être rémunérés pour leur contribution. Cela peut être une nouvelle fonctionnalité de notre portefeuille ou lors d’une conférence.
 
-![DAO](/assets/post_files/horizen/expert/dao/FR_DAO_D.jpg)
-![DAO](/assets/post_files/horizen/expert/dao/FR_DAO_M.jpg)
+![DAO](/assets/post_files/horizen/advanced/dao/FR_DAO_D.jpg)
+![DAO](/assets/post_files/horizen/advanced/dao/FR_DAO_M.jpg)
 
 Pour que le processus décisionnel soit décentralisé il faut qu'il y ait un système de vote en place. Ce système de vote doit être fiable et nous avons décidé de l'implémenter sur une sidechain qui fonctionnera en parallèle de notre blockchain principale. Nous parlerons davantage des sidechains dans article dédié.
 
@@ -31,18 +31,17 @@ La démocratie liquide est un hybride dynamique des deux branches établies de l
 
 Dans une démocratie liquide, il n'y a pas de mandat électoral. Vous pouvez déléguer votre vote à un expert ou le retirer à tout moment. Les experts sont ainsi tenus de rendre des comptes.
 
-
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/FR_liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/FR_liquid_democracy_M.jpg)
+![Liquid Democracy](/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_M.jpg)
 
 ### Les entités
 
 Les différentes entités de notre système de trésorerie sont les suivantes :
 
- - _Les porteurs de projet_ - Ce sont les personnes qui ont soumis une proposition afin qu'elle soit financée. N'importe qui peut soumettre une proposition mais doit payer des frais (peu élevés) afin d'éviter le spam.
- - _Les comités de vote_ - Ce sont les intervenants qui souhaitent aider à exécuter le processus de vote, par exemple durant la phase de comptage des votes.
- - _Les votants_ - Chaque votant bloque un certain montant de son capital (en l'occurrence en ZEN) pour participer. Leur vote est pondéré en fonction du montant bloqué.
- - _Les experts_ - Un type spécial d'électeurs ayant une expertise dans certains domaines. N'importe qui peut s'inscrire en tant qu'expert. Plus d'informations à ce sujet lorsque nous arriverons à la façon de s'inscrire en tant qu'une des entités.
+- _Les porteurs de projet_ - Ce sont les personnes qui ont soumis une proposition afin qu'elle soit financée. N'importe qui peut soumettre une proposition mais doit payer des frais (peu élevés) afin d'éviter le spam.
+- _Les comités de vote_ - Ce sont les intervenants qui souhaitent aider à exécuter le processus de vote, par exemple durant la phase de comptage des votes.
+- _Les votants_ - Chaque votant bloque un certain montant de son capital (en l'occurrence en ZEN) pour participer. Leur vote est pondéré en fonction du montant bloqué.
+- _Les experts_ - Un type spécial d'électeurs ayant une expertise dans certains domaines. N'importe qui peut s'inscrire en tant qu'expert. Plus d'informations à ce sujet lorsque nous arriverons à la façon de s'inscrire en tant qu'une des entités.
 
 Afin de s'inscrire en tant qu'une des entités mentionnées ci-dessus, un utilisateur devra effectuer une transaction incluant toutes les informations nécessaires, telles que le montant bloqué et l'adresse à laquelle envoyer les récompenses de vote.
 

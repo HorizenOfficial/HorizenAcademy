@@ -64,7 +64,7 @@ Vous utiliserez probablement un explorateur de blocs pour vérifier l'état d'un
 Si nous voulons regarder la toute première transaction de cryptomonnaie jamais faite, nous devons aller au bloc #170, où la première transaction de bitcoin de Satoshi Nakamoto à Hal Finney est incluse.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/Transacciones.png" alt="Bitcoin Transaction">
+    <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
 </div>
 
 C'est le premier bloc de la blockchain bitcoin qui contient plus d'une transaction. Nous pouvons trouver la transaction coinbase tout en haut.  En dessous se trouve la première transaction comme vous pouvez vous y attendre. Une personne envoyant des coins à une autre.

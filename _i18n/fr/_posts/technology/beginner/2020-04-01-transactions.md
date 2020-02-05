@@ -11,7 +11,6 @@ chapter: "Les transactions"
 
 Si vous avez lu nos articles précédents, vous en savez déjà plus sur la blockchain que la plupart des gens. Nous avons parlé de ce qu'est la blockchain, de son fonctionnement et de ce que font les portefeuilles de cryptomonnaie. Vous savez que les portefeuilles sont des programmes qui vous aident à créer des transactions et à recevoir de l'argent. Dans ce chapitre, nous vous présenterons à quoi ressemblent ces transactions et comment vous pouvez les consulter.
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}">

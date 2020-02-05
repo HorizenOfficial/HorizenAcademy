@@ -41,6 +41,6 @@ L'idée d'utiliser les Zero-Knowledge Proofs pour les transactions de cryptomonn
 
 Pour utiliser des transactions privées avec Horizen, vous utiliserez un type d'adresse différent. Dans votre portefeuille, vous pouvez soit générer des adresses T (adresses transparentes), soit des adresses Z (adresses protégées). Lorsque vous avez envoyé des fonds à une adresse Z, le montant et l'expéditeur sont enregistrés sur la blockchain, mais pas l'adresse de réception. Si vous transmettez les fonds à une deuxième adresse Z, aucune information sur la transaction n'est enregistrée, ni l'expéditeur, ni le destinataire, ni le montant. Si vous voulez essayer cette fonctionnalité, vous pouvez télécharger notre application phare [Sphere by Horizen](https://www.horizen.global/wallets/ ). Assurez-vous d'activer le mode complet dans les paramètres sinon vous ne pourrez pas générer d'adresses Z.
 
-### Résumé
+## Résumé
 
 Bien que les cryptomonnaies ne soient pas anonymes par défaut, certaines d'entre elles offrent des fonctionnalités qui vous permettent de faire des transactions privées. Pour augmenter le niveau de confidentialité, vous devez utiliser des adresses différentes pour chaque transaction entrante. Il est donc plus difficile pour un adversaire de suivre l'historique de vos transactions. La plupart des wallets le feront automatiquement pour vous. Vous pouvez utiliser des cryptomonnaies avec des fonctions de confidentialité améliorées, comme Horizen, pour effectuer des transactions entièrement privées.

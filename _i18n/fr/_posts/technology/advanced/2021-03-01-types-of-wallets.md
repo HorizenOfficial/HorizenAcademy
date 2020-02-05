@@ -13,8 +13,8 @@ _Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de w
 
 Un wallet est un programme pour générer, gérer et stocker une paire de clés cryptographiques. Vous pouvez vérifier votre solde, recevoir et envoyer des fonds dans votre wallet.
 
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_D.jpg)
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_M.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
 
 Si vous n'êtes pas sûr de la fonctionnalité principale d'un portefeuille, vous pouvez lire notre [introduction aux portefeuilles]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
 
@@ -61,7 +61,6 @@ L'accès à votre wallet avec un fichier keystore /.json est possible mais non r
 Les deux dernières options sont plus ou moins les mêmes en matière de sécurité. Vous pouvez entrer votre clé privée directement ou votre phrase mnémonique (qui donne votre clé privée lorsqu'elle est hashée), qui peuvent être problématiques si votre ordinateur est compromis.
 
 En conclusion, un web wallet non hébergé est très pratique et tout aussi sûr que la méthode que vous choisissez de fournir vos clés.
-
 
 ### Wallets de bureau et wallets mobiles
 
@@ -113,6 +112,5 @@ Avec un web wallet hébergé, vous faites confiance à un tiers pour gérer vos 
 Avec un wallet de bureau, mobile, papier ou hardware, vous possédez les clés et personne d'autre que vous-même n'est responsable de les garder en sécurité. Si votre appareil tombe en panne, vous disposez d'une phrase mnémonique/de récupération dans le but de récupérer l'accès à vos fonds. La phrase est aussi sensible que votre clé privée elle-même et si elle tombe entre de mauvaises mains, vos fonds sont perdus. Ce n'est pas pour vous faire peur, mais pour vous rendre prudent et conscient du risque.
 
 Tout ce mouvement de cryptomonnaies vise à vous redonner le pouvoir sur votre argent, mais...
-
 
 ![with great power comes great responsibility](/assets/post_files/technology/advanced/types-of-wallets/with-great-power-comes-great-responsibility.gif)
