@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Firmas anulares"
+title: "Les ring signatures"
 permalink: /technology/expert/ring-signatures/
 topic: technology
 level: expert
-chapter: "Privacidad"
+chapter: "La confidentialité"
 ---
 
 {% tf tech-not-available.md %}
