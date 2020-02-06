@@ -22,7 +22,7 @@ C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse a
 En haut de la page, vous trouverez un résumé de l'activité des adresses. Habituellement, l'information fournie ici comprendra le montant total qui a été reçu et envoyé de cette adresse, ainsi que le solde actuel. L'adresse que nous avons sous les yeux a reçu un total de 42 Zen. Bob n'a pas encore envoyé de Zen à d'autres adresses et a donc toujours un solde de 42 Zen.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.jpg" alt="Transaction de l'adresse dans l'explorateur">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/FR_explorer_address_tx.jpg" alt="Transaction de l'adresse dans l'explorateur">
 </div>
 
 Vous trouverez ci-dessous toutes les transactions concernant l'adresse qui vous intéresse. Jusqu'à présent, cette adresse n'était qu'une partie d'une seule transaction. Une transaction est caractérisée par son ID de transaction - la phrase bleue chiffrée en haut de la fenêtre grise (a46f...). La transaction que nous examinons avait une entrée (à gauche) et deux sorties (à droite). L'entrée est ce qui a été envoyé, et les sorties sont ce qui a été reçu. Si les entrées et sorties sont nouveaux pour vous, vous pouvez en apprendre plus à leur sujet dans notre article précédent sur les transactions.
