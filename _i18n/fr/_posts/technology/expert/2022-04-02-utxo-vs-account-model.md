@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Modelo UTXO vs Modelo contable"
+title: "Le modèle UTXO vs le modèle comptable"
 permalink: /technology/expert/utxo-vs-account-model/
 topic: technology
 level: expert
-chapter: "Transacciones"
+chapter: "Les transactions"
 ---
 
 {% tf tech-not-available.md %}
