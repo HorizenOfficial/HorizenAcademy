@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Los elementos de una cadena de bloques"
+title: "Les éléments d'une Blockchain"
 permalink: /technology/expert/the-components-of-a-blockchain/
 topic: technology
 level: expert
-chapter: "¿Cómo funciona una cadena de bloques?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}
