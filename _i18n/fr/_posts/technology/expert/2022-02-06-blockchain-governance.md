@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Gobernanza de blockchain"
+title: "La gouvernance de la blockchain"
 permalink: /technology/expert/blockchain-governance/
 topic: technology
 level: expert
-chapter: "¿Cómo funciona una cadena de bloques?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}
