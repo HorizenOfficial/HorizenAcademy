@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Ataque Eclipse"
+title: "Les attaques Eclipse"
 permalink: /technology/expert/eclipse-attack/
 topic: technology
 level: expert
-chapter: "Ataques"
+chapter: "Les attaques"
 ---
 
 {% tf tech-not-available.md %}
