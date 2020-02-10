@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Contratos ingeligentes"
+title: "Smart-Contracts"
 permalink: /technology/expert/smart-contracts/
 topic: technology
 level: expert
-chapter: "Programando en la Blockchain"
+chapter: "Programmer sur la Blockchain"
 ---
 
 {% tf tech-not-available.md %}
