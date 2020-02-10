@@ -14,7 +14,7 @@ Un bénéfice souvent cité à propos de la technologie blockchain est la transp
 Un explorateur de blocs est un outil qui vous permet de parcourir la blockchain, de la même manière qu'un navigateur Web vous permet d'accéder aux informations sur Internet. Vous pouvez voir l’historique des transactions d’une adresse donnée, l’ensemble des transactions contenues dans un bloc aussi bien que le statut de ces transactions. Examinons un exemple concret de la vie quotidienne :
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.jpg" alt="Résumé de l'adresse du navigateur">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Résumé de l'adresse du navigateur">
 </div>
 
 C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse avec un explorateur de blocs. Les explorateurs de blocs fonctionnent tous à peu près de la même façon. L'adresse recherchée pour cet exemple dans un [explorateur de blocs Horizen](https://explorer.zensystem.io/) est en haut : znf7..... Disons que c'est l'adresse de Bob.
@@ -22,7 +22,7 @@ C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse a
 En haut de la page, vous trouverez un résumé de l'activité des adresses. Habituellement, l'information fournie ici comprendra le montant total qui a été reçu et envoyé de cette adresse, ainsi que le solde actuel. L'adresse que nous avons sous les yeux a reçu un total de 42 Zen. Bob n'a pas encore envoyé de Zen à d'autres adresses et a donc toujours un solde de 42 Zen.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/FR_explorer_address_tx.jpg" alt="Transaction de l'adresse dans l'explorateur">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_tx.png" alt="Transaction de l'adresse dans l'explorateur">
 </div>
 
 Vous trouverez ci-dessous toutes les transactions concernant l'adresse qui vous intéresse. Jusqu'à présent, cette adresse n'était qu'une partie d'une seule transaction. Une transaction est caractérisée par son ID de transaction - la phrase bleue chiffrée en haut de la fenêtre grise (a46f...). La transaction que nous examinons avait une entrée (à gauche) et deux sorties (à droite). L'entrée est ce qui a été envoyé, et les sorties sont ce qui a été reçu. Si les entrées et sorties sont nouveaux pour vous, vous pouvez en apprendre plus à leur sujet dans notre article précédent sur les transactions.
