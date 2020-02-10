@@ -57,8 +57,10 @@ When a transaction is broadcast to the network every full node and miner verifie
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_M.jpg)
 
 ### Consensus in Distributed Systems
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %})
 
+First, we look at the challenges of achieving [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}).
+
+The consensus mechanism has to tolerate malicious actors and it needs to handle a network providing unreliable communication. We define liveness as the property of the system not stalling and safety as all nodes agreeing on new blocks. Lastly, we show why Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic.
 
 ![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-components-of-a-blockchain/consensus-in-distributed-systems.png)
 
