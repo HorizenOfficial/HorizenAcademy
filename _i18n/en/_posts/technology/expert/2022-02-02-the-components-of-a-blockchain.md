@@ -51,6 +51,7 @@ When a transaction is broadcast to the network every full node and miner verifie
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature.png)
 
 ## Consensus Mechanisms
+
 ({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %})
 
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_D.jpg)
@@ -64,9 +65,9 @@ The consensus mechanism has to tolerate malicious actors and it needs to handle 
 
 ![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-components-of-a-blockchain/consensus-in-distributed-systems.png)
 
-
 ### Proof of Work
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %})
+
+In this article, we take an in-depth look at [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) - the consensus and *Sybil-resistance* mechanism used in Horizen, Bitcoin and most other public blockchains.
 
 
 ### Other Consensus Mechanisms
