@@ -22,7 +22,7 @@ Because we want to take a detailed look at the two most researched ways of achie
     <div class="col-md-9">
         <h5 class="intro-article-title">Consensus in Distributed Systems</h5>
         <p class="mb-1">
-            In this first article we look at consensus in distributed systems. What are the main challenges that arise when a system is operated by many unknown actors and how does one ensure agreement on a common transaction history is reached?
+            In this first article, we look at consensus in distributed systems. What are the main challenges that arise when a system is operated by many unknown actors? And how does one ensure agreement on a common transaction history is reached?
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}">Read Article</a>
@@ -39,7 +39,7 @@ Because we want to take a detailed look at the two most researched ways of achie
     <div class="col-md-9">
         <h5 class="intro-article-title">Proof of Work</h5>
         <p class="mb-1">
-            Proof-of-Work (PoW) was the first consensus mechanism that worked in a distributed environment such as a P2P network of untrusted parties. It is based on voting on a version of the history with the weight of your computing power.
+            Proof-of-Work (PoW) was the first consensus mechanism that worked in a distributed environment of untrusted parties. Its principle is based on voting on a version of the history with the weight of your computing power.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}">Read Article</a>
