@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Transacciones instantáneas"
+title: "Les transactions instantannées"
 permalink: /technology/expert/instant-transactions/
 topic: technology
 level: expert
-chapter: "Transacciones"
+chapter: "Les transactions"
 ---
 
 {% tf tech-not-available.md %}
