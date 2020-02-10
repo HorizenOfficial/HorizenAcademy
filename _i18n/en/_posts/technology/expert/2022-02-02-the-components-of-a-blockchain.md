@@ -12,7 +12,7 @@ published: false
 
 This article provides you with a general overview of what this chapter is all about and how the different topics **are related** to one another. It is a high level description not focused on details but on providing some context before each topic is covered on a granular level.
 
-### Hash Functions
+## Hash Functions
 
 The verification of data is an important aspect when building a data structure on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.
 
@@ -23,17 +23,17 @@ Other key properties are being irreversible one-way functions, being pseudo rand
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_D.jpg)
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_M.jpg)
 
-### Public-Key Cryptography
+## Public-Key Cryptography
 
 A major building block of digital money - as the name cryptocurrency suggests - is cryptography: namely [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}). While it can be used to secure the exchange of sensitive information through encryption it is also the basis for establishing ownership in the digital realm. Without a concept of ownership digital money would be useless.
 
-#### Elliptic Curve Cryptography
+### Elliptic Curve Cryptography
 
 There are many different public-key cryptography schemes and in blockchains [elliptic curve cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) (ECC) is dominant. Cryptography mostly relies on one-way functions and multiplication on an elliptic curve is the second one-way function we introduce after the previously explained hash functions. We show how this special type of *discrete math* works and why it is a well suited tool to build a concept of ownership on a distributed peer-to-peer network.
 
 ![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition.gif)
 
-#### Generating Keys and Addresses
+### Generating Keys and Addresses
 
 Money or data sent to a public key can only be accessed by someone who has knowledge of the corresponding private key - the owner. With the basics of elliptic curve cryptography understood, we show how it is applied to [create a public key from a private key]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}). At this point, you already understand why the derivation of a public key from a private key cannot be reversed, which is the single most important attribute of PKC.
 
@@ -42,7 +42,7 @@ When you transfer cryptocurrencies you will barely ever use a public key, but ra
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_D.jpg)
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
 
-#### Digital Signatures
+### Digital Signatures
 
 Anyone can create a raw transaction spending someone else's money, but in order for the transaction to be recognized by the netword it needs to have a valid [*digital signature*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}). To sign a transaction the private key associated with the address the funds are located in is required. The signature comprises two values, *R*, and *s* that can only be provided by the rightful owner.
 
@@ -50,34 +50,37 @@ When a transaction is broadcast to the network every full node and miner verifie
 
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature.png)
 
-### Consensus Mechanisms
-
-
-
+## Consensus Mechanisms
 ({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %})
 
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_M.jpg)
 
-#### Consensus in Distributed Systems
-
-
+### Consensus in Distributed Systems
 ({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %})
+
 
 ![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-components-of-a-blockchain/consensus-in-distributed-systems.png)
 
 
-#### Proof of Work
+### Proof of Work
+({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %})
 
 
-#### Other Consensus Mechanisms
+### Other Consensus Mechanisms
+({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %})
+
+## The Peer-to-Peer Network
+({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %})
 
 
-### The Peer-to-Peer Network
+## Mining
+({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %})
 
-### Mining
 
 ![Hash Cash Style PoW](/assets/post_files/technology/expert/2.6-mining/hash_cash_pow.jpg)
 
 
-### Blockchain Governance
+## Blockchain Governance
+({{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %})
+
