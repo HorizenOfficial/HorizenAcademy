@@ -91,10 +91,6 @@ As we said before, building a system under the assumption that communication bet
 
 The holy grail of consensus mechanisms is to achieve consensus in a group including malicious actors, built on an unreliable network. Using the terminology we just introduced, this means **building a *Byzantine Fault-Tolerant* system in an *asynchronous* environment.**
 
-
-
-
-
 ## Defining Consensus
 
 Before we move on, we need to define what "achieving consensus" precisely means. Although you might have an intuition for what consensus is by now, from this point onwards it will be handy to have an exact definition, so that we can evaluate potential candidates for a suitable consensus mechanism objectively.
@@ -120,10 +116,6 @@ All non-faulty nodes reach a new state eventually (liveness), and all nodes agre
 **Building a *Byzantine Fault-Tolerant* consensus mechanism, that works in an *asynchronous environment* and can guarantee *safety* as well as *liveness* is the holy grail in distributed computing.**
 
 Alright, now we know what consensus means and what kind of failures a robust consensus mechanism has to tolerate. But how do we get there?
-
-
-
-
 
 ## The Early Days of Distributed System Design
 
@@ -162,90 +154,86 @@ The argumentation for getting this result is straight-forward:
 
 1. If *x* is the number of Byzantine nodes, the system must work in case they are unresponsive, so with *(n-x)* nodes.
 2. Now it is possible that the unresponsive nodes suffered from crash-faults and all *x* Byzantine nodes are still live. In this case *(2x)* nodes are either not responsive or Byzantine.
-3. Because a majority of honest nodes is required to achieve consensus, we need a total of *n = 3x + 1* nodes, which in turn means up to \\(x = \frac{(n-1)}{3}\\) nodes can be Byzantine.
+3. Because a majority of honest nodes is required to achieve consensus, we need a total of *n = 3x + 1* nodes, which in turn means a maximum of \\(x = \frac{(n-1)}{3}\\) nodes can be Byzantine for the system to keep working.
 
 What we have learned from looking at the Byzantine Generals problem is that the threshold for the maximum share of Byzantine participants on the network is rather low, clocking in at one third of the total node count.
 
-#### DLS
+### DLS
 
-When we talked about the different assumptions for the network reliability, we mentioned the *partially synchronous* model, where messages are assumed to be delivered in *bounded time*, but the *bound* is unknown. This model was introduced with the [*DLS algorithm*](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) after Dwork, Lynch and Stockmeyer. It also introduced the terms liveness and safety that we already introduced. Liveness is the property of the system working and not coming to a halt in case of failures, while safety was the agreement of the network on a single current state.
+When we talked about the different assumptions for the network reliability, we mentioned the *partially synchronous* model, where messages are assumed to be delivered in *bounded time*, but the *bound* is unknown. This model was introduced with the [*DLS algorithm*](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) after Dwork, Lynch and Stockmeyer. It also introduced the terms liveness and safety that we already talked about. Liveness is the property of the system continuing to work in case of failures, while safety was the agreement of the network on a single state.
 
-
-The DLS algorithm contributed greatly to the development of consensus research, in that it established a new network model (partial synchrony) and achieved safety and liveness in a Byzantine environment. It however failed to do so in an asynchronous setting and it also came with a non-starter that led to it never being implemented in a meaningful way. It assumed a synchronized clock between all nodes, an assumption that is just not realistic in a permissionless system.
+The DLS algorithm contributed greatly to the development of consensus research, in that it established a new network model (partial synchrony) and achieved safety and liveness in a Byzantine environment. It however failed to do so in an asynchronous setting and it also came with a non-starter that led to it never being implemented in a meaningful way. It assumed a synchronized clock between all nodes, an assumption that is not realistic in a permissionless system.
 
 ![Dwork, Lynch and Stockmeyer Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_D.jpg)
 ![Dwork, Lynch and Stockmeyer Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_M.jpg)
 
-#### pBFT
+### pBFT
 
-In 1999 yet another consensus algorithm was published - [*practical Byzantine Fault-Tolerance*](http://pmg.csail.mit.edu/papers/osdi99.pdf) (pBFT) by Castro and Liskov. It got pretty close to achieving the end goal: handling malicious actors in an unreliable communication network while ensuring safety and liveness. We used the distinction between *consensus* and *liveness and safety* deliberately in this case. While pBFT can guarantee safety under all circumstances (assuming a maximum of *(n-1)/3* Byzantine nodes), it relies on the synchronous model to achieve liveness. Put differently, in an unreliable communication network the system might halt. pBFT also suffers scalibility issues: the number of messages needed to keep the network in synch grows exponentially with the number of nodes. It is therefore impractical for public blockchains.
+In 1999 yet another consensus algorithm was published - [*practical Byzantine Fault-Tolerance*](http://pmg.csail.mit.edu/papers/osdi99.pdf) (pBFT) by Castro and Liskov. It got pretty close to achieving the final goal: handling malicious actors in an unreliable network while ensuring safety and liveness.
 
 ![Practical Byzantine-Fault Tolerance](/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_D.jpg)
 ![Practical Byzantine-Fault Tolerance](/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_M.jpg)
 
-### Changing the Definition of Consensus
+pBFT can guarantee safety under all circumstances (assuming a maximum of \\(x = \frac{(n-1)}{3}\\) Byzantine nodes), but it relies on the synchronous model to achieve liveness. Put differently, in an unreliable communications network the system might halt. pBFT also suffers from scalibility issues: the number of messages needed to keep the network in synch grows exponentially with the number of nodes. It is therefore impractical for public blockchains.
 
-Obviously the problem of achieving consensus reliably has been solved, otherwise we wouldn't be here. But how did Satoshi do this?
+## Changing the Definition of Consensus
 
-The important leap was moving away from a deterministic definition of consensus. While some might argue this sounds like moving goalposts, in practice this is what makes public blockchains work - a non-deterministic definition of consensus. Using determinism means, that each new state is decided on by all nodes in a binary or boolean fashion: correct or false.
-The consensus mechanism therefore had nodes agreed on some fixed new state.
+The problem of achieving consensus reliably has obviously been solved, otherwise we wouldn't be here. But how did Satoshi do this?
 
-In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of new state being the global state. Remember that the state in a blockchain is a new block. When a new block is proposed, nodes can be fairly certain, that it will stay valid, but they cannot know for sure! But with each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* surely but slowly approaches 1.
+The important leap was moving away from a deterministic definition of consensus. While some might argue this is moving goalposts, in practice it is what makes public blockchains work - a non-deterministic definition of consensus. Using determinism means, that each new state is decided on by all nodes in a binary fashion: correct or false.vThe consensus mechanism therefore had nodes agreed on some fixed new state.
+
+In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of a new state being the global state. Remember that a new state in a blockchain is reached when a new block is added to the chain. When a new, valid block is proposed, nodes can be fairly certain, that it will stay valid, but they do not know for sure. With each additional state transition - in our context each new block or *confirmation* - the probability of the state being *safe* slowly but surely approaches 1.
 
 ![Nakamoto Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_D.jpg)
 ![Nakamoto Consensus](/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_M.jpg)
 
-It is important to note, that *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero. In practice, this property leads to the receiver of a transaction usually waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach to partition the ledger into individual *shards*. Without finality, this becomes practically infeasible.
+It is important to note, that the *Nakamoto Consensus* cannot provide finality. Although the probability of a block being reversed approaches 0 the more confirmations it has, it never actually equals zero.
 
-#### Nakamoto Consensus
+In practice, this property leads to the receiver of a transaction waiting for a few confirmations, until the funds are considered received. It also limits the possible approaches to scalability. *Sharding* is an approach from the traditional database world where the data is partitioned into several *shards*. Without finality, this tactic becomes infeasible.
+
+### Nakamoto Consensus
 
 But wait, how does the Nakamoto consensus actually achieve consensus? In the mechanisms we outlined above you can break down the process of achieving consensus to a *proposer* suggesting a state transition and a group of *acceptors* coordinating to either accept or decline the proposed state. This coordination displays characteristics of a ballot. A shortened Demiro Massessi quote reads:
 
-> "In one way or another, [...] consensus algorithms boil down to some kind of vote [...].”
+> "In one way or another, [...] consensus algorithms boil down to some kind of vote [...].” - Demiro Massessi
 
-Nakamoto consensus with [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and to start proposing blocks. The consensus is based on who can find a nonce, that [hashed]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) together with the proposed block header, yields a block hash below the current target value. The chance of finding such a valid nonce is proportional to the relative hash power - or computing power -  a given miner controls. This means state transitions are voted on with hash power, and the state transition logic is defined by the target a valid block hash has to be smaller than or equal to.
+Nakamoto consensus with [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW) does not require a leader (proposer) selection of any kind. Anybody is free to start mining and thereby proposing blocks. The consensus is based on who can find a nonce, that [hashed]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) together with the proposed block header, yields a block hash below the current target value. The chance of finding such a nonce is proportional to the relative hash power - or computing power - a given miner controls. This means state transitions are voted on with computational power, and the state transition logic is defined by the target a valid block hash has to meet.
 
 At this point, we would like to quote Demiro in full:
 
 > “The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. […] In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control.” - Demiro Massessi
 
-The limited resource in the case of the traditional Nakamoto Consensus using Proof-of-Work is computing power. The genius part is adding an incentive system to the consensus mechanism. Participants have to do work and spend real world resources (electricity) on achieving consensus on the network. By rewarding the miner of each block with the block subsidy, there is an incentive for rational actors to perform this task. 
+The limited resource in the case of the traditional Nakamoto Consensus using Proof-of-Work is computing power.
 
-#### PoW + Longest Chain Rule = Consensus
+The genius part was adding an incentive system on top of the consensus mechanism. Participants spend real world resources (computations = electricity) on achieving consensus within the network. By rewarding the miner of each block with the block subsidy, there is an incentive for rational actors to perform this task. Once the native currency of the network has a value greater zero, the network can pay for its own maintenance without anybody being in charge.
 
-The consensus mechanism is composed of two parts. One is the Proof-of-Work component that facilitates a type of voting as well as Sybil resistance, the other part is the *longest chain rule* or *heaviest chain rule* (both describing the chain with the most cumulative computational work).
+### PoW + Longest Chain Rule = Consensus
 
-The longest chain rule is applied in case two miners find valid blocks at roughly the same time - a tie situation because both blocks are valid according to the [protocol]. Miners start building on the block they received first, but keep the second one in memory. Different miners can have different vies of which block came first, depending on their geographical location and their connectivity in the network graph. The tie is broken once the next block is found and the winner is the block that was build on top of.
+The consensus mechanism is composed of two parts. One is the [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) component that facilitates a type of voting as well as Sybil-resistance. The other part is the *longest chain rule* or *heaviest chain rule* (both describing the chain with the most cumulative computational work).
+
+The longest chain rule is applied in case two miners find valid blocks at roughly the same time - a tie situation because both blocks are valid according to the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}). The other miners start building on the block they received first, but keep the second candidate in memory. Different miners can have different views on which block came first, depending on their geographical location and their connectivity in the network graph. The tie is broken once the next block is found and the winner is the block that was build on top of.
 
 ![Longest Chain Rule](/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_D.jpg)
 ![Longest Chain Rule](/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_M.jpg)
 
-The resulting chain of state transitions - the blockchain - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power. This means, that on it's way to solving one of the more difficult problems in computer science, the Byzantine Generals Problem, Nakatomo Consensus also raised the bar for Byzantine tolerance. Instead of being able to handle rougly 33% of participants being Byzantine, it can handle 49%, although this is defined via the share of hash power rather than nodes on the network.
+The resulting chain of state transitions - the blockchain - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power.
 
-**TKKG** \\((2*f* + 1)\\) resilience vs \\((3*f* + 1)\\) resilience.
+This means, that on it's way to solving one of the more difficult problems in computer science, the Byzantine Generals Problem, Nakatomo Consensus also raised the bar for Byzantine tolerance. Instead of being able to handle rougly a third of participants being Byzantine, it can handle almost half of the network being malicious. Sometimes, this is referred to as *(2x + 1)* resilience in the case of Nakamoto consensus vs. *(3x + 1)* resilience in most other cases. This share is defined via the amount of computational power rather than nodes on the network.
 
-This last part of the sentence is very important. PoW and it's relatives can be seen as Sybil-resistance mechanisms. In a **Sybil Attack**, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
+PoW and it's relatives can be seen as *Sybil-resistance mechanisms*. In a [Sybil Attack]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}), a malicious party creates a large number of centrally controlled identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
 
-Sybil-resistance mechanism prevent this by tying an entities voting power to a scarce resource, that is harder to obtain than fake user-accounts or IP-addresses. In the case of PoW, this is computing power.
+Sybil-resistance mechanism prevent this by tying an entities voting power to a scarce resource, that is harder to obtain than fake user-accounts or IP-addresses. In the case of PoW, this scarce resource is computing power. The longest chain rule is the "actual consensus mechanism" that has nodes agree on a single version of truth in case several candidate versions exist.
 
-The longest chain rule is the "actual consensus mechanism" that has nodes agree on a single version of truth.
+## Summary
 
-#### An Immutable Ledger
+Holy, that was a lot... Let's do a quick recap of what you just learned.
 
-A key takeaway from this article should be the following: You get *immutability* of data only if there is a strong consensus  **and** incentive mechanism in place. It makes its participants agree on a state (safety), enforces the rules of the [protocol] and has the network decline invalid blocks. Without consensus, a blockchain is merely *tamper-evident*, which means alterations are easy to detect. Only because the rules are enforced through strong consensus and a set of well thought-out incentives, we get the immutability property.
+First we looked at the challenges of achieving consensus in a distributed setting. The consensus mechanism has to tolerate malicious actors (Byzantine fault tolerance) and it needs to handle a network providing unreliable communication (asynchronous network).
 
-### Summary
+We defined liveness, as the property of all nodes eventually computing a new state based on external events. Put differently, the system doesn't stall. In the context of blockchains, liveness means that all valid transactions will eventually end up in the blockchain. This is closely related to the property of censorship resistance.
 
-Holy, that was a lot... Let's do a quick recap of what just happened.
+Next we defined safety as all non-faulty nodes agreeing on new states. We learned that Nakamoto Consensus does not provide finality, but rather an increasing probability of a state being final with a growing number of confirmations. Therefore safety is closely related to the immutability property of blockchains. With every new block a blockchain demonstrates liveness and safety is achieved after a few confirmations.
 
-First we looked at the challenges of achieving consensus in a distributed setting. The consensus mechanism has to tolerate malicious actors  - be Byzantine fault tolerant - and it needs to handle unreliable communication - the asynchrony assumtion.
+Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic. A new block isn't necessarily agreed upon by all nodes at the time it is mined, but the more blocks are build on top of it, the more certain all participants can be that it will stay.
 
-We defined liveness, as the property of all nodes eventually computing a new state based on some external input. Put differently, the system doesn't stall. In the context of blockchains, liveness means that all transactions originating from an honest account will eventually end up in the blockchain of all other honest participants. This is closely related to the property of censorship resistance.
-
-Next we defined safety as all non-faulty nodes agreeing on new states. We learned that Nakamoto Consensus does not provide finality, but rather an increasing probability of a state being final with a growing number of confirmations. Therefore safety is closely related to the immutability property of blockchains.
-
-Every *x* minutes a blockchain demonstrates liveness and every *k * x* minutes it demostrates safety.
-
-A key takeaway from this article should be that without strong consensus and incentives the blockchain is only tamper-evident, and those mechanisms ensure immutability.
-
-In our next article, we will look at Proof-of-Work, the mechanisms that provides Sybil resistance and an incentive system all in one.
+In our next article, we will look at [Proof-of-Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}), the mechanisms that provides Sybil-resistance and an incentive system all in one.
