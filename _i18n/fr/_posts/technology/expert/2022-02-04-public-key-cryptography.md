@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Criptografía de llave pública"
+title: "La cryptographie à clé publique"
 permalink: /technology/expert/public-key-cryptography/
 topic: technology
 level: expert
-chapter: "¿Cómo funciona una cadena de bloques?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}
