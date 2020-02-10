@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Funciones hash"
+title: "Les fonctions de hachage"
 permalink: /technology/expert/hash-functions/
 topic: expert
 level: advanced
-chapter: "¿Cómo funciona una cadena de bloques?"
+chapter: "Comment fonctionne une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}
