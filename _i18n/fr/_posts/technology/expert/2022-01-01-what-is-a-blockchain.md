@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "¿Qué es una cadena de bloques?"
+title: "Qu'est-ce qu'une Blockchain ?"
 permalink: /technology/expert/what-is-a-blockchain/
 topic: technology
 level: expert
-chapter: "¿Qué es una cadena de bloques?"
+chapter: "Qu'est-ce qu'une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}

@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "Resumen - experto"
+title: "Résumé - expert"
 permalink: /technology/expert/summary/
 topic: technology
 level: expert
-chapter: "Resumen"
+chapter: "Résumé"
 ---
 
 {% tf tech-not-available.md %}

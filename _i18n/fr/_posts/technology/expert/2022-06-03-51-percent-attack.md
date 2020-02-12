@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Ataque del 51%"
+title: "Les attaques 51%"
 permalink: /technology/expert/51-percent-attack/
 topic: technology
 level: expert
-chapter: "Ataques"
+chapter: "Les attaques"
 ---
 
 {% tf tech-not-available.md %}

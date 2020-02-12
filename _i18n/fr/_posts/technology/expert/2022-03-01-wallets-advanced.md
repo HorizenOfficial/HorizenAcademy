@@ -1,11 +1,11 @@
 ---
 layout: post
 type: intro
-title: "Billeteras - experto"
+title: "Les Wallets - Niveau Expert"
 permalink: /technology/expert/wallets-advanced/
 topic: technology
 level: expert
-chapter: "Billeteras"
+chapter: "Les Wallets"
 ---
 
 {% tf tech-not-available.md %}

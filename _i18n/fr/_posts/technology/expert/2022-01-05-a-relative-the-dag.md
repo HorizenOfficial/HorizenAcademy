@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Un pariente - El DAG de bloques"
+title: "Le protocole DAG"
 permalink: /technology/expert/a-relative-the-dag/
 topic: technology
 level: expert
-chapter: "¿Qué es una cadena de bloques?"
+chapter: "Qu'est-ce qu'une Blockchain ?"
 ---
 
 {% tf tech-not-available.md %}
