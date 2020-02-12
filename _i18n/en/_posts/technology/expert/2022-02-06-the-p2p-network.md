@@ -119,7 +119,7 @@ It is desirable for the broadcasting mechanism to display the following properti
 
 There are three broadcasting mechanisms we want to introduce you to in this article: flooding, diffusion, and the Dandelion protocol.
 
-![Broadcasting Mechanism](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
+![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
 
 #### Flooding
 

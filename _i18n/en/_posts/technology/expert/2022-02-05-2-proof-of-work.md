@@ -10,70 +10,100 @@ chapter: "How Does a Blockchain Work?"
 published: false
 ---
 
-Proof of Work (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).
+*Proof of Work* (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).
 
-**TL;DW**: Evidence of Proof of Work can be found in many places, for example in Giza, Egypt. The pyramids don't only serve as a tribute to the Pharaoh, they also demonstrate the capabilities of the civilization that built them. It is immediately recognized by any visitor, that this monument required a large amount of work to be built. It's a proof of work.
+**TL;DW**: Evidence of Proof of Work can be found in many places, for example in Giza, Egypt. The pyramids don't only serve as a tribute to the Pharaoh. They also demonstrate the capabilities of the civilization that built them. It is immediately recognized by any visitor that this monument required a large amount of work to be built. It's a *proof of work*.
 
-Proof of Work in a blockchain serves a similar purpose. It doesn't showcase the amount of work that went into building it by making it large in size, but by the number of leading zeros in every block hash. It is a means to achieve immutability. While the [blockchain as a data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) is inherently tamper-evident, only PoW gives it its immutability attribute. The blockchain allows detecting changes to its records easily, but it doesn't prevent them from happening. Proof-of-Work makes it infeasible to change its records, for an attacker has do redo all the work that went into building it in the first place.
+## Why we need Proof of Work
 
-In our last article we concluded that the consensus mechanism in most blockchains comprises two components - Proof of Work and the longest chain rule. PoW provides [Sybil resistance] and protects against [DDOS] attacks. The longest chain rule resolves disputes in case two valid blocks are found at the same time and by breaking the tie with the next block that is found.
+Proof of Work in a blockchain serves a similar purpose. It doesn't showcase the amount of work that went into building it by making it large in size, but by the number of leading zeros in every block hash. It is a means to achieve immutability of the blockchain. While the [blockchain as a data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) is inherently *tamper-evident*, only PoW gives it its immutability attribute. The blockchain allows detecting changes to its records easily, but it doesn't prevent them from happening. Proof of Work makes it infeasible to change its records, for an attacker has do redo all the work that went into building it in the first place.
 
-Proof of Work creates consensus in rounds - with each new block that gets added to the chain.
-Instead of voting on proposed blocks, the chance of finding a block is proportional to a miners relative contribution to the total hash power on the network. This can be understood as an indirect form of voting, where the voting power of an entity is proportional to the computing power that entity has.
+In our last article, we concluded that the consensus mechanism in most blockchains comprises two components - Proof of Work and the longest chain rule. PoW mostly provides [Sybil resistance]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}) combined with an incentive system that makes honest behavior the most profitable strategy. The longest chain rule resolves disputes in case two valid blocks are found at the same time.
+
+### Voting With Computational Power
+
+Proof of Work creates consensus in rounds with each new block that gets added to the chain.
+Instead of voting on proposed blocks, the chance of finding a block is proportional to a miners relative computational power (or hash power) on the network. This can be understood as an indirect form of voting, where the voting power of an entity is tied to the amount of electricity it spends.
 
 > “The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (…) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control.” - Demiro Massessi
 
-The limited resource in a PoW blockchain is computational power. In other *Proof-of* schemes it can be hard drive space or the native currency of that blockchain.
+The limited resource in a PoW blockchain is computational power - and hence electricity. In other *Proof-of-X* schemes, *X* can be hard drive space or the native currency of that blockchain.
 
-### How does a Miner perform the PoW?
+
+
+
+
+
+
+## Creating a Block Step-by-Step
 
 After we have talked about [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail and covered [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) explaining PoW is straight forward:
 
-A miner starts creating a block by including the *coinbase* transaction as the first transaction. The coinbase transaction is a special one that does not have any inputs, but an output sending coins to an address controlled by the himself. This output is worth the current *block subsidy* (12.5 ZEN at the time of writing) together with the *transaction fees* of all included transactions. The sum of the block subsidy and the transaction fees make up the block reward.
+### Collecting Transactions
+
+A miner starts creating a block by including the *coinbase* transaction as the first transaction. The coinbase transaction is a special type of transaction that does not have any inputs, but an output sending coins to an address controlled by the miner himself. This output is worth the current *block subsidy* (12.5 ZEN at the time of writing) together with the *transaction fees* of all included transactions. The sum of the block subsidy and the transaction fees make up the block reward.
 
 ![Block Reward: The sum of block subsidy and transaction fees](/assets/post_files/technology/expert/2.4.2-pow/block-reward.jpg)
 
-By allowing them to include this transaction miners are incentivized to actually perform the computationally expensive task and at the same time new coins are created. Each existing ZEN or BTC started out in a coinbase transaction.
+By allowing miners to include this transaction they are incentivized to actually perform the computationally expensive task of producing new blocks. At the same time new coins are created. Each existing ZEN or BTC started out in a coinbase transaction. On a high level, this means the protocol can pay real world entities for its own maintenance.
 
-Next, miners collect new and unconfirmed transactions in their block. If there are more unconfirmed transactions than what fits in a single block, they store them in their *mempool*. When blocks are full, miners select the transactions from their mempool with the highest transaction fees, calculated on a fee-per-byte basis, and include those in their block. This is because blocks are limited in size and by selecting transactions based on ZEN/byte they get the most bang for the buck in terms of transaction fees.
+Next, miners collect new and unconfirmed transactions in their block. A transaction is called unconfirmed when it is not included in the blockchain yet. If there are more unconfirmed transactions than what fits in a single block, miners store them in their memory pool or *mempool*. When blocks are full, miners select the transactions from their mempool with the highest transaction fees, calculated on a fee-per-byte basis, and include those in their block. This is because blocks are limited in size and by selecting transactions based on their ZEN/byte fee they get the most bang for the buck in terms of revenue.
+
+### Finding a Nonce
 
 Now, a miner builds a *merkle tree* of all transactions included in her block and includes the *merkle root* in the block header. She adds all the other necessary data, such as the hash of the previous block and some other meta data.
 
 ![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
 ![Merkle Tree](/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_M.jpg)
 
-Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. He compares the resluting block hash with the current *target* and if it is greater than the target, he increments the nonce and performs the same steps again. All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
+Once the *candidate block* is completed the miner inserts some value in the *nonce* data field. The nonce - *n*umber used *once* - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. She compares the resulting block hash with the current *target* and if it is greater than the target, she increments the nonce and performs the same steps again. 
+
+All miners do this simultaneously and are in a competition to find a nonce, that when hashed together with the block header produces a hash equal to or below the target.
 
 ![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
-Once such a block, or better nonce, is found, the miner will broadcast his block to the network, where nodes as well as other miners check, if the block contains conflicting transactions and if the hash is below the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block and start working on a new one.
+Once such a block, or better nonce, is found, the miner will broadcast the block to the network, where nodes as well as other miners check, whether the block contains conflicting transactions and if the hash meets the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block, remove those transactions that were just added to the blockchain from their mempool and start working on a new block.
 
-The terms target and *difficulty* are often times used interchangeably. Technically, they are not equivalent though. The target is a value, that the block hash has to be equal to or below in order to be considered valid. The difficulty, is a measure of how difficult it is to find a hash below a given target. The highest possible target in Bitcoin (1) is defined as
+### Difficulty vs Target
+
+The terms target and *difficulty* are often used interchangeably. Technically, they are not equivalent though. The target is a value, that the block hash has to be equal to or below in order to be considered valid. The difficulty, is a relative measure of how difficult it is to find a hash below a given target. The highest possible target in Bitcoin is defined as
 
 0x00000000FFFF0000000000000000000000000000000000000000000000000000.
 
-The difficulty is a relative measure of the current target compared to the easiest target value.
+The difficulty is a relative measure of the current target compared to the maximum target value.
 
-The target is adjusted regularly, with Horizen every 8064 blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network valid blocks are found more frequently on average. By increasing the target, the block time can be adjusted upwards or downwards, depending on hash rate.
+The target is adjusted regularly, with Horizen every 8064 blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network, valid blocks are found more frequently on average. By lowering the target, the block time can be adjusted upwards, given a constant amount of hash power.
 
-### Types of Proof of Work
 
-> "A Proof-of-Work (PoW) system (or protocol, or function) is an economic measure to deter denial of service attacks and other service abuses such as spam on a network by requiring some work from the service requester, usually meaning processing time by a computer." - Wikipedia
 
-Proof of Work is the bridge connecting the digital and the physical world. It ties the voting power in a purely digital system to a costly real world resource. Prior to PoW, consensus was done with a known set of participants. Allowing anyone to contribute to a consensus process left the system vulnerable to [**Sybil attacks**]. But creating many Sybil identities does not provide an attacker with an advantage if he can not back them with meaningful computational resources.
 
-While a Proof of Work System typically uses hash functions, a proof of work algorithm can be more than just a hash function.
-The most used type of Proof of Work is a Hashcash style PoW. Hashcash was introduced in 1997 by Adam Back as a measure to prevent spam. Recipients would require the sender to perform a proof of work in order to accept the mail. While this does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above, performing repeated hashing until the resulting hash is less than some target value.
+
+
+
+
+## Bridging the Physical and the Digital World
+
+> "A Proof-of-Work (PoW) system (or protocol, or function) is an economic measure to deter denial of service attacks and other service abuses such as spam on a network by requiring some work from the service requester, usually meaning processing time by a computer." - [Wikipedia](https://en.wikipedia.org/wiki/Proof_of_work)
+
+Proof of Work is the bridge connecting the digital and the physical world. It ties the voting power in a purely digital system to a costly real world resource. Prior to PoW, consensus was only achievable with a known set of participants or a reliable communications network. Making the consensus process public left the system vulnerable to [Sybil attacks]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}). With Proof of Work, creating many Sybil identities does not provide an attacker with an advantage as long as he cannot back them with meaningful computational resources.
+
+While a Proof of Work system typically uses a one-way function like a hash function, a proof of work algorithm can be more than just a hash function.
+The most used type of Proof of Work is the Hashcash style PoW depicted in the graphic above. Hashcash was introduced in 1997 by Adam Back as a measure against spam. Recipients would require the sender to perform a Proof of Work in order to accept the mail. While this computational overhead does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above: performing repeated hashing until the resulting hash is less than some target value.
+
+### Interactive Proof of Work
 
 In general a Proof of Work can be one of two things: a non-interactive *solution-verification protocol* or an interactive *challenge-response protocol*. Horizen uses both, each for a different purpose.
 
 Just like Bitcoin and most other blockchains, mining is done via a solution-verification protocol. Miners find a solution to a problem. All nodes can verify the solution at any point in time. Even a node that has been offline for months can verify if the blocks it receives during synchronization from an untrusted node are valid or not. It is non-interactive.
 
-Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain requirements for nodes in order to be eligible to get rewarded. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a form of Proof of Work as well.
+Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain performance requirements for nodes. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a different form of Proof of Work known from mining.
 
-### What Constitutes a good Proof of Work?
 
-Some criteria for a good PoW for a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
+**continue**
+
+## What Constitutes a good Proof of Work?
+
+Some criteria for a good PoW in a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
 
 **TKKG** [Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
 
