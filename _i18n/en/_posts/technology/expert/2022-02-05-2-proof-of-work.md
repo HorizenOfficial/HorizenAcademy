@@ -120,31 +120,45 @@ Let' take a look at the asymmetric property first. It means the task has to be c
 
 Proof of Work schemes always involve a computationally hard problem. The term computationally hard can further be broken down into three classes: *CPU-bound, memory-bound* or *network-bound*. CPU-bound refers to the required processing power, memory-bound to storage capacities (usually RAM, not hard drive) and network-bound to the available bandwidth.
 
-All of them have certain advantages and shortcomings. The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called ASICs, can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer a huge advantage in performance. Because ASICs are very specialized and expensive, most regular users don't have easy access to them.
+#### Network-bound Algorithms
+
+All of them have certain advantages and shortcomings. Network-bound approaches are less hardware intensive and rely more on operational expenditures than capital expenditures. At the same time they are more vulnerable to attacks, such as *Denial of Service* (DOS) attacks and bandwidth is geographically not as evenly available as CPU power or memory.
+
+#### CPU-bound Algorithms
+
+The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called *Application Specific Integrated Circuits* (ASICs), can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer an advantage in performance. Because ASICs are domain specific and expensive, most users don't have access to them.
 
 ![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic.jpg)
 
-The memory-bound "approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." [Source](https://medium.com/@jeffrey.emanuel/loaded-pow-a-new-direction-in-proof-of-work-algorithms-ae15ae2ae66a)
+#### Memory-bound Algorithms
+
+It was long thought that memory-bound problems were less prone to hardware optimizations and specificaly the development of ASICs. The Equihash algorithm for instance was thought to be ASIC-resistant for a long time, but things turned out differently.
+
+> The memory-bound "approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." [Jeffrey Emanuel](https://medium.com/@jeffrey.emanuel/loaded-pow-a-new-direction-in-proof-of-work-algorithms-ae15ae2ae66a)
 
 With recently the author refers to the emergence of ASIC miners for the Equihash mining algorith.
 
-Network-bound approaches are less hardware intensive and rely more on operational expenditures than capital expenditures. At the same time they are more vulnerable to attacks, such as [**DOS**] attacks and bandwidth is geographically not as evenly available as CPU power or memory.
+Most PoW schemes are CPU-bound. Some algorithms previously referred to as ASIC resistant, are *memory-hard*, but rarely memory-bound. This means they require a lot of memory to be performed at all, but once that amount of memory is available, speed improvements are realized through increasing the processor performance rather than adding more memory. As we mentioned above, this design didn't keep them ASIC resistant for long. It is always possible to build more efficient hardware, compared to commodity hardware, for a given problem at the expensive of versatility.
 
-Most PoW schemes are CPU-bound. Some algorithms, sometimes referred to as ASIC resistant, are *memory-hard*, but rarely memory-bound. This means they require a lot of memory to be performed at all, but once that amount of memory is available, speed improvements are realized through increasing the processor performance rather than adding more memory. As we mentioned above, this design didn't keep them ASIC resistant for long. It is always possible to build more efficient hardware, compared to commodity hardware, for a given problem at the expensive of versatility.
+#### An Edge-Case - The Tangle
 
-**TKKG** An interesting sidenote is that bandwith is a consideration in the IOTA [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4). The Tangle is a [Directed Acyclic Graph (DAG)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) consisting of individual transactions. Each transaction has a small proof of work attached. The protocols security is based on the assumption that honest participants will make up the majority of transactions and the majority of computational power. If the Tangle was to be adopted widely for micro-payments in the IOT sector, not only would computational power secure the network, but also the bandwidth restraints of a single attacker. It will be infeasible to amass more bandwith than all honest devices will have combined. In order to broadcast a majority of transactions one needs a majority of computing power and bandwidth in this setting. In a transaction DAG security can have both, a CPU-bound and a network-bound component.
+An interesting sidenote is that bandwith is a consideration in the IOTA [Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4), designed for the application in IoT devices with many micro transactions. The Tangle is a [Directed Acyclic Graph (DAG)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) consisting of individual transactions. Each transaction has a small proof of work attached. The protocols security is based on the assumption that honest participants will make up the majority of transactions and the majority of computational power. 
 
-#### Metrics to Assess Computational Hardness
+If the Tangle was to be adopted widely for micro-payments in the IOT sector, not only would computational power secure the network, but also the bandwidth restraints of a single attacker. It will be very hard to amass more bandwith as a single entity than all honest devices will have combined. In order to broadcast a majority of transactions one needs a majority of computing power and bandwidth in this setting. In a transaction DAG security can have both, a CPU-bound and a network-bound component.
 
-Their are two different metrics to rate the difficulty of a computational task: time complexity and space complexity.
+### Metrics to Assess Computational Hardness
+
+There are two different metrics to rate the difficulty of a computational task: time complexity and space complexity.
 
 Time complexity refers to how many additional computations result from an increase in the input to a function. With infeasible time complexity, slight increases in input size will result in an exponential increase in time for the computation to finish.
 
-++++ time complexity
+![Time Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/time-complexity_D.jpg)
+![Time Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/time-complexity_M.jpg)
 
 Space complexity refers to how much additional memory is needed when the input to a function increases. With infeasible space complexity, the memory requirements quickly exceed all hardware limits.
 
-++++ space complexity
+![Space Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/space-complexity_D.jpg)
+![Space Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/space-complexity_M.jpg)
 
 An algorithm designed for a Proof of Work has to make tradeoffs between the two. When we talked about CPU-bound algorithms, we meant those with a high level of time complexity. Memory-bound algorithms have a high space complexity. As you can imagine, these metrics don't work in a binary fashion, but have different shades of grey.
 
