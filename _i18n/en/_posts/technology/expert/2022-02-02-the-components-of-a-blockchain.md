@@ -69,12 +69,16 @@ The consensus mechanism has to tolerate malicious actors and it needs to handle 
 
 In this article, we take an in-depth look at [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) - the consensus and *Sybil-resistance* mechanism used in Horizen, Bitcoin and most other public blockchains.
 
+![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
 ### Other Consensus Mechanisms
 ({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %})
 
 ## The Peer-to-Peer Network
 ({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %})
+
+
+![Broadcasting Mechanisms - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
 
 
 ## Mining

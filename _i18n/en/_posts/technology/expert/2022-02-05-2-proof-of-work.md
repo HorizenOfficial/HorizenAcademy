@@ -99,25 +99,24 @@ Just like Bitcoin and most other blockchains, mining is done via a solution-veri
 Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain performance requirements for nodes. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a different form of Proof of Work known from mining.
 
 
-**continue**
 
 ## What Constitutes a good Proof of Work?
 
-Some criteria for a good PoW in a decentralized blockchain with a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
+Some criteria for a good Proof of Work in a decentralized blockchain aiming for a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
 
 **TKKG** [Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
 
-- *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example we covered already, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For *54,063,013* this becomes a much more difficult task but verification can be done with any rudimentary calculator.
+- *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example of an asymmetric task. Depending on the difficulty, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify it. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For 54,063,013 this becomes a much more difficult task but verification can be done with any rudimentary calculator.
 
-- *Optimization Free*: An optimization free algorithms means, that you cannot improve the efficiency of performing that task through software or algorithmic  improvements. Battle proven one-way functions lend themselves as a good basis for an optimization free algorithm. There is no way around a trial-and-error approach. The [*Generalized Birthday Problem*](https://en.wikipedia.org/wiki/Birthday_problem) is an approach that has been studied for a long time with no optimization in sight. 
+- *Optimization Free*: An optimization free algorithms means, that you cannot improve the efficiency of performing that task through software or algorithmic  improvements. Battle proven one-way functions lend themselves well for optimization free algorithms. There is no way around a trial-and-error approach. The [*Generalized Birthday Problem*](https://en.wikipedia.org/wiki/Birthday_problem) that we will explain in a bit is an approach that has been studied for a long time with no optimization in sight.
 
-- *Amortization free*: This means economies of scale that would render all mining pools besides the largest one irrelevant should not be possible. In a best case scenario it wouldn't matter if a miner runs one miner or a million. This is obviously a not entirely practical property. Cooling, electricity and facilities to set up the mining equipment will always enable large miners to operate with a bigger margin than smaller ones. The PoW algo itself should not allow this to happen though.
+- *Amortization free*: This means economies of scale that would render all mining pools besides the largest one irrelevant should not be possible. In a best case scenario it wouldn't matter if a miner runs one miner or a million. This is obviously a not entirely practical property. Cooling, electricity and facilities to set up the mining equipment will always enable large miners to operate at a bigger margin than smaller operations. The PoW algorithm itself should not allow this advantage though.
 
 - *Independently Tunable Parameters*: Certain parameters of the problem to solve by the miners should be easy to adapt. One of those parameters is the target or difficulty we already talked about. By being able to tune this parameter depending on miner activity one can keep the block time constant.
 
-Let' take a look at the asymmetric property first. It means the task has to be computationally expensive to perform but easy to verify. After that, we will take a closer look at how a mining algorithm can be tuned via certain parameters.
+Let' take a look at the asymmetric property first. It means the task has to be computationally expensive to perform but easy to verify. After that, we will take a closer look at how a mining algorithm can be tuned through other parameters.
 
-### What Does Computationally Expensive Mean?
+### Computational Hardness
 
 Proof of Work schemes always involve a computationally hard problem. The term computationally hard can further be broken down into three classes: *CPU-bound, memory-bound* or *network-bound*. CPU-bound refers to the required processing power, memory-bound to storage capacities (usually RAM, not hard drive) and network-bound to the available bandwidth.
 
@@ -225,3 +224,4 @@ Lastly, PoW is inherently Sybil resistant. An entity can create as many identiti
 A key takeaway from this article should be the following: You get **immutability** of data only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks, otherwise a blockchain is only **tamper-evident**. We will come back to this in protocol and consensus article.\\
 
 
+[Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
