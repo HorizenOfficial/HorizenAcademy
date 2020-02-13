@@ -7,11 +7,12 @@ permalink: /technology/expert/blockchain-as-a-data-structure/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+further_reads: [blockchain_demo, why_blockchain_is_hard, bitcoin_developer_reference]
 ---
 
 The first use case for blockchain technology is digital money. To have a monetary system without central control you must have a special and sophisticated way to handle all the data produced with each transfer. Imagine if every person could access and modify the databases kept by banks. It would be a disaster.
 
-In order to make decentralized money a reality a method of accounting had to be developed - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), also referred to as *triple-entry accounting*. Every account balance can be computed at any time by storing all transactions in a digital ledger. 
+In order to make decentralized money a reality a method of accounting had to be developed - the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}), also referred to as *triple-entry accounting*. Every account balance can be computed at any time by storing all transactions in a digital ledger.
 
 A digital ledger used for digital money requires a set of properties that were not achievable before blockchain came along. In this article, we will look at how this translates to the way data is handled on a blockchain.
 
@@ -135,7 +136,7 @@ The block header contains the most important information about a block.
 - The previous block headers hash *hashPrevBlock* serves two purposes. First, it establishes an order throughout the chain of blocks and second, it ensures no previous block can be changed without affecting the current and all subsequent blocks.
 - The Merkle Root Hash *hashMerkleRoot* represents a summary of all transactions included in the block.
 - The *Time* is the [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time) when the miner started hashing the header for the mining process.
-- The *Bits* or *nBits* are an encoded version of the **current difficulty** of finding a new block.
+- The *Bits* or *nBits* are an encoded version of the current difficulty of finding a new block.
 - The *Nonce* - or *n*umber used *once* - is the variable that miners change to modify the block headers hash in order for its value to meet the difficulty. This process is covered in detail in our article on [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}).
 
 Merkle Trees play an important role in ensuring the integrity of data in the blockchain but are also used in other systems such as IPFS - the InterPlanetary File System and several implementations of NoSQL databases. Let's take a look at how they work and what they do before we continue with what a transaction looks like from a data perspective.
