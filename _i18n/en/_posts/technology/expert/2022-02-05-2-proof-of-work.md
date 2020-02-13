@@ -7,6 +7,7 @@ permalink: /technology/expert/proof-of-work/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+further_reads: [zcash_theoretically_improving_mining_speeds, equihash_paper, understanding_progpow]
 published: false
 ---
 
@@ -28,12 +29,6 @@ Instead of voting on proposed blocks, the chance of finding a block is proportio
 > “The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (…) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control.” - Demiro Massessi
 
 The limited resource in a PoW blockchain is computational power - and hence electricity. In other *Proof-of-X* schemes, *X* can be hard drive space or the native currency of that blockchain.
-
-
-
-
-
-
 
 ## Creating a Block Step-by-Step
 
@@ -74,13 +69,6 @@ The difficulty is a relative measure of the current target compared to the maxim
 
 The target is adjusted regularly, with Horizen every 8064 blocks. This is a mechanism to keep the block time somewhat constant. When more miners - and therefore hash power - join the network, valid blocks are found more frequently on average. By lowering the target, the block time can be adjusted upwards, given a constant amount of hash power.
 
-
-
-
-
-
-
-
 ## Bridging the Physical and the Digital World
 
 > "A Proof-of-Work (PoW) system (or protocol, or function) is an economic measure to deter denial of service attacks and other service abuses such as spam on a network by requiring some work from the service requester, usually meaning processing time by a computer." - [Wikipedia](https://en.wikipedia.org/wiki/Proof_of_work)
@@ -98,13 +86,9 @@ Just like Bitcoin and most other blockchains, mining is done via a solution-veri
 
 Nodes on the Horizen network are incentivized by getting a share of the block subsidy. Because we want to incentivize a robust network with capable nodes, the protocol has certain performance requirements for nodes. The requirements are checked by sending *challenges* to the nodes. The response time is the basis on which the nodes performance in assessed. It is an interactive challenge-response protocol and constitutes a different form of Proof of Work known from mining.
 
-
-
 ## What Constitutes a good Proof of Work?
 
 Some criteria for a good Proof of Work in a decentralized blockchain aiming for a fair distribution of newly mined coins have been formalized by Biryukov and Khovratovich in their [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf) paper:
-
-**TKKG** [Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
 
 - *Asymmetry*: The Proof of Work needs to be hard to produce, but easy to verify. Hashing is an example of an asymmetric task. Depending on the difficulty, an incredible amount of hash operations is needed to find valid hash, but a single operation is sufficient to verify it. Prime factorization in RSA is another example. It involves finding two primes whose product equals a given value. For the number 77 one would find 7 and 11 intuitively. For 54,063,013 this becomes a much more difficult task but verification can be done with any rudimentary calculator.
 
@@ -205,7 +189,6 @@ Some other examples of computationally hard problems used to create a Proof of W
 
 Another interesting concept was presented with ProgPoW. Its algorithm is designed to match already available hardware to reverse the scenario that has played out in the past. Those companies with the largest budget were able to bring specialized mining hardware for a given algorithm to market first. In the case of ProgPoW the [algorithm was designed](https://medium.com/@ifdefelse/understanding-progpow-performance-and-tuning-d72713898db3) with existing harware in mind rendering adavantages in R&D budgets for large manufacturers irrelevant.
 
-
 ## Incentives and Vulnerabilities
 
 Proof of Work in cryptocurrencies has an intricate but ingenious incentive system built-in. Miners are rewarded with the *block reward* which comprises the fixed *block subsidy* as well as the *transaction fees* attached to each transaction.
@@ -259,6 +242,3 @@ We looked at the basis of the Equihash algorith which is not based on hashing th
 Lastly, we talked about some general vulnerabilities of distributed ledgers and how they are mitigated.
 
 The one key takeaway from this article should be the following: You get **immutability** of data on a blockchain only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks, otherwise a blockchain is only **tamper-evident**.
-
-
-[Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
