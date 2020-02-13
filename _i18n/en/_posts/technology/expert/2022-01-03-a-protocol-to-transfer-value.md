@@ -7,6 +7,7 @@ permalink: /technology/expert/a-protocol-to-transfer-value/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+further_reads: [money_blockchains_and_social_scalability, who_controls_bitcoin_core, bitcoin_whitepaper]
 ---
 
 While this section of the Horizen Academy is focused on the technology, we want to account for the multidisciplinary nature of the blockchain and cryptocurrency space with this article. Without the right incentive system and economic considerations global digital money cannot work. Without building a cognitive bridge between the technology and the monetary aspects one is left with an incomplete picture of what blockchain can be.
@@ -88,7 +89,7 @@ The initial set of rules for a blockchain is defined with the genesis block. Any
 
 To suggest changes, most large blockchain projects have an *improvement proposal* system. Anybody is able to look at the code on GitHub and suggest improvements, usually by presenting the according code. Within the developer community, the suggested improvements will be discussed, refined and if the majority considers them to be beneficial and not negatively affecting the security they might be implemented.
 
-Deciding upon changes is referred to as the [governance]({{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %}) of a protocol. Often times this is only a loosely formulated set of guidelines, but it can be more structured. In a later article, we will talk more about governance. Jameson Lopp has put together a [very insightful piece](https://medium.com/@lopp/who-controls-bitcoin-core-c55c0af91b8a) on the governance process within Bitcoin, that we can only recommend reading.
+Deciding upon changes is referred to as the [governance]({{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %}) of a protocol. Often times this is only a loosely formulated set of guidelines, but it can be more structured. In a later article, we will talk more about governance. Jameson Lopp has put together a [very insightful piece](https://blog.lopp.net/who-controls-bitcoin-core-/) on the governance process within Bitcoin, that we can only recommend reading.
 
 Implementing changes can happen via soft forks or hard forks, where soft forks are downward compatible updates and hard forks are downward incompatible. If changes to the protocol can be implemented with soft forks, there are two ways of how this transition can be handled. In a [User Activated Soft Fork](https://www.mycryptopedia.com/uasf-user-activated-soft-fork-explained/) (UASF) the changes are being enforced by the node network. Node operators update their software at a specific flag date and will accept or reject a miner's block based on the new set of consensus rules. Miners have a strong incentive to adhere to the new rules as they risk mining invalid blocks otherwise.
 
