@@ -7,7 +7,7 @@ permalink: /technology/expert/proof-of-work/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-further_reads: [zcash_theoretically_improving_mining_speeds, equihash_paper, understanding_progpow]
+further_reads: [equihash_paper, loaded_pow, understanding_progpow, zcash_theoretically_improving_mining_speeds]
 published: false
 ---
 
