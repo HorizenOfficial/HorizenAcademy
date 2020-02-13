@@ -7,6 +7,7 @@ permalink: /technology/expert/a-relative-the-dag/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+further_reads: [overview_of_pow_based_consensus_protocols, spectre]
 ---
 
 One of the main engineering challenges in the blockchain space is *scalability*. Scalability refers to the development of technologies or protocols that can handle more transactions in the same amount of time.
