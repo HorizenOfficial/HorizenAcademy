@@ -114,7 +114,7 @@ Some criteria for a good Proof of Work in a decentralized blockchain aiming for 
 
 - *Independently Tunable Parameters*: Certain parameters of the problem to solve by the miners should be easy to adapt. One of those parameters is the target or difficulty we already talked about. By being able to tune this parameter depending on miner activity one can keep the block time constant.
 
-Let' take a look at the asymmetric property first. It means the task has to be computationally expensive to perform but easy to verify. After that, we will take a closer look at how a mining algorithm can be tuned through other parameters.
+Let' take a look at the asymmetric property first. It means the task has to be computationally expensive to perform but easy to verify. After that, we look at an example of how a mining algorithm can be tuned through other parameters.
 
 ### Computational Hardness
 
@@ -148,7 +148,7 @@ If the Tangle was to be adopted widely for micro-payments in the IOT sector, not
 
 ### Metrics to Assess Computational Hardness
 
-There are two different metrics to rate the difficulty of a computational task: time complexity and space complexity.
+There are two different metrics to rate the difficulty of a computational task: *time complexity* and *space complexity*.
 
 Time complexity refers to how many additional computations result from an increase in the input to a function. With infeasible time complexity, slight increases in input size will result in an exponential increase in time for the computation to finish.
 
@@ -160,61 +160,71 @@ Space complexity refers to how much additional memory is needed when the input t
 ![Space Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/space-complexity_D.jpg)
 ![Space Complexity in Computational Problems](/assets/post_files/technology/expert/2.4.2-pow/space-complexity_M.jpg)
 
-An algorithm designed for a Proof of Work has to make tradeoffs between the two. When we talked about CPU-bound algorithms, we meant those with a high level of time complexity. Memory-bound algorithms have a high space complexity. As you can imagine, these metrics don't work in a binary fashion, but have different shades of grey.
+An algorithm designed for a Proof of Work has to make tradeoffs between the two. When we talked about CPU-bound algorithms, we meant those with a high level of time complexity, memory-bound algorithms have a high level space complexity. These metrics don't work in a binary fashion, but have different shades of grey.
 
-### The Generalized Birthday Problem
+## The Birthday Problem
 
-Let us take a look at the parameters of a PoW scheme, that allow us to tune it. The most intuitive parameter to understand is the target. Because cryptographic hash functions map their inputs evenly distributed across the output range, lowering the threshold a hash has to be smaller than makes the task of finding an according input more difficult. The more hash power is on the network, the lower the average time until such an input is found. This means shorter block times. Lowering the target naturally increases the block time.
+Let us take a look at the parameters of a PoW scheme, that allow us to tune it. The most intuitive parameter to understand is the target or difficulty. Because cryptographic hash functions map their inputs evenly distributed across the output range, lowering the threshold a hash value has to meet makes the task of finding an input more difficult. The more hash power is on the network, the lower the average time until such an input is found. Without a difficulty adjustment this would result shorter block times. Lowering the target naturally increases the block time.
 
 There are much more complex PoW algorithms though. One of the more widely used ones is [*Equihash*](https://www.cryptolux.org/images/b/b9/Equihash.pdf), which is based on the *Generalized Birthday Problem* and used by the Horizen blockchain.
 
-++++ birthday problem
+![The Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_D.jpg)
+![The Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_M.jpg)
 
 The [*birthday problem*](\url{https://en.wikipedia.org/wiki/Birthday_problem}) describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as their is one more person than days in a leap year. However, with just 23 people in the group the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
 
-If you find this interesting or have a hard time believing it, you might also want to look at the closely related [*Pigeonhole Principle*](https://en.wikipedia.org/wiki/Pigeonhole_principle) the [*Hilbert's paradox of the Grand Hotel*](https://medium.com/i-math/hilberts-infinite-hotel-paradox-ca388533f05l) or [*The Traveling Salesman Problem*](https://en.wikipedia.org/wiki/Travelling_salesman_problem). Each can turn into a rabbit hole of its own.
+If you find this interesting you might also want to look at the closely related [*Pigeonhole Principle*](https://en.wikipedia.org/wiki/Pigeonhole_principle) the [*Hilbert's paradox of the Grand Hotel*](https://medium.com/i-math/hilberts-infinite-hotel-paradox-ca388533f05l) or [*The Traveling Salesman Problem*](https://en.wikipedia.org/wiki/Travelling_salesman_problem). Each can turn into a rabbit hole of its own.
 
-++++ birthday problem generalized
+### The Generalized Birthday Problem
 
-The [*generalized birthday problem*](https://en.wikipedia.org/wiki/Birthday_problem#The_generalized_birthday_problem) refers to the difficulty of calculating those probabilities in a more general context. We define a time period of *d* days, and ask how many people *n* do we need to have a 50% likelihood of a birthday coincidence. 
+![The Generalized Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_D.jpg)
+![The Generalized Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_M.jpg)
 
-++++ birthday problem gen md
+The [*generalized birthday problem*](https://en.wikipedia.org/wiki/Birthday_problem#The_generalized_birthday_problem) refers to the difficulty of calculating those probabilities in a more general context. We define a time period of *d* days, and ask how many people *n* do we need to have a 50% likelihood of a birthday coincidence.
 
-Next, we can increase the number of dimensions for the problem. Instead of looking at a group of *n* people, we could look at *k* groups of \\(n_k\\) group members. With a given set of values for *d*, *k* and \\(n_0, n_1,... n_k\\), what is the likelihood of a man and a woman sharing a birthday?
+### The Multi-Dimensional Generalized Birthday Problem
+
+![The Multi-Dimensional Generalized Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_D.jpg)
+![The Multi-Dimensional Generalized Birthday Problem](/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_M.jpg)
+
+Next, we can increase the number of dimensions for the problem. 
+
+You can see how the problem becomes more dimensional when you look at the function in the bottom-right corner of the graphics in this section. Calculating the probability *p* of a birthday coincidence is a function of one variable in the first case, namely the number of people *n*. For the generalized birthday problem the function is two-dimensional and depends on the amound of people *n* and the time period *d*.
+
+We can further increase the dimensionality of the problem by looking at *k* groups of \\(n_k\\) group members instead of a single group, for instance two groups of \\(n_m\\) men and \\(n_w\\) women. In this case the multi-dimensional birthday problem comes down to calculating the likelihood of a man and a woman sharing a birthday.
+
+### Wagner's Algorithm
 
 Starting from the generalized birthday problem, David Wagner devised an algorithm - the *Wagner's Algorithm* - to compute those probabilities for even more complex setting with *k* dimensions (groups of people) and *n*-bit settings (days). The algorithm [was found to be](https://pdfs.semanticscholar.org/06f4/507d9f584b544f96364cae2ad41e78e4035b.pdf) hard on time and space.
 
-The time and space complexity trade-off can be adjusted by the parameter *k*. This means, very loosely speaking, that if one uses the generalized birthday problem for a PoW algorithm, one can make it more CPU or memory intensive depending on the number of groups *k* a birthday collision is calculated for.
+The time and space complexity trade-off can be adjusted by the parameter *k*. This means, very loosely speaking, that if one uses the generalized birthday problem for a PoW algorithm, one can make it more CPU or memory intensive depending on the number of groups *k* a birthday collision is calculated for. To give you an idea: Horizen has implemented Equihash with the parameters *n*=200 and *k*=9.
 
-Horizen has implemented Equihash with *n*=200 and *k*=9.**???**
+### Other Computationally Hard Problems
 
-Some other examples of computationally hard problems used to create a Proof of Work include finding prime numbers and solving the traveling salesman problem. In Primecoin the PoW task is to find prime number chains e.g. *Cunningham chains* and *Bi-twin chains* where primes roughly double or follow a specific sequence. The [Cuckoo Cycle*] algorithm by Tromp et al. is based on graph theory. It comes down to the Traveling Salesman Problem and is implemented in Grin and æternity.
+Some other examples of computationally hard problems used to create a Proof of Work include finding prime numbers and solving the [Traveling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem). In Primecoin the PoW task is to find prime number chains e.g. *Cunningham chains* and *Bi-twin chains* where primes roughly double or follow a specific sequence. The [*Cuckoo Cycle*](https://hackernoon.com/wtf-is-cuckoo-cycle-pow-algorithm-that-attract-projects-like-cortex-and-grin-ad1ff96effa9) algorithm by Tromp et al. is based on graph theory. It comes down to the Traveling Salesman Problem and is implemented in Grin and æternity.
 
-Another interesting concept was presented with ProgPoW. Its algorithm is designed to match already available hardware to reverse the scenario that has played out in the past where the companies with the largest budget were able to bring specialized mining hardware for a given algorithm to market first.
-
-**TKKG: Include Link??? Check paragraph above for accuracy** https://medium.com/@ifdefelse/understanding-progpow-performance-and-tuning-d72713898db3
+Another interesting concept was presented with ProgPoW. Its algorithm is designed to match already available hardware to reverse the scenario that has played out in the past. Those companies with the largest budget were able to bring specialized mining hardware for a given algorithm to market first. In the case of ProgPoW the [algorithm was designed](https://medium.com/@ifdefelse/understanding-progpow-performance-and-tuning-d72713898db3) with existing harware in mind rendering adavantages in R&D budgets for large manufacturers irrelevant.
 
 
+## Incentives and Vulnerabilities
 
-### Incentives and Vulnerabilities
+Proof of Work in cryptocurrencies has an intricate but ingenious incentive system built-in. Miners are rewarded with the *block reward* which comprises the fixed *block subsidy* as well as the *transaction fees* attached to each transaction.
 
-Proof of Work in cryptocurrencies has an intricate but ingenious incentive system in place. Miners are rewarded with the *block reward* which comprises the *block subsidy* as well as the *transaction fees* attached to each transaction.
+On a high level, miners are rewarded with a ledger entry for spending real world resources in the form of electricity. PoW therefore builds a bridge between the digital and the real world.
 
-On a high level, miners are rewarded with a ledger entry for spending real world resources in the form of electricity in order to earn said ledger entries. PoW therefore builds a bridge between the digital and the real world.
+### 51% Attack
 
-But PoW also has some vulnerabilities. No system is unfailable. In our last article we looked at [consensus mechanisms in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in general. We learned that it is hard to achieve Byzantine Fault-Tolerance in the first place, let alone tolerating a large share of byzantine actors. Simply speaking byzantine behavior means random or malicious bahavior. Building a system that demonstrates *liveness*, as well as *safety* with more than one third of the network acting *byzantine* took many years. Proof of Work together with the *longest chain rule* make up the *Nakamoto consensus*. It can tolerate byzantine hash contributions of up to 49%.
+But PoW also has some vulnerabilities. No system is unfailable. In our last article, we looked at [consensus mechanisms in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in general. We learned that it is hard to achieve Byzantine Fault-Tolerance in the first place, let alone tolerating a large share of byzantine actors. Simply speaking, Byzantine behavior mostly refers to malicious bahavior. Building a working system with more than one third of the network acting Byzantine took many years. Proof of Work together with the *longest chain rule* make up the *Nakamoto consensus*. It can tolerate malicious hash contributions of up to 49%.
 
-**TKKG** 2f + 1 resilience. Incentive compatibility. Salfish mining, 25% attack. ref to mining.
-
-If an attacker controls the majority of hash rate he can reliably perform 51\% attacks. This means building a malicious chain faster, than the honest partition of the network. According to the longest chain rule, the honest and rational actors of the network will accept the malicious chain as valid, once it is broadcast. This allows the malicious actor to perform double spends.
+If an attacker controls the majority of hash rate he can reliably perform 51% attacks. This means creating blocks faster, than the honest partition of the network can. According to the longest chain rule, the honest and rational actors of the network will accept the malicious chain as valid, once it is broadcast. This allows the malicious actor to perform double spends.
 
 ![Double Spend Attack](/assets/post_files/technology/expert/2.4.2-pow/percent.gif)
 
- He spends coins in a transaction that is included in the honest chain. Later, he rewrites this part of the transaction history with his own blocks, which don't include his spending transaction. He is now in control of his founds again and spend them a second time - a double spend.
+The attacker spends coins in a transaction that is included in the honest chain. He then rewrites this part of the transaction history with his own blocks, which don't include his spending transaction. Once this sequence of blocks is broadcast and accepted by the other network participants he is in control of his coins again and can spend them a second time - a double spend.
 
-Horizen has a [mechanism in place](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) to make it significantly harder to perform such a 51\% attack. We introduced a block acceptance delay in relation to the amount of time the block has been withheld from the public network. This can be best described with a short example. 
+Horizen has a [mechanism in place](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) to make it significantly harder to perform such a 51% attack. We introduced a block acceptance delay in relation to the amount of time the block has been withheld from the public network. This can be best described with a short example:
 
-In the graphic above, the malicious chain was broadcast with a delay of 4 blocks. The delay is the amount of honest blocks mined on top of the last common block before the fork. The block acceptance delay modifies the longest chain rule. The malicious chain is not immediately recognized by the other nodes, just because it is longer. Instead, a penalty is calculated based on the delay *n*, using a delay function *DF*. Let's consider a rather simple delay function
+In the graphic above, the malicious chain was broadcast with a delay of 4 blocks (block 39 - 42). The delay is the amount of honest blocks mined on top of the last common block before the fork. The block acceptance delay modifies the longest chain rule. The malicious chain is not immediately recognized by the other nodes, just because it is longer. Instead, a penalty is calculated based on the delay *n*, using a delay function *DF*. Let's consider a rather simple delay function
 
 $$
 DF(n) = \frac{n}{2} (n+1)
@@ -222,20 +232,33 @@ $$
 
 For a 4 block delay, an additional 10 confirmations are required in order for the rest of the network to accept the fork. For a short delay of one block time, the delay function gives a penalty of one block - this situation turns out to be equivalent to the longest chain rule where an additional confirmation will break the tie between two blocks of the same height.
 
-But for long delays, e.g. 20 blocks, which would result in a reasonable confirmation time of 50 min, the penalty would incur an additional 252 blocks of confirmation before the malicious chain were to be considered valid. This makes 51% attacks and the resulting double spends much harder if not infeasible.
+For long delays, e.g. 20 blocks, the penalty would incur an additional 252 blocks of confirmation before the malicious chain were to be considered valid. Waiting for 20 confirmations would mean a reasonable confirmation time of 50 minutes. This makes 51% attacks and the resulting double spends much harder if not infeasible. In practice, there is a 4 block tolerance implemented on Horizen, so the delay function is calculated based on the actual delay minus four blocks.
 
-Another potential thread are [(D)DoS attacks] - (Distributed) Denial of Service Attacks - where a malicious actor tries to slow down or halt the network by sending a large number of requests to the network. Those requests would be transactions in the case of a blockchain facilitating a cryptocurrency. While DoS attacks can certainly harm the system in that they mess with the fee market, it doesn't effect the integrity of the ledger itself. And after all this is the highest priority. It doesn't make much sense for a rational actor to spend resources on a DoD attack (the attacker has to pay transaction fees as well!) if the only affect is a temporary slow down of the network.
+### DDos Attacks
 
-Lastly, PoW is inherently Sybil resistant. An entity can create as many identities or nodes on the network as they like, but without a substantial amount of computing power those nodes cannot effect the network. Therefore creating multiple identities offers no benefits over gathering hash power in a single mining node.
+Another potential thread are (Distributed) Denial of Service or [(D)DoS attacks]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}), where a malicious actor tries to slow down or halt the network by sending a large number of messages to the network with the sole purpose to limit its capacities. Those requests would be transactions in the case of a blockchain facilitating a cryptocurrency. While (D)DoS attacks can certainly harm the system in that they mess with the fee market, it doesn't effect the integrity of the ledger itself. After all, this is the highest priority. It doesn't make much sense for a rational actor to spend resources on a DoS attack (the attacker has to pay transaction fees as well!) if the only affect is a temporary slow down of the network.
 
+### Sybil Attacks
 
-### Summary
+Lastly, PoW is inherently Sybil-resistant. An entity can create as many identities or nodes on the network as they like, but without a substantial amount of computing power those nodes cannot effect the ledger integrity. Therefore creating multiple identities offers no benefits over gathering hash power in a single mining node.
 
+## Summary
 
+Let's recap this article before we move on:
 
+We started by explaining that Proof of Work is what gives the blockchain its immutability. Without this strong consensus mechanism, the blockchain was merely tamper-evident. PoW is a way of voting on a version of history with computational power.
 
+We continued by looking at the block creation process from gathering transactions, to finding a valid nonce that satisfies the current difficulty. We learned that the target or difficulty adjustment is a way to keep the block time constant in the face of changing hash power.
 
-A key takeaway from this article should be the following: You get **immutability** of data only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks, otherwise a blockchain is only **tamper-evident**. We will come back to this in protocol and consensus article.\\
+PoW can take many forms and one distinguishing factor is whether they are interactive or non-interactive. While the PoW applied to the block creation process is non-interactive and can be verified at any point in time, the mechanism used to verify the capability of nodes on the Horizen network is interactive and based on the responce time to a computational challenge.
+
+Next, we looked at the different criteria that define a "good" Proof of Work, the different types of computational hardness and what metrics can be used to measure them.
+
+We looked at the basis of the Equihash algorith which is not based on hashing the block header but finding a solutions to the Multi-Dimensional Generalized Birthday Problem.
+
+Lastly, we talked about some general vulnerabilities of distributed ledgers and how they are mitigated.
+
+The one key takeaway from this article should be the following: You get **immutability** of data on a blockchain only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks, otherwise a blockchain is only **tamper-evident**.
 
 
 [Equihash](https://blog.sigmaprime.io/zcash-theoretically-improving-mining-speeds.html)
