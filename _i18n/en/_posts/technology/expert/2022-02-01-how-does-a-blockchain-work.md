@@ -20,7 +20,7 @@ This chapter is by far the most extensive chapter in our Expert Section, but for
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">The Components of a Blockchain</h5>
+        <h5 class="intro-article-title">The Elements of a Blockchain</h5>
         <p class="mb-1">
             First, we will give you an overview of the concepts to come and try to build a logical connection between them with a high-level description of their purpose.
         </p>
