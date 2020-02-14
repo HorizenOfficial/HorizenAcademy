@@ -7,7 +7,6 @@ permalink: /technology/expert/the-components-of-a-blockchain/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 This article provides you with a general overview of what this chapter is all about and how the different topics **are related** to one another. It is a high level description not focused on details but on providing some context before each topic is covered on a granular level.

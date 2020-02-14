@@ -7,7 +7,7 @@ permalink: /technology/expert/generating-keys-and-addresses/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
+further_reads: [how_to_generate_your_very_own_bitcoin_private_key, how_to_create_a_bitcoin_wallet_address_from_a_private_key, bip-0039]
 ---
 
 When you install and set up a wallet on your phone or computer the first thing you will do is actually fund your wallet by transferring some crypto to your address. In this article we will take a look under the hood of your wallet to understand where your address is coming from and how it is related to your private key.
@@ -16,7 +16,7 @@ When you install and set up a wallet on your phone or computer the first thing y
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
 
 First a private key is randomly generated and in a second step a public key is calculated from it. Addresses are derived form a public key in two main steps: first by hashing the public key and second, by *Base58Check* encoding it.
- 
+
 If you have read [our last article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) you know that the security of any public-key cryptography (PKC) scheme mostly relies on one property: It should be easy to derive a public key from a private key, but it must be infeasible to reverse that operation and derive a private key from a given public key.
 
 With elliptic curve cryptography (ECC) this property is based on the *discrete log problem*, that refers to division on the elliptic curve being *computationally hard* while multiplication is easy. Deriving a public key from an address is also computationally hard, as you would have to find the *preimage* of a [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}), which means deriving an input from an output.

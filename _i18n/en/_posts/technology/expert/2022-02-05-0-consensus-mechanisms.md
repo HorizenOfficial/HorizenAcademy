@@ -7,7 +7,6 @@ permalink: /technology/expert/consensus-mechanisms/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 One of the great innovations introduced with blockchain was solving the Byzantine Generals Problem: coming to consensus in a setting with many unknown and potentially untrustworthy actors. *Consensus mechanisms* allow blockchains to achieve just that.

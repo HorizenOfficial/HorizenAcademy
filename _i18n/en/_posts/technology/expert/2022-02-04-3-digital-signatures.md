@@ -7,7 +7,6 @@ permalink: /technology/expert/digital-signatures/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 In the great scheme of things Public-Key Cryptography is used to verify ownership in cryptocurrencies. Somehow you need to be able to prove knowledge of a private key corresponding to an address without revealing any information about it. This is done through *digital signatures*.

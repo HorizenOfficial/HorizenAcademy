@@ -7,7 +7,6 @@ permalink: /technology/expert/consensus-in-distributed-systems/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 When you want to create a system for a global, censorship resistant, and digital money, there is no way around building it on a *distributed system*. Only this design allows you to build a strong system, without any central party being in control. *Distributed computing* is an area in *computer science* that specifically studies distributed systems. Although such distributed systems have many advantages, they also come with their very own challenges - one of them is reaching *consensus* among its participants.

@@ -7,7 +7,6 @@ permalink: /technology/expert/other-consensus-mechanisms/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 **TKKG** https://medium.com/@abhisharm/understanding-proof-of-stake-through-its-flaws-part-2-nothing-s-at-stake-8d12d826956c
@@ -15,7 +14,13 @@ How nothing at stake is addressed. Also read part 3.
 
 https://medium.com/@hugonguyen/proof-of-stake-the-wrong-engineering-mindset-15e641ab65a2 incorporate this.
 
-A blockchain shows it's strength when out in the wild, living on a permissionless, distributed network. The biggest challenge when designing such a multi-agent system is achieving *consensus* among its participants.
+
+
+
+
+
+
+A blockchain shows it's strength when out in the wild, living on a permissionless, distributed [peer-to-peer]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %}) network. The biggest challenge when designing such a multi-agent system is achieving *consensus* among its participants.
 
 > "All blockchains are fundamentally a deterministic state machine acted upon by transactions. Consensus is the process of agreeing on a deterministic order of transactions and filtering invalid transactions." - Dan Larimer
 

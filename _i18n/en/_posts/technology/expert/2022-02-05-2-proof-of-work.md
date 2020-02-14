@@ -8,7 +8,6 @@ topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
 further_reads: [equihash_paper, loaded_pow, understanding_progpow, zcash_theoretically_improving_mining_speeds]
-published: false
 ---
 
 *Proof of Work* (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).

@@ -7,7 +7,7 @@ permalink: /technology/expert/hash-functions/
 topic: expert
 level: advanced
 chapter: "How Does a Blockchain Work?"
-published: false
+further_reads: [the_state_of_hashing_algorithms]
 ---
 
 The verification of data is an important aspect when building a [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.

@@ -7,7 +7,6 @@ permalink: /technology/expert/blockchain-governance/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-published: false
 ---
 
 **TKKG** Add little section on where funding comes from
