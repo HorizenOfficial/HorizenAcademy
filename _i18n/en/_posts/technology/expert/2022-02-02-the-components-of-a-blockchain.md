@@ -51,14 +51,14 @@ When a transaction is broadcast to the network every full node and miner verifie
 
 ## Consensus Mechanisms
 
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %})
+The [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) of a blockchain ensures that all participants maintain a consistent record of transactions. With every block the peers agree on a common version of history. There are different ways to achieve consensus in distributed networks and this subchapter covers the various approaches.
 
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_M.jpg)
 
 ### Consensus in Distributed Systems
 
-First, we look at the challenges of achieving [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}).
+First, we look at the challenges of achieving [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) in general.
 
 The consensus mechanism has to tolerate malicious actors and it needs to handle a network providing unreliable communication. We define liveness as the property of the system not stalling and safety as all nodes agreeing on new blocks. Lastly, we show why Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic.
 
@@ -66,7 +66,9 @@ The consensus mechanism has to tolerate malicious actors and it needs to handle 
 
 ### Proof of Work
 
-In this article, we take an in-depth look at [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) - the consensus and *Sybil-resistance* mechanism used in Horizen, Bitcoin and most other public blockchains. 
+In this article, we take an in-depth look at [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW) - the consensus and *Sybil-resistance* mechanism used in Horizen, Bitcoin and most other public blockchains.
+
+We show how PoW creates a bridge between the physical and the real world and how the block creation process works. We also look at different mining algorithms and show what they have in common.
 
 ![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
