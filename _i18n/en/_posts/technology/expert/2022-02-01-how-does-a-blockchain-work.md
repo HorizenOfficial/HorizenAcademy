@@ -15,7 +15,7 @@ This chapter is by far the most extensive chapter in our Expert Section, but for
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-02-the-components-of-a-blockchain %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-02-the-elements-of-a-blockchain %}">
             <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/elements_of_blockchain.svg" alt="Blockchain Data" />
         </a>
     </div>
@@ -25,7 +25,7 @@ This chapter is by far the most extensive chapter in our Expert Section, but for
             First, we will give you an overview of the concepts to come and try to build a logical connection between them with a high-level description of their purpose.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-02-the-components-of-a-blockchain %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-02-the-elements-of-a-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>

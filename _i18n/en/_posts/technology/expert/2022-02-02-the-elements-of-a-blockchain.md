@@ -1,9 +1,9 @@
 ---
 layout: post
 type: article
-title: "The Components of a Blockchain"
+title: "The Elements of a Blockchain"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
-permalink: /technology/expert/the-components-of-a-blockchain/
+permalink: /technology/expert/the-elements-of-a-blockchain/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
@@ -62,7 +62,7 @@ First, we look at the challenges of achieving [consensus in distributed systems]
 
 The consensus mechanism has to tolerate malicious actors and it needs to handle a network providing unreliable communication. We define liveness as the property of the system not stalling and safety as all nodes agreeing on new blocks. Lastly, we show why Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic.
 
-![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-components-of-a-blockchain/consensus-in-distributed-systems.png)
+![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems.png)
 
 ### Proof of Work
 
