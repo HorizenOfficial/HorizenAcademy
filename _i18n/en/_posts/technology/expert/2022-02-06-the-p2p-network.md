@@ -7,9 +7,12 @@ permalink: /technology/expert/the-p2p-network/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+further_reads: [why_bittorrent_mattered, anonymity_properties_of_the_bitcoin_P2P_network, dandelion_paper, bitcoin_developer_reference]
 ---
 
-There are many ways to classify and differentiate between blockchains. One of them is to differentiate between public and permissioned blockchains. Permissioned blockchains are meant for a defined group of people, often times a consortium of companies that wants to share a consistent database. Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the distributed *Peer-to-Peer* (P2P) network is highly resilient.
+There are many ways to classify and differentiate between blockchains. One of them is to differentiate between public and permissioned blockchains. Permissioned blockchains are meant for a defined group of people, often times a consortium of companies that wants to share a consistent database. 
+
+Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the distributed *Peer-to-Peer* (P2P) network is highly resilient.
 
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
@@ -135,76 +138,78 @@ There are three broadcasting mechanisms we want to introduce you to in this arti
 
 ### Flooding
 
-Lets consider a node creating a new transaction: it wants to broadcast it to the network so it is included in the next block. In a first step, it sends it to all its peers. In the flooding model, each of those receiving nodes forwards this transaction with a constant time delay. Once forwarded a message travels along an edge with a deterministic delay, this means the longer the edge, the greater the time delay. A message sent from New Zealand to Austria takes longer than a message sent from SF to San Diego. Although information travels with the speed of light, over long distances these differences becom noticeable.
+Lets consider a node creating a new transaction: it wants to broadcast it to the network so it is included in the next block. In a first step, it sends it to all its peers. In the flooding model, each of those receiving nodes forwards this transaction with a constant time delay. Once forwarded a message travels along an edge with a deterministic delay. This means the longer the edge, the greater the time delay. A message sent from New Zealand to Austria takes longer than a message sent from SF to San Diego. Although information travels with the speed of light, over long distances these differences become noticeable.
 
-What all this implies, is that flooding produces the most predictable spreading pattern. An adversarial node will receive all messages from a given node in a deterministic timing pattern. Knowledge of these timing patterns together with (parts of) the graph structure allows a Byzantine actor to link IP addresses to public keys. This is undesirable.
+What all this implies, is that flooding produces the most predictable spreading pattern. An adversarial node will receive all messages from a given node in a deterministic timing pattern. Knowledge of these timing patterns together with knowledge of the graph structure allows a Byzantine actor to link IP addresses to public keys - a potential attack vector.
 
 ### Diffusion
 
 Diffusion is a refined version of flooding. The time it takes a message to travel along an edge is still deterministic - physics work either way - but the transmission delay is random. This means a node that receives a message doesn't forward it to all its peers simultaneously at a constant speed but adds random delays to it.
 
-Currently diffusion is used in most public blockchains. In 2015 BTC changed the propagation mechanism from trickle propagation with a fixed 200 ms delay to diffusion with random delay.
+Currently, diffusion is used in most public blockchains. In 2015 BTC changed the propagation mechanism from a propagation with a fixed 200 ms delay to diffusion with random delays.
 
-While diffusion makes it harder to derive information from the timing pattern of messages it still follows a simple intuition: If you imagine a very large graph with thousands of nodes and the source of a message at the center, the message still spreads point-symmetric around its origin. With sophisticated chain analysis and a realistically rather static than dynamic graph topology, an adversary can still derive much information from timing and spreading patterns of messages. This holds especially true for nodes that create many transctions and therefore produce much data to analyse.
+While diffusion makes it harder to derive information from the timing pattern of messages it still follows a simple intuition: If you imagine a very large graph with thousands of nodes and the source of a message at the center, the message still spreads point-symmetric around its origin. With sophisticated chain analysis tools and a realistically rather static than dynamic graph topology, an adversary can derive at least some information from timing and spreading patterns of messages. This holds especially true for nodes that create a large number of transctions and therefore a lot of data to analyze.
 
 A logical thing for one of these active nodes would be to use a proxy to broadcast messages - *diffusion by proxy*. But there is another iteration of broadcasting mechanisms: welcome Dandelion.
 
 ### Dandelion
 
-Instead of using a single node as a proxy to forward messages, in diffusion spreading happens in two phases: the *anonymity phase* and the *spreading phase*.
+Instead of using a single node as a proxy to forward messages, in Dandelion spreading happens in two phases: the *anonymity phase* and the *spreading phase*.
 
-During the anonymity phase a message is forwarded via a randomly-selected line. Each relayer passes the message to exactly one of its randomly selected peers for a random number of hops. When the anonymity phase is over and the spreading phase beginns, the message is broadcast to the entire network using diffusion.
+During the anonymity phase a message is forwarded via a randomly-selected line on the network graph. Each relayer passes the message to exactly one of its randomly selected peers. The amount of hops in the anonymity phase is also random. When the anonymity phase is over and the spreading phase beginns, the message is broadcast to the entire network using diffusion.
 
 > "The core idea behind our proposed networking stack is moving-target defense: we harness randomness in both the graph structure and the spreading protocol, thus making it difficult for adversaries to infer the source of a transaction. The key is to do so without harming latency and fairness guarantees." - Viswanath, Redesigning P2P Networking Stack of Cryptocurrencies for Anonymity.
-Dandelion is implemented in Beam and Grin, two different implementations of the MimbleWimble protocol.
 
-### Privacy and Security
+Dandelion is implemented in Beam and Grin, two different implementations of the [MimbleWimble](https://github.com/mimblewimble/docs/wiki/A-Brief-History-of-MimbleWimble-White-Paper) protocol.
 
-Most privacy preserving techniques are not effective, if messages can be linked to IP address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to ip addresses. [[1]](#sources) To quantify the *anonymity* a spreading mechanism provides two metrics can be applied.
+## Privacy and Security
+
+Most privacy preserving techniques are not effective, if messages can be linked to IP address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to IP addresses. [[1]](#sources) In order to quantify the level of *anonymity* a spreading mechanism provides two metrics can be applied:
 
 > *"Precision and recall are natural performance metrics. Recall is simply the probability of detection, a common anonymity metric that captures completeness of the estimator, whereas precision captures the exactness."* - [Bojja, Fanti, Viswanath - Dandelion: Redesigning the Bitcoin Network for Anonymity](https://arxiv.org/pdf/1701.04439.pdf)
 
-To assess the security and privacy properties of the broadcasting mechanism, one assumes there are two types of nodes: honest ones and colluding, adversarial ones trying to deanonymize users. An attacker can apply two different techniques to deanonymize users.
+To assess the security and privacy properties of the broadcasting mechanism, one assumes there are two types of nodes: honest ones and colluding, adversarial ones trying to deanonymize users. An attacker can apply two different techniques to deanonymize users: *eavesdropping* or the *spy-based approach*:
 
 ![Spy vs. Eavesdropper](/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_D.jpg)
 ![Spy vs. Eavesdropper](/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_M.jpg)
 
-The spy-based adversary corrupts a fraction of nodes...
+The eavesdropper connects to as many nodes as possible using a highly performant node. This node can establish several connections to a single honest server, with each connection coming from a different IP address. The honest node doesn't realize that more than one of its connections originates from the same node. The eavesdropper node listens to all relayed messages on the network without relaying any content itself, hence the name. The attacker running the eavesdropper node thus gets information about the network topology and learns its graph over time.
 
-The eavesdropper connects to as many nodes as possible and...
+The spy-based adversary corrupts a fraction of nodes and observes the timetamps on brodcast messages.
 
-### Incentivizing Infrastructure
+> "This is different from the eavesdropper adversary because the eavesdropper only observes delayed timestamps, and it does so for all nodes, including the source [of the message]. Precise analysis of the spy-based adversary has not appeared in the literature."  - [Giulia Fanti, Pramod Viswanath, Anonymity Properties of the Bitcoin P2P Network](https://arxiv.org/pdf/1703.08761.pdf)
 
-Most blockchains provide little incentive to run nodes on the network. In the early days of Bitcoin, most nodes where also mining and therefore regularly collected the block reward. Since mining has become a highly competitive business few nodes are actually mining. Another good reason to run a node is to safely accept payments. Most wallets are actually light nodes. They connect to a full node in order to "speak" with the blockchain. This means they have to trust the node operator to feed them truthful information.
-By running a full node yourself, you don't have to trust anybody - you can verify. Still, few people transact regularly enough to run a full node themselves or the technical barrier to entry is to high.
+## Incentivizing Infrastructure
+
+Most blockchains provide little to no incentive to run nodes on the network. In the early days of Bitcoin, most nodes where also mining and therefore regularly collected the block reward. Since mining has become a highly competitive business few nodes compared to the total count are mining today.
+
+Another good reason to run a node is to safely accept payments. Most wallets are actually light nodes. They connect to a full node in order to "speak" with the blockchain. This means they have to trust the full node operator to feed them truthful information.
+By running a full node yourself, you don't have to trust anybody - you can verify for yourself. Still, few people transact regularly enough to run a full node themselves and the technical barrier to entry is quite high.
 
 #### Secure and Super Nodes
 
-Horizen decided to incentivize node operators for facilitating the infrastructure of its ecosystem. Rewarding node operators seems just fair when you consider that setting up a node up as well as maintaining it takes some time, and running it on a VPS comes at an additional cost.
+Horizen decided to incentivize node operators for facilitating the infrastructure of its ecosystem. Rewarding node operators seems fair when you consider that setting up a node up as well as maintaining it takes some time, and running it on a VPS comes at a cost.
+
 Secure and Super Node operators receive a share of the mining reward that would usually go to the miners entirely. Each node class is incentivized with 10% of the total block subsidy.
-Because Horizen wants not just many, but capable and robust nodes, a node has to fulfull a set of minimum requirements in order to be eligible to receive the node rewards. Each node needs a valid TLS certificate, needs to be up and running for at least 92% of time and meet certain requirements regarding memory and computational power. You can find out more about the requirements for [Secure Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872258/Secure+Node+Criteria+and+Reward+Eligibility) and [Super Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872071/Super+Node+Criteria+and+Reward+Eligibility) here.
 
-Those computational requirements are verified using an interactive challenge-response protocol - a type of Proof of Work if you will. Nodes receive computational challenges on a regular basis and by monitoring the time it takes them to respond to these challenges, one can derive an estimate on their capabilities. Nodes need to meet a certain target with their response time, otherwise they are not eligible for node reward payments.
+Because Horizen wants not just many, but also capable and robust nodes, a node has to fulfull a set of minimum requirements in order to be eligible to receive the node rewards. Each node needs a valid TLS certificate, needs to be up and running for at least 92% of time and meet certain requirements regarding memory and computational power. You can find out more about the requirements for [Secure Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872258/Secure+Node+Criteria+and+Reward+Eligibility) and [Super Nodes](https://horizenofficial.atlassian.net/wiki/spaces/ZEN/pages/136872071/Super+Node+Criteria+and+Reward+Eligibility) here.
 
-Secure and Super Nodes are not just a means to create some sort of *masternodes*, they will be crucial for our [Sidechain model]. Each node will be able to choose if it wants to support sidechains, and if so, which ones. We expect to see some interesting economic models with dApps build on our sidechains. dApps should incentivize node operators to support their sidechain, just like they would usually pay for the infrastructure their service is build on in one way or another.
+Those computational requirements are verified using an interactive challenge-response protocol - a type of Proof of Work if you will. Nodes receive computational challenges on a regular basis and by monitoring the time it takes them to respond to these challenges, one can derive an estimate on their capabilities. Nodes need to meet a certain target with their response time, otherwise they are not considered eligible for node reward payments.
 
-### Summary
+Secure and Super Nodes are not just a means to create some sort of *masternodes*, they will be crucial for our [Sidechain model](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf). Node operators will be able to choose whether they want to support sidechains, and if so, which ones. We expect to see some interesting economic models with dApps build on our sidechains. dApps should incentivize node operators to support their sidechain, just like they would usually pay for the infrastructure their service is build on.
 
-graph of nodes
-purpose communication
-properties resilient, scales, although not the most efficient.
-peer discovery
-messages containers used for different purpose, can be empty or up to 32mb of payload.
-broadcasting mechanism
-incentives, secure and super
+## Summary
+
+Let's recap what we learned in this article: two compelling reasons for running a blockchain on a public P2P network are the the low cost of bootstrapping the system and the high level of resilience such a distributed infrastructure can offer.
+
+The P2P network can be represented with a graph, where nodes comprise the vertices of the graph and the connections between peers are the edges connecting nodes. The main purpose of the network is to facilitate the communication between the different network participants.
+
+While other distributed infrastructures are often optimized for content discovery as in the case of BitTorrent used for file sharing, P2P networks used for blockchains are optimized with regards to peer-discovery because all nodes store the same content anyways.
+
+The broadcasting mechanism used to distribute messages across the network affects the level of privacy a node experiences. When attackers are able to link public keys to their originating IP addresses this opens the door to various attack vectors. We talked about flooding where messages are forwarded with a constant time delay, diffusion, where the time delay is random and Dandelion, where broadcasting happens in two stages: the anonymity phase and the spreading phase.
+
+Lastly, we explained why we incentivize node operators on the Horizen network and to what conditions these incentives are tied.
 
 ### Sources
 
 [1]: A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In *Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security*, pages 15–29. ACM, 2014.
-
-\subsubsection*{FR}
-\url{https://bitcoin.org/en/developer-reference#p2p-network}
-\url{https://en.wikipedia.org/wiki/CAP_theorem}
-\url{https://arxiv.org/pdf/1701.04439.pdf} dandelion
-
-Simon Morris wrote [a very interesting and insightful piece](https://medium.com/@simonhmorris/why-bittorrent-mattered-bittorrent-lessons-for-crypto-1-of-4-fa3c6fcef488)
