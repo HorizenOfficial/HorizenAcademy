@@ -212,4 +212,4 @@ Lastly, we explained why we incentivize node operators on the Horizen network an
 
 ### Sources
 
-[1]: A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In *Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security*, pages 15–29. ACM, 2014.
+[1]: A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In "*Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security*", pages 15–29. ACM, 2014.

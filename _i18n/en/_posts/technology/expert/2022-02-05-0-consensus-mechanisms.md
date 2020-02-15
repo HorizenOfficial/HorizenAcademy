@@ -10,7 +10,7 @@ chapter: "How Does a Blockchain Work?"
 ---
 
 One of the great innovations introduced with blockchain was solving the Byzantine Generals Problem: coming to consensus in a setting with many unknown and potentially untrustworthy actors. *Consensus mechanisms* allow blockchains to achieve just that.
-Because we want to take a detailed look at the two most researched ways of achieving consensus, we split this article into three: 
+Because we want to take a detailed look at the two most researched ways of achieving consensus, we split this topic into two articles: 
 
 <div class="row mt-5">
     <div class="col-md-3">
@@ -42,23 +42,6 @@ Because we want to take a detailed look at the two most researched ways of achie
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}">Read Article</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %}">
-            <img src="/assets/post_files/technology/expert/2.4.0-consensus/other.png" alt="Other Consensus Mechanisms" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Other Consensus Mechanisms</h5>
-        <p class="mb-1">
-            There have been many attempts at building other consensus mechanisms. Some of them are highly specialized while others can be understood as slight modifications of established mechanisms. We take a look at some of the proposed alternatives to PoW in this third part of the chapter.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %}">Read Article</a>
         </p>
     </div>
 </div>
