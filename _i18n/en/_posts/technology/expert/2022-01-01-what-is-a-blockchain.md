@@ -21,7 +21,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
     <div class="col-md-9">
         <h5 class="intro-article-title">Blockchain as a Data Structure</h5>
         <p class="mb-1">
-            First, from a computer scientists perspective looking at blockchain as a data structure. How does a blockchain compare to other data structures? How is data stored in a blockchain? What special properties does it have to offer?
+            First, from a computer scientist's perspective looking at blockchain as a data structure. How does a blockchain compare to other data structures? How is data stored in a blockchain? What special properties does it have to offer?
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}">Read Article</a>

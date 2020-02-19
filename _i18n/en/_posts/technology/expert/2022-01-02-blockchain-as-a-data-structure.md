@@ -47,7 +47,7 @@ Each node also contains a *pointer* to the next node. The *pointer* tells your c
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
 ![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg)
 
-When searching for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
+When searching for a piece of data, your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, then go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
 
 Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access.
 
@@ -61,7 +61,7 @@ A hash table is useful when you need to store many related data elements, like i
 
 The hash functions used for hash tables are usually not *collision-resistant*. This means two *keys* might produce the same hash and would consequently be mapped to the same bucket - that's why the name bucket was chosen in the first place.
 
-To store several keys within a single bucket a linked list within the hash table is used. In the example below bucket 152 stores a pointer to Alice's data in the first node, which in turn points to the second node containing Dave's data.
+In order to store several keys within a single bucket, a linked list within the hash table is used. In the example below bucket 152 stores a pointer to Alice's data in the first node, which in turn points to the second node containing Dave's data.
 
 If the hash table is well-dimensioned, the *cost* (or the number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes it convenient for systems that have to store large amounts of data and access them repeatedly.
 
@@ -74,7 +74,7 @@ The blockchain is a rather sophisticated data structure, made up of many sub-str
 
 #### The Blockchain
 
-Blockchain organizes data by splitting it into subsets, referred to as *blocks*. Blocks are similar to the nodes of a linked list. Each block contains several elements. The elements of a block are generally separated into the *block header* and its transactions. While the transactions in a block account for most of the data; the block header contains important metadata about each block such as a timestamp and *block height*. 
+Blockchain organizes data by splitting it into subsets, referred to as *blocks*. Blocks are similar to the nodes of a linked list. Each block contains several elements. The elements of a block are generally separated into the *block header* and its transactions. While the transactions in a block account for most of the data; the block header contains important metadata about each block, such as a timestamp and *block height*. 
 
 The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper-evident* whereas the *pointers* in a linked list can be changed at any time without affecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append-only* data structure where new data can only be added with new blocks.
 
@@ -90,7 +90,7 @@ The secured links are constantly checked for validity. If you were to insert a m
 
 Each new block built on top of an existing block is called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult because you have to recreate additional valid references.. Block 2 in the graphic below has one confirmation. You would have to recreate a single valid reference to tamper with the data of Block 2. You also have to recreate a valid reference with each new confirmation. The older the block, the more certain you can be that no changes to the block will ever occur.
 
-It is important to note that it is not the data structure that makes data on the blockchain immutable. The data alone is *tamper-evident* only. Changes are easy to detect. here is no *immutability* if there are no strong consensus rules in place and a sufficiently large number of nodes on the network. The incentives need to be structured so the majority of participants will follow the *protocol* and reject invalid blocks.
+It is important to note that it is not the data structure that makes data on the blockchain immutable. The data alone is *tamper-evident* only. Changes are easy to detect. There is no *immutability* if there are no strong consensus rules in place and a sufficiently large number of nodes on the network. The incentives need to be structured so the majority of participants will follow the *protocol* and reject invalid blocks.
 
 We will come back to this relationship between the data structure, the [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) and the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) in later articles. The interworking of these parts is what makes the blockchain a powerful tool for building trustless digital money.
 
@@ -100,7 +100,7 @@ Let's take a look at the properties that a blockchain offers before we take a cl
 
 #### Current Shortcomings
 
-It is appropriate to issue certain caveats first. The development of a blockchain is stricter and slower compared to traditional databases. A bug that corrupts the integrity of data makes the entire construction useless, hence development must be done very carefully. In a centralized setting, a bug might be easy to fix, but in a distributed environment without a central authority this becomes very difficult.
+It is appropriate to issue certain caveats first. The development of a blockchain is stricter and slower compared to traditional databases. A bug that corrupts the integrity of data makes the entire construction useless, hence development must be done very carefully. In a centralized setting, a bug might be easy to fix, but in a distributed environment without a central authority this becomes difficult.
 
 Second, incentive design is an integral part of building a blockchain. There is always a cost associated with adding data to a blockchain. This cost must be high enough to prevent large amounts of useless data being added, but at the same time, it needs to be low enough to not become prohibitive. Once deployed, fixing is not easily done for the same reason as above.
 
@@ -108,9 +108,9 @@ Maintaining a blockchain is also orders of magnitude more expensive than a tradi
 
 #### Benefits of Using Blockchain
 
-All of this overhead can only be justified through utility. Having a global money, a predictable inflation schedule and trustless transactions without central control and single points of failure is arguably enough utility to use a blockchain for this purpose. For many other use cases, time will tell if blockchain poses a suitable solution. Just as with the immutability attribute, it's important to note that the current shortcomings of public blockchains result from being run in a distributed fashion, rather than the data structure. While a high level of redundancy makes the data secure, it is inefficient by definition.
+All of this overhead can only be justified through utility. Having a global money supply, a predictable inflation schedule, and trustless transactions without central control or single points of failure, is arguably enough utility to use a blockchain. For many other use cases, time will tell if blockchain poses a suitable solution. Just as with the immutability attribute, it's important to note that the current shortcomings of public blockchains result from being run in a distributed fashion, rather than the data structure. While a high level of redundancy makes the data secure, it is inefficient by definition.
 
-In turn, you can get some special properties with a blockchain, that if needed for the specific use case make it invaluable. The main factor distinguishing a blockchain from a normal database is that there are specific rules about how to add data to the database. This set of rules, or *protocol*, can achieve the following traits:
+In turn, you can get some invaluable special properties with a blockchain.The main factor distinguishing a blockchain from a normal database is that there are specific rules about how to add data to the database. This set of rules, or *protocol*, can achieve the following traits:
 
 - *Consistency*: Newly added data cannot conflict with data already in the database.
 - *Tamper Evidence*: Append only data structure that makes it immediately apparent if data has been changed. Coupled with a strong consensus mechanism that incentivizes rejection of invalid blocks this results in immutability.
@@ -191,7 +191,7 @@ Second, to understand the *ownable* part of the data on a blockchain one needs t
 
 ### Summary
 
-The blockchain in itself is a data structure that stores transactions. It is similar to a linked list in that the data is split into containers - the blocks. Each block is connected with its predecessor with a cryptographically secured reference. This makes the data structure tamper-evident, changes to old blocks are easy to detect and dismissed. Development and maintenance of a public blockchain are expansive but certain use cases such as digital money can justify this overhead.
+The blockchain in itself is a data structure that stores transactions. It is similar to a linked list in that the data is split into containers - the blocks. Each block is connected with its predecessor with a cryptographically secured reference. This makes the data structure tamper-evident, changes to old blocks are easy to detect and dismissed. Development and maintenance of a public blockchain are expensive but certain use cases such as digital money can justify this overhead.
 
 A block consists of a header, and the transactions contained. Inside the block, a Merkle tree is used to create a 256 bit summary of all transactions, the Merkle root, which is included in the block header.
 
