@@ -465,6 +465,10 @@ $(function () {
         });
     }
 
+    $(".js-Clickable[data-href]").click(function (e) {
+        e.preventDefault();
+        window.location.href = $(this).data("href");
+    });
 
     // Technology lading page
     if ($("#page-technology").length) {
