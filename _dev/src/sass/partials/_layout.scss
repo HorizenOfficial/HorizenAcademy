@@ -353,7 +353,7 @@ button.btn-close {
     }
     .one-level-topic {
       .topic {
-        padding: 6px 10px;
+        padding: 6px 28px 6px 10px;
         text-align: left;
       }
     }
@@ -375,13 +375,13 @@ button.btn-close {
         top: 0;
         right: 0;
         display: block;
-        height: 36px;
-        width: 36px;
+        height: 100%;
+        width: 26px;
         img {
           display: inline-block;
           position: absolute;
-          left: 13px;
-          top: 13px;
+          top: calc(50% - 4px);
+          right: 7px;
           transition: transform 500ms ease, opacity 500ms ease;
           width: 13px;
           max-width: none;
@@ -497,6 +497,7 @@ button.btn-close {
       }
       .chapter-articles {
         padding-left: 16px;
+        padding-right: 8px;
         a {
           display: block;
           padding: 8px 0;
