@@ -100,7 +100,7 @@ Let's take a look at the properties that a blockchain offers before we take a cl
 
 #### Current Shortcomings
 
-It is appropriate to issue certain caveats first. The development of a blockchain is stricter and slower compared to traditional databases. A bug that corrupts the integrity of data makes the entire construction useless, hence development must be done very carefully. In a centralized setting, a bug might be easy to fix, but in a distributed environment without a central authority this becomes very difficult.
+It is appropriate to issue certain caveats first. The development of a blockchain is stricter and slower compared to traditional databases. A bug that corrupts the integrity of data makes the entire construction useless, hence development must be done very carefully. In a centralized setting, a bug might be easy to fix, but in a distributed environment without a central authority this becomes difficult.
 
 Second, incentive design is an integral part of building a blockchain. There is always a cost associated with adding data to a blockchain. This cost must be high enough to prevent large amounts of useless data being added, but at the same time, it needs to be low enough to not become prohibitive. Once deployed, fixing is not easily done for the same reason as above.
 
