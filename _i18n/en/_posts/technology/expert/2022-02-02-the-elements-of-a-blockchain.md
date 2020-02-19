@@ -26,6 +26,9 @@ Other key properties are being irreversible one-way functions, being pseudo rand
 
 A major building block of digital money - as the name cryptocurrency suggests - is cryptography: namely [public-key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}). While it can be used to secure the exchange of sensitive information through encryption it is also the basis for establishing ownership in the digital realm. Without a concept of ownership digital money would be useless.
 
+![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_D.jpg)
+![Asymmetric](/assets/post_files/technology/beginner/identity-in-blockchain/asymmetric_M.jpg)
+
 ### Elliptic Curve Cryptography
 
 There are many different public-key cryptography schemes and in blockchains [elliptic curve cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) (ECC) is dominant. Cryptography mostly relies on one-way functions and multiplication on an elliptic curve is the second one-way function we introduce after the previously explained hash functions. We show how this special type of *discrete math* works and why it is a well suited tool to build a concept of ownership on a distributed peer-to-peer network.
@@ -47,7 +50,8 @@ Anyone can create a raw transaction spending someone else's money, but in order 
 
 When a transaction is broadcast to the network every full node and miner verifies it based on the *message*, public key or address, and signature. The result of the verification is a binary output: either the signature is valid or invalid. The verifier does not lern anything about the private key used to create the signature in this process.
 
-![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature.png)
+![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
+![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
 
 ## Consensus Mechanisms
 
@@ -62,7 +66,7 @@ First, we look at the challenges of achieving [consensus in distributed systems]
 
 The consensus mechanism has to tolerate malicious actors and it needs to handle a network providing unreliable communication. We define liveness as the property of the system not stalling and safety as all nodes agreeing on new blocks. Lastly, we show why Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic.
 
-![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems.png)
+![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_D.png)
 
 ### Proof of Work
 

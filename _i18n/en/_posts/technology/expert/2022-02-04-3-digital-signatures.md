@@ -13,7 +13,8 @@ In the great scheme of things Public-Key Cryptography is used to verify ownershi
 
 To create a digital signature one uses a *message*, in most cases a transaction, to be signed and the private key. The verifier uses the message, the public key and the digital signature as an input to the verification algorithm which produces a binary output: either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction based on this concept.
 
-![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature.png)
+![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
+![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
 
 While this mechanism is usually treated as a blackbox, we will go into detail on the inner workings of this cryptographic method in this article of the Horizen Academy. Before we get into the nitty gritty part, that requires some mathematics to be explained properly we want to repeat a convention we already introduced in our previous articles on elliptic curve cryptography. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with "Generating the Signature".
 
