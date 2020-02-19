@@ -7,7 +7,7 @@ permalink: /technology/expert/proof-of-work/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-further_reads: [equihash_paper, loaded_pow, understanding_progpow, zcash_theoretically_improving_mining_speeds]
+further_reads: [pow_is_efficient, equihash_paper, loaded_pow, understanding_progpow, zcash_theoretically_improving_mining_speeds]
 ---
 
 *Proof of Work* (PoW) is something that has been known for millennia, but wasn't called that way for the longest time. Andreas Antonopolous, one of Bitcoins greatest advocates, [tells this story best](https://youtu.be/rsLrJp6cLf4?t=152).
@@ -192,7 +192,7 @@ Another interesting concept was presented with ProgPoW. Its algorithm is designe
 
 Proof of Work in cryptocurrencies has an intricate but ingenious incentive system built-in. Miners are rewarded with the *block reward* which comprises the fixed *block subsidy* as well as the *transaction fees* attached to each transaction.
 
-On a high level, miners are rewarded with a ledger entry for spending real world resources in the form of electricity. PoW therefore builds a bridge between the digital and the real world.
+On a high level, miners are rewarded with a ledger entry for spending real world resources in the form of electricity. PoW therefore builds a bridge between the digital and the real world. In case you are worried about the energy consumption of PoW blockchains, [this article](https://medium.com/@danhedl/pow-is-efficient-aa3d442754d3) is a must read. Dan Held addresses the topic brilliantly, and we'd like to refer to it because covering it in this piece would blow the scop of the article.
 
 ### 51% Attack
 
