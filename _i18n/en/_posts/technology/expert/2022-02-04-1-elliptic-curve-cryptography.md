@@ -31,7 +31,6 @@ With PKC schemes like RSA, using modular arithmetic, the security is based on th
 
 RSA and its modular-arithmetic-based friends are still important today, and are often used alongside ECC. The mathematics behind RSA can be easily explained and are widely understood. Rough implementations can be build rather easily.
 
-++++ **TODO** fix RSA graphics. "Public" and "D".
 ![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
 ![RSA](/assets/post_files/technology/expert/2.3.1-ecc/rsa_M.jpg)
 

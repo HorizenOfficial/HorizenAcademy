@@ -147,7 +147,8 @@ The challenge of handling Byzantine actors is widely researched. It is referred 
 
 The result is less than a third of all nodes *n*: \\(\frac{(n-1)}{3}\\).
 
-![Calculating the Maximum Number of Byzantine Actors](/assets/post_files/technology/expert/2.4.1-distributed-consensus/TODO-maximum-byzantine-actors.png)
+![Calculating the Maximum Number of Byzantine Actors](/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_D.jpg)
+![Calculating the Maximum Number of Byzantine Actors](/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_M.jpg)
 
 The argumentation for getting this result is straight-forward:
 
