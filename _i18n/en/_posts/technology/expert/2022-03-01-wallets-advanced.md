@@ -16,7 +16,7 @@ In case this is completely new to you, please take a look at the Beginner or Adv
 
 In this article, we want to introduced some of the more advanced technical concepts that are applied in modern wallets. First we will show you how your mnemonic phrase is generated and how it is related to your actual private key. Depending on the wallet implementation, the process for generating your address from a private key looks slightly different. We also look at multi signature schemes, where more than one private key and digital signature is required to spend money.
 
-### Generating Entropy
+## Generating Entropy
 
 https://privatekeys.org/2017/09/03/private-key-generation-in-bitcoin-wallets-as-defined-in-bip-0039/
 
@@ -28,11 +28,12 @@ The initial entropy is than used as a seed for a *deterministic random bit gener
 
 The deterministic random bit generator produces a *seed*, which we will than use to generate your *mnemonic phrase*. 
 
-### Mnemonic Phrase
+## Generating the Mnemonic Phrase
 
 The mnemonic phrase that you will likely know from most wallet implementations today was introduced with the [Bitcoin Improvement Proposal 39 (BIP-0039)](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). A mnemonic phrase is a set of commonly known words, which are used to provide a less error-prone backup mechanism compared to writing down your private key in a different format like base58, haxadecimal or even binary. In total, there are 2048 words a mnemonic phrase may comprise, each of them unambiguously identifiable by its first four letters. Similar words or different versions of the same word are not included (build/built, woman/women).
 
-++++++ mnemonic_phrase_generation.jpg
+![Generating a Mnemonic Phrase from a Seed](/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_D.jpg)
+![Generating a Mnemonic Phrase from a Seed](/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_M.jpg)
 
 The process for generating your personal mnemonic goes as follows: 
 
@@ -43,7 +44,7 @@ The process for generating your personal mnemonic goes as follows:
 
 Now, that we have a mnemonic phrase it needs to be converted into a binary seed. The [*PBKDF2 function*](https://en.wikipedia.org/wiki/PBKDF2) is used for that purpose taking as an input the mnemonic as the password and the string *mnemonic + passphrase* as the [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)). PBKDF2 takes this input and applies a pseudorandom function (here HMAC-SHA512) to it subsequently, in this case 2048 times. The final output is the derived seed of 512 bits length. This seed can now be used as an input for different key derivation methods, such as the *hierarchical deterministic* key derivation.
 
-### Key Derivation
+## Key Derivation
 
 For different reasons it is desirable to be able to generate different addresses from a single seed or private key. By using a new address for each incoming transaction, as well as *change outputs* privacy is enhanced as it becomes harder to link transactions to a single user. Now, there are different approaches to get those addresses.
 Going forward we use the term *key generation* to refer to the random generation of private keys and *key derivation* to refer to the path from a private key to the public key and lastly an address.
@@ -51,18 +52,19 @@ Going forward we use the term *key generation* to refer to the random generation
 One could go through the entire process of key generation and derivation for each address, but this would require the user to keep backups for each individual address. This approach is called non-deterministic key generation.
 While this might mitigate the risk of losing all your funds at once in case you lose a single private key, or mnemonic phrase, it certainly makes for a bad user experience. Being able to securely produce several *child keys* from a single *parent key* does only allow for a better UX in basic wallets, but also multicurrency wallets to be backed up with a single mnemonic, from which a key pair for each chain is derived.
 
-#### Hierarchical Deterministic Wallets
+## Hierarchical Deterministic Wallets
 
 Hierarchical Deterministic Wallets were introduced with [BIP-0032](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). The general idea is to take a master private key and generate multiple secure *child keys* from it.
 
 Before we go into detail on different key derivation methods, we need to introduce one concept we omitted thus far, for it would not have added any value previously. The 512-bit seed we obtained from our mnemonic phrase by applying the PKKDF2 function is split into two parts: a zero-level private key and a *chain code c* of 256 bit. 
 The chain code is used as a key to the HMAC-SHA256 pseudorandom function that takes two pieces of input, the *data* and a *key*, to produce a single 512-bit output. The HMAC-SHA256 function is used at several steps in the key derivation process.
 
-#### Hardened vs. Non-Hardened Secret Key Derivation
+## Hardened vs. Non-Hardened Secret Key Derivation
 
 When looking at HD wallets, we can generally differentiate between *hardened secret key derivation* (HSKD) and *non-hardened secret key derivation* (NSKD). The difference lies in the inputs used to generate first-level keys from our initial zero-level keys.
 
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened_D.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened_M.jpg)
 
 To recap what we did thus far:
 
@@ -88,12 +90,13 @@ $$
 sk_1 = NSKD(sk_0, PK_0 c_0, i)
 $$
 
-**Hardened Secret Key Derivation (HSKD)**
+### Hardened Secret Key Derivation (HSKD)
 
 The core function that the key derivation is build around is the [*hash-based message authentication code*](https://en.wikipedia.org/wiki/HMAC) (HMAC). It is a specific type of message authentication code involving a cryptographic hash function and a secret cryptographic key. It always uses some hash function, which is than appended to name the exact function. In this specific case the SHA512 hash function is used and the message authentication code is called HMAC-SHA512.
 HMAC takes cosumes several inputs. For our purposes we group them into two: the *key* and the *data*
 
-![Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hskd.jpg)
+![Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hskd_D.jpg)
+![Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hskd_M.jpg)
 
 For the HSKD method, the concatenation of \\(sk_0\\) and our variable integer *i* is used as the data and the zero-level chain code \\(c_0\\) as the key.
 
@@ -101,11 +104,12 @@ The resulting 512-bit output is split into two parts of 256 bits each. The first
 
 By incrementing *i* we can generate \\(2^{31}\\) or 2147483648 different first level private keys and chain codes.
 
-**Non-Hardened Secret Key Derivation (NSKD)**
+### Non-Hardened Secret Key Derivation (NSKD)
 
 We can also derive a first level private key using a combination of our zero-level public key \\(PK_0\\), zero-level secret key \\(sk_0\\) and our zero-level chain code \\(c_0\\). This method is called *Non-Hardened Secret Key Derivation* (NSKD).
 
-![Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd.jpg)
+![Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd_D.jpg)
+![Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd_M.jpg)
 
 Again, we will use the HMAC-SHA256 function, but this time we use the concatenation of \\(PK_0\\) and *i* as out data and once again \\(c_0\\) as our key.
 Again, the resulting 512-bit output is split into two parts of 256 bits each. While the second part becomes our first level chain code \\(c_1\\) as it did in the HSKD method, the first 256 bits are handled differently.
@@ -116,7 +120,7 @@ Now you can imagine a case, where a large number of addresses (or public keys re
 
 The zero-level private key is also the key that will allow the merchant to spend the money they received, so they might not want to have it available online, let alone on the same server the payment logic resides on.
 
-**Non-Hardened Public Key Derivation (NPKD)**
+### Non-Hardened Public Key Derivation (NPKD)
 
 Meet NPKD - the *Non-Hardened Public Key Derivation* method.
 
@@ -128,7 +132,7 @@ The concatenation of \\(PK_0\\) and *i* as out data and once again \\(c_0\\) as 
 
 Spending funds received at an address derived from a first-level public key derived using this method works with \\(sk_0\\), as the first-level public key obtained using NPKD is equivalent to the first-level public key produced with the NSKD method. A proof for why this is would blow the scope of this article, but can be found [here](https://privatekeys.org/2017/09/12/key-derivation-in-bitcoin-wallets-as-defined-in-bip-0032/).
 
-### Multi Signature Functionality
+## Multi Signature Functionality
 
 *Why is this section in wallet article?*
 
@@ -164,7 +168,8 @@ A regular "single-signature" transaction only involves the verification of one s
 
 Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig setup. This means she needs to create a multi signature address and withdraw her funds to it.
 
-![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation.jpg)
+![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_D.jpg)
+![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_M.jpg)
 
 * First, she generates a set of private keys. The number of keys generated depends on the MultiSig scheme she wants to use. Let us assume she wants to setup a simple 1-of-2 scheme, so she generates two keys, one of which is sufficient to sign a transaction. 
 * Second, she creates the redeem script. It contains the information about the scheme used, 1-of-2 in Alice's case, and the two public keys corresponding to the two private keys generated in the first step.
@@ -177,7 +182,8 @@ There are several wallet implementations that offer multi signature support. Thi
 
 Verification of a transaction from a P2SH address involves checking if the full redeemScript hashes to the redeem script hash of the UTXO being spent. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public-key-based spending conditions included in the full redemm script.
 
-![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address.jpg)
+![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address_D.jpg)
+![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address_M.jpg)
 
 To spend from a P2SH address, the following steps are necessary:
 
