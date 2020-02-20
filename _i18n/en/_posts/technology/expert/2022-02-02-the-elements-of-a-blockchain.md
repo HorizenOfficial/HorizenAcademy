@@ -67,6 +67,7 @@ First, we look at the challenges of achieving [consensus in distributed systems]
 The consensus mechanism has to tolerate malicious actors and it needs to handle a network providing unreliable communication. We define liveness as the property of the system not stalling and safety as all nodes agreeing on new blocks. Lastly, we show why Nakamoto consensus is brilliant in that it defined consensus in a novel way: non-deterministic.
 
 ![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_D.jpg)
+![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_M.jpg)
 
 ### Proof of Work
 
@@ -74,7 +75,8 @@ In this article, we take an in-depth look at [Proof of Work]({{ site.baseurl }}{
 
 We show how PoW creates a bridge between the physical and the real world and how the block creation process works. We also look at different mining algorithms and show what they have in common.
 
-![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
+![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_D.jpg)
+![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_M.jpg)
 
 ## The Peer-to-Peer Network
 
@@ -87,7 +89,8 @@ Public blockchains are commodidies, a digital good that anyone with an internet 
 
 Performing the Proof of Work in blockchains is called [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}). Miners extend the blockchain with new blocks in predefined time intervals. By attaching a Proof of Work to each block miners secure the ledger and give it its immutability attribute.
 
-![Hash Cash Style PoW](/assets/post_files/technology/expert/2.6-mining/hash_cash_pow.jpg)
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_D.jpg)
+![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_M.jpg)
 
 But mining is more than just performing Proof of Work - it comes with highly interesting economic implications, from choosing which blockchain to mine, to what hardware to use and what strategies to apply. In this article, we want to take a wholistic view at the mining industry.
 
