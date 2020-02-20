@@ -7,29 +7,23 @@ permalink: /technology/expert/blockchain-governance/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+further_reads: []
 ---
-
-**TKKG** Add little section on where funding comes from
-
-**TKKG** "To conclude, a majority hashrate cannot override consensus rules, confiscate any bitcoiner’s coins, or change the monetary policy" add somewhere, power limited. 
-
- create a network and community that can grow long after the initial team stops working on the project. https://medium.com/@arjunblj/zcash-the-founder-incentive-trilemma-fe7689fc8293
-
-
-Bitcoin Governance: https://medium.com/@pierre_rochard/bitcoin-governance-37e86299470f
-
-
 
 One of the most highly valued properties of public blockchain protocols are their level of decentralization. Usually there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here.
 
-While there is no deterministic way of assigning a "decentralization score" to a given project (yet), some projects certainly seem to be goverened by a larger and more diverse group of people than others and you might consider these more decentralized. This doesn't mean that there have been no attempts at quantifying decentralization, introducing metrics such as the [*minimum Nakamoto coefficient*](https://news.earn.com/quantifying-decentralization-e39db233c28e) based on the ideas of the *Gini Coefficient* and *Lorenz Curves*. It is determined by assigning a decentralization score to the different subsystems of a blockchain (mining, clients, developers, exchanges, nodes and wallet distribution) and aggregating those scores into an overall score.
+While there is no deterministic way of assigning a "decentralization score" to a given project, some certainly seem to be goverened by a larger and more diverse group of people than others and you may consider these as being more decentralized.
+
+This doesn't mean that there have been no attempts at quantifying decentralization. Metrics such as the [*minimum Nakamoto coefficient*](https://news.earn.com/quantifying-decentralization-e39db233c28e) based on the ideas of the [*Gini Coefficient*](https://en.wikipedia.org/wiki/Gini_coefficient) and [*Lorenz Curves*](https://en.wikipedia.org/wiki/Lorenz_curve) have been developed to measure decentralization objectively. The minimum Nakamoto coefficient is determined by assigning a decentralization score to the different subsystems of a blockchain (mining, clients, developers, exchanges, nodes and wallet distribution) and aggregating those scores into an overall score.
+
+Lets define governance before we dive into the topic:
 
 > *"Governance fundamentally consists of three questions: What should we do, who gets to decide, and how are the deciders chosen and held accountable?"* - Sonya Mann, [The new ZIP Process and Zcash Governance](https://www.zfnd.org/blog/new-zip-process/)
 
 In order to address these question practically, they have to be approached in reverse order. First you need to determine how to choose the deciders, then choose them and lastly, have them make decisions. This makes it sound rather straight forward and in reality things are a little more complex.
 In this article, we want to give an overview of what types of mechanisms there are to make the decisions mentioned above and explain how we at Horizen think about governance.
 
-### Choosing the Deciders
+## Choosing the Deciders
 
 In a perfect world every stake holder has a say when it comes to how the deciders of a project are chosen and ideally there would be some sort of "fair" vote on it - whatever fair means in this context.
 
@@ -207,3 +201,15 @@ chris burniske on zcash halving and dev fund \url{https://forum.zcashcommunity.c
 
 Nic Carter, master thesis:  A Cross-Sectional Overview of Cryptoasset Governance
 and Implications for Investors \url{https://coinmetrics.io/papers/dissertation.pdf}
+
+
+https://github.com/ZencashOfficial/ZenIPs/blob/master/zenip-42000.md
+
+**TKKG** Add little section on where funding comes from
+
+**TKKG** "To conclude, a majority hashrate cannot override consensus rules, confiscate any bitcoiner’s coins, or change the monetary policy" add somewhere, power limited. 
+
+ create a network and community that can grow long after the initial team stops working on the project. https://medium.com/@arjunblj/zcash-the-founder-incentive-trilemma-fe7689fc8293
+
+
+Bitcoin Governance: https://medium.com/@pierre_rochard/bitcoin-governance-37e86299470f
