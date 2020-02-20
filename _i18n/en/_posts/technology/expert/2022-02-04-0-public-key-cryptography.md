@@ -9,7 +9,7 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-An integral part of blockchain technology is public-key cryptography (PKC). There are several PKC schemes in existence but the two most popular ones are RSA (after Rivest, Shamir and  Adleman) and elliptic curve cryptography (ECC). In blockchains elliptic curve cryptography is used to prove and validate ownership of data.
+An integral part of blockchain technology is public-key cryptography (PKC). There are several PKC schemes in existence but the two most popular ones are RSA (after Rivest, Shamir, and  Adleman) and elliptic curve cryptography (ECC). In blockchains, elliptic curve cryptography is used to prove and validate ownership of data.
 
 The inner workings of ECC are often treated as a black box and we want to shed some light on the type of cryptography that gave *crypto*currencies their name. To make this topic more digestible we split it into three parts.
 
@@ -22,8 +22,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
     <div class="col-md-9">
         <h5 class="intro-article-title">Elliptic Curve Cryptography</h5>
         <p class="mb-1">
-            First, we will explain ECC in general and show you the basics of how math on an elliptic curve works. We look at basic mathematical operations and examine the complexity of performing those operations.
-        </p>
+We explain ECC and show you the basics of how the math on an elliptic curve works. We look at basic mathematical operations on the elliptic curve and examine the complexity of performing those operations. </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">Read Article</a>
         </p>
@@ -39,7 +38,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
     <div class="col-md-9">
         <h5 class="intro-article-title">Generating Keys and Addresses</h5>
         <p class="mb-1">
-            Next, we demonstrate how we use ECC to first derive a public key from your private key and in a second step your address from your public key.
+            Next, we demonstrate how we use ECC to derive a public key from your private key and your address from your public key.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">Read Article</a>
@@ -56,7 +55,7 @@ The inner workings of ECC are often treated as a black box and we want to shed s
     <div class="col-md-9">
         <h5 class="intro-article-title">Digital Signatures</h5>
         <p class="mb-1">
-            Lastly, we explain how one can prove ownership of a private key without revealing any information about it by creating a digital signature with it. We also show how a verifier can validate the digital signature only knowing your public  key.
+            Lastly, we explain how to prove ownership of a private key without revealing any information about it through the creation of a digital signature. We also show how a verifier validates the digital signature by only knowing your public key.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">Read Article</a>
