@@ -10,7 +10,7 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [zenip_process, a_cross_sectional_overview_of_cryptoasset_governance, who_controls_bitoin_core, zcash_placeholder_considerations, bitcoin_governance, zcash_and_the_founder_incentive_trilemma]
 ---
 
-One of the most highly valued properties of public blockchain protocols are their level of decentralization. Usually there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here.
+One of the most highly valued properties of public blockchain protocols is their level of decentralization. Usually, there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here.
 
 While there is no deterministic way of assigning a "decentralization score" to a given project, some certainly seem to be goverened by a larger and more diverse group of people than others and you may consider these as being more decentralized.
 
@@ -221,7 +221,7 @@ As we said earlier, DAOs are still experimental at this point. There are many un
 
 ## Summary
 
-Open source protocol governance is something that’s constantly iterated and improved upon. The blockchain space is relatively young, and compared to  traditional governance processes so is open source software in general. The large number of different blockchain projects represent a huge real-world sandbox. Many differents attempts at creating fair governance are being tried in parallel at this stage, and only experimentation and constant iteration will improve governance by making it more transparent, efficient and fairer.
+Open source protocol governance is something that’s constantly iterated and improved upon. The blockchain space is relatively young, and compared to  traditional governance processes so is open source software in general. The large number of different blockchain projects represent a huge real-world sandbox. Many differents attempts at creating fair governance are being tried in parallel at this stage, and only experimentation and constant iteration will improve governance by making it more transparent, efficient and fair.
 
 > "In fact, the search of a perfect organizational structure for cryptocurrency governance, may not be that different from the search for the best ways for governing human societies." - Ken Alabs
 

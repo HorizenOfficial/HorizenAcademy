@@ -9,7 +9,7 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-This article provides you with a general overview of what this chapter is all about and how the different topics **are related** to one another. It is a high level description not focused on details but on providing some context before each topic is covered on a granular level.
+This article provides you with a general overview of what this chapter is all about. It is a high level description not focused on details but on providing some context before each topic is covered on a granular level.
 
 ## Hash Functions
 
@@ -76,23 +76,26 @@ We show how PoW creates a bridge between the physical and the real world and how
 
 ![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow.jpg)
 
-### Other Consensus Mechanisms
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %})
-
 ## The Peer-to-Peer Network
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %})
 
+Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers, spread all over the globe. Because the nodes of the network are run independently from one another the infrastructure as a whole - the distributed [*Peer-to-Peer network*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %}) is highly resilient. Another compelling reason for running a blockchain on a public P2P network is the the low cost of bootstrapping the system.
 
-![Broadcasting Mechanisms - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_D.jpg)
-
+![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_D.jpg)
+![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_M.jpg)
 
 ## Mining
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %})
 
+Performing the Proof of Work in blockchains is called [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}). Miners extend the blockchain with new blocks in predefined time intervals. By attaching a Proof of Work to each block miners secure the ledger and give it its immutability attribute.
 
 ![Hash Cash Style PoW](/assets/post_files/technology/expert/2.6-mining/hash_cash_pow.jpg)
 
+But mining is more than just performing Proof of Work - it comes with highly interesting economic implications, from choosing which blockchain to mine, to what hardware to use and what strategies to apply. In this article, we want to take a wholistic view at the mining industry.
 
 ## Blockchain Governance
-({{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %})
 
+One of the most highly valued properties of public blockchain protocols is their level of decentralization. Usually, there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. [Governance]({{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %}) is the keyword here.
+
+![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
+![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
+
+Open source protocol governance is something that’s constantly iterated and improved upon. The blockchain space is relatively young, and compared to  traditional governance processes so is open source software in general. The large number of different blockchain projects represent a huge real-world sandbox. Many differents attempts at creating fair governance are being tried in parallel at this stage, and only experimentation and constant iteration will improve governance by making it more transparent, efficient and fair.

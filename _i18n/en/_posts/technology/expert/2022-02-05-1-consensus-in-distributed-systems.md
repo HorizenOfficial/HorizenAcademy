@@ -82,7 +82,7 @@ A system that can also handle the random and malicious behavior of a *Byzantine*
 
 Sometimes you might also hear the term BAR-FT - *Byzantine-Altruistic-Rational Fault Tolerance*. The *BAR* part refers to the different actors one can find in an open network. Peers in a permissionless network can be one of three things: *Byzantine*, *rational*, or *altruistic*.
 
-- We defined Byzantine behavior earlier as random behavior that deviates from the protocol. This term is mostly used to describe the actions of an attacker. 
+- We defined Byzantine behavior earlier as random behavior that deviates from the protocol. This term is mostly used to describe the actions of an attacker.
 - Rational actors will follow the protocol, as long as it is the most profitable strategy for them. If deviation from the protocol is more profitable, they will deviate to maximize their profit.
 - Altruistic or honest actors will do what is best for the network, even if a different strategy would mean a personal advantage for the individual.
 
