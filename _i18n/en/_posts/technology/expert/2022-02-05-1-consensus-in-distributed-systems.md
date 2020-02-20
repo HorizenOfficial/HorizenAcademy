@@ -124,7 +124,7 @@ It concluded that a single faulty process can make it impossible to reach *deter
 
 Deterministic consensus means every state transition has instant *finality*: When nodes compute a new state (liveness) and agree on it (safety) they can be 100% certain the new state is final and will never change again.
 
-One has two options to reach Byzantine Fault-Tolerance: One can either assume a synchronous network or one can pursue a non-deterministic form of consensus.
+The findings of Fischer, Lynch and Paterson hold, meaning one has two options to reach Byzantine Fault-Tolerance: One can either assume a synchronous network or one can pursue a non-deterministic form of consensus.
 
 ### Paxos
 
@@ -136,7 +136,7 @@ If a transition fails or halts, there is a timeout mechanism after which the sys
 
 [*Raft*](https://raft.github.io/?source=post_elevate_sequence_page) is another consensus mechanism published in 2013. It set out to be easier to understand and implement than Paxos. It also uses timeouts in case a state trasition fails and can therefore handle asynchronous environments. But just like Paxos, it fails to achieve consensus with Byzantine actors and is only simple fault-tolerant.
 
-What we can learn from Paxos and Raft is that handling Byzantine behavior in a asynchronous environment is hard.
+What we can learn from Paxos and Raft is that handling Byzantine behavior in a asynchronous environment is a hard problem.
 
 ![Paxos and Raft](/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_D.jpg)
 ![Paxos and Raft](/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_M.jpg)
