@@ -75,21 +75,6 @@ As we said earlier it is hard to create a "decentralization score" for a public 
 
 The robustness of a system is proportional to its points of control. A single point of control leads to a single point of failure and low robustness, whereas many distributed points of low influence lead to more robust systems. On the other hand, less points of control lead to faster decision making and greater adaptability to external stimuli. As I said above: depending on the use-case either one of those properties can be more desirable and you cannot deem one better or worse than the other without considering the purpose of the project.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Different Governance Models
 
 Below, we will look at three different categories of governance systems that range from company-like structures in the delegated governance model to the democracy inspired approach of a Decentralized Autonomous Organization (DAO).
@@ -145,18 +130,6 @@ Building a DAO is no simple endeavour. The code governing a DAO is public and an
 
 The most notable attempt at creating a decentralized autonomous organization was [*The DAO*](https://en.wikipedia.org/wiki/The_DAO_(organization)) on the Ethereum blockchain. It was launched with US$150 million of assets under control in 2016 as a venture capital fund and immediately got hacked. About $50 M USD in cryptoassets were stolen by the hackers. The hack was reverted by reorganizing the Ethereum blockchain, which led to a chain split. The Ethereum Classic chain is the Ethereum chain where the hack was not reverted, while investors on the Ethereum chain were refunded their assets.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Decision Making Processes
 
 There are different processes the "decision makers" can follow to decide, and one of the most widely used processes is the Improvement Proposal. Proposal systems come in different flavors and vary to some degree, but the general idea remains the same.
@@ -166,12 +139,6 @@ There are different processes the "decision makers" can follow to decide, and on
 Improvement proposals processes are mainly a formalized way of suggesting changes and handling those suggestions from idea to activation. Many blockchain projects have developed their flavor of this process. Bitcoin's BIPs, Ethereum's EIPs, Zcash's ZIPs, and Horizen's ZenIPs are among them. Aragon, a platform specifically built to providing organizations with blockchain based governance tools calls their version *Aragon Governance Proposals* or AGPs.
 
 Following the improvement proposal process is usually no requirement for suggesting changes to the project, but especially for contributors without an existing track record of valuable contributions, following the *X*IP process will increase the chances of the proposal being at least considered. We will explain the ZenIP process in more detail later.
-
-
-
-
-
-
 
 ## Making Decisions a Reality
 
@@ -263,19 +230,3 @@ The quote above might be the ultimate truth when it comes to governance. Arguabl
 Projects with different goals will also require different approaches to governance. While a global store of value such as Bitcoin needs a conservative approach to governance, new projects working on cutting edge technological advances need faster decision making in order to realize their goals.
 
 Governance needs to be project specific, accounting for the goals and the existing community. Time will tell what the "best" approaches to governance in the open source arena are.
-
-
-
-
-
-
-
-
-
-
-\url{https://medium.com/blockchain-capital-blog/grin-governance-a-novel-approach-154aca07291b}
-Interesting approach regarding Asics. touches on governance in one way or another. Avoids the inevitable discussion about mining hardware by a proactive decision. 
-
-chris burniske on zcash halving and dev fund \url{https://forum.zcashcommunity.com/t/placeholder-considerations-resources-governance-and-legitimacy-in-nu4/34045} .
-
-
