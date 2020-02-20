@@ -7,4 +7,4 @@ topic: privacy
 level: expert
 ---
 
-## Niveau expert sur la vie privée bientôt disponnible!
+## Niveau expert sur la vie privée bientôt disponible!
