@@ -20,7 +20,7 @@ Public-key cryptography is mostly used for the confidential exchange of informat
 
 One can also construct [*hybrid cryptosystems*](https://en.wikipedia.org/wiki/Hybrid_cryptosystem) composed of symmetric and asymmetric cryptographic schemes. Asymmetric cryptography is computationally more expensive than symmetric schemes. In hybrid cryptosystems, a PKC scheme is used to initialize a secure communication by exchanging a key for asymmetric encryption first. After that, the participants use the symmetric scheme to reduce computational overhead. Especially when large amounts of data need to be securely transmitted this type of hybrid system is useful.
 
-Two of the most popular PKC schemes are RSA (Rivest - Shamir - Adleman) and Elliptic Curve Cryptography (ECC). 
+Two of the most popular PKC schemes are RSA (Rivest - Shamir - Adleman) and Elliptic Curve Cryptography (ECC).
 
 ### RSA - Rivest, Shamir, Adleman
 
@@ -28,7 +28,7 @@ Before ECC became popular, almost all public-key schemes were built using crypto
 
 As we said before, public keys are derived from a private key using a mathematical one-way function. The security is therefore based on the [*computational hardness*](https://en.wikipedia.org/wiki/Computational_hardness_assumption) of reversing the one-way function.
 
-With PKC schemes like RSA, using modular arithmetic, the security is based on the assumed hardness of [integer factorization](https://en.wikipedia.org/wiki/Integer_factorization) ("assumed" because there no known way of proving (unconditional) hardness). In elliptic curve cryptography, the security assumption is based on the hardness of the [*discrete log problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html). 
+With PKC schemes like RSA, using modular arithmetic, the security is based on the assumed hardness of [integer factorization](https://en.wikipedia.org/wiki/Integer_factorization) ("assumed" because there no known way of proving (unconditional) hardness). In elliptic curve cryptography, the security assumption is based on the hardness of the [*discrete log problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html).
 
 RSA and its modular-arithmetic-based friends are still important today and are often used alongside ECC. Rough implementations of the mathematics behind RSA can be built and explained rather easily.
 
@@ -39,7 +39,7 @@ Above is a rudimentary example of encrypting a *message* (2) with a public key t
 
 ### ECC - Elliptic Curve Cryptography
 
-Elliptic curve cryptography is based on discrete math. In *discrete mathematics*, elements can only take on certain (*discrete*) values. Boolean algebra is an example where the possible values are only zero and one. These values are usually interpreted as true and false.
+Elliptic curve cryptography is based on *discrete mathematics*. In discrete math, elements can only take on certain *discrete* values. Boolean algebra is an example of discrete math where the possible values are zero and one. These values are usually interpreted as true and false.
 
 ![An Elliptic Curve](/assets/post_files/technology/expert/2.3.1-ecc/curve.jpg)
 
@@ -114,9 +114,11 @@ $$
 (8 \cdot P) + (2 \cdot P)= (8 + 2) \cdot P = 10 \cdot P
 $$
 
-To compute \\(x \cdot P\\), where *x* is a random 256-bit integer (read: your private key), it never takes more than 510 point operations. That is because *x* can be huge! It can range between *0* and \\(1.1579 \cdot 10^{77}\\) which can be written out as:
+To compute \\(x \cdot P\\), where *x* is a random 256-bit integer (read: your private key), it never takes more than 510 point operations. That is although *x* can be huge! It can range between *0* and \\(1.1579 \cdot 10^{77}\\) which can be written out as:
 
-$$115792089237316195423570985008687907853269984665640564039457584007913129639936$$
+$$
+115792089237316195423570985008687907853269984665640564039457584007913129639936
+$$
 
 The closest thing to understanding what this really means is playing with this [interactive scale of the universe](https://scaleofuniverse.com/) and paying attention to the dimensions in the bottom right corner. But let's move on.
 
@@ -189,6 +191,6 @@ Public-key cryptography is used in secure communication and sender authenticatio
 
 RSA and many of the early PKC schemes are build using *modular arithmetic* and the security is based on the hardness of *integer factorization*. ECC is based on *discrete math* where only certain values are allowed. The security is based on the hardness of the *discrete logarithm problem*.
 
-When you are transferring cryptocurrencies you generally use addresses and not your public key. 
+When you are transferring cryptocurrencies you generally use addresses and not your public key.
 
 In the next article we will go through the process of generating an address from scratch, starting with your private key.
