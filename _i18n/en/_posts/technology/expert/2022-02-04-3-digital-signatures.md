@@ -9,24 +9,25 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-Public-Key Cryptography is used to verify ownership of a cryptocurrency. *Digital signatures* allow you to prove your knowledge of a private key corresponding to a particular address without revealing any information about it.
+Public-Key Cryptography is used to verify ownership on a blockchain. *Digital signatures* allow you to prove your knowledge of a private key corresponding to a particular address without revealing any information about it.
 
 To create a digital signature you need two components, a *message* (in most cases a transaction) and the private key. A verifier will use the message, the public key, and the digital signature as an input to the verification algorithm. This algorithm will then produce a binary output: either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction using this concept.
 
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
 
-This mechanism is usually treated as a blackbox but we will disect the the inner workings of this cryptographic method in this article. Before we get into the nitty gritty, which requires some complex mathematics, we want to repeat a convention we already introduced in our elliptic curve cryptography article. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with "Generating the Signature".
+This mechanism is usually treated as a blackbox but we will disect the the inner workings of this cryptographic method in this article. Before we get into the nitty gritty, which requires some complex mathematics, we want to repeat a convention we already introduced in our elliptic curve cryptography article. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with [Generating the Signature](#generating-the-signature).
 
 ### Scalars and Vectors
 
- A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector, however, has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length (magnitude) and the angle \\(\alpha\\) relative to the positive *x*-axis (direction). This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values. One value for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). Alternatively, you can use the *x*-, *y*-, and *z*- coordinates to represent a gicen point in three-dimensional space. Either way you need three values.
- It is a convention that scalars are written with small letters, like the private key *sk*, while vectors are written with capital letters, like your the public key *PK*.
+A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector, however, has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length (magnitude) and the angle \\(\alpha\\) relative to the positive *x*-axis (direction). This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values. One value for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). Alternatively, you can use the *x*-, *y*-, and *z*- coordinates to represent a gicen point in three-dimensional space. Either way you need three values.
+
+It is a convention that scalars are written with small letters, like the private key *sk*, while vectors are written with capital letters, like your the public key *PK*.
 
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_D.jpg)
 ![Scalar vs. Vector](/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_M.jpg)
 
-It's important to note that the hash of a vector is a scalar. The [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) consumes the *tuple* of values as an input, and creates the output as a scalar.
+It's important to note that the hash of a vector is a scalar. The [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) consumes the *tuple* of values as an input, and produces a scalar as an output.
 
 We use the \\(\bullet\\) operator when we are doing multiplication on the elliptic curve. When we are performing regular multiplication of scalars, we will use the \\(\cdot\\) operator. We added this little discourse because it should help you to keep track of what values are points on the curve (vectors) and what values are scalars.
 
@@ -182,7 +183,7 @@ Here we have covered the mathematics behind creating and verifying a signature. 
 
 ### Summary
 
-To summarize, Public-Key Cryptography (PKC) is used to verify ownership. It's basic building blocks are a public key, a private key, and a digital signature. This methodology is also used in encryption schemes such as TLS, PGP or SSH.
+To summarize, Public-Key Cryptography (PKC) is used to verify ownership. It's basic building blocks are private keys, public keys, and a digital signatures. This methodology is also used in encryption schemes such as TLS, PGP or SSH.
 
 While there are many different PKC schemes, blockchains use elliptic curve cryptography (ECC). Cryptography mostly relies on one-way functions. The first one-way function we introduced was the [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). ECC and its underlying *discrete log problem* pose a second one-way function.
 
