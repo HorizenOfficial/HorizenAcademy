@@ -10,10 +10,6 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [lets_take_a_crack_at_understanding_consensus, byzantine_generals_problem]
 ---
 
-[*Byzantine Generals Problem*](https://people.eecs.berkeley.edu/~luca/cs174/Byzantine.pdf?source=post_elevate_sequence_page)
-
-https://www.preethikasireddy.com/post/lets-take-a-crack-at-understanding-distributed-consensus
-
 When you want to create a global an censorship resistant supply of digital money, you need to build it on a *distributed system*. Using a distributed system removes the need for a central party being in control. *Distributed computing* is an area of *computer science* that specifically studies distributed systems. Although such distributed systems have many advantages, they also come with their very own challenges - one is reaching *consensus* among its participants.
 
 In this article, we want to show you what a distributed system does, what challenges it poses, and how these challenges are addressed. Bitcoin introduced the *Nakamoto consensus*, an innovative method allowing all peers on the network to agree on a single version of the blockchain.

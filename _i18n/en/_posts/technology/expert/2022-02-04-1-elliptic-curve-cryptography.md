@@ -16,6 +16,8 @@ While a public key can be distributed openly to any potential sender of an encry
 
 Digital signatures are created using a message to be signed and a private key as an input. A verifier can validate the signature using the corresponding public key without gaining knowledge about the private key used to sign the message.
 
+## Public-Key Cryptography
+
 Public-key cryptography is mostly used for the confidential exchange of information like encrypted emails using [Pretty Good Privacy (PGP)](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) or similar encryption methods. Other use cases are sender authentication using *digital signatures* and verifying ownership in cryptocurrencies.
 
 One can also construct [*hybrid cryptosystems*](https://en.wikipedia.org/wiki/Hybrid_cryptosystem) composed of symmetric and asymmetric cryptographic schemes. Asymmetric cryptography is computationally more expensive than symmetric schemes. In hybrid cryptosystems, a PKC scheme is used to initialize a secure communication by exchanging a key for asymmetric encryption first. After that, the participants use the symmetric scheme to reduce computational overhead. Especially when large amounts of data need to be securely transmitted this type of hybrid system is useful.
@@ -58,7 +60,7 @@ The infeasibility of performing division on the elliptic curve is called the [*d
 
 While all this might sound very complex at first you will see shortly that a graphical approach is sufficient to develop an intuition for the math used on elliptic curves. This intuition should lead you to an understanding of the security assumption and serve as a basis for understanding the upcoming two articles on how a public-private key pair is related and how digital signatures work.
 
-### ECC Math
+## Math on the Elliptic Curve
 
 *We already covered the basic operations of adding two points and multiplying points with *scalars* in the [advanced section](https://academy.horizen.global/technology/advanced/public-key-cryptography/) of the Horizen Academy. Feel free to catch up on the basic operations before you continue reading this article.*
 
@@ -85,7 +87,7 @@ and
 
 $$y = 32670510020758816978083085130507043184471273380659243275938904335757337482424$$
 
-### Computational Steps
+### Multiplying Large Numbers on the Curve
 
 How hard does your computer have to work in order to perform multiplication on the curve with large numbers like your private key *sk* and the base point *P*? Let's use a simple example first and look at how many steps it takes to get the product \\(10 \cdot P\\)?
 The first thing that might come to mind is performing 9 point additions.
@@ -158,7 +160,7 @@ Let's give all of this some context again. Your private key is a random 256-bit 
 
 If your computer could perform a trillion, \\(10^{12}\\) additions per second and you had been running your computer since the beginning of the universe, you would only have computed \\(2^{98}\\) point additions by now which equals just about 0.00000009% of the total work to derive a single private key from a public key (on average, this is statistics after all). elliptic curve cryptography a good basis for a public-key cryptography scheme. It is infeasible to derive a public key from a private key.
 
-### Finite Field
+### The Finite Field
 
 In order to avoid points that can't be stored in a 512-bit integer (read: an uncompressed public key) the curve is defined over a finite field that only allows coordinates up to a certain size. We transform
 
@@ -185,7 +187,7 @@ In order to graphically add two points together, one again connects them with a 
 
 Before we move on to show you how ECC is used to securely sign transactions and prove you are the sole owner of a digital asset, we take a look at how your address is generated from your private key in the next article. After all, the purpose of ECDSA (Elliptic Curve Digital Signature Algorithm) is to prove knowledge of a private key that controls a set of UTXOs without actually revealing it.
 
-### Summary
+## Summary
 
 Public-key cryptography is used in secure communication and sender authentication using digital signatures. Proving ownership in cryptocurrencies is a special case of sender authentication. The security of a given PKC scheme hinges on the assumption that the one-way function used to derive a public key from a private key is *computationally difficult* to reverse.
 

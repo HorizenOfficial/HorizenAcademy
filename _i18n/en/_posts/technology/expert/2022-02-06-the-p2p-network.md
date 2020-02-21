@@ -119,7 +119,7 @@ To do so, it sends *getblocks* messages. The receiving node will reply with its 
 
 The *getdata* message can not only be used to request blocks, but also transactions and other objects. All of them have an identifier - their hash - by which they can be requested specifically after they were identified as missing in a nodes inventory.
 
-## Broadcasting Mechanism
+## Broadcasting Mechanisms
 
 After a node is in synch with the network, the main influx of information happens via unsolicited messages. Freshly created transactions need to be broadcast to all nodes in as little time as possible, just like new blocks.
 
@@ -164,7 +164,7 @@ Dandelion is implemented in Beam and Grin, two different implementations of the 
 
 ## Privacy and Security
 
-Most privacy preserving techniques are not effective, if messages can be linked to IP address. Even with simple techniques and minimal knowledge of P2P graph structure up to 30% accuracy in linking messages to IP addresses. [[1]](#sources) In order to quantify the level of *anonymity* a spreading mechanism provides two metrics can be applied:
+Most privacy preserving techniques are not effective, if messages can be linked to IP address. Even with simple techniques and minimal knowledge of P2P graph structure [up to 30% accuracy in linking messages to IP addresses](https://dl.acm.org/doi/10.1145/2660267.2660379). In order to quantify the level of *anonymity* a spreading mechanism provides two metrics can be applied:
 
 > *"Precision and recall are natural performance metrics. Recall is simply the probability of detection, a common anonymity metric that captures completeness of the estimator, whereas precision captures the exactness."* - [Bojja, Fanti, Viswanath - Dandelion: Redesigning the Bitcoin Network for Anonymity](https://arxiv.org/pdf/1701.04439.pdf)
 
@@ -186,7 +186,7 @@ Most blockchains provide little to no incentive to run nodes on the network. In 
 Another good reason to run a node is to safely accept payments. Most wallets are actually light nodes. They connect to a full node in order to "speak" with the blockchain. This means they have to trust the full node operator to feed them truthful information.
 By running a full node yourself, you don't have to trust anybody - you can verify for yourself. Still, few people transact regularly enough to run a full node themselves and the technical barrier to entry is quite high.
 
-#### Secure and Super Nodes
+### Secure and Super Nodes
 
 Horizen decided to incentivize node operators for facilitating the infrastructure of its ecosystem. Rewarding node operators seems fair when you consider that setting up a node up as well as maintaining it takes some time, and running it on a VPS comes at a cost.
 
@@ -209,7 +209,3 @@ While other distributed infrastructures are often optimized for content discover
 The broadcasting mechanism used to distribute messages across the network affects the level of privacy a node experiences. When attackers are able to link public keys to their originating IP addresses this opens the door to various attack vectors. We talked about flooding where messages are forwarded with a constant time delay, diffusion, where the time delay is random and Dandelion, where broadcasting happens in two stages: the anonymity phase and the spreading phase.
 
 Lastly, we explained why we incentivize node operators on the Horizen network and to what conditions these incentives are tied.
-
-### Sources
-
-[1]: A. Biryukov, D. Khovratovich, and I. Pustogarov. Deanonymisation of clients in bitcoin p2p network. In "*Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security*", pages 15–29. ACM, 2014.

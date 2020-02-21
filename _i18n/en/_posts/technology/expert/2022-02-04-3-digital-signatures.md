@@ -7,6 +7,7 @@ permalink: /technology/expert/digital-signatures/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+further_reads: [how_cryptography_redefines_private_property]
 ---
 
 Public-Key Cryptography is used to verify ownership on a blockchain. *Digital signatures* allow you to prove your knowledge of a private key corresponding to a particular address without revealing any information about it.
@@ -18,7 +19,7 @@ To create a digital signature you need two components, a *message* (in most case
 
 This mechanism is usually treated as a blackbox but we will disect the the inner workings of this cryptographic method in this article. Before we get into the nitty gritty, which requires some complex mathematics, we want to repeat a convention we already introduced in our elliptic curve cryptography article. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with [Generating the Signature](#generating-the-signature).
 
-### Scalars and Vectors
+## Scalars and Vectors
 
 A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector, however, has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length (magnitude) and the angle \\(\alpha\\) relative to the positive *x*-axis (direction). This means it is a tuple comprising two values, a *double*. In order to represent a vector in three dimensional space one would use a *triple* of values. One value for the magnitude and two for the direction (angle relative to *x*- and *z*-axis). Alternatively, you can use the *x*-, *y*-, and *z*- coordinates to represent a gicen point in three-dimensional space. Either way you need three values.
 
@@ -36,7 +37,7 @@ To Recap our previous articles: your secret or private key *sk* is a large rando
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
 
-### Generating the Signature
+## Generating the Signature
 
 Generating a digital signature in an elliptic curve cryptography (ECC) scheme is based on the [distributive property](https://en.wikipedia.org/wiki/Distributive_property) for point addition that we introduced in the [article on ECC math]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) earlier in this chapter.
 
@@ -103,7 +104,7 @@ Two conditions must be met in order for this to be the case:
 - If you know *sk*, then you must be able to provide working values for *m*, *R*, and *s*.
 - If you don't know *sk*, then you must not be able to provide working values for *m*, *R*, and *s*.
 
-#### Condition 1: Providing m, R, and s
+### Being Able to Provide a Valid Signature
 
 Let's assume you know *sk*.
 First, you choose random value for *r* and a message *m* to sign. Next, you compute \\(R = r \bullet P\\). Lastly, you compute \\(s = \text{hash}(m,R) \cdot (sk + r)\\).
@@ -122,7 +123,7 @@ $$
 
 which we said earlier holds for any *m*, *r*, and *sk* (formerly *n*). This satisfies the first condition we need to prove our claim.
 
-#### Condition 2: Not Being Able to Provide m, R, and s in Absence of sk
+### Not Being Able to Provide a Signature Without the Private Key
 
 Now we need to prove the second condition is met as well: If you don't know *sk*, then you must not be able to provide working values for *m*, *R*, and *s*. In order to provide these working values you would have to solve the equation below.
 
@@ -148,6 +149,8 @@ $$
 
 An adversary doesn't know *r* and cannot derive it from *R* (discrete log problem) as it would be the same as deriving *sk* from *PK*. Without knowledge of *r* you cannot compute *sk* from *s*.
 
+### Quick Recap
+
 To recap what we did:
 
 - First, we used the [distributive property](https://en.wikipedia.org/wiki/Distributive_property) to build an equality.
@@ -159,7 +162,7 @@ To recap what we did:
 - We also proved that without knowledge of *sk*, you cannot provide working values for *m*, *R*, and *s*.
 - Lastly, we showed that you can reveal *m*, *R*, and *s* without revealing any information about the private key *sk*.
 
-### Verifying the Signature
+## Verifying the Signature
 
 All full nodes and mining nodes verify every transaction before forwarding it or including it in a block. They verify a transaction, or message *m*, based on the originating public key *PK* and the signature, which is composed of *s* and *R*. As we showed above, only by knowing *sk* one can produce a valid signature. Verification of the signature includes plugging those three variables into the equation below and checking if it holds.
 
@@ -169,7 +172,7 @@ $$
 
 In the context of cryptocurrencies, signatures are used to proof that you own a [UTXO set]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) and that you are entitled to spend it. One spends a UTXO by creating a transaction and using it as an input to create one or more new outputs. Each input spent needs to be signed.
 
-### What does a digital Signature look like?
+### What the Digital Signature Looks Like
 
 A transaction typically informs the network about a transfer of money or data. The message *m* is to be signed, with *s* and *R* comprising the signature of that message.
 
@@ -181,7 +184,7 @@ The digital signature of that transaction consists of the x-coordinate of *R* an
 
 Here we have covered the mathematics behind creating and verifying a signature. In our last chapter we cover how the blockchain client handles signatures. Each transaction output has a *locking script*. It is called *scriptPubKey* and requires certain conditions to be met in order for the recipient to spend it.
 
-### Summary
+## Summary
 
 To summarize, Public-Key Cryptography (PKC) is used to verify ownership. It's basic building blocks are private keys, public keys, and a digital signatures. This methodology is also used in encryption schemes such as TLS, PGP or SSH.
 

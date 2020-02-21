@@ -25,7 +25,7 @@ Not being able to derive a public key from an address is an important aspect whe
 
 Now let's get into the actual process of creating an address from scratch!
 
-### Generating Your Private Key
+## Generating the Private Key
 
 The purpose of a private key is to prove ownership of a [UTXO]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) set by creating digital signatures to authorize spending.
 
@@ -35,6 +35,8 @@ Private keys are sometimes also called *secret keys* or *spending keys*. When do
 - the elliptic curve used in most cryptocurrencies, scp256k1, has an [order of 256 bits](https://bitcoin.stackexchange.com/questions/21907/what-does-the-curve-used-in-bitcoin-secp256k1-look-like), which means it consumes 256 bit inputs and produces 256 bit outputs.
 
 A private key can be represented in many formats, such as a binary string of 1's and 0's, a [*Base64*](https://en.wikipedia.org/wiki/Base64) string, a *mnemonic phrase* or a hex string.
+
+### Generating Entropy
 
 In order for a private key to be secure it needs to be as random as possible. Randomness is also referred to as *entropy* which is a term coming from the world of physics and chemistry describing the level of disorder in a system. Guessing an existing private key is so unlikely no sane human would try to attempt it and stealing them is also hard assuming good opsec. Exploiting the source of randomness used to create a private key and recreating it can be a viable strategy for attackers in some cases. It's important to note that randomness should be viewed on a scale, rather than on a binary basis. A good resource to find out more about randomness is [random.org](https://www.random.org).
 
@@ -53,7 +55,7 @@ It is good practice to backup your private key in an analog format but copying a
 
 In a first step randomness is generated using one of the methods described above. In a second step a checksum is calculated and parts of it are concatenated with the initial entropy. This data is split into groups of 11 bits each. 11 bits can represent the values from 0 to 2047. Next each group is mapped to a word list of 2048 common and easily identifiable words. Similar words such as woman/women or build/built are excluded to avoid confusion.
 
-### Multiplication with Private Key
+## Deriving the Public Key
 
 Now that we have generated a private key $sk$ and a way to conveniently back it up, we need to derive a public key $PK$ from it. In our last article we already distinguished between *scalars* and *vectors*. A scalar is something that only has a magnitude. Simply speaking, any number is a scalar. A vector has a magnitude and a direction and is represented by a *tuple* of values. If we are looking at a two-dimensional plane, a vector can be interpreted as an arrow with a certain length, the magnitude, and a direction, the angle relative to the x-axis.
 
@@ -87,7 +89,7 @@ $$y = \pm \sqrt{x^3 + ax + b}$$
 
 If you throw out the *y*-value all together and add a byte indicating the sign of *y* a reduction in size by almost 50% is achieved.
 
-### From Public Key to Address
+## Creating an Address from the Public Key
 
 Your compressed public is now hashed twice in a row, first using SHA256 and second, using RIPEMD160. The second round of hashing accomplishes a compression by 37.5% (from 256 to 160bit). What you have now is your *encrypted public key*.
 
@@ -101,7 +103,7 @@ This checksum is then added to the end of the compressed public key.
 
 What we have now is a valid address, but there is one last step to it. *Base58Check* is a way to convert bits into alphanumeric characters, excluding the four characters 0, O, I, and l. Base58Check excludes these characters to reduce errors when copying addresses manually and proofreading them.
 
-### Hierachichal Deterministic Address Generation}
+### Hierachichal Deterministic Address Generation - HD Wallets
 
 Most wallets today are HD wallets - hierarchical deterministic wallets. They use a single seed or *master private key* which can be derived from your mnemonic phrase, to generate a number of private keys. This is done by adding a counter to the seed and incrementing it by one for every new private key generated.
 
@@ -110,7 +112,7 @@ Most wallets today are HD wallets - hierarchical deterministic wallets. They use
 
 These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets more closely.
 
-### Summary
+## Summary
 
 To get from your private key, *sk* to your address you first perform multiplication on the curve with the base point *P*. Next you add a leading byte depending on which blockchain the address is for and omit the *y*-value while adding a byte for its sign. Now two hash operations are performed in a row, SHA256 first and RIPEMD160 second to get your *encrypted public key*. A *network byte* is added to indicate if the address is meant for the main- or testnet, giving you the *mainnet encrypted public key*. A checksum is calculated by performing SHA256 twice and adding the first 4 bytes of that checksum to the end of the *mainnet encrypted public key*.
 Lastly, the characters 0, O, I, and l are removed using *Base58Check*.

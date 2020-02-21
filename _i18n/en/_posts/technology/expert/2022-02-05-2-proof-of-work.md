@@ -58,7 +58,7 @@ All miners do this simultaneously and are in a competition to find a nonce that 
 
 Once such a block, or better nonce, is found, the miner will broadcast the block to the network. Nodes and other miners will then check whether the block contains conflicting transactions and if the hash meets the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block, remove the transactions that were just added to the blockchain from their mempool, and start working on a new block.
 
-### Difficulty vs Target
+### Meeting the Target
 
 The terms target and *difficulty* are often used interchangeably. Technically, they are not equivalent though. The target is a value that the block hash has to be equal to or below in order to be considered valid. The difficulty is a relative measure of how difficult it is to find a hash below a given target. The highest possible target in Bitcoin is defined as
 
@@ -77,7 +77,7 @@ Proof of Work is the bridge connecting the digital and the physical world. It ti
 While a Proof of Work system typically uses a one-way function like a hash function, a proof of work algorithm can be more than just a hash function.
 The most used type of Proof of Work is the Hashcash style PoW depicted in the graphic above. Hashcash was introduced in 1997 by Adam Back as a measure against spam. Recipients would require the sender to perform a Proof of Work in order to accept the mail. While this computational overhead does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above: performing repeated hashing until the resulting hash is less than some target value.
 
-### Interactive Proof of Work
+## Interactive Proof of Work
 
 In general, a Proof of Work can be one of two things: a non-interactive *solution-verification protocol* or an interactive *challenge-response protocol*. Horizen uses both, each for a different purpose.
 
@@ -182,6 +182,8 @@ We can further increase the dimensionality of the problem by looking at *k* grou
 Starting from the generalized birthday problem, David Wagner devised an algorithm - the *Wagner's Algorithm* - to compute those probabilities for even more complex setting with *k* dimensions (groups of people) and *n*-bit settings (days). The algorithm [was found to be](https://pdfs.semanticscholar.org/06f4/507d9f584b544f96364cae2ad41e78e4035b.pdf) hard on time and space.
 
 The time and space complexity trade-off can be adjusted by the parameter *k*. This means, very loosely speaking, that if one uses the generalized birthday problem for a PoW algorithm, one can make it more CPU or memory intensive depending on the number of groups *k* a birthday collision is calculated for. To give you an idea: Horizen has implemented Equihash with the parameters *n*=200 and *k*=9.
+
+The miners goal in Equihash comes down to finding a solution to the multi-dimensional birthday problem, that meets a certain target.
 
 ### Other Computationally Hard Problems
 
