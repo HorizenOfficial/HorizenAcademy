@@ -59,7 +59,7 @@ Hierarchical Deterministic Wallets were introduced with [BIP-0032](https://githu
 Before we go into detail on different key derivation methods, we need to introduce one concept we omitted thus far, for it would not have added any value previously. The 512-bit seed we obtained from our mnemonic phrase by applying the PKKDF2 function is split into two parts: a zero-level private key and a *chain code c* of 256 bit. 
 The chain code is used as a key to the HMAC-SHA256 pseudorandom function that takes two pieces of input, the *data* and a *key*, to produce a single 512-bit output. The HMAC-SHA256 function is used at several steps in the key derivation process.
 
-## Hardened vs. Non-Hardened Secret Key Derivation
+### Hardened vs. Non-Hardened Secret Key Derivation
 
 When looking at HD wallets, we can generally differentiate between *hardened secret key derivation* (HSKD) and *non-hardened secret key derivation* (NSKD). The difference lies in the inputs used to generate first-level keys from our initial zero-level keys.
 
@@ -140,7 +140,7 @@ In order to spend an [*Unspent Transaction Output* (UTXO)]({{ site.baseurl }}{% 
 
 Most blockchains also support a more complex type of transaction verification, based on several digital signatures. These multi signature transactions, mostly called *MultiSig*, rely one more than one signature (as the name suggests) and have several useful applications.
 
-#### Dividing Responsibility
+### Dividing Responsibility
 
 First, by requiring several valid signatures the responsibility for keeping a set of coins canbe divided between several people. A married couple where both partners have their own private keys could have two MultiSig "Accounts". One could act as a spendings account and the money from it can be spend by either one of their two keys. A seperate spendings account could require both of them to sign off on any outgoing transaction.
 
@@ -149,7 +149,7 @@ The savings account is a 2-of-2 scheme: 2 keys can provide a valid signature, an
 
 Generally speaking, multi signature accounts follow an *M-of-N* scheme, where *N* is the total number of keys that can provide valid signatures and *M* is the required number of signatures to create a valid transaction.
 
-#### Avoiding Single Points of Failure
+### Avoiding Single Points of Failure
 
 Second, you reduce the risk of losing access to your money or being hacked, by keeping funds in a MultiSig address, and storing your keys in different locations. You could store your money in a 2-of-3 address and keep the three keys on your laptop, your phone and a hardware wallet. If one of those devices breaks you can still access your funds and an attacker would need to compromise two devices to steal money. Hence, this setup eliminates single points of failure.
 
@@ -208,6 +208,3 @@ Using a multi signature scheme to secure your funds comes with a security-conven
 At the same time the overall security of the account is increased with a larger *M*. The difference between *M* and *N* is the number of keys a user can loose while being able to recover her funds. It is up to the individual user to determine if the added complexity is justified by the amount of money kept in a given account.
 
 ### Summary
-
-**TODO**
-

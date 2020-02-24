@@ -10,14 +10,14 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [why_bittorrent_mattered, anonymity_properties_of_the_bitcoin_P2P_network, dandelion_paper, bitcoin_developer_reference]
 ---
 
-There are many ways to classify a blockchain. One of them is to determine if the blockchain is public or permissioned. Permissioned blockchains are meant for defined groups of people such as a consortium of companies that wants to share a consistent database. 
+There are many ways to classify a blockchain. One of them is to determine if the blockchain is public or permissioned. Permissioned blockchains are meant for defined groups of people such as a consortium of companies that wants to share a consistent database.
 
 Public blockchains are commodities, digital goods that anyone with an internet connection can access. Nobody owns these commodities, so there is no central infrastructure provider. Instead, the infrastructure is provided by many independent peers, spread all over the globe. The distributed *Peer-to-Peer* (P2P) network of a decentralized blockchain is highly resilient because the network's nodes run independently from one another.  
 
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
 
-In the article on blockchain as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}), we looked at a protocol at the [*application layer*](https://en.wikipedia.org/wiki/Application_layer). Here, tasks like transaction management, blockchain processing, and mining are handled and nodes are identified by their public keys or addresses.
+In the article on blockchain as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}), we looked at the protocol at the [*application layer*](https://en.wikipedia.org/wiki/Application_layer). Here, tasks like transaction management, blockchain processing, and mining are handled and nodes are identified by their public keys or addresses.
 
 In this article, we focus on the protocol of a blockchain at the [*network layer*](https://en.wikipedia.org/wiki/Network_layer). At the network layer, peers are identified by their IP addresses. It handles the communication between nodes via inter-node TCP connections - read: the internet. It is desirable to keep IP addresses and public keys unlinkable for privacy reasons.
 
@@ -76,7 +76,7 @@ Network failures are classified using their effect on message propagation, not b
 
 - In the *synchronous* model, all messages arrive with a known and bounded delay.
 - In the *partially synchronous* model, messages arrive with a bounded delay, but the bound is not known.
-- In the *asynchronous* model, the message delay is unknown and unbound. This makes the asynchronous model the "hardest assumption" on which to build a reliable system. 
+- In the *asynchronous* model, the message delay is unknown and unbound. This makes the asynchronous model the "hardest assumption" on which to build a reliable system.
 
 Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case it's peer goes offline? And how does it find a set of nodes to connect to in the first place?
 
@@ -117,7 +117,7 @@ Next, your node will compare the list of headers with its existing inventory. Si
 
 To do so, it sends *getblocks* messages. The receiving node will reply with its inventory of block header hashes. After comparing the list with its empty inventory, your node will request all blocks to get up to speed. This is done by sending a *getdata* message that requests one or more specific data objects from another node - in this case the actual block data.
 
-The *getdata* message be used to request blocks, transactions, and other objects. All of them have a unique hash identifier which can be used to request more information. 
+The *getdata* message be used to request blocks, transactions, and other objects. All of them have a unique hash identifier which can be used to request more information.
 
 ## Broadcasting Mechanisms
 
