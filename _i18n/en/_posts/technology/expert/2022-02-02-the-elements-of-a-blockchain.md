@@ -17,13 +17,12 @@ The verification of data is an important aspect when building a data structure o
 
 [Hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) are mathematical one-way functions used to verify data in blockchains. They are applied in several important steps from creating an address, to proving ownership, and even verifying the integrity of the blockchain itself. The first notable property of all hash functions is that they consume inputs of variable length and produce an output of fixed length called the *hash value*.
 
-Other key properties include: 
+Other key properties include:
 
-- They are irreversible one-way functions 
+- They are irreversible one-way functions
 - They are pseudo-random, meaning they produce seemingly random outputs from two similar inputs
 - They are unlikely to produce the same output for two different inputs
 - They are deterministic in that they always produce the same output from a given input.
-
 
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_D.jpg)
 ![Hash Function Properties](/assets/post_files/technology/expert/2.2-hash-functions/hash_function_M.jpg)
@@ -77,14 +76,14 @@ There are challenges to creating [consensus in distributed systems]({{ site.base
 
 We take an in-depth look at [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW), the consensus and *Sybil-resistance* mechanism used in Horizen, Bitcoin and most other public blockchains.
 
-PoW creates a bridge between the physical and the real world and maintains the block creation process. There are different mining algorithms used in PoW and they have several things in common. 
+PoW creates a bridge between the physical and the real world and maintains the block creation process. There are different mining algorithms used in PoW and they have several things in common.
 
 ![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_D.jpg)
 ![Hash Cash Proof of Work (PoW)](/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_M.jpg)
 
 ## The Peer-to-Peer Network
 
-Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers spread across the globe. Because the nodes of the network run independently from one another, the infrastructure as a whole (the distributed [*Peer-to-Peer network*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %})) is highly resilient. 
+Public blockchains are commodidies, a digital good that anyone with an internet connection can access. Nobody owns these commodities, so there is no central provider for their infrastructure. Instead, the infrastrucuture is provided by many independent peers spread across the globe. Because the nodes of the network run independently from one another, the infrastructure as a whole (the distributed [*Peer-to-Peer network*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %})) is highly resilient.
 
 ![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_D.jpg)
 ![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion](/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_M.jpg)

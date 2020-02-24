@@ -15,7 +15,7 @@ When you install and set up a wallet on your phone or computer the first thing y
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_D.jpg)
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
 
-First a private key is randomly generated then a public key is calculated from the newly generated private key. Addresses are derived from a public key in two main steps: first by hashing the public key and second, by *Base58Check* encoding it.
+First a private key is randomly generated then a public key is derived from the newly generated private key. Addresses are derived from a public key in two main steps: first by hashing the public key and second, by *Base58Check* encoding it.
 
 If you have read [our last article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) you know that the security of any public key cryptography (PKC) scheme relies on one property: It should be easy to derive a public key from a private key, but it must be infeasible to reverse that operation and derive a private key from a given public key.
 
