@@ -10,11 +10,11 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [zenip_process, a_cross_sectional_overview_of_cryptoasset_governance, who_controls_bitoin_core, zcash_placeholder_considerations, bitcoin_governance, zcash_and_the_founder_incentive_trilemma]
 ---
 
-One of the most highly valued properties of public blockchain protocols is their level of decentralization. Usually, there is a lot of focus on how decentralized the block generation process is but little on how code and other changes are decided upon. Governance is the keyword here.
+One of a blockchain protocol's most highly valued properties is its level of decentralization. There is usually intense scrutiny of the process for generating new blocks, but less focus on the process for changing a protocol's code. Governance is the keyword here.
 
-While there is no deterministic way of assigning a "decentralization score" to a given project, some certainly seem to be goverened by a larger and more diverse group of people than others and you may consider these as being more decentralized.
+While there is no deterministic way of assigning a "decentralization score" to a given project, some certainly seem to be goverened by a larger and more diverse group of people than others. Some may conclude that a large governing body means a more decentralized project.
 
-This doesn't mean that there have been no attempts at quantifying decentralization. Metrics such as the [*minimum Nakamoto coefficient*](https://news.earn.com/quantifying-decentralization-e39db233c28e) based on the ideas of the [*Gini Coefficient*](https://en.wikipedia.org/wiki/Gini_coefficient) and [*Lorenz Curves*](https://en.wikipedia.org/wiki/Lorenz_curve) have been developed to measure decentralization objectively. The minimum Nakamoto coefficient is determined by assigning a decentralization score to the different subsystems of a blockchain (mining, clients, developers, exchanges, nodes and wallet distribution) and aggregating those scores into an overall score.
+There have been some attempts at quantifying decentralization. Metrics such as the [*minimum Nakamoto coefficient*](https://news.earn.com/quantifying-decentralization-e39db233c28e) based on the ideas of the [*Gini Coefficient*](https://en.wikipedia.org/wiki/Gini_coefficient) and [*Lorenz Curves*](https://en.wikipedia.org/wiki/Lorenz_curve) have been developed to measure decentralization objectively. The minimum Nakamoto coefficient is determined by assigning a decentralization score to the different subsystems of a blockchain (mining, clients, developers, exchanges, nodes and wallet distribution) and aggregating those scores into an overall score.
 
 Lets define governance before we dive into the topic:
 
@@ -26,85 +26,85 @@ In order to address these question practically, they have to be approached in re
 - then choose them and
 - lastly, have them make decisions.
 
-This makes it sound rather straight forward and in reality things are a little more complex. In this article, we want to give an overview of what types of mechanisms there are to make decisions in a decentralized environment and explain how we at Horizen think about governance.
+This makes it sound rather straight forward, but in reality things are a little more complex. In this article, we want to give an overview of decision making mechanisms used in a decentralized environment and explain how Horizen thinks about governance.
 
 ## Choosing the Deciders
 
-In a perfect world every stake holder has a say when it comes to how the deciders of a project are chosen and ideally there would be some sort of "fair" vote on it - whatever fair means in this context.
+In a perfect world, every stakeholder has a say when it comes to how the deciders of a project are chosen. Ideally there would be some sort of "fair" vote - whatever "fair" means in this context.
 
-Realistically, there cannot always be a process in place for how to choose the deciders. Most projects in the blockchain space start with a few like-minded people having an idea for what their ideal cryptocurrency, dApp or blockchain platform should look like. Often times they find each other in a project similar to what they want to build themselves.
+Realistically there cannot always be a process to choose the deciders. Most projects in blockchain start with a few like-minded people with an idea of what their ideal cryptocurrency, dApp or blockchain platform should look like. Often times they find themselves already involved in a similar project. 
 
-All of these projects started working on their idea at some point. The group of people that has formed around an idea will than gravitate towards a focal point for the development of the project. Most often this is a GitHub repository or organization.
+A project's founding team will then gravitate toward a development focal point. Most often this focal point is a GitHub repository or organization.
 
-At the time people start putting actual work into the realization of the project idea, individuals will start to build a reputation - good or bad - and this is the organic way of how deciders emerge from the group. People that put in more time, more work and have better ideas will naturally be recognized as the thought leaders. They will usually take on leading roles in the development process, become repository maintainers or admins.
+As people spend time contributing to a project, they will build a reputation - good or bad - and this reputation is usually how deciders emerge from the group. People that put in more time, more work, and have better ideas will naturally be recognized as the thought leaders. They will usually take on leading roles in the development process, become repository maintainers or admins.
 
-Once a public open-source project gains momentum and people outside the initial group start to join, some of them will consequently get involved in the decision making. By supporting a given project an individual is (conciously or not) signalling support for the direction of the project and the approach the project has taken on governace thus far.
+Once a public open-source project gains momentum and people outside the initial group join, some of them will consequently get involved in the decision making. By supporting a given project, an individual is signalling support for the direction of the project and the project's approach to governance.
 
-Some projects have a process in place for deciding who gets to have a say in governance decision others do not. When a form of delegated governance is used, a fixed number of validators or block producers is chosen. These entities not only take care of maintaining the blockchain, but also have influence on decisions around the code, especially its consensus critical parts.
+Some projects have a process in place for deciding who does and does not participate in decision making. When a form of delegated governance is used, a fixed number of validators or block producers is chosen. These entities take care of maintaining the blockchain, and have influence on decisions around the code, especially its consensus critical parts.
 
 ## Decisions in the Early Stages
 
-In the early stages of open-source projects those who emerged from the founding stage with the best reputation and largest social capital will get to make decisions. The people with the necessary backing can, at their discretion, introduce governance processes. Improvement proposal processes are one example we will look at more closely later in this article.
+In the early stages of open-source projects, people with the best reputation and largest social capital will get to make decisions. The people with the necessary backing can, at their discretion, introduce governance processes. Improvement proposal processes are one example we will look at more closely later on.
 
-At this time those decisions are usually not very critical as the network has not accrued much real-world value. This is not to say that decisions made at the early stages of a blockchain project cannot be mission critical, but they don't effect an existing user base yet.
+In the project's early days, these decisions are usually not very critical as the network has not accrued much real-world value. This is not to say that decisions made at the early stages of a blockchain project cannot be mission critical, but they don't effect an existing user base.
 
-But what does decide mean anyways? What types of decisions typically have to be made in a blockchain project? There is a wide range of decision with varying degrees of consequnces. Some design decisions that are made in the very beginning include:
+But what does decide mean anyways? What types of decisions typically have to be made in a blockchain project? There is a wide range of decisions with varying degrees of consequnces. Some design decisions include:
 
 - the programming language of the client
 - the consensus mechanism
-- block production parameters like block time, block size, etc.
-- support for smart contracts and if so, using which programming language,
+- block production parameters like block time, block size, etc...
+- support for smart contracts and if so, using which programming language
 - native support for off-chain scaling solutions like [sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) or state channels
-- and much more.
+- and much more
 
 ### Chosing a Consensus Mechanism
 
-An important design decision for a blockchain project is the choice of the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}), and in case of [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains, the mining algorithm. These types of decisions effect the economies of the project, as well as the ecosystem around the protocol. When there is mining, existing miners with specialized hardware for a wide-spread mining algorithm can be targeted or the project can try to avoid ASICs being used and choose an algorithms better suited to be mined with general purpose hardware.
+An important design decision is the choice of the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}), and in case of [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains, the mining algorithm. These types of decisions effect the economies of the project, as well as the ecosystem around the protocol. When mining is involved, existing miners with specialized hardware can be approached. Conversely, projects can try to avoid ASICs and choose an algorithm better suited for general purpose hardware.
 
-Most blockchain projects are fundamentally based on Bitcoin's code and Horizen is no exception. After the code is forked it is modified according to the design decisions that were previously made. Extending the core client with usefull libraries or APIs will increase the attractiveness for developers and therefore in the long run also for users, as those usually benefit from more developer activity. How to extend and enhance the code of the initial release will mostly be decided upon by those with social capital in the projects community.
+Most blockchain projects are fundamentally based on Bitcoin's code, and Horizen is no exception. After code is forked, it is modified according to new design decisions. Extending the core client with usefull libraries or APIs will increase the attractiveness for developers and users. Decision on how to extend and enhance the initial release code will mostly be made upon by those with social capital.
 
-If a project is build from scratch there are some additional decisions to be made. What language the blockchain client or deamon is written in influences what type of developers the project will attract.
+If a project is built from scratch, there are additional decisions to be made. For example, the blockchain client or deamon's language will influence the type of developers the project will attract.
 
-The types of decisions above mostly effect new and emerging projects, but what about those that have been live for a while and that already have an ecosystem around them? Discussing all types of decisions would blow the scope of this article, but over the last couple of years one type of decision has proven to challenge the decision makers of all blockchain projects alike: how do we scale?
+The above decisions mostly effect new projects, but what about projects with an ecosystem and a history of performance? Discussing all types of decisions would blow the scope of this article, but one decision has challenged the decision makers of all projects: how do we scale?
 
 ### Deciding How to Scale
 
 The best examples of this decision type are most likely the [block size limit controversy](https://en.bitcoin.it/wiki/Block_size_limit_controversy) in Bitcoin from 2015-2017 as well as the scalibility discussions in and around [Eth2.0](https://github.com/ethereum/eth2.0-specs).
 
-As we said earlier it is hard to create a "decentralization score" for a public blockchain, but can we come up with a desirable level of decentralization that we deem necessary for any public network? This is a tough question and the short answer is no. Depending on the use case different levels of decentralization are required. For a network mainly providing verifiable scarcity of in-game artefacts decentralization is arguably less important than a protocol providing a global *store of value*.
+As we said earlier, it is hard to create a "decentralization score" for a public blockchain, but can we come up with a desirable level of decentralization necessary for any public network? This is a tough question and the short answer is no. Depending on the use case, different levels of decentralization are required. For a network mainly providing verifiable scarcity of in-game artifacts, decentralization is arguably less important than a protocol providing a global *store of value*.
 
-The robustness of a system is proportional to its points of control. A single point of control leads to a single point of failure and low robustness, whereas many distributed points of low influence lead to more robust systems. On the other hand, less points of control lead to faster decision making and greater adaptability to external stimuli. As I said above: depending on the use-case either one of those properties can be more desirable and you cannot deem one better or worse than the other without considering the purpose of the project.
+The robustness of a system is proportional to its points of control. A single point of control leads to a single point of failure and low robustness, whereas many distributed points of low influence lead to more robust systems. On the other hand, fewer points of control lead to faster decision making and greater adaptability to external stimuli. As I said above: the use-case will determine which properties are more desirable.
 
 ## Different Governance Models
 
-Below, we will look at three different categories of governance systems that range from company-like structures in the delegated governance model to the democracy inspired approach of a Decentralized Autonomous Organization (DAO).
+Below we will look at three different categories of governance systems that range from company-like structures in the delegated governance model to the democracy inspired approach of a Decentralized Autonomous Organization (DAO).
 
 ### Delegated Governance
 
-In a delegated governance model the idea is to have users vote on a fixed number of block producers. To give you an idea, the larger projects around that use a delegated governance approach have between 21 and 50 delegates. On paper, delegated governance looks similar to representative democracies where the user casts a vote for their representatives, which in turn makes decisions on their behalf. They differ, in that the blockchain equivalent usually has no fixed terms and, more importantly, none of the processes around chosing the delegates are legally binding.
+In a delegated governance model, users vote on a fixed number of delegates. To give you an idea, large projects using a delegated governance approach have between 21 and 50 delegates. On paper, delegated governance looks similar to representative democracies where the user casts a vote for their representatives, which in turn makes decisions on their behalf. They differ in that blockchain delegates do no have fixed terms, and the processes for chosing the delegates are not legally binding.
 
-Effectively, projects using delegated governance models often resemble corporate structures rather than community driven open-source projects. The small number of delegates allows for an efficient collaboration of delegates, if this is for the better or worse is up to anyone to decide. As we said earlier, good or bad are not the right categories here.
+Effectively, projects using delegated governance models often resemble corporate structures more than they resemble community driven open-source projects. The relatively small number of delegates enables efficient collaboration, but also had drawbacks of centralization. Most delegated governance systems prefer performance over robustness. 
 
-Most delegated governance systems prefer performance over robustness and that is a legitimate choice. In the end users vote with their feet if these systems provide value to them or not.
+In the end, users vote with their time and attention on projects they find valuable. 
 
 ### Decentralized Governance
 
-Before we talk about decentralized governance we should take a stab at defining criteria for what decentralization means. As mentioned above, this won't yield a deterministic "decentralization score" but rather a common language and a framework we can use to discuss decentralization.
+Before we talk about decentralized governance, we should take a stab at defining criteria for what decentralization means. As mentioned above, this won't yield a deterministic "decentralization score" but rather a common language and a framework we can use to discuss decentralization.
 
 > *"Schneider[2013], responding to conceptual confusion in academia over political decentralization, finds that decentralization is political, administrative, and fiscal. Within the Bitcoin network, decisionmaking structures (chiefly orchestrated by Core developers) can be understood as political, nodes enforcing rulesets can be understood as administrators, and fiscal power is wielded by miners."* - Nic Carter, [A Cross-Sectional Overview of Cryptoasset Governance and Implications for Investors](https://coinmetrics.io/papers/dissertation.pdf)
 
-This very interesting view was taken from Nic Carters dissertation on blockchain governance. It confirms our view, that decentralization can be assessed on different levels of the project structure.
+This very interesting view was taken from Nic Carters dissertation on blockchain governance. It confirms our view, that decentralization can be assessed on different levels of a project structure.
 
-Bitcoin is the prime example for decentralized governance as its ecosystem grew in the most organic way, had the most time to evolve and the least attention at launch. The Schelling point for Bitcoin development is the [Bitcoin Core GitHub repository](https://github.com/bitcoin/bitcoin). If we adhere to the classification suggested by Schneider, this makes the GitHub repositories of a blockchain project the *political* focal point.
+Bitcoin is the prime example for decentralized governance because its ecosystem grew organically, it had the most time to evolve, and had minimal attention at launch. The Schelling point for Bitcoin development is the [Bitcoin Core GitHub repository](https://github.com/bitcoin/bitcoin). If we adhere to the classification suggested by Schneider, this makes the GitHub repositories of a blockchain project the *political* focal point.
 
 Repository maintainers have to sign every contribution with their PGP keys. Only contributions signed by one of the trusted maintainers can be merged into the main code base. This prevents people with extended access to the repository, such as GitHub employees, to insert malicious code without being noticed.
 
 > "Rather than base the integrity of the code off of GitHub accounts, Bitcoin Core has a continuous integration system that performs checks of trusted PGP keys that must sign every merge commit." - Jameson Lopp, [Who Controls Bitcoin Core](https://blog.lopp.net/who-controls-bitcoin-core-/)
 
-While this process does not make the security system unfailable - PGP keys can be stolen - the securtiy is certainly enhanced.
+While this process does not make the security system unfailable - PGP keys can be stolen - security is certainly enhanced.
 Another principle used to increase the security of the "political process" is the *principle of least priviledge*, an important concept in computer security. It describes the practice of limiting each users acccess rights to the very minimum that is required for them to do their work.
 
-Bitcoin does not have a *formal specification* as nobody has the authority to define what the system should do. Formal specifications are used to describe a system, to analyze its behavior, and to aid in its design by verifying key properties of interest. If one had to find the closest thing to a formal specification for Bitcoin, it would be the code of the Bitcoin Core repository.
+Bitcoin does not have a *formal specification* because nobody has the authority to define what the system should do. Formal specifications are used to describe a system, to analyze its behavior, and to aid in its design by verifying key properties of interest. If one had to find the closest thing to a formal specification for Bitcoin, it would be the code of the Bitcoin Core repository.
 
 #### Voting in Bitcoin
 
