@@ -4,10 +4,10 @@ type: article
 title: "Hash Functions"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/hash-functions/
-topic: expert
-level: advanced
+topic: technology
+level: expert
 chapter: "How Does a Blockchain Work?"
-further_reads: [the_state_of_hashing_algorithms]
+further_reads: [the_state_of_hashing_algorithms, the_cost_of_asic_design]
 ---
 
 The verification of data is an important aspect when building a [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) on a decentralized network. Participants need a way to reliably distinguish between valid data and malicious information.
@@ -15,24 +15,6 @@ The verification of data is an important aspect when building a [data structure]
 Hash functions are one-way mathematical functions used to verify data in blockchains. They are applied in several important ways such as creating an address, proving ownership, and verifying the integrity of the blockchain itself.
 
 The use cases of hash functions extend beyond blockchain technology though. In our article on the data structure of the blockchain we talked about other common data structures, such as *hash tables*. As the name suggests, those would not work without hash functions.
-
-## Table of Contents
-
-- [Properties of Hash Functions](#properties-of-hash-functions)
-- [Different Types of Hash Functions](#different-types-of-hash-functions)
-  * [Non-Cryptographic Hash Functions](#non-cryptographic-hash-functions)
-  * [Cryptographic Hash Functions](#cryptographic-hash-functions)
-- [Where are Hash Functions Used?](#where-are-hash-functions-used-)
-  * [Mining](#mining)
-  * [Block and Transaction Identifiers](#block-and-transaction-identifiers)
-  * [Merkle Trees](#merkle-trees)
-  * [Creating Addresses](#creating-addresses)
-  * [HTLCs](#htlcs)
-- [Hardware for Large-Scale Hashing](#hardware-for-large-scale-hashing)
-- [Attack Vectors](#attack-vectors)
-  * [Length Extension Attack](#length-extension-attack)
-  * [Birthday Attack](#birthday-attack)
-- [Summary](#summary)
 
 ## Properties of Hash Functions
 
@@ -131,9 +113,6 @@ Specialized hardware optimized for performing hash operations with a single spec
 
 Processors display trade-offs between versatility and efficiency. While CPUs (Central Processing Units) can handle many tasks at low efficiency. GPUs (Graphical Processing Units) are more efficient at certain tasks at the cost of overall versatility. At the other end of the scale, there are ASICs, which are only useful for one specific task, but are highly efficient.
 
-![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_D.jpg)
-![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_M.jpg)
-
 We have an article dedicated to [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}) at the end of this chapter. We will go into more detail on the intricacies of the mining process from a technical as well as economical perspective.
 
 ## Attack Vectors
@@ -142,16 +121,18 @@ Hash functions have been battle-tested for many years by now. During those years
 
 ### Length Extension Attack
 
-In a [*length extension attack*](https://en.wikipedia.org/wiki/Length_extension_attack) an attacker can use the hash of a message *m*, *hash(m)*, and the length of *m* to calculate *hash(m|m')*, where *m'* is a message of the attacker. He doesn't need to know what *m* is, just it's length. The SHA-2 family is vulnerable to this type of attack. There are no known exploits of this vulnerability in cryptocurrencies, but in order to protect against potential threats, most operations that involve hashing are performed twice in a row. An example would be constructing Merkle trees. In the graphic used earlier, you can see that the hash function *H* is denoted as the double hash, *SHA256(SHA256())*.
+In a [*length extension attack*](https://en.wikipedia.org/wiki/Length_extension_attack) an attacker can use the hash of a message *m* and the length of *m* to calculate *hash(m, m')*, where *m'* is a message of the attacker. He doesn't need to know what *m* is, just it's length. The SHA-2 family is vulnerable to this type of attack. There are no known exploits of this vulnerability in cryptocurrencies, but in order to protect against potential threats, most operations that involve hashing are performed twice in a row. An example would be constructing Merkle trees. In the graphic used earlier, you can see that the hash function *H* is denoted as the double hash, *SHA256(SHA256())*.
 
 ### Birthday Attack
 
-Another known attack on hash functions is the [*Birthday Attack*](https://en.wikipedia.org/wiki/Birthday_attack). It exploits the mathematics behind the [*birthday problem*](https://academy.horizen.global/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as there is one more person than days in a leap year. However, with just 23 people in the group, the chance of two of them sharing a birthday is already at 50\%, while it reaches 99.9\% with just 70 people.
+Another known attack on hash functions is the [*Birthday Attack*](https://en.wikipedia.org/wiki/Birthday_attack). It exploits the mathematics behind the [*birthday problem*](https://academy.horizen.global/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as there is one more person than days in a leap year. However, with just 23 people in the group, the chance of two of them sharing a birthday is already at 50%, while it reaches 99.9% with just 70 people.
 
 ![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_D.jpg)
 ![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_M.jpg)
 
 This relates to hash functions in that finding collisions in hash functions efficiently opens up potential exploits. The Birthday Attack reduces the number of required hash operations to find a collision (two inputs producing the same output).
+
+### Post-Quantum Security
 
 We would like to address the concern that quantum computers could one day break the security of hash function-based cryptographic schemes. We quote a section of a well-written article on [the state of hashing algorithms](https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de) by Raul Jordan to address the quantum-threat:
 
