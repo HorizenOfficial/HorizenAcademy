@@ -7,7 +7,7 @@ permalink: /technology/expert/blockchain-governance/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
-further_reads: [zenip_process, a_cross_sectional_overview_of_cryptoasset_governance, who_controls_bitoin_core, zcash_placeholder_considerations, bitcoin_governance, zcash_and_the_founder_incentive_trilemma]
+further_reads: [zenip_process, a_cross_sectional_overview_of_cryptoasset_governance, who_controls_bitcoin_core, zcash_placeholder_considerations, bitcoin_governance, zcash_and_the_founder_incentive_trilemma]
 ---
 
 One of a blockchain protocol's most highly valued properties is its level of decentralization. There is usually intense scrutiny of the process for generating new blocks, but less focus on the process for changing a protocol's code. Governance is the keyword here.

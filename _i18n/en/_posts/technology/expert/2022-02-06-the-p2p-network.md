@@ -62,7 +62,7 @@ A fully dynamic graph changes at a rate that prevents an adversary from learning
 
 ### Node and Network Failures
 
-When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-051-consensus-in-distributed-systems %}) we introduced two types of malfunctions at the network layer: *node failures* and *network failures*.
+When we talked about [distributed consensus]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) we introduced two types of malfunctions at the network layer: *node failures* and *network failures*.
 
 ![Node Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/node_failures_D.jpg)
 ![Node Failures in a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/node_failures_M.jpg)
@@ -78,7 +78,7 @@ Network failures are classified using their effect on message propagation, not b
 - In the *partially synchronous* model, messages arrive with a bounded delay, but the bound is not known.
 - In the *asynchronous* model, the message delay is unknown and unbound. This makes the asynchronous model the "hardest assumption" on which to build a reliable system.
 
-Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-050-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case it's peer goes offline? And how does it find a set of nodes to connect to in the first place?
+Not only does the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) have to account for *node failures* and *network failures*, but so does the P2P network itself. What does a node do in case it's peer goes offline? And how does it find a set of nodes to connect to in the first place?
 
 ## Peer Discovery
 
