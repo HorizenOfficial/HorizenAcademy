@@ -7,7 +7,6 @@ permalink: /technology/expert/wallets-advanced/
 topic: technology
 level: expert
 chapter: "Wallets"
-published: false
 ---
 
 By now you most likely know what a wallet is and what it does. A wallet generates a random private key *sk*, derives your public key *pk* using [*elliptic curve cryptography*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) and derives your address(es) from you public key. A wallet then stores your private key(s) and takes care of [*signing* transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}).
