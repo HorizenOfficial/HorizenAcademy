@@ -12,10 +12,10 @@ further_reads: [how_cryptography_redefines_private_property]
 
 Public-Key Cryptography is used to verify ownership on a blockchain. *Digital signatures* allow you to prove your knowledge of a private key corresponding to a particular address without revealing any information about it.
 
-To create a digital signature you need two components, a *message* (in most cases a transaction) and the private key. A verifier will use the message, the public key, and the digital signature as an input to the verification algorithm. This algorithm will then produce a binary output: either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction using this concept.
-
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
 ![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
+
+To create a digital signature you need two components, a *message* (in most cases a transaction) and the private key. A verifier will use the message, the public key, and the digital signature as an input to the verification algorithm. This algorithm will then produce a binary output: either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction using this concept.
 
 This mechanism is usually treated as a blackbox but we will disect the the inner workings of this cryptographic method in this article. Before we get into the nitty gritty, which requires some complex mathematics, we want to repeat a convention we already introduced in our elliptic curve cryptography article. If you know the difference between a *scalar* and a *vector* feel free to skip the next section and continue with [Generating the Signature](#generating-the-signature).
 
@@ -30,9 +30,14 @@ It is a convention that scalars are written with small letters, like the private
 
 It's important to note that the hash of a vector is a scalar. The [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) consumes the *tuple* of values as an input, and produces a scalar as an output.
 
-We use the \\(\bullet\\) operator when we are doing multiplication on the elliptic curve. When we are performing regular multiplication of scalars, we will use the \\(\cdot\\) operator. We added this little discourse because it should help you to keep track of what values are points on the curve (vectors) and what values are scalars.
+We use the \\(\bullet\\) operator when we are referring to multiplication on the elliptic curve.
+We use the \\(\cdot\\) operator when we are referring to regular multiplication of scalars. We added this little discourse because it should help you to keep track of what values are points on the curve (vectors) and what values are scalars.
 
-To Recap our previous articles: your secret or private key *sk* is a large random number. If you multiply the base point *P* used for the elliptic curve (secp256k1) with a private key, you get a public key *PK*. You now want to prove to the network that you know *sk* without revealing it, so how does that work?
+To recap our previous articles:
+
+- Your secret or private key *sk* is a large random number.
+- If you multiply the base point *P* used for the elliptic curve (secp256k1) with a private key, you get a public key *PK*.
+- Now you want to prove knowledge of *sk* to the network without revealing it.
 
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
 ![Keys](/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
@@ -97,14 +102,14 @@ $$
 \text{hash}(m, R) \bullet (PK + R) = s \bullet P
 $$
 
-**this proves you know the private key *sk* that corresponds to the public key *PK* as in** \\(sk \bullet P = PK\\).
+**this proves you know the private key *sk* that corresponds to the public key *PK***.
 
 Two conditions must be met in order for this to be the case:
 
 - If you know *sk*, then you must be able to provide working values for *m*, *R*, and *s*.
 - If you don't know *sk*, then you must not be able to provide working values for *m*, *R*, and *s*.
 
-### Being Able to Provide a Valid Signature
+### Being Able to Provide a Valid Signature With the Private Key
 
 Let's assume you know *sk*.
 First, you choose random value for *r* and a message *m* to sign. Next, you compute \\(R = r \bullet P\\). Lastly, you compute \\(s = \text{hash}(m,R) \cdot (sk + r)\\).
@@ -134,6 +139,8 @@ $$
 To do so, you would need to break the preimage resistance property (one-wayness) of the [hash function]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}). This means that you would have to find inputs to the hash function, specifically an *m* and *R*, that produce a certain output.
 
 Because blockchains use strong preimage resistant cryptographic hash functions, this proves our second claim. You cannot provide working values for *m*, *R*, and *s* if you don't know *sk*.
+
+### Not Revealing Information About the Private Key
 
 Now we only need to make sure a potential adversary doesn't learn anything about *sk* from publishing *s*. The message *m* and the point *R* are entirely independent of *sk*. Only *s* could potentially reveal anything useful about *sk*
 
@@ -170,7 +177,7 @@ $$
 \text{hash} (m,R) \bullet (PK + R) = s \bullet P
 $$
 
-In the context of cryptocurrencies, signatures are used to proof that you own a [UTXO set]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) and that you are entitled to spend it. One spends a UTXO by creating a transaction and using it as an input to create one or more new outputs. Each input spent needs to be signed.
+In the context of cryptocurrencies, signatures are used to proof that you own a UTXO-set and that you are entitled to spend it. One spends a UTXO by creating a transaction and using it as an input to create one or more new outputs. Each input spent needs to be signed.
 
 ### What the Digital Signature Looks Like
 
@@ -178,7 +185,7 @@ A transaction typically informs the network about a transfer of money or data. T
 
 Because *s* depends on the message *m*, the verification process is only successful if two conditions are met: The sender of the message knows the private key *sk* used to generate the UTXO's address AND the signature *(R, s)* was created for that specific transaction *m*.
 
-With cryptocurrencies, the message *m* is the unsigned part of a transaction. We cover what a transaction looks like in our article ["Blockchain as a Data Structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}).
+With cryptocurrencies, the message *m* is the unsigned part of a transaction. We cover what a transaction looks like in our article ["Blockchain as a Data Structure"]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}).
 
 The digital signature of that transaction consists of the x-coordinate of *R* and the sign of its *y*-value. This x-coordinate is concatenated with *s*, a 256-bit integer, after they have been converted to hexadecimal format.
 
@@ -195,7 +202,5 @@ We showed that multiplication on the curve, even with large numbers, is easy and
 Next we showed how an address is derived from a private key with the two most important steps being multiplication of the private key *sk* with a base point *P* to get the public key *PK* and then hashing *PK* to get an address. Because both multiplication and hashing are one-way functions it is not possible to reverse this process.
 
 We constructed the equation used to create and verify *digital signatures* and proved that only someone with knowledge of *sk* can produce a valid Signature *(R,s)* for a given message *m*. We also showed that you cannot compute the private key *sk* from the information contained in *s*.
-
-Lastly, we briefly talked about the signature being included in a transaction as an outlook on our last chapter [programming blockchain]({{ site.baseurl }}{% post_url /technology/expert/2022-07-01-programming-blockchain %}).
 
 If you made it this far you can consider yourself well equipped to learn about every other concept in blockchains. PKC is a fundamental concept that opens the door to understanding many other concepts, especially those related to privacy enhancing techniques such as [*confidential transactions*]({{ site.baseurl }}{% post_url /technology/expert/2022-05-05-confidential-transactions %}), [*ring signatures*]({{ site.baseurl }}{% post_url /technology/expert/2022-05-04-ring-signatures %}) and [*zero-knowledge Proofs*]({{ site.baseurl }}{% post_url /technology/expert/2022-05-06-zksnarks %}).
