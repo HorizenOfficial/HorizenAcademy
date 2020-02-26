@@ -12,10 +12,10 @@ further_reads: [why_bittorrent_mattered, anonymity_properties_of_the_bitcoin_P2P
 
 There are many ways to classify a blockchain. One of them is to determine if the blockchain is public or permissioned. Permissioned blockchains are meant for defined groups of people such as a consortium of companies that wants to share a consistent database.
 
-Public blockchains are commodities, digital goods that anyone with an internet connection can access. Nobody owns these commodities, so there is no central infrastructure provider. Instead, the infrastructure is provided by many independent peers, spread all over the globe. The distributed *Peer-to-Peer* (P2P) network of a decentralized blockchain is highly resilient because the network's nodes run independently from one another.  
-
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
 ![DAG](/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
+
+Public blockchains are commodities, digital goods that anyone with an internet connection can access. Nobody owns these commodities, so there is no central infrastructure provider. Instead, the infrastructure is provided by many independent peers, spread all over the globe. The distributed *Peer-to-Peer* (P2P) network of a decentralized blockchain is highly resilient because the network's nodes run independently from one another.
 
 In the article on blockchain as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}), we looked at the protocol at the [*application layer*](https://en.wikipedia.org/wiki/Application_layer). Here, tasks like transaction management, blockchain processing, and mining are handled and nodes are identified by their public keys or addresses.
 
