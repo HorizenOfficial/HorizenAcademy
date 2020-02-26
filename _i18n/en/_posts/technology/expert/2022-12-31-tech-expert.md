@@ -50,5 +50,7 @@ level: expert
         </p>
     </div>
 </div>
+  
 
-## The Next Chapters Are Coming Soon!
+
+### The Next Chapters Are Coming Soon!
