@@ -30,7 +30,7 @@ The limited resource in a PoW blockchain is computational power - and hence elec
 
 ## Creating a Block Step-by-Step
 
-After we have talked about [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail and covered [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) explaining PoW is straight forward:
+After we have talked about [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) in detail and covered [consensus in distributed systems]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-1-consensus-in-distributed-systems %}) explaining PoW is straight forward: First the miner collects transactions to include in the next block. After that the miner tries hashing the block header including a nonce until the resulting hash meets the target.
 
 ### Collecting Transactions
 
@@ -66,7 +66,7 @@ The terms target and *difficulty* are often used interchangeably. Technically, t
 
 The difficulty is a relative measure of the current target compared to the maximum target value.
 
-The target is adjusted regularly. With Horizen, the target is adjusted every 8064 blocks. This mechanism keeps the block time somewhat constant. When more miners join the network, hash power increases, and valid blocks are found more frequently on average. By lowering the target, and making the computation more difficult, the block time will be adjusted upwards.
+The target is adjusted regularly. With Horizen, the difficulty adjustment happens with every block, in case of Bitcoin it happens every 2016 blocks. This mechanism keeps the block time somewhat constant. When more miners join the network, hash power increases, and valid blocks are found more frequently on average. By lowering the target, and making the computation more difficult, the block time will be adjusted upwards.
 
 ## Bridging the Physical and the Digital World
 
@@ -107,9 +107,6 @@ All schemes have certain advantages and shortcomings. Network-bound approaches a
 #### CPU-bound Algorithms
 
 The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called *Application Specific Integrated Circuits* (ASICs), can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer an advantage in performance. Because ASICs are domain specific and expensive, most users don't have access to them.
-
-![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_D.jpg)
-![Different Hardware for Hashing](/assets/post_files/technology/expert/2.2-hash-functions/cpu_asic_M.jpg)
 
 #### Memory-bound Algorithms
 
@@ -234,10 +231,6 @@ We continued by looking at the block creation process. The process starts by gat
 
 PoW can take many forms and one distinguishing factor is whether they are interactive or non-interactive. While the PoW applied to the block creation process is non-interactive and can be verified at any point in time, the mechanism used to verify the capability of nodes on the Horizen network is interactive and based on the response time to a computational challenge.
 
-Next, we looked at the different criteria that define a "good" Proof of Work, different types of computational hardness, and which metrics can be used to measure them.
-
-We looked at the basis of the Equihash algorithm which is based finding a solutions to the Multi-Dimensional Generalized Birthday Problem.
-
-Lastly, we talked about some general vulnerabilities of distributed ledgers and how they are mitigated.
+Next, we looked at the different criteria that define a "good" Proof of Work, different types of computational hardness, and which metrics can be used to measure them. We looked at the basis of the Equihash algorithm which is based finding a solutions to the Multi-Dimensional Generalized Birthday Problem. Lastly, we talked about some general vulnerabilities of distributed ledgers and how they are mitigated.
 
 The one key takeaway from this article should be the following: You get **immutability** of data on a blockchain only if there is a **strong consensus mechanism** in place that makes the network participants decline invalid blocks, otherwise a blockchain is only **tamper-evident**.
