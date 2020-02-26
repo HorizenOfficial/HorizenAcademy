@@ -15,7 +15,7 @@ When you install and set up a wallet on your phone or computer the first thing y
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_D.jpg)
 ![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
 
-First a private key is randomly generated then a public key is derived from the newly generated private key. Addresses are derived from a public key in two main steps: first by hashing the public key and second, by *Base58Check* encoding it.
+First, a private key is randomly generated. Next, a public key is derived from the newly generated private key through elliptic curve multiplication. Addresses are derived from public keys in two main steps: first by hashing the public key and second, by *Base58Check* encoding it.
 
 If you have read [our last article]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) you know that the security of any public key cryptography (PKC) scheme relies on one property: It should be easy to derive a public key from a private key, but it must be infeasible to reverse that operation and derive a private key from a given public key.
 
@@ -27,7 +27,7 @@ Now let's get into the actual process of creating an address from scratch!
 
 ## Generating the Private Key
 
-The purpose of a private key is to prove ownership of a [UTXO]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) set by creating digital signatures to authorize spending.
+The purpose of a private key is to prove ownership of a UTXO-set by creating [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) to authorize spending.
 
 Private keys are sometimes also called *secret keys* or *spending keys*. When doing ECC math, the spending key is usually abbreviated with *sk* for that reason. A spending key comprises 32 bytes, or 256 bits of data. This has two important implications:
 
@@ -85,7 +85,9 @@ If you wonder how computationally expensive it is to multiply such a large numbe
 
 We already mentioned that the elliptic curve being symmetric about the *x*-axis is a property, that makes  compressing a point on the curve very handy. For every *x*-value, there are only two possible *y*-values and they only differ in their sign.
 
-$$y = \pm \sqrt{x^3 + ax + b}$$
+$$
+y = \pm \sqrt{x^3 + ax + b}
+$$
 
 If you throw out the *y*-value all together and add a byte indicating the sign of *y* a reduction in size by almost 50% is achieved.
 
@@ -97,20 +99,22 @@ The next step to getting your address is adding a network byte to the front. Dep
 
 After we have added the network byte, a checksum is calculated and concatenated with the address. This is a security measure to prevent addresses that were corrupted during transmission from being used by a wallet. The checksum is obtained by hashing the address including the network byte twice and taking the first 4 bytes of the result.
 
-    SHA256(SHA256(network byte+encrypted public key))
+$$
+SHA256(SHA256(network byte+encrypted public key))
+$$
 
-This checksum is then added to the end of the compressed public key.
+This checksum is then added to the end of the compressed public key. What we have now is a valid address, but there is one last step to it.
 
-What we have now is a valid address, but there is one last step to it. *Base58Check* is a way to convert bits into alphanumeric characters, excluding the four characters 0, O, I, and l. Base58Check excludes these characters to reduce errors when copying addresses manually and proofreading them.
+*Base58Check* is a way to convert bits into alphanumeric characters, excluding the four characters 0, O, I, and l to reduce errors when copying addresses manually and proofreading them.
 
 ### Hierachichal Deterministic Address Generation - HD Wallets
 
-Most wallets today are HD wallets - hierarchical deterministic wallets. They use a single seed or *master private key* which can be derived from your mnemonic phrase, to generate a number of private keys. This is done by adding a counter to the seed and incrementing it by one for every new private key generated.
+Most wallets today are HD wallets - hierarchical deterministic wallets. They use a single seed or *master private key* which can be derived from your mnemonic phrase, to generate a number of *child private keys*. This is done by adding a counter to the seed and incrementing it by one for every new private key generated.
 
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_D.jpg)
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_M.jpg)
 
-These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets more closely.
+These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets and different address derivation methods more closely.
 
 ## Summary
 
