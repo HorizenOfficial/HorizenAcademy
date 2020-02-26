@@ -134,7 +134,7 @@ If a transition fails or halts, there is a timeout mechanism after which the sys
 
 ### Raft
 
-[*Raft*](https://raft.github.io/?source=post_elevate_sequence_page) is another consensus mechanism published in 2013. It set out to be easier to understand and implement than Paxos. It also uses timeouts in case a state trasition fails and can therefore handle asynchronous environments. But just like Paxos, it fails to achieve consensus with Byzantine actors and is only simple fault-tolerant.
+[*Raft*](https://raft.github.io/?source=post_elevate_sequence_page) is another consensus mechanism published in 2013. It set out to be easier to understand and implement than Paxos. It also uses timeouts in case a state transition fails and can therefore handle asynchronous environments. But just like Paxos, it fails to achieve consensus with Byzantine actors and is only simple fault-tolerant.
 
 What we can learn from Paxos and Raft is that handling Byzantine behavior in a asynchronous environment is a hard problem.
 

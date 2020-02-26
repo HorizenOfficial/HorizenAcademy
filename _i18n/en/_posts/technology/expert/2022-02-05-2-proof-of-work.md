@@ -77,7 +77,7 @@ Proof of Work is the bridge connecting the digital and the physical world. It ti
 While a Proof of Work system typically uses a one-way function like a hash function, a proof of work algorithm can be more than just a hash function.
 The most used type of Proof of Work is the Hashcash style PoW depicted in the graphic above. Hashcash was introduced in 1997 by Adam Back as a measure against spam. Recipients would require the sender to perform a Proof of Work in order to accept the mail. While this computational overhead does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above: performing repeated hashing until the resulting hash is less than some target value.
 
-## Interactive Proof of Work
+### Interactive Proof of Work
 
 In general, a Proof of Work can be one of two things: a non-interactive *solution-verification protocol* or an interactive *challenge-response protocol*. Horizen uses both, each for a different purpose.
 

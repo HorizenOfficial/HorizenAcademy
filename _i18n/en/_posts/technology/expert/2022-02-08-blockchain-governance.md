@@ -204,7 +204,7 @@ The idea of the Horizen DAO is to have stakeholders in the Horizen ecosystem vot
 
 There are many types of voting mechanisms and electoral systems to choose from. The Horizen DAO will use a form of *liquid democracy* as the mechanism for voting. A thorough discussion of voting schemes would blow the scope of this article. Still, we would like to outline the core idea behind liquid democracy.
 
-#### Liquid Democracy
+### Liquid Democracy
 
 The two existing democratic forms from traditional governance processes are *representative democracy* and *direct democracy*. History's first forms of democracy were direct democracies. They offered their participants fairness, accountability, and control, but they don’t scale well with an increasing number of participants.
 
