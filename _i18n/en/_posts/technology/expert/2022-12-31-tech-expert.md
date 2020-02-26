@@ -41,7 +41,7 @@ level: expert
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">What is a Blockchain?</h5>
+        <h5 class="intro-article-title">How does a Blockchain Work?</h5>
         <p class="mb-1">
             This second chapter of the Technology Expert section is the most extensive chapter. We start with an overview of the different elements of a blockchain, before we look into each element individually. We start with hash functions, continue with public-key cryptography and consensus mechanisms and finish with the P2P network, mining and blokchain governance.
         </p>
