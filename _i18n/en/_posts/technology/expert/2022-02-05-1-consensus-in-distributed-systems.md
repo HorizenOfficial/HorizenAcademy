@@ -108,7 +108,6 @@ A blockchain is similar to a replicated state machine in that it also starts wit
 Consensus among the individual nodes of a replicated state machine is defined via two properties: *liveness* and *safety*.
 
 - *Liveness* (or *termination*) means that all non-faulty nodes eventually compute a new state according to the state transition logic when an external event happens. In simple terms it means, the system doesn't halt, and always reacts to events.
-
 - *Safety* (or *agreement*) means that all non-faulty nodes transition to the same state after a given external event. This means, all nodes will be in synch eventually.
 
 All non-faulty nodes reach a new state eventually (liveness), and all nodes agree on a new block (safety). With this new terminology, we can refine our definition of the holy grail of consensus mechanisms:
