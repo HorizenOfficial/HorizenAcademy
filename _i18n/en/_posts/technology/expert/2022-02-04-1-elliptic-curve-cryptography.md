@@ -183,7 +183,8 @@ The graph above shows the finite field where each point represents a valid, disc
 
 In order to graphically add two points together, one again connects them with a straight line. This line may "wrap around" the field several times before it intersects with another point or discrete value: the result of the addition *R*.
 
-![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition.gif)
+![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_D.gif)
+![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_M.gif)
 
 Before we move on to show you how ECC is used to securely sign transactions and prove you are the sole owner of a digital asset, we take a look at how your address is generated from your private key in the next article. After all, the purpose of ECDSA (Elliptic Curve Digital Signature Algorithm) is to prove knowledge of a private key that controls a set of UTXOs without actually revealing it.
 
