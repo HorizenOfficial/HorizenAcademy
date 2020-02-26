@@ -12,15 +12,15 @@ further_reads: [elliptic_curve_cryptography_a_gentle_introduction, what_is_the_m
 
 All public-key cryptography (PKC) schemes have in common that they are based on key pairs - a public and a private key. This is also referred to as asymmetric cryptography.
 
-While a public key can be distributed openly to any potential sender of an encrypted message, only the owner of the corresponding private key can decrypt those messages. The public key is generated from the private key using a mathematical [one-way function](https://en.wikipedia.org/wiki/One-way_function). PKC schemes can also be used to create digital signatures.
+While a public key can be distributed openly to any potential sender of an encrypted message, only the owner of the corresponding private key can decrypt those messages. The public key is generated from the private key using a mathematical one-way function. PKC schemes can also be used to create digital signatures.
 
 Digital signatures are created using a message to be signed and a private key as an input. A verifier can validate the signature using the corresponding public key without gaining knowledge about the private key used to sign the message.
 
 ## Public-Key Cryptography
 
-Public-key cryptography is mostly used for the confidential exchange of information like encrypted emails using [Pretty Good Privacy (PGP)](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) or similar encryption methods. Other use cases are sender authentication using *digital signatures* and verifying ownership in cryptocurrencies.
+Public-key cryptography is mostly used for the confidential exchange of information like encrypted emails using Pretty Good Privacy (PGP) or similar encryption methods. Other use cases are sender authentication using *digital signatures* and verifying ownership in cryptocurrencies.
 
-One can also construct [*hybrid cryptosystems*](https://en.wikipedia.org/wiki/Hybrid_cryptosystem) composed of symmetric and asymmetric cryptographic schemes. Asymmetric cryptography is computationally more expensive than symmetric schemes. In hybrid cryptosystems, a PKC scheme is used to initialize a secure communication by exchanging a key for asymmetric encryption first. After that, the participants use the symmetric scheme to reduce computational overhead. Especially when large amounts of data need to be securely transmitted this type of hybrid system is useful.
+One can also construct [hybrid cryptosystems](https://en.wikipedia.org/wiki/Hybrid_cryptosystem) composed of symmetric and asymmetric cryptographic schemes. Asymmetric cryptography is computationally more expensive than symmetric schemes. In hybrid cryptosystems, a PKC scheme is used to initialize a secure communication by exchanging a key for asymmetric encryption first. After that, the participants use the symmetric scheme to reduce computational overhead. Especially when large amounts of data need to be securely transmitted this type of hybrid system is useful.
 
 Two of the most popular PKC schemes are RSA (Rivest - Shamir - Adleman) and Elliptic Curve Cryptography (ECC).
 
@@ -30,7 +30,7 @@ Before ECC became popular, almost all public-key schemes were built using crypto
 
 As we said before, public keys are derived from a private key using a mathematical one-way function. The security is therefore based on the [*computational hardness*](https://en.wikipedia.org/wiki/Computational_hardness_assumption) of reversing the one-way function.
 
-With PKC schemes like RSA, using modular arithmetic, the security is based on the assumed hardness of [integer factorization](https://en.wikipedia.org/wiki/Integer_factorization) ("assumed" because there no known way of proving (unconditional) hardness). In elliptic curve cryptography, the security assumption is based on the hardness of the [*discrete log problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html).
+With PKC schemes like RSA, using modular arithmetic, the security is based on the assumed hardness of [integer factorization](https://en.wikipedia.org/wiki/Integer_factorization) ("assumed" because there no known way of proving (unconditional) hardness). In elliptic curve cryptography, the security assumption is based on the hardness of the [discrete log problem](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html).
 
 RSA and its modular-arithmetic-based friends are still important today and are often used alongside ECC. Rough implementations of the mathematics behind RSA can be built and explained rather easily.
 
@@ -56,19 +56,19 @@ On the elliptic curve, any point can be viewed as an arrow pointing in a certain
 
 Multiplication and division are also defined on the curve. The multiplication of a point on the curve with a *scalar* is easy to perform, the division of a point is computationally difficult. It is crucial for any PKC scheme to be able to easily compute a public key from a private key but the reverse operation must be infeasible. Being able to easily perform multiplications on a curve but unable to perform division efficiently creates the basic building block of a PKC scheme.
 
-The infeasibility of performing division on the elliptic curve is called the [*discrete logarithm problem*](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html) or sometimes also called the *elliptic curve discrete logarithm problem* (ECDLP).
+The infeasibility of performing division on the elliptic curve is called the [discrete logarithm problem](https://www.doc.ic.ac.uk/~mrh/330tutor/ch06s02.html) or sometimes also called the *elliptic curve discrete logarithm problem* (ECDLP).
 
 While all this might sound very complex at first you will see shortly that a graphical approach is sufficient to develop an intuition for the math used on elliptic curves. This intuition should lead you to an understanding of the security assumption and serve as a basis for understanding the upcoming two articles on how a public-private key pair is related and how digital signatures work.
 
 ## Math on the Elliptic Curve
 
-*We already covered the basic operations of adding two points and multiplying points with *scalars* in the [advanced section](https://academy.horizen.global/technology/advanced/public-key-cryptography/) of the Horizen Academy. Feel free to catch up on the basic operations before you continue reading this article.*
+**Note**: We already covered the basic operations of adding two points and multiplying points with *scalars* in the [advanced section](https://academy.horizen.global/technology/advanced/public-key-cryptography/) of the Horizen Academy. Feel free to catch up on the basic operations before you continue reading this article.
 
 Adding two points (*P* and *Q*) on the curve can be done graphically by connecting them with a straight line, taking the intersection of that line with the curve and projecting it across the x-axis (*R*). When a point is added to itself the tangent line at that point is taken, the intersection with the curve found and again projected across the x-axis.
 
 ![Addition](/assets/post_files/technology/expert/2.3.1-ecc/addition.jpg)
 
-Note how the graphical approach does not allow you to perform division. You would start by projecting the point *R* back across the x-axis, but finding the straight line that yielded the intersection you are looking at is infeasible.
+Note how the graphical approach does not allow you to perform division. You would start by projecting the point *R* back across the x-axis, but finding the straight line that yielded the intersection you are looking for is infeasible.
 
 Your private key is a large random number, which when multiplied with a *base point* (sometimes also called *generator point*) on the curve yields your public key. The key takeaway is that your private key is a large random number or *scalar*, which multiplied with the *base point* yields your public key, another point on the curve that can also be referred to as a *vector*.
 
@@ -94,7 +94,7 @@ The first thing that might come to mind is performing 9 point additions.
 
 $$10 \cdot P = P + P + P + P + P + P + P + P + P + P$$
 
-Because the [*distributive property*](https://en.wikipedia.org/wiki/Distributive_property)
+Because the [distributive property](https://en.wikipedia.org/wiki/Distributive_property)
 
 $$n \cdot P + m \cdot P = (n + m) \cdot P$$
 
@@ -181,12 +181,12 @@ where *p* is a large prime. For the secp256k1 curve used in Bitcoin and Horizen,
 
 The graph above shows the finite field where each point represents a valid, discrete value of a point on the curve. Notice how the symmetry with regards to the x-axis is preserved.
 
-In order to graphically add two points together, one again connects them with a straight line. This line may "wrap around" the field several times before it intersects with another point or discrete value: the result of the addition *R*.
+In order to graphically add two points together, one again connects them with a straight line. This line may "wrap around" the field several times before it intersects with another point or discrete value: the result of the addition *R*. Please note that in reality, the finite field is multidimensional. The two-dimensional finite field shown here only serves as an easy to follow example.
 
 ![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_D.gif)
 ![Finite Field Addition](/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_M.gif)
 
-Before we move on to show you how ECC is used to securely sign transactions and prove you are the sole owner of a digital asset, we take a look at how your address is generated from your private key in the next article. After all, the purpose of ECDSA (Elliptic Curve Digital Signature Algorithm) is to prove knowledge of a private key that controls a set of UTXOs without actually revealing it.
+Before we move on to show you how ECC is used to securely sign transactions and prove you are the sole owner of a digital asset, we take a look at how your address is generated from your private key in the next article. After all, the purpose of Elliptic Curve Digital Signature Algorithm (ECDSA) is to prove knowledge of a private key that controls a set of UTXOs without actually revealing it.
 
 ## Summary
 
