@@ -145,20 +145,18 @@ In order to spend an [*Unspent Transaction Output* (UTXO)]({{ site.baseurl }}{% 
 
 Most blockchains also support a more complex type of transaction verification, based on several digital signatures. These multi-signature transactions, mostly called *MultiSig*, rely one more than one signature as the name suggests. Generally speaking, multi signature accounts follow an *M-of-N* scheme, where *N* is the total number of keys that can provide valid signatures and *M* is the required number of signatures to create a valid transaction. There are several useful applications for MultiSig accounts.
 
-### Dividing Responsibility
+### MultiSig Benefits
 
 First, by requiring several valid signatures the responsibility for keeping a set of coins can be divided between several people. For instance, a married couple where both partners have their own private key could have two MultiSig acounts. One can act as a spendings account and the money from it is spent by either one of the two keys. A seperate savings account can require both keys to sign off on any outgoing transaction.
 
 The spendings account in this example would be called a 1-of-2 scheme: There is a total of 2 keys that can provide valid signatures and 1 of them is required to authorize a transaction.
 The savings account is a 2-of-2 scheme: 2 keys can provide a valid signature, and both are required to sign a valid transaction.
 
-### Avoiding Single Points of Failure
-
 Second, you reduce the risk of losing access to your money or being hacked, by keeping funds in a MultiSig address and storing your keys in different locations. You could store your money in a 2-of-3 address and keep the three keys on your laptop, your phone and a hardware wallet. If one of those devices breaks you can still access your funds and an attacker would need to compromise two devices to steal money. Hence, this setup eliminates single points of failure.
 
 For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.casa/) offers solutions for 3-of-5 MultiSig schemes where they store one key for you. As long as you have access to two of your keys, you will alwasy be able to recover your funds.
 
-#### How it Works
+### How it Works
 
 The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction.
 
@@ -190,8 +188,8 @@ There are several wallet implementations that offer multi signature support. Thi
 
 Verification of a transaction from a P2SH address involves checking if the full redeemScript hashes to the redeem script hash of the UTXO being spent. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public-key-based spending conditions included in the full redemm script.
 
-![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address_D.jpg)
-![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/spending-from-multisig-address_M.jpg)
+![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_D.jpg)
+![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_M.jpg)
 
 To spend from a P2SH address, the following steps are necessary:
 
