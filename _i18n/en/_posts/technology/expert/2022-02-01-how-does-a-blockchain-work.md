@@ -116,7 +116,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %}">
-            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/governance.png" alt="Blockchain Governance" />
+            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/governance.svg" alt="Blockchain Governance" />
         </a>
     </div>
     <div class="col-md-9">
