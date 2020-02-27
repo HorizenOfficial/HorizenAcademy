@@ -57,7 +57,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
             Next we look at public-key cryptography, the concept that allows digital scarcity and ownership of data to exist. We have split this important article up in three parts: Elliptic Curve Cryptography, a specifc PKC scheme, the process of deriving an address from a private key and lastly, digital signatures.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}">Read Subchapter</a>
         </p>
     </div>
 </div>
@@ -74,7 +74,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
             One of the great innovations introduced with blockchain was solving the Byzantine Generals Problem: coming to consensus in a setting with many unknown and untrustworthy actors. Consensus mechanisms allow blockchains to achieve just that. In this subchapter we explain consensus in distributed systems, Proof of Work and other consensus mechanisms.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}">Read Subchapter</a>
         </p>
     </div>
 </div>
