@@ -7,6 +7,7 @@ permalink: /technology/expert/wallets-advanced/
 topic: technology
 level: expert
 chapter: "Wallets"
+further_reads: [private_key_generation_in_bitcoin_wallets]
 ---
 
 By now you most likely know what a wallet is and what it does. A wallet generates a random private key *sk*, derives your public key *pk* using [*elliptic curve cryptography*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) and derives your address(es) from you public key. A wallet then stores your private key(s) and takes care of [*signing* transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}).
@@ -159,16 +160,17 @@ For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.cas
 
 #### How it Works
 
-The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction. A regular "single-signature" transaction only involves the verification of one signature. The Pubkey Script is based on the public key the money is sent to. The digital signature that can authorize spending of this money must be based on the corresponding private key.
+The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction.
 
+![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-signature-spending.png)
 
+A regular "single-signature" transaction only involves the verification of one signature. The Pubkey Script is based on the public key the money is sent to. The digital signature that can authorize spending of this money must be based on the corresponding private key.
 
-The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script), which serves the same function as the pubkey script: defining the spending conditions of the UTXO in question.
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-signature-spending.png)
 
-**TKKG** pubkey script lock, sig script key, simple graphic
-+++++ pubkey-script-lock.jpg
+The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script). The hash of the redeem script functions as an address - a *Pay to Script-Hash* (P2SH) address. This address and hence the information contained in the redeem script is included in the pubkey script.
 
- The redeem script of a multi-sig account entails the minimum number of signatures *M* that must be provided, as well as the set of keys *N* that can provide a valid signature. Redeem scripts can also involve other conditions, such as a time-sensitive component like in the case of [*timelocks*](https://en.bitcoin.it/wiki/Timelock), where funds are only spendable after a certain amount of time has elapsed.
+The redeem script of a multi-sig account entails the minimum number of signatures *M* that must be provided, as well as the set of keys *N* that can provide a valid signature. Redeem scripts can also involve other conditions, such as a time-sensitive component where funds are only spendable after a certain amount of time has elapsed.
 
 #### Creating a Multi Signature Address
 
