@@ -59,7 +59,7 @@ This allows the [data structure]({{ site.baseurl }}{% post_url /technology/exper
 
 We would like to introduce a distinction between *consensus mechanisms* and *Sybil-resistance mechanisms* at this point.
 
-Most likely you came across the terms [*Proof-of-Work*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW), [*Proof-of-Stake* (PoS) or *Proof-of-something-else*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-3-other-consensus-mechanisms %}) labeled as consensus mechanisms before. We are guilty of using that label ourselves, for it has become a convention that we used to reduce confusion, against better knowledge.
+Most likely you came across the terms [*Proof-of-Work*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) (PoW), *Proof-of-Stake* (PoS) or *Proof-of-something-else* labeled as consensus mechanisms before. We are guilty of using that label ourselves, for it has become a convention that we used to reduce confusion, against better knowledge.
 
 PoW and its relatives are actually Sybil-resistance mechanisms. In a *Sybil Attack*, a malicious party creates a large number of centrally controlled (online) identities and tries to achieve certain, mostly malicious, goals by exerting influence through these fake identities. Online voting is the most intuitive example of a situation, where many fake identities can be used to game the results.
 
