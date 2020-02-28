@@ -177,30 +177,34 @@ Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig
 ![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_D.jpg)
 ![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_M.jpg)
 
-* First, she generates a set of private keys. The number of keys generated depends on the MultiSig scheme she wants to use. Let us assume she wants to setup a simple 1-of-2 scheme, so she generates two keys, one of which is sufficient to sign a transaction. 
+* First, she generates a set of private keys. The number of keys generated depends on the MultiSig scheme she wants to use. Let's assume she wants to setup a simple 1-of-2 scheme, so she generates two keys, either one of which is sufficient to authorize a transaction.
 * Second, she creates the redeem script. It contains the information about the scheme used, 1-of-2 in Alice's case, and the two public keys corresponding to the two private keys generated in the first step.
-* Third, she hashes the redeem script. The hash of the redeem script is encoded into an address. This type of address is called *pay to script hash* (P2SH) address.
+* Third, she hashes the redeem script. The hash of the redeem script is encoded into a P2SH address.
 * Lastly, she withdraws her money from the exchange to her P2SH address.
 
-There are several wallet implementations that offer multi signature support. This means, the wallet takes care of generating the keys and subsequently the redeem script. It also stores the (unhashed) redeem script. This is necessary because it is a requirement to provide the redeem script to be able to spend the funds and the full redeem script only becomes part of the blockchain, when she spends funds from her multi-sig address for the first time. It is also possible to regenerate it on demand, based on the *N* defined public keys.
+There are several wallet implementations that offer multi signature support. This means, the wallet takes care of generating the keys and generating the redeem script. It also stores the (unhashed) redeem script. This is necessary because one needs to provide the redeem script to be able to spend the funds. The full redeem script only becomes part of the blockchain, when Alice spends money from her MultiSig address for the first time. It is also possible to regenerate it on demand, based on the *N* defined public keys.
 
 #### Spending from a Multi Signature Address
 
-Verification of a transaction from a P2SH address involves checking if the full redeemScript hashes to the redeem script hash of the UTXO being spent. If this check is successful, the full redeem script is available to the verifiers. In a second step, they will verify if the provided digital signature(s) satisfy the public-key-based spending conditions included in the full redemm script.
+Verification of a transaction from a P2SH address involves checking if the redeem script hashes to the redeem script hash included in the UTXO's pubkey script. In a second step, they will verify if the provided digital signature(s) satisfy the public key-based spending conditions included in the full redemm script.
 
 ![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_D.jpg)
 ![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_M.jpg)
 
 To spend from a P2SH address, the following steps are necessary:
 
-* First, Alice will take the UTXO that was created when she withdrew from the exchange and use it as an input to her spending transaction.
+* First, Alice will use the UTXO from the funding transaction and use it as an input to her spending transaction.
 * Second, she places the full redeem script in the *signature script* part of the output.
-* Third, she creates the required amount of digital signatures using her private keys. If we follow the example from above, she is using a 1-of-2 signature scheme, so a single signatures created with either key A or key B will suffice.
-* Lastly the transaction is broadcast to the network.
+* Third, she creates the required amount of digital signatures using her private keys. If we follow the example from above, she is using a 1-of-2 signature scheme and a single signatures created with either key A or B will suffice.
+* Lastly, the transaction is broadcast to the network.
 
-When the transaction is broadcast, the full redeem script becomes public. This means that an observer will know the address being used is a MultiSig address and he will also learn about the different spending conditions. This is undesirabel, as it might expose the user to attack vectors and compromises his privacy in general. Two improvements are actively being worked on and are likely being implemented in the not-so-distant future.
+When the transaction is broadcast, the full redeem script becomes public. This means that observers will know the address being used is a MultiSig address and the different spending conditions. This is undesirabel, as it compromises privacy. Two improvements are actively being worked on and are likely being implemented on various blockchains in the not-so-distant future.
+
+### Merkelized Abstract Syntax Trees - MAST
 
 The first one is called *Merkelized Abstract Syntax Trees* (MAST). Here, the spending conditions are arranged in a [merkle tree] structure and the merkle root is included instead of the redeem script hash. By providing the fulfilled scrip conditions (redeemScripts) and the merkle path a node can verify if a transaction is valid but does not learn anything about the other (unfulfilled) spending conditions.
+
+#### Schnorr Sigantures
 
 The second improvement over traditional multi signature transactions come with [*Schnorr signatures*](https://hackernoon.com/the-future-of-bitcoin-schnorr-signatures-key-aggregation-and-interactive-aggregate-signatures-ias-wbk36po). They comprise two main aspects: *signature aggregation* and *key pair concealment*.
 
@@ -210,7 +214,8 @@ Key pair concealment allows the modification of private keys and public keys. As
 
 > "As a simplified example, a private key and its corresponding public key could be tweaked by multiplying both by two. The “private key x 2” and the “public key x 2” would still correspond, and the “private key x 2” could still sign messages that could be verified with the “public key x 2.” Anyone unaware that the original key pair was tweaked wouldn’t even see any difference; the tweaked keys look like any other key pair."
 
-Using a multi signature scheme to secure your funds comes with a security-convenience trade-off. The more keys *M* are required to sign a transaction, the more cumbersome the process of spending money. The larger the total number of keys *N* included in the MultiSig scheme, the more devices and backups you will maintain. 
+Using a multi signature scheme to secure your funds comes with a security-convenience trade-off. The more keys *M* are required to sign a transaction, the more cumbersome the process of spending money. The larger the total number of keys *N* included in the MultiSig scheme, the more devices and backups you will maintain.
 At the same time the overall security of the account is increased with a larger *M*. The difference between *M* and *N* is the number of keys a user can loose while being able to recover her funds. It is up to the individual user to determine if the added complexity is justified by the amount of money kept in a given account.
 
 ### Summary
+
