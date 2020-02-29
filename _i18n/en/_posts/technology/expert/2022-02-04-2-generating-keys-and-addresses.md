@@ -46,7 +46,7 @@ If you would like to go through the process of creating a private key for yourse
 
 ### Your Mnemonic Phrase
 
-It is good practice to backup your private key in an analog format but copying and writing down your private key in one of the formats above is very error prone. In 2013 a *Bitcoin Improvement Proposal* (BIP) was submitted suggesting the use of [mnemonic phrases](https://academy.horizen.global/technology/expert/wallets-advanced/#mnemonic-phrase) to represent private keys.
+It is good practice to backup your private key in an analog format but copying and writing down your private key in one of the formats above is very error prone. In 2013 a *Bitcoin Improvement Proposal* (BIP) was submitted suggesting the use of [mnemonic phrases](https://academy.horizen.global/technology/expert/wallets-expert/#mnemonic-phrase) to represent private keys.
 
 > *"A mnemonic code or sentence is superior for human interaction compared to the handling of raw binary or hexadecimal representations of a wallet seed. The sentence could be written on paper or spoken over the telephone. This guide is meant to be a way to transport computer-generated randomness with a human readable transcription." - [BIP 0039](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), Palatinus, Rusnak, Voisine, Bowe*
 
@@ -114,7 +114,7 @@ Most wallets today are HD wallets - hierarchical deterministic wallets. They use
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_D.jpg)
 ![Hierarchical Deterministic Wallet](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/hd_wallet_M.jpg)
 
-These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-advanced %}) we will look at HD wallets and different address derivation methods more closely.
+These private keys can be used for different blockchains, because the underlying concept is always the same: the private key is a source of randomness that when multiplied with the base point of the specific chain yields your public key. In our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}) we will look at HD wallets and different address derivation methods more closely.
 
 ## Summary
 
