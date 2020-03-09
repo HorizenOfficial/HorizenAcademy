@@ -23,15 +23,15 @@ Supposons maintenant que nous sommes sur votre portefeuille. Vous avez reçu un 
 
 L'argent qui est dépensé dans une transaction est appelé l'entrée (input) et l'argent qui est reçu est appelé la sortie (outpout). Votre portefeuille place l'une des sorties que vous possédez dans la transaction vide et utilise votre clé privée pour la déverrouiller afin qu'elle devienne utilisable ; c'est ce que nous appelons signer la transaction. La sortie déverrouillée est maintenant utilisée comme entrée pour une nouvelle transaction.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_outputs_D.jpg)
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_outputs_D.jpg)
 
 Ensuite, votre portefeuille crée les sorties. Il vous demande une adresse pour envoyer de l'argent et un montant. Vous voulez envoyer 2 ZEN à l'adresse XYZ pour payer votre déjeuner, donc votre portefeuille crée la première sortie en conséquence. La deuxième sortie est générée automatiquement ; c'est ce qu'on appelle la sortie de change. Les sorties sont semblables aux coupures en espèces. Si vous devez payer 2 $ US, mais que vous n'avez qu'un billet de 10 $, vous vous attendez à recevoir 8 $ en monnaie. Votre portefeuille inclut automatiquement le change dans la transaction. Les sorties nouvellement générées sont verrouillées par défaut.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T4_broadcast_D.jpg)
 
 Enfin, votre portefeuille diffuse la transaction sur le réseau, où tous les nœuds et les mineurs vérifieront si la signature que vous avez utilisée pour débloquer votre argent est valide. Si c'est le cas, les mineurs incluront votre transaction dans le bloc suivant. La sortie de 10 ZEN que vous avez utilisé est désormais visible publiquement comme dépensée. Les sorties 2 et 8 ZEN nouvellement créées sont incluses dans un nouveau bloc et bloquées ; ou non dépensées. C'est ici qu'on parle du terme UTXO - Unspent Transaction Output _(sortie de transaction non dépensée, ndt)_ - c'est à cela qu'il fait référence.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T5_confirmed_D.jpg)
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T5_confirmed_D.jpg)
 
 Lorsque vous possédez 10 ZEN, cela signifie que vous avez reçu 10 ZEN dans une transaction et que vous n'avez pas encore débloqué ou dépensé cette sortie.
 
