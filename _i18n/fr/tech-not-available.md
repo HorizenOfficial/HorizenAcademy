@@ -9,5 +9,3 @@ Nous vous tiendrons au courant de tout ajout à notre contenu ou de nouvelles fo
 Nous espérons vous revoir bientôt !
 
 **  L'équipe Horizen **
-
-Traduit avec www.DeepL.com/Translator

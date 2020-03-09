@@ -17,7 +17,6 @@ level: expert
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-01-what-is-a-blockchain %}">
@@ -34,5 +33,41 @@ level: expert
         </p>
     </div>
 </div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-01-how-does-a-blockchain-work %}">
+            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">How does a Blockchain Work?</h5>
+        <p class="mb-1">
+            This second chapter of the Technology Expert section is the most extensive chapter. We start with an overview of the different elements of a blockchain, before we look into each element individually. We start with hash functions, continue with public-key cryptography and consensus mechanisms and finish with the P2P network, mining and blokchain governance.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">
+            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Wallets Expert" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Wallets</h5>
+        <p class="mb-1">
+            This third chapter of the Horizen Academy covers the more advanced concepts applied in modern cryptocurrency wallets in depth. We look at how a mnemonic phrase is generated, different key derivation methods, and multi-signature functionality.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">Read Article</a>
+        </p>
+    </div>
+</div>  
+  
+
 
 ### The Next Chapters Are Coming Soon!

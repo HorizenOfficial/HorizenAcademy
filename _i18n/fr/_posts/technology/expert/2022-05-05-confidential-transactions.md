@@ -1,11 +1,11 @@
 ---
 layout: post
 type: article
-title: "Transacciones Privadas"
+title: "Transactions privées"
 permalink: /technology/expert/confidential-transactions/
 topic: technology
 level: expert
-chapter: "Privacidad"
+chapter: "La confidentialité"
 ---
 
 {% tf tech-not-available.md %}
