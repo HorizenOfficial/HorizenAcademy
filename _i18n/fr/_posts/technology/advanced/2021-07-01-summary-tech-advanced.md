@@ -63,8 +63,8 @@ Nous avons consacré le troisième chapitre aux [portefeuilles de cryptomonnaie 
 
 Dans le quatrième chapitre de ce niveau, nous avons parlé des transactions. Dans le premier article, nous vous avons présenté le modèle [UTXO]({{ site.baseurl }}{% post_url /es/technology/advanced/2021-04-02-the-utxo-model %}) (Unspent Transaction Output). C'est la méthode comptable qui est utilisée dans la plupart des blockchains. La blockchain ne gère pas un solde de compte pour chaque adresse. Votre portefeuille passe en revue l'historique des transactions sur la blockchain et prend toutes les transactions entrantes que vous n'avez pas encore dépensées - vos UTXO - et les additionne afin de générer votre solde disponible. C'est en fait semblable à la façon dont l'argent liquide fonctionne. Si vous avez un UTXO de 10 Zen mais que vous ne voulez en dépenser que 8, votre portefeuille dépensera l'UTXO dans une transaction avec deux sorties : l'une envoyant les 8 ZEN à leur destination et une seconde retournant 2 ZEN à vous-même comme monnaie de change.
 
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_D.jpg)
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
+![wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_D.jpg)
+![wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_M.jpg)
 
 Dans l'article suivant sur les transactions, nous avons parlé de l'[explorateur de blocs]({{ site.baseurl }}{% post_url /es/technology/advanced/2021-04-03-block-explorer-continued %}), un outil graphique pour visualiser et explorer les données sur la blockchain. Il y a un explorateur de blocs disponible pour presque toutes les blockchains publiques. Il vous permet de parcourir l'historique d'une chaîne donnée avec toutes les transactions effectuées, ainsi que toutes les adresses utilisées et les blocs minés. Nous avons expliqué ce que les données qu'un explorateur de blocs vous montre signifient et avons jeté un coup d'oeil à la toute première transaction de cryptomonnaie, entre Satoshi Nakamoto lui-même et Hal Finney.
 
@@ -72,8 +72,7 @@ Dans l'article suivant sur les transactions, nous avons parlé de l'[explorateur
 
 Nous vous avons également montré un type de transaction très spécial dans ce chapitre, l'[Atomic Swap]({{ site.baseurl }}{% post_url /es/technology/advanced/2021-04-04-atomic-swaps %}) qui permet aux utilisateurs l'échange sans tiers de confiance de deux cryptomonnaies différentes entre deux blockchains séparées. Au cœur de ce système, les Atomic Swaps reposent sur des contrats HTLC (Hashed Time Locked Contracts). Il n'y a à aucun moment un tiers impliqué qui a accès aux fonds d'un utilisateur. Le processus d'échange est entièrement fiable et presque instantané.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/FR_swaps_D.jpg)
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/FR_swaps_M.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/FR_swap_3.jpg)
 
 ### Protection de la vie privée sur la blockchain
 
@@ -94,7 +93,6 @@ Une autre attaque que nous avons décrite est l'attaque Sybil, où un attaquant 
 
 Enfin, nous avons parlé du type d'attaque le plus courant, les attaques 51 %. Un mineur qui contrôle une part importante de la puissance de hachage totale d'un réseau peut tenter d'effectuer une telle attaque. Le mineur malveillant crée une transaction sur la chaîne honnête qui dépense ses fonds. En attendant, il exploite des blocs de manière privée, ce qui signifie que le mineur ne diffuse pas les blocs sur le réseau. Une fois que la chaîne, qui n'inclut pas les dépenses de transaction, devienne la chaîne la plus longue, il la diffuse et selon la règle de la chaîne la plus longue, elle sera reconnue par tous les mineurs comme la nouvelle chaîne valide. L'attaquant a réussi à reprendre le contrôle des fonds et peut maintenant les dépenser une deuxième fois.
 
-
 ![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/percent.gif)
 
 ### Remarques finales
@@ -104,6 +102,5 @@ Nous avons couvert de nombreux concepts dans la section avancée et nous espéro
 Si vous vous sentez à l'aise avec tout ce que vous avez lu et que vous aimeriez continuer à apprendre, il y a plus ! Montez d'un niveau et consultez nos articles experts. Nous les avons structurés de la même manière, mais nous avons ajouté plus de détails à tous les sujets et nous les avons divisés pour examiner de plus près les différentes composantes. Nous avons conçu le contenu de manière à ce que vous puissiez le lire de haut en bas (ce que nous pouvons que vous recommander) ou sauter aux articles qui vous intéressent particulièrement.
 
 Nous espérons que vous avez aimé cette série d'articles. Veuillez nous faire savoir s'il y a quelque chose que vous trouvez déroutant. Le contenu fourni est et sera en cours d'élaboration. Nous sommes toujours ouverts aux suggestions et aux commentaires constructifs, alors envoyez-nous un message à academy@horizen.global si vous voulez partager vos idées avec nous.
-
 
 **Votre équipe Horizen**
