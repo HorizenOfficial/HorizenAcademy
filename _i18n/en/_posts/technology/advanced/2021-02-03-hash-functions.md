@@ -23,8 +23,8 @@ A cryptographic hash function must fulfill the following set of criteria to be v
 - *Collision-resistant* - It should be hard (read impossible) to find two inputs to a hash function producing the same output.
 - *Deterministic* - A given input always needs to produce the same output
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_D.jpg)
-![Hash function](/assets/post_files/technology/advanced/hash-functions/hash_function_M.jpg)
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_M.jpg)
 
 The most frequently used hash function today is *SHA-256*. SHA is an acronym for *Secure Hash Algorithm*. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. *RIPEMD160* is used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
 
