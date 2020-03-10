@@ -14,7 +14,7 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/DS2.svg" alt="La cadena como estructura de datos" />
+            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/data-structure.svg" alt="La cadena como estructura de datos" />
         </a>
     </div>
     <div class="col-md-9">
@@ -28,11 +28,10 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/VT2.svg" alt="ProtocolOs" />
+            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/value-transfer.svg" alt="ProtocolOs" />
         </a>
     </div>
     <div class="col-md-9">
@@ -46,11 +45,10 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">
-            <img src="/assets/post_files/technology/advanced/what-is-a-blockchain/SC2.svg" alt="Contratos inteligentes" />
+            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/smart-contracts.svg" alt="Contratos inteligentes" />
         </a>
     </div>
     <div class="col-md-9">
