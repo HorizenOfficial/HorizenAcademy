@@ -17,8 +17,8 @@ But there are some downsides compared to centralized systems. The high level of 
 
 In computer science, the [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) describes the cost of a robust and scalable distributed network as the time it takes for the network to reach consistency. It takes some time for an event (like a transaction) to be broadcast to every node on the network. In a second step, all the nodes have to reach consensus on the order in which events happened. In our next article on [consensus mechanisms]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}), we will introduce you to the two main methods to achieve consensus in distributed networks.
 
-![Central distri](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/central-distri_M.jpg)
+![Central distri](/assets/post_files/technology/advanced/2.4-p2p/central-distri_D.jpg)
+![Central distri](/assets/post_files/technology/advanced/2.4-p2p/central-distri_M.jpg)
 
 We have found [a simple yet great visualization](http://mg8.org/processing/bt.html) of a distributed system that demonstrates the process of new peers joining a network and syncing with all other nodes. It lets you add and delete random nodes to show the robustness of the overall system. With a Peer-to-Peer network architecture, every node is equal to every other node. Every node in a P2P network acts as both a client and a server opposed to traditional client-server models. While a server can experience downtimes during which the clients cannot access its data, in a P2P network you just connect to a different peer if one goes offline.
 
@@ -29,8 +29,8 @@ With flooding, nodes propagate a message with a constant or *deterministic* tran
 Diffusion is a refined version of flooding. In networks using diffusion, such as Bitcoin and most other cryptocurrencies the nodes propagate messages with a random transmission delay. 
 This makes it harder for an eavesdropper to determine the origin of a message and thereby identify a node's geographical location and possibly owner.
 
-![Spreading](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/spreading_D.jpg)
-![Spreading](/assets/post_files/technology/advanced/a-peer-to-peer-p2p-network/spreading_M.jpg)
+![Spreading](/assets/post_files/technology/advanced/2.4-p2p/spreading_D.jpg)
+![Spreading](/assets/post_files/technology/advanced/2.4-p2p/spreading_M.jpg)
 
 Many distributed systems are built with an append-only data structure and blockchains are an example of this. The blocks in a blockchain are cryptographically connected data containers in an append-only log. It is infeasible to change or delete data from the past.
 In other distributed networks it can be desirable to delete data, for storage efficiency or to maintain only relevant information. In the case of blockchains, this would be considered a devastating bug. If the transaction ledger were to change this would destroy the use-case of digital currency, because it would imply changing balances. This is clearly not desirable for a censorship-resistant form of global money.
@@ -43,7 +43,7 @@ In order for a distributed network to function all network participants need som
 
 #### Secure Nodes and Super Nodes
 
-Horizen also incentivizes node operators financially because running a node comes at a cost. It takes time to set up, you need to set up or rent a server, and the node operator has to update the software occasionally. On the Horizen network, miners receive 60% of the total block reward (12.5 ZEN). The other 40% is used to fund the infrastructure (Secure Nodes 10% and Super Nodes 10%) and the non-profit Zen Blockchain Foundation (20%) for the development of the protocol. 
+Horizen also incentivizes node operators financially because running a node comes at a cost. It takes time to set up, you need to set up or rent a server, and the node operator has to update the software occasionally. On the Horizen network, miners receive 60% of the total block reward (12.5 ZEN). The other 40% is used to fund the infrastructure (Secure Nodes 10% and Super Nodes 10%) and the non-profit Zen Blockchain Foundation (20%) for the development of the protocol.
 
 On a permissioned blockchain that a consortium of companies is running, e.g. to track a supply chain, the incentive to maintain the ledger is to have access to valuable business data without having to trust a third party. We believe that the Web 3.0 will benefit largely from the emergence of distributed networks and that we will see a transition from centralized services to decentralized ones.
 
