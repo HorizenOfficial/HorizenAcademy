@@ -15,8 +15,8 @@ When you think about how your bank does the accounting for your bank account it 
 
 The blockchain does not create an "account" for you to maintain a balance. There is no final balance stored on the ledger. The blockchain only stores individual transactions and to check your balance, there is an additional step involved. Your wallet does this automatically whenever you open it. What happens in the background is that your wallet scans the ledger for all transactions to your address(es) and adds them up.
 
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_D.jpg)
-![wallet](/assets/post_files/technology/advanced/the-utxo-model/wallet_balance_Int_M.jpg)
+![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_D.jpg)
+![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_M.jpg)
 
 Each transaction on the blockchain has one or more inputs and one or more outputs. Let's have a look at an actual example throughout a series of four transactions:
 
@@ -26,7 +26,7 @@ We created this simple example, only involving two different addresses. We short
 ### Bob Receives His First Transaction
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX1.png" alt="TX">
+    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX1.png" alt="TX">
 </div>
 
 In the [first TX](https://explorer.zensystem.io/tx/bbbd1fb01998eec8c3ca99236f9b6a2c92e12533ab3e15b7544dcd3228988c34) (above), Bob's address (znRwe) is funded when he receives 10.2 ZEN. The TX has one input and two outputs. The first output (10.2 ZEN) is what Alice actually wanted to transfer to Bob, the second output is called the *change output*. The input that Alice was using, was an output of a transaction she received before. When she still had her money untouched, it was an *Unspent Transaction Output* (UTXO). A spent transaction output is indicated by the <span class="text-danger">(S)</span>, a UTXO is indicated with a <span class="text-success">(U)</span> following the amount. But we will get back to this in a minute. Alice didn't have a UTXO that was exactly 10.2 ZEN so she used one that was larger and sent the remaining ZEN back to herself, just as you would receive change in a store if you were to pay $45 with a $50 bill.
@@ -34,7 +34,7 @@ In the [first TX](https://explorer.zensystem.io/tx/bbbd1fb01998eec8c3ca99236f9b6
 ### Bob Sends His First Transaction
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX2.png" alt="TX">
+    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX2.png" alt="TX">
 </div>
 
 In the [second transaction](https://explorer.zensystem.io/tx/62be1b18d6048194fc45209dc727fa932ab4a426072372f6d8cf537fe1f221ee), Bob spends his UTXO of 10.2 ZEN and creates a transaction with two new UTXOs: one of 5 ZEN to a different address and one of 5.1999 ZEN back to his own address - the change output. The difference between inputs and outputs - 0.0001 ZEN - is consumed as the transaction fee. He now owns 5.1999 ZEN on his znRwe... address.
@@ -42,7 +42,7 @@ In the [second transaction](https://explorer.zensystem.io/tx/62be1b18d6048194fc4
 ### Another UTXO
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX3.png" alt="TX">
+    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX3.png" alt="TX">
 </div>
 
 In a [third transaction](https://explorer.zensystem.io/tx/315a5e96d92cb19e7529a78e05bcfc3ffb3b5f1fdeaf2b22c582663464219c27), Bob receives another 2 ZEN, increasing his balance to 7.1999 ZEN. He now has two UTXO's at his disposal for further transactions: one of 5.1999 ZEN and another one of 2 ZEN. If he were to open his wallet at that point, it would show him a balance of 7.1999 ZEN by looking at all transactions on the blockchain, filtering out the ones that involve his address and then adding up all unspent outputs.
@@ -50,7 +50,7 @@ In a [third transaction](https://explorer.zensystem.io/tx/315a5e96d92cb19e7529a7
 ### Spending Two UTXOs at Once
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/the-utxo-model/TX4.png" alt="TX">
+    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX4.png" alt="TX">
 </div>
 
 In the [last transaction](https://explorer.zensystem.io/tx/14f8bc13c9d125558830e4c1cdc5c8bea6d01d224ced153c234471f107d63aa1) of this example, Bob wants to spend 6 ZEN. Neither of the two UTXO's he has at that point is sufficient for that purpose. Although the block explorer shows only one input for the last transaction there were clearly two inputs used: the 5.1999 ZEN and 2 ZEN one from the two examples above.
