@@ -35,10 +35,8 @@ SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted li
 
 The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers. SNMP takes care of the different devices on a network interoperating seamlessly.
 
-**update from expert**
-
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_D.jpg)
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/protocols_M.jpg)
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/network_protocols_D.jpg)
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/network_protocols_M.jpg)
 
 Throughout the history of the internet, people have defined standards for the exchange of various types of data. It's important to note that it was not always the best protocol that gained mass adoption. People are unlikely to switch to a different protocol once they begin using it and building upon it. Developers become attracted to the increasing number of libraries and tools available for these protocols. This cycle repeats until a protocol eventually becomes the standard for a given use case.
 
@@ -57,8 +55,8 @@ One subset of the rules regards maintaining the ledger. Each node keeps a copy o
 Another subset of rules is concerned with the structure of a valid block. Remember that a block is just a container for data as we explained in our [last article]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}). A block has a block header that contains information about the version of the client it was created with, a reference to it's preceding block (its hash), a summary of all transactions that are contained in the block (the *Merkle root*), a timestamp and some other metadata.
 Following the block header, the block contains all the transactions that were included.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_D.jpg)
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/block_M.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_D.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_M.jpg)
 
 Now there needs to be a set of rules describing what an individual transaction must look like. We will talk about transactions in detail in a dedicated article but for now, it should suffice to know that a transaction needs to include the sender, the recipient, the amount to transfer, and a digital signature. The digital signature is a way to authorize the spending of your funds. The private key of a user creates this digital signature. We explain this process further in our article on [public-key cryptography]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}).
 

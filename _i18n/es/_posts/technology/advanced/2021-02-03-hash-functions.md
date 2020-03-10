@@ -16,15 +16,13 @@ Hay tantas [funciones hash](https://en.wikipedia.org/wiki/List_of_hash_functions
 
 Una función hash criptográfica debe cumplir con los siguientes criterios para utilizarse en una cadena de bloques de manera viable:
 
- - Unidireccionalidad - Debe ser fácil calcular la salida de una entrada pero imposible calcular la entrada a partir de la salida. Al discutir el minado de criptomonedas más adelante en este mismo capítulo, este principio desempeñará un papel importante.
- - Seudoaleatoriedad - Un cambio en la entrada produce siempre un cambio impredecible en la salida. Si el valor hash de la entrada 2 fue 4, el hash de la entrada 3 no puede ser 6.
- - Resistencia a las colisiones - Debe ser muy difícil (entiéndase imposible) encontrar dos entradas que al pasar por una función hash produzcan la misma salida (colisionen).
- - Determinismo - Dos entradas iguales deben siempre producir también dos salidas iguales.
+- Unidireccionalidad - Debe ser fácil calcular la salida de una entrada pero imposible calcular la entrada a partir de la salida. Al discutir el minado de criptomonedas más adelante en este mismo capítulo, este principio desempeñará un papel importante.
+- Seudoaleatoriedad - Un cambio en la entrada produce siempre un cambio impredecible en la salida. Si el valor hash de la entrada 2 fue 4, el hash de la entrada 3 no puede ser 6.
+- Resistencia a las colisiones - Debe ser muy difícil (entiéndase imposible) encontrar dos entradas que al pasar por una función hash produzcan la misma salida (colisionen).
+- Determinismo - Dos entradas iguales deben siempre producir también dos salidas iguales.
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/ES_hash_function_D.jpg)
-![Hash function](/assets/post_files/technology/advanced/hash-functions/ES_hash_function_M.jpg)
-
-
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_M.jpg)
 
 La función hash más utilizada en la actualidad es SHA-256 (Secure Hash Algorithm). El número indica la extensión de la salida en bits. Por ejemplo, hay cuatro extensiones de salida en la familia SHA: 224, 256, 384 y 512 bits. Otro tipo de funciones hash relevantes a las cadenas de bloques son las de la familia RIPEMD. Muchas criptomonedas suelen utilizar RIPEMD160, el cual, como es de esperarse, produce salidas de 160 bits.
 

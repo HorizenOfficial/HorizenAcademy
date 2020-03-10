@@ -21,13 +21,13 @@ For this article, we assume that you are familiar with the [UTXO model]({{ site.
 ### Change Addresses
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_0.png" alt="Change Addresses">
+    <img src="/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_0.png" alt="Change Addresses">
 </div>
 
 *Change addresses* were introduced so people you are transacting with don't have access to your entire transaction history just by looking up the address you used for transacting with them. Most wallets automatically generate change addresses for you when you create a transaction. In the example above of a regular bitcoin transaction, you can see one input and two outputs to the transaction. The first output went to a different address and is the amount, the user wanted to spend. The remainder of the UTXO went back to the same address the funds originated from.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/privacy-on-the-blockchain/change_address_1.png" alt="Change Addresses">
+    <img src="/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_1.png" alt="Change Addresses">
 </div>
 
 A wallet that supports change addresses will generate a new address, every time you are receiving funds, no matter if they are change or regular transactions. The example above shows a transaction with the exact same amounts as before, but this time the change went back to a newly created change address. This feature improves privacy by making it harder to trace the transaction history of a given user.
@@ -36,8 +36,8 @@ A wallet that supports change addresses will generate a new address, every time 
 
 Coin mixing protocols like SharedCoin, TumbleBit or CoinJoin (used by Dash) were the next evolutionary step to improve privacy. Several inputs are mixed by creating a single transaction from them, oftentimes during several intermediary transactions.
 
-![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_D.jpg)
-![Coin Mixing](/assets/post_files/technology/advanced/privacy-on-the-blockchain/coinjoin_M.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/coinjoin_D.jpg)
+![Coin Mixing](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/coinjoin_M.jpg)
 
 Coin mixing doesn't require any changes to the basic blockchain protocol. In the graphic above you can see the schematics of a coin mixing transaction. A number of inputs are combined in a mixing pool (center) and later distributed to their destination addresses. A coin mixing transaction makes it harder for an attacker to figure out who was sending money to whom.
 
@@ -51,8 +51,8 @@ Ring Signatures were first introduced by Rivest, Shamir, and Taumann in 2001 and
 
 Imagine a high ranking White House official (Alice) wanting to leak a secret to the press about the president. She needs to make sure, the journalists who receive the leak have a way to verify the source of the information without revealing her identity. A potential solution would be using a Ring Signature scheme to sign the message. To construct the ring signature all she needs is her private key and the public keys of some other officials, e.g. other members of the cabinet (Bob and Carol).
 
-![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_D.jpg)
-![Ring Signatures](/assets/post_files/technology/advanced/privacy-on-the-blockchain/ring_sig_M.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ring_sig_D.jpg)
+![Ring Signatures](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ring_sig_M.jpg)
 
 The verifier (journalist) can verify that the message was indeed signed by a high ranking official, but he cannot determine who constructed the signature - Alice, Bob or Carol.
 
@@ -64,8 +64,8 @@ Zero-Knowledge Proofs (zk-Proofs) were known long before blockchain technology e
 
 The seeing person (prover) wants to convince the blindfolded person (verifier) that the two balls are of different colors, without revealing the colors. They sit down at a table and the blind person shows the prover one of the balls. The blind person puts both balls under the table now and shows one ball in a second round - either the same one as before or the other one. If she chooses to show the same ball, the prover will know because of the color. If she were to switch balls under the table and show the other ball, the prover could tell with certainty.
 
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_D.jpg)
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/privacy-on-the-blockchain/zkproof_M.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/zkproof_D.jpg)
+![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/zkproof_M.jpg)
 
 In the second round, the prover would have a fifty-fifty chance of getting the right answer if he had to guess. He would have to guess in case the claim that he is trying to prove (the balls are of a different color) was false. At this point, the blind person cannot be sure if the claim is correct, or if the prover just got lucky.
 

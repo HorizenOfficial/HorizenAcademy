@@ -15,33 +15,29 @@ Es posible explicar la tecnología blockchain de muchas maneras. Hasta hace poco
 
 Como estructura de datos y en el contexto de las ciencias computacionales, una cadena de bloques es una manera de almacenar, organizar y administrar información. Una estructura de datos le permite al usuario acceder, modificar y buscar los datos que contiene. Algunas de las estructuras de datos más básicas y comunes son las matrices y listas enlazadas. Una matriz es un conjunto de elementos enumerados. Estos elementos pueden ser números, letras, palabras o incluso archivos. Los índices permiten al usuario acceder a cualquier elemento individualmente, por lo que si el usuario desea cambiar la entrada de una matriz y conoce su ubicación, tiene un acceso directo a ella.
 
-{%
-  include blocks/image_caption.html
-  image="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_D.jpg"
-  image2="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_M.jpg"
-  caption="One-dimensional array with six elements"
-%}
+![Matriz](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_array_D.jpg)
+![Matriz](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_array_M.jpg)
 
 Los _nodos_ son los elementos de información en una lista enlazada. Un nodo incluye al menos un pedazo de información de cualquier tipo y un puntero al siguiente elemento. La función del puntero es indicarle a la computadora dónde encontrar el siguiente elemento de la lista.
 
-Si el usuario está viendo el primer pedazo de información de una lista y quiere pasar al segundo, deberá buscar el puntero que lo dirija a ese elemento. Es más fácil agregar datos a una lista enlazada sumándole un nodo que agregarlos a una matriz aumentando el número de elementos. 
+Si el usuario está viendo el primer pedazo de información de una lista y quiere pasar al segundo, deberá buscar el puntero que lo dirija a ese elemento. Es más fácil agregar datos a una lista enlazada sumándole un nodo que agregarlos a una matriz aumentando el número de elementos.
 
 Algo con lo que el usuario no cuenta en una lista enlazada es _acceso instantáneo_. Si se está buscando un pedazo de información específico en la lista enlazada será preciso que el usuario busque en el primer _nodo_, la _cabeza_ de la lista. Si este no es el elemento solicitado, el usuario sigue el enlace o puntero que lo llevará al siguiente nodo. Si este segundo nodo tampoco contiene la información deseada, debe continuar siguiendo punteros en la cadena de nodos hasta encontrar los datos buscados.
 
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_linked_list_D.jpg)
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_linked_list_M.jpg)
+![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_linked_list_D.jpg)
+![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_linked_list_M.jpg)
 
 La cadena de bloques es como una lista enlazada en el contexto de estructuras de datos; separa los datos en contenedores; los _bloques_. Así, los _bloques_ son bastante análogos a los _nodos_ de una lista enlazada. Cada _bloque_ contiene una _referencia_; una marca del bloque que lo antecede. Esto sirve como enlace al bloque anterior y establece un orden en la cadena de bloques.
 
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_data_D.jpg)
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_data_M.jpg)
+![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_blockchain_data_D.jpg)
+![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_blockchain_data_M.jpg)
 
 La diferencia fundamental entre una cadena de bloques y una lista enlazada es que cada referencia en la cadena de bloques está asegurada criptográficamente. Al hablar de cadenas de bloques, es común escuchar el término _append-only data structure_ para describirlas. Esto significa que solo puede agregarse información a la cadena si se añade al frente de esta. Los enlaces asegurados se monitorean de manera constante para constatar su validez, por lo que si alguien insertara un bloque malicioso a media cadena de bloques (por ejemplo, entre los bloques 1 y 3 de la imagen a continuación), sería fácil incluir una referencia al bloque anterior (el bloque 1) pero casi imposible lograr que el bloque siguiente (el 3) contenga una referencia al bloque recién insertado.
 
 Cada bloque puesto encima de un bloque existente se conoce comúnmente como una _confirmación_. Entre mayor antigüedad acumula un bloque, mayor el número de confirmaciones que tendrá. Cada confirmación hace más difícil alterar el bloque. El bloque 2 en la gráfica inferior tiene una sola confirmación. Para poder modificar los datos que contiene, el usuario tendría que recrear una referencia válida, y cada confirmación haría necesaria la recreación de una referencia adicional. De esta manera, los bloques más antiguos se encuentran más seguros de sufrir cambios.
 
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_broken_D.jpg)
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_blockchain_broken_M.jpg)
+![Blockchain broken](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_blockchain_broken_D.jpg)
+![Blockchain broken](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_blockchain_broken_M.jpg)
 
 Las referencias entre bloques no solo dependen del orden de los mismos, sino también de los datos que cada uno contiene. No es para nada fácil agregar o borrar datos de un bloque, y esta propiedad es el fundamento de la confianza que tienen los usuarios de la cadena de que su información se encuentra almacenada de manera segura.
 
@@ -57,4 +53,4 @@ Nos gustaría cerrar esta sección con un tuit de Nick Szabo, el cual que consid
 
 {% include blocks/tweet.html id="1059227449232445440" %}
 
-_“Las cadenas de bloques no garantizan la verdad; evitan que tanto verdad como mentira sean alteradas, permitiendo que cualquiera las analice e identifique con confianza las mentiras. Una computadora típica es como un juguete Etch A Sketch, mientras que las cadenas de bloques son el ámbar computacional.”_
+> “Las cadenas de bloques no garantizan la verdad; evitan que tanto verdad como mentira sean alteradas, permitiendo que cualquiera las analice e identifique con confianza las mentiras. Una computadora típica es como un juguete Etch A Sketch, mientras que las cadenas de bloques son el ámbar computacional.”

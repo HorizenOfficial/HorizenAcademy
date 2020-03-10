@@ -13,8 +13,8 @@ _Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de w
 
 Un wallet est un programme pour générer, gérer et stocker une paire de clés cryptographiques. Vous pouvez vérifier votre solde, recevoir et envoyer des fonds dans votre wallet.
 
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
+![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_D.jpg)
+![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_M.jpg)
 
 Si vous n'êtes pas sûr de la fonctionnalité principale d'un portefeuille, vous pouvez lire notre [introduction aux portefeuilles]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
 
@@ -28,15 +28,15 @@ Votre phrase mnémonique est une sauvegarde de votre clé privée qui est utilis
 
 Dans cet article, nous voulons vous donner une vue d’ensemble des différents types de portefeuilles afin de vous aider à trouver celui qui convient à vos besoins.
 
-![overview](/assets/post_files/technology/advanced/types-of-wallets/FR_overview_D.jpg)
-![overview](/assets/post_files/technology/advanced/types-of-wallets/FR_overview_M.jpg)
+![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_D.jpg)
+![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_M.jpg)
 
 ### Web wallets hébergés
 
 Nous pouvons distinguer les web wallets hébergés et non hébergés. Avec les web wallets hébergés, vos clés sont stockées en ligne par un tiers de confiance. Il s'agit le plus souvent de plateformes d'échange tels que Coinbase, Binance ou Bittrex. Lorsque vous créez un compte auprès de ces entités, elles créeront une entrée dans leur base de données interne reliant votre compte à un ensemble de paires de clés pour les différents coins qu'elles ont inscrits.
 
-![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/FR_hosted_webwallet_D.jpg)
-![Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/FR_hosted_webwallet_M.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_D.jpg)
+![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_M.jpg)
 
 Un des avantages d'un web wallet hébergé est la possibilité de récupérer votre mot de passe au cas où vous l'oublieriez ou le perdriez. La perte de vos clés privées (avec votre phrase mnémonique respectivement) entraîne une perte de fonds dans tous les autres cas.
 
@@ -48,8 +48,8 @@ Vous aurez besoin de garder des fonds sur une plateforme d'échange de façon pe
 
 Outre les web wallets hébergés, il existe également une gamme de web wallets non hébergés. Le web wallet non hébergé le plus populaire est probablement MyEtherWallet, qui peut stocker l'éther (ETH) et tous les jetons ERC-20 (jetons qui "vivent" sur la blockchain Ethereum). Ces wallets fournissent une interface pour vérifier vos fonds ou créer des transactions dans votre navigateur web, mais vous devez fournir les clés à chaque connexion.
 
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_D.jpg)
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/types-of-wallets/non-hosted_webwallet_M.jpg)
+![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
+![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
 
 Il y a une gamme d'options afin d’accéder à votre wallet avec MyEtherWallet (souvent abrégé MEW). La première option nécessite votre adresse, mais vous permet uniquement de consulter vos fonds.
 
@@ -71,9 +71,9 @@ Vous connaissez maintenant les tâches qu'un wallet effectue : visualiser, recev
 Avec les wallets de bureau et les wallets mobiles, vous avez le choix entre des options à monnaie unique ou multidevises. Ces termes devraient être assez explicites. Le premier vous permet de stocker un coin spécifique, tandis que le second prend en charge plusieurs devises. Certains des exemples les plus populaires pour le bureau incluent Coinomi et Sphere by Horizen. Pour le mobile, il y a Coinomi, Mycelium ou Paytomat pour n'en citer que quelques-uns.
 
 <div class="row align-items-center">
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/coinomi.jpg" alt="coinomi"></div>
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/types-of-wallets/mycelium.png" alt="mycelium"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/coinomi.jpg" alt="coinomi"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
+    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/mycelium.png" alt="mycelium"></div>
 </div>
 
 Si vous avez reçu vos premiers coins sur une plateforme d'échange, je vous recommande de transférer vos fonds hors de la plateforme d'échange (Web wallet hébergé) sur un ordinateur de bureau, de papier ou un hardware wallet. Envoyez d'abord une fraction pour vous assurer que tout fonctionne comme prévu. Si votre première transaction fonctionne, vous envoyez le reste. Vous êtes désormais protégé contre le risque de tiers, mais vous êtes entièrement responsable de vos fonds.
@@ -84,7 +84,7 @@ Reprenons notre fil d'or et demandons-nous "où sont les clés". Le [paper walle
 
 Lorsque vous imprimez votre paper wallet, vous ne devriez pas utiliser une imprimante partagée comme celle de votre bureau. Dans le meilleur des cas, l'imprimante ne dispose même pas d'une fonction WiFi/réseau. Les imprimantes conservent généralement une copie des fichiers qu'elles ont imprimés en dernier, et un attaquant pourrait l'exploiter. Vous obtiendrez quelque chose ressemblant à ceci après avoir imprimé le wallet de façon sécuritaire :
 
-![paper wallet](/assets/post_files/technology/advanced/types-of-wallets/paper_wallet.jpg)
+![paper wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.jpg)
 
 Il ne reste qu'une seule chose à faire : envoyer les fonds à la clé publique. Après cela, vous avez un cadeau parfait ou un stockage à long terme pour vos coins. Le principal risque avec un paper wallet est que vous le perdiez ou le détruisiez par accident. Si vous n'avez pas une phrase mnémonique pour récupérer la clé privée, vous risquez de perdre tous les fonds sur le wallet par accident. Choisissez donc judicieusement l'endroit où ranger votre paper wallet. Imprimez plusieurs copies si vous vous sentez mal à l'aise d'en avoir une seule et rangez-les toutes dans des endroits séparés et sûrs.
 
@@ -96,8 +96,8 @@ Comment un tel wallet fonctionne-t-il réellement ?
 
 L'interface génère une adresse à partir de votre clé publique si vous souhaitez recevoir des fonds. L'utilisation de cette fonction est assez simple : si vous cliquez sur le bouton de réception, le processus s'exécute en arrière-plan et l'adresse est affichée pour que vous puissiez la partager avec l'expéditeur. Si vous voulez envoyer des fonds, l'application crée la transaction formelle qui doit être signée. La transaction non signée est maintenant envoyée dans votre hardware wallet, où elle est signée avec votre clé privée sur l'appareil. La signature est ensuite renvoyée à votre ordinateur et la transaction complète, y compris la signature diffusée sur le réseau.
 
-![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_signing_hardware_wallet_D.jpg)
-![signing hardware wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_signing_hardware_wallet_M.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_D.jpg)
+![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_M.jpg)
 
 Votre/Vos clé(s) privée(s) ne quittent pas l'appareil, elles ne sont donc pas visibles par l'ordinateur avec lequel vous utilisez votre hardware wallet à chaque instant. C'est pourquoi un hardware wallet est considéré comme le moyen le plus sûr de stocker des cryptos, en particulier de grandes quantités.
 
@@ -113,4 +113,4 @@ Avec un wallet de bureau, mobile, papier ou hardware, vous possédez les clés e
 
 Tout ce mouvement de cryptomonnaies vise à vous redonner le pouvoir sur votre argent, mais...
 
-![with great power comes great responsibility](/assets/post_files/technology/advanced/types-of-wallets/with-great-power-comes-great-responsibility.gif)
+![with great power comes great responsibility](/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)

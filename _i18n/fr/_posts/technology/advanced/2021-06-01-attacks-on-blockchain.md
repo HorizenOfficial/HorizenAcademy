@@ -17,8 +17,8 @@ Avant d'entrer dans les différents scénarios d'attaque, nous aimerions vous pr
 
 Imaginez que vous êtes général (il y a quelques siècles) et que vous voulez attaquer un château avec votre armée. Le château est très robuste et l'armée à l'intérieur très forte. Vous avez organisé un certain nombre d'autres armées pour soutenir l'attaque et chacune de ces armées va attaquer d'un côté différent. Les armées sont séparées par la distance, chacune d'elles étant distante de plusieurs kilomètres. S'ils attaquent tous en même temps, les chances de victoire sont très élevées. Si l'attaque n'est pas coordonnée, vous subirez très probablement une défaite.
 
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_D.jpg)
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/byz_0_M.jpg)
+![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/byz_0_D.jpg)
+![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/byz_0_M.jpg)
 
 En tant que général, vous avez le problème suivant : Comment pouvez-vous vous assurer que toutes les armées attaquent en même temps ? En d'autres termes, comment pouvez-vous parvenir à un consensus sur le moment de l'attaque ? Vous ne pouvez pas donner des signaux avec des drapeaux, des torches ou de la fumée, car ces signaux pourraient être captés par l'ennemi.
 
@@ -27,8 +27,8 @@ Vous pourriez envoyer des messagers à cheval, mais que faire si l'un d'eux est 
 La technologie Blockchain prétend avoir résolu ce problème, bien que cela n’ait pas aidé l’armée Byzantine.
 
 
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_byz_1_D.jpg)
-![Byzantine](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_byz_1_M.jpg)
+![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_byz_1_D.jpg)
+![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_byz_1_M.jpg)
 
 Le Général maintenant un registre des événements qui est toujours synchronisé avec les registres de l'autre Général sans qu'une partie centrale ne soit responsable de la coordination. Chaque fois qu'un bloc est miné, tous les participants s'entendent sur l'ordre des événements des deux dernières minutes. Pour en revenir au problème de notre général, ils ont maintenant un moyen de savoir s'ils vont tous attaquer, ou s'ils doivent battre en retraite collectivement. Maintenant que nous avons parlé du problème général qu'un [mécanisme de consensus]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) vise à résoudre, examinons quelques scénarios d'attaque simples et intuitifs et comment nous les abordons.
 
@@ -36,8 +36,8 @@ Le Général maintenant un registre des événements qui est toujours synchronis
 
 Une attaque par déni de service distribué (DDOS: Distributed Denial-of-Service) dans l'informatique est une attaque par laquelle un auteur cherche à rendre une ressource réseau inaccessible à ses utilisateurs en inondant le réseau d'un grand nombre de requêtes superflues afin de tenter de surcharger le système. C'est une attaque dont peuvent souffrir non seulement les blockchains, mais tout service en ligne. Sous une forme simple, l'attaque DOS (Denial-of-Service), toutes ces requêtes proviennent de la même source. Cela la rend facile à prévenir. Si une seule adresse IP envoie un grand nombre de demandes qui ne peuvent être justifiées par des raisons légitimes, vous pouvez avoir une mesure en place qui bloque automatiquement cette adresse IP. Dans le cas d'une attaque DDOS, la distribution se réfère à un grand nombre de sources différentes dont les requêtes malveillantes proviennent.
 
-![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_D.jpg)
-![DDOS Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/DDOS_M.jpg)
+![DDOS Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/DDOS_D.jpg)
+![DDOS Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/DDOS_M.jpg)
 
 Une attaque DDOS est beaucoup plus difficile à combattre car pour ce faire, vous devez faire la différence entre les requêtes légitimes et les requêtes malveillantes. C'est un problème très difficile. Dans le contexte des blockchains, cela revient à une question presque idéologique. La motivation d'introduire des frais de transaction est d'éliminer le spam. Certains prétendent que tant que les demandes sont assorties de frais de transaction, elles ne peuvent pas être considérées comme du spam par définition. Bien qu'il y ait certainement des situations où vous pourriez considérer les transactions comme du spam, ce serait une mauvaise chose que de commencer à les bloquer. L'une des plus grandes propositions de valeur des blockchains publiques est leur résistance à la censure. Commencer à choisir des transactions qui ne sont pas incluses - quels que soient les critères sur lesquels cette censure est basée; constituerait un danger pour toute blockchain.
 
@@ -47,8 +47,8 @@ Une attaque Sybil est une tentative de manipulation d'un réseau P2P en créant 
 
 Une autre utilisation possible des attaques Sybil est de censurer certains participants. Un certain nombre de nœuds Sybil peuvent entourer votre nœud et l'empêcher de se connecter à d'autres nœuds honnêtes sur le réseau. De cette façon, on pourrait essayer de vous empêcher d'envoyer ou de recevoir de l'information du réseau.
 
-![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_sybil_D.jpg)
-![Sybil Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_sybil_M.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_sybil_D.jpg)
+![Sybil Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_sybil_M.jpg)
 
 Une façon d'atténuer les attaques Sybil est d'introduire ou d'augmenter le coût pour créer une identité. Ce coût doit être soigneusement équilibré. Il doit être suffisamment bas pour que les nouveaux participants ne soient pas empêchés de se joindre au réseau et de créer des identités légitimes. Il doit aussi être suffisamment élevé pour que la création d'un grand nombre d'identités dans un court laps de temps devienne très difficile. Dans les blockchains en PoW, les nœuds qui prennent réellement les décisions sur les transactions sont les nœuds miniers. Il y a un coût réel, à savoir l'achat du matériel minier, associé à la création d'une fausse "identité minière". De plus, le fait d'avoir un grand nombre de nœuds miniers ne suffit toujours pas pour influencer le réseau de manière significative. Pour ce faire, vous auriez également besoin de grandes quantités de puissance de calcul. En d'autres termes, vous avez besoin d’un grand nombre d'ordinateurs. Les coûts associés rendent difficile de faire une attaque Sybil sur des blockchains en preuve de travail.
 
@@ -61,14 +61,14 @@ Un mineur malveillant souhaitant effectuer une double dépense créera d'abord u
 - Premièrement, il n'inclura pas ses propres dépenses de transaction de ses coins dans sa chaîne minée en privée.
 - Deuxièmement, il ne diffusera pas les blocs qu'il trouve sur le réseau, c'est pourquoi nous l'appelons la chaîne privée.
 
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_51_percent_D.jpg)
-![51% Attack](/assets/post_files/technology/advanced/attacks-on-blockchain/FR_51_percent_M.jpg)
+![51% Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_51_percent_D.jpg)
+![51% Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_51_percent_M.jpg)
 
 S'il contrôle la majorité de la puissance de calcul, sa chaîne croîtra en moyenne plus vite que la chaîne honnête. La règle de la plus longue chaîne dans les blockchains en PoW, également connue sous le nom de consensus Nakamoto, régit ce qui se passe dans le cas d'un tel fork. La branche (le fork), qui a plus de blocs, représente la chaîne créée avec une plus grande puissance de calcul, et est considérée comme la chaîne valide.
 
 Une fois que l'attaquant a reçu le bien ou une autre devise achetée avec ses coins, il diffuse la branche privée sur l'ensemble du réseau. Tous les mineurs honnêtes lâcheront alors la branche honnête et commenceront de miner au delà de la chaîne malveillante. Le réseau traite la transaction de l'attaquant comme si elle n'avait jamais eu lieu parce que l'attaquant ne l'a pas incluse dans la chaîne malveillante. L'attaquant contrôle toujours ses fonds et peut maintenant les dépenser à nouveau.
 
-<img src="/assets/post_files/technology/advanced/attacks-on-blockchain/percent.gif" alt="51% Attack" style="width: 700px;">
+![51% Attack](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/percent.gif)
 
 C'est ce qui est arrivé à de nombreuses petites blockchains dans le passé. En fait, Horizen a souffert d'une attaque 51% début juin 2018. Nous avons immédiatement commencé à travailler sur une solution pour atténuer le risque d'une attaque de 51% sur des blockchains plus petites qui ne sont pas sécurisées par autant de puissance de calcul que par exemple la blockchain Bitcoin.
 
