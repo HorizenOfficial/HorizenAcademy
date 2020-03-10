@@ -18,14 +18,14 @@ Hay muchas maneras de lograr consenso en una red distribuida, pero las dos más 
 
 **Inglés**
 
-_"The main difference between consensus mechanisms is the way in which they delegate and reward the verification of Transacciones. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
+> "The main difference between consensus mechanisms is the way in which they delegate and reward the verification of Transacciones. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."
 
 **Español**
 
-_"La principal diferencia entre mecanismos de consenso es la manera en la que delegan y recompensan la verificación de transacciones. […] De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario."_
+"La principal diferencia entre mecanismos de consenso es la manera en la que delegan y recompensan la verificación de transacciones. […] De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario."
 
-![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/ES_consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/ES_consensus_M.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_consensus_D.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_consensus_M.jpg)
 
 ### Prueba de trabajo (Proof-of-work; PoW)
 
@@ -39,11 +39,10 @@ Los mineros necesitan este poder computacional porque el problema que intentan r
 
 Todos los nodos y mineros verifican la validez de un bloque nuevo en cuanto se descubre y transmite a la red. Si el bloque resulta válido, se eliminan de los mempools las transacciones ahora registradas en la cadena. La labor empieza de nuevo en cuanto el mempool contiene transacciones que no se han minado. De esta manera, la red llega a un acuerdo sobre una versión única del historial de transacciones de la cadena PoW.
 
-![POW](/assets/post_files/technology/advanced/consensus-mechanisms/ES_POW_D.jpg)
-![POW](/assets/post_files/technology/advanced/consensus-mechanisms/ES_POW_M.jpg)
+![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_POW_D.jpg)
+![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_POW_M.jpg)
 
-
-**La regla de la cadena más larga**
+#### La regla de la cadena más larga
 
 Imaginemos una situación en la que dos mineros encuentran un bloque al mismo tiempo. En este caso, todos los nodos y mineros de la red almacenan ambas versiones del bloque. A esta situación se le llama empate, pues ambos bloques son válidos al momento de ser creados. Sin embargo, el empate debe romperse de alguna manera, pues es necesaria una sola versión de la verdad. Los mineros empiezan a construir sobre el bloque que reciben primero. El empate se rompe cuando un minero encuentra el siguiente bloque. Uno de los dos bloques será aceptado como el único verdadero por todos los mineros y nodos, mientras que el otro se hará de lado; estos bloques sin cadena se denominan bloques huérfanos. A este tipo de procedimiento para romper empates entre bloques coincidentes se le llama regla de la cadena más larga (longest chain rule) o consenso de Nakamoto.
 
@@ -51,16 +50,16 @@ Si el 80% de los mineros recibieron primero el bloque A y el otro 20% el bloque 
 
 **Inglés**
 
- _"In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_
+> "In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."
 
 **Español**
 
- _“De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario.”_
+“De una manera u otra, los algoritmos de consenso de la cadena de bloques se reducen a algún tipo de votación donde el número de votos que tiene cada usuario está atado a la cantidad de algún recurso limitado controlado por el usuario.”
 
-![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/ES_longest_chain_D.jpg)
-![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/ES_longest_chain_M.jpg)
+![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_longest_chain_D.jpg)
+![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_longest_chain_M.jpg)
 
-Las pruebas de trabajo son uno de los mecanismos de consenso más seguros, pero solo son viables cuando la red posee el poder computacional (hash rate) suficiente. El protocolo de Bitcoin ha demostrado a lo largo de diez años lo seguro que puede ser el consenso por pruebas de trabajo si la red posee el poder computacional suficiente. 
+Las pruebas de trabajo son uno de los mecanismos de consenso más seguros, pero solo son viables cuando la red posee el poder computacional (hash rate) suficiente. El protocolo de Bitcoin ha demostrado a lo largo de diez años lo seguro que puede ser el consenso por pruebas de trabajo si la red posee el poder computacional suficiente.
 
 Ya discutimos el concepto de la teoría de juegos en nuestro artículo sobre la cadena de bloques como protocolo para transferir valor, así como en el artículo sobre contratos inteligentes. En esencia, es el estudio de modelos matemáticos de interacción estratégica entre agentes que toman decisiones racionales. En el caso de una cadena de bloques PoW, los mineros son estos agentes. Los incentivos para seguir las reglas del protocolo de minado las contiene el protocolo mismo, y es por esto que lo que las cadenas de bloques PoW son tan robustas.
 
@@ -74,8 +73,8 @@ Mientras los mineros de una cadena PoW minan bloques, los validadores de una cad
 
 El recurso escaso en un ambiente PoS es la divisa nativa a la cadena de bloques. Entre más dinero tenga el usuario en participación en la blockchain, más altas sus probabilidades de validar un bloque nuevo. En la mayoría de las cadenas de bloques PoS no hay recompensas por crear bloques, sino que el incentivo de los validadores se basa en recolectar las tarifas correspondientes a las transacciones.
 
-![POS](/assets/post_files/technology/advanced/consensus-mechanisms/ES_POS_D.jpg)
-![POS](/assets/post_files/technology/advanced/consensus-mechanisms/ES_POS_M.jpg)
+![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_POS_D.jpg)
+![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_POS_M.jpg)
 
 ### PoW vs. PoS
 
@@ -87,8 +86,8 @@ Quienes apoyan las cadenas PoS se remiten al alto costo y rendimiento limitado d
 
 Retomaremos esta discusión en la conclusión de nuestro artículo sobre el minado de criptomonedas. Los argumentos respectivos de las comunidades PoS y PoW tendrán mayor sentido una vez que quede claro de qué trata el proceso de minado.
 
-![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/ES_compare_D.jpg)
-![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/ES_compare_M.jpg)
+![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_compare_D.jpg)
+![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_compare_M.jpg)
 
 ### Resumen
 
