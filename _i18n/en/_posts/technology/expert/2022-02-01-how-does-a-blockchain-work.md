@@ -31,7 +31,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}">
-            <img src="/assets/post_files/technology/advanced/how-does-a-blockchain-work/hash.svg" alt="Hash Functions" />
+            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/hash.svg" alt="Hash Functions" />
         </a>
     </div>
     <div class="col-md-9">
