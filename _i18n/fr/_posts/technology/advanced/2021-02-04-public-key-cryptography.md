@@ -78,11 +78,15 @@ Ensuite, vous dérivez votre clé publique du grand nombre aléatoire que vous a
 
 Les coordonnées sont
 
+$$
 _x_ = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+$$
 
 et
 
+$$
 _y_ = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+$$
 
 Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée * P), vous obtenez votre clé publique.
 
