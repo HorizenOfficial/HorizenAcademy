@@ -48,7 +48,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}">
-            <img src="/assets/post_files/technology/expert/how-does-a-blockchain-work/pkc.svg" alt="Public Key Cryptography" />
+            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/pkc.svg" alt="Public Key Cryptography" />
         </a>
     </div>
     <div class="col-md-9">
@@ -82,7 +82,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-06-the-p2p-network %}">
-            <img src="/assets/post_files/technology/expert/how-does-a-blockchain-work/p2p_5.svg" alt="The Peer-to-Peer (P2P) Network" />
+            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/p2p_5.svg" alt="The Peer-to-Peer (P2P) Network" />
         </a>
     </div>
     <div class="col-md-9">
@@ -99,7 +99,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}">
-            <img src="/assets/post_files/technology/expert/how-does-a-blockchain-work/mining.svg" alt="Mining" />
+            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/mining.svg" alt="Mining" />
         </a>
     </div>
     <div class="col-md-9">
