@@ -18,7 +18,6 @@ level: advanced
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">

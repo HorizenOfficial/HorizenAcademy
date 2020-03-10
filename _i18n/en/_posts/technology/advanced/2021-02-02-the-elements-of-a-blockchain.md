@@ -20,15 +20,15 @@ The input doesn't have to be a number, it can be any sort of data from a single 
 
 One of the most commonly used hash functions is SHA256 (Secure Hash Algorithm 256 bit). The number indicates the output of the hash function has 256 bit. A hash value can serve as a fingerprint of data. One can verify the integrity of files and detect changes by comparing their hashes.
 
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash2_D.jpg)
-![Hash](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/hash2_M.jpg)
+![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_D.jpg)
+![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_M.jpg)
 
 ### Public-Key Cryptography
 
 [*Public-key cryptography*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}) is also known as *asymmetric cryptography*. The term asymmetric stems from the property of keys always coming in pairs and them being used complementary. If you encrypt something with one of the keys, you need the other one to decrypt it and vice versa. The keys are called *public key* and *private key* (also *spending key* or *secret key*). Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key.
 
-![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_D.jpg)
-![Asymmetric](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/asymmetric_M.jpg)
+![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/asymmetric_D.jpg)
+![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/asymmetric_M.jpg)
 
 ### A Peer-to-Peer Network
 
@@ -36,15 +36,15 @@ You have probably come across the term [*Peer-to-Peer*]({{ site.baseurl }}{% pos
 
 Blockchains make use of this concept and it is one reason why they are so robust. You will often hear the attributes *permissionless* and *censorship-resistant* when reading about the value propositions of public blockchains. The Peer-to-Peer network plays a significant part in giving blockchains these properties.
 
-![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/central-distri_M.jpg)
+![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_D.jpg)
+![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_M.jpg)
 
 ### Consensus Mechanism
 
 If you want to build a form of digital money on a P2P network with many unknown participants, you will need to build *consensus* on the order of transactions. If a user has one ZEN and creates two different transactions that spend that same coin simultaneously, some peers will receive version A first, while others might receive version B first. The network needs to come to an agreement, or consensus, on which of the two transactions happened first and is valid. The [*consensus mechanism*]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) is what enables a large number of different entities that neither know, nor trust each other to agree on a single version of the blockchain.
 
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/the-elements-of-a-blockchain/consensus_M.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_D.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_M.jpg)
 
 ### Mining
 
