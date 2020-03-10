@@ -15,16 +15,12 @@ Es posible explicar la tecnología blockchain de muchas maneras. Hasta hace poco
 
 Como estructura de datos y en el contexto de las ciencias computacionales, una cadena de bloques es una manera de almacenar, organizar y administrar información. Una estructura de datos le permite al usuario acceder, modificar y buscar los datos que contiene. Algunas de las estructuras de datos más básicas y comunes son las matrices y listas enlazadas. Una matriz es un conjunto de elementos enumerados. Estos elementos pueden ser números, letras, palabras o incluso archivos. Los índices permiten al usuario acceder a cualquier elemento individualmente, por lo que si el usuario desea cambiar la entrada de una matriz y conoce su ubicación, tiene un acceso directo a ella.
 
-{%
-  include blocks/image_caption.html
-  image="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_D.jpg"
-  image2="/assets/post_files/technology/advanced/blockchain-as-a-data-structure/ES_array_M.jpg"
-  caption="One-dimensional array with six elements"
-%}
+![Matriz](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_array_D.jpg)
+![Matriz](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/ES_array_M.jpg)
 
 Los _nodos_ son los elementos de información en una lista enlazada. Un nodo incluye al menos un pedazo de información de cualquier tipo y un puntero al siguiente elemento. La función del puntero es indicarle a la computadora dónde encontrar el siguiente elemento de la lista.
 
-Si el usuario está viendo el primer pedazo de información de una lista y quiere pasar al segundo, deberá buscar el puntero que lo dirija a ese elemento. Es más fácil agregar datos a una lista enlazada sumándole un nodo que agregarlos a una matriz aumentando el número de elementos. 
+Si el usuario está viendo el primer pedazo de información de una lista y quiere pasar al segundo, deberá buscar el puntero que lo dirija a ese elemento. Es más fácil agregar datos a una lista enlazada sumándole un nodo que agregarlos a una matriz aumentando el número de elementos.
 
 Algo con lo que el usuario no cuenta en una lista enlazada es _acceso instantáneo_. Si se está buscando un pedazo de información específico en la lista enlazada será preciso que el usuario busque en el primer _nodo_, la _cabeza_ de la lista. Si este no es el elemento solicitado, el usuario sigue el enlace o puntero que lo llevará al siguiente nodo. Si este segundo nodo tampoco contiene la información deseada, debe continuar siguiendo punteros en la cadena de nodos hasta encontrar los datos buscados.
 
@@ -57,4 +53,4 @@ Nos gustaría cerrar esta sección con un tuit de Nick Szabo, el cual que consid
 
 {% include blocks/tweet.html id="1059227449232445440" %}
 
-_“Las cadenas de bloques no garantizan la verdad; evitan que tanto verdad como mentira sean alteradas, permitiendo que cualquiera las analice e identifique con confianza las mentiras. Una computadora típica es como un juguete Etch A Sketch, mientras que las cadenas de bloques son el ámbar computacional.”_
+> “Las cadenas de bloques no garantizan la verdad; evitan que tanto verdad como mentira sean alteradas, permitiendo que cualquiera las analice e identifique con confianza las mentiras. Una computadora típica es como un juguete Etch A Sketch, mientras que las cadenas de bloques son el ámbar computacional.”
