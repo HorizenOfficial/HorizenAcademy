@@ -78,7 +78,7 @@ Additionally, we need to introduce the variable *i* at this point. It is a 32-bi
 
 The hardened secret key derivation takes the zero-level private key \\(sk_0\\), the zero-level chain code \\(cc_0\\) and the integer *i* as an input. By convention, the top of the integer range (from \\(2^{31}\\) to \\(2^{32}-1\\)) of *i*, is used for the hardened secret key derivation method.
 
-In other words, using the HSKD method the obtained first-level private key \\(sk_1\\) is a function of three values
+In other words, using the HSKD method the obtained first-level private key \\(sk_1\\) is a function of three values  
 
 $$
 sk_1 = HSKD(sk_0, c_0, i)
@@ -86,11 +86,11 @@ $$
 
 The *non-hardened secret key derivation* (NSKD) additionally takes the zero-level public key \\(PK_0\\) into account. In the non-hardened secret key derivation method, *i* will by convention take on values between 0 and \\(2^{31}-1\\), so the lower half of the total range of *i*.
 
-In other words, using the HSKD method the obtained first-level private key \\(sk_1\\) is a function of four values
+In other words, using the HSKD method the obtained first-level private key \\(sk_1\\) is a function of four values  
 
 $$
 sk_1 = NSKD(sk_0, PK_0 c_0, i)
-$$
+$$  
 
 ### Hardened Secret Key Derivation (HSKD)
 
