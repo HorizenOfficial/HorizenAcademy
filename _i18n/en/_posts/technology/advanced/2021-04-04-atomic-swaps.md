@@ -28,7 +28,8 @@ Two conditions must be met to perform an Atomic Swap between two crypto assets: 
 
 The process of an Atomic Swap would generally look like the following. Let's assume Alice has some BTC and Bob has some ZEN. Both agree to swap a certain amount of their assets.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swap_1.jpeg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_1_D.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_1_M.jpg)
 
 First, Alice creates an HTLC on the Bitcoin Blockchain that we will simply call contract. The contract comes with an address, otherwise, you could not interact with it. Next, Alice generates or picks a secret - in this example her secret is *XYZ*. Using a [hash function]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) she generates a lock (here: *1b9f...*), which is simply the hash of the secret.
 Now she deposits the amount of bitcoin she and Bob agreed to exchange in the contract where they are locked. Lastly, she sends the lock to Bob.
@@ -40,13 +41,15 @@ The contract can enforce two outcomes:
 
 Now it's Bobs turn.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swap_2.jpeg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_2_D.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_2_M.jpg)
 
 Bob also creates a Hashed Timelock Contract, but this time on the Horizen blockchain. His contract also has an address, *BCD* in this example. Alice sent him a lock (the same one she used) so he goes ahead and locks his contract with the same lock. Lastly, he deposits the amount of ZEN the two agreed to exchange. Just like the contract Alice created, Bob's contract can execute in two ways: either Bob gets refunded after a timeout period or Alice provides the secret and the funds are distributed to her address.
 
 Now both contracts are set up on their respective blockchain. Alice has to take the next step within the locking period, otherwise, both are refunded at nothing happened at all.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/swap_3.jpeg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_3_D.jpg)
+![swaps](/assets/post_files/technology/advanced/atomic-swaps/atomic_swaps_3_M.jpg)
 
 Alice will now use the secret she chose earlier to unlock the hashlock of Bob's contract on the Horizen blockchain and the ZEN will be released to her. This is a public operation, auditable on the blockchain. Bob can, therefore, see the secret now, and uses it to unlock the bitcoin locked up in Alice's contract. By providing the secret the HTLC will automatically release the funds to Bob's previously specified Bitcoin address.
 

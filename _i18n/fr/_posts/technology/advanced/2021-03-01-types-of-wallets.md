@@ -13,8 +13,8 @@ _Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de w
 
 Un wallet est un programme pour générer, gérer et stocker une paire de clés cryptographiques. Vous pouvez vérifier votre solde, recevoir et envoyer des fonds dans votre wallet.
 
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_D.jpg)
-![Wallet](/assets/post_files/technology/advanced/types-of-wallets/wallet2_M.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_D.jpg)
+![Wallet](/assets/post_files/technology/advanced/types-of-wallets/FR_wallet2_M.jpg)
 
 Si vous n'êtes pas sûr de la fonctionnalité principale d'un portefeuille, vous pouvez lire notre [introduction aux portefeuilles]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
 
