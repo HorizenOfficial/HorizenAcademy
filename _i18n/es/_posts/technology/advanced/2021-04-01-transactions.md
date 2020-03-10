@@ -11,11 +11,10 @@ chapter: "Transacciones"
 
 Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques si ha leído los capítulos anteriores a este. Tras cubrir la idea de una cadena de bloques y sus propuestas de valor en el primer capítulo, nos adentramos a los elementos que la hacen funcionar. En este capítulo, nos concentraremos en una subunidad de la cadena, una pequeñísima pieza del rompecabezas. La cadena de bloques está compuesta de muchos bloques, los cuales funcionan como contenedores de transacciones.
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
-            <img src="/assets/post_files/technology/advanced/transactions/utxo.svg" alt="El modelo UTXO" />
+            <img src="/assets/post_files/technology/advanced/4.0-transactions/utxo.svg" alt="El modelo UTXO" />
         </a>
     </div>
     <div class="col-md-9">
@@ -32,7 +31,7 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
-            <img src="/assets/post_files/technology/advanced/transactions/block_explorer.svg" alt="El explorador de bloques" />
+            <img src="/assets/post_files/technology/advanced/4.0-transactions/block_explorer.svg" alt="El explorador de bloques" />
         </a>
     </div>
     <div class="col-md-9">
@@ -49,7 +48,7 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">
-            <img src="/assets/post_files/technology/advanced/transactions/atomic_swaps.svg" alt="Intercambios atómicos" />
+            <img src="/assets/post_files/technology/advanced/4.0-transactions/atomic_swaps.svg" alt="Intercambios atómicos" />
         </a>
     </div>
     <div class="col-md-9">
