@@ -20,7 +20,7 @@ level: expert
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/intro/what_is_blockchain.svg" alt="What is a Blockchain" />
+            <img src="/assets/post_files/technology/expert/0.0-tech-expert/what_is_blockchain.svg" alt="What is a Blockchain" />
         </a>
     </div>
     <div class="col-md-9">
@@ -37,7 +37,7 @@ level: expert
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-01-how-does-a-blockchain-work %}">
-            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
+            <img src="/assets/post_files/technology/expert/0.0-tech-expert/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
         </a>
     </div>
     <div class="col-md-9">
@@ -54,7 +54,7 @@ level: expert
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">
-            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Wallets Expert" />
+            <img src="/assets/post_files/technology/expert/0.0-tech-expert/wallets.svg" alt="Wallets Expert" />
         </a>
     </div>
     <div class="col-md-9">
