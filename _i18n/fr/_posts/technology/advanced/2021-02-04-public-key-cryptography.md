@@ -56,7 +56,7 @@ Pour comprendre la façon dont vos clés et vos adresses fonctionnent ensemble, 
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced2.3-/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         L'ajout à lui-même est facile. Nous prenons à nouveau l'intersection de la ligne droite avec la courbe et la projetons de l'autre côté de l'axe des abscisses.
         <br/>
@@ -64,7 +64,6 @@ Pour comprendre la façon dont vos clés et vos adresses fonctionnent ensemble, 
     </div>
     <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
-
 
 Le point clé à retenir est que la multiplication d'un point est une tâche facile. La division est difficile (lire infaisable). Il n'y a pas d'algorithme pour calculer combien de fois P a été ajouté à lui-même ou en termes de multiplication par quel nombre il a été multiplié afin d'arriver à un certain point. Cela devrait suffire à comprendre le concept de base de la cryptographie à clé publique basée sur des courbes elliptiques.
 
