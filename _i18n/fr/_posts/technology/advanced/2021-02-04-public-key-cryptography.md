@@ -90,7 +90,8 @@ $$
 
 Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée * P), vous obtenez votre clé publique.
 
-<img src="/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_M.jpg" alt="ECC" style="width: 400px;">
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_D.jpg)
+![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_M.jpg)
 
 Pour résumer : Votre clé privée est un grand nombre aléatoire. Votre clé publique est un point sur la courbe elliptique que vous obtenez lorsque vous multipliez le point de base P par votre clé privée.
 
