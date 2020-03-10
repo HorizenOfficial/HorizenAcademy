@@ -14,8 +14,8 @@ Puisque le but de la conception originale de la blockchain était de permettre u
 
 La _cryptographie à clé publique_ permet de représenter l'identité sur la blockchain. C'est la deuxième pierre angulaire de la technologie de la blockchain en plus des [fonctions de hachage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %})  dont nous avons parlé dans le dernier article. Les fonctions de hachage vérifient l’authenticité et l’intégrité de la donnée pendant que la cryptographie à clé publique vérifie la propriété sur la blockchain.
 
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/FR_how_it_works_D.jpg)
-![How it works](/assets/post_files/technology/advanced/public-key-cryptography/FR_how_it_works_M.jpg)
+![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_how_it_works_D.jpg)
+![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_how_it_works_M.jpg)
 
 Reprenons depuis le début. La cryptographie à clé publique repose sur les clés privées, les clés publiques, les adresses et les signatures numériques. Lorsque vous possédez des cryptomonnaies, la blockchain contient un enregistrement des coins associés à votre clé publique. Vous devez fournir une signature numérique pour autoriser la dépense de ces coins. Vous ne pouvez fournir cette signature numérique que si vous êtes en possession de la clé privée qui correspond à la clé publique.
 
@@ -24,45 +24,45 @@ Reprenons depuis le début. La cryptographie à clé publique repose sur les cl�
 Pour comprendre la façon dont vos clés et vos adresses fonctionnent ensemble, nous devons introduire la cryptographie à courbe elliptique (ECC). Il y a différentes façons de construire un schéma de cryptographie à clé publique. Le bitcoin et la plupart des autres cryptomonnaies utilisent la cryptographie à courbe elliptique (ECC)
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Bitcoin, Ethereum et beaucoup d'autres devises utilisent une courbe appelée secp256k1 et elle ressemble à celle à gauche. L'équation pour cette courbe est y^2 = x^3 + 7. Ce qui rend les courbes elliptiques utiles, c'est que vous pouvez faire des mathématiques avec elles, et les mathématiques que vous faites avec les courbes contiennent des propriétés spéciales.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Le graphique à gauche montre un exemple d'addition de deux points de la courbe. Lorsque nous voulons additionner les points P et Q ensemble, nous les relions d'abord par une ligne droite. Cette ligne droite croise la courbe en un troisième point. Nous devons maintenant projeter le troisième point de l'autre côté de l'axe des x (multiplier la coordonnée y par -1) et nous obtenons la somme des points P et Q : R. La clé à retenir est que la somme de deux points sur la courbe est un troisième point sur la courbe.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Quand on veut multiplier un point sur la courbe, il faut l'ajouter à lui-même. Pour multiplier le point P par deux, on l'ajoute à lui-même une fois. Dans ce cas, on ne peut pas vraiment relier deux points, mais on va vers la ligne tangente (celle avec les flèches).
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Pourquoi la ligne tangente vous demandez vous. Si vous regardez un point aléatoire proche de P (le gris le plus clair), en reliant les deux points, vous obtiendrez la ligne grise la plus claire. En vous rapprochant de plus en plus ce point vers P (de clair à foncé), la ligne de jonction se rapproche de la ligne tangente jusqu'à ce qu'elle devienne les points et que les lignes se chevauchent.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced2.3-/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         L'ajout à lui-même est facile. Nous prenons à nouveau l'intersection de la ligne droite avec la courbe et la projetons de l'autre côté de l'axe des abscisses.
         <br/>
         Si nous voulons multiplier P par 3, nous additionnons maintenant P et le point (P + P) ensemble. Pour multiplier P par quatre, on peut ajouter un point (P + P) à lui-même et ainsi de suite.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 
@@ -90,8 +90,8 @@ $$
 
 Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée * P), vous obtenez votre clé publique.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_D.jpg)
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_6_M.jpg)
+![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_6_D.jpg)
+![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_6_M.jpg)
 
 Pour résumer : Votre clé privée est un grand nombre aléatoire. Votre clé publique est un point sur la courbe elliptique que vous obtenez lorsque vous multipliez le point de base P par votre clé privée.
 
@@ -103,8 +103,8 @@ Une propriété qui est nécessaire pour tout schéma cryptographique à clé pu
 
 Enfin, pour obtenir votre adresse, votre clé publique est maintenant hashée. Tout d'abord, en utilisant la fonction de hachage SHA256, puis une deuxième fois en utilisant RIPEMD160. Après avoir ajouté un octet pour indiquer si cette adresse ira sur le réseau principal ou de test et calculer une somme de contrôle, il y a une dernière étape avant d'obtenir votre adresse.
 
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_7_D.jpg)
-![ECC](/assets/post_files/technology/advanced/public-key-cryptography/FR_ecc_7_M.jpg)
+![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_7_D.jpg)
+![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_7_M.jpg)
 
 Lorsqu'on examine le fonctionnement d'un ordinateur au niveau matériel, on constate qu'il y a des zéros et des uns. Les données sont toujours stockées dans un format binaire quel que soit le type de données que vous regardez (images, fichiers son, et même votre adresse bitcoin). Il existe différentes façons de convertir une chaîne de bits en données que les humains peuvent lire. Les humains se débrouillent mieux avec une chaîne de chiffres ou de caractères alphanumériques.
 

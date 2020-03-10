@@ -23,8 +23,8 @@ Une fonction de hachage cryptographique doit remplir l'ensemble de critères sui
 - Résistante aux collisions - Il devrait être difficile (lire impossible) de trouver deux entrées pour une fonction de hachage donnant la même sortie.
 - Déterministe - La même entrée doit toujours produire la même sortie.
 
-![Hash function](/assets/post_files/technology/advanced/hash-functions/FR_hash_function_D.jpg)
-![Hash function](/assets/post_files/technology/advanced/hash-functions/FR_hash_function_M.jpg)
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_D.jpg)
+![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_M.jpg)
 
 Les fonctions de hachage les plus fréquemment utilisées aujourd'hui sont SHA-256. SHA est un acronyme pour Secure Hash Algorithm. Le nombre indique la longueur de la sortie en bits, par exemple, il y a quatre longueurs différentes de sorties dans la famille SHA : 224, 256, 384 ou 512 bits. Un autre type de fonctions de hachage pertinentes dans la technologie de la blockchain est la famille RIPEMD. RIPEMD160 est souvent utilisé dans de nombreuses cryptomonnaies et comme vous l'aurez deviné, produit une sortie de 160 bits.
 
