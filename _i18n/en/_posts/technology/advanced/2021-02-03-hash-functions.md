@@ -29,9 +29,9 @@ A cryptographic hash function must fulfill the following set of criteria to be v
 The most frequently used hash function today is *SHA-256*. SHA is an acronym for *Secure Hash Algorithm*. The number indicates the length of the output in bits, e.g. there are four different lengths of outputs in the SHA family: 224, 256, 384 or 512 bits. Another type of hash functions relevant in blockchain tech is the RIPEMD family. *RIPEMD160* is used in many cryptocurrencies and as you might have guessed produces an output of 160 bits.
 
 Hash values are used for many purposes in cryptocurrencies and blockchains. The most notable use case is the process of chaining together the blocks, thus creating the blockchain. We call a hash value a fingerprint of data for its property of being collision-resistant.
-Each set of data used as an input can be easily identified by the unique hash that it generates. It is nearly impossible to find two inputs to the hash function, that result in the same output (cause a collision). It would take all the supercomputers on earth combined several thousands of years to create a collision. This is because there is no way to "calculate" a collision. The only way to find one is through a brute-force approach, where you try different inputs until you get a collision by chance. 
+Each set of data used as an input can be easily identified by the unique hash that it generates. It is nearly impossible to find two inputs to the hash function, that result in the same output (cause a collision). It would take all the supercomputers on earth combined several thousands of years to create a collision. This is because there is no way to "calculate" a collision. The only way to find one is through a brute-force approach, where you try different inputs until you get a collision by chance.
 
-This works because the *output space* of a 256 hash function is incredibly huge. The output space describes the set of all possible hash values from 0 to 1.1579 \cdot 10^{77} which can be written out as
+This works because the *output space* of a 256 hash function is incredibly huge. The output space describes the set of all possible hash values from 0 to \\(1.1579 \cdot 10^{77}\\) which can be written out as
 
 <center>
 115792089237316195423570985008687907853269984665640564039457584007913129639936
