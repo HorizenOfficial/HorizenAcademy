@@ -15,6 +15,7 @@ For digital money to be useful, it needs to be transferable. The transfer of mon
 So far we explained [what data comprises a transaction]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) when we looked at the blockchain as a data structure. When we talked about [public key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}) we covered how ownership on a blockchain is proven and verified, a key aspect of enabling secure transactions.
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_M.jpg)
 
 Here we want to look at the accounting or balance models used in blockchains. We already introduced the commonly used *UTXO model* in our Advanced Level and assume basic knowledge of it for this article. The second method to track user balances, as applied in Ethereum for example, is the *account model*.
 First, we will look at their similarities before we take a closer look at each model individually. Lastly, we will compare the two models and briefly show how they can be combined.
