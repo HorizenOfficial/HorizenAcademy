@@ -59,14 +59,13 @@ In the UTXO model each transaction can transition the system to a new state, but
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-state-transition-utxo.jpg)
 
+Alice wants to transfer eight ZEN to Bob and controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output as an input. To spend a UTXO it needs to be unlocked. The spending conditions are defined in the [Pubkey Script](https://bitcoin.org/en/glossary/pubkey-script) included in each transaction output. The data necessary to satisfy this script is provided with the spending transaction and includes the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) of the owner - in this case Alice.
 
-
-
-to spend a UTXO it needs to be unlocked. the spending conditions are defined in the Pubkey Script included in each transaction output. The data necessary to satisfy this script is provided with the spending transaction in the Signature Script.
-
-"Transactions can be trivially verified in parallel. It is impossible for two transactions to affect the same UTXO. This is due to the stateless nature of UTXO transactions."
+Next she defines what should happen with her money by creating the transaction outputs. Since she wants to transfer eight ZEN to Bob she creates two outputs with her transaction: one paying Bob and another returning the excess money to a self controlled address. Note how the sum of both outputs doesn't equal the entirety of the input consumed. The difference between outputs and inputs is defined as the transaction fee in the protocol.
 
 ## The Account Model
+
+The account-based transaction model 
 
 account-based chains (such as the Ethereum and EOS blockchains) represent coins as balances within an account.
 
@@ -211,6 +210,7 @@ Every transaction in the account model only needs to make one reference and sign
 "Every account in Ethereum has its own balance, storage and code-space for calling other accounts or addresses. A transaction is valid if a sending account has enough balance to pay for it. If the receiving account has code, the code runs, changing anything from internal storage to creating additional messages that may have subsequent effects on debits and credits to other accounts. Due to this, every newly generated block can potentially affect the state of all other accounts."
 
 
+![Comparing the UTXO and Account-based Transaction Model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-comparison-utxo-account.jpg)
 
 
 
@@ -220,6 +220,8 @@ Every transaction in the account model only needs to make one reference and sign
 gas fee refund. in eth overestimated, not consumed gas refunded.
 
 ### Hybrid Systems
+
+![Hybrid Accounting Model, as used in QTUM](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-comparison-utxo-account.jpg)
 
 "However, a popular trend nowadays is to use a hybrid paradigm. It is reasonable to consider a hybrid model with UTXO being used for balances and States for contracts." (same source as intro)
 
