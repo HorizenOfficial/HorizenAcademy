@@ -98,26 +98,22 @@ A transaction in the account-based model is an instruction for how to transition
 
 The balance, or state, of accounts in Ethereum is not stored on the blockchain but computed and stored in a local database on the node. The blockchain only stores the instructions (transactions) for how the system should transition from one state to another.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Comparison
 
-high level computational view: "The cell model is derived from the UTXO model and is thus a verification model. The account model, in contrast, is a computational model. Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
+Before we compare the UTXO and account model with regards to scalability, privacy, smart contract capabilities and other aspects, its interesting to compare them from a high level computational view.
+
+The UTXO model is a *verification model*. Users submit transactions that specify the reslut of the state transition: new transaction outputs spendable by the receiver(s). Nodes verify if the consumed inputs were previously unspent and if the signature(s) satify the spending conditions.
+
+The account model on the other hand is a *computational model*. Users submit transactions that instruct nodes on what the state transition should look like and the network computes the new state based on these instructions.
+
+This comes with certain implications with regards to several scaling methods.
 
 
-both have merits and shortcomings.
 
-In the end depending on use case which one is better suited for the job
+Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
+
+
+
 
 below strength and weaknesses of each model
 
@@ -258,6 +254,9 @@ refunding gas via coinbase tx, added consensus rule
 
 ### Summary
 
+both have merits and shortcomings.
+
+In the end depending on use case which one is better suited for the job
 
 You can shoehorn most applications into one or the other balance model. The question is if you should do this, and why you would want to do this.
 
