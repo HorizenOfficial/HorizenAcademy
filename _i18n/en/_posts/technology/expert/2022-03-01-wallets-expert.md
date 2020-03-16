@@ -158,11 +158,11 @@ For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.cas
 
 The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction.
 
-![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-signature-spending.png)
+![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending.jpg)
 
 A regular "single-signature" transaction only involves the verification of one signature. The Pubkey Script is based on the public key the money is sent to. The digital signature that can authorize spending of this money must be based on the corresponding private key.
 
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-signature-spending.png)
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending.jpg)
 
 The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script). The hash of the redeem script functions as an address - a *Pay to Script-Hash* (P2SH) address. This address and hence the information contained in the redeem script is included in the pubkey script.
 
