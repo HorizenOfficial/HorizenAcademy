@@ -33,7 +33,7 @@ Every blockchain, no matter if it uses the UTXO or account model, follows this s
 
 The first major difference between the two balance models is how the state of the system is recorded. In the UTXO model the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-balance-state.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-dag-vs-database.jpg)
 
 A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships beween nodes. We take a more detailed look at graphs in a dedicated article that you can find [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
@@ -176,19 +176,22 @@ One paradigm that is applied in the AAL is combining UTXOs for a given contract 
 
 ### Summary
 
-To summarize 
+To finish off this article, let us recap what we covered. We started by pointing out the similarities between the UTXO and account model. The blockchain can be considered a state machine independetly of the accounting scheme used. In both cases transactions trigger state transitions which happen in batches - with each new block added to the blockchain.
 
-both have merits and shortcomings.
+In the UTXO model the movement of assets is recorded in the form of a directed acyclic graph made of transaction outputs. New outputs are added with each additional block.
+In the case of the account model balances are stored as a global state of accounts, kept by each node and updated with every block. This is more similar to a database.
 
-In the end depending on use case which one is better suited for the job
+Transactions in the UTXO model are larger in size and place more burden on the user and its wallet compared to the simpler instructions for how to transition to the new state in the account model. A general difference lies in the UTXO model being a verification model compared to a computational model when accounts are used.
 
-You can shoehorn most applications into one or the other balance model. The question is if you should do this, and why you would want to do this.
+In terms of blockchain size account based systems offer benefits, because the state as well as transactions are smaller. The UTXO paradigm on the other hand makes scaling solutions like state- and payment channel constructions as well a sharding simpler.
 
-"Within cryptocurrency platforms, there are a diverse set of design concepts and technical mechanisms that go into the platform being able to function as a viable, secure, and usable system. The transaction models used by such platforms employ the use of cryptography to verify ownership of tokens across the network. The UTXO scheme works superbly for Bitcoin, while the Account Based model used in Ethereum is geared to supporting its more complex application and contract needs."
+When it comes to the privacy gurantees provided by each scheme both have pros and cons. On the one hand, linking transactions to a single user is often times easier in account based systems, which on the other hand offers better fungibility of assets.
 
+Because the account model offers clear advantages when smart contracts should be supported by the blockchain in question many new smart contract platforms use hybrid models where UTXOs are used for balances and accounts are used for the contracts.
 
-How the client handles this data -> programming blockchain
+In the end it depends on the use case which model is better suited for the job. You can shoehorn most applications into one or the other balance model. The question is if you should do this, and why you would want to do this in the first place. Because we could not phrase it much better we want to finish this article with a quote:
 
+> "Within cryptocurrency platforms, there are a diverse set of design concepts and technical mechanisms that go into the platform being able to function as a viable, secure, and usable system. The transaction models used by such platforms employ the use of cryptography to verify ownership of tokens across the network. The UTXO scheme works superbly for Bitcoin, while the Account Based model used in Ethereum is geared to supporting its more complex application and contract needs." - [Brian Curran](https://blockonomi.com/utxo-vs-account-based-transaction-models/)
 
 ### FR
 
@@ -196,21 +199,4 @@ Cell model: https://medium.com/nervosnetwork/https-medium-com-nervosnetwork-cell
 
 [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
 
-"As just mentioned, MimbleWimble collapses all transactions within a block into a single block-wide transaction. The structure and transaction boundaries are removed. "
-
-
-
-
-
-
-
-
-
-
-
-
-refresh, outputs have pukey scripts (in code scriptPubKey) attached in order to be used.
-
-Signature Scripts (in code scriptSig) used to satisfy spending condition.
-
-++++++ graphic pubkey script / signature script compare lock/key
+https://hackernoon.com/getting-deep-into-ethereum-how-data-is-stored-in-ethereum-e3f669d96033
