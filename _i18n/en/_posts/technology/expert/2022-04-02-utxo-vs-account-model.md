@@ -61,47 +61,43 @@ In the UTXO model each transaction can transition the system to a new state, but
 
 Alice wants to transfer eight ZEN to Bob and controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output as an input. To spend a UTXO it needs to be unlocked. The spending conditions are defined in the [Pubkey Script](https://bitcoin.org/en/glossary/pubkey-script) included in each transaction output. The data necessary to satisfy this script is provided with the spending transaction and includes the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) of the owner - in this case Alice.
 
-Next she defines what should happen with her money by creating the transaction outputs. Since she wants to transfer eight ZEN to Bob she creates two outputs with her transaction: one paying Bob and another returning the excess money to a self controlled address. Note how the sum of both outputs doesn't equal the entirety of the input consumed. The difference between outputs and inputs is defined as the transaction fee in the protocol.
+Next she defines what should happen with her money by creating the transaction outputs. Since she wants to transfer eight ZEN to Bob she creates two outputs with her transaction: one paying Bob and another returning the excess money to a self controlled address. Note how the sum of both outputs doesn't equal the entirety of the input consumed. The difference between outputs and inputs is defined as the transaction fee in the protocol. In this case the fee is 0.001 ZEN.
+
+The size of the transaction fee is estimated by the wallet based on the amount of data recorded on-chain. This is because miners can only place a limited amount of data within a block, and by using the metric money per amount of data they can determine the transactions that when included give them the most bang for the buck.
 
 ## The Account Model
 
-The account-based transaction model 
+The account-based transaction model, as used by smart contract platforms like Ethereum represents assets as balances within accounts, similar to bank accounts. There are two different types of accounts:
 
-account-based chains (such as the Ethereum and EOS blockchains) represent coins as balances within an account.
+- private key controlled user accounts and
+- contract code controlled accounts.
 
-two types of accounts, private key controlled user accounts and contract-code controlled accounts.. popular for SC platforms
+When you create an ether wallet and receive a transaction for the first time a private key controlled account is created and its state is stored across all nodes on the network. Deploying a smart contract leads to the creation of a code controlled account. Smart contracts can hold funds themselves, which they might redistribute according to their logic at some point, based on the conditions defined in the contract logic. Every account in Ethereum has a balance, storage and code-space for calling other accounts or addresses.
 
-similar to nak accounts - tx triggers system to decrement the senders account balance and increment receivers account balance
+A transaction in the account-based model triggers nodes to decrement the balance of the senders account by the transferred amount and increment the receivers account balance accordingly.
 
-"shared state across all the nodes using a database and transactions simply update the database when needed. It allows for complex data structures and allows for general computing."
+Transaction fees also work differently in the account based model. They are not defined as the difference between inputs and outputs but rather based on the number of computations the state transition requires. Ethereum set out to be a world computer. Hence paying fees based on computational resources consumed rather than storage capacity taken was the method of choice for the fee market.
 
-"The Account/Balance Model, on the other hand, keeps track of the balance of each account as a global state. The balance of an account is checked to make sure it is larger than or equal to the spending transaction amount." -> where in UTXO you check if the output is spent or unspent
+The account model keeps track of all balances as a global state. This state can be understood as a database of all accounts, private key and contract code controlled and their current balances of the different assets on the network.
 
 ### State Transitions in the Account Model
 
-simple model tx -> state transition
+In a very simple model a transaction presents an event that triggers a state transition of the blockchain subject to the state transition logic. Just like in the UTXO model it is infeasible to transition to a new state with every transaction and so they are also batched into blocks. With each new block the system transitions to a new state.
 
-not feasible to transition after every single tx, especially as the execution of a smart contract can involve a large number of atomic transitions.
-
-transitions in block intervalls.
-
-Easy example: assume only a single transaction is included in the block
+Just like we did before, we consider a simple example where a single transaction transitions the system to a new state below.
 
 ![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-state-transition-account.jpg)
 
-authorization: message signed. Pubkey Script and Signature script don't exist in the account based model. 
-To spend from an account, only the spending transaction needs to be signed.
+The example is generally the same: Alice wants to transfer 8 ZEN to Bob. Instead of picking a UTXO to use her wallet will create a transaction that defines the spending account, the receiving account and the amount to transfer. This transaction is then signed with Alice's private key. When the system transitions to a new state (n+1) with the next block, Alice's account balance will globally be reduced to 2 ZEN whereas Bob's balance will be increased to 9 ZEN.
 
-Verification: "ECDSA signatures in Ethereum consist of three parameters r, s, and v. Solidity provides a globally available method ecrecover that returns an address given these three parameters. If the returned address is the same as the signer’s address, then the signature is valid."
+Pubkey- and Signature Script do not exist in account based blockchains. The verification of [signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) in account-based blockchain, Ethereum for example, is based on three parameters, *r*, *s*, and *V* provided by the sender. These three values comprise the signature. Solidity, the programming language used in ethereum provides a method, [ecrecover](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsign) that returns an address given these parameters. If the returned address matches the senders address, the signature and in return the transaction is valid.
 
-tx in account instructs nodes to substract 8 from alice and add them two bob. tx is an instruction for how to transit, actual transition executed by nodes. "Transactions do not explicitly include the resulting state resulting in smaller transaction sizes."
+Where in the UTXO model part of the verification process is checking if a transaction output in *unspent*, nodes in the account model check if the senders balance is larger than or equal to the spending transactions amount. This is true for the native asset of the chain, e.g. ETH, as well as all other tokens on the network.
 
-Every account in Ethereum has its own balance, storage and code-space for calling other accounts or addresses
+A transaction in the account-based model is an instruction for how to transition two or more accounts to the next state, the actual transition is then executed by the nodes. Because the final state is not specified in the transaction, the resulting transaction size in the account model is a lot smaller than in the UTXO model.
 
 Need to store all accounts states
-More efficient storage usage
 
-Light clients can analyze the states more easily
 
 The state of an account is not stored on the blockchain in Ethereum, it is computed and stored in a local database on the node. (?)
 Light Client is equivalent to SPV in UTXO model. Allows for "light nodes processing about 1KB of data per 2 minutes to receive data from the network about the parts of the state that are of concern to them, and be sure that the data is correct provided that the majority of miners are correctly following the protocol, and perhaps even only provided that at least one honest verifying full node exists."
@@ -109,6 +105,9 @@ Light Client is equivalent to SPV in UTXO model. Allows for "light nodes process
 
 
 ## Comparison
+
+high level computational view: "The cell model is derived from the UTXO model and is thus a verification model. The account model, in contrast, is a computational model. Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
+
 
 both have merits and shortcomings.
 
@@ -140,6 +139,11 @@ disadvantage in storage economy. Storing several UTXOs requires more memory than
 
 
 #### Account
+
+Light clients can analyze the states more easily
+
+More efficient storage usage
+
 scalability -> transactions can be smaller (e.g. 100 bytes in Ethereum vs. 200–250 bytes in Bitcoin) because every transaction requires to make only a single reference, signature and to produce just one output. Also because the final state is not explicitly specified in TX.
 
 account state smaller than UTXO set.
