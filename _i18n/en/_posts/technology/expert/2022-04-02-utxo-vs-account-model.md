@@ -100,44 +100,47 @@ The balance, or state, of accounts in Ethereum is not stored on the blockchain b
 
 ## Comparison
 
-Before we compare the UTXO and account model with regards to scalability, privacy, smart contract capabilities and other aspects, its interesting to compare them from a high level computational view.
+Below, we want to look at the strengths and weaknesses of the UTXO and account model. Before we compare them with regards to scalability, privacy, smart contract capabilities and other aspects, its interesting to compare them from a high level computational view.
 
 The UTXO model is a *verification model*. Users submit transactions that specify the reslut of the state transition: new transaction outputs spendable by the receiver(s). Nodes verify if the consumed inputs were previously unspent and if the signature(s) satify the spending conditions.
 
 The account model on the other hand is a *computational model*. Users submit transactions that instruct nodes on what the state transition should look like and the network computes the new state based on these instructions.
 
-This comes with certain implications with regards to several scaling methods.
-
-
-
-Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
-
-
-
-
-below strength and weaknesses of each model
-
-one difference is that UTXO allows for different on-chain metrics through chain analysis. if this is a positive or negative is up for everyone to decide.
-
-Examples include the [Spent Output Profit Ratio (SOPR)](https://academy.glassnode.com/indicators/sopr/sopr-spent-output-profit-ratio) and [Coin Days Destroyed (CDD)](https://academy.glassnode.com/indicators/coin-days-destroyed/cdd-coin-days-destroyed).
-
-On the other hand other on-chain metrics available in account model. (Really? which ones? so far made up claim)
-
-
+This comes with certain implications with regards to the way these systems can scale using layer two solutions like state channels and sharding.
 
 ### Scalability
 
+There are several approaches to comparing the UTXO and account model with regards to scalability. One way to look at it is focusing on the overall storage requirements of each system. Another way is to consider which model is better suited for the deployment of second layer technologies on top of the main blockchain.
+
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling-contracts_D.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling-contracts_M.jpg)
+
+
+In order to compare both accounting methods we will assume systems with the same amount of users and transactions.
+
+#### Size of the Blockchain
+
+
+
+#### State- and Payment Channel Constructions
+
+
+
+#### Sharding
+
+
 How it effects second layer development
-?: while in UTXO a full node only has to add a new TX to the ledger, in Account setting each node has to find the account of the payee as well as the payer and edit both.??
+-> sharding?: while in UTXO a full node only has to add a new TX to the ledger, in Account setting each node has to find the account of the payee as well as the payer and edit both.??
 
 #### UTXO
+
 Allows using multi-threading for computations. Multiple UTXOs can be processed at the same time. "Transactions can be processed in parallel since they all refer to independent inputs"
 
 More easily scaled through sharding, but finality needed.
 
 disadvantage in storage economy. Storing several UTXOs requires more memory than a single account balance. So do TXs require more space.
 
-"The cell model is derived from the UTXO model and is thus a verification model. The account model, in contrast, is a computational model. Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
+"Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
 
 
 #### Account
@@ -151,6 +154,23 @@ scalability -> transactions can be smaller (e.g. 100 bytes in Ethereum vs. 200â€
 account state smaller than UTXO set.
 
 "an account model makes it easier to bring new servers up. The number of accounts will generally be much less than the number of UTXOs in a comparably sized system. This means less data needed to bring on new nodes"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Security
@@ -218,12 +238,28 @@ Every transaction in the account model only needs to make one reference and sign
 
 ![Comparing the UTXO and Account-based Transaction Model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-comparison-utxo-account.jpg)
 
-
-
-
-
-
 gas fee refund. in eth overestimated, not consumed gas refunded.
+
+### Other
+
+one difference is that UTXO allows for different on-chain metrics through chain analysis. if this is a positive or negative is up for everyone to decide.
+
+Examples include the [Spent Output Profit Ratio (SOPR)](https://academy.glassnode.com/indicators/sopr/sopr-spent-output-profit-ratio) and [Coin Days Destroyed (CDD)](https://academy.glassnode.com/indicators/coin-days-destroyed/cdd-coin-days-destroyed).
+
+On the other hand other on-chain metrics available in account model. (Really? which ones? so far made up claim)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Hybrid Systems
 
