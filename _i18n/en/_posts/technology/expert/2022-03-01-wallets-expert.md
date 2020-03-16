@@ -71,8 +71,7 @@ To recap what we did thus far:
 
 When looking at the key derivation in HD wallets, we can generally differentiate between *hardened secret key derivation* (HSKD) and *non-hardened secret key derivation* (NSKD). The difference lies in the inputs used to generate first-level keys.
 
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened_D.jpg)
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened_M.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened.jpg)
 
 Additionally, we need to introduce the variable *i* at this point. It is a 32-bit integer that is used to derive different keys with index *i* from a single zero-level key. By convention the total range of possible values of *i* is split between HSKD and NSKD, giving both methods the option to create 2147483648 different first-level keys from a single zero-level key.
 
