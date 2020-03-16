@@ -112,48 +112,55 @@ This comes with certain implications with regards to the way these systems can s
 
 There are several approaches to comparing the UTXO and account model with regards to scalability. One way to look at it is focusing on the overall storage requirements of each system. Another way is to consider which model is better suited for the deployment of second layer technologies on top of the main blockchain.
 
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling-contracts_D.jpg)
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling-contracts_M.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-scaling-utxo-account.jpg)
 
+One second layer technology, [state- and payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) moves the exchange of data from the blockchain to a dedicated trustless network of bidirectional communication channels.
+
+The other approach that can arguably be referred to as a second layer technology is sharding. Sharding is a term originating from the traditional database world. It describes partitioning a database into several shards in order to keep each individual partition and in turn the entire system more performant. [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) in Horizen can be considered a sharding mechanism.
 
 In order to compare both accounting methods we will assume systems with the same amount of users and transactions.
 
 #### Size of the Blockchain
 
+The account model is more efficient in terms of memory usage. Storing a single account balance saves memory compared to storing several UTXOs the comprise a users total transferrable balance. Transactions in the account model are also smaller in size as they mainly need to specify the receiving address, the amount to transfer and a single digital signature.
 
+On a conceptual level this becomes very intuitive: because a UTXO transaction specifies the state after the transition (the newly generated transaction outputs) it needs to include more data than an account transaction. It may also consume several UTXOs as inputs, whereas the account transaction only specifies which account balance to deduct the transferred amount from.
+
+To give you an idea: an average transaction in Ethereum's account model takes about 100 bytes, whereas a UTXO transaction in Horizen takes about 200-300 bytes.
+
+This also implies that is is easier to get new nodes online in the account model. The number of accounts will generally be much smaller than the total UTXO set in a comparably sized system. This means less data is needed to get new nodes in synch.
 
 #### State- and Payment Channel Constructions
 
+The currently most advanced payment channel construction is the [Lightning Network](https://lightning.network/) on Bitcoin. It uses a proof submission and verification mechanism when assets move into and out of the second layer. As we mentioned above, the UTXO model is essentially a verification model whereas the account model is a computational model. Hence, a UTXO construction is more suitable for these types of scalabilty approaches.
 
+when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
 
 #### Sharding
+
+UTXO More easily scaled through sharding, but finality needed.
 
 
 How it effects second layer development
 -> sharding?: while in UTXO a full node only has to add a new TX to the ledger, in Account setting each node has to find the account of the payee as well as the payer and edit both.??
 
+
+
+
+
+
+
 #### UTXO
 
 Allows using multi-threading for computations. Multiple UTXOs can be processed at the same time. "Transactions can be processed in parallel since they all refer to independent inputs"
-
-More easily scaled through sharding, but finality needed.
-
-disadvantage in storage economy. Storing several UTXOs requires more memory than a single account balance. So do TXs require more space.
-
-"Current Layer 2 solutions such as the Lightning Network, utilize a proof submission and verification mechanism when assets return to Layer 1 from Layer 2. With Layer 1 playing a verification role, rather than a computation role, we can see that a UTXO or cell model is the proper approach for these kind of constructions."
-
 
 #### Account
 
 Light clients can analyze the states more easily
 
-More efficient storage usage
 
-scalability -> transactions can be smaller (e.g. 100 bytes in Ethereum vs. 200–250 bytes in Bitcoin) because every transaction requires to make only a single reference, signature and to produce just one output. Also because the final state is not explicitly specified in TX.
 
-account state smaller than UTXO set.
 
-"an account model makes it easier to bring new servers up. The number of accounts will generally be much less than the number of UTXOs in a comparably sized system. This means less data needed to bring on new nodes"
 
 
 
@@ -304,7 +311,7 @@ How the client handles this data -> programming blockchain
 
 ### FR
 
-
+Cell model: https://medium.com/nervosnetwork/https-medium-com-nervosnetwork-cell-model-7323fca57571
 
 "As just mentioned, MimbleWimble collapses all transactions within a block into a single block-wide transaction. The structure and transaction boundaries are removed. "
 
