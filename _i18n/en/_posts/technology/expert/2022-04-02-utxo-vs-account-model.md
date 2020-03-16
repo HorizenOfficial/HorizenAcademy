@@ -96,11 +96,17 @@ Where in the UTXO model part of the verification process is checking if a transa
 
 A transaction in the account-based model is an instruction for how to transition two or more accounts to the next state, the actual transition is then executed by the nodes. Because the final state is not specified in the transaction, the resulting transaction size in the account model is a lot smaller than in the UTXO model.
 
-Need to store all accounts states
+The balance, or state, of accounts in Ethereum is not stored on the blockchain but computed and stored in a local database on the node. The blockchain only stores the instructions (transactions) for how the system should transition from one state to another.
 
 
-The state of an account is not stored on the blockchain in Ethereum, it is computed and stored in a local database on the node. (?)
-Light Client is equivalent to SPV in UTXO model. Allows for "light nodes processing about 1KB of data per 2 minutes to receive data from the network about the parts of the state that are of concern to them, and be sure that the data is correct provided that the majority of miners are correctly following the protocol, and perhaps even only provided that at least one honest verifying full node exists."
+
+
+
+
+
+
+
+
 
 
 
@@ -157,7 +163,7 @@ account state smaller than UTXO set.
 #### Account
 "One drawback for the Account/Balance Model is the exposure to double spending attacks(Anm. Ich: more precisely: replay attacks). An incrementing nonce can be implemented to counteract this type of attack. In Ethereum, every account has a public viewable nonce and every time a transaction is made, the nonce is increased by one. This prevents the same transaction being submitted more than once."
 
-
+Light Client is equivalent to SPV in UTXO model. Allows for "light nodes processing about 1KB of data per 2 minutes to receive data from the network about the parts of the state that are of concern to them, and be sure that the data is correct provided that the majority of miners are correctly following the protocol, and perhaps even only provided that at least one honest verifying full node exists."
 
 
 ### Wallets
