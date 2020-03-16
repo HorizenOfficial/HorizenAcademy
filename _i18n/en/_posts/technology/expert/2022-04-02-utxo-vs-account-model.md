@@ -172,13 +172,11 @@ A takeaway from the above section is that when it comes to simple transactions a
 
 The decision to use the UTXO model as the basis for the overall architecture was made because the it was viewed as "significantly securer" at the time of conception. On top of this UTXO layer QTUM enables "creating and executing smart contracts using the accounts model offered by Ethereum" through a construction they call the [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
 
-One paradigm that is applied in the AAL is combining UTXOs for a given contract in a new transaction as soon as there is more than one of them available to the contract code.
-
-> "And finally, using the UTXO model, we can implement Proof-of-Stake consensus on a protocol level, and not just as a smart contract application on top of the chain. The modified Blackcoin Proof-of-Stake algorithm that we use makes use of parallel proofs and requires UTXO activity, something that we couldn’t do in an accounts model."
-
-
+One paradigm that is applied in the AAL is combining UTXOs for a given contract in a new transaction as soon as there is more than one of them available to the contract code. Using the UTXO model as a base layer QTUM was also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf) which requires parallel proofs and requires UTXO activity.
 
 ### Summary
+
+To summarize 
 
 both have merits and shortcomings.
 
