@@ -50,6 +50,23 @@ level: expert
         </p>
     </div>
 </div>  
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">
+            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Wallets Expert" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Wallets</h5>
+        <p class="mb-1">
+            This third chapter of the Horizen Academy covers the more advanced concepts applied in modern cryptocurrency wallets in depth. We look at how a mnemonic phrase is generated, different key derivation methods, and multi-signature functionality.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">Read Article</a>
+        </p>
+    </div>
+</div>  
   
 
 
