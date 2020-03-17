@@ -71,7 +71,8 @@ To recap what we did thus far:
 
 When looking at the key derivation in HD wallets, we can generally differentiate between *hardened secret key derivation* (HSKD) and *non-hardened secret key derivation* (NSKD). The difference lies in the inputs used to generate first-level keys.
 
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hardened-vs-non-hardened.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/NSKD-vs-HSKD_D.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/NSKD-vs-HSKD_M.jpg)
 
 Additionally, we need to introduce the variable *i* at this point. It is a 32-bit integer that is used to derive different keys with index *i* from a single zero-level key. By convention the total range of possible values of *i* is split between HSKD and NSKD, giving both methods the option to create 2147483648 different first-level keys from a single zero-level key.
 
@@ -157,11 +158,13 @@ For larger amounts, 3-of-5 MultiSig schemes can be used. [Casa](https://keys.cas
 
 The spending conditions of a [UTXO] are defined in the [*pubkey script*](https://bitcoin.org/en/glossary/pubkey-script). It essentially determines the verification process of the transaction.
 
-![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending.jpg)
+![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_D.jpg)
+![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_M.jpg)
 
 A regular "single-signature" transaction only involves the verification of one signature. The Pubkey Script is based on the public key the money is sent to. The digital signature that can authorize spending of this money must be based on the corresponding private key.
 
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending.jpg)
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
 
 The spending conditions for MultiSig transactions are defined in a so-called [*redeem script*](https://bitcoin.org/en/glossary/redeem-script). The hash of the redeem script functions as an address - a *Pay to Script-Hash* (P2SH) address. This address and hence the information contained in the redeem script is included in the pubkey script.
 

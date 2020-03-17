@@ -1,8 +1,8 @@
-We are sorry, the Expert Level content on the Topics Technology is not available just yet!
+### Not Yet...
 
-We wanted to move forward and bring the Horizen Academy online nonetheless, so we could start collecting feedback on our other content and the User Experience of our Website. This way we can start to improve our User Interface and Content. We are working hard to complete this section for you. If you have any feedback shoot us a message at academy@horizen.global!
+We are rolling out the Expert Level of the Technology Section right now. This chapter is just yet not availabel but will be soon!
 
-Sign up for our Newsletter to receive a notification when our Expert section goes live!
+Sign up for our Newsletter to receive a notification when more of our Expert content goes live!
 
 We will keep you in the loop about any additions to our content or new features on our Academy page.
 
