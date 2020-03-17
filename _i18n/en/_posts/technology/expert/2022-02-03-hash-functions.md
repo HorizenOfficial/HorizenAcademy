@@ -111,6 +111,9 @@ An entire industry has formed around performing hash functions as efficiently as
 
 Specialized hardware optimized for performing hash operations with a single specific hash function only, such as SHA256, are available on the market. These specialized processors are called ASICs (Application Specific Integrated Circuits).
 
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_D.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_M.jpg)
+
 Processors display trade-offs between versatility and efficiency. While CPUs (Central Processing Units) can handle many tasks at low efficiency. GPUs (Graphical Processing Units) are more efficient at certain tasks at the cost of overall versatility. At the other end of the scale, there are ASICs, which are only useful for one specific task, but are highly efficient.
 
 We have an article dedicated to [mining]({{ site.baseurl }}{% post_url /technology/expert/2022-02-07-mining %}) at the end of this chapter. We will go into more detail on the intricacies of the mining process from a technical as well as economical perspective.
