@@ -17,11 +17,10 @@ level: advanced
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/intro/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain ?" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">
@@ -38,7 +37,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">
-            <img src="/assets/post_files/technology/advanced/intro/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain ?" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">
@@ -55,7 +54,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">
-            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Les portefeuilles" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/wallets.svg" alt="Les portefeuilles" />
         </a>
     </div>
     <div class="col-md-9">
@@ -72,7 +71,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">
-            <img src="/assets/post_files/technology/advanced/intro/transactions.svg" alt="Les transactions" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Les transactions" />
         </a>
     </div>
     <div class="col-md-9">
@@ -89,7 +88,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/intro/privacy.svg" alt="La confidentialité en ligne" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/privacy.svg" alt="La confidentialité en ligne" />
         </a>
     </div>
     <div class="col-md-9">
@@ -106,7 +105,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/intro/attacks.svg" alt="Les attaques" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/attacks.svg" alt="Les attaques" />
         </a>
     </div>
     <div class="col-md-9">
@@ -123,7 +122,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">
-            <img src="/assets/post_files/technology/advanced/intro/summary.svg" alt="Résumé" />
+            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/summary.svg" alt="Résumé" />
         </a>
     </div>
     <div class="col-md-9">

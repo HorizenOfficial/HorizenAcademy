@@ -18,7 +18,7 @@ If you know how to navigate one block explorer, you will know how to navigate al
 The information that you will find in a block explorer is structured either by blocks, addresses or individual transactions. Let's look into a first example to make all this more tangible.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
+    <img src="/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png" alt="Latest blocks">
 </div>
 
 There are a number of block explorers out there, oftentimes several versions for the same blockchain. Since we want to go all the way back to the beginning of cryptocurrencies in this example we will look at Bitcoin and use one of the most popular explorers [out there](https://www.blockchain.com/explorer) .
@@ -38,7 +38,7 @@ You will see an overview of the most recently created blocks on the landing page
 Let's have a look at a single block. The height of the very first block is 0 as we said before. If we want to look at the very first Bitcoin block, we can use the search function and enter "0". If you haven't opened the site yet [this link](https://www.blockchain.com/fr/btc/block-height/0) will take you directly to the *genesis block*. The very first block of a given chain is usually called the genesis block.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
+    <img src="/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png" alt="The Genesis Block">
 </div>
 
 Let us go through the information we can find here. The genesis block contains only one transaction. This is the minimum amount you will see since every block has a so-called *coinbase transaction*, the transaction that is used to issue new bitcoins to the miner that solved the block to reward them for their efforts.
@@ -65,7 +65,7 @@ What you will most likely use a block explorer for is checking a transaction sta
 If we want to look at the very first cryptocurrency transaction ever done we need to go to Block #170, where Satoshi Nakamoto sent Hal Finney 10 BTC.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
+    <img src="/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
 </div>
 
 It is the first block on the bitcoin blockchain that contains more than one transaction. We can find the coinbase transaction on the very top. Below is the first transaction as you would expect it. One person sending coins to another one.

@@ -14,13 +14,17 @@ Nous allons maintenant examiner la blockchain d'un point de vue différent. Cett
 
 > “[The] Bitcoin protocol and network today [a] value transfer network. Beyond that, it is a core, backbone security service securing contracts, physical and digital property, equities, bonds, robot AI and an enormous wave of applications which have not yet been conceived." - Jeff Garzik, Bitcoin Core Developer
 
-> “Le protocole et le réseau Bitcoin [est] aujourd'hui [un] réseau de transfert de valeur. Au-delà, il s'agit d'un core, d'un service de sécurité backbone sécurisant les contrats, les biens physiques et numériques, les actions, les obligations, les robots IA et une énorme vague d'applications qui n'ont pas encore été conçues." - Jeff Garzik, Développeur Bitcoin Core
+**Français**
+
+“Le protocole et le réseau Bitcoin [est] aujourd'hui [un] réseau de transfert de valeur. Au-delà, il s'agit d'un core, d'un service de sécurité backbone sécurisant les contrats, les biens physiques et numériques, les actions, les obligations, les robots IA et une énorme vague d'applications qui n'ont pas encore été conçues." - Jeff Garzik, Développeur Bitcoin Core
 
 Le protocole est un ensemble de règles qui régit la validité des transactions et le fonctionnement global de la blockchain. La [définition de Technopedia](https://www.techopedia.com/definition/12938/network-protocols) d'un protocole réseau est la suivante :
 
 > "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication."
 
-> "Les protocoles de réseau sont des normes et des politiques formelles composées de règles, de procédures et de formats qui définissent la communication entre deux ou plusieurs dispositifs sur un réseau. Les protocoles de réseau régissent les processus de bout en bout des communications de données ou de réseau opportunes, sécurisées et gérées."
+**Français**
+
+"Les protocoles de réseau sont des normes et des politiques formelles composées de règles, de procédures et de formats qui définissent la communication entre deux ou plusieurs dispositifs sur un réseau. Les protocoles de réseau régissent les processus de bout en bout des communications de données ou de réseau opportunes, sécurisées et gérées."
 
 La création de la blockchain définit cet ensemble de règles, de procédures et de formats. La seule façon de modifier ces règles est qu'une majorité des participants au réseau décide de le faire. Les blockchains publiques doivent faire l'objet d'un consensus, ce qui exige à son tour un examen attentif de chaque changement proposé. Cette caractéristique souhaitable aide à créer une base de confiance solide pour les utilisateurs.
 
@@ -28,18 +32,18 @@ La création de la blockchain définit cet ensemble de règles, de procédures e
 
 Vous pouvez distinguer plusieurs grands types de protocoles réseau. Il y a :
 
- - Les protocoles de communication réseau tels que TCP/IP (protocole de contrôle de transmission/ protocole Internet) ;
- - Les protocoles de sécurité réseau tels que HTTPS et SSL (protocole de transfert hypertexte secure/secure sockets layer) ;
- - Les protocoles de gestion de réseau tels que SNMP et ICMP (protocole de gestion de réseau simple/ protocole de message de contrôle Internet) ;
- - Les protocoles de transfert de valeur tels que Horizen ou Bitcoin.
+- Les protocoles de communication réseau tels que TCP/IP (protocole de contrôle de transmission/ protocole Internet) ;
+- Les protocoles de sécurité réseau tels que HTTPS et SSL (protocole de transfert hypertexte secure/secure sockets layer) ;
+- Les protocoles de gestion de réseau tels que SNMP et ICMP (protocole de gestion de réseau simple/ protocole de message de contrôle Internet) ;
+- Les protocoles de transfert de valeur tels que Horizen ou Bitcoin.
 
 Vous trouverez ci-dessous une collection de protocoles, dont beaucoup sont utilisés tous les jours. Par exemple, le protocole TCP/IP spécifie comment décomposer les données en paquets, les adresser et les acheminer par le réseau vers leur destination finale. Vous utilisez la norme TCP/IP chaque fois que vous allez en ligne pour communiquer avec différents serveurs afin de recevoir les informations auxquelles vous voulez accéder.
 
 SSL (Secure Sockets Layer) est un protocole standard utilisé pour établir des liens chiffrés entre un serveur Web et un client (comme votre ordinateur) dans la communication en ligne. Par exemple, lorsque vous envoyez vos détails de paiement à une boutique en ligne, vous utilisez SSL pour établir une connexion chiffrée avant d'envoyer vos informations de carte de crédit sur Internet.
 Le protocole SNMP (Simple Network Management Protocol) est un ensemble de protocoles pris en charge par des périphériques réseau tels que des routeurs, des serveurs ou des imprimantes. Le SNMP prend en charge les différents périphériques d'un réseau interopérable en toute transparence.
 
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_protocols_D.jpg)
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_protocols_M.jpg)
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_D.jpg)
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_M.jpg)
 
 Tout au long de l'histoire d'Internet, les gens ont défini des normes pour l'échange de divers types de données. Il est important de noter que ce n'est pas toujours le meilleur protocole qui a été adopté en masse. Il est peu probable que les gens adoptent un protocole différent une fois qu'ils commencent à l'utiliser et à s'en inspirer, à moins que ce ne soit mieux pour confédérer. Les développeurs sont attirés par le nombre croissant de bibliothèques et d'outils disponibles sur ces protocoles. Ce cycle se répète jusqu'à ce qu'un protocole devienne finalement un standard.
 
@@ -59,8 +63,8 @@ Un autre sous-ensemble de règles concerne la structure d'un bloc valide. Rappel
 
 Après l'en-tête de bloc, le bloc contient toutes les transactions qui ont été incluses.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_2_D.jpg)
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/FR_block_2_M.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_D.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_M.jpg)
 
 Il faut maintenant établir un ensemble de règles décrivant à quoi doit ressembler une transaction individuelle. Nous parlerons des transactions en détail dans un article dédié mais pour l'instant, il devrait suffire de savoir qu'une transaction doit inclure l'expéditeur, le destinataire, le montant du transfert, et une signature numérique. La signature numérique est un moyen d'autoriser l'utilisation de vos fonds. La clé privée d'un utilisateur créée cette signature numérique. Nous expliquons ce processus plus en détail dans notre article sur la cryptographie à clé publique.
 
@@ -78,4 +82,6 @@ J'aimerais terminer cet article de la même façon qu'il a commencé, avec une c
 
 > "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths... Putting all the world’s coffee transactions, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
-> "N'essayez pas d'insérer toutes les fonctionnalités dans le protocole Bitcoin. Laissez-le faire ce qu'il fait de mieux. Construisez des systèmes sur Bitcoin qui utilisent ses forces... Mettre toutes les transactions de café du monde, et toutes les transactions boursières du monde, et tous les échantillonnages de dispositifs de l'Internet des objets du monde entier, sur la blockchain Bitcoin semble malavisé" - Jeff Garzik, Développeur Bitcoin Core Developer
+**Français**
+
+"N'essayez pas d'insérer toutes les fonctionnalités dans le protocole Bitcoin. Laissez-le faire ce qu'il fait de mieux. Construisez des systèmes sur Bitcoin qui utilisent ses forces... Mettre toutes les transactions de café du monde, et toutes les transactions boursières du monde, et tous les échantillonnages de dispositifs de l'Internet des objets du monde entier, sur la blockchain Bitcoin semble malavisé"

@@ -17,9 +17,7 @@ Si vous savez comment naviguer dans un explorateur de blocs, vous saurez comment
 
 Les informations que vous trouverez dans un explorateur de blocs sont structurées soit par blocs, soit par adresses, soit par transactions individuelles. Examinons un premier exemple pour rendre tout cela plus tangible :
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
-</div>
+![Latest Blocks](/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
 
 Il y a un certain nombre d'explorateurs de blocs, souvent plusieurs versions pour la même blockchain. Puisque nous voulons revenir au début des cryptomonnaies dans cet exemple, nous allons visualiser le Bitcoin et utiliser un des explorateurs les plus populaires : [blockchain.com](https://www.blockchain.com/explorer).
 
@@ -37,9 +35,7 @@ Vous verrez un aperçu des blocs les plus récemment créés sur la page d'accue
 
 Jetons un coup d'oeil à un seul bloc. La hauteur du tout premier bloc est 0 comme nous l'avons dit précédemment. Si nous voulons regarder le tout premier bloc de bitcoin qui a été extrait (ou miné), nous pouvons utiliser la fonction de recherche et entrer "0". Si vous n'avez pas encore ouvert le site, [ce lien](https://www.blockchain.com/fr/btc/block-height/0) vous mènera directement au bloc de genèse (Bloc Genesis), c'est ainsi que le tout premier bloc d'une blockchain est toujours appelé.
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
-</div>
+![Genesis Block](/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
 
 Passons en revue les informations que nous pouvons trouver ici. Le bloc Genesis ne contient qu'une seule transaction. C'est le montant minimum que vous verrez puisque chaque bloc a une transaction dite _coinbase_, c'est la transaction qui est utilisée afin d’émettre de nouveaux bitcoins au mineur qui a résolu le bloc.
 
@@ -63,9 +59,7 @@ Vous utiliserez probablement un explorateur de blocs pour vérifier l'état d'un
 
 Si nous voulons regarder la toute première transaction de cryptomonnaie jamais faite, nous devons aller au bloc #170, où la première transaction de bitcoin de Satoshi Nakamoto à Hal Finney est incluse.
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/transactions.png" alt="Bitcoin Transaction">
-</div>
+![la première transaction de bitcoin](/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
 
 C'est le premier bloc de la blockchain bitcoin qui contient plus d'une transaction. Nous pouvons trouver la transaction coinbase tout en haut.  En dessous se trouve la première transaction comme vous pouvez vous y attendre. Une personne envoyant des coins à une autre.
 

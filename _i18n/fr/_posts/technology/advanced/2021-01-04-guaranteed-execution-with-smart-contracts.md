@@ -14,8 +14,8 @@ Nous avons examiné la blockchain de deux façons différentes. D'abord en tant 
 
 Une blockchain peut non seulement héberger des données simples comme des transactions, mais aussi de petits programmes. Nous appelons ces programmes des smart contracts. Un contrat, en général, est un accord entre les parties qui les lie. Le "smart" vient de l'exécution automatique de ces contrats numériques. Il s'agit d'un grand nombre d'énoncés "si, alors" qui sont rédigés et mis en application par le code. Le contrat s'exécute automatiquement si les conditions du contrat sont remplies.
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_smart_contract_M.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_M.jpg)
 
 ### La promesse des smart contracts
 
@@ -33,8 +33,8 @@ Une application décentralisée ou dApp est un cas d'utilisation plus sophistiqu
 
 Les dApps utilisent des smart contracts pour communiquer avec la blockchain sous-jacente. Imaginez un avenir où les bibliothèques de smart contracts avec un grand nombre de modèles de contrats différents puissent être utilisés à des fins diverses. Nous constatons déjà une tendance vers ce scénario avec des plateformes de smart contracts telles qu'Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_dapp_D.jpg)
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_dapp_M.jpg)
+![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_D.jpg)
+![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_M.jpg)
 
 ### Plateforme de Smart Contracts
 
@@ -56,16 +56,18 @@ Il faut tenir compte du fait que la rédaction de contrats traditionnels nécess
 
 Il y a un autre défi majeur à relever. Le monde numérique a besoin d'en savoir plus sur les événements du monde réel pour qu'un smart contract puisse fonctionner et s'exécuter. Un oracle est une entité qui soumet des données à une blockchain ou à un smart contract. Le problème de confiance est connu sous le nom de problème oracle. Imaginez un smart contract exécutant une plateforme de paris dans un environnement sans confiance. Un oracle doit soumettre le résultat d'un jeu pour que le smart contract distribue les fonds aux gagnants. Parce qu'un oracle détermine ce qu'un smart contract voit, il contrôle également ce qu'il fait.
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_oracle_D.jpg)
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/FR_oracle_M.jpg)
+![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_D.jpg)
+![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_M.jpg)
 
 Les oracles centralisés ne sont pas considérés comme une solution au problème d'oracle. Peu importe à quoi ressemble la mise en œuvre réelle, les incitations à soumettre des données mensongères pourraient l'emporter sur les avantages d'agir honnêtement dans certaines décisions. Qu'il soit centralisé ou décentralisé, un oracle aura toujours un coût. Agir honnêtement doit toujours être la stratégie la plus rentable et, par conséquent, des incitations fortes doivent être en place. C'est un autre problème qui nécessite une évaluation de la théorie des jeux et la conception d'incitations, tout comme les incitations pour les mineurs dont nous avons parlé dans notre [dernier article]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %})
 
 Des projets tels qu'Augur et Gnosis travaillent sur des solutions décentralisées au problème d'oracle via des marchés de prédiction. Avant que ces marchés prédictifs ne soient sérieusement adoptés, ils resteront faciles à jouer. Et puisque les marchés prédictifs ont le potentiel d'influencer le résultat d'un événement comme le suggère Dan Finley, il reste à voir s'ils peuvent devenir une solution.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Maybe/Theory: Since decentralized prediction markets can influence the incentives around an event’s probability, they are never just prediction tools, and should always be treated as incentivization tools.</p>&mdash; Dan Finlay (@danfinlay) <a href="https://twitter.com/danfinlay/status/1089550845698396167?ref_src=twsrc%5Etfw">January 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% include blocks/tweet.html id="1089550845698396167" %}
 
-*Théorie : Puisque les marchés prédictifs décentralisés peuvent influencer les incitations à la probabilité d'événements, ils ne sont jamais de simples outils prédictifs, et doivent donc toujours être traités comme des outils d'incitation.*
+**Français**
+
+"Théorie : Puisque les marchés prédictifs décentralisés peuvent influencer les incitations à la probabilité d'événements, ils ne sont jamais de simples outils prédictifs, et doivent donc toujours être traités comme des outils d'incitation."
 
 Avant de résoudre le problème de la création de smarts contracts juridiquement contraignants et le problème d'oracle, l'utilisation des smart contracts sera limitée aux petits domaines expérimentaux à faible risque. Un exemple de cas d'utilisation potentielle serait les paiements dans un jeu déclenchés par certaines réussites qui sont objectivement vérifiables par code.
 

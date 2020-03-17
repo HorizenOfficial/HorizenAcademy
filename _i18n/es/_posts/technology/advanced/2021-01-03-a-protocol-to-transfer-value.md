@@ -28,19 +28,19 @@ La creación de la cadena de bloques define este conjunto de reglas, procedimien
 
 Podemos distinguir entre varios tipos generales de protocolos de red, que son:
 
- - Protocolos de comunicación de redes como TCP/IP
- - Protocolos de seguridad de redes como HTTPS y SSL
- - Protocolos de administración de redes como SNMP e ICMP
- - Protocolos para la transferencia de valor como Horizen o Bitcoin
+- Protocolos de comunicación de redes como TCP/IP
+- Protocolos de seguridad de redes como HTTPS y SSL
+- Protocolos de administración de redes como SNMP e ICMP
+- Protocolos para la transferencia de valor como Horizen o Bitcoin
 
 A continuación aparece una colección de protocolos, muchos de ellos de uso diario. El protocolo TCP/IP, por ejemplo, especifica cómo separar información en paquetes, direccionarlos y encaminarlos a través de la red hasta su destino final. El estándar TCP/IP se emplea siempre que un usuario entra en línea y se comunica con otros servidores para recibir la información que desea.
 
 EL SSL (Secure Sockets Layer) es un protocolo utilizado para establecer enlaces encriptados entre el servidor web y el cliente (como la computadora de un usuario) en una comunicación en línea. Por ejemplo, al enviar detalles de pago a una tienda en línea, se emplea un SSL para establecer una conexión encriptada antes de que se envíe la información bancaria.
 
 El SNMP (Simple Network Management Protocol) es un conjunto de protocolos ejecutado por dispositivos de red como routers, servidores o impresoras. Un SNMP se encarga de los diferentes dispositivos de una red para operarlos a la perfección.
- 
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/ES_protocols_D.jpg)
-![Protocols](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/ES_protocols_M.jpg)
+
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_D.jpg)
+![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_M.jpg)
 
 A lo largo de la historia del internet, muchos han definido los estándares para el intercambio de diferentes tipos de información. Es importante mencionar que, en estos casos, no siempre era el mejor protocolo el que terminaba por adoptarse. Además, es difícil lograr que un usuario se mude de protocolo al haber empezado a utilizar otro, salvo que el segundo sea miles de veces mejor. Los desarrolladores se ven atraídos al tremendo número de bibliotecas y herramientas disponibles gracias a estos protocolos, y el ciclo se repite hasta que un solo protocolo se adopta como estándar.
 
@@ -60,8 +60,8 @@ Otro subconjunto concierne la estructura de un bloque válido. Es importante rec
 
 Después del encabezado del bloque, aparece una lista de todas las transacciones incluidas.
 
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/ES_block_D.jpg)
-![Block](/assets/post_files/technology/advanced/a-protocol-to-transfer-value/ES_block_M.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_D.jpg)
+![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_M.jpg)
 
 Queda ahora la cuestión de definir un conjunto de reglas que describan cómo debe lucir una transacción individual. Trataremos a detalle las transacciones en un artículo aparte, pero es suficiente saber por ahora que cada transacción debe incluir información sobre el remitente y receptor, la cantidad transferida y una firma digital. Esta firma es un medio para autorizar la utilización de los fondos del usuario, y es la llave privada la que se encarga de crearla. Explicaremos más este proceso en un artículo posterior sobre criptografía de llave abierta.
 
@@ -80,4 +80,3 @@ Para concluir esta lección de la manera en que empezó, tomemos otra cita de Je
 > "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee Transacciones, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
 > "No hay por qué atiborrar el protocolo Bitcoin. Déjenlo hacer lo que mejor hace. Se deben construir sobre Bitcoin sistemas que aprovechen sus fortalezas....  Incluir en la blockchain de Bitcoin todas las compraventas de café, operaciones bursátiles del mundo y muestreos de todo el internet de las cosas es un esfuerzo equivocado." - Jeff Garzik
-
