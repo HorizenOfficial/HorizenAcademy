@@ -54,7 +54,7 @@ level: expert
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">
-            <img src="/assets/post_files/technology/advanced/intro/wallets.svg" alt="Wallets Expert" />
+            <img src="/assets/post_files/technology/expert/0.0-tech-expert/wallets.svg" alt="Wallets Expert" />
         </a>
     </div>
     <div class="col-md-9">
