@@ -10,16 +10,16 @@ chapter: "Transactions"
 further_reads: []
 ---
 
-For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner creating a transaction that informs the network about how much money has changed hands and who the new owner is.
+For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner creating a transaction that informs the network of how much money has changed hands and who the new owner is.
 
-So far we explained [what data comprises a transaction]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) when we looked at the blockchain as a data structure. When we talked about [public key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}) we covered how ownership on a blockchain is proven and verified, a key aspect of enabling secure transactions.
+So far we've explained [what data comprises a transaction]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) when we looked at the blockchain as a data structure. When we talked about [public key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}) we covered how ownership is proven and verified on a blockchain, a key aspect of enabling secure transactions.
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_M.jpg)
 
-Here we want to look at the accounting or balance models used in blockchains. We already introduced the commonly used *UTXO model* in our Advanced Level and assume basic knowledge of it for this article. The second method to track user balances, for instance applied in Ethereum, is the *account model*.
+In this article we will look at the accounting/balance models used in blockchains. We've already introduced the commonly used *UTXO model* in our Advanced Level and assume basic knowledge of it for this article. The second method to track user balances, for instance applied in Ethereum, is the *account model*.
 
-First, we will look at their similarities before we take a closer look at each model individually. Lastly, we will compare the two models and briefly show how they can be combined.
+We will start by looking at their similarities and then dive deep into each model individually. Lastly, we will compare the two models and briefly show how they can be combined.
 
 ## The Blockchain is a State Machine
 
@@ -31,54 +31,54 @@ Every blockchain, no matter if it uses the UTXO or account model, follows this s
 
 ### Recording the State
 
-The first major difference between the two balance models is how the state of the system is recorded. In the UTXO model the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
+The first major difference between the two balance models is how the state of the system is recorded. In the UTXO model, the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-dag-vs-database.jpg)
 
-A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships beween nodes. We take a more detailed look at graphs in a dedicated article that you can find [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
+A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships beween nodes. We take a more detailed look at graphs [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
-The graphic above shows a *directed acyclic graph* of the UTXO model on the left. Each state represents a block in the blockchain, each transaction output comprises a node in the DAG and each transaction is represented by one or more edges originating from a transaction output. Hence, an *unspent* transaction output does not have an edge originating from it. In the example above the transaction outputs 3, 5, 6, and 7 are unspent.
+The graphic above shows a *directed acyclic graph* of the UTXO model on the left. Each state represents a block in the blockchain, each transaction output comprises a node in the DAG, and each transaction is represented by one or more edges originating from a transaction output. Hence, an *unspent* transaction output does not have an edge originating from it. In the example above the transaction outputs 3, 5, 6, and 7 are unspent.
 
-On the right, the graphics shows a representation of the different states in the account model. With each new block the state of the system is updated, according to the transactions that are contained in the block. The number of accounts remains constant independent of the number of transactions conducted, as long as the number of users or [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) remains constant.
+On the right, the graphic shows a representation of the different states in the account model. With each new block, the state of the system is updated according to the transactions contained in the block. The number of accounts remains constant and independent of the number of transactions conducted, as long as the number of users or [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) remains constant.
 
-The conceptual difference is, that the account model updates user balances globally. The UTXO model on the other hand only records transaction receipts and the account balances are calculated on the client side by adding up the available unspent transaction outputs (UTXOs).
+The conceptual difference is that the account model updates user balances globally. The UTXO model only records transaction receipts. In the UTXO model, account balances are calculated on the client side by adding up the available unspent transaction outputs (UTXOs).
 
 ## The UTXO Model
 
-The UTXO model does not have a concept of accounts or wallets on the protocol level. It is entirely based on individual transactions, grouped in blocks. A comparison with cash holds suprisingly well. A user that holds 50 ZEN might be in controll of a single UTXO worth this amount, or any arbitrary combination of UTXOs that add up to 50 ZEN. If he had $50, he might hold a single bill or a combination of smaller denominations.
+The UTXO model does not incorporate accounts or wallets at the protocol level. The model is based entirely on individual transactions, grouped in blocks. We can compare this to people holding certain amounts of cash. A user that holds 50 ZEN might be in control of a single UTXO worth 50 ZEN, or a combination of UTXOs that add up to 50 ZEN. Comparing it to cash, if a user has $50, he might hold a single $50 bill, or a combination of smaller denominations.
 
 Transaction outputs must be spent as a whole because the records in previous blocks cannot be edited after the fact, in other words the amount of these outputs cannot be reduced. When a transaction is created spending a UTXO but the user doesn't want to transfer the entire amount the excess money is sent to a self-controlled address as change. This is analogous to a payer receiving change from the payee if he "overpays" with his $50 bill, because the banknote cannot be divided.
 
-There are two important difference though. Where the payer relies on its counterparty to return the change in case of a cash payment they create the change output in the UTXO model; it is part of the spending transaction they create themselves. The other difference is that cash exists in defined, *discrete* denominations, whereas transaction outputs can have arbitrary values.
+However, there are two important differences. Where the payer relies on its counterparty to return the change in case of a cash payment they create the change output in the UTXO model; it is part of the spending transaction they create themselves. The other difference is that cash exists in defined, *discrete* denominations, whereas transaction outputs can have arbitrary values.
 
-Since there is no concept of accounts or wallets on the protocol level the "burden" of maintaining a user's balance is shifted to the client side. Wallets maintain a record of all addresses derived from the generated private key(s) and monitor the blockchain for all associated transactions. The sum of all unspent transaction outputs it can controll is the current balance.
+Since there is no concept of accounts or wallets on the protocol level, the "burden" of maintaining a user's balance is shifted to the client side. Wallets maintain a record of all addresses derived from the generated private key(s) and monitor the blockchain for all associated transactions. The sum of all unspent transaction outputs it can control is its current balance.
 
 ### State Transitions in the UTXO Model
 
-In the UTXO model each transaction can transition the system to a new state, but because transitioning to a new state with each transaction is infeasible they are batched into blocks and each new block presents a state transition of the system. In the example below we look at a state transition in the UTXO model and for simplicity we consider only a single transaction taking place.
+Each transaction in the UTXO model can transition the system to a new state, because transitioning to a new state with each transaction is infeasible. As a result, transactions are batched into blocks, and each new block presents a system state transition. In the example below, we look at a UTXO state transition with only a single hypothetical transaction.
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-state-transition-utxo.jpg)
 
-Alice wants to transfer eight ZEN to Bob and controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output as an input. To spend a UTXO it needs to be unlocked. The spending conditions are defined in the [Pubkey Script](https://bitcoin.org/en/glossary/pubkey-script) included in each transaction output. The data necessary to satisfy this script is provided with the spending transaction and includes the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) of the owner - in this case Alice.
+Alice wants to transfer eight ZEN to Bob, and she controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output as an input. To spend a UTXO it needs to be unlocked. The spending conditions are defined in the [Pubkey Script](https://bitcoin.org/en/glossary/pubkey-script) included in each transaction output. The data necessary to satisfy this script is provided with the spending transaction and includes the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) of the owner - in this case Alice.
 
-Next she defines what should happen with her money by creating the transaction outputs. Since she wants to transfer eight ZEN to Bob she creates two outputs with her transaction: one paying Bob and another returning the excess money to a self controlled address. Note how the sum of both outputs doesn't equal the entirety of the input consumed. The difference between outputs and inputs is defined as the transaction fee in the protocol. In this case the fee is 0.001 ZEN.
+Next she defines what should happen with her money. She does this by creating the transaction outputs. Since she wants to transfer eight ZEN to Bob, she creates two outputs with her transaction: one paying Bob and another returning the excess money to a self controlled address. Note how the sum of both outputs doesn't equal the entirety of the input consumed. The difference between outputs and inputs is defined as the transaction fee in the protocol. In this case the fee is 0.001 ZEN.
 
-The size of the transaction fee is estimated by the wallet based on the amount of data recorded on-chain. This is because miners can only place a limited amount of data within a block, and by using the metric money per amount of data they can determine the transactions that when included give them the most bang for the buck.
+The size of the transaction fee is estimated by the wallet based on the amount of data recorded on-chain. Miners can only place a limited amount of data within a block, and by using the metric 'money per amount of data', miners can determine which transactions to include in the block. They will typically pick the transactions with the highest fees. 
 
 ## The Account Model
 
-The account-based transaction model, as used by smart contract platforms like Ethereum represents assets as balances within accounts, similar to bank accounts. There are two different types of accounts:
+The account-based transaction model represents assets as balances within accounts, similar to bank accounts. Ethereum uses this transaction model. There are two different types of accounts:
 
-- private key controlled user accounts and
+- private key controlled user accounts
 - contract code controlled accounts.
 
-When you create an ether wallet and receive a transaction for the first time a private key controlled account is created and its state is stored across all nodes on the network. Deploying a smart contract leads to the creation of a code controlled account. Smart contracts can hold funds themselves, which they might redistribute according to their logic at some point, based on the conditions defined in the contract logic. Every account in Ethereum has a balance, storage and code-space for calling other accounts or addresses.
+When you create an ether wallet and receive your first transaction, a private key controlled account is created, and the new account's state is stored across all nodes on the network. Deploying a smart contract leads to the creation of a code controlled account. Smart contracts can hold funds themselves, which they might redistribute according to conditions defined in the contract logic. Every account in Ethereum has a balance, storage, and code-space for calling other accounts or addresses.
 
-A transaction in the account-based model triggers nodes to decrement the balance of the senders account by the transferred amount and increment the receivers account balance accordingly.
+A transaction in the account-based model triggers nodes to decrement the balance of the sender's account and increment the balance of the receiver's account. 
 
-Each transaction in the account model has a nonce attached in order to prevent replay attacks. In a replay attack a payee broadcasts a transaction in which he was paid a second time. If this is successful, the transaction is executed a second time - it is replayed - and the sender is charged twice the amount they actually wanted to transfer. To combat this, each account in Ethereum has a public viewable nonce that is incremented by one with each outgoing transaction. This prevents the same transaction being submitted more than once.
+To prevent replay attacks, each transaction in the account model has a nonce attached. A replay attack is when a payee broadcasts a fraudulent transaction in which they get paid a second time. If the fraudulent transaction were to be successful, the transaction would be executed a second time - it is replayed - and the sender would be charged twice the amount they actually wanted to transfer. To combat this behavior, each account in Ethereum has a public viewable nonce that is incremented by one with each outgoing transaction. This prevents the same transaction being submitted more than once.
 
-Transaction fees also work differently in the account based model. They are not defined as the difference between inputs and outputs but rather based on the number of computations the state transition requires. Ethereum set out to be a world computer. Hence paying fees based on computational resources consumed rather than storage capacity taken was the method of choice for the fee market.
+Transaction fees also work differently in the account based model. They are not defined as the difference between inputs and outputs but rather based on the number of computations required to complete the state transition. Ethereum set out to be a world computer. Hence they decided that fees should be based on computational resources consumed rather than storage capacity.
 
 The account model keeps track of all balances as a global state. This state can be understood as a database of all accounts, private key and contract code controlled and their current balances of the different assets on the network.
 
