@@ -108,6 +108,9 @@ All schemes have certain advantages and shortcomings. Network-bound approaches a
 
 The CPU-bound approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called *Application Specific Integrated Circuits* (ASICs), can be build for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer an advantage in performance. Because ASICs are domain specific and expensive, most users don't have access to them.
 
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_D.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_M.jpg)
+
 #### Memory-bound Algorithms
 
 It was long thought that memory-bound puzzles were less prone to hardware optimizations. The Equihash algorithm for instance was thought to be ASIC-resistant for a long time, but things turned out differently.

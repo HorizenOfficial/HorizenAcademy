@@ -2,7 +2,7 @@ body {
   font-family: $base-font-family;
   color: #041742;
   font-weight: $base-font-weight;
-  padding-top: 56px;
+  padding-top: 66px;
 }
 
 
@@ -40,7 +40,7 @@ body::after{
 }
 
 #header-logo {
-  height: 20px;
+  height: 40px;
 }
 
 .nav-link {
@@ -128,8 +128,8 @@ body::after{
     margin-top: 0;
   }
   .navbar {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .15rem;
+    padding-bottom: .15rem;
   }
   #header-navbars {
     margin-top: 1rem;
@@ -228,10 +228,10 @@ button.btn-close {
   z-index: 1050;
   .logo {
     background-color: #041742;
-    padding: 16px 0;
     text-align: center;
+    padding: 13px 0;
     img {
-      height: 20px;
+      height: 40px;
     }
   }
   .bottom-links {

@@ -17,29 +17,25 @@ Si el usuario sabe navegar un explorador de bloques, sabe navegarlos todos. Son 
 
 La información contenida en el explorador de bloques se estructura ya sea por bloques, direcciones o transacciones individuales. Veamos un primer ejemplo para hacer de todo esto algo más tangible:
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/latest_blocks.png" alt="Latest blocks">
-</div>
+![Latest Blocks](/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
 
 Hay muchos exploradores de bloques disponibles, muchas veces más de uno para la misma cadena de bloques. Ya que visitaremos el origen de las criptomonedas en este ejemplo, estudiaremos el caso de Bitcoin y de uno de los exploradores más populares: blockchain.com.
 
 El usuario verá un resumen de los bloques más recientes en la página de inicio. Revisemos lo que aparece a continuación:
 
- - **Altura (Height)**: La altura es el número asociado al bloque. El primer bloque creado tiene por número “#0”, le siguió el “#1” y luego el “#2”. Como puede verse en la tabla, al momento de redactarse este artículo se habían minado ya muchos bloques.
- - **Edad (Age)**: Es la edad del bloque. Aunque esta característica se explica sola, hay algo de información interesante entrelíneas; como usted ya sabrá, el tiempo de bloque, el intervalo entre el minado de dos bloques, es de 10 minutos en el caso de Bitcoin. ¿Por qué tomó entonces solo 6 minutos minar el bloque 539.772 y 9 minar el 539.771? Esto se debe a que el tiempo de bloque es un promedio. Siempre habrá bloques más lentos de crear y otros pocos que se producirán con mayor rapidez, pero en promedio el proceso tomará 10 minutos. En nuestro artículo sobre minado explicamos cómo se autoajusta el tiempo de bloque.
- - **Transacciones (Transacciones)**: El número de transacciones incluidas en el bloque. Esto quiere decir que en los 6 minutos que tomó minar el bloque 539.772 se realizaron 1500 transacciones.
- - **Total enviado (Total Sent)**: Las 1547 transacciones que sucedieron suman un envío de casi 4700 bitcoins.
- - **Transmitido por (Relayed By)**: El minero (o colectivo de mineros) que resolvió el bloque y obtuvo la recompensa de bloque.
- - **Tamaño (Size)**: La cantidad de almacenamiento que ocupa un bloque determinado.
- - **Peso (Weight)**: Otra métrica relacionada al tamaño del bloque. Es una métrica más técnica pero que se relaciona con el número de transacciones. Entre mayor el número mayor el tamaño del archivo del bloque y más grande su peso.
+- **Altura (Height)**: La altura es el número asociado al bloque. El primer bloque creado tiene por número “#0”, le siguió el “#1” y luego el “#2”. Como puede verse en la tabla, al momento de redactarse este artículo se habían minado ya muchos bloques.
+- **Edad (Age)**: Es la edad del bloque. Aunque esta característica se explica sola, hay algo de información interesante entrelíneas; como usted ya sabrá, el tiempo de bloque, el intervalo entre el minado de dos bloques, es de 10 minutos en el caso de Bitcoin. ¿Por qué tomó entonces solo 6 minutos minar el bloque 539.772 y 9 minar el 539.771? Esto se debe a que el tiempo de bloque es un promedio. Siempre habrá bloques más lentos de crear y otros pocos que se producirán con mayor rapidez, pero en promedio el proceso tomará 10 minutos. En nuestro artículo sobre minado explicamos cómo se autoajusta el tiempo de bloque.
+- **Transacciones (Transacciones)**: El número de transacciones incluidas en el bloque. Esto quiere decir que en los 6 minutos que tomó minar el bloque 539.772 se realizaron 1500 transacciones.
+- **Total enviado (Total Sent)**: Las 1547 transacciones que sucedieron suman un envío de casi 4700 bitcoins.
+- **Transmitido por (Relayed By)**: El minero (o colectivo de mineros) que resolvió el bloque y obtuvo la recompensa de bloque.
+- **Tamaño (Size)**: La cantidad de almacenamiento que ocupa un bloque determinado.
+- **Peso (Weight)**: Otra métrica relacionada al tamaño del bloque. Es una métrica más técnica pero que se relaciona con el número de transacciones. Entre mayor el número mayor el tamaño del archivo del bloque y más grande su peso.
 
 ### El bloque génesis
 
 Veamos primero un solo bloque. La altura del primer bloque fue 0. Si el usuario quiere encontrar la primera bitcoin en ser minada, puede usar la función de búsqueda e ingresar “0”. Si no ha entrado aún al sitio, [este enlace](https://explorer.zensystem.io/block/0007104ccda289427919efc39dc9e4d499804b7bebc22df55f8b834301260602) lo llevará directamente al bloque génesis, que es el nombre que recibe siempre el primer bloque minado de una cadena.
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/genesis_block.png" alt="The Genesis Block">
-</div>
+![Genesis Block](/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
 
 Repasemos la información que tenemos aquí. Puede parecer mucha en un principio, pero analizándola paso por paso resulta bastante fácil de entender.
 
@@ -65,11 +61,8 @@ La función más común del explorador de bloques es la de revisar el estatus de
 
 Si queremos visitar la primera transacción de criptomonedas de la historia tenemos que remitirnos al bloque #170, donde se incluyó la primera transacción de bitcoins entre Satoshi Nakamoto y Hal Finney.
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/advanced/block-explorer-continued/Transacciones.png" alt="Bitcoin Transaction">
-</div>
+![Transacciónes](/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
 
 Este bloque es el primero en la cadena de bloques de Bitcoin que contiene más de una transacción. La transacción coinbase aparece arriba, como es de esperarse, y debajo de esta se registra la primera transacción; una persona enviándole monedas a otra.
 
 Esperamos que este artículo lo haya ayudado a navegar un explorador de bloques (o varios). Lo animamos a usarlos y analizarlos, pues esto lo ayudará a entender la manera en la que se organiza información en la cadena de bloques.
-

@@ -31,11 +31,15 @@ Votre paire de clés est votre identité
 
 L'idée générale dans les cryptomonnaies est que vous recevez des fonds grâce à votre clé publique et les dépensez avec votre clé privée. Une clé privée sur la blockchain Horizen pourrait ressembler à cela :
 
+<center>
 Kz6994Ek9L3uzjQo2wANaHguBbEShoHZo6q1Y3r6rXrHfWka1fnx
+</center>
 
 et la clé publique correspondante ou l’adresse à cela :
 
+<center>
 znSrHR9ssjKMsrYfk5fTmKH4LbgDxXJ3s6j
+</center>
 
 Ces deux clés sont intentionnellement appelées clé publique et clé privée. Vous pouvez partager votre clé publique à n’importe qui qui veut vous envoyer des fonds. Votre clé privée, comme son nom l’indique, devrait rester privée en toutes circonstances, car elle vous permet de dépenser vos fonds. Si quelqu'un d'autre met la main sur votre clé privée, il peut accéder à vos fonds et les voler.
 

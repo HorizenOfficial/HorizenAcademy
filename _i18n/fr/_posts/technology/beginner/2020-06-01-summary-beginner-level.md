@@ -46,13 +46,11 @@ Les [Les portefeuilles (les wallets)]({{ site.baseurl }}{% post_url /technology/
 
 Une [transaction]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-02-intro-to-transactions %}) est un message vers le réseau qui informe tous les participants que de l’argent a changé de mains. Si vous souhaitez envoyer une transaction, vous devez débloquer votre argent grâce à votre clé privée. Ensuite vous choisissez l’adresse (ou les adresses) qui va (vont) recevoir le montant déterminé. La transaction est tout simplement un message qui dit “Alice envoie 10 ZEN à Bob”. Cette déclaration est ce qui représente les coins de Bob.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T4_broadcast_D.jpg)
 
 Afin d'accéder à l'information sur la blockchain, vous utiliserez un [explorateur de bloc]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}). Tel un navigateur qui va vous permettre d’accéder aux informations sur internet, l’explorateur de bloc va vous permettre d’accéder aux informations de la blockchain. Vous pouvez chercher des adresses, des transactions, ou des blocs entiers.
 
-<div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/FR_explorer_address_summary.png" alt="Explorer address summary">
-</div>
+![Explorer address summary](/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png)
 
 Bien que les cryptomonnaies ne soient pas anonymes par défaut, certaines d'entre elles offrent des fonctionnalités qui vous permettent de faire des transactions privées. Pour augmenter le niveau de confidentialité, vous devez utiliser des adresses différentes pour chaque transaction entrante. Il est donc plus difficile pour un adversaire de suivre l'historique de vos transactions. La plupart des wallets le feront automatiquement pour vous. Vous pouvez utiliser des cryptomonnaies avec des fonctions de confidentialité améliorées, comme Horizen, qui offre les Zero-Knowledge Proofs, pour effectuer des transactions entièrement privées. En utilisant un différent type d’adresse (adresse Z) avec le même portefeuille, vos transactions deviennent privées.
 

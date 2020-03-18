@@ -19,8 +19,8 @@ There are many approaches to achieving consensus in a distributed network but th
 
 > "The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (...) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control." - Demiro Massessi
 
-![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/consensus-mechanisms/consensus_M.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_D.jpg)
+![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_M.jpg)
 
 ### Proof of Work - PoW
 
@@ -34,24 +34,24 @@ Miners require computational power because the problem they are trying to solve 
 Optimization-free means there is no shortcut to trying out a large number of different solutions until you find a valid one. You cannot calculate a solution, you need to find it through a trial-and-error approach. 
 Approximation-free means that it is not possible to have a part of the solution or to "be close to solving the problem". You either have a solution or not, making it a binary situation.
 
-![POW](/assets/post_files/technology/advanced/consensus-mechanisms/POW_D.jpg)
-![POW](/assets/post_files/technology/advanced/consensus-mechanisms/POW_M.jpg)
+![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_D.jpg)
+![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_M.jpg)
 
 All nodes and miners verify the validity of a new block as soon as it is discovered and broadcast. If it is valid, they add it to their local copy of the blockchain and delete all transactions that are now already recorded on the blockchain from their mempool. The mempool only ever contains valid but unconfirmed transactions. Then they start working on the next block and the process is repeated.
 This is how the network agrees on a single version of the history of all transactions in a Proof of Work blockchain.
 
 #### The Longest Chain Rule
 
-Now you can imagine a scenario in which two miners find a block at almost the same time. In this case, all the nodes and miners on the network save both versions of the block. This is a tie situation: both blocks are valid at this point, but somehow the tie must be broken - we need a single version of the truth. 
+Now you can imagine a scenario in which two miners find a block at almost the same time. In this case, all the nodes and miners on the network save both versions of the block. This is a tie situation: both blocks are valid at this point, but somehow the tie must be broken - we need a single version of the truth.
 
 The miners will start building the next block on top of the block they received first. The tie is broken when the miners find the next block. The block that is built on top of will become accepted as the single truth by all miners and nodes. The other block is disregarded and called an _orphan block_. This procedure of breaking a tie between to concurring blocks is called the *Longest Chain Rule* or *Nakamoto Consensus*.
 
-If 80% of miners receive block A first and the other 20% block B, then the chances of block A getting extended are 80% (assuming all miners have the same computational power). In a way, the miners vote with their computational power on one version of the history. This aligns perfectly with our quote from the beginning of the article: 
+If 80% of miners receive block A first and the other 20% block B, then the chances of block A getting extended are 80% (assuming all miners have the same computational power). In a way, the miners vote with their computational power on one version of the history. This aligns perfectly with our quote from the beginning of the article:
 
 > _"In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control."_ - Demiro Massessi
 
-![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_D.jpg)
-![Longest chain](/assets/post_files/technology/advanced/consensus-mechanisms/longest_chain_M.jpg)
+![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_D.jpg)
+![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_M.jpg)
 
 Proof of Work is one of the most secure consensus mechanisms but it is only secure if there is a sufficient amount of hash rate on the network. The Bitcoin protocol has proven how secure Proof of Work consensus can be for over 10 years. We already talked about game theory in our article describing blockchain as a [protocol to transfer value]]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}) and in the article on [smart contracts]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}). 
 
@@ -69,8 +69,8 @@ To become a validator, a user needs to send funds in a special type of transacti
 
 The scarce resource in a PoS environment is the native currency of the blockchain. The more money you stake on a PoS blockchain, the higher your chances of validating a new block. In (most) Proof of Stake blockchains, there is no block reward. The validator's incentive to do achieve consensus is solely based on collecting the transaction fees attached to each transaction.
 
-![POS](/assets/post_files/technology/advanced/consensus-mechanisms/POS_D.jpg)
-![POS](/assets/post_files/technology/advanced/consensus-mechanisms/POS_M.jpg)
+![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_D.jpg)
+![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_M.jpg)
 
 ### Comparing POW and POS
 
@@ -78,8 +78,8 @@ Skeptics question the overall security of the Proof of Stake consensus model bec
 
 In PoW, there is a real-world cost (electricity) to every block that gets mined. It remains to be seen if PoS blockchains can provide the same security guarantees over an extended period of time that Bitcoin with its PoW blockchain has shown for over a decade now.
 
-![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/compare_D.jpg)
-![Comparing POW and POS](/assets/post_files/technology/advanced/consensus-mechanisms/compare_M.jpg)
+![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_D.jpg)
+![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_M.jpg)
 
 Another difference between PoW and PoS is that in a PoS blockchain each validating node needs to be identifiable. The staked coins must be held accountable for any malicious acts.
 In a PoW blockchain, there is no need to have miners or nodes identifiable. In fact, it is a feature, that if a node receives a block, there is no information included about who the miner of the block was. It might have been the node you just received the block from, or it might have been relayed several times before it reached you.

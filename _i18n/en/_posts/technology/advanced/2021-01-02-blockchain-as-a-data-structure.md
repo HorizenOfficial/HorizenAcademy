@@ -19,8 +19,8 @@ A data structure is a way to store, organize, and manage data. A data structure 
 
 An array is a number of enumerated elements. These elements can be numbers, letters, words or even entire files. The indices allow you to access any element individually, so if you want to modify an entry in an array and you know it's location, you have *instant access*.
 
-![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_D.jpg)
-![Array](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/array_M.jpg)
+![Array](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/array_D.jpg)
+![Array](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/array_M.jpg)
 
 #### Linked Lists
 
@@ -30,20 +30,20 @@ If you look at the first piece of data on the list and wish to access the second
 
 If you are searching for a specific piece of data in your linked list you will look at the first _node_, the _head_ of the linked list. If it is not the element you were looking for, you follow the pointer, that will lead you to the next node. If this node does not contain the data you were looking for either, you continue by following the links throughout all nodes until you find the desired data.
 
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_D.jpg)
-![Linked List](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/linked_list_M.jpg)
+![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_D.jpg)
+![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_M.jpg)
 
 #### Blockchains
 
 The blockchain is like a linked list in the context of data structures. The blockchain also separates the data into containers - the _blocks_. The _blocks_ are quite analogous to _nodes_ in a linked list. Each _block_ contains a _reference_, which is the hash of the preceding block. This serves as a link to the preceding block and establishes the order throughout the chain of blocks.
 
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_data_D.jpg)
-![Blockchain data](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_data_M.jpg)
+![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_D.jpg)
+![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_M.jpg)
 
 The key difference between a blockchain and a linked list is that each reference in a blockchain is cryptographically secured. You may hear the term _append-only data structure_ describing blockchains. This means you can only add data to a blockchain by appending it to the front. The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain, e.g. between Block 1 and 3 in the graphic below, you could include a reference to its predecessor (Block 1), but you cannot make the next block (3) reference your maliciously inserted block.
 
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_broken_D.jpg)
-![Blockchain broken](/assets/post_files/technology/advanced/blockchain-as-a-data-structure/blockchain_broken_M.jpg)
+![Blockchain broken](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_broken_D.jpg)
+![Blockchain broken](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_broken_M.jpg)
 
 Each new block built on top of an existing block is commonly known as a _confirmation_. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult. Block 2 in the graphic below has one confirmation. To tamper with its data, you would have to recreate one valid block including a new valid reference. With each confirmation, you would have to recreate an additional block. This means the older the block, the more certain you can be that no changes to the block will occur.
 

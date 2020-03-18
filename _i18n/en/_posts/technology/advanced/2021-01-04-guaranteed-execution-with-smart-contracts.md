@@ -14,8 +14,8 @@ We have looked at blockchain in two different ways. First as a [data structure](
 
 A blockchain can not only host simple data like transactions, but also small programs. We call these programs smart contracts. A contract, in general, is an agreement between parties that binds them to something happening in the future. The "smart" comes from the automatic execution of these digital contracts. Simply speaking they consist of many "if, then" statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
 
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/smart_contract_M.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_M.jpg)
 
 ### The Promise of Smart Contracts
 
@@ -33,8 +33,8 @@ A decentralized application or dApp is a more sophisticated use case for smart c
 
 Dapps use smart contracts to communicate with their underlying blockchain. Imagine a future with smart contract libraries that hold a large number of template contracts that can be used for various purposes. We are already seeing such developments with smart contract platforms like Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_D.jpg)
-![dApp](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/dapp_M.jpg)
+![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_D.jpg)
+![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_M.jpg)
 
 ### Smart Contract Platform
 
@@ -56,8 +56,8 @@ One must consider that writing traditional contracts takes years of studying the
 
 There is another major challenge to overcome. The digital world needs to learn about real-world events in order for a smart contract to function and execute. An *oracle* is an entity submitting data to a smart contract. The trust problem that comes with this role is referred to as the *oracle problem*. Imagine a smart contract running a betting platform in a trustless environment. The oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because an oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_D.jpg)
-![Oracle](/assets/post_files/technology/advanced/guaranteed-execution-with-smart-contracts/oracle_M.jpg)
+![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/oracle_D.jpg)
+![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/oracle_M.jpg)
 
 Centralized oracles are not considered a solution to the oracle problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some decisions. And what is the point of having trustless execution on the basis of information provided by a trusted third party?
 

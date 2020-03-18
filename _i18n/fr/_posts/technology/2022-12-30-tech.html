@@ -54,7 +54,7 @@ css: |
     margin-bottom: 0;
     padding-left: 20px;
   }
-  .table-levels a {
+  .link-level, .link-level:hover, .link-level:focus {
     text-decoration: none;
     color: #041742;
   }
@@ -95,50 +95,44 @@ css: |
             <table class="table table-borderless table-layout-fixed table-levels">
                 <tbody>
                 <tr class="text-uppercase font-weight-bold">
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
-                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level d-inline"> Débutant
-                        </a>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+                        <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Débutant
                     </td>
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
-                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level d-inline"> Avancé
-                        </a>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+                        <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
                     </td>
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
-                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level d-inline"> Expert
-                        </a>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+                        <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Expert
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
                         Si vous êtes nouveau aux sujets des cryptomonnaies et de la  Blockchain le **niveau débutant** sera pour vous.
                     </td>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
                         Si vous avez une compréhension générale de ce que sont les cryptomonnaies et comment fonctionne la blockchain mais que vous souhaitez en savoir plus, nous avons un **niveau avancé** pour vous.
                     </td>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
                         Si vous êtes familier avec les aspects techniques de la blockchain, mais que vous voulez en apprendre davantage sur des caractéristiques spécifiques et que vous n'avez pas peur de voir une formule mathématique ou un extrait de code, alors le **niveau Expert** sera votre meilleur choix.
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
                         <ul>
-                            <li>Beaucoup d'analogies, peu de termes techniques.</li>
-                            <li>5 - 10 min par article.</li>
+                            <li>Beaucoup d'analogies, peu de termes techniques</li>
+                            <li>5 - 10 min par article</li>
                         </ul>
                     </td>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
                         <ul>
-                            <li>Les termes techniques sont introduits.</li>
-                            <li>8 - 15 min par article.</li>
+                            <li>Les termes techniques sont introduits</li>
+                            <li>8 - 15 min par article</li>
                         </ul>
                     </td>
-                    <td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
                         <ul>
-                            <li>Termes techniques fréquemment utilisé.</li>
-                            <li>10 - 20 min par article.</li>
+                            <li>Termes techniques fréquemment utilisé</li>
+                            <li>10 - 20 min par article</li>
                         </ul>
                     </td>
                 </tr>
@@ -147,80 +141,80 @@ css: |
         </div>
 
         <div class="table-responsive d-block d-md-none">
-            <table class="table table-borderless table-layout-fixed table-levels">
-                <tbody>
-                <tr class="text-uppercase font-weight-bold">
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}">
+            <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /privacy/expert/2025-12-31-privacy-expert %}">
                             <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Débutant
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Si vous êtes nouveau aux sujets des cryptomonnaies et de la  Blockchain le **niveau débutant** sera pour vous.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Beaucoup d'analogies, peu de termes techniques.</li>
-                            <li>5 - 10 min par article.</li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Si vous êtes nouveau aux sujets des cryptomonnaies et de la  Blockchain le **niveau débutant** sera pour vous.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Beaucoup d'analogies, peu de termes techniques</li>
+                                <li>5 - 10 min par article</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
 
-            <table class="table table-borderless table-layout-fixed table-levels">
-                <tbody>
-                <tr class="text-uppercase font-weight-bold">
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
+            <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td>
                             <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Si vous avez une compréhension générale de ce que sont les cryptomonnaies et comment fonctionne la blockchain mais que vous souhaitez en savoir plus, nous avons un **niveau avancé** pour vous.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Les termes techniques sont introduits.</li>
-                            <li>8 - 15 min par article.</li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Si vous avez une compréhension générale de ce que sont les cryptomonnaies et comment fonctionne la blockchain mais que vous souhaitez en savoir plus, nous avons un **niveau avancé** pour vous.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Les termes techniques sont introduits</li>
+                                <li>8 - 15 min par article</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
 
-            <table class="table table-borderless table-layout-fixed table-levels">
-                <tbody>
-                <tr class="text-uppercase font-weight-bold">
-                    <td>
-                        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}">
+            <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td>
                             <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Expert
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Si vous êtes familier avec les aspects techniques de la blockchain, mais que vous voulez en apprendre davantage sur des caractéristiques spécifiques et que vous n'avez pas peur de voir une formule mathématique ou un extrait de code, alors le **niveau Expert** sera votre meilleur choix.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Termes techniques fréquemment utilisés.</li>
-                            <li>10 - 20 min par article.</li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Si vous êtes familier avec les aspects techniques de la blockchain, mais que vous voulez en apprendre davantage sur des caractéristiques spécifiques et que vous n'avez pas peur de voir une formule mathématique ou un extrait de code, alors le **niveau Expert** sera votre meilleur choix.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Termes techniques fréquemment utilisés</li>
+                                <li>10 - 20 min par article</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
         </div>
 
         <p>

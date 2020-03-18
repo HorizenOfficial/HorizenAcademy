@@ -21,8 +21,8 @@ Los intercambios atómicos son una tecnología que le permite al usuario hacer c
 Los contratos con bloqueo temporal de hash (hashed timelock contracts; HTLCs) son la tecnología que hace posibles los intercambios atómicos. Para comprender los HTLC es necesario retroceder unos cuantos pasos para introducir el concepto de canal de estado.
 Un canal de estado es un canal de comunicación de doble sentido que hace posibles fuera de la cadena interacciones que generalmente tendrían que suceder dentro de ella. Un tipo específico de canal de estado es el canal de pago. Como su nombre lo sugiere, el canal de pago es el canal de estado que procesa pagos. Es posible que haya escuchado hablar de los canales de pago en el contexto del Lightning Network o de otras soluciones de segunda capa. Una HTLC es un tipo específico de canal de pago que permite el intercambio de dos activos cripto fuera de la cadena de bloques
 
-![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/ES_channel_hierarchy_D.jpg)
-![channel hierarchy](/assets/post_files/technology/advanced/atomic-swaps/ES_channel_hierarchy_M.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/ES_channel_hierarchy_D.jpg)
+![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/ES_channel_hierarchy_M.jpg)
 
 El hash de HTLC quiere decir que es un hash el que sirve como candado del contrato, una medida utilizada para impedir que un tercero pueda accederlo. La parte de bloqueo temporal se refiere al hecho de que el contrato puede tener una fecha de expiración. Explicaremos lo que esto significa para el usuario una vez que delineemos cómo funciona el intercambio atómico.
 
@@ -47,17 +47,17 @@ A estas alturas, ambos participantes han guardado los fondos que habían acordad
 
 Ya que el proceso es automático, los pasos 7 y 8 suceden simultáneamente, por lo que no se necesita confiar en ninguna de las partes. De esta manera, o ambas partes obtienen sus fondos o ninguna los obtiene.
 
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/ES_swaps_D.jpg)
-![swaps](/assets/post_files/technology/advanced/atomic-swaps/ES_swaps_M.jpg)
+![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/ES_swaps_D.jpg)
+![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/ES_swaps_M.jpg)
 
 ### Los intercambios atómicos hoy en día
 
 Hay algunas billeteras y centros cambiarios descentralizados que permiten al usuario hacer intercambios atómicos. Hasta ahora, se han llevado a cabo muy pocos intercambios de este tipo. A continuación un breve historial:
 
- - El primer intercambio atómico en la cadena se realizó el 20 de septiembre de 2017 para cambiar Litecoin por Decred.
- - El primer intercambio atómico fuera de la cadena se realizó en noviembre de 2017 para intercambiar Litecoin por Bitcoin en el Lightning Network.
- - Puede encontrar una explicación detallada del intercambio atómico Ethereum-Bitcoin aquí.
- - Más recientemente, el 7 de diciembre de 2018, TenX intercambió ERC20 por Bitcoin en un intercambio atómico de muestra como parte de la demostración de su software de código abierto COMIT.
+- El primer intercambio atómico en la cadena se realizó el 20 de septiembre de 2017 para cambiar Litecoin por Decred.
+- El primer intercambio atómico fuera de la cadena se realizó en noviembre de 2017 para intercambiar Litecoin por Bitcoin en el Lightning Network.
+- Puede encontrar una explicación detallada del intercambio atómico Ethereum-Bitcoin aquí.
+- Más recientemente, el 7 de diciembre de 2018, TenX intercambió ERC20 por Bitcoin en un intercambio atómico de muestra como parte de la demostración de su software de código abierto COMIT.
 
 Esta tecnología resulta muy prometedora, pero para lograr la adopción general tanto las billeteras como los centros cambiarios tendrán que diseñar interfaces amigables con el usuario que faciliten la realización de intercambios atómicos
 
