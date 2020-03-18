@@ -16,6 +16,8 @@ Intro
 
 differnt types, overview
 
+- use horizen expert article
+
 ### Horizen Sidechains - The Zendoo Protocol
 
 Overall plan, purpose, advantages...
@@ -31,3 +33,12 @@ Explain components/primitives used to build cctp
 ### Backward Transactions
 
 ## Summary
+
+
+
+
+
+
+### FR
+
+https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf
