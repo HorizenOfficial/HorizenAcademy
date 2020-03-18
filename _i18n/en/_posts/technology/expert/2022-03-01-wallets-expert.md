@@ -77,10 +77,11 @@ Additionally, we need to introduce the variable *i* at this point. It is a 32-bi
 The hardened secret key derivation takes the zero-level private key \\(sk_0\\), the zero-level chain code \\(cc_0\\) and the integer *i* as an input. By convention, the top of the integer range (from \\(2^{31}\\) to \\(2^{32}-1\\)) of *i*, is used for the hardened secret key derivation method.
 
 In other words, using the HSKD method, the first-level private key \\(sk_1\\) is a function of three values:  
+  
 
 $$
 sk_1 = HSKD(sk_0, c_0, i)
-$$
+$$  
 
 The *non-hardened secret key derivation* (NSKD) additionally takes the zero-level public key \\(PK_0\\) into account. In the non-hardened secret key derivation method, *i* will by convention take on values between 0 and \\(2^{31}-1\\), so the lower half of the total range of *i*.
 
@@ -118,18 +119,16 @@ It doesn't yield our first level private key directly, but instead an [*addition
 
 Now imagine a case where a large number of addresses (or public keys respectively) need to be generated on a continuous basis - think a merchant accepting crypto payments. Both methods described before, HSKD and NSKD need access to the zero-level private key to compute new child keys and hence addresses.
 
-The zero-level private key is also the key that will allow the merchant to spend the money they received, so they should never host this process on the same server that the payment logic resides on.
+The zero-level private key is also the key that will allow the merchant to spend the money they received, so they should never host this process on the same server that the payment logic resides on. Meet NPKD - the *Non-Hardened Public Key Derivation* method.
 
 #### Non-Hardened Public Key Derivation (NPKD)
-
-Meet NPKD - the *Non-Hardened Public Key Derivation* method.
 
 ![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_D.jpg)
 ![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_M.jpg)
 
-Here, our zero level private key \\(sk_0\\) does not appear at all. The first steps in the NPKD method are analogous to the NSKD method.
+Using the Non-Hardened Public Key Derivation method, our zero level private key \\(sk_0\\) isn't needed at all. The first steps in the NPKD method are analogous to the NSKD method.
 
-The concatenation of \\(PK_0\\) and *i* is used as data and once again \\(cc_0\\) as our key. Again, the resulting 512-bit output is split into two parts of 256 bits.
+The concatenation of \\(PK_0\\) and *i* is used as data and \\(cc_0\\) as our key. Again, the resulting 512-bit output is split into two parts of 256 bits.
 
 The first 256 bits are used as an input to the ECC module, producing an intermediary result we call \\(PRE_1\\). Applying the addition module N together with our zero-level public key \\(PK_0\\) we get a first level public key \\(PK_1\\) without having to touch \\(sk_0\\) at all.
 
