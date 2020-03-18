@@ -16,15 +16,13 @@ In case this is completely new to you, please take a look at the Beginner or Adv
 
 In this article, we want to introduce some of the more advanced technical concepts that are applied to modern wallets. First, we will show you how your mnemonic phrase is generated, and how it relates to your actual private key. Depending on the wallet implementation, the process for generating your address from a private key looks slightly different. We also look at *multisignature schemes*, where multiple private keys and digital signatures can spend money from a given address.
 
-## Generating Entropy
+## Generating Entropy and a Mnemonic Phrase
 
 The basis for generating keys and addresses is randomness. Ownership on the blockchain is highly secure, as long as the private key cannot be reproduced by an adversary. The private key is the basis of the public key and address(es). As such, it requires a high level of security, and needs to be generated from a high level of entropy.
 
 There are different sources for entropy, such as hardware, user input, microphone, and camera inputs. Preferably, some of the entropy  is hardware based and uses more than a single source. Human based entropy is usually less "random" and therefore less secure.
 
 The initial entropy is used as a seed for a *deterministic random bit generator* (DRBG), also called *pseudorandom number generator* (PRNG). DRBGs should be standardized and validated. One example for a vetted algorithm is the NIST SP800-90A compliant method. The deterministic random bit generator produces a *seed*, which we then use to generate your *mnemonic phrase*.
-
-## Generating the Mnemonic Phrase
 
 The mnemonic phrase mechanism that you are likely familiar with was introduced with the [Bitcoin Improvement Proposal 39 (BIP-0039)](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). A mnemonic phrase is a set of commonly known words, which are used to provide a less error-prone backup mechanism than writing down your private key in a format like base58, haxadecimal, or binary.
 
@@ -53,7 +51,7 @@ While this approach mitigates the risk of losing all your funds at once in case 
 
 Being able to securely produce several *child keys* from a single *parent key* creates a better UX in basic wallets, and also allows multicurrency wallets to be backed up with a single mnemonic. This single mnemonic derives a key pair for each chain.
 
-## Hierarchical Deterministic Wallets
+### Hierarchical Deterministic Wallets
 
 Hierarchical Deterministic Wallets were introduced with [BIP-0032](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). The general idea is to take a master private key and use it to generate multiple secure *child keys*.
 
@@ -67,7 +65,7 @@ To recap what we did thus far:
 * From this seed we generated a mnemonic phrase, which in turn was converted into a 512-bit binary seed.
 * We split our seed into the zero-level private key \\(sk_0\\) and the zero-level chain code \\(cc_0\\). A zero-level public key \\(PK_0\\) is generated from \\(sk_0\\) using [*elliptic curve cryptography*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}).
 
-### Hardened vs. Non-Hardened Secret Key Derivation
+#### Hardened vs. Non-Hardened Secret Key Derivation
 
 When looking at the key derivation in HD wallets, we can generally differentiate between *hardened secret key derivation* (HSKD) and *non-hardened secret key derivation* (NSKD). The difference lies in the inputs used to generate first-level keys.
 
@@ -92,7 +90,7 @@ $$
 sk_1 = NSKD(sk_0, PK_0 c_0, i)
 $$  
 
-### Hardened Secret Key Derivation (HSKD)
+#### Hardened Secret Key Derivation (HSKD)
 
 The core function that the key derivation is build around is the [*hash-based message authentication code*](https://en.wikipedia.org/wiki/HMAC) (HMAC). It is a specific type of message authentication code involving a cryptographic hash function and a secret cryptographic key. It always uses some hash function, which is than appended to name the exact function. In this specific case the SHA512 hash function is used and the message authentication code is called HMAC-SHA512.
 HMAC consumes several inputs. For our purposes we group them into two: the *key* and the *data*
@@ -106,7 +104,7 @@ The resulting 512-bit output is split into two parts of 256 bits each. The first
 
 By incrementing *i* we can generate \\(2^{31}\\) or 2147483648 different first level private keys and chain codes.
 
-### Non-Hardened Secret Key Derivation (NSKD)
+#### Non-Hardened Secret Key Derivation (NSKD)
 
 We can also derive a first level private key using a combination of our zero-level public key \\(PK_0\\), zero-level secret key \\(sk_0\\) and our zero-level chain code \\(cc_0\\). This method is called *Non-Hardened Secret Key Derivation* (NSKD).
 
@@ -122,7 +120,7 @@ Now imagine a case where a large number of addresses (or public keys respectivel
 
 The zero-level private key is also the key that will allow the merchant to spend the money they received, so they should never host this process on the same server that the payment logic resides on.
 
-### Non-Hardened Public Key Derivation (NPKD)
+#### Non-Hardened Public Key Derivation (NPKD)
 
 Meet NPKD - the *Non-Hardened Public Key Derivation* method.
 
@@ -200,11 +198,9 @@ To spend from a P2SH address, the following steps are necessary:
 
 When the transaction is broadcast, the full redeem script becomes public. This means that observers will know the address being used is a MultiSig address and the different spending conditions. This is undesirable, as it compromises privacy. Two improvements are actively being worked on and are likely being implemented on various blockchains in the not-so-distant future.
 
-### Merkelized Abstract Syntax Trees - MAST
+### MultiSig Improvements - Mast and Schnorr
 
 The first one is called *Merkelized Abstract Syntax Trees* (MAST). Here, the spending conditions are arranged in a [merkle tree] structure and the merkle root is included instead of the redeem script hash. By providing the fulfilled scrip conditions (redeemScripts) and the merkle path a node can verify if a transaction is valid but does not learn anything about the other (unfulfilled) spending conditions.
-
-#### Schnorr Sigantures
 
 The second improvement over traditional multi signature transactions comes with [*Schnorr signatures*](https://hackernoon.com/the-future-of-bitcoin-schnorr-signatures-key-aggregation-and-interactive-aggregate-signatures-ias-wbk36po). They comprise two main aspects: *signature aggregation* and *key pair concealment*.
 
@@ -217,7 +213,7 @@ Key pair concealment allows the modification of private keys and public keys. As
 Using a multi signature scheme to secure your funds comes with a security-convenience trade-off. The more keys *M* are required to sign a transaction, the more cumbersome the process of spending money becomes. The larger the total number of keys *N* included in the MultiSig scheme, the more devices and backups need to be maintained.
 Alternatively, the overall security of the account is increased with a larger *M*. The difference between *M* and *N* is the number of keys a user can lose while being able to recover their funds. It is up to the individual user to determine if the added complexity is justified.
 
-### Summary
+## Summary
 
 Wallets are usually applications that take care of key generation, storage, and handling. The first step in generating keys is to produce a a random private key. Different sources for entropy generation can be used, and it's advisable to use several sources of entropy for added security.
 A common back-up mechanism is the mnemonic phrase, a list of words that can be used to restore your private key. Mnemonic phrases are generated by splitting the initial entropy into groups and mapping each group to a word.
