@@ -66,8 +66,24 @@ level: expert
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}">Read Article</a>
         </p>
     </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}">
+            <img src="/assets/post_files/technology/expert/0.0-tech-expert/transactions.svg" alt="Transactions" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Transactions</h5>
+        <p class="mb-1">
+            In the fourth chapter we talk about transactions on the blockchain. The basics of transaction have been covered in previous levels, so we look at more advanced concepts here. First, we compare the two most commonly used balance systems, the UTXO and account model. Second, we look at cross-chain transactions in Horizen transferring assets between main- and sidechain. Lastly, we talk about transactions using payment channel networks like Lightning.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}">Read Chapter</a>
+        </p>
+    </div>
 </div>  
   
-
 
 ### The Next Chapters Are Coming Soon!
