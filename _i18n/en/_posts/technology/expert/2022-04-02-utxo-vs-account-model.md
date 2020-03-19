@@ -7,7 +7,7 @@ permalink: /technology/expert/utxo-vs-account-model/
 topic: technology
 level: expert
 chapter: "Transactions"
-further_reads: []
+further_reads: [cell_model, how_data_is_stored_in_ethereum, qtums_account_abstraction_layer_aal_explanation]
 ---
 
 For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner creating a transaction that informs the network of how much money has changed hands and who the new owner is.
@@ -123,7 +123,7 @@ Below, we will compare the strengths and weaknesses of the UTXO and account mode
 
 In short, The UTXO model is a *verification model*. This means users submit transactions that specify the results of the state transition, defined as new transaction outputs spendable by the receiver(s). Nodes then verify if the consumed inputs are unspent and if the signature(s) satisfy the spending conditions.
 
-The account model on the other hand is a *computational model*. In this model, users submit transactions instructing nodes on what state transitions should look like. The network then computes the new state based on the instructions. This method comes with certain implications regarding two layer scalability solutions like state channels, sidechains, and sharding.
+The account model on the other hand is a *computational model*. In this model, users submit transactions instructing nodes on what state transitions should look like. The network then computes the new state based on the instructions. This method comes with certain implications regarding second layer scalability solutions like state channels and sharding.
 
 ### Scalability
 
@@ -133,17 +133,17 @@ There are several approaches we can use to compare scalibility of the UTXO and a
 
 One second layer technology, [state- and payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) moves the exchange of data from the blockchain to a dedicated trustless network of bidirectional communication channels.
 
-The other approach that could arguably be referred to as a second layer technology is sharding. Sharding is a term originating from the traditional database world. It describes partitioning a database into several shards in order to keep each individual partition more performant, in turn improving the entire system. Horizen's [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %} are considered a sharding mechanism.
+The other approach that could arguably be referred to as a second layer technology is sharding. Sharding is a term originating from the traditional database world. It describes partitioning a database into several shards in order to keep each individual partition more performant, in turn improving the entire system. Horizen's [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %} can be considered a sharding mechanism.
 
 We'll now compare both accounting methods and will assume that both systems have similar user and transaction counts.
 
 #### Size of the Blockchain
 
-The account model has more efficient memory usage. Storing a single account balance saves memory compared to storing several UTXOs that comprise a user's total balance. Transactions in the account model are also smaller in size because they only specify the sender, receiver, the transfer amount, and a single digital signature. This method does not include change outputs, which saves a lot of data.
+The account model has more efficient memory usage. Storing a single account balance saves memory compared to storing several UTXOs that comprise a user's total balance. Transactions in the account model are also smaller in size because they only specify the sender, receiver, the transfer amount, and a single digital signature. Additionally, just by doing away with change outputs a lot of data can be saved in the account model.
 
 On a conceptual level this is intuitive. Since a UTXO transaction specifies the state after the transition (the newly generated transaction outputs) it needs to include more data than an account transaction. It may also consume several UTXOs as inputs, whereas the account transaction only specifies which account balance to deduct an amount from. To give you an idea, Ethereum's account model takes about 100 bytes, whereas a UTXO transaction in Horizen takes about 200-300 bytes.
 
-This also means that it's faster to get new nodes to support an account model because less data is needed to get new nodes to synch. The number of accounts will generally be much smaller than the total UTXO set in a comparably sized system.
+This also means that it's faster to get new nodes online in a system running the account model because less data is needed to get them in synch. The number of accounts will generally be much smaller than the total UTXO set in a comparably sized system.
 
 #### State- and Payment Channel Constructions
 
@@ -151,9 +151,9 @@ Currently, the most advanced payment channel construction is the [Lightning Netw
 
 #### Sharding
 
-Partitioning a blockchain into shards or sidechains is also easier while using a UTXO model. While sharding, a user adds a new transaction to one of the sidechains or shards. Aggregating spendable transaction outputs and defining the outputs happens on the client side. In the account model, each node has to localize the sender's and receiver's account across different shards and edit both.
+Partitioning a blockchain into shards or sidechains is also easier while using the UTXO model. Aggregating spendable transaction outputs and defining the outputs happens on the client side, reducing the stress on the overall system. In the account model, every node has to localize the sender's and receiver's account across different shards and edit both.
 
-Of course there is more to sharding then these rather straight forward modifications, and using one balance model over the other comes with second and third-order effects. Generally, the UTXO model allows data structure partitioning in a simpler way. 
+Of course there is more to sharding then these rather straight forward modifications, and using one balance model over the other comes with second and third-order effects. Generally, the UTXO model allows data structure partitioning in a simpler way.
 
 ### Privacy
 
@@ -177,7 +177,7 @@ One benefit of the UTXO model is that it allows for the simpler parallelization 
 
 In the account model, the result of a transaction depends on the input state. Executing transactions in parallel must be handled carefully. Generally, transactions effecting the same account should be executed sequentially.
 
-A key takeaway is that the UTXO model is better when dealing with simple transactions and processing. The account model is more useful when dealing with more complex logic. Developers are now using a hybrid model for smart contract platforms - the UTXO model is used for balances, while the account model is used for contracts.
+A key takeaway is that the UTXO model is better when dealing with simple transactions. The account model is very useful when dealing with more complex logic. Hence a popular trend with current smart contract platforms is using a hybrid model where the UTXO model is used for balances and the account model is used for smart contracts.
 
 ## Hybrid Systems
 
@@ -187,7 +187,7 @@ QTUM is one example of a blockchain that utilizes a hybrid system of UTXOs and a
 
 The UTXO model was used as the basis for the overall architecture because it was considered "significantly securer" at the time of conception. On top of this UTXO layer, QTUM enables "creating and executing smart contracts using the accounts model offered by Ethereum" through a construction they call the [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
 
-AAL combines UTXOs for a given contract in a new transaction as soon as there are more than one of them available to the contract code. By using the UTXO model as a base layer, QTUM is also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf), which requires parallel proofs and UTXO activity.
+The AAL combines UTXOs for a given contract in a new transaction as soon as there are two or more of them available to the contract code. By using the UTXO model as a base layer, QTUM is also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf), which requires parallel proofs and UTXO activity.
 
 ## Summary
 
@@ -204,14 +204,6 @@ Both models have pros and cons regarding privacy. For example, the account model
 
 The account model offers clear advantages in regards to smart contracts. Many new smart contract platforms use hybrid models where UTXOs are used for balances and accounts are used for the contracts.
 
-Deciding on which model to use depends on what job you are trying to perform. We'd like to finish this article off with a quote:
+In the end it depends on the use case which model is better suited for the job. You can shoehorn most applications into one or the other balance model. The question is if you should do this, and why you would want to do this in the first place. Because we could not phrase it much better we want to finish this article with a quote:
 
 > "Within cryptocurrency platforms, there are a diverse set of design concepts and technical mechanisms that go into the platform being able to function as a viable, secure, and usable system. The transaction models used by such platforms employ the use of cryptography to verify ownership of tokens across the network. The UTXO scheme works superbly for Bitcoin, while the Account Based model used in Ethereum is geared to supporting its more complex application and contract needs." - [Brian Curran](https://blockonomi.com/utxo-vs-account-based-transaction-models/)
-
-### FR
-
-Cell model: https://medium.com/nervosnetwork/https-medium-com-nervosnetwork-cell-model-7323fca57571
-
-[*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
-
-https://hackernoon.com/getting-deep-into-ethereum-how-data-is-stored-in-ethereum-e3f669d96033
