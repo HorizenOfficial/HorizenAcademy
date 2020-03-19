@@ -32,7 +32,7 @@ The first major difference between the two balance models is how the state of th
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-dag-vs-database.jpg)
 
-A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships beween nodes. We take a more detailed look at graphs [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
+A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
 The graphic above shows a *directed acyclic graph* of the UTXO model on the left. Each state represents a block in the blockchain, each transaction output comprises a node in the DAG, and each transaction is represented by one or more edges originating from a transaction output. Hence, an *unspent* transaction output does not have an edge originating from it. In the example above the transaction outputs 3, 5, 6, and 7 are unspent.
 
@@ -78,7 +78,7 @@ The spending conditions are defined in the [Pubkey Script](https://bitcoin.org/e
 
 Next she defines what should happen with her money. She does this by creating the transaction outputs. Alice wants to transfer eight ZEN to Bob, so she creates two outputs: one paying Bob and another returning the excess money to a self controlled address. For both outputs the spending conditions are also defined in the transaction created by Alice.
 
-Note how the sum of both outputs in the exampl above doesn't equal the entirety of the consumed input. The difference between outputs and inputs is defined as the transaction fee on the protocol level. In this case the TX fee is 0.001 ZEN.
+Note how the sum of both outputs in the example above doesn't equal the entirety of the consumed input. The difference between outputs and inputs is defined as the transaction fee on the protocol level. In this case the TX fee is 0.001 ZEN.
 
 The size of the transaction fee is estimated by the wallet based on the amount of data recorded on-chain. Miners can only place a limited amount of data within a block, and by using the metric 'money per amount of data', miners can determine which transactions to include in the block. They will typically pick the transactions with the highest fees per byte.
 
@@ -109,7 +109,7 @@ The setting is the same as before: Alice wants to transfer 8 ZEN to Bob. Her wal
 
 When the system transitions to a new state (n+1) with the next block, Alice's account balance will globally be reduced to 2 ZEN whereas Bob's balance will be increased to 9 ZEN.
 
-The Pubkey- and Signature Script do not exist in account based blockchains. The verification of [signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) in account-based blockchain, Ethereum for example, is based on three parameters, *r*, *s*, and *V* provided by the sender. These three values comprise the signature. Solidity, the programming language used in ethereum provides a method, [ecrecover](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsign) that returns an address given these parameters. If the returned address matches the senders address, the signature and in return the transaction is valid.
+The Pubkey- and Signature Script do not exist in account based blockchains. The verification of [signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) in account-based blockchain, Ethereum for example, is based on three parameters, *r*, *s*, and *V* provided by the sender. These three values comprise the signature. Solidity, the programming language used in Ethereum provides a method, [ecrecover](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsign) that returns an address given these parameters. If the returned address matches the senders address, the signature and in return the transaction is valid.
 
 Where in the UTXO model part of the verification process is checking if a transaction output in *unspent*, nodes in the account model check if the senders balance is larger than or equal to the transferred amount. This is true for the native asset of the chain, e.g. ether, as well as all other tokens on the network.
 
@@ -119,64 +119,65 @@ The state of accounts in Ethereum is not stored on the blockchain but computed a
 
 ## Comparing the UTXO and Account Model
 
-Below, we want to look at the strengths and weaknesses of the UTXO and account model. Before we compare them with regards to scalability, privacy, smart contract capabilities and other aspects, its interesting to compare them from a high level computational view.
+Below, we will compare the strengths and weaknesses of the UTXO and account model. We will start by comparing them at a high level computational view, and then move onto scalability, privacy, smart contract capabilities, and more.
 
-The UTXO model is a *verification model*. Users submit transactions that specify the results of the state transition: new transaction outputs spendable by the receiver(s). Nodes verify if the consumed inputs were previously unspent and if the signature(s) satify the spending conditions.
+In short, The UTXO model is a *verification model*. This means users submit transactions that specify the results of the state transition, defined as new transaction outputs spendable by the receiver(s). Nodes then verify if the consumed inputs are unspent and if the signature(s) satisfy the spending conditions.
 
-The account model on the other hand is a *computational model*. Users submit transactions that instruct nodes on what the state transition should look like and the network computes the new state based on these instructions. This comes with certain implications with regards to the way these systems can scale using layer two solutions like state channels and sidechains or sharding.
+The account model on the other hand is a *computational model*. In this model, users submit transactions instructing nodes on what state transitions should look like. The network then computes the new state based on the instructions. This method comes with certain implications regarding two layer scalability solutions like state channels, sidechains, and sharding.
 
 ### Scalability
 
-There are several approaches to comparing the UTXO and account model with regards to scalability. One way to look at it is focusing on the overall storage requirements of each system. Another way is to consider which model is better suited for the deployment of second layer technologies on top of the main blockchain.
+There are several approaches we can use to compare scalibility of the UTXO and account model. One way is to focus on the overall storage requirements of each system. Another way is to consider which model is better suited for the deployment of second layer technologies on top of the main blockchain.
 
 ![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-scaling-utxo-account.jpg)
 
 One second layer technology, [state- and payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) moves the exchange of data from the blockchain to a dedicated trustless network of bidirectional communication channels.
 
-The other approach that could arguably be referred to as a second layer technology is sharding. Sharding is a term originating from the traditional database world. It describes partitioning a database into several shards in order to keep each individual partition and in turn the entire system more performant. [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) in Horizen can be considered a sharding mechanism.
+The other approach that could arguably be referred to as a second layer technology is sharding. Sharding is a term originating from the traditional database world. It describes partitioning a database into several shards in order to keep each individual partition more performant, in turn improving the entire system. Horizen's [Sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %} are considered a sharding mechanism.
 
-In order to compare both accounting methods we will assume systems with the same amount of users and transactions.
+We'll now compare both accounting methods and will assume that both systems have similar user and transaction counts.
 
 #### Size of the Blockchain
 
-The account model is more efficient in terms of memory usage. Storing a single account balance saves memory compared to storing several UTXOs that comprise a users total balance. Transactions in the account model are also smaller in size, as they only need to specify the sender, receiver, the amount to transfer and a single digital signature. Just by doing away with change outputs a lot of data can be saved in the account model.
+The account model has more efficient memory usage. Storing a single account balance saves memory compared to storing several UTXOs that comprise a user's total balance. Transactions in the account model are also smaller in size because they only specify the sender, receiver, the transfer amount, and a single digital signature. This method does not include change outputs, which saves a lot of data.
 
-On a conceptual level this becomes very intuitive: because a UTXO transaction specifies the state after the transition (the newly generated transaction outputs) it needs to include more data than an account transaction. It may also consume several UTXOs as inputs, whereas the account transaction only specifies which account balance to deduct the transferred amount from. To give you an idea: an average transaction in Ethereum's account model takes about 100 bytes, whereas a UTXO transaction in Horizen takes about 200-300 bytes.
+On a conceptual level this is intuitive. Since a UTXO transaction specifies the state after the transition (the newly generated transaction outputs) it needs to include more data than an account transaction. It may also consume several UTXOs as inputs, whereas the account transaction only specifies which account balance to deduct an amount from. To give you an idea, Ethereum's account model takes about 100 bytes, whereas a UTXO transaction in Horizen takes about 200-300 bytes.
 
-This also implies that is is easier to get new nodes online in the account model. The number of accounts will generally be much smaller than the total UTXO set in a comparably sized system. This means less data is needed to get new nodes in synch.
+This also means that it's faster to get new nodes to support an account model because less data is needed to get new nodes to synch. The number of accounts will generally be much smaller than the total UTXO set in a comparably sized system.
 
 #### State- and Payment Channel Constructions
 
-The currently most advanced payment channel construction is the [Lightning Network](https://lightning.network/) on Bitcoin. It uses a proof submission and verification mechanism when assets move into and out of the second layer. As we mentioned above, the UTXO model is essentially a verification model whereas the account model is a computational model. Hence, a UTXO construction is more suitable for these types of scalabilty approaches.
+Currently, the most advanced payment channel construction is the [Lightning Network](https://lightning.network/) on Bitcoin. It uses a proof submission and verification mechanism as assets move into and out of the second layer. As we mentioned above, the UTXO model is essentially a verification model whereas the account model is a computational model. Hence, a UTXO construction is more suitable for these types of scalability approaches.
 
 #### Sharding
 
-Partitioning a blockchain into shards or sidechains is also easier using the UTXO model. Here a user adds a new transaction to one of the sidechains or shards. Aggregating spendable transaction outputs and defining the outputs happens on the client side. In the account model, each node has to localize the senders and receivers account across the different shards and edit both.
+Partitioning a blockchain into shards or sidechains is also easier while using a UTXO model. While sharding, a user adds a new transaction to one of the sidechains or shards. Aggregating spendable transaction outputs and defining the outputs happens on the client side. In the account model, each node has to localize the sender's and receiver's account across different shards and edit both.
 
-Of course there is more to sharding then these rather straight forward modifications, and using one balance model over the other comes with more second and third-order effects. Generally the UTXO model does allow for a simpler way to partition the data structure though.
+Of course there is more to sharding then these rather straight forward modifications, and using one balance model over the other comes with second and third-order effects. Generally, the UTXO model allows data structure partitioning in a simpler way. 
 
 ### Privacy
 
-When it comes to privacy there are merits to both, the UTXO and account model. The UTXO model has advantages when it comes to making transactions hard to link together whereas the account model provides better fungibility.
+When it comes to privacy, there are merits to both the UTXO and account model. The UTXO model makes it harder to link transactions, whereas the account model provides better fungibility.
 
-When change addresses are consequently used in the UTXO model it makes tracking the ownership of coins harder compared to the account model. A newly generated address doesn't have a known owner and only through advanced chain analysis different addresses can be linked to a single user. The account model implicitly encourages address reusage and hence makes creating a transaction history for a single user easier.
+When change addresses are consequently used in the UTXO model, it makes tracking the ownership of coins harder compared to the account model. A newly generated address doesn't have a known owner and requires advanced chain analysis to be linked to a single user. The account model implicitly encourages address reusage and hence makes creating a transaction history for a single user easier.
 
-With regards to fungibility the account model offers better privacy. In the UTXO model there is complete transparency in the movement of UTXOs (read assets) when no privacy preserving techniques are applied. The account model comes with a build in coin mixer of sorts. When an account is funded with several transactions the result is a single balance and when a payment from this account is made an observer cannot determine which of the incoming coins is being spent. Consider the example of the account model above where Alice sends 8 ZEN to Bob and his balance is updated to 9 ZEN. When he spends 1 ZEN nobody can determine if this hypothetical "account-ZEN" stems from Alice or a previous payment. This is obviously a very simplified view. Even when assets cannot reliably be assigned to a funding transaction, analytic tools can determine if coins are [tainted](https://bitcoin.stackexchange.com/questions/7966/what-are-tainted-coins-exactly) or not but the general idea remains.
+With regards to fungibility, the account model offers better privacy. There is complete transparency of UTXO movements (read assets) in the UTXO model when no privacy preserving techniques are applied. However, the account model comes with a built-in "coin mixer" of sorts. When an account is funded with several transactions, the result is a single balance. When a payment from this account is made, an observer cannot determine which of the incoming coins is being spent. Consider the example of the account model above where Alice sends 8 ZEN to Bob and his balance is updated to 9 ZEN. When Bob subsequently spends 1 ZEN, nobody can determine if the single ZEN stems from Alice, or a different source. This is obviously a very simplified view. Even when assets cannot reliably be assigned to a funding transaction, analytic tools can determine if coins are [tainted](https://bitcoin.stackexchange.com/questions/7966/what-are-tainted-coins-exactly), but the general idea remains.
 
 ### Smart Contract Capabilities
 
-When it comes to enabling smart contracts the account model offers clear advantages.
-First, the logic is more intuitive. Adding and subtracting balances makes it easier for developers to create transactions that require state information or involve multiple parties. A signed transaction is valid as long as the sending account has a sufficient balance to pay for its execution. Checking a balance is computationally less expensive than verifying if a transaction output is spent or unspent. Especially for code controlled accounts that interact with other smart contracts this makes development simpler. Internal transactions between contracts can be carried out in the virtual machine by simply adjusting the balances of the contracts in question. In the UTXO model, where all spending transactions must be explicitly recorded, this creates computational overhead.
+The account model offers clear advantages when it comes to enabling smart contracts.
 
-In the UTXO model, a smart contract would need to include logic for choosing which outputs to use when sending assets and it would need even more logic for handling change outputs. Because the UTXO model is inherently stateless it forces transactions to include state information, which complicates the overall design.
+First, the account model logic is more intuitive. Adding and subtracting balances makes it easier for developers to create transactions that require state information or involve multiple parties. A signed transaction is valid as long as the sending account has a sufficient balance to pay for the execution. Checking a balance is computationally less expensive than verifying if a transaction output is spent or unspent. This is especially true for code controlled accounts that interact with other smart contracts. Internal transactions between contracts can be carried out in a virtual machine by  adjusting the balances of the contracts. The UTXO model creates computational overhead because all spending transactions must be explicitly recorded.
+
+Smart contracts in a UTXO model would need to include logic for choosing which outputs to use when sending assets, and logic to handle change outputs. Because the UTXO model is inherently stateless, it forces transactions to include state information, complicating the overall design.
 
 ### Other Differences
 
-One benefit of the UTXO model in the context of smart contract capabilities is that it allows for the simpler parallelization of transactions. Multiple UTXOs used in different transactions can be processed at the same time since they all refer to independent inputs.
+One benefit of the UTXO model is that it allows for the simpler parallelization of transactions in smart contracts. Multiple UTXOs used in different transactions can be processed at the same time since they all refer to independent inputs.
 
-In the account model, the result of a transaction depends on the input state. Executing transactions in parallel must be handled carefully. Generally, transactions affecting the same account should be executed sequentially.
+In the account model, the result of a transaction depends on the input state. Executing transactions in parallel must be handled carefully. Generally, transactions effecting the same account should be executed sequentially.
 
-A takeaway from the above section is that when it comes to simple transactions and processing many of them the UTXO model shows its strength. When it comes to more complex logic the account model offers benefits as designing the contract logic becomes simpler. Hence a popular trend with current smart contract platforms is using a hybrid model where the UTXO model is used for balances and the account model with states is used for contracts.
+A key takeaway is that the UTXO model is better when dealing with simple transactions and processing. The account model is more useful when dealing with more complex logic. Developers are now using a hybrid model for smart contract platforms - the UTXO model is used for balances, while the account model is used for contracts.
 
 ## Hybrid Systems
 
@@ -184,26 +185,26 @@ QTUM is one example of a blockchain that utilizes a hybrid system of UTXOs and a
 
 > "Early on when Qtum was first being designed, the thought process was to build a business-ready blockchain that was versatile yet secure. To accomplish these motivations, Qtum chose the underlying UTXO (Unspent Transaction Output) model that Bitcoin is built on over the Accounts model that Ethereum style blockchains are built on." - [Dev Bharel](https://blog.qtum.org/qtums-utxo-design-decision-d3cb415a3a6e)
 
-The decision to use the UTXO model as the basis for the overall architecture was made because the it was viewed as "significantly securer" at the time of conception. On top of this UTXO layer QTUM enables "creating and executing smart contracts using the accounts model offered by Ethereum" through a construction they call the [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
+The UTXO model was used as the basis for the overall architecture because it was considered "significantly securer" at the time of conception. On top of this UTXO layer, QTUM enables "creating and executing smart contracts using the accounts model offered by Ethereum" through a construction they call the [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
 
-One paradigm that is applied in the AAL is combining UTXOs for a given contract in a new transaction as soon as there is more than one of them available to the contract code. Using the UTXO model as a base layer QTUM was also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf) which requires parallel proofs and requires UTXO activity.
+AAL combines UTXOs for a given contract in a new transaction as soon as there are more than one of them available to the contract code. By using the UTXO model as a base layer, QTUM is also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf), which requires parallel proofs and UTXO activity.
 
 ## Summary
 
-To finish off this article, let us recap what we covered. We started by pointing out the similarities between the UTXO and account model. The blockchain can be considered a state machine independetly of the accounting scheme used. In both cases transactions trigger state transitions which happen in batches - with each new block added to the blockchain.
+To finish off, let's recap what we've covered. We started by pointing out the similarities between the UTXO and account model. The blockchain can be considered a state machine independently of the accounting scheme used. In both cases, transactions trigger state transitions in batches - with each new block added to the blockchain.
 
-In the UTXO model the movement of assets is recorded in the form of a directed acyclic graph made of transaction outputs. New outputs are added with each additional block.
-In the case of the account model balances are stored as a global state of accounts, kept by each node and updated with every block. This is more similar to a database.
+In the UTXO model, the movement of assets is recorded in the form of a directed acyclic graph made of transaction outputs. New outputs are added with each additional block.
+In the case of the account model, balances are stored as a global state of accounts, kept by each node and updated with every block. This is similar to a database.
 
-Transactions in the UTXO model are larger in size and place more burden on the user and its wallet compared to the simpler instructions for how to transition to the new state in the account model. A general difference lies in the UTXO model being a verification model compared to a computational model when accounts are used.
+Transactions in the UTXO model are larger in size and place more burden on the user and their wallet. The UTXO model is a verification model whereas the account model is a computational model.
 
-In terms of blockchain size account based systems offer benefits, because the state as well as transactions are smaller. The UTXO paradigm on the other hand makes scaling solutions like state- and payment channel constructions as well a sharding simpler.
+Account based systems offer storage benefits because the account's state and transactions are smaller. The UTXO is more efficient at simplifying scaling solutions like state and payment channel constructions, as well a sharding.
 
-When it comes to the privacy gurantees provided by each scheme both have pros and cons. On the one hand, linking transactions to a single user is often times easier in account based systems, which on the other hand offers better fungibility of assets.
+Both models have pros and cons regarding privacy. For example, the account model makes it easier to link transactions to a single user, but also offers more fungibility. 
 
-Because the account model offers clear advantages when smart contracts should be supported by the blockchain in question many new smart contract platforms use hybrid models where UTXOs are used for balances and accounts are used for the contracts.
+The account model offers clear advantages in regards to smart contracts. Many new smart contract platforms use hybrid models where UTXOs are used for balances and accounts are used for the contracts.
 
-In the end it depends on the use case which model is better suited for the job. You can shoehorn most applications into one or the other balance model. The question is if you should do this, and why you would want to do this in the first place. Because we could not phrase it much better we want to finish this article with a quote:
+Deciding on which model to use depends on what job you are trying to perform. We'd like to finish this article off with a quote:
 
 > "Within cryptocurrency platforms, there are a diverse set of design concepts and technical mechanisms that go into the platform being able to function as a viable, secure, and usable system. The transaction models used by such platforms employ the use of cryptography to verify ownership of tokens across the network. The UTXO scheme works superbly for Bitcoin, while the Account Based model used in Ethereum is geared to supporting its more complex application and contract needs." - [Brian Curran](https://blockonomi.com/utxo-vs-account-based-transaction-models/)
 
