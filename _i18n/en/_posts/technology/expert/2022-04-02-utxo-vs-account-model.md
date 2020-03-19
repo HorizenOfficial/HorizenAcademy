@@ -200,7 +200,7 @@ Transactions in the UTXO model are larger in size and place more burden on the u
 
 Account based systems offer storage benefits because the account's state and transactions are smaller. The UTXO is more efficient at simplifying scaling solutions like state and payment channel constructions, as well a sharding.
 
-Both models have pros and cons regarding privacy. For example, the account model makes it easier to link transactions to a single user, but also offers more fungibility. 
+Both models have pros and cons regarding privacy. For example, the account model makes it easier to link transactions to a single user, but also offers more fungibility.
 
 The account model offers clear advantages in regards to smart contracts. Many new smart contract platforms use hybrid models where UTXOs are used for balances and accounts are used for the contracts.
 
