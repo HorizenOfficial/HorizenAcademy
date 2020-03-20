@@ -99,6 +99,11 @@ Transaction fees also work differently in the account model: they are calculated
 
 The account model keeps track of all balances as a global state. This state can be understood as a database of all accounts, private key and contract code controlled and their current balances of the different assets on the network.
 
+The global state in the UTXO model is the set of all transaction outputs (second graphic on the left). The global state is always the entire graph of UTXOs.
+The state in the account model is the list of accounts and their balances. So in the secong graphic, the global state (n+3) is this list of 3 accounts (A, B, and C) and their balances.
+
+The main difference basically comes down to the global state in UTXO model being only extended with new UTXOs, whereas in the account model the global state is actually updated and balances change.
+
 ### State Transitions in the Account Model
 
 In a very simple model, a transaction presents an event that triggers a state transition of the blockchain subject to the state transition logic. Just like in the UTXO model, it is infeasible to transition the system to a new state with every transaction without risking an inconsistent state. Transactions are also batched into blocks in the account model and with each new block the system transitions to a new state. Just like we did before, we consider a simple example where a single transaction transitions the system to a new state below.
