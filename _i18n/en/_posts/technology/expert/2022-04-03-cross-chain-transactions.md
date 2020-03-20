@@ -53,19 +53,36 @@ The mainchain consensus protocol in the case of Horizen comprises the [Proof of 
 
 #### The Cross-Chain Transfer Protocol - CCTP
 
-The cross-chain transfer protocol is the bridge between main- and sidechain and is unified and fixed by the mainchain consensus protocol. It's two main components are forward and backward transfers. In forward transfers ZEN is sent from the mainchain to one of the sidechains. In backward transfers ZEN is returned to the mainchain. Because sidechains monitor the mainchain they can verify forward transfers themselves and the mechanism is straight forward (pun not intended). The mainchain on the other hand doesn't know anything about the sidechain except for it's existence. To be able to verify incoming backward transactions a more complex mechanism is needed. Many sidechain constructions rely on some sort of validators or certifiers to authorize backward transfers. In fact, a [first iteration of our sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) relied on certifiers to sign backward transfers batched in withdrawal certificates.
+The cross-chain transfer protocol is the bridge between main- and sidechain and is unified and fixed by the mainchain consensus protocol. It's two main components are forward and backward transfers. In forward transfers ZEN is sent from the mainchain to one of the sidechains. In backward transfers ZEN is returned to the mainchain. Because sidechains monitor the mainchain they can verify forward transfers themselves and the mechanism is straight forward (pun not intended). The mainchain on the other hand doesn't know anything about the sidechain except for it's existence. To be able to verify incoming backward transactions a more complex mechanism is needed. We introduce withdrawal certificates, standardized containers that can hold a set of backward transfers, which are used to inform the mainchain of withdrawal requests.
+
+Many sidechain constructions rely on some sort of validators or certifiers to authorize backward transfers. In fact, a [first iteration of our sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) relied on certifiers to sign backward transfers batched in withdrawal certificates.
 
 #### The Sidechain Consensus Protocol - SCP
 
-We consider the SCP as a generalized notion that encom- passes all the details about a particular sidechain construction such as consensus algorithm, accounting system, types of supported transactions, incentives mechanism, a protocol for with- drawal certificate generation,
+The sidechain consensus protocol includes all parameters of the sidechain. Typically the consensus algorithm would describe the mechanism used to have all network participants agree on a single version of history. In this context we also consider the accounting system, the types of supported transactions and possibly tokens, as well as the withdrawal certificate genertion and the SNARK circuit used.
 
 ## Verification with SNARKS instead of Validators
 
-zkSNARKs. Proof system.
+As we said before, most sidechains including our first iteration rely on some kind of certifiers or validators that act as a bridge for backward transfers. These entities monitor one or more sidechains, collect all backward transactions and broadcast them on the mainchain. These validators can either be a trusted group of centralized actors, or a decentralized group of network participants that are incentivized, usually via transaction fees, to behave honestly. Despite strong incentives being in place, a common assumption in these decentralized validator settings is an honest majority.
 
-very high level: computation correct. Mid level: state transition correct. low level: coin ownership
+Ideally, backward transfers are objectively verifiable without the need to rely on intermediaries. This is the reason we build a backward transfer mechanism which relies on a proof system - namely SNARKs: Succinct Non-Interactive Arguments of Knowledge.
 
-mostly proof of coin ownership. But this is from context. Proof that computation was executed correctly. in case of UTXO ownership this means, that a previously unspent UTXO was used as an inputnand the spending conditions were satisfied.
+### Proof Systems
+
+Zero-Knowledge proofs such as SNARKs are best known for their application in privacy preserving cryptocurrencies. Horizen, Zcash and other protocols utilize zkSNARKs to enable the private transfer of money. But to really understand zero knowledge proofs we need to take a step back and look at them from a high level first.
+
+On the highest level a proof system allows a verifier to prove to a validator, that a given statement is true, e.g. computation was performed correctly. Instead of having to provide the verifier with an input and an output for him to redo the computation and verify the result, the verifier can generate a proof and provide it. This proof comprises a set of values that the veri
+
+Getting more concrete, one application for a proof system is the verification of state transitions. A [blockchain is a state machine](https://academy.horizen.global/technology/expert/utxo-vs-account-model/#the-blockchain-is-a-state-machine) in the sense that with every block new transactions are recorded on the ledger and the state of the system transitions according to the state transition logic. Nodes verify each block before they add it to their version of the ledger. They check if transactions have valid [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) attached, if only previously [unspent transaction outputs]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) are used as inputs and if the Proof of Work attached to the block meets the current [difficulty](https://academy.horizen.global/technology/expert/proof-of-work/#finding-a-nonce). With a proof system, the miner could generate a proof that the state transition (new block) was perfomed according to the protocol. All other nodes would simply have to verify if the proof is correct and could save themselves from verifying each part of the block individually.
+
+When zero knowledge proofs are used for the private transfer of money, what happens is the following: A user will create a transaction according to the protocol of the blockchain. Instead of broadcasting this transaction in plaintext to the entire network, the users generates a proof that the transaction is valid according to the rules. The prove entails all the necessary information about the transaction: the inputs where previously unspent, the digital signatures satisfy the spending conditions defined in the Pubkey Script and sum of the outputs is less than or equal to the sum of the inputs. All nodes will verify the proof, instead of the transaction itself. In order for this to work, an important property of the proof system comes down to *soundness*.
+
+*Soundness* refers to the property that generating a proof that evalutes to true, although a statement was false is negligible. In simple terms: you cannot fake a proof from a mathematical standpoint.
+
+
+
+m
+
 
 Also possible to construct proof for correct state transitions of the system - new blocks. State *s*, transition *t*.
 
