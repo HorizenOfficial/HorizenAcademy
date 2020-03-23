@@ -10,11 +10,108 @@ chapter: "Transactions"
 further_reads: []
 ---
 
+Sidechain Article
+
+# Purpose of Sidechains
+
+## Scalability
+
+## Governace
+
+# History of Sidechains
+
+## Pegged Sidechains Back
+Terminology Introduced
+synchronity/asynchronity
+Validators?
+
+## Ethereum - PoA 
+SC Enabled Sidechains
+validators required
+
+## Horizen's Zendoo
+innovation no certifiers validators
+SNARKS used for MC to verify SC state transitions without watching
+
+# The Zendoo Protocol
+
+## Main Components
+
+### MCP
+### CCTP
+### SCP
+
+## Modifications of the Mainchain Protocol to Allow Sidechain Deployment
+
+### Sidechain Deployment
+
+### Sidechains Transactions Commitment
+
+### Withdrawal Safeguard
+
+## Using SNARKS to Verify Backward Transactions
+
+keys
+
+setup, proof, verify
+
+### Recursion
+
+faculty example
+
+state transition example
+
+### State Transition Proofs
+
+
+_____________________________________________________________________________
+
+Cross Chain Transactions
+
+Intro, Zendoo
+
+# Sidechain Deployment
+
+# Forward Transfers
+
+## Initiating a Forward Transfer on the Mainchain
+
+## Finalizing a Forward Transfer on the Mainchain
+
+### Example: Latus
+
+# Payment Transactions Sidechain Internal
+
+## Latus Example
+
+# Backward Transfers
+
+## Initiating a Backward Transfer on Sidechain
+
+## Initiating a Backwart Transfer on Mainchain - Backward Transfer Requests
+
+## Ceased Sidechain Withdrawal
+
+## Handling incoming Backward Transfers
+
+
+
+
+
+
+
+
+
+
+
+
 **shorten intro! talk more about transactions! otherwise siidechain article rather than CCT article**
 
 In this article we will take a close look at transactions that move assets between different blockchains - more specifically sidechains. Sidechains are blockchains which are interoperable with an existing mainchain. In order to transfer assets from one chain to another a special type of transaction is needed - the cross-chain transaction.
 
-But why sidechains you might ask. While blockchain technology can be applied in various ways and has the potential to solve many real world problems that could not be solved with traditional web 2.0 tools, it comes with certain challenges. Transaction throughput is limited and development on public networks is slow because network participants need to reach consensus on improvements before they can be deployed. Sidechains are an elegant way to overcome current limitations regarding scalability, interoperability, and governance in the blockchain ecosystem.
+But why sidechains you might ask. Blockchain technology can be applied in various ways and has the potential to solve many real world problems that could not be solved with traditional web 2.0 tools, but it comes with certain design challenges. Transaction throughput is limited and development on public networks is slow because network participants need to reach consensus on improvements before they can be deployed. Sidechains are an elegant way to overcome current limitations regarding scalability, interoperability, and governance in the blockchain ecosystem.
+
+# Sidechains
 
 Sidechains are a concept people have been looking into for years. The first proposal of sidechains was developed by Back et al. in 2014 and several teams are working on implementing them. When a blockchain is enabled to communicate with other blockchains, e.g. sidechains, or even non-blockchain systems, the transfer of data and assets can be moved off-chain, reducing stress on the system. Deploying a sidechain also does away with the need to reach consensus on a given feature or application among all nodes.
 
@@ -27,7 +124,23 @@ An example of a data-intensive use case would be a supply chain tracking system.
 
 Another reason for deploying a sidechain would be to circumvent the consensus building process on a public network needed to launch a new feature and limit the risk when deploying it. If the technology deployed on a sidechain had a bug, only the sidechain would be effected but the mainchain would keep functioning as usual, given the initial sidechain protocol is secure.
 
-We consider sidechains an important technological step to expand the capabilities of blockchain technology and make it suitable for a wider range of use cases. This is why we built Zendoo.
+We consider sidechains an important technological step to expand the capabilities of blockchain technology and make it suitable for a wider range of use cases. Hence, we are working hard on developing this technology and making it available to the market.
+
+## Other Sidechain Projects
+
+POA Sidechains Ethereum network - one paragraph
+
+smart contract based construction. Simpler than protocol level support (true? find out!)
+
+"Each project deploying the bridge must account for its own validators. It’s absolutely necessary for the project(s) to identify the set of individuals/nodes assigned to validate the bridge transactions. It’s important to note validators are required as part of any bridge launch."
+
+Liquid Network, Blockstream
+
+"The key observation is that any enhancement to Bitcoin Script can be implemented externally by
+having a trusted federation of mutually distrusting functionaries13 evaluate the script and accept by
+signing for an ordinary multisignature script. That is, the functionaries act as a protocol adaptor by
+evaluating the same rules we would have wanted Bitcoin to evaluate, but cannot for lack of script
+enhancements. Using this we can achieve a federated peg"
 
 ## Horizen Sidechains - The Zendoo Protocol
 
@@ -51,6 +164,13 @@ The overall system in Zendoo comprises three key elements:
 
 The mainchain consensus protocol in the case of Horizen comprises the [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) consensus algorithm, the [UTXO balance model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) and transparent as well as shielded transactions. The Zendoo specific parts of the MCP are the deployment of new sidechains via special transactions, a transaction to transfer assets to one of the sidechains as well as the verification of incoming transactions from sidechains.
 
+**Adaptions for SC deployment**
+
+Addition: Merkle tree of sidechain related transactions. Sidechain Transactions Commitment (SCTxsCommitment). All TXs or outputs sidechain related. include BTR, WCert and FTs. One tree for all SCs. branches sorted by sidechains
+
+Having SCTxsCommitment in the MC block header allows SC nodes to synchronize and verify SC-related transactions without the need to transmit the entire MC block. Also, it allows the construction of a SNARK proving that all SC-related transactions of the specific MC block have been processed correctly.
+
+
 #### The Cross-Chain Transfer Protocol - CCTP
 
 The cross-chain transfer protocol is the bridge between main- and sidechain and is unified and fixed by the mainchain consensus protocol. It's two main components are forward and backward transfers. In forward transfers ZEN is sent from the mainchain to one of the sidechains. In backward transfers ZEN is returned to the mainchain. Because sidechains monitor the mainchain they can verify forward transfers themselves and the mechanism is straight forward (pun not intended). The mainchain on the other hand doesn't know anything about the sidechain except for it's existence. To be able to verify incoming backward transactions a more complex mechanism is needed. We introduce withdrawal certificates, standardized containers that can hold a set of backward transfers, which are used to inform the mainchain of withdrawal requests.
@@ -60,6 +180,16 @@ Many sidechain constructions rely on some sort of validators or certifiers to au
 #### The Sidechain Consensus Protocol - SCP
 
 The sidechain consensus protocol includes all parameters of the sidechain. Typically the consensus algorithm would describe the mechanism used to have all network participants agree on a single version of history. In this context we also consider the accounting system, the types of supported transactions and possibly tokens, as well as the withdrawal certificate genertion and the SNARK circuit used.
+
+
+
+
+
+
+
+
+
+
 
 ## Verification with SNARKS instead of Validators
 
@@ -123,6 +253,8 @@ Base is a SNARK for a single transition that proves the existence of such t so t
 
 Why crucial, can't monitor each sidechain.
 
+asymmetric - term from back paper https://blockstream.com/sidechains.pdf
+
 Explain components/primitives used to build cctp
 
 forward easy
@@ -135,6 +267,8 @@ In Zendoo, we avoid direct reliance on certifiers or any other special type of a
 
 ### Forward Transactions
 
+In our approach, Zendoo, we consider a forward transfer as a special transaction on the mainchain that destroys coins and provides sidechain-specific metadata allowing a user to receive coins in the sidechain.
+
 ledgerId amount
 −
 −
@@ -144,9 +278,28 @@ a unique identifier of a previously created and active sidechain to which coins 
 a number of coins to transfer;
 some metadata for receiving sidechain B (e.g., a receiver’s address); its structure is not fixed in the mainchain and can consist of different variables of predefined types depending on a sidechain’s construction; its semantic meaning is not known to the mainchain.
 
-UTXO-based blockchain system (e.g. Bit- coin or Horizen), we can consider FT as a special unspendable transaction output in a regular multi-input multi-output transaction
+UTXO-based blockchain system (e.g. Bit- coin or Horizen), we can consider FT as a special unspendable transaction output in a regular multi-input multi-output transaction --> no pubkey sript
+
+it is the responsibility of the sidechain to sync forward transfers from the MC and issue the corresponding amount of coins.
 
 ### Backward Transactions
+
+A more complex procedure is required for backward transfers. They are initiated in the sidechain as special transactions, batched in a withdrawal certificate, and propagated to the mainchain for processing.
+
+each sidechain defines its own SNARK that is used to validate withdrawal certificates. --> by putting verification key on chain this works
+"The mainchain knows only the verification key – which is registered upon sidechain creation – and the interface of the verifier, which is unified for all sidechains. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain."
+
+This provides flexibility to define its own rules for backward transfers. For instance, a sidechain can adopt a chain-of-trust model [13] or even the certifiers model
+
+Note that the mainchain consensus protocol does not impose any rules on how exactly a withdrawal certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures. We only assume that it is submitted by means of a special transaction in the mainchain.
+
+#### Mainchain Managed Withdrawals
+
+There might be cases when a user would want to request a backward transfer directly from the mainchain rather than creating a BT in the SC. For instance, it would allow users to withdraw funds in case of a misbehaving (e.g., maliciously controlled sidechain that censors submission of backward transfers) or ceased sidechain.
+
+1. Backward transfer request (BTR), and 
+2. Ceased sidechain withdrawal (CSW).
+
 
 ## Summary
 
@@ -157,7 +310,19 @@ UTXO-based blockchain system (e.g. Bit- coin or Horizen), we can consider FT as 
 [^1]: Garoffolo, Kaidalov, Oliynykov, [Zendoo: a zk-SNARK Verifiable Cross-Chain Transfer Protocol Enabling Decoupled and Decentralized Sidechains](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf)
 
 
+
+
+
+
 ### FR
+
+POA Bridge and POA ERC20 bridge https://medium.com/poa-network/introducing-the-erc20-to-erc20-tokenbridge-ce266cc1a2d0
+> "Each project deploying the bridge must account for its own validators. It’s absolutely necessary for the project(s) to identify the set of individuals/nodes assigned to validate the bridge transactions. It’s important to note validators are required as part of any bridge launch."
+
+"projects can leverage a sidechain for faster transactions and cheaper gas costs. "
+
+
+https://blockstream.com/sidechains.pdf
 
 
 
