@@ -50,7 +50,7 @@ While security benefits from the redundancy of information, this comes at a perf
 
 ### The Network Graph
 
-To illustrate distributed networks we use *graphs*. This term sounds very simple at first but there is a bit more to it. The field of *graph theory* is a mathematical discipline studying the [different types of graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). We touched on graph theory before in our article on [*Directed Acyclic Graphs*]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}) or DAGs. There we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
+To illustrate distributed networks we use *graphs*. This term sounds very simple at first but there is a bit more to it. The field of *graph theory* is a mathematical discipline studying the [different types of graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). We touched on graph theory before in our article on [*Directed Acyclic Graphs*]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) or DAGs. There we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
 
 ![The Graph of a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_D.jpg)
 ![The Graph of a Distributed Peer-2-Peer (P2P) Network](/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_M.jpg)
