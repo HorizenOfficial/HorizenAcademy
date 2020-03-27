@@ -13,7 +13,7 @@ level: beginner
         <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
-        In this level we want to give you a gentle introduction to blockchain technology, the technology that makes cryptocurrencies possible and powerful. We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology: this project is for you.
+        At this level, we want to give you a gentle introduction to blockchain technology, the technology that makes cryptocurrencies possible and powerful. We designed the Horizen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you want to learn about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology: this project is for you.
         If you prefer reading locally, you can download the entire Beginner Level as a pdf document <a href="{{site.url}}/assets/files/pdf_documents/Horizen-Academy-Tech-Beginner.pdf">here</a>.
     </div>
 </div>
@@ -62,7 +62,7 @@ level: beginner
     <div class="col-md-9">
         <h5 class="intro-article-title">Wallets</h5>
         <p class="mb-1">
-            In order to receive, store and send cryptocurrencies one uses a cryptocurrency wallets. In the third chapter we will explain to you how such wallets work.
+            In order to receive, store and send cryptocurrencies, one uses a cryptocurrency wallet. In the third chapter, we will explain to you how such wallets work.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Read Article</a>
