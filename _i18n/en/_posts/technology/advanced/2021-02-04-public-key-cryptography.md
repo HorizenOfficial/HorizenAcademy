@@ -78,11 +78,15 @@ Next, your public key is derived from the large, random number you have generate
 
 Its coordinates are
 
+$$
 x = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+$$
 
 and
 
+$$
 y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+$$
 
 This base point is now added to itself as many times as your private key dictates. If your private key was the number "3", then you would perform the calculation we just demonstrated above. If you add the base point to itself as often as your private key says (private key * P) you get your public key.
 
