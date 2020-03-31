@@ -105,17 +105,17 @@ The sidechain consensus protocol includes all parameters of the sidechain. Typic
 
 A sidechain in Zendoo can run a different [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}), [accounting model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) or [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) than the mainchain. It doesn't even have to be a blockchain at all. As long as the system adheres to the cross-chain transfer protocol it is interoperable with the main blockchain.
 
-possibly tokens, as well as the withdrawal certificate genertion and the SNARK circuit used.
+A key component of the cross-chain transfer protocol are *withdraw certificate*. They are containers in which all backward transfers from a sidechain that happen within a given time period - the *withdraw epoch* - are grouped and broadcast to the mainchain collectively. Every sidechain needs a mechanism to generate valid withdraw certificates. Each sidechain also needs to define a proof system so the mainchain can verify incoming backward transfers. We'll get to proof systems shortly.
 
 ## Modifications of the Mainchain Protocol
 
 In order to allow the deployment and use of sidechains a few modifications to the mainchain protocol are necessary.
 
-* First, and most importantly, a mechanism to verify incoming *Withdraw Certificates* is needed.
-* Second, a special type of transaction is introduced to deploy a sidechain.
-* Third, a new data field in the mainchain block header is introduced, where a Merkle root of all sidechain related transactions is recorded.
-* Fourth, a *forward transfer* is defined as a transaction sending assets to a sidechain.
-* Lastly, *Withdraw Certificates* are introduced that allow the mainchain to process incoming backward transactions.
+- First, and most importantly, a mechanism to verify incoming *Withdraw Certificates* is needed.
+- Second, a special type of transaction is introduced to deploy a sidechain.
+- Third, a new data field in the mainchain block header is introduced, where a Merkle root of all sidechain related transactions is recorded.
+- Fourth, a *forward transfer* is defined as a transaction sending assets to a sidechain.
+- Lastly, *Withdraw Certificates* are introduced that allow the mainchain to process incoming backward transactions.
 
 In the following sections we will go through the mainchain modifications that allow deploying and using sidechains. In the [chapter on transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}), we dedicate an entire article to [cross-chain and sidechain-internal transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}).
 
@@ -123,13 +123,13 @@ Understanding how the verification of sidechain transactions on the mainchain wo
 
 ### Verification of Backward Transfers
 
-As we said before, most sidechain protocols including our own first iteration rely on some kind of certifiers or validators that act as a bridge for backward transfers. These entities monitor one or more sidechains, collect all backward transactions and broadcast them on the mainchain. These validators can either be a trusted group of centralized actors, or a decentralized group of network participants that are incentivized, usually via transaction fees, to behave honestly. The common assumption is an honest majority amoing verifiers, but despite strong incentives for honest behavior it remains an assumption.
+As we said before, most sidechain protocols including our own first iteration rely on some kind of certifiers or validators that act as a bridge for backward transfers. These entities monitor one or more sidechains, collect all backward transactions and broadcast them on the mainchain. These validators can either be a trusted group of centralized actors, or a decentralized group of network participants that are incentivized, usually via transaction fees, to behave honestly. A common assumption is an honest majority among verifiers, but despite strong incentives for honest behavior it remains just an assumption.
 
-Ideally, backward transfers are objectively verifiable without the need to rely on intermediaries. This is the reason we build a backward transfer mechanism which relies on a proof system rather than human entities.
+Ideally, backward transfers are objectively verifiable without the need to rely on intermediaries. This is the reason we built a backward transfer mechanism relying on a proof system rather than human entities.
 
 #### Proof Systems
 
-On the highest level a proof system allows a verifier to prove to a validator, that a given statement is true, e.g. a computation was performed correctly. Instead of having to provide the verifier with the input and output to redo the computation and verify the result, the verifier can generate a proof and provide this proof instead. A proof comprises a set of values that the verifier uses to compute a binary output: true or false. When the verification function returns true the computation was performed correctly, if it returns false it wasn't.
+On the highest level a proof system allows a prover to prove to a validator, that a given statement is true, e.g. a computation was performed correctly. Instead of the validator having to redo the entire computation and verify the result, the prover can generate a proof and provide this instead. A proof comprises a set of values that the verifier uses to compute a binary output: true or false. When the verification function returns true the computation was performed correctly, if it returns false it wasn't.
 
 Getting more concrete, one application for a proof system is the verification of state transitions in a given system. A [blockchain is a state machine](https://academy.horizen.global/technology/expert/utxo-vs-account-model/#the-blockchain-is-a-state-machine) in the sense that with every block new transactions are recorded in the ledger and the state of the system transitions to the next state. Nodes verify each block before they add it to their version of the ledger. They check if transactions have valid [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) attached, if only previously [unspent transaction outputs]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) are spent and if the [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) attached to the block meets the current [difficulty](https://academy.horizen.global/technology/expert/proof-of-work/#finding-a-nonce). With a proof system, a miner could generate a proof that the state transition (new block) was perfomed according to the protocol. All other nodes would simply have to verify if the proof is correct and could save themselves from verifying each part of the block individually.
 
@@ -163,25 +163,25 @@ Writing a function that calculates the factorial of a given number is most elega
 
 In the example above, calculating the factorial of 5, the recursive function will start with the first recursive case \\(5! = 5 \cdot 4!\\). When this instance of the function is executed, it will open another instance of the function that computes the factorial of 4 - and so on. This continues until the *base case* is reached. The base case is the factorial of the number 2, which equals 2. Now, the different instances of the function are closed subsequentially after returning their result to the next highest instance of the same function. The base case returns 2 to the next highest instance, which will use the result to compute *3!* and so on. In a last step, the final result, 120, is returned and the highest instance of the function is closed now that is has finished it's job.
 
-In C, the function calculating the factorial can elegantly be written as follows. You can see how the function `factorial` is used within the function itself (`factorial(n-1)`).
+In C, the function calculating the factorial can elegantly be written as follows. You can see how the function `factorial` is used within the function itself (`factorial(n-1)`). Even without a basic understanding of software development you might appreciate the simplicity of the function below. In just four lines of code computing the factorial is achieved. 
 
 ```
 long factorial(int n)
 {
-  if (n == 0) // Base case
+  if (n == 0)   //Base Case
     return 1;
-  else
+  else          //Recursive Case(s)
     return (n*factorial(n-1));
 }
 ```
 
-What we want to achieve in the context of our sidechains is having a proof of the statement that a series of state transitions (transactions and subsequently blocks) led to a given final state. But how does recursion apply to this scenario?
+What we want to achieve in the context of our sidechains is having a proof of the statement that a series of state transitions (transactions and subsequently blocks) led to some final state. But how does recursion apply to this scenario?
 
 #### State Transition Proofs
 
-Just like in the case of calculating the factorial of a number, the state transition logic of a blockchain can be seen as a function that takes the current state (\\s_i\\) and the most recent set of transactions (\\t_i\\) as an input and returns the next state (\\s_{i+1}\\). In the context of sidechains, each state can be represented, as a list of [UTXOs]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) while transitions are groups of transactions included in a block. Let us make this more tangible with a concrete example:
+The *state transition logic* of a blockchain can be seen as a function that takes the current state (\\s_i\\) and the most recent set of transactions (\\t_i\\) as an input and returns the next state (\\s_{i+1}\\). The factorial of five can be expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the most recent state. Let us look at a tangible example:
 
-A sidechain starts in state 1 (\\s_1\\). The first transition, comprising all transactions to be included in the first block, is transition 1 (\\t_1\\). The transition function `update` takes these two parameters, the initial state (the Genesis Block) and the first transition instruction (read: transactions) and computes the next state (\\s_2\\)
+A sidechain starts in state 1 (\\s_1\\) with it's genesis block. The first transition, comprising all transactions to be included in the first "real" block, is transition 1 (\\t_1\\). The transition function, let's call it `update`, takes these two parameters, the initial state (Genesis Block) and the first transition (read: transactions) and computes the next state (\\s_2\\).
 
 $$
 s_2 = update(t_1, s_1)
@@ -193,7 +193,7 @@ $$
 s_3 = update(t_2, s_2)
 $$
 
-Now, the current state of the sidechain can always be computed from the initial state (\\s_1\\) and all transitions (\\t_i\\) the system underwent. It allows one to subsequently compute every state the system was in. In our example, the third state (\\s_3\\) can be computed as
+Now, the current state of the sidechain can always be computed from the initial state (\\s_1\\) and all transitions (\\t_i\\) the system underwent. It allows one to subsequently compute every state the system went through. In our example, the third state (\\s_3\\) can be computed as
 
 $$
 s_3 = update(t_2, update(t_1, s_1)).
@@ -203,69 +203,83 @@ We simply replaced (\\s_2\\) from the second formula in this section with the ri
 
 ![Recursive State Transitions](/assets/post_files/technology/expert/4.2-cross-chain-transactions/recursive-state.jpg)
 
-The function `update` calls itself subsequently  and opens new instances of the same function until the base case is reached. The base case here is the first state transition resulting in state \\(s_2\\). Once this base case is reached, the different instances of the `update` function are returning their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
+The function `update` calls itself subsequently and opens new instances of the same function until the base case is reached. The base case here is the first state transition resulting in state \\(s_2\\). Once this base case is reached, the different instances of the `update` function are returning their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
 
-The general mathematical expression for this principle is
+A general mathematical expression for this is
 
 $$
 s_{n+1} = update(t_{n}, s_{n}) = update(t_{n}, update (t_{n-1}, s_{n-1})
 $$
 
-This construction is of great value for verifiable sidechains. Not only can states be computed recursively, but so can proofs for each state and in turn each state transition. What is needed for the Zendoo protocol is a proof of the statement: 
+This construction is of great value for verifiable sidechains. Not only can states be computed recursively, but so can proofs for each state and in turn each state transition. What is needed for the Zendoo protocol is a proof of the statement:
 
 <center>
-"There was a series of state transitions \\((t_1, ..., t_n\\))
+
+"There was a series of state transitions \\((t_1, ..., t_n\\)) and by applying these state transitions to the initial state \\(s_1\\) one after another the state \\(s_{n+1})\\ is reached.
+
 </center>
 
+We now understand how states can be computed recursively. But why do we want to compute a proof for each of those transitions? Remember that the mainchain cannot monitor all the different sidechains and verify the individual state transitions on each chain. What it can do though, is verify a proof submitted with each incoming Withdrawal Certificate. When validated, this proof will return `true` if the sidechain was operated as intended and `false` in case it didn't. Backward transfers included in a withdraw certificate are accepted by the mainchain, if and only if the attached proof evaluates to `true`.
 
-we would like to have a succinct proof of the following statement: “there exist such (t1, ..., tn) so that update(tn, update(tn−1, update(..., update(t1, s1)))) = sn+1”.
+#### Using SNARKS - Succinct Non-Interactive Arguments of Knowledge
 
-- Setup: proofing and verifying key are created
-- Prove: proof *pi* is constructed based on the input si, si+1 and ti
-- Verify: based on vk_Base,(si,si+1),π Base it is evaluated if the proof is true or false
+So how does generating a proof work exactly for a given sidechain? 
 
+First, there are a wide range of proof systems in existence. The proof system used for the Zendoo sidechain construction is a SNARK proof system. When we talk about a specific SNARK proof system we often times refer to it as a *SNARK circuit*. When such a circuit is setup, first a proofing key \\(pk\\) and a verification key \\(vk\\) are generated. To prove a statement a proof \\(\pi\\) is computed. Generating a proof for the state transition (\\t_1\\) from state (\\s_1\\) to the second state (\\s_2\\) happens based on four inputs:
 
+* the proving key \\(pk\\)
+* the initial state (\\s_1\\)
+* the transition (\\t_1\\)
+* and the resulting state (\\s_2\\).
 
+$$
+\pi \leftarrow Prove(pk, (s_1, s_2), (t_1)
+$$
 
+Just like we computed states recursively, we can compute proofs recursively. The logic is exactly the same: starting from a base case (the first state transition) proofs are sequentially merged until a single proof for the state in question remains. This proof can now be broadcast to the mainchain to be verified.
 
+Verifying a proof meant to prove a state n (\\s_n\\) was computed correctly happens based on four inputs:
 
+* the verification key \\(vk\\)
+* the initial state (\\s_1\\)
+* the final state (\\s_n\\)
+* and the proof \\(\pi\\)
 
+Proofs for the correct execution of the sidechain logic will be generated periodically, one for every withdrawal epoch.
 
-Base is a SNARK for a single transition that proves the existence of such t so that si+1 = update(t, si ). It is defined by a triplet (Setup, Prove, Verify)
-
-
-
-
-#### Snarks
-
-When we use snarks, we don't need to care about states and transitions. 
-
-Mainchain doesn't need to know about transactions and the resulting blocks. All it cares about is that the sidechain was working as intended and all blocks are valid according to the specific sidechain implementation.
-
-
-
-### Sidechain Deployment
-
-A new sidechain in Zendoo needs to registered with the mainchain in a special type of transaction that any user can submit. This transaction defines a unique identifier for the sidechain and a number of other parameters.
-
-
+Now that there is a basic understanding of what proof systems are, how recursion works, and how it is applied to generate proofs for any state (block) of the sidechain, we continue by looking at the remaining modifications to the mainchain which are needed to enable sidechains.
 
 ### Sidechains Transactions Commitment
 
-Addition: Merkle tree of sidechain related transactions. Sidechain Transactions Commitment (SCTxsCommitment). All TXs or outputs sidechain related. include BTR, WCert and FTs. One tree for all SCs. branches sorted by sidechains
+The structure of the mainchain block headers was upgraded to enable sidechains. A new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional Merkle tree. Besides the regular Merkle Root included in a block header serving as a summary of all transactions contained in a block this second Merkle tree comprises all sidechain-related transactions, namely:
 
-Having SCTxsCommitment in the MC block header allows SC nodes to synchronize and verify SC-related transactions without the need to transmit the entire MC block. Also, it allows the construction of a SNARK proving that all SC-related transactions of the specific MC block have been processed correctly.
+- **Forwart Transfers** (FTs)sending assets from main- to sidechain
+- **Withdrawal Certificates** (WCerts) communicating Backward Transfers to the mainchain
+- **Backward Transfer Requests** (BTRs) initiating backward transfers from within the mainchain
+- **Ceased Sidechain Withdrawals** (CSW) allowing a user to withdraw assets from a sidechain which has become inactive
+
+All these sidechain-related transactions are placed into a merkle tree, grouped by sidechain identifiers in different branches, and the resulting Merkle tree root is placed in the mainchain block header as the Sidechain Transactions Commitment. Including this data in the block headers allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechain DO monitor the mainchain) without the need to transmit the entire mainchain block. Furthermore, it allows the construction of a SNARK proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
 
 ### Withdrawal Safeguard
 
-protection against bug in sidechain
+One of the most devastating bugs a blockchain can suffer from is a bug that allows an uncontrolled inflation of the monetary supply. One has to consider an event where a malfunctioning sidechain is trying to transfer more assets to the mainchain than it initially received. This could be out of malicious intent, or simply an honest mistake.
 
-no inflation of total supply
+**continue**
+
+
+
 
 no more backward transfers than forward transfers
 
+### Sidechain Deployment
 
+A new sidechain in Zendoo needs to registered with the mainchain in a special type of transaction. Any user can build a new sidechain and submit this bootstrapping transaction where several important parameters of the sidechain are defined.
 
+First, a unique identifier, the `ledgerId` for the sidechain is defined in the bootstrapping transaction. Next, it is defined from which mainchain block onward the sidechain will become active. The length of a withdrawal epoch, defined over a number of mainchain blocks, is also defined in this first transaction. One withdraw certificate is submitted per withdraw epoch to the mainchain, acompanied by the proof that all state transitions were valid.
+
+The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, maybe because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers.
+
+Next, a number of cryptographic keys are proclaimed for each sidechain. Namely, the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided (number and types of included data elements) from the sidechain to the mainchain.
 
 # Summary
 
@@ -282,45 +296,4 @@ https://medium.com/poa-network/introducing-the-erc20-to-erc20-tokenbridge-ce266c
 
 https://blockstream.com/sidechains.pdf
 
-
-
-
-
-
-
-
-
-
-
-### Recursion
-
-
-$$
-update(t_n, s_n) = update (t_n, updated(t_{n-1}, s_{n-1}))
-$$
-
-we would like to have a succinct proof of the following statement: “there exist such (t1, ..., tn) so that update(tn, update(tn−1, update(..., update(t1, s1)))) = sn+1”.
-
-By applying this to blockchain, we will be able to provide succinct proofs of transition between some states si and sj (i < j). The state can be represented, for instance, as a list of unspent transaction outputs while transitions are regular blockchain transactions that spend some outputs and create new ones. This construction is of great value for verifiable sidechains.
-
-Base is a SNARK for a single transition that proves the existence of such t so that si+1 = update(t, si ). It is defined by a triplet (Setup, Prove, Verify)
-
-- Setup: proofing and verifying key are created
-- Prove: proof *pi* is constructed based on the input si, si+1 and ti
-- Verify: based on vk_Base,(si,si+1),π Base it is evaluated if the proof is true or false
-
-
-
-## Cross-Chain Transactions
-
-Why crucial, can't monitor each sidechain.
-
-Explain components/primitives used to build cctp
-
-forward easy
-
-backward hard.
-
-first paper: decentralized certifiers. that were registering themselves in the MC and were responsible for signing withdrawal certificates.
-
-In Zendoo, we avoid direct reliance on certifiers or any other special type of actors assigned to validate withdrawal certificates. Instead, we are going to leverage SNARKs [6, 7, 19] to provide means for the mainchain to effectively validate withdrawals.
+zk poker https://medium.com/coinmonks/zk-poker-a-simple-zk-snark-circuit-8ec8d0c5ee52
