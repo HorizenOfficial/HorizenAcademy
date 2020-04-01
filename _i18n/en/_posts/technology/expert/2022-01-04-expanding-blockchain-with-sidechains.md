@@ -34,8 +34,8 @@ One possible use case in this context is the deployment of custom tokens using s
 
 Some of the first sidechains we want to develop at Horizen include dedicated sidechains that support advanced smart contract logic, a sidechain for near instant payment settlement and a sidechain handling the treasury funds of the Zen Blockchain Foundation.
 
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/4.2-cross-chain-transactions/sidechains_D.jpg)
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/4.2-cross-chain-transactions/sidechains_M.jpg)
+![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_D.jpg)
+![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_M.jpg)
 
 We consider sidechains an important technological step to expand the capabilities of distributed ledgers and make it suitable for a wider range of use cases. Hence, we are working hard on developing this technology and making it available to the broader market.
 
@@ -89,7 +89,7 @@ The overall system in Zendoo comprises three key elements:
 - The Cross-Chain Transfer Protocol - CCTP
 - The Sidechain Consensus Protocol - SCP
 
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/4.2-cross-chain-transactions/sidechain-elements.jpg)
+![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements.jpg)
 
 ### The Mainchain Consensus Protocol - MCP
 
@@ -103,9 +103,9 @@ The cross-chain transfer protocol is the bridge between main- and sidechain and 
 
 The sidechain consensus protocol includes all parameters of the sidechain. Typically, the consensus algorithm would describe the mechanism to agree on a single version of history. In this context, we also consider other parameters of the sidechain part of the consensus protocol.
 
-A sidechain in Zendoo can run a different [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}), [accounting model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) or [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) than the mainchain. It doesn't even have to be a blockchain at all. As long as the system adheres to the cross-chain transfer protocol it is interoperable with the main blockchain.
+A sidechain in Zendoo can run a different [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}), [accounting model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) or [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) than the mainchain. It doesn't even have to be a blockchain at all, as long as the system adheres to the cross-chain transfer protocol it is interoperable with the main blockchain.
 
-A key component of the cross-chain transfer protocol are *withdraw certificate*. They are containers in which all backward transfers from a sidechain that happen within a given time period - the *withdraw epoch* - are grouped and broadcast to the mainchain collectively. Every sidechain needs a mechanism to generate valid withdraw certificates. Each sidechain also needs to define a proof system so the mainchain can verify incoming backward transfers. We'll get to proof systems shortly.
+A key component of the cross-chain transfer protocol are *withdraw certificate*. They are containers in which all backward transfers from a sidechain that happen within a given time period - the *withdraw epoch* - are grouped and broadcast to the mainchain collectively. Every sidechain needs a mechanism to generate valid withdraw certificates. Each sidechain also needs to define a proof system so the mainchain can verify incoming backward transfers. We'll get to proof systems shortly. There is great freedom in the design of a Horizen-compatible sidechain. However, we do provided a reference implementation for a sidechain consensus protocol named Latus to make life easier on developers willing to build on Horizen.
 
 ## Modifications of the Mainchain Protocol
 
@@ -159,7 +159,7 @@ $$
 
 Writing a function that calculates the factorial of a given number is most elegantly achieved using recursion. The idea is that the factorial of the number 5 is equal to five times the factorial of the number 4: \\(5! = 5 \cdot 4!\\). The solution to the problem *5!* then depends on a smaller instance of the problem, *4!*.
 
-![Recursively Calculating the Faculty of any Number](/assets/post_files/technology/expert/4.2-cross-chain-transactions/recursive-faculty.jpg)
+![Recursively Calculating the Faculty of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive-faculty.jpg)
 
 In the example above, calculating the factorial of 5, the recursive function will start with the first recursive case \\(5! = 5 \cdot 4!\\). When this instance of the function is executed, it will open another instance of the function that computes the factorial of 4 - and so on. This continues until the *base case* is reached. The base case is the factorial of the number 2, which equals 2. Now, the different instances of the function are closed subsequentially after returning their result to the next highest instance of the same function. The base case returns 2 to the next highest instance, which will use the result to compute *3!* and so on. In a last step, the final result, 120, is returned and the highest instance of the function is closed now that is has finished it's job.
 
@@ -201,7 +201,7 @@ $$
 
 We simply replaced (\\s_2\\) from the second formula in this section with the right term of the first formula. Do you recognize the recursive pattern explained before?
 
-![Recursive State Transitions](/assets/post_files/technology/expert/4.2-cross-chain-transactions/recursive-state.jpg)
+![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive-state.jpg)
 
 The function `update` calls itself subsequently and opens new instances of the same function until the base case is reached. The base case here is the first state transition resulting in state \\(s_2\\). Once this base case is reached, the different instances of the `update` function are returning their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
 
@@ -257,14 +257,14 @@ Proofs for the correct execution of the sidechain logic will be generated period
 
 ### Sidechains Transactions Commitment
 
-The structure of the mainchain block headers was upgraded to enable sidechains. A new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional Merkle tree. Besides the regular Merkle Root included in a block header serving as a summary of all transactions contained in a block this second Merkle tree comprises all sidechain-related transactions, namely:
+The structure of the mainchain block headers was upgraded to enable sidechains. A new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees). Besides the regular Merkle root included in a block header serving as a summary of all transactions, this second Merkle tree comprises all sidechain-related transactions, namely:
 
 - **Forwart Transfers** (FTs)sending assets from main- to sidechain
 - **Withdrawal Certificates** (WCerts) communicating Backward Transfers to the mainchain
 - **Backward Transfer Requests** (BTRs) initiating backward transfers from within the mainchain
 - **Ceased Sidechain Withdrawals** (CSW) allowing a user to withdraw assets from a sidechain which has become inactive
 
-All these sidechain-related transactions are placed into a merkle tree, grouped by sidechain identifiers in different branches, and the resulting Merkle tree root is placed in the mainchain block header as the Sidechain Transactions Commitment. Including this data in the block headers allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechain DO monitor the mainchain) without the need to transmit the entire mainchain block. Furthermore, it allows the construction of a SNARK proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
+All these sidechain-related transactions are placed into a merkle tree, grouped by sidechain identifiers in different branches, and the resulting Merkle tree root is placed in the mainchain block header as the Sidechain Transactions Commitment. Including this data in the [block headers](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header) allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechain DO monitor the mainchain) without the need to transmit the entire mainchain block. Furthermore, it allows the construction of a SNARK proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
 
 ### Withdrawal Safeguard
 
@@ -283,3 +283,17 @@ The choice of the withdrawal epochs length depends on parameters such as the blo
 Next, a number of cryptographic keys are proclaimed for each sidechain, namely the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided from the sidechain to the mainchain (number and types of included data elements).
 
 # Summary
+
+This was a rather long read! Let us recap this article shortly, before we move on.
+
+First, we laid out why sidechains are useful. They increase a systems scalability and allow the deployment of new experimental features without having to achieve consensus among all network participants.
+
+Several sidechain implementations exist, some of them more advanced than others. A common shortcoming is that these constructions often times either rely on the mainchain keeping track of sidechains, or they require some sort of certifiers or validators to process backward transfers from side- to mainchain. The Zendoo protocol allows an asymmetric sidechain construction where the mainchain doesn't monitor sidechains but can rely on objectively verifiable proofs to validate backward transfers.
+
+Zendoo comprises three main elements: the mainchain consensus protocol, the sidechain consensus protocol for which the Latus reference implementation is provided and the cross-chain tranfer protocol. MCP and CCTP are fixed, while there are many degrees of freedom with regards to the SCP.
+
+Next, we looked at the necessary modifications to Horizen's mainchain protocol that allow the deployment of sidechains. In order to understand the recursive proof system that allows the verification of backward transfers without certifiers, we introduced proof systems in general. We showed how recursion can be used to elegantly solve mathematical problems such as computing the factorial of a number and how the same concept is useful for computing state transitions and proofs thereof.
+
+Another modifications to the mainchain is the addition of the Sidechain Transactions Commitment (SCTxsCommitment) serving as a summary of all sidechain related transactions on the mainchain in the form of a Merkle tree. The withdrawal safeguard protects against unintended inflation originating from a buggy or malicious sidechain. Lastly, a special type of bootstrapping transaction is needed to allow the permissionless deployment of a sidechain.
+
+In chapter four, covering [transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}) we will come back to our sidechain construction again to take a close look at [cross-chain transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}).
