@@ -7,7 +7,7 @@ permalink: /technology/expert/expanding-blockchain-with-sidechains/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
-further_reads: [zendoo]
+further_reads: [zendoo, blockstream_sidechains, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
 ---
 
 Blockchain technology offers some unique properties, such as achieving consensus among a group of unknown actors, given a strong incentive mechanism is in place. Building applications on blockchain technology can be challenging, though. Spinning up a small, application specific blockchain defies the argument that it is a secure and trustless technology. For that to hold true, you need a large number of shareholders in the system. The larger the group of network participants, the more secure the network.
@@ -223,31 +223,37 @@ We now understand how states can be computed recursively. But why do we want to 
 
 #### Using SNARKS - Succinct Non-Interactive Arguments of Knowledge
 
-So how does generating a proof work exactly for a given sidechain? 
+So how does generating a proof work exactly for a given sidechain? First, there are a wide range of proof systems in existence. The proof system used for the Zendoo sidechain construction is a SNARK proof system - an acronym for *Succinct Non-Interactive Arguments of Knowledge*. Let's look at what this means:
 
-First, there are a wide range of proof systems in existence. The proof system used for the Zendoo sidechain construction is a SNARK proof system. When we talk about a specific SNARK proof system we often times refer to it as a *SNARK circuit*. When such a circuit is setup, first a proofing key \\(pk\\) and a verification key \\(vk\\) are generated. To prove a statement a proof \\(\pi\\) is computed. Generating a proof for the state transition (\\t_1\\) from state (\\s_1\\) to the second state (\\s_2\\) happens based on four inputs:
+- *Succinct* refers to the proofs being short in the sense of easy to compute and verify.
+- *Non-interactive* means that the prover and verifier don't have to be online at the same time. With the ball-example above, the prover and verifier have to go back and forth several times before the verifier actually has proof of the claim. With non-interactive proofs, the prover can construct the proof entirely on his own without the need for communication in the process. This proof can be written to the blockchain to be verified at any time.
+- *Arguments of knowledge* describes the proof being computationally sound, i.e. no adversary can construct a false proof even if he has access to huge computational resources.
 
-* the proving key \\(pk\\)
-* the initial state (\\s_1\\)
-* the transition (\\t_1\\)
-* and the resulting state (\\s_2\\).
+When we talk about a specific SNARK proof system we often times refer to it as a *SNARK circuit*. When such a circuit is setup, first a proofing key \\(pk\\) and a verification key \\(vk\\) are generated. To prove a statement a proof \\(\pi\\) is computed. Generating a proof for the state transition (\\t_1\\) from state (\\s_1\\) to the second state (\\s_2\\) happens based on four inputs:
 
 $$
-\pi \leftarrow Prove(pk, (s_1, s_2), (t_1)
+\pi \leftarrow Prove(pk, (s_1, s_2), t_1)
 $$
+
+- the proving key \\(pk\\)
+- the initial state (\\s_1\\)
+- the transition (\\t_1\\)
+- and the resulting state (\\s_2\\).
 
 Just like we computed states recursively, we can compute proofs recursively. The logic is exactly the same: starting from a base case (the first state transition) proofs are sequentially merged until a single proof for the state in question remains. This proof can now be broadcast to the mainchain to be verified.
 
 Verifying a proof meant to prove a state n (\\s_n\\) was computed correctly happens based on four inputs:
+
+$$
+true/false \leftarrow Verify(vk, (s_1, s_n), \pi)
+$$
 
 * the verification key \\(vk\\)
 * the initial state (\\s_1\\)
 * the final state (\\s_n\\)
 * and the proof \\(\pi\\)
 
-Proofs for the correct execution of the sidechain logic will be generated periodically, one for every withdrawal epoch.
-
-Now that there is a basic understanding of what proof systems are, how recursion works, and how it is applied to generate proofs for any state (block) of the sidechain, we continue by looking at the remaining modifications to the mainchain which are needed to enable sidechains.
+Proofs for the correct execution of the sidechain logic will be generated periodically, one for every withdrawal epoch. Now that there is a basic understanding of what proof systems are, how recursion works, and how it is applied to generate proofs for any state (block) of the sidechain, we continue by looking at the remaining modifications to the mainchain which are needed to enable sidechains.
 
 ### Sidechains Transactions Commitment
 
@@ -277,18 +283,3 @@ The choice of the withdrawal epochs length depends on parameters such as the blo
 Next, a number of cryptographic keys are proclaimed for each sidechain, namely the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided from the sidechain to the mainchain (number and types of included data elements).
 
 # Summary
-
-
-
-
-
-
-
-
-# FR
-
-https://medium.com/poa-network/introducing-the-erc20-to-erc20-tokenbridge-ce266cc1a2d0
-
-https://blockstream.com/sidechains.pdf
-
-zk poker https://medium.com/coinmonks/zk-poker-a-simple-zk-snark-circuit-8ec8d0c5ee52
