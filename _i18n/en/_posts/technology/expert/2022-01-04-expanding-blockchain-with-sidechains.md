@@ -264,22 +264,17 @@ All these sidechain-related transactions are placed into a merkle tree, grouped 
 
 One of the most devastating bugs a blockchain can suffer from is a bug that allows an uncontrolled inflation of the monetary supply. One has to consider an event where a malfunctioning sidechain is trying to transfer more assets to the mainchain than it initially received. This could be out of malicious intent, or simply an honest mistake.
 
-**continue**
-
-
-
-
-no more backward transfers than forward transfers
+In order to prevent this event, a withdrawal safeguard is implemented. The mainchain keeps track of how much money was transferred to a given sidechain and will only accept incoming backward transfers up to that amount. This way an uncontrolled inflation becomes impossible.
 
 ### Sidechain Deployment
 
-A new sidechain in Zendoo needs to registered with the mainchain in a special type of transaction. Any user can build a new sidechain and submit this bootstrapping transaction where several important parameters of the sidechain are defined.
+A new sidechain in Zendoo needs to be registered with the mainchain in a special type of transaction. Any user can build a new sidechain and submit this bootstrapping transaction wherein several important parameters of the sidechain are defined.
 
-First, a unique identifier, the `ledgerId` for the sidechain is defined in the bootstrapping transaction. Next, it is defined from which mainchain block onward the sidechain will become active. The length of a withdrawal epoch, defined over a number of mainchain blocks, is also defined in this first transaction. One withdraw certificate is submitted per withdraw epoch to the mainchain, acompanied by the proof that all state transitions were valid.
+First, a unique identifier, the `ledgerId` for the sidechain is defined in the bootstrapping transaction. Next, it is defined from which mainchain block onward the sidechain will become active. The length of a withdrawal epoch, defined over a number of mainchain blocks, is also defined in this first transaction. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions were valid.
 
-The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, maybe because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers.
+The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers.
 
-Next, a number of cryptographic keys are proclaimed for each sidechain. Namely, the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided (number and types of included data elements) from the sidechain to the mainchain.
+Next, a number of cryptographic keys are proclaimed for each sidechain, namely the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided from the sidechain to the mainchain (number and types of included data elements).
 
 # Summary
 
