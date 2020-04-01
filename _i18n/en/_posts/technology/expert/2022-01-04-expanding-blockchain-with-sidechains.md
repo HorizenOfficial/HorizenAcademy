@@ -16,17 +16,17 @@ Building directly on top of a public blockchain comes with other challenges. Fir
 
 This is why sidechains are a promising technology. On the one hand, sidechains benefit from the decentralization and security of the underlying main blockchain. On the other hand, they can be highly domain specific and developed with a special use case in mind. Adding and removing features does not depend on community consensus, as it only effects the users of the sidechain and not the overall network.
 
-# Use Cases for Sidechains
+## Use Cases for Sidechains
 
 To illustrate the above-mentioned benefits, let's look at some tangible use cases for sidechain constructions. Summarizing the section above, two major roadblocks to working with public blockchains are the scalability of public blockchain networks and the governance processes that make introducing new functionality challenging.
 
-## Scalability
+### Scalability
 
 Use cases for sidechains include data- or transaction-heavy applications. An example of a transaction intensive use case would be an in-game payment system where users can earn and spend tokens in real time. If every reward was paid on the mainchain and the application had several thousand users at a given time a traditional blockchain would not be suited to handle the load. A sidechain with short block intervals and a more centralized consensus mechanism to verify transactions poses a solution.
 
 One example of a data-intensive use case would be a supply chain tracking system. If such a system was used by several interacting parties, including producers, logistic companies as well as retailers, the amount of data would soon exceed the limits a public blockchain was able to handle reliably. A dedicated sidechain would probably include new types of transactions with additional data fields where identifiers of goods and other metadata could be stored. The blocksize would likely be increased, in order to store larger amounts of data per time unit.
 
-## Governace
+### Governace
 
 Another reason for deploying a sidechain would be to circumvent the consensus building process on a public network needed to launch a new feature and limit the risk when deploying it. If the technology deployed on a sidechain had a bug, only the sidechain would be effected but the mainchain would keep functioning as usual (given the underlying sidechain protocol is secure).
 
@@ -39,15 +39,15 @@ Some of the first sidechains we want to develop at Horizen include dedicated sid
 
 We consider sidechains an important technological step to expand the capabilities of distributed ledgers and make it suitable for a wider range of use cases. Hence, we are working hard on developing this technology and making it available to the broader market.
 
-# History of Sidechains
+## History of Sidechains
 
 Sidechains are a concept people have been looking into for years. The first proposal of sidechains was in 2014 and several teams are working on implementing them right now. When a blockchain is enabled to communicate with other blockchains, e.g. sidechains, or even non-blockchain systems, the transfer of data and assets can be moved off-chain, reducing stress on the system.
 
-## Pegged Sidechains
+### Pegged Sidechains
 
 The first mention of sidechains came from Adam Back et al. in a paper release in 2014. "[Enabling Blockchain Innovations with Pegged Sidechains](https://blockstream.com/sidechains.pdf)" introduced the technological concept of *pegged* sidechains that allow the transfer from on chain to another. The paper consequently also introduced much of the terminology still in use today when talking about sidechain constructions.
 
-### Symmetric vs. Asymmetric Peg
+#### Symmetric vs. Asymmetric Peg
 
 One distinction the authors draw, is between *symmetric* and *asymmetric pegs*. In a symmetrically pegged sidechain construction, the mainchain monitors the sidechain and vice versa. Because both systems are aware of each other, the transfer mechanism from the mainchain to a sidechain and back are the same - they are symmetric.
 
@@ -59,7 +59,7 @@ In other words, this means an asymmetric sidechain can support most conceivable 
 
 An asymmetric sidechain construction is desirable, because it allows the deployment of many different sidechains for different purposes without requiring consensus of the community, one of the reasons sidechains are useful in the first place. In a symmetric design, the mainchain would need to be updated with the deployment of every sidechain, rendering the reduced governance benefit useless.
 
-## Ethereum Proof of Authority Sidechains
+### Ethereum Proof of Authority Sidechains
 
 A notable sidechain construction based on the Ethereum blockchain is being built by the [POA Network](https://www.poa.network/) team. The authors Barinov, Baranov and Khahulin "[propose an open, permissioned network based on Ethereum protocol with Proof of Authority consensus by independent validators.](https://hackmd.io/@F67-rdJCQ0yHlzTN8AoRfw/HkV8Vw7_-?type=view)". The general design is asymmetric: sidechains monitor the mainchain but not vice versa. Deploying sidechains on top of a smart contract enabled blockchain is simpler compared to a Bitcoin-like blockchain, as forward as well as backward transfers can be handled through smart contracts instead of the core protocol.
 
@@ -67,13 +67,13 @@ Nonetheless, each sidechain in the POA Network does rely on a group of individua
 
 > "Each project deploying the bridge must account for its own validators. It’s absolutely necessary for the project(s) to identify the set of individuals/nodes assigned to validate the bridge transactions. It’s important to note validators are required as part of any bridge launch." - [POA Network, Introducing the ERC20 to ERC20 TokenBridge](https://medium.com/poa-network/introducing-the-erc20-to-erc20-tokenbridge-ce266cc1a2d0)
 
-## Other Sidechain Constructions
+### Other Sidechain Constructions
 
 There is a range of other sidechain constructions being worked on. Drivechains are sidechains built on the Bitcoin network. Here, the verification of transactions from drive- to mainchain is performed by mainchain miners. The largest number of sidechain protocols builds on top of the Ethereum network. Besides the aforementioned POA network, Plasma is another noteworthy example. It was [presented](http://plasma.io/plasma-deprecated.pdf) by Jospeh Poon and Vitalik Buterin in 2017. It is based on smart contracts deployed on the Ethereum main net.
 
 The sidechain constructions mentioned above assume one of two things: either the mainchain needs to monitor all sidechains to verify backward transfers, or the mainchain relies on some sort of certifiers to broadcast incoming backward transactions from the sidechains to mainchain. A [first iteration of Horizen's sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) relied on certifiers to sign backward transfers batched in withdrawal certificates.
 
-# The Zendoo Protocol
+## The Zendoo Protocol
 
 Horizen's sidechain implementation, the [Zendoo protocol](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf) was released early in 2020. It introduces "a standardized mechanism to register and interact with separate sidechain systems. By interaction, we mean the cross-chain transfer protocol, which enables sending a native asset to a sidechain and receiving it back in a secure and verifiable way without the need to know anything about the internal sidechain construction or operations."[^1]
 
@@ -81,7 +81,7 @@ In more general terms, the Zendoo protocol allows a Bitcoin-based blockchain pro
 
 The innovation introduced with Zendoo is that backward transfers can be verified by the mainchain without involving external validators or certifiers to bridge both chains. This is although the mainchain does not monitor sidechains (asymmetric peg) and also doesn't know anything about their internal structure. This is achieved through recursive proofs generated for each state transition of the sidechain, but more on that later.
 
-## Main Components
+### Main Components
 
 The overall system in Zendoo comprises three key elements:
 
@@ -91,15 +91,15 @@ The overall system in Zendoo comprises three key elements:
 
 ![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements.jpg)
 
-### The Mainchain Consensus Protocol - MCP
+#### The Mainchain Consensus Protocol - MCP
 
 The mainchain consensus protocol in the case of Horizen comprises the [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) and Nakamoto consensus algorithm, the [UTXO balance model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) and transparent as well as shielded transactions. The Zendoo specific parts of the MCP are the deployment of new sidechains via special transactions, a transaction to transfer assets to one of the sidechains as well as the verification of incoming transactions from sidechains.
 
-### The Cross-Chain Transfer Protocol - CCTP
+#### The Cross-Chain Transfer Protocol - CCTP
 
 The cross-chain transfer protocol is the bridge between main- and sidechain and is unified and fixed by the mainchain consensus protocol. It's two main components are forward and backward transfers. In forward transfers ZEN is sent from the mainchain to one of the sidechains. In backward transfers ZEN is returned to the mainchain. Because sidechains monitor the mainchain they can verify forward transfers themselves and the mechanism is straight forward (pun not intended). The mainchain on the other hand doesn't monitor sidechains. To be able to verify incoming backward transactions a more complex mechanism compared to forward transactions is needed. Withdrawal certificates are introduced, which are standardized containers that can hold a set of backward transfers. They are used to inform the mainchain of withdrawal requests.
 
-### The Sidechain Consensus Protocol - SCP
+#### The Sidechain Consensus Protocol - SCP
 
 The sidechain consensus protocol includes all parameters of the sidechain. Typically, the consensus algorithm would describe the mechanism to agree on a single version of history. In this context, we also consider other parameters of the sidechain part of the consensus protocol.
 
@@ -107,7 +107,7 @@ A sidechain in Zendoo can run a different [consensus mechanism]({{ site.baseurl 
 
 A key component of the cross-chain transfer protocol are *withdraw certificate*. They are containers in which all backward transfers from a sidechain that happen within a given time period - the *withdraw epoch* - are grouped and broadcast to the mainchain collectively. Every sidechain needs a mechanism to generate valid withdraw certificates. Each sidechain also needs to define a proof system so the mainchain can verify incoming backward transfers. We'll get to proof systems shortly. There is great freedom in the design of a Horizen-compatible sidechain. However, we do provided a reference implementation for a sidechain consensus protocol named Latus to make life easier on developers willing to build on Horizen.
 
-## Modifications of the Mainchain Protocol
+### Modifications of the Mainchain Protocol
 
 In order to allow the deployment and use of sidechains a few modifications to the mainchain protocol are necessary.
 
@@ -121,13 +121,13 @@ In the following sections we will go through the mainchain modifications that al
 
 Understanding how the verification of sidechain transactions on the mainchain works without tracking them directly is crucial for understanding all other mainchain protocol changes, hence we will look at this mechanism first.
 
-### Verification of Backward Transfers
+#### Verification of Backward Transfers
 
 As we said before, most sidechain protocols including our own first iteration rely on some kind of certifiers or validators that act as a bridge for backward transfers. These entities monitor one or more sidechains, collect all backward transactions and broadcast them on the mainchain. These validators can either be a trusted group of centralized actors, or a decentralized group of network participants that are incentivized, usually via transaction fees, to behave honestly. A common assumption is an honest majority among verifiers, but despite strong incentives for honest behavior it remains just an assumption.
 
 Ideally, backward transfers are objectively verifiable without the need to rely on intermediaries. This is the reason we built a backward transfer mechanism relying on a proof system rather than human entities.
 
-#### Proof Systems
+##### Proof Systems
 
 On the highest level a proof system allows a prover to prove to a validator, that a given statement is true, e.g. a computation was performed correctly. Instead of the validator having to redo the entire computation and verify the result, the prover can generate a proof and provide this instead. A proof comprises a set of values that the verifier uses to compute a binary output: true or false. When the verification function returns true the computation was performed correctly, if it returns false it wasn't.
 
@@ -139,7 +139,7 @@ Once broadcast, nodes will verify the proof, instead of the plaintext transactio
 
 In Zendoo, each sidechain is generating a proof for its subsequent state transitions. When a Withdraw Certificate is submitted to the mainchain a proof of correct state transitions is attached. Miners on the mainchain will verify this proof before including the Withdraw Certificate in a mainchain block and in turn accepting incoming backward transfers. This is, on a high level, how certifiers can be replaced through an algorithm. But how exactly are proofs for state transitions generated? Recursively!
 
-#### Recursion
+##### Recursion
 
 To understand the generation of state transition proof we need to introduce the concept of recursion. It is not only useful for understanding our sidechain implementation, but also one of the most important concepts in computer science in general.
 
@@ -177,7 +177,7 @@ long factorial(int n)
 
 What we want to achieve in the context of our sidechains is having a proof of the statement that a series of state transitions (transactions and subsequently blocks) led to some final state. But how does recursion apply to this scenario?
 
-#### State Transition Proofs
+##### State Transition Proofs
 
 The *state transition logic* of a blockchain can be seen as a function that takes the current state (\\s_i\\) and the most recent set of transactions (\\t_i\\) as an input and returns the next state (\\s_{i+1}\\). The factorial of five can be expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the most recent state. Let us look at a tangible example:
 
@@ -221,7 +221,7 @@ This construction is of great value for verifiable sidechains. Not only can stat
 
 We now understand how states can be computed recursively. But why do we want to compute a proof for each of those transitions? Remember that the mainchain cannot monitor all the different sidechains and verify the individual state transitions on each chain. What it can do though, is verify a proof submitted with each incoming Withdrawal Certificate. When validated, this proof will return `true` if the sidechain was operated as intended and `false` in case it didn't. Backward transfers included in a withdraw certificate are accepted by the mainchain, if and only if the attached proof evaluates to `true`.
 
-#### Using SNARKS - Succinct Non-Interactive Arguments of Knowledge
+##### Using SNARKS - Succinct Non-Interactive Arguments of Knowledge
 
 So how does generating a proof work exactly for a given sidechain? First, there are a wide range of proof systems in existence. The proof system used for the Zendoo sidechain construction is a SNARK proof system - an acronym for *Succinct Non-Interactive Arguments of Knowledge*. Let's look at what this means:
 
@@ -255,7 +255,7 @@ $$
 
 Proofs for the correct execution of the sidechain logic will be generated periodically, one for every withdrawal epoch. Now that there is a basic understanding of what proof systems are, how recursion works, and how it is applied to generate proofs for any state (block) of the sidechain, we continue by looking at the remaining modifications to the mainchain which are needed to enable sidechains.
 
-### Sidechains Transactions Commitment
+#### Sidechains Transactions Commitment
 
 The structure of the mainchain block headers was upgraded to enable sidechains. A new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees). Besides the regular Merkle root included in a block header serving as a summary of all transactions, this second Merkle tree comprises all sidechain-related transactions, namely:
 
@@ -266,13 +266,13 @@ The structure of the mainchain block headers was upgraded to enable sidechains. 
 
 All these sidechain-related transactions are placed into a merkle tree, grouped by sidechain identifiers in different branches, and the resulting Merkle tree root is placed in the mainchain block header as the Sidechain Transactions Commitment. Including this data in the [block headers](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header) allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechain DO monitor the mainchain) without the need to transmit the entire mainchain block. Furthermore, it allows the construction of a SNARK proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
 
-### Withdrawal Safeguard
+#### Withdrawal Safeguard
 
 One of the most devastating bugs a blockchain can suffer from is a bug that allows an uncontrolled inflation of the monetary supply. One has to consider an event where a malfunctioning sidechain is trying to transfer more assets to the mainchain than it initially received. This could be out of malicious intent, or simply an honest mistake.
 
 In order to prevent this event, a withdrawal safeguard is implemented. The mainchain keeps track of how much money was transferred to a given sidechain and will only accept incoming backward transfers up to that amount. This way an uncontrolled inflation becomes impossible.
 
-### Sidechain Deployment
+#### Sidechain Deployment
 
 A new sidechain in Zendoo needs to be registered with the mainchain in a special type of transaction. Any user can build a new sidechain and submit this bootstrapping transaction wherein several important parameters of the sidechain are defined.
 
@@ -282,7 +282,7 @@ The choice of the withdrawal epochs length depends on parameters such as the blo
 
 Next, a number of cryptographic keys are proclaimed for each sidechain, namely the verification keys needed to verify proofs generated on the sidechain. There is a verification key \\(vk_{WCert}\\) for withdraw certificate proofs, a verification key \\(vk_{BTR}\\) for [Backward Transfer Request](https://academy.horizen.global/technology/expert/cross-chain-transactions/#backward-transfer-requests) proofs and a verification key \\(vk_{CSW}\\) for [Ceased Sidechain Withdrawal](https://academy.horizen.global/technology/expert/cross-chain-transactions/#ceased-sidechain-withdrawals) proofs. Lastly, it is defined how the proof data will be provided from the sidechain to the mainchain (number and types of included data elements).
 
-# Summary
+## Summary
 
 This was a rather long read! Let us recap this article shortly, before we move on.
 
