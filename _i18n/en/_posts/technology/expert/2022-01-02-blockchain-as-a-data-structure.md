@@ -27,8 +27,12 @@ Each element of an array has an *index* that starts at 0. You can instantly acce
 
 Arrays are useful for their simplicity and *instant access* property.
 
-![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
-![Array](/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg"
+  caption="One-dimensional array with six elements"
+%}
 
 ### Linked List
 
