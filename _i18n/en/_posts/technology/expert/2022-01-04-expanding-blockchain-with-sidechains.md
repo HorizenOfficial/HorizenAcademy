@@ -257,6 +257,19 @@ $$
 
 Proofs for the correct execution of the sidechain logic will be generated periodically, one for every withdrawal epoch. Now that there is a basic understanding of what proof systems are, how recursion works, and how it is applied to generate proofs for any state (block) of the sidechain, we continue by looking at the remaining modifications to the mainchain which are needed to enable sidechains.
 
+
+++++ graphic
+
+
+**TODO** Latus: first proof for individual transactions. Than merged, two at a time to get "block proof"
+
+once block proof obtained. recursive composition of withdrawal epoch proof --> which is used to construct a final proof for a withdrawal certificate.
+
+This also involves proving that all MC blocks belonging to the withdrawal epoch are referenced and all MC transactions related to this sidechain are processed.
+
+Simplified to get overall concept across.
+
+
 #### Sidechains Transactions Commitment
 
 The structure of the mainchain block headers was upgraded to enable sidechains. A new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees). Besides the regular Merkle root included in a block header serving as a summary of all transactions, this second Merkle tree comprises all sidechain-related transactions, namely:

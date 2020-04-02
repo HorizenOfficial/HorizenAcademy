@@ -30,16 +30,37 @@ first paper: decentralized certifiers. that were registering themselves in the M
 
 In Zendoo, we avoid direct reliance on certifiers or any other special type of actors assigned to validate withdrawal certificates. Instead, we are going to leverage SNARKs [6, 7, 19] to provide means for the mainchain to effectively validate withdrawals.
 
-**Sidechain Deployment**
+**other**
+
+MST is a fixed size Merkle tree
 
 
 
 
+
+## The Zendoo Sidechain Construction
+
+recap most important concepts to remember from this article... 
+
+skip this section if you just came from this article
+
+### Sidechain Transactions Commitment
+
+SCTxsCommitment
+
+![Efficiently condensing all sidechain related transactions included in a single mainchain block in a Merkle tree](/assets/post_files/technology/expert/4.2-cross-chain-transactions/sc-txs-commitment.png)
+
+
+### Sidechain Deployment
+
+Verifying key is registered upon sidechain creation and cannot be changed during the SC lifetime. It completely defines the rules of the withdrawal certificate validation (including the semantics of the public input and witness for the prover and verifier).
 
 
 ## Forward Transfers
 
 In our approach, Zendoo, we consider a forward transfer as a special transaction on the mainchain that destroys coins and provides sidechain-specific metadata allowing a user to receive coins in the sidechain.
+
+"In general, it looks as follows: an MC to SC transfer is represented by a pair of transactions which we can consider as “sending” and “receiving”. “Sending” is done on the mainchain side by means of the forward transfer defined in [4.1.1 Forward Transfers] and “receiving” is done on the sidechain side by means of aggregated ForwardTransfers transaction defined in [5.3.2 Forward Transfers Transaction]. While “sending” destroys coins in the mainchain, “receiving” creates the corresponding number of coins in the sidechain."
 
 ### Initiating a Forward Transfer on the Mainchain
 
@@ -60,13 +81,15 @@ it is the responsibility of the sidechain to sync forward transfers from the MC 
 
 ### Finalizing a Forward Transfer on the Sidechain in Latus
 
-
+aggregated in single forward transfers transaction (FTTx)
 
 
 receiverMetadata is defined by the sidechain construction and in Latus it is just a receiver
 address and a payback address on the MC needed in case of transfer failure:
 
 The sidechain will synchronize FTs present in the referenced MC block by including a special F orwardT ransf ers transaction (FTTx) in the SC block. Such FTTx specifies all forward transfers from the referenced MC block that are related to this specific sidechain. From the sidechain perspective, we can consider FTTx as a coinbase transaction (the one that creates new coins [28]) that is authorized by the mainchain.
+
+Provided with mproof, forwardTransfers, btRequests, and wcert fields, the SCTxsCommitment can be reconstructed and verified against the scTxsCommitment field included in the MC block header. It allows to verify that all SC-related transactions were correctly synchronized from the MC block without the need to download and verify its body. -> can compute proof for all this
 
 ## Sidechain Internal Transactions
 
@@ -77,6 +100,16 @@ can be something completely different
 recall how the "sidechain" doesn't need to be a blockchain at all. 
 
 ### Sidechain Internal Transactions in Latus
+
+
+
+
+
+
+
+
+
+
 
 ## Backward Transfers
 
@@ -111,6 +144,8 @@ There can be different approaches to integrate backward transfers in the maincha
 
 Essentially, we can consider backwardTransfers in txBT as specialized outputs that are unspendable on the sidechain
 
+aggregated in single backward transfers transaction (BTTx)
+
 BTTx transaction is a special case of regular payment transaction where all outputs are backward transfers.
 
 pubkey script
@@ -126,9 +161,14 @@ CSW performs direct payment while BTR does not
 
 #### Backward Transfer Requests
 
+aggregated in single backward transfer requests transaction (BTRTx)
+
+The consistency of BTRs included in the sidechain is verified by recalculating the BTRHash (Fig. 12) and checking its presence in the SCTxsCommitment tree
+
 It is represented by the following tuple:
 controlled sidechain to process user’s withdrawals . Importantly, the BTR does not lead to a direct coin transfer in the mainchain.
 where:
+
 ledgerId receiver amount nullif ier proof data proof
 − an identifier of the sidechain, for which BTR is created; − an address of the receiver on the mainchain;
 − the number of coins to be transferred;
@@ -149,7 +189,7 @@ The interface of the SNARK verifier for the CSW is completely the same as for th
 
 For instance, one can omit defining these operations at all (e.g., by setting vkBTR and vkCSW to NULL)
 
-### Handling incoming Backward Transfers
+### Handling incoming Backward Transfers on the Mainchain
 
 WCert Verification
 1. ledgerId should be an identifier of a currently active sidechain;
@@ -157,7 +197,7 @@ WCert Verification
 3. quality should be higher than the quality of the previously submitted withdrawal certificate for this epoch; if it is the first WCert for this epoch - any quality is accepted;
 4. proof should be a valid SNARK proof whose verification key vkWCert is set upon sidechain registration;
 
-Siehe Block
+Siehe Block welche data fields
 
 ## Summary
 
