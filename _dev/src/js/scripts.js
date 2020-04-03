@@ -388,7 +388,7 @@ $(function () {
 
         // zoom image on mobile
         var pswpElement = document.querySelectorAll('.pswp')[0];
-        $(".post-content img").click(function (e) {
+        $(".post-content img").not('[data-zoomable="no"]').click(function (e) {
             var img = this; $img = $(this);
 
             // build items array
