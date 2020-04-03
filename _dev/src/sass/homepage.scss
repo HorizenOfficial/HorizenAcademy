@@ -1,13 +1,9 @@
 .site-content-wrapper {
-  background: url(../img/bkg/bg-home-p1.jpg) no-repeat top right;
-  @media (max-width: 991px) {
-    background-size: 35% auto;
-  }
+  background: url(../img/bkg/bg-home-p3.jpg) no-repeat top right;
+  background-size: contain;
   & > .container-fluid {
-    background: url(../img/bkg/bg-home-p2.jpg) no-repeat bottom left;
-    @media (max-width: 991px) {
-      background-size: 50% auto;
-    }
+    background: url(../img/bkg/bg-home-p4.jpg) no-repeat bottom left;
+    background-size: contain;
   }
 }
 .academy-icon {
