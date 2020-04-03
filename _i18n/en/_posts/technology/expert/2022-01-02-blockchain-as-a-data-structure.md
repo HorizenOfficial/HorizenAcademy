@@ -27,8 +27,12 @@ Each element of an array has an *index* that starts at 0. You can instantly acce
 
 Arrays are useful for their simplicity and *instant access* property.
 
-![Array](/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg)
-![Array](/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg"
+  caption="One-dimensional array with six elements."
+%}
 
 ### Linked List
 
@@ -38,17 +42,25 @@ For example, If you were to store information about cars in a linked list, you c
 
 The first element of a linked list is called the head and the last one is called the tail. 
 
-![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
-![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg"
+  caption="Linked list with three nodes and n objects per node."
+%}
 
 Each node also contains a *pointer* to the next node. The *pointer* tells your computer where the following node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
-![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
-![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg"
+  caption="Usage of RAM by arrays and linked lists. Array stored in a single location; linked list stored across memory."
+%}
 
 When searching for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
 
-Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access. 
+Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access.
 
 ### Hash Table
 
@@ -64,8 +76,12 @@ To store several keys within a single bucket a linked list within the hash table
 
 If the hash table is well-dimensioned, the *cost* (or the number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes it convenient for systems that have to store large amounts of data and access them repeatedly.
 
-![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
-![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg"
+  caption="Schematic of a hash table. Keys mapped to buckets (array elements) using a hash function. Buckets expanded as linked lists to accomodate overflow entries."
+%}
 
 There are many different data structures, each of them comes with some trade-offs and depending on the use case one might choose one over the other. Sophisticated data structures often leverage several more simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
 
@@ -77,15 +93,23 @@ Blockchain organizes data by splitting it into subsets, referred to as *blocks*.
 
 The main difference between a blockchain and a linked list is that the *references* in a blockchain are cryptographically secured and therefore *tamper-evident* whereas the *pointers* in a linked list can be changed at any time without affecting the integrity of the data. The secured references establish an order throughout the blocks and effectively make the blockchain an *append-only* data structure where new data can only be added with new blocks.
 
-![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg)
-![Blockchain](/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg"
+  caption="Schematic of a blockchain with three blocks, separated into block header and transactions."
+%}
 
 The hash value of the previous block header is included in the following block as a reference, because the *block hash* depends on the data of a block, even changing a single character in one of the transactions would invalidate the reference.
 
 The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block (For example: between Block 1 and 3 in the graphic below) you could include a reference to its predecessor (Block 1), but it would be infeasible to make block 3 reference your newly inserted block.
 
-![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg)
-![Blockchain Broken](/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg"
+  caption="Schematic of a blockchain where an attacker is trying to insert a malicious block not references by its successor."
+%}
 
 Each new block built on top of an existing block is called a *confirmation*. The older a block gets, the more confirmations it will have. Each confirmation makes tampering with the data in a block more difficult because you have to recreate additional valid references.. Block 2 in the graphic below has one confirmation. You would have to recreate a single valid reference to tamper with the data of Block 2. You also have to recreate a valid reference with each new confirmation. The older the block, the more certain you can be that no changes to the block will ever occur.
 
@@ -124,8 +148,12 @@ After we looked at the properties that result from the design, let's take a look
 
 Blocks consist of a header which contains important data about the block - a sort of summary. The largest part of a block in terms of storage comprises the transactions.
 
-![Block](/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg)
-![Block](/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg"
+  caption="Schematic of a block. Metadata provided in the block header and transactions including the coinbase transaction."
+%}
 
 ### The Block Header
 
@@ -146,8 +174,12 @@ A *Merkle tree* is a data structure used within blocks. The transactions in a bl
 
 Constructing a Merkle tree goes like this: The *coinbase transaction* rewarding the miner with new coins is placed first, followed by all other transactions in the block. First, each leave (transaction) is hashed. Next, the hashes of two transactions are concatenated and hashed again. If the number of transactions is odd, the last transactions hash is concatenated with a copy of itself. This process continues until only a single hash is left - the Merkle root.
 
-![Merkle Tree](/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg)
-![Merkle Tree](/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_M.jpg"
+  caption="Merkle tree data structure used to consolidate transactions into a single 256-bit identifier - the Merkle root."
+%}
 
 While most Merkle trees are binary, one can also think of non-binary Merkle trees concatenating more than two hashes per step, but the idea remains the same. Trying to change a single transaction in an already confirmed block results in a different Merkle root and as a consequence a different header. This is one mechanism that ensures tamper evidence.
 
@@ -157,8 +189,12 @@ From a computer scientist's perspective it also poses an efficiency improvement:
 
 The *Merkle path* is simply the set of hash values needed to reconstruct the entire tree. The *Merkle path* for transaction *K* consists of the hash of transaction L (\\(H_L\\)) it is first concatenated with and the combined hashes \\(H_{IJ}\\), \\(H_{MNOP}\\) and lastly, \\(H_{ABCDEFGH}\\). Those four hashes together with the original transaction allow a verifier to check the tree's integrity.
 
-![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg)
-![Merkle Path](/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg"
+  caption="Merkle path (also Merkle proof) of transaction hash K. Hashes shown in blue comprise the Merkle path needed to verify hash K is included in the Merkle root."
+%}
 
 ## What does a Transaction look like?
 

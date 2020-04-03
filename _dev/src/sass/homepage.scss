@@ -1,14 +1,13 @@
 .site-content-wrapper {
-  background: url(../img/bkg/bg-home-p1.jpg) no-repeat top right;
-  @media (max-width: 991px) {
-    background-size: 35% auto;
-  }
+  background: url(../img/bkg/bg-home-p3.jpg) no-repeat top right;
+  background-size: contain;
   & > .container-fluid {
-    background: url(../img/bkg/bg-home-p2.jpg) no-repeat bottom left;
-    @media (max-width: 991px) {
-      background-size: 50% auto;
-    }
+    background: url(../img/bkg/bg-home-p4.jpg) no-repeat bottom left;
+    background-size: contain;
   }
+}
+.academy-icon {
+  width: 180px;
 }
 .post-section {
   .titles {
@@ -20,6 +19,9 @@
     }
     p {
       font-weight: 600;
+      span {
+        color: #19a2e6;
+      }
     }
   }
   .line {
@@ -29,70 +31,42 @@
     background: #19a2e6 linear-gradient(to right, #19a2e6, #4de0a3);
     margin: 2rem auto;
   }
-  .skill-levels {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    .level {
-      margin-left: 3px;
-      margin-right: 3px;
-      border: 1px solid #e5e5e5;
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-      .level-name {
-        text-transform: uppercase;
-        margin-top: 0.75rem;
-        font-weight: bold;
-      }
-      img {
-        width: 50%;
-      }
-      .icon-active {
-        display: none;
-      }
+
+  .section-how-it-works {
+    h3 {
+      margin-top: 0;
     }
-    a {
-      color: #121F1F;
-      &:hover {
-        color: #121F1F;
-        text-decoration: none;
-      }
+    h5 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      font-size: 1rem;
     }
-    a.active, a:hover {
-      .icon-inactive {
-        display: none;
-      }
-      .icon-active {
-        display: inline-block;
+    .steps {
+      @media (min-width: 992px) {
+        & > .row {
+          margin-right: -25px;
+          margin-left: -25px;
+          & > div {
+            padding-right: 25px;
+            padding-left: 25px;
+          }
+        }
       }
     }
   }
-  .home-topics {
-    margin-left: 3px;
-    margin-right: 3px;
-    margin-top: 1rem;
-    .topic {
-      border: 1px solid #0e9de5;
-      text-align: center;
-      margin-top: 4px;
-      position: relative;
-      padding: 12px 0;
-      .icon {
-        display: inline-block;
-        width: 60px;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        top: calc(50% - 20px);
+  .section-video {
+    h3 {
+      a {
+        font-size: 1rem;
+        font-weight: normal;
+        float: right;
       }
-      img {
-        height: 40px;
-      }
-      .topic-name {
-        text-transform: uppercase;
-        font-size: 13px;
-        font-weight: 600;
-      }
+    }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
     }
   }
 }
