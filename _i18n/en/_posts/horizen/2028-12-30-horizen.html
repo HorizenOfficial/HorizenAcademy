@@ -12,6 +12,44 @@ css: |
   .welcome-text {
     font-size: 1.25rem;
   }
+  .welcome-text p:last-child {
+    font-size: 1rem;
+  }
+  .post-section .post-content .icon-level {
+    height: 50px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .table-levels {
+    border-spacing: 16px 0;
+    border-collapse: separate;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .table-levels td {
+    border-left: 1px solid #f5f6fa;
+    border-right: 1px solid #f5f6fa;
+    padding: 0.6rem 1.2rem;
+  }
+  .table-levels tr:first-child td {
+    border-top: 1px solid #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+  .table-levels tr:last-child td {
+    border-bottom: 1px solid #f5f6fa;
+    background-color: #f5f6fa;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .table-levels tr:last-child td {
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+  .link-level, .link-level:hover, .link-level:focus {
+    text-decoration: none;
+    color: #041742;
+  }
 ---
 
 <div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
@@ -24,9 +62,28 @@ css: |
         </div>
         <div class="col-md-8 welcome-text">
             <p>
-                This section introduces you to the individual efforts that make up the Horizen Blockchain Platform. We discuss how our organization works, how we fund our project currently, and how we will fund our project in the future through our
-                <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-01-dao-decentralized-autonomous-organization %}">DAO</a> sustainable funding model. The articles on this Topic are available in three levels: for Beginners, Advanced users, and Experts. The higher the level, the more details and technical concepts we included.
+                Welcome to the Horizen section of the Academy.
             </p>
+            <p>
+                This section introduces you to the blockchain project that created this free learning platform.
+            </p>
+            <p>
+                The articles on this Topic are available in three levels: for Beginners, Advanced users, and Experts.
+                The higher the level, the more details and technical concepts are explained.
+            </p>
+        </div>
+    </div>
+    <div class="cta mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <a href="https://www.horizen.global" class="btn btn-primary btn-block pt-2 pb-2 text-uppercase" target="_blank">Visit Horizen website</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="https://getzen.cash" class="btn btn-primary btn-block pt-2 pb-2 text-uppercase" target="_blank">Get free ZEN</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <a href="https://twitter.com/horizenglobal" class="btn btn-primary btn-block pt-2 pb-2 text-uppercase" target="_blank">Follow on Twitter</a>
+            </div>
         </div>
     </div>
 
@@ -34,26 +91,161 @@ css: |
 
     <div class="post-content">
 
-        <img src="/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO_D.jpg" alt="DAO - Decentralized Autonomous Organization">
-        <img src="/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/DAO_M.jpg" alt="DAO - Decentralized Autonomous Organization">
+        <h3>Knowledge for Everybody</h3>
 
         <p>
-            We look at the two main engineering challenges we are combating. Both approaches aim to expand the capacities of our blockchain. Most blockchains can only handle a handful of transactions per second today. There are many approaches to make blockchains scale. We review our solutions to these issues.
+            The content we have prepared for you is available in three difficulty levels: Beginner, Advanced, and Expert level.
         </p>
 
-        <ul>
-            <li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-02-block-dag %}">Block-DAG</a> structure.</li>
-            <li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-03-sidechains %}">Sidechain</a> construction.</li>
-        </ul>
+        <div class="table-responsive d-none d-md-block">
+            <table class="table table-borderless table-layout-fixed table-levels">
+                <tbody>
+                <tr class="text-uppercase font-weight-bold">
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-12-31-horizen-beginner %}">
+                        <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Beginner
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}">
+                        <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/expert/2028-12-31-horizen-expert %}">
+                        <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Expert
+                    </td>
+                </tr>
+                <tr>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-12-31-horizen-beginner %}">
+                        If you are new to blockchain and cryptocurrency the beginner level is for you.
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}">
+                        If you have a rough idea of what cryptocurrencies are and how blockchain works but want to know about it in more detail, we have an Advanced Level for you.
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/expert/2028-12-31-horizen-expert %}">
+                        If you are familiar with the technical aspects of blockchain but want to learn about specific features and are not afraid by seeing a mathematical formula or code snippet then the Expert Level will be your best choice.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-12-31-horizen-beginner %}">
+                        <ul>
+                            <li>Many analogies, few technical terms</li>
+                            <li>5 - 10 min read</li>
+                        </ul>
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}">
+                        <ul>
+                            <li>Technical terms are introduced</li>
+                            <li>Approximately 10 min read</li>
+                        </ul>
+                    </td>
+                    <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/expert/2028-12-31-horizen-expert %}">
+                        <ul>
+                            <li>Technical terms used frequently</li>
+                            <li>10 - 20 min read</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive d-block d-md-none">
+            <a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-12-31-horizen-beginner %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td>
+                            <img src="/assets/img/icons/levels/beginner-2.svg" alt="Beginner" class="icon-level"> Beginner
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            If you are new to blockchain and cryptocurrency the beginner level is for you.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Many analogies, few technical terms</li>
+                                <li>5 - 10 min read</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
+
+            <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td>
+                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            If you have a rough idea of what cryptocurrencies are and how blockchain works but want to know about it in more detail, we have an Advanced Level for you.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Technical terms are introduced</li>
+                                <li>Approximately 10 min read</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
+
+            <a href="{{ site.baseurl }}{% post_url /horizen/expert/2028-12-31-horizen-expert %}" class="link-level">
+                <table class="table table-borderless table-layout-fixed table-levels">
+                    <tbody>
+                    <tr class="text-uppercase font-weight-bold">
+                        <td>
+                            <img src="/assets/img/icons/levels/expert-2.svg" alt="Expert" class="icon-level"> Expert
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            If you are familiar with the technical aspects of blockchain but want to learn about specific features and are not afraid by seeing a mathematical formula or code snippet then the Expert Level will be your best choice.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Technical terms used frequently</li>
+                                <li>10 - 20 min read</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
+        </div>
 
         <p>
-            We also show you the first application on our blockchain platform.
+            If you are reading an article and you feel overwhelmed, you can move down one level and read about it in a more succinct way and with less technical language.
+            If you feel the article you are just reading is not telling you anything new, move up one level and find a more in-depth explanation of the same content.
+            Here you can find an overview of the entire content.
         </p>
 
-        <ul>
-            <li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-04-zenchat %}">ZenChat</a> is a messenger that allows state of the art encryption for your private conversations. ZenChat is live and integrated into our Flagship App Sphere by Horizen.</li>
-            {% comment %}<li><a href="{{ site.baseurl }}{% post_url /horizen/beginner/2026-01-05-horizen-vpn %}">Horizen VPN</a> is our second application. It will make use of our node network, the largest node network in the industry, to offer a decentralized VPN service. Node Operators will have the opportunity to offer their nodes as an endpoint for the VPN service and earn money for providing this service. This application is not live yet, but we are working on it already.</li>{% endcomment %}
-        </ul>
+        <h3>Our Structure</h3>
+
+        <p>
+            The structure of our content is the same throughout all levels.
+            You will find the same chapters from Beginner to Expert level.
+            The higher the level, the more articles you will find in each chapter.
+            We dedicate entire articles to concepts that we mention as side notes in the earlier levels.
+            This allows you to toggle in between levels if you find the content to complex or too trivial.
+        </p>
+
+        <p>
+            The articles are designed so you can read them in order or individually.
+            If you want to get the whole picture, we can only recommend reading from the beginning to the end.
+            If you just care about a specific concept that you are researching feel free to just pick and read individual articles.
+            We provide an <a href="{% tl content-overview %}#tab-horizen">overview of the entire content</a> here.
+        </p>
+
 
     </div>
 </div>
