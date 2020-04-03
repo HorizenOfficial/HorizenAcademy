@@ -43,11 +43,17 @@ body {
       visibility: visible;
     }
   }
+  .logo {
+    padding: 6px 0;
+    img {
+      height: 30px;
+    }
+  }
 }
 
 .article-nav {
   height: auto;
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 160px);
 }
 
 .site-wrapper {
