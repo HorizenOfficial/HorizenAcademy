@@ -42,17 +42,25 @@ For example, If you were to store information about cars in a linked list, you c
 
 The first element of a linked list is called the head and the last one is called the tail. 
 
-![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg)
-![Array](/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg"
+  caption="Linked list with three nodes and n objects per node"
+%}
 
 Each node also contains a *pointer* to the next node. The *pointer* tells your computer where the following node is located in memory. This allows you to expand a linked list easily because the data doesn't have to be in a single, continuous location in memory.
 
-![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg)
-![Array vs. Linked List](/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg"
+  caption="Usage of RAM by arrays and linked lists. Array stored in a single location; linked list stored across memory."
+%}
 
 When searching for a piece of data your computer will check the *head* of the linked list first. If it's not there, it will look at the pointer, go to the location in memory where the following node is stored and continue following pointers until it finds the desired data. This is called a *sequential lookup*.
 
-Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access. 
+Using a linked list gives you more flexibility in terms of expanding the list later on by adding new nodes, but unlike arrays, it doesn't give you instant access.
 
 ### Hash Table
 
@@ -68,8 +76,12 @@ To store several keys within a single bucket a linked list within the hash table
 
 If the hash table is well-dimensioned, the *cost* (or the number of instructions/computations) for each lookup is independent of the total number of elements stored in the table. Hash tables give you *instant access* without even knowing the location of every element in memory. The location is defined through the data itself, which makes it convenient for systems that have to store large amounts of data and access them repeatedly.
 
-![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg)
-![Hash Table](/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg"
+  caption="Schematic of a hash table. Keys mapped to buckets using a hash function. Buckets expanded as linked lists to accomodate overflow entries."
+%}
 
 There are many different data structures, each of them comes with some trade-offs and depending on the use case one might choose one over the other. Sophisticated data structures often leverage several more simple concepts in combination to achieve the set of desired properties. We chose the three examples above to show how an array and a linked list can be used to build a hash table.
 
