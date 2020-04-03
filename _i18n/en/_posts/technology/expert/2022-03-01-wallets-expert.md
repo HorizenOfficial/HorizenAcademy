@@ -123,10 +123,10 @@ The zero-level private key is also the key that will allow the merchant to spend
 
 #### Non-Hardened Public Key Derivation (NPKD)
 
+Using the Non-Hardened Public Key Derivation method, our zero level private key \\(sk_0\\) isn't needed at all. The first steps in the NPKD method are analogous to the NSKD method.
+
 ![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_D.jpg)
 ![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_M.jpg)
-
-Using the Non-Hardened Public Key Derivation method, our zero level private key \\(sk_0\\) isn't needed at all. The first steps in the NPKD method are analogous to the NSKD method.
 
 The concatenation of \\(PK_0\\) and *i* is used as data and \\(cc_0\\) as our key. Again, the resulting 512-bit output is split into two parts of 256 bits.
 
