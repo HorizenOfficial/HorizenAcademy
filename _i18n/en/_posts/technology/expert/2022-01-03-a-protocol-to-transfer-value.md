@@ -46,8 +46,8 @@ You can distinguish between several broad types of networking protocols. Some ex
 
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/network_protocols_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/network_protocols_M.jpg"
+  image="/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg"
+  image2="/assets/post_files/technology/expert/1.2-protocol/network_protocols_M.jpg"
   caption="Overview of network protocols, including TCP/IP, HTTP, VOIP, Bitcoin, and Horizen."
 %}
 
@@ -68,8 +68,8 @@ The *consensus mechanism* determines how the process of adding new blocks to the
 
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/longest_chain_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/longest_chain_M.jpg"
+  image="/assets/post_files/technology/expert/1.2-protocol/longest_chain_D.jpg"
+  image2="/assets/post_files/technology/expert/1.2-protocol/longest_chain_M.jpg"
   caption="Longest chain rule applied to a fork of the blockchain."
 %}
 
@@ -79,8 +79,8 @@ Lastly, the monetary policy is defined in the protocol. Most cryptocurrencies ha
 
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/supply_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/supply_M.jpg"
+  image="/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg"
+  image2="/assets/post_files/technology/expert/1.2-protocol/supply_M.jpg"
   caption="Graph of the disinflationary supply schedule and the declining block subsidy over time."
 %}
 
@@ -144,8 +144,8 @@ Over time accounting has evolved in three steps. First single-entry accounting w
 
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/tripple_entry_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/tripple_entry_M.jpg"
+  image="/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg"
+  image2="/assets/post_files/technology/expert/1.2-protocol/tripple_entry_M.jpg"
   caption="Schematic of the triple-entry bookkeeping principle."
 %}
 
