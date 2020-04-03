@@ -44,8 +44,12 @@ You can distinguish between several broad types of networking protocols. Some ex
 - Network management protocols such as SNMP and ICMP (simple network management protocol/internet control message protocol)
 - Value transfer protocols such as Horizen or Bitcoin
 
-![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg)
-![Network Protocols](/assets/post_files/technology/expert/1.2-protocol/network_protocols_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/network_protocols_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/network_protocols_M.jpg"
+  caption="Overview of network protocols, including TCP/IP, HTTP, VOIP, Bitcoin, and Horizen."
+%}
 
 Above you see a collection of protocols, many of which you use every day. The TCP/IP protocol specifies how to break data down into packets, address the packets, and route them through across the world wide web.
 SSL (Secure Sockets Layer) is a standard protocol used to establish encrypted links between a web server and a client (like your computer) in online communication and is used for the secure transfer of data. The Simple Network Management Protocol (SNMP) is a set of protocols supported by network devices such as routers, servers or printers and takes care of them interoperating seamlessly (sometimes). Protocols like Bitcoin or Horizen enable the digital transfer of value from peer to peer.
@@ -62,15 +66,23 @@ First, all miners and full nodes maintain the so-called *mempool*, which contain
 
 The *consensus mechanism* determines how the process of adding new blocks to the chain works and how the network agrees on a single version of history. The *longest chain rule* or *Nakamoto Consensus* determines which block is valid in case two miners find two valid blocks shortly after another, creating a tie situation.
 
-![Longest Chain Rule](/assets/post_files/technology/expert/1.2-protocol/longest_chain_D.jpg)
-![Longest Chain Rule](/assets/post_files/technology/expert/1.2-protocol/longest_chain_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/longest_chain_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/longest_chain_M.jpg"
+  caption="Longest chain rule applied to a fork of the blockchain."
+%}
 
 To keep the growth of the blockchain stable with regards to the number of blocks added per time unit, a *difficulty adjustment* is in place. The more miners support a network with their hashpower, the faster they would find blocks on average if there was no countermeasure in place. If the total hashrate increases, the block difficulty does, too. The average *block time* is kept more or less constant through this mechanism.
 
 Lastly, the monetary policy is defined in the protocol. Most cryptocurrencies have a maximum circulating supply defined with their inception. By cutting the *block subsidy* in half regularly (with Horizen every 840,000 blocks, with Bitcoin every 210,000 blocks, both roughly equal to 4 years) the total circulating supply asymptotically approaches its limit but never crosses it.
 
-![Circulating Supply](/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg)
-![Circulating Supply](/assets/post_files/technology/expert/1.2-protocol/supply_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/supply_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/supply_M.jpg"
+  caption="Graph of the disinflationary supply schedule and the declining block subsidy over time."
+%}
 
 This type of monetary schedule is referred to as [*disinflationary*](https://www.investopedia.com/terms/d/disinflation.asp). As per Investopedia:
 
@@ -130,8 +142,12 @@ Over time accounting has evolved in three steps. First single-entry accounting w
 
 *Triple-entry bookkeeping* now makes it impossible to create funds out of thin air, assuming the overall network is controlled by a majority of honest participants. Each transaction comes with three entries: a credit to the recipient, a debit to the payer, and a public receipt, the recorded transaction on the ledger. Because everyone can keep a copy of the entire transaction history, no actor can create a fraudulent credit for themselves. You can trust *the system itself* instead of having to trust a third party like auditors or banks.
 
-![Triple Entry Bookkeeping](/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg)
-![Triple Entry Bookkeeping](/assets/post_files/technology/expert/1.2-protocol/tripple_entry_M.jpg)
+{%
+  include image_caption.html
+  image="/assets/post_files/technology/expert/1.1-data-structure/tripple_entry_D.jpg"
+  image2="/assets/post_files/technology/expert/1.1-data-structure/tripple_entry_M.jpg"
+  caption="Schematic of the triple-entry bookkeeping principle."
+%}
 
 Triple-entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article ["Why Bitcoin’s Lightning Network is Ingenious"](https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae) that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double-entry bookkeeping system on top of the blockchain - a second layer solution like the [Lightning Network]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}).
 
