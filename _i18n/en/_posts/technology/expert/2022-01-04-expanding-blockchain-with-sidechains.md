@@ -10,6 +10,9 @@ chapter: "What is a Blockchain?"
 further_reads: [zendoo, blockstream_sidechains, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
 - [Use Cases for Sidechains](#use-cases-for-sidechains)
   * [Scalability](#scalability)
   * [Governace](#governace)
@@ -36,11 +39,15 @@ further_reads: [zendoo, blockstream_sidechains, zk_poker_a_simple_zk_snark_circu
     + [Sidechain Deployment](#sidechain-deployment)
 - [Summary](#summary)
 
-Blockchain technology offers some unique properties, such as achieving consensus among a group of unknown actors, given a strong incentive mechanism is in place. Building applications on blockchain technology can be challenging, though. Spinning up a small, application specific blockchain defies the argument that it is a secure and trustless technology. For that to hold true, you need a large number of shareholders in the system. The larger the group of network participants, the more secure the network.
+## Introduction
 
-Building directly on top of a public blockchain comes with other challenges. First, blockchains are not well suited for handling large amounts of data and/or transactions. Second, to deploy a new feature, which might be necessary for a single application, would require consensus building among the community of stakeholders and if only a small subset of participants might benefit from the feature, it is unlikely to ever be implemented. The risk of an unsecure implementation would simply outweight the benefit provided for most users.
+Blockchain technology offers some unique properties, most notably achieving consensus among a group of unknown actors, given a strong incentive mechanism for honest behavior in place. Building applications on blockchain technology can be challenging, though.
 
-This is why sidechains are a promising technology. On the one hand, sidechains benefit from the decentralization and security of the underlying main blockchain. On the other hand, they can be highly domain specific and developed with a special use case in mind. Adding and removing features does not depend on community consensus, as it only effects the users of the sidechain and not the overall network.
+Spinning up a small, application specific blockchain defies the argument of a secure and trustless technology. For that to hold true, you need a large number of shareholders in the system. The larger the group of network participants, the more secure the network.
+
+Building directly on top of a public blockchain comes with other challenges. First, blockchains are not well suited for handling large amounts of data and/or transactions. Second, deploying a new feature, which might be necessary for a single application, would require consensus building among the entire community of stakeholders. If only a small subset of participants benefit from the feature, it is unlikely to be implemented. The risk of an unsecure implementation would simply outweight the potential benefit for most users.
+
+This is why sidechains are a promising technology. On the one hand, sidechains benefit from the decentralization and security of the underlying main blockchain. On the other hand, they can be highly domain specific and developed with a special use case in mind. Adding and removing features does not depend on community consensus, as it only effects the users of the sidechain and stress on the main blockchain is reduced when applications and transactions can be moved to separate ledgers.
 
 ## Use Cases for Sidechains
 
@@ -48,17 +55,17 @@ To illustrate the above-mentioned benefits, let's look at some tangible use case
 
 ### Scalability
 
-Use cases for sidechains include data- or transaction-heavy applications. An example of a transaction intensive use case would be an in-game payment system where users can earn and spend tokens in real time. If every reward was paid on the mainchain and the application had several thousand users at a given time a traditional blockchain would not be suited to handle the load. A sidechain with short block intervals and a more centralized consensus mechanism to verify transactions poses a solution.
+Use cases for sidechains include data- or transaction-heavy applications. An example of a transaction intensive use case would be an in-game payment system where users can earn and spend tokens in real time. If every reward was paid on the mainchain and the application had several thousand users at a time a traditional blockchain would not be suited to handle the load. A sidechain with short block intervals and a centralized consensus mechanism to verify transactions efficiently poses a solution.
 
-One example of a data-intensive use case would be a supply chain tracking system. If such a system was used by several interacting parties, including producers, logistic companies as well as retailers, the amount of data would soon exceed the limits a public blockchain was able to handle reliably. A dedicated sidechain would probably include new types of transactions with additional data fields where identifiers of goods and other metadata could be stored. The blocksize would likely be increased, in order to store larger amounts of data per time unit.
+One example of a data-intensive use case would be a supply chain tracking system. If such a system was used by several interacting parties, including producers, logistic companies as well as retailers, the amount of data would soon exceed the limits of most public blockchains. A dedicated sidechain could include new types of transactions with additional data fields where identifiers of goods and other metadata are stored. The blocksize would likely be increased in this sidechain to accomodate more data storage per time unit.
 
 ### Governace
 
-Another reason for deploying a sidechain would be to circumvent the consensus building process on a public network needed to launch a new feature and limit the risk when deploying it. If the technology deployed on a sidechain had a bug, only the sidechain would be effected but the mainchain would keep functioning as usual (given the underlying sidechain protocol is secure).
+Another reason for deploying a domain specific sidechain would be to circumvent the consensus building process needed on a public network to launch a new feature and limit the risk when deploying it. If the new feature had a bug, only the sidechain would be effected but the mainchain would keep functioning as usual (given the underlying sidechain protocol is secure).
 
-One possible use case in this context is the deployment of custom tokens using some form of token standard, similar to the ERC token family on Ethereum. While Horizen's mainchain does not support custom tokens, a sidechain could do so. Any developer could build such a sidechain without permission and without the risk of "breaking" things on the main network.
+One possible use case in this context is the deployment of custom tokens using some form of token standard, similar to the ERC token family on Ethereum. While Horizen's mainchain does not support custom tokens, a sidechain could. Any developer is free to build such a sidechain without permission and the risk of "breaking" things on the main network.
 
-Some of the first sidechains we want to develop at Horizen include dedicated sidechains that support advanced smart contract logic, a sidechain for near instant payment settlement and a sidechain handling the treasury funds of the Zen Blockchain Foundation.
+Some of the first sidechains Horizen wants to develop itself include sidechains that support sophisticated smart contract logic, a sidechain for near instant payment settlement and a sidechain handling the treasury funds of the Zen Blockchain Foundation.
 
 ![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_D.jpg)
 ![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_M.jpg)
@@ -67,27 +74,27 @@ We consider sidechains an important technological step to expand the capabilitie
 
 ## History of Sidechains
 
-Sidechains are a concept people have been looking into for years. The first proposal of sidechains was in 2014 and several teams are working on implementing them right now. When a blockchain is enabled to communicate with other blockchains, e.g. sidechains, or even non-blockchain systems, the transfer of data and assets can be moved off-chain, reducing stress on the system.
+Sidechains are a concept people have been looking into for years. The first proposal of sidechains was made in 2014 and several teams are working on implementing them since.
 
 ### Pegged Sidechains
 
-The first mention of sidechains came from Adam Back et al. in a paper release in 2014. "[Enabling Blockchain Innovations with Pegged Sidechains](https://blockstream.com/sidechains.pdf)" introduced the technological concept of *pegged* sidechains that allow the transfer from on chain to another. The paper consequently also introduced much of the terminology still in use today when talking about sidechain constructions.
+The first mention of sidechains came from Adam Back et al. in a paper released in 2014. "[Enabling Blockchain Innovations with Pegged Sidechains](https://blockstream.com/sidechains.pdf)" introduced the technological concept of *pegged* sidechains that allow the transfer of assets from one chain to another. The paper introduced much of the terminology still used today when talking about sidechain constructions.
 
 #### Symmetric vs. Asymmetric Peg
 
-One distinction the authors draw, is between *symmetric* and *asymmetric pegs*. In a symmetrically pegged sidechain construction, the mainchain monitors the sidechain and vice versa. Because both systems are aware of each other, the transfer mechanism from the mainchain to a sidechain and back are the same - they are symmetric.
+One distinction the authors draw, is between *symmetric* and *asymmetric pegs*. In a symmetrically pegged sidechain construction, the mainchain monitors the sidechain and vice versa. Because both systems are aware of each other, cross-chain transfers work the same both ways - they are symmetric.
 
-In an asymmetric two-way peg the situation is different, in that sidechains monitor the mainchain, but the mainchain does not track events on the sidechains. In consequence, the transfer mechanisms are *asymmetric*, depending on the direction of asset transfer. In this scenario the transfer of assets from main- to sidechain, a forward transfer, is simple because the sidechains monitor the mainchain and can verify the transactions themselves. The transfer of assets back to the mainchain, a backward transfer, is more complex because the mainchain needs to "be told" about these incoming transfers. One of the conclusions of the paper reads as follows:
+In an asymmetric two-way peg the situation is different, in that sidechains monitor the mainchain, but the mainchain does not track events on sidechains. In consequence, the transfer mechanism is *asymmetric*, depending on the direction of asset movement. Here, the transfer of assets from main- to sidechain (forward transfer) is simple. Sidechains monitor the mainchain and can verify incoming transactions themselves. The transfer of assets back to the mainchain (backward transfer) is more complex. The mainchain needs to "be told" about these incoming transfers and verification of backward transfers is non-trivial. One of the conclusions of the paper reads as follows:
 
 > "The key observation is that any enhancement to Bitcoin Script can be implemented externally by having a trusted federation of mutually distrusting functionaries evaluate the script and accept by signing for an ordinary multisignature script."
 
 In other words, this means an asymmetric sidechain can support most conceivable applications and internal transactions, as long as a group of validators forwards relevant transactions to the mainchain on behalf of the sidechain.
 
-An asymmetric sidechain construction is desirable, because it allows the deployment of many different sidechains for different purposes without requiring consensus of the community, one of the reasons sidechains are useful in the first place. In a symmetric design, the mainchain would need to be updated with the deployment of every sidechain, rendering the reduced governance benefit useless.
+An asymmetric sidechain construction is desirable, because it allows the deployment of many different sidechains without requiring consensus of the community, one of the reasons sidechains are useful in the first place. In a symmetric design, the mainchain would need to be updated with the deployment of every sidechain, rendering the reduced governance benefit useless.
 
 ### Ethereum Proof of Authority Sidechains
 
-A notable sidechain construction based on the Ethereum blockchain is being built by the [POA Network](https://www.poa.network/) team. The authors Barinov, Baranov and Khahulin "[propose an open, permissioned network based on Ethereum protocol with Proof of Authority consensus by independent validators.](https://hackmd.io/@F67-rdJCQ0yHlzTN8AoRfw/HkV8Vw7_-?type=view)". The general design is asymmetric: sidechains monitor the mainchain but not vice versa. Deploying sidechains on top of a smart contract enabled blockchain is simpler compared to a Bitcoin-like blockchain, as forward as well as backward transfers can be handled through smart contracts instead of the core protocol.
+A notable sidechain construction based on the Ethereum blockchain is being built by the [POA Network](https://www.poa.network/) team. The authors Barinov, Baranov and Khahulin "[propose an open, permissioned network based on Ethereum protocol with Proof of Authority consensus by independent validators.](https://hackmd.io/@F67-rdJCQ0yHlzTN8AoRfw/HkV8Vw7_-?type=view)". The design is asymmetric: sidechains monitor the mainchain but not vice versa. Deploying sidechains on top of a smart contract enabled blockchain is simpler compared to a Bitcoin-based system, as forward as well as backward transfers can be handled through smart contract logic instead of the core protocol.
 
 Nonetheless, each sidechain in the POA Network does rely on a group of individuals, which verify backward transfers and broadcast them to the Ethereum mainchain.
 
