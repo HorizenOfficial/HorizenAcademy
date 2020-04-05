@@ -7,7 +7,7 @@ permalink: /technology/expert/expanding-blockchain-with-sidechains/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
-further_reads: [zendoo, blockstream_sidechains, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
+further_reads: [zendoo, blockstream_sidechains, coda_whitepaper, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
 ---
 
 ## Table of Contents
@@ -202,7 +202,7 @@ Writing a function that calculates the factorial of a given number is most elega
 
 In the example above, calculating the factorial of 5, the recursive function will start with the first recursive case \\(5! = 5 \cdot 4!\\). When this instance of the function is executed, it will open another instance of the function that computes the factorial of 4 - and so on. This continues until the *base case* is reached. The base case is the factorial of the number 2, which equals 2. Now, the different instances of the function are closed subsequentially after returning their result to the next highest instance of the same function. The base case returns 2 to the next highest instance, which will use the result to compute *3!* and so on. In a last step, the final result, 120, is returned and the highest instance of the function is closed now that is has finished it's job.
 
-In C, the function calculating the factorial can elegantly be written as follows. You can see how the function `factorial` is used within the function itself (`factorial(n-1)`). Even without a basic understanding of software development you might appreciate the simplicity of the function below. In just four lines of code computing the factorial is achieved. 
+In C, the function calculating the factorial can elegantly be written as follows. You can see how the function `factorial` is used within the function itself (`factorial(n-1)`). Even without a basic understanding of software development you might appreciate the simplicity of the function below. In just four lines of code computing the factorial is achieved.
 
 ```C
 long factorial(int n)
@@ -218,29 +218,29 @@ What we want to achieve in the context of our sidechains is to have a proof of a
 
 ##### State Transition Proofs
 
-The *state transition logic* of a blockchain can be seen as a function that takes the current state (\\s_i\\) and the most recent set of transactions (\\t_i\\) as an input and returns the next state (\\s_{i+1}\\). The factorial of five can be expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the most recent state. Let us look at a tangible example:
+The *state transition logic* of a blockchain can be seen as a function that takes the current state \\(s_i\\) and the most recent set of transactions \\(t_i\\) as an input and returns the next state \\(s_{i+1}\\). The factorial of five can be expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the most recent state. Let us look at a tangible example:
 
 ![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions.jpg)
 
-A sidechain starts in state 1 (\\s_1\\) with it's genesis block. The first transition, comprising all transactions to be included in the first "real" block, is transition 1 (\\t_1\\). The transition function, let's call it `update`, takes these two parameters, the initial state (Genesis Block) and the first transition (read: transactions) and computes the next state (\\s_2\\) as long as the inputs constitute valid arguments to the `update`function.
+A sidechain starts in state 1 \\(s_1\\) with it's genesis block. The first transition, comprising all transactions to be included in the first "real" block, is transition 1 \\(t_1\\). The transition function, let's call it `update`, takes these two parameters, the initial state (Genesis Block) and the first transition (read: transactions) and computes the next state \\(s_2\\) as long as the inputs constitute valid arguments to the `update`function.
 
 $$
 s_2 = update(t_1, s_1)
 $$
 
-The same logic applies for the second state transition. Based on state (\\s_2\\) and the second transition (\\t_2\\) the `update` function computes the third state (\\s_3\\).
+The same logic applies for the second state transition. Based on state \\(s_2\\) and the second transition \\(t_2\\) the `update` function computes the third state \\(s_3\\).
 
 $$
 s_3 = update(t_2, s_2)
 $$
 
-Now, the current state of the sidechain can always be computed from the initial state (\\s_1\\) and all transitions (\\t_i\\) the system underwent. It allows one to subsequently compute every state the system went through. In our example, the third state (\\s_3\\) can be computed as
+Now, the current state of the sidechain can always be computed from the initial state \\(s_1\\) and all transitions \\(t_i\\) the system underwent. It allows one to subsequently compute every state the system went through. In our example, the third state \\(s_3\\) can be computed as
 
 $$
 s_3 = update(t_2, update(t_1, s_1)).
 $$
 
-We simply replaced (\\s_2\\) from the second formula in this section with the right term of the first formula.
+We simply replaced \\(s_2\\) from the second formula in this section with the right term of the first formula.
 
 ##### Recursive State Transition Proofs
 
@@ -260,7 +260,7 @@ This construction is of great value for verifiable sidechains. Not only can stat
 
 <center>
 
-"There was a series of state transitions \\((t_1, ..., t_n\\)) and by applying these state transitions to the initial state \\(s_1\\) one after another the state \\(s_{n+1})\\ is reached.
+"There was a series of state transitions (\\(t_1, ..., t_n\\)) and by applying these state transitions to the initial state \\(s_1\\) one after another the state \\(s_{n+1})\\ is reached.
 
 </center>
 
@@ -282,28 +282,28 @@ $$
 (pk, vk) \leftarrow Setup(C)
 $$
 
-To prove a computation was performed correctly, or in more general terms, a *statement*, a proof \\(\pi\\) is computed. Generating a proof for the correct state transition (\\t_1\\) from state (\\s_1\\) to the second state (\\s_2\\) happens based on four inputs:
+To prove a computation was performed correctly, or in more general terms, a *statement*, a proof \\(\pi\\) is computed. Generating a proof for the correct state transition \\(t_1\\) from state \\(s_1\\) to the second state \\(s_2\\) happens based on four inputs:
 
 $$
 \pi \leftarrow Prove(pk, (s_1, s_2), t_1)
 $$
 
 - the proving key \\(pk\\)
-- the initial state (\\s_1\\)
-- the transition (\\t_1\\)
-- and the resulting state (\\s_2\\).
+- the initial state \\(s_1\\)
+- the transition \\(t_1\\)
+- and the resulting state \\(s_2\\).
 
 Just like we computed states recursively, we can compute proofs recursively. The logic is exactly the same: starting from a base case (the first state transition) proofs are sequentially merged until a single proof for the state in question remains. This proof can now be broadcast to the mainchain to be verified.
 
-Verifying a proof meant to prove a state n (\\s_n\\) was computed correctly happens based on four inputs:
+Verifying a proof meant to prove a state n \\(s_n\\) was computed correctly happens based on four inputs:
 
 $$
 true/false \leftarrow Verify(vk, (s_1, s_n), \pi)
 $$
 
 - the verification key \\(vk\\)
-- the initial state (\\s_1\\)
-- the final state (\\s_n\\)
+- the initial state \\(s_1\\)
+- the final state \\(s_n\\)
 - and the proof \\(\pi\\)
 
 ![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification.jpg)
@@ -362,9 +362,3 @@ Next, we looked at the necessary modifications to Horizen's mainchain protocol t
 Another modifications to the mainchain is the addition of the Sidechain Transactions Commitment (SCTxsCommitment) serving as a summary of all sidechain related transactions on the mainchain in the form of a Merkle tree. The withdrawal safeguard protects against unintended inflation originating from a buggy or malicious sidechain. Lastly, a special type of bootstrapping transaction is needed to allow the permissionless deployment of a sidechain.
 
 In chapter four, covering [transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}) we will come back to our sidechain construction again to take a close look at [cross-chain transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}).
-
-
-fr  
-
-
-[19] Izaak Meckler and Evan Shapiro. Coda : Decentralized cryptocurrency at scale, 2018. https://cdn.codaprotocol.com/v2/static/coda-whitepaper-05-10-2018-0.pdf.
