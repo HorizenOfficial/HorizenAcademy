@@ -101,9 +101,9 @@ Hash functions are also an important step in the [creation of addresses]({{ site
 
 ### HTLCs
 
-Hash functions are integral to Hash-Locked Contracts (HLCs) and [Hash Time Locked Contracts (HTLCs)]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-htlcs %}). The idea is to place a lock on a [UTXO]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) that is based on a hash value. In order to unlock the UTXO, one has to prove knowledge of the preimage of the hash. Only the rightful owner can choose to reveal the preimage and have another party unlock the UTXO because hash functions are preimage resistant.
+Hash functions are integral to Hash-Locked Contracts (HLCs) and [Hash Time Locked Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts). The idea is to place a lock on a [UTXO]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}) that is based on a hash value. In order to unlock the UTXO, one has to prove knowledge of the preimage of the hash. Only the rightful owner can choose to reveal the preimage and have another party unlock the UTXO because hash functions are preimage resistant.
 
-There are many other use cases, like privacy features such as *Pederson Commitments*, which rely on hash functions. Throughout the Expert section, you will come across many more examples. 
+There are many other use cases, like privacy features such as *Pederson Commitments*, which rely on hash functions. Throughout the Expert section, you will come across many more examples.
 
 ## Hardware for Large-Scale Hashing
 
