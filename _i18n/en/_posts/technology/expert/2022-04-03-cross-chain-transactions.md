@@ -56,6 +56,12 @@ SCTxsCommitment
 Verifying key is registered upon sidechain creation and cannot be changed during the SC lifetime. It completely defines the rules of the withdrawal certificate validation (including the semantics of the public input and witness for the prover and verifier).
 
 
+#### Withdrawal Epoch
+
+The length of a withdrawal epoch, defined over a number of mainchain blocks, is also defined in this first transaction. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions were valid.
+
+The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers.
+
 ## Forward Transfers
 
 In our approach, Zendoo, we consider a forward transfer as a special transaction on the mainchain that destroys coins and provides sidechain-specific metadata allowing a user to receive coins in the sidechain.
@@ -206,3 +212,8 @@ Siehe Block welche data fields
 ## Footnotes
 
 [^1]: Garoffolo, Kaidalov, Oliynykov, [Zendoo: a zk-SNARK Verifiable Cross-Chain Transfer Protocol Enabling Decoupled and Decentralized Sidechains](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf)
+
+
+
+
+
