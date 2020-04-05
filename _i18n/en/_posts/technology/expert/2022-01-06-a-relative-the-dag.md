@@ -31,7 +31,7 @@ The problem is the following: transaction size can only be decreased by so much,
 
 There are generally three approaches to scalability:
 
-- Second-layer technologies like [payment- or state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}) which are used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
+- Second-layer technologies like [payment- or state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) which are used in the *Lightning Network* that take transactions off-chain with the option to settle on-chain at any time.
 - [*Sidechain*]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) approaches, which can best be described as a parallelization of blockchains. Assets can be transferred from one chain to another via a *two-way peg* (2WP) and the transactional load is shared between the mainchain and its sidechains.
 - *Directed acyclic graphs* (DAGs) have a different [datastructure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) than blockchains. Many blocks can be produced in parallel which requires modifications to the [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}).
 
