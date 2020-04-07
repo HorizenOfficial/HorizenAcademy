@@ -10,21 +10,16 @@ chapter: "Transactions"
 further_reads: [zendoo]
 ---
 
-In this article we will take a close look at transactions that move assets between different blockchains - more specifically sidechains. Sidechains are blockchains which are interoperable with an existing mainchain. In order to transfer assets from one chain to another a special type of transaction is needed - the cross-chain transaction.
+In this article we will take a close look at transactions that move assets between different blockchains - more specifically sidechains. Sidechains are blockchains interoperable with an existing mainchain. In order to transfer assets from one chain to another a special set of transactions is needed - cross-chain transactions.
 
-The way we structured this article follows the logic of a developer who wants to build a sidechains. First, the sidechain needs to be deployed. Next an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, assets can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has, to trigger those actions.
+The way we structured this article follows the logic of a developer who wants to build a sidechains. First, the sidechain needs to be deployed. Next an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, money can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has, to trigger those actions.
 
-Recap first article: CCTP most important part, abackward transfer more tricky
+This article builds heavily on our article about [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) from the first chapter. We can only recommend reading this article first, before getting into cross-chain transactions.
 
-Why crucial, can't monitor each sidechain.
 
-asymmetric - term from back paper https://blockstream.com/sidechains.pdf
 
-Explain components/primitives used to build cctp
 
-forward easy
 
-backward hard.
 
 first paper: decentralized certifiers. that were registering themselves in the MC and were responsible for signing withdrawal certificates.
 
@@ -40,16 +35,15 @@ MST is a fixed size Merkle tree
 
 ## The Zendoo Sidechain Construction
 
-recap most important concepts to remember from this article... 
+This section provides a quick recap of the sidechain article in the first chapter. The Zendoo sidechain construction allows deploying an arbitrary number of sidechains on top of existing Bitcoin-based blockchains with only a moderate number modifications to the mainchain protocol. It provides an asymmetric peg between mainchain and its sidechains. Sidechains monitor events on the mainchain, but the main blockchain is agnostic to its sidechains.
 
-skip this section if you just came from this article
+This means forward transfers from main- to sidechain are much simpler to construct, than backward transfers returning assets to the mainchain. Here, the receiving chain (mainchain) cannot verify incoming backward transfers easily. Zendoo introduces a recursive SNARK proof system, where sidechains periodically generate proofs which are submitted to the mainchain together with a number of backward transfers grouped into Withdrawal Certificates.
+
+These proofs allow the mainchain to verify state transitions of the sidechain without monitoring it directly. Some modifications to the mainchain needed to enable this sidechain design are the following.
 
 ### Sidechain Transactions Commitment
 
-SCTxsCommitment
-
-![Efficiently condensing all sidechain related transactions included in a single mainchain block in a Merkle tree](/assets/post_files/technology/expert/4.2-cross-chain-transactions/sc-txs-commitment.png)
-
+A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) where leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify sidechain related transactions without the need to transmit the entire mainchain block.
 
 ### Sidechain Deployment
 
