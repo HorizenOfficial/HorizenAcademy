@@ -15,7 +15,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/data-structure.svg" alt="Blockchain Data" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/data-structure-1.svg" alt="Blockchain Data" />
         </a>
     </div>
     <div class="col-md-9">
@@ -32,7 +32,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/protocol.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/protocol-2.svg" alt="Protocols" />
         </a>
     </div>
     <div class="col-md-9">
@@ -49,7 +49,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/sidechains.svg" alt="Sidechains" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/sidechain-3.svg" alt="Sidechains" />
         </a>
     </div>
     <div class="col-md-9">
@@ -66,7 +66,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/smart-contracts.svg" alt="Smart Contracts" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/smart-contracts-4.svg" alt="Smart Contracts" />
         </a>
     </div>
     <div class="col-md-9">
@@ -83,7 +83,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/dag.svg" alt="DAG" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/dag-5.svg" alt="DAG" />
         </a>
     </div>
     <div class="col-md-9">
