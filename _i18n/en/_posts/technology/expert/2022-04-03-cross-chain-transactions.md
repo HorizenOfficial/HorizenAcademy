@@ -14,24 +14,7 @@ In this article we will take a close look at transactions that move assets betwe
 
 The way we structured this article follows the logic of a developer who wants to build a sidechains. First, the sidechain needs to be deployed. Next an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, money can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has, to trigger those actions.
 
-This article builds heavily on our article about [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) from the first chapter. We can only recommend reading this article first, before getting into cross-chain transactions.
-
-
-
-
-
-
-first paper: decentralized certifiers. that were registering themselves in the MC and were responsible for signing withdrawal certificates.
-
-In Zendoo, we avoid direct reliance on certifiers or any other special type of actors assigned to validate withdrawal certificates. Instead, we are going to leverage SNARKs [6, 7, 19] to provide means for the mainchain to effectively validate withdrawals.
-
-**other**
-
-MST is a fixed size Merkle tree
-
-
-
-
+This article builds heavily on our article about [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) from the first chapter. We recommend reading this article first, before getting into cross-chain transactions.
 
 ## The Zendoo Sidechain Construction
 
@@ -43,18 +26,31 @@ These proofs allow the mainchain to verify state transitions of the sidechain wi
 
 ### Sidechain Transactions Commitment
 
-A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) where leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify sidechain related transactions without the need to transmit the entire mainchain block.
+A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) where leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without the need to transmit the entire mainchain block.
 
 ### Sidechain Deployment
 
-Verifying key is registered upon sidechain creation and cannot be changed during the SC lifetime. It completely defines the rules of the withdrawal certificate validation (including the semantics of the public input and witness for the prover and verifier).
+A special type of bootstrapping transaction is introduced in which several important parameters of a new sidechain are defined. The sidechains identifier `ledgerId` is set, as well as the verifying key to validate incoming withdrawal certificates. This bootstrapping transaction also defines how proof data will be provided from sidechain to mainchain with regards to the number and types of included data elements. Additionally, the length of a *Withdrawal Epoch* is defined in the bootstrapping transaction.
 
+### Withdrawal Epoch
 
-#### Withdrawal Epoch
+We omitted 
 
 The length of a withdrawal epoch, defined over a number of mainchain blocks, is also defined in this first transaction. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions were valid.
 
 The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Forward Transfers
 
@@ -209,5 +205,16 @@ Siehe Block welche data fields
 
 
 
+
+
+
+
+first paper: decentralized certifiers. that were registering themselves in the MC and were responsible for signing withdrawal certificates.
+
+In Zendoo, we avoid direct reliance on certifiers or any other special type of actors assigned to validate withdrawal certificates. Instead, we are going to leverage SNARKs [6, 7, 19] to provide means for the mainchain to effectively validate withdrawals.
+
+**other**
+
+MST is a fixed size Merkle tree
 
 

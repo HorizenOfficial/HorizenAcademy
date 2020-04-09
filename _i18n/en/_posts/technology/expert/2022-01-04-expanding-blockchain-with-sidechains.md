@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Expanding Blockchain with Sidechains"
+title: "Sidechains - Interoperable Blockchains"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/expanding-blockchain-with-sidechains/
 topic: technology
@@ -124,7 +124,8 @@ Most sidechain constructions comprise three elements:
 - The Cross-Chain Transfer Protocol - CCTP
 - The Sidechain Consensus Protocol - SCP
 
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements.jpg)
+![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_D.jpg)
+![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_M.jpg)
 
 These components can be highly dependent on one another, or highly decoupled. To provide maximum flexibility to sidechain developers the Zendoo protocol allows various degrees of freedom with regards to the SCP. The Cross-Chain Transfer Protocol serves as a bridge between MCP and all sidechains and is therefore fixed.
 
@@ -199,7 +200,8 @@ $$
 
 Writing a function that calculates the factorial of a given number is elegantly achieved using recursion. The idea is that the factorial of the number 5 is equal to five times the factorial of the number 4: \\(5! = 5 \cdot 4!\\). The solution to the problem *5!* then depends on a smaller instance of the problem, *4!*.
 
-![Recursively Calculating the Factorial of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive-factorial.jpg)
+![Recursively Calculating the Factorial of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_D.jpg)
+![Recursively Calculating the Factorial of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_M.jpg)
 
 In the example above, calculating the factorial of 5, the recursive function will start with the first recursive case \\(5! = 5 \cdot 4!\\). When this instance of the function is executed, it will open another instance of the function that computes *4!* - and so on. This continues until the *base case* is reached. The base case is the factorial of the number 2, which equals 2.
 
@@ -223,7 +225,8 @@ What we want to achieve in the context of our sidechains is to have a proof of s
 
 The *state transition logic* of a blockchain can be seen as a function that takes the current state \\(s_i\\) and the most recent set of transactions \\(t_i\\) as an input and returns the next state \\(s_{i+1}\\) as an output. The factorial of five can be expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the last state. Let us look at a tangible example:
 
-![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions.jpg)
+![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_D.jpg)
+![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_M.jpg)
 
 A sidechain starts in state 1 \\(s_1\\) with it's genesis block. The first transition, comprising all transactions to be included in the first "real" block, is transition 1 \\(t_1\\). The transition function, let's call it `update`, takes these two parameters, the initial state (Genesis Block) and the first transition (read: transactions) and computes the next state \\(s_2\\) as long as the inputs constitute valid arguments to the `update` function.
 
@@ -249,7 +252,8 @@ We simply replaced \\(s_2\\) from the second formula in this section with the ri
 
 The construction shown above follows the same pattern we discussed when calculating the factorial. Do you recognize the recursive pattern? The function `update` calls itself subsequently and opens new instances of the same function until the base case is reached.
 
-![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive-state.jpg)
+![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
+![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
 
 The base case here is the first state transition resulting in state \\(s_2\\). Once this base case is reached, the different instances of the `update` function return their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
 
@@ -277,7 +281,8 @@ So how does generating a proof work exactly for a given sidechain? First, there 
 
 SNARKs enable producing proofs of constant size for almost any type of computation, for instance an arbitrary number of state transitions in a stateful system. Horizen leverages them to provide a means for the mainchain to effectively validate backward transfers. A SNARK proving system comprises a triplet of algorithms: *Setup*, *Prove*, and *Verify*.
 
-![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification.jpg)
+![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_D.jpg)
+![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_M.jpg)
 
 When a SNARK system is setup, first a proving key \\(pk\\) and a verification key \\(vk\\) are generated for the system *C*. The verification key is registered on the mainchain at the time of sidechain deployment.
 
@@ -330,7 +335,8 @@ The structure of the mainchain block headers was upgraded and a new data field, 
 - **Backward Transfer Requests** (BTRs) initiating backward transfers from within the mainchain
 - **Ceased Sidechain Withdrawals** (CSW) allowing a user to withdraw assets from a sidechain which has become inactive
 
-![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment.jpg)
+![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_D.jpg)
+![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_M.jpg)
 
 All these sidechain-related transactions are placed into a merkle tree, grouped by sidechain identifiers in different branches, and the resulting Merkle tree root is placed in the mainchain block header as the Sidechain Transactions Commitment. Including this data in the [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header) allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechains DO monitor the mainchain) without the need to transmit the entire mainchain block. Furthermore, it allows the construction of a SNARK, proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
 
