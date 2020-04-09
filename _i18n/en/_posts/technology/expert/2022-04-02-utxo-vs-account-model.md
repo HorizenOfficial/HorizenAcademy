@@ -30,7 +30,8 @@ Every blockchain, no matter if it uses the UTXO or account model, follows this s
 
 The first major difference between the two balance models is how the state of the system is recorded. In the UTXO model, the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-dag-vs-database.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_D.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_M.jpg)
 
 A *graph* is defined as a set of nodes or *vertices* that are connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
@@ -70,7 +71,8 @@ Each transaction in the UTXO model can transition the system to a new state, but
 
 In the example below, we look at a UTXO state transition with only a single hypothetical transaction for simplicity.
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-state-transition-utxo.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_D.jpg)
+![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_M.jpg)
 
 Assume Alice wants to transfer eight ZEN to Bob, and she controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output \\(UTXO_1\\) as an input. To spend a UTXO it needs to be "unlocked".
 
@@ -108,7 +110,8 @@ The main difference basically comes down to the global state in UTXO model being
 
 In a very simple model, a transaction presents an event that triggers a state transition of the blockchain subject to the state transition logic. Just like in the UTXO model, it is infeasible to transition the system to a new state with every transaction without risking an inconsistent state. Transactions are also batched into blocks in the account model and with each new block the system transitions to a new state. Just like we did before, we consider a simple example where a single transaction transitions the system to a new state below.
 
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-state-transition-account.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_D.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_M.jpg)
 
 The setting is the same as before: Alice wants to transfer 8 ZEN to Bob. Her wallet will create a transaction that defines the spending account, the receiving account and the amount to transfer. This transaction is then signed with Alice's private key. In this case she is spending from her address, the receiver is Bob, and the amount to transfer is 8 ZEN.
 
@@ -134,7 +137,8 @@ The account model on the other hand is a *computational model*. In this model, u
 
 There are several approaches we can use to compare scalibility of the UTXO and account model. One way is to focus on the overall storage requirements of each system. Another way is to consider which model is better suited for the deployment of second layer technologies on top of the main blockchain.
 
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/TODO-scaling-utxo-account.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_D.jpg)
+![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_M.jpg)
 
 One second layer technology, [state- and payment channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) moves the exchange of data from the blockchain to a dedicated trustless network of bidirectional communication channels.
 
