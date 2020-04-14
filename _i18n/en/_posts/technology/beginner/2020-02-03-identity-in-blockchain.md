@@ -10,7 +10,7 @@ chapter: "How Does a Blockchain Work?"
 further_reads: [the_impact_of_digital_identity, how_blockchain_can_solve_identity_management_problems]
 ---
 
-In our last article, we talked about the main entities of a blockchain. We concluded that nodes make up the infrastructure of a blockchain and that miners are the bookkeepers of a cryptocurrency. They keep track of how much funds there are and who owns them. We must have a concept of identity to have ownership. You want to be the sole owner of your funds and there must be a way to associate the funds with you. This is where cryptography enters the scene.
+In our last article, we talked about the main entities of a blockchain. We concluded that nodes make up the infrastructure of a blockchain and that miners are the bookkeepers of a cryptocurrency. They keep track of how much funds there are and who owns them. We must have a concept of identity to have ownership. You want to be the sole owner of your funds, and there must be a way to associate the funds with you. This is where cryptography enters the scene.
 
 ### Public-Key Cryptography
 
