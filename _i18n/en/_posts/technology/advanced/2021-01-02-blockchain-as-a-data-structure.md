@@ -13,7 +13,7 @@ One can explain blockchain technology in many different ways. Looking at blockch
 
 ### The Blockchain is a Data Structure
 
-A data structure is a way to store, organize, and manage data. A data structure enables you to access, add, modify and search the data contained within it. Some of the most common and basic data structures include *arrays* and *linked lists*. 
+A data structure is a way to store, organize, and manage data. A data structure enables you to access, add, modify and search the data contained within it. Some of the most common and basic data structures include *arrays* and *linked lists*.
 
 #### Arrays
 
@@ -26,7 +26,7 @@ An array is a number of enumerated elements. These elements can be numbers, lett
 
 _Nodes_ are the data elements in a linked list. A node comprises at least one data object and a pointer to the next element. This pointer's function is to tell your computer where to find the next element of the list.
 
-If you look at the first piece of data on the list and wish to access the second one, you will look at the pointer that directs you to the next node. It is easier to add data to a linked list through expanding it by an extra node than it is to add data to an array by increasing the number of elements. What you don't have with a linked list is _instant access_. 
+If you look at the first piece of data on the list and wish to access the second one, you will look at the pointer that directs you to the next node. It is easier to add data to a linked list through expanding it by an extra node than it is to add data to an array by increasing the number of elements. What you don't have with a linked list is _instant access_.
 
 If you are searching for a specific piece of data in your linked list you will look at the first _node_, the _head_ of the linked list. If it is not the element you were looking for, you follow the pointer, that will lead you to the next node. If this node does not contain the data you were looking for either, you continue by following the links throughout all nodes until you find the desired data.
 
