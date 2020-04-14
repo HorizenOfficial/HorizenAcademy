@@ -9,7 +9,7 @@ level: beginner
 chapter: "How Does a Blockchain Work?"
 ---
 
-After reading our first two articles about what a blockchain is, you know that in its most simple form it's a method to store data. This method of handling data allows you to transfer value without involving a central entity. We made the comparison of blockchain being a protocol to transfer value with the internet being a protocol that enables you to transfer information. We also compared blockchain to the post being a "protocol" to send physical goods.
+After reading our first two articles about what a blockchain is, you know that in its purest form, it's a method to store data. This method of handling data allows you to transfer value without involving a central entity. We made the comparison of blockchain being a protocol to transfer value with the internet being a protocol that enables you to transfer information. We also compared blockchain to the post being a "protocol" to send physical goods.
 
 
 <div class="row mt-5">
@@ -38,7 +38,7 @@ After reading our first two articles about what a blockchain is, you know that i
     <div class="col-md-9">
         <h5 class="intro-article-title">Identity in Blockchain</h5>
         <p class="mb-1">
-            Next, we talk about where cryptography enters the scene and what this has to do with your identity. Without a concept of identity there can't be ownership.
+            Next, we talk about where cryptography enters the scene and what this has to do with your identity. Without a concept of identity, there can't be ownership.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-02-03-identity-in-blockchain %}">Read Article</a>
