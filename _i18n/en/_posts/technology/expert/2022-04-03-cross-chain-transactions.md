@@ -31,6 +31,17 @@ These proofs allow the mainchain to verify state transitions of the sidechain wi
 
 A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) where leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without the need to transmit the entire mainchain block.
 
+
+
+
+
+**TODO**
+Provided with mproof, forwardTransfers, btRequests, and wcert fields, the SCTxsCommitment can be reconstructed and verified against the scTxsCommitment field included in the MC block header. It allows to verify that all SC-related transactions were correctly synchronized from the MC block without the need to download and verify its body. -> can compute proof for all this
+
+
+
+
+
 ### Sidechain Deployment
 
 A special type of bootstrapping transaction is introduced in which several important parameters of a new sidechain are defined. The sidechains identifier `ledgerId` is set, as well as the verifying key to validate incoming withdrawal certificates. This bootstrapping transaction also defines how proof data will be provided from sidechain to mainchain with regards to the number and types of included data elements. Additionally, the length of a *Withdrawal Epoch* is defined in the bootstrapping transaction.
@@ -41,58 +52,77 @@ The concept of withdrawal epochs is introduced as a period of mainchain blocks i
 
 ![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
 
-The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of a sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a longer withdraw epoch.
-
-
-
-
+The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a longer withdraw epoch.
 
 ## Forward Transfers
 
-In our approach, Zendoo, we consider a forward transfer as a special transaction on the mainchain that destroys coins and provides sidechain-specific metadata allowing a user to receive coins in the sidechain.
+A forward transfer sends assets from the mainchain to one of its sidechains. These transactions, or more specifically, the transaction outputs are unspendable on the mainchain but include some sidechain relevant metadata so they are redeemable on one of the sidechains. It is the responsibility of sidechain nodes to monitor the mainchain for incoming transactions, and include them in a sidechain block.
 
-"In general, it looks as follows: an MC to SC transfer is represented by a pair of transactions which we can consider as “sending” and “receiving”. “Sending” is done on the mainchain side by means of the forward transfer defined in [4.1.1 Forward Transfers] and “receiving” is done on the sidechain side by means of aggregated ForwardTransfers transaction defined in [5.3.2 Forward Transfers Transaction]. While “sending” destroys coins in the mainchain, “receiving” creates the corresponding number of coins in the sidechain."
+> "In general, it looks as follows: an MC to SC transfer is represented by a pair of transactions which we can consider as “sending” and “receiving”. “Sending” is done on the mainchain side by means of the forward transfer [...] and “receiving” is done on the sidechain side by means of aggregated ForwardTransfers transaction [...]. While “sending” destroys coins in the mainchain, “receiving” creates the corresponding number of coins in the sidechain." - [Zendoo protocol](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf)
 
 ### Initiating a Forward Transfer on the Mainchain
 
-ledgerId amount
-−
-−
-def
-FT = (ledgerId, receiverMetadata, amount),
-a unique identifier of a previously created and active sidechain to which coins are transferred;
-a number of coins to transfer;
-some metadata for receiving sidechain B (e.g., a receiver’s address); its structure is not fixed in the mainchain and can consist of different variables of predefined types depending on a sidechain’s construction; its semantic meaning is not known to the mainchain.
+When users want to transfer coins from main- to a sidechain they create a transaction that differs from a regular transaction, in that the outputs meant to be spendable on the sidechain include some additional data, namely:
+
+- *ledgerId*: the unique identifier of an active sidechain
+- *amount*: the amount of coins to be transferred
+- *receiverMetadata*: information about the receiver (i.e. the address) and other sidechain relevant data
+
+Depending on the consensus rules of the given sidechain the `receiverMetadata` entails different types of data. This part of the output is not verified by the mainchain, as it is agnostic to the Sidechain Consensus protocol.
+
+When we consider a blockchain running the UTXO model, for instance Horizen or Bitcoin, a "forward output" can be one of many outputs in a regular transaction. Not all outputs need to be "forward outputs", e.g. change outputs are needed.
 
 ![Forward Transfer as a special unspendable output in a regular multi-input multi-output transaction](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer.png)
 
-UTXO-based blockchain system (e.g. Bit- coin or Horizen), we can consider FT as a special unspendable transaction output in a regular multi-input multi-output transaction --> no pubkey sript
+```CPP
+type Transaction
+{
+    Inputs:
+    {
+        Input(addr: 0x013A..., amount: 5, signature: 0x034B...),
+        Input(addr: 0x0930..., amount: 3, signature: 0x1AA1...),
+    }
+    Outputs:
+    {
+        Output(addr: 0x023B..., amount: 1),
+        Output(addr: 0x0731..., amount: 1.999),
+        ForwardTransfer(ledgerId: 0x300c..., receiverMetadata: 0x139G..., amount: 2),
+        ForwardTransfer(ledgerId: 0x300c..., receiverMetadata: 0x8451..., amount: 3),
+    }
+}
+```
 
-it is the responsibility of the sidechain to sync forward transfers from the MC and issue the corresponding amount of coins.
+In the example transaction above, a total amount of eight coins is being spent and two UTXOs are consumed. Four new outputs are created, two of which are regular outputs spendable on the mainchain, secured with a Pubkey Script. The other two outputs are sending coins to a single sidechain (ledgerId 0x300C...). Two different addresses are being funded (0x139G... and 0x8451...) with two and three coins respectively.
 
-### Finalizing a Forward Transfer on the Sidechain in Latus
+### Finalizing a Forward Transfer on the Sidechain
 
-aggregated in single forward transfers transaction (FTTx)
+A sidechain developer is free to come up with a mechansim to process incoming forward transfers. Since there is only one implementation of a sidechain consensus protocol at the time of writing we will explain how forward transfers are handled in [Latus](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf).
 
+The overall idea is to group forward transfers from one or more mainchain blocks into a special *Forward Transfers Transaction* (FTTx). This transaction is similar to the coinbase transaction on the mainchain in that it does not include any inputs being spent. It can be considered a transaction minting coins on the sidechain.
 
-receiverMetadata is defined by the sidechain construction and in Latus it is just a receiver
-address and a payback address on the MC needed in case of transfer failure:
+In Latus, the `receiverMetadata` entails the receivers address on the sidechain, as well as a payback address, which is used to refund the sender on the mainchain in case a forward transfer was to fail for some reason. This could be because the mainchain block that includes the forward transfer is not referenced or the receivers address is not provided correctly. The latter would only become apparent once the forward transfer is synched to the sidechain as the mainchain doesn't verify the sidechain specific data. Let's look at an example:
 
-The sidechain will synchronize FTs present in the referenced MC block by including a special F orwardT ransf ers transaction (FTTx) in the SC block. Such FTTx specifies all forward transfers from the referenced MC block that are related to this specific sidechain. From the sidechain perspective, we can consider FTTx as a coinbase transaction (the one that creates new coins [28]) that is authorized by the mainchain.
+```CPP
+type ForwardTransfersTx (mcid: BlockID, ft: List [FT])
+{
+    outputs: List [UTXO];
+    rejectedTransfers: List [BackwardTransfer]
+}
+```
 
-Provided with mproof, forwardTransfers, btRequests, and wcert fields, the SCTxsCommitment can be reconstructed and verified against the scTxsCommitment field included in the MC block header. It allows to verify that all SC-related transactions were correctly synchronized from the MC block without the need to download and verify its body. -> can compute proof for all this
+The mainchain identifier (`mcid`) identifies the mainchain block, whose forward transfers are synchronized in the FTTx. The list of synchronized forward transfers (`List[FT]`) is similar to the inputs in a regular mainchain transaction, with the difference that the sidechain doesn't need to verify their validity. They would not have been included in the mainchain block if they violated the mainchain consensus rules. (`List[UTXO]`) comprises the newly created outputs on the sidechain, spendable under the condidtions defined in the Sidechain Consensus Protocol.
+
+Lastly, forward transfers which cannot be processed properly are gathered and placed in a backward transfer to be included in the next withdrawal certificate. This mechanism is needed because the mainchain does not learn about failed forward transfers in another way. Hence, it cannot create refund transactions itself.
 
 ## Sidechain Internal Transactions
 
-can work just like horizen
+There are several ways to realize sidechain internal transactions in Zendoo. As long as a sidechain adheres to the Cross-Chain Transfer Protocol it can implement internal transactions however the use case deems necessary. One of the first considerations that needs to go into a deciosion of the transactional model is if the sidechain should run the [UTXO or Account model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). While the U
 
-can be something completely different
-
-recall how the "sidechain" doesn't need to be a blockchain at all. 
+Recall how the "sidechain" doesn't need to be a blockchain at all. 
 
 ### Sidechain Internal Transactions in Latus
 
-
+In Latus 
 
 
 
@@ -189,6 +219,12 @@ WCert Verification
 4. proof should be a valid SNARK proof whose verification key vkWCert is set upon sidechain registration;
 
 Siehe Block welche data fields
+
+## Other Cross-Chain Transactions
+
+### Liquid Chains
+
+### PoA Token Bridge
 
 ## Summary
 
