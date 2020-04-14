@@ -9,7 +9,7 @@ level: advanced
 chapter: "What is a Blockchain?"
 ---
 
-One can explain Blockchain technology in many different ways. Looking at blockchain through the lens of cryptocurrencies has been the dominant narrative until recently. Bitcoin is the first thing most people will associate with blockchain technology but storing cryptocurrency transactions is only one use case out of many. We would like to take a step back and look at blockchain in more general terms from the perspective of a computer scientist in this article.
+One can explain blockchain technology in many different ways. Looking at blockchain through the lens of cryptocurrencies has been the dominant narrative until recently. Bitcoin is the first thing most people will associate with blockchain technology but storing cryptocurrency transactions is only one use case out of many. We would like to take a step back and look at blockchain in more general terms from the perspective of a computer scientist in this article.
 
 ### The Blockchain is a Data Structure
 
