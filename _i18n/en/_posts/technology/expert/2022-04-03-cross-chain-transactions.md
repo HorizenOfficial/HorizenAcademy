@@ -46,14 +46,6 @@ Provided with mproof, forwardTransfers, btRequests, and wcert fields, the SCTxsC
 
 A special type of bootstrapping transaction is introduced in which several important parameters of a new sidechain are defined. The sidechains identifier `ledgerId` is set, as well as the verifying key to validate incoming withdrawal certificates. This bootstrapping transaction also defines how proof data will be provided from sidechain to mainchain with regards to the number and types of included data elements. Additionally, the length of a *Withdrawal Epoch* is defined in the bootstrapping transaction.
 
-### Withdrawal Epoch
-
-The concept of withdrawal epochs is introduced as a period of mainchain blocks in which sidechains are collecting backward transfers to be broadcast in a batch to the mainchain. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions are valid. This reduces communication overhead, as not every backward transfer has to be broadcast individually.
-
-![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
-
-The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a longer withdraw epoch.
-
 ## Forward Transfers
 
 A forward transfer sends assets from the mainchain to one of its sidechains. These transactions, or more specifically, the transaction outputs are unspendable on the mainchain but include some sidechain relevant metadata so they are redeemable on one of the sidechains. It is the responsibility of sidechain nodes to monitor the mainchain for incoming transactions, and include them in a sidechain block.
@@ -116,41 +108,47 @@ Lastly, forward transfers which cannot be processed properly are gathered and pl
 
 ## Sidechain Internal Transactions
 
-There are several ways to realize sidechain internal transactions in Zendoo. As long as a sidechain adheres to the Cross-Chain Transfer Protocol it can implement internal transactions however the use case deems necessary. One of the first considerations that needs to go into a deciosion of the transactional model is if the sidechain should run the [UTXO or account model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). One reason to diverge from the UTXO model used in Horizen's mainchain and the Latus sidechain construction would be the easier implementation of complex [smart contract functionalities]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) in the account model.
+There are several ways to realize sidechain internal transactions in Zendoo. As long as a sidechain adheres to the Cross-Chain Transfer Protocol internal transactions can be implemented however the use case deems necessary. One of the first considerations that needs to go into a deciosion of the transactional model is if the sidechain should run the [UTXO or account model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). One reason to diverge from the UTXO model used in Horizen's mainchain and the Latus sidechain construction would be the easier implementation of complex [smart contract functionalities]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) in the account model.
 
-Recall how the Zendoo protocol doesn't require a sidechain to be a blockchain at all. User account balances could be maintained in a more traditional [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}), or even a highly progressive data structure like a [Directed Acyclic Graph]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}). Hence, the option space for implementing sidechain internal transactions is huge.
+Recall how the Zendoo protocol doesn't require a sidechain to be a blockchain at all. User account balances could be maintained in a more traditional [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}), or even a highly progressive one like a [Directed Acyclic Graph]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}). Hence, the option space for implementing sidechain internal transactions is huge.
 
 ### Sidechain Internal Transactions in Latus
 
-In Latus 
-
-
-
-
-
-
-
-
+In Latus the UTXO accounting model is used. Transactions on a sidechain look pretty much exactly like those on the mainchain. At least one input is consumed with with each transaction, spending of which is authorized through a [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}). The total amount of the outputs created most be less than or equal to the amount of inputs consumed.
 
 ## Backward Transfers
 
-A more complex procedure is required for backward transfers. They are initiated in the sidechain as special transactions, batched in a withdrawal certificate, and propagated to the mainchain for processing.
+Compared to forward transfers, a more complex mechanism is required for backward transfers in Zendoo. Usually, backward transfers are initiated on the sidechain as special transactions, batched in withdrawal certificates, and propagated to the mainchain by the sidechain nodes. Backward transfers in Zendoo are challenging due to the asymmetric design in which sidechains monitor the mainchain but not vice versa. On the other hand, the protocol allows great flexibility in sidechain design as there are almost no limitations on how backward transfers and withdrawal certificates are generated.
+
+
 
 each sidechain defines its own SNARK that is used to validate withdrawal certificates. --> by putting verification key on chain this works
 "The mainchain knows only the verification key – which is registered upon sidechain creation – and the interface of the verifier, which is unified for all sidechains. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain."
 
 This provides flexibility to define its own rules for backward transfers. For instance, a sidechain can adopt a chain-of-trust model [13] or even the certifiers model
 
-Note that the mainchain consensus protocol does not impose any rules on how exactly a withdrawal certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures. We only assume that it is submitted by means of a special transaction in the mainchain.
+
 
 ### Withdrawal Certificates
+
+
+
+
 
 explain container
 
 
+
+
+Note that the mainchain consensus protocol does not impose any rules on how exactly a withdrawal certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures. We only assume that it is submitted by means of a special transaction in the mainchain.
+
 ### Withdrawal Epochs
 
-+++++ graphic
+The concept of withdrawal epochs is introduced as a period of mainchain blocks in which sidechains are collecting backward transfers to be broadcast in a batch to the mainchain. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions are valid. This reduces communication overhead, as not every backward transfer has to be broadcast individually.
+
+![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
+
+The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a longer withdraw epoch.
 
 ### Initiating a Backward Transfer on Sidechain
 
@@ -172,6 +170,8 @@ BTTx transaction is a special case of regular payment transaction where all outp
 pubkey script
 
 ### Initiating a Backwart Transfer on the Mainchain
+
+ Additionally, there is a mechanism to initiate a backward transfer on the mainchain, the *Backward Transfer Request* (BTR).
 
 There might be cases when a user would want to request a backward transfer directly from the mainchain rather than creating a BT in the SC. For instance, it would allow users to withdraw funds in case of a misbehaving (e.g., maliciously controlled sidechain that censors submission of backward transfers) or ceased sidechain.
 
