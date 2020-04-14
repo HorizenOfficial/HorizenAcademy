@@ -116,9 +116,9 @@ Lastly, forward transfers which cannot be processed properly are gathered and pl
 
 ## Sidechain Internal Transactions
 
-There are several ways to realize sidechain internal transactions in Zendoo. As long as a sidechain adheres to the Cross-Chain Transfer Protocol it can implement internal transactions however the use case deems necessary. One of the first considerations that needs to go into a deciosion of the transactional model is if the sidechain should run the [UTXO or Account model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). While the U
+There are several ways to realize sidechain internal transactions in Zendoo. As long as a sidechain adheres to the Cross-Chain Transfer Protocol it can implement internal transactions however the use case deems necessary. One of the first considerations that needs to go into a deciosion of the transactional model is if the sidechain should run the [UTXO or account model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}). One reason to diverge from the UTXO model used in Horizen's mainchain and the Latus sidechain construction would be the easier implementation of complex [smart contract functionalities]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) in the account model.
 
-Recall how the "sidechain" doesn't need to be a blockchain at all. 
+Recall how the Zendoo protocol doesn't require a sidechain to be a blockchain at all. User account balances could be maintained in a more traditional [data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}), or even a highly progressive data structure like a [Directed Acyclic Graph]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}). Hence, the option space for implementing sidechain internal transactions is huge.
 
 ### Sidechain Internal Transactions in Latus
 
