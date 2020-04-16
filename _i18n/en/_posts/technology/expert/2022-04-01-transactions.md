@@ -31,7 +31,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}">
-            <img src="/assets/post_files/technology/expert/4.0-txs/htlcs.png" alt="Cross-Chain Transactions" />
+            <img src="/assets/post_files/technology/expert/4.0-txs/cross-chain-2.png" alt="Cross-Chain Transactions" />
         </a>
     </div>
     <div class="col-md-9">
@@ -48,7 +48,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}">
-            <img src="/assets/post_files/technology/expert/4.0-txs/statechannels.png" alt="State- and Payment Channels" />
+            <img src="/assets/post_files/technology/expert/4.0-txs/channel-3.png" alt="State- and Payment Channels" />
         </a>
     </div>
     <div class="col-md-9">
