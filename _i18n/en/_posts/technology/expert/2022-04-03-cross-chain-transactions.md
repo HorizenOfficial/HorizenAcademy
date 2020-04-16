@@ -64,8 +64,6 @@ Depending on the consensus rules of the given sidechain the `receiverMetadata` e
 
 When we consider a blockchain running the UTXO model, for instance Horizen or Bitcoin, a "forward output" can be one of many outputs in a regular transaction. Not all outputs need to be "forward outputs", e.g. change outputs are needed.
 
-![Forward Transfer as a special unspendable output in a regular multi-input multi-output transaction](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer.png)
-
 ```CPP
 type Transaction
 {
@@ -114,28 +112,22 @@ Recall how the Zendoo protocol doesn't require a sidechain to be a blockchain at
 
 ### Sidechain Internal Transactions in Latus
 
-In Latus the UTXO accounting model is used. Transactions on a sidechain look pretty much exactly like those on the mainchain. At least one input is consumed with with each transaction, spending of which is authorized through a [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}). The total amount of the outputs created most be less than or equal to the amount of inputs consumed.
+In Latus, the UTXO accounting model is used. Transactions on a Latus sidechain look pretty the same as those on mainchain. At least one input is consumed with each transaction, spending of which is authorized through a [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}). The total amount of the outputs created must be less than or equal to the amount of inputs consumed.
 
 ## Backward Transfers
 
-Compared to forward transfers, a more complex mechanism is required for backward transfers in Zendoo. Usually, backward transfers are initiated on the sidechain as special transactions, batched in withdrawal certificates, and propagated to the mainchain by the sidechain nodes. Backward transfers in Zendoo are challenging due to the asymmetric design in which sidechains monitor the mainchain but not vice versa. On the other hand, the protocol allows great flexibility in sidechain design as there are almost no limitations on how backward transfers and withdrawal certificates are generated.
+Compared to forward transfers, a more complex mechanism is required for backward transfers in Zendoo. Usually, backward transfers are initiated on the sidechain as special transactions, batched in withdrawal certificates, and propagated to the mainchain by the sidechain nodes.
 
+Backward transfers in Zendoo are challenging due to the asymmetric design in which sidechains monitor the mainchain but not vice versa. On the other hand, the protocol allows great flexibility in sidechain design. There few limitations on how backward transfers and withdrawal certificates are generated besides those imposed through the CCTP.
 
-
-each sidechain defines its own SNARK that is used to validate withdrawal certificates. --> by putting verification key on chain this works
-"The mainchain knows only the verification key – which is registered upon sidechain creation – and the interface of the verifier, which is unified for all sidechains. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain."
-
-This provides flexibility to define its own rules for backward transfers. For instance, a sidechain can adopt a chain-of-trust model [13] or even the certifiers model
-
-
+Before we look into the actual backward transfer, we need to talk about two concepts that are introduced with the CCTP and that effect all backward transfers alike.
 
 ### Withdrawal Certificates
 
+The first concept is the withdrawal certificate which serves primarily as a container for backward transfers from a given sidechain. Additinally, withdrawal certificates serve as a liveness indicator for sidechains. When there is no withdrawal certificate submitted for a given sidechain within a time period defined with the deployment of said sidechain, it is considered to be inactive by the mainchain and no further withdrawal certificates for that chain will be accepted by the mainchain.
 
+Grouping backward transfers comes with two advantages compared to broadcasting individual backward transfers to the mainchain. First, it reduces the communication overhead between chains. If you consider a system with a single sidechain this advantage could be considered negligible - in a system with tens or potentially even hundreds of sidechains not so much. Second, it reduces the computational burden on the sidechain. Remember how each withdrawal certificate has a SNARK proof attached, which authorizes the transaction and proves the correct state transitions within the sidechain.
 
-
-
-explain container
 
 
 
@@ -248,4 +240,7 @@ In Zendoo, we avoid direct reliance on certifiers or any other special type of a
 
 MST is a fixed size Merkle tree
 
+each sidechain defines its own SNARK that is used to validate withdrawal certificates. --> by putting verification key on chain this works
+"The mainchain knows only the verification key – which is registered upon sidechain creation – and the interface of the verifier, which is unified for all sidechains. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain."
 
+This provides flexibility to define its own rules for backward transfers. For instance, a sidechain can adopt a chain-of-trust model [13] or even the certifiers model
