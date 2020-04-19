@@ -192,4 +192,12 @@ First, mainchain nodes will check if the *ledgerId* refers to a currently active
 
 ## Summary
 
-Now what's the information you should take away from reading this article? 
+Now what's the information you should take away from reading this article?
+
+After a quick recap of the modifications to the mainchain protocol we first looked into forward transfers sending money to a sidechain. The transfers are initiated on the mainchain, synchronized to the sidechain through mainchain block references and grouped into *Forward Transfers Transactions* that "mint" coins on the sidechain, similar to coinbase transactions on the mainchain.
+
+Money that resides on a sidechain can freely be transferred sidechain internally and there a large option space for how these payments transactions are handled on the sidechain. This is due to the fact that sidechain internal transactions don't involve the cross-chain transfer protocol which must be adhered to by all sidechains.
+
+When it comes to backward transfers there are several ways how they can be triggered. In most every case, a user will just create a backward transfer from within the sidechain. If this is not possible for some reason, he can submit a Backward Transfer Request on the mainchain. If the sidechain has become inactive, the Ceased Sidechain Withdrawal mechanisms serves as a last resort to recover funds from a sidechain.
+
+All backward transfers and BTRs, are broadcast to the mainchain via withdrawal certificates, whereas CSWs trigger a payment directly on the mainchain without involving sidechain nodes at all.
