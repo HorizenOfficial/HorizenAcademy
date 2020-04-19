@@ -10,6 +10,29 @@ chapter: "Transactions"
 further_reads: [zendoo]
 ---
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [The Zendoo Sidechain Construction](#the-zendoo-sidechain-construction)
+  * [Sidechain Transactions Commitment](#sidechain-transactions-commitment)
+  * [Sidechain Deployment](#sidechain-deployment)
+- [Forward Transfers](#forward-transfers)
+  * [Initiating a Forward Transfer on the Mainchain](#initiating-a-forward-transfer-on-the-mainchain)
+  * [Finalizing a Forward Transfer on the Sidechain](#finalizing-a-forward-transfer-on-the-sidechain)
+- [Sidechain Internal Transactions](#sidechain-internal-transactions)
+  * [Sidechain Internal Transactions in Latus](#sidechain-internal-transactions-in-latus)
+- [Backward Transfers](#backward-transfers)
+  * [Withdrawal Certificates](#withdrawal-certificates)
+  * [Withdrawal Epochs](#withdrawal-epochs)
+  * [Initiating a Backward Transfer on Sidechain](#initiating-a-backward-transfer-on-sidechain)
+  * [Initiating a Backwart Transfer on the Mainchain](#initiating-a-backwart-transfer-on-the-mainchain)
+    + [Backward Transfer Requests](#backward-transfer-requests)
+    + [Ceased Sidechain Withdrawal](#ceased-sidechain-withdrawal)
+  * [Handling incoming Backward Transfers on the Mainchain](#handling-incoming-backward-transfers-on-the-mainchain)
+- [Summary](#summary)
+
+## Introduction
+
 In this article we will take a close look at transactions that move assets between different blockchains - more specifically sidechains. Sidechains are blockchains interoperable with an existing mainchain. In order to transfer assets from one chain to another a special set of transactions is needed - cross-chain transactions.
 
 The way we structured this article follows the logic of a developer who wants to build a sidechains. First, the sidechain needs to be deployed. Next an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, money can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has, to trigger those actions.
@@ -29,18 +52,7 @@ These proofs allow the mainchain to verify state transitions of the sidechain wi
 
 ### Sidechain Transactions Commitment
 
-A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) where leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without the need to transmit the entire mainchain block.
-
-
-
-
-
-**TODO**
-Provided with mproof, forwardTransfers, btRequests, and wcert fields, the SCTxsCommitment can be reconstructed and verified against the scTxsCommitment field included in the MC block header. It allows to verify that all SC-related transactions were correctly synchronized from the MC block without the need to download and verify its body. -> can compute proof for all this
-
-
-
-
+A new data field called Sidechain Transactions Commitment (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees) whos leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without the need to transmit the entire mainchain block.
 
 ### Sidechain Deployment
 
@@ -88,12 +100,14 @@ In the example transaction above, a total amount of eight coins is being spent a
 
 A sidechain developer is free to come up with a mechansim to process incoming forward transfers. Since there is only one implementation of a sidechain consensus protocol at the time of writing we will explain how forward transfers are handled in [Latus](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf).
 
-The overall idea is to group forward transfers from one or more mainchain blocks into a special *Forward Transfers Transaction* (FTTx). This transaction is similar to the coinbase transaction on the mainchain in that it does not include any inputs being spent. It can be considered a transaction minting coins on the sidechain.
+The overall idea is to group forward transfers from one or more mainchain blocks into a special *Forward Transfers Transaction* (FTTx). This transaction is similar to the coinbase transaction on the mainchain in that it does not include any inputs being spent. It can be considered a transaction minting coins on the sidechain. A Forward Transfers Transaction comprises only forward transfer outputs. If there are no forward transfers to a sidechain over a period of mainchain blocks, there will be no Forward Transfers Transaction in that period.
 
-In Latus, the `receiverMetadata` entails the receivers address on the sidechain, as well as a payback address, which is used to refund the sender on the mainchain in case a forward transfer was to fail for some reason. This could be because the mainchain block that includes the forward transfer is not referenced or the receivers address is not provided correctly. The latter would only become apparent once the forward transfer is synched to the sidechain as the mainchain doesn't verify the sidechain specific data. Let's look at an example:
+![Processing Forward Transfers on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer-transaction.jpg)
+
+In Latus, the `receiverMetadata` entails the receivers address on the sidechain, as well as a payback address used to refund the sender on the mainchain in case a forward transfer was to fail for some reason. This could be because the mainchain block that includes the forward transfer is not referenced or the receivers address is not provided correctly. The latter would only become apparent once the forward transfer is synched to the sidechain as the mainchain doesn't verify the sidechain specific data. Let's look at an example:
 
 ```CPP
-type ForwardTransfersTx (mcid: BlockID, ft: List [FT])
+type ForwardTransfersTx (mcid: BlockID, ft: List[FT])
 {
     outputs: List [UTXO];
     rejectedTransfers: List [BackwardTransfer]
@@ -126,121 +140,56 @@ Before we look into the actual backward transfer, we need to talk about two conc
 
 The first concept is the withdrawal certificate which serves primarily as a container for backward transfers from a given sidechain. Additinally, withdrawal certificates serve as a liveness indicator for sidechains. When there is no withdrawal certificate submitted for a given sidechain within a time period defined with the deployment of said sidechain, it is considered to be inactive by the mainchain and no further withdrawal certificates for that chain will be accepted by the mainchain.
 
-Grouping backward transfers comes with two advantages compared to broadcasting individual backward transfers to the mainchain. First, it reduces the communication overhead between chains. If you consider a system with a single sidechain this advantage could be considered negligible - in a system with tens or potentially even hundreds of sidechains not so much. Second, it reduces the computational burden on the sidechain. Remember how each withdrawal certificate has a SNARK proof attached, which authorizes the transaction and proves the correct state transitions within the sidechain.
+Grouping backward transfers comes with two advantages compared to broadcasting individual backward transfers to the mainchain. First, it reduces the amount of communication between chains. If you consider a system with a single sidechain this advantage could be considered negligible - in a system with tens and potentially hundreds of sidechains not so much. Second, it reduces the computational burden on the sidechain. Remember how each withdrawal certificate has a SNARK proof attached, which authorizes the transaction and proves the correct state transitions within the sidechain. Generating this proof comes at a computational cost which is reduced by broadcasting sidechain updates to the mainchain.
 
-
-
-
-
-Note that the mainchain consensus protocol does not impose any rules on how exactly a withdrawal certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures. We only assume that it is submitted by means of a special transaction in the mainchain.
+Note that the mainchain consensus protocol does not impose any rules on how exactly a withdrawal certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures.
 
 ### Withdrawal Epochs
 
-The concept of withdrawal epochs is introduced as a period of mainchain blocks in which sidechains are collecting backward transfers to be broadcast in a batch to the mainchain. One withdraw certificate per withdraw epoch is submitted to the mainchain, acompanied by the proof that all state transitions are valid. This reduces communication overhead, as not every backward transfer has to be broadcast individually.
+The concept of withdrawal epochs is introduced as a period of mainchain blocks in which a sidechain is collecting backward transfers to be broadcast to the mainchain. One withdraw certificate is submitted to the mainchain per withdraw epoch, acompanied by the proof that all state transitions are valid.
 
 ![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
 
-The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is build for near-instant in-game payments, the withdrawal epoch in terms of mainchain blocks might be short, so that each withdrawal certificate doesn't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a longer withdraw epoch.
+The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is built for many small in-game payments, the withdrawal epoch in terms of mainchain blocks can be short. That way withdrawal certificates don't become too large in size due to the number of included backward transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a block time close to that of Horizen and a longer withdraw epoch compared to the in-game payment sidechain.
 
 ### Initiating a Backward Transfer on Sidechain
 
-regular BT
+A regular backward transfer in a UTXO based sidechain works very similar to a regular blockchain-internal transaction. A number of previously unspent transaction outputs is consumed as inputs, spending of which is authorized through digital signatures. Outputs meant to be spendable on the mainchain must specify the receivers mainchain address as well as the amount to be transferred.
 
-It is represented by a tuple of the form:
-BT = (receiverAddr, amount),
-where:
-receiverAddr − an address in the mainchain where transferred coins should be credited;
-amount − the number of transferred coins.
-There can be different approaches to integrate backward transfers in the mainchain. Follow- ing the assumption of a UTXO-based mainchain, a BT can be represented by a special output in a transaction with a withdrawal certificate.
+All backward transfers initiated within a single withdrawal epoch are first grouped into a *Backward Transfers Transaction* (BTTx). This is a regular multi-output transaction in which all outputs are spendable on the mainchain. This Backward Transfers Transaction is then placed in the withdrawal certificate to be broadcast on the mainchain.
 
-Essentially, we can consider backwardTransfers in txBT as specialized outputs that are unspendable on the sidechain
-
-aggregated in single backward transfers transaction (BTTx)
-
-BTTx transaction is a special case of regular payment transaction where all outputs are backward transfers.
-
-pubkey script
+**Where in the output is the information included, that it is meant to be transferred to mainchain? In Forward transfers the ledgerId indicates a cross-chain transfer. How about backward transfers?**
 
 ### Initiating a Backwart Transfer on the Mainchain
 
- Additionally, there is a mechanism to initiate a backward transfer on the mainchain, the *Backward Transfer Request* (BTR).
-
-There might be cases when a user would want to request a backward transfer directly from the mainchain rather than creating a BT in the SC. For instance, it would allow users to withdraw funds in case of a misbehaving (e.g., maliciously controlled sidechain that censors submission of backward transfers) or ceased sidechain.
-
-1. Backward transfer request (BTR), and 
-2. Ceased sidechain withdrawal (CSW).
-
-CSW performs direct payment while BTR does not
+There might arise cases where a user needs to request a backward transfer directly from the mainchain. This could happen either because a sidechain is controlled by malicious actors, because it was implemented incorrectly or because it became inactive. Rather then trying to broadcast a backward transfer to all sidechain nodes, a user can instead use one of two mechansims that allow initiating backward transfers from the mainchain directly: *Backward Transfer Requests* (BTRs) and *Ceased Sidechain Withdrawals* (CSWs).
 
 #### Backward Transfer Requests
 
-aggregated in single backward transfer requests transaction (BTRTx)
+A Backward Transfer Requests is a special type of transaction created on the mainchain. It includes the *ledgerId* specifying the sidechain, the *receiver* address on the mainchain as well as the *amount* to be transferred and the *nullifier*, a unique identifier of the coins on the sidechain. Additionally, a *proof* and *proofdata* is submitted with the BTR, which allows sidechain nodes to verify incoming Backward Transfer Requests. The proofdata contains one or more UTXOs on the sidechain, which will be consumed by the BTR. The right to spend the UTXO(s) is provided through the *proof*.
 
-The consistency of BTRs included in the sidechain is verified by recalculating the BTRHash (Fig. 12) and checking its presence in the SCTxsCommitment tree
+![Processing Backward Transfer Requests on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/backward-transfer-request.jpg)
 
-It is represented by the following tuple:
-controlled sidechain to process user’s withdrawals . Importantly, the BTR does not lead to a direct coin transfer in the mainchain.
-where:
+When a BTR is submitted on the mainchain it will be synchronized to the sidechain through the same mechanism used to process forward transfers. First, it is included in the mainchains *Sidechain Transaction Comittment* Merkle tree and with the next mainchain block reference it is synched to the sidechain. Here, it is included in a special *Backward Transfer Requests Transaction* (BTRTx) which works similar to the *Forward Transfers Transaction* (FTTx) we already talked about. It is a single transaction in which all inputs are specified through BTRs and the outputs are backward transfers, as specified in the BTRs.
 
-ledgerId receiver amount nullif ier proof data proof
-− an identifier of the sidechain, for which BTR is created; − an address of the receiver on the mainchain;
-− the number of coins to be transferred;
-− a unique identifier of claimed coins;
-− input data to a SNARK verifier; − a SNARK proof.
-def
-BTR = (ledgerId, receiver, amount, nullifier, proofdata, proof),
-
-In Latus, proofdata
-contains an unspent output that should be consumed in the SC to provide coins for transferring: proofdata = {utxo}.
-
-The sidechain synchronizes BTRs by including in the SC block a special BackwardTransferRequests transaction (BTRTx) that contains all BTRs relevant to this sidechain from the referenced MC block.
+Once a BTR is included in a sidechain blocks BTRTx, it will also be included in the next withdrawal certificate of that sidechain. After the withdrawal certificate is broadcast back to the mainchain the transfer is completed.
 
 #### Ceased Sidechain Withdrawal
 
+Another mechanism to initiate a backward transfer is the *Ceased Sidechain Withdrawal* (CSW). When a sidechain fails to submit a withdrawal certificate within its submit period it becomes inactive and no further withdrawal certificates will be accepted.
 
-The interface of the SNARK verifier for the CSW is completely the same as for the BTR.
+A Ceased Sidechain Withdrawal is similar to a Backward Transfer Request, in that it is a transaction submitted on the mainchain, triggering an event effecting the sidechain. It differs from a BTR, in that it performs a direct payment. A Backward Transfer Request tells the sidechain notes to trigger a backward transfer. A Ceased Sidechain Withdrawal on the other hand makes a direct payment to the submitter.
 
-For instance, one can omit defining these operations at all (e.g., by setting vkBTR and vkCSW to NULL)
+A CSW has the exact same structure as a BTR from a data perspective. But since withdrawal certificates for inactive sidechains are not processed by the mainchain, it must trigger a direct payment. The proof-system interface for Ceased Sidechain Withdrawals works just like the SNARK interface for BTRs: the *proofdata* specifies which sidechain-UTXOs are consumed and *proof* comprises the authorization to spend them.
+
+In Zendoo, not all sidechains need to support Ceased Sidechain Withdrawals and Backward Transfer Requests. The mainchain supports these mechanisms regardless and each sidechain development team is free to make use of these mechanisms as they see fit.
 
 ### Handling incoming Backward Transfers on the Mainchain
 
-WCert Verification
-1. ledgerId should be an identifier of a currently active sidechain;
-2. epochId should be a valid withdrawal epoch number for the ledgerId (remember that the certificate should be submitted during the first submit len blocks of the epoch following the one, for which such certificate was created);
-3. quality should be higher than the quality of the previously submitted withdrawal certificate for this epoch; if it is the first WCert for this epoch - any quality is accepted;
-4. proof should be a valid SNARK proof whose verification key vkWCert is set upon sidechain registration;
+Once all backward transfers of a withdrawal epoch are complete, submitted through regular backward transfers on the sidechain, or BTRs/CSWs on the sidechain, they are broadcast to the mainchain in a withdrawal certificate with an attached proof. Now this data needs to be verified by the mainchain.
 
-Siehe Block welche data fields
-
-## Other Cross-Chain Transactions
-
-### Liquid Chains
-
-### PoA Token Bridge
+First, mainchain nodes will check if the *ledgerId* refers to a currently active sidechain. Next, the *epochId* must be a valid withdrawal epoch number for the given sidechain. Lastly, the proof must be a valid SNARK proof and evaluate to true, using the verification key submitted at the time of sidechain deployment. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain.
 
 ## Summary
 
-
-
-## Footnotes
-
-[^1]: Garoffolo, Kaidalov, Oliynykov, [Zendoo: a zk-SNARK Verifiable Cross-Chain Transfer Protocol Enabling Decoupled and Decentralized Sidechains](https://www.horizen.global/assets/files/Horizen-Sidechain-Zendoo-A_zk-SNARK-Verifiable-Cross-Chain-Transfer-Protocol.pdf)
-
-
-
-
-
-
-
-first paper: decentralized certifiers. that were registering themselves in the MC and were responsible for signing withdrawal certificates.
-
-In Zendoo, we avoid direct reliance on certifiers or any other special type of actors assigned to validate withdrawal certificates. Instead, we are going to leverage SNARKs [6, 7, 19] to provide means for the mainchain to effectively validate withdrawals.
-
-**other**
-
-MST is a fixed size Merkle tree
-
-each sidechain defines its own SNARK that is used to validate withdrawal certificates. --> by putting verification key on chain this works
-"The mainchain knows only the verification key – which is registered upon sidechain creation – and the interface of the verifier, which is unified for all sidechains. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain."
-
-This provides flexibility to define its own rules for backward transfers. For instance, a sidechain can adopt a chain-of-trust model [13] or even the certifiers model
+Now what's the information you should take away from reading this article? 
