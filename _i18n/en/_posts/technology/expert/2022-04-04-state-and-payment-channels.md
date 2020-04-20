@@ -9,7 +9,143 @@ level: expert
 chapter: "Transactions"
 ---
 
-**Keep "short" and somewhat high level. Include HTLC content if possible**
+![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
+
+## Intro
+
+Why useful
+
+Complex topic. Focus on lightning as the most prominent example and the one that has seen the most adoption thus far.
+
+whats out there already
+
+## State Channels
+
+general idea: data off-chain in second communications network
+
+Can be payments, but can also be other stuff (data)
+
+### Counterfactual
+
+### Game Channels
+
+### Payment Channels
+
+Payment channel networks are built from multiple separate channels that can be coupled when needed. The most popular implementations of the approach are The Lightning Network for Bitcoin [15] and The Raiden Network for Ethereum.
+
+Building Blocks: https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
+
+- Regular Transactions
+- P2SH Addresses, more specifically MultiSig Addresses
+- Timelocks
+- Hash Functions
+
+A payment channel is a 2-2 multisig Address, more generally P2SH Address
+
+
+
+## Lightning Network
+
+Essentially, transactions made in the lightning network can legitly be broadcasted into the Bitcoin network, which means the layer-two transaction can be viewed as a specialized layer-one transaction.
+
+open/close: cross-layer transaction as it’s interacting with both networks
+
+If the transaction is meant to stay in the lightning network, then it’s called the layer-two transaction
+
+RSMC, Revocable Sequence Maturing Contract
+
+focus on bidirectional payment channels. connecting them to a network of channels (Lightning Network) via HTLCs out of scope
+
+### Opening a Payment Channel
+
+3 transactions in total:
+
+Alice funds channel with 1 coin. outputs locking script based on both, Alice's and Bob's signatures
+
+Bob funds channel with 2 coins. outputs locking script based on both, Alice's and Bob's signatures
+
+Both are not signed.
+
+Now Commitment Transaction. Inputs are the two outputs above. Outputs refund participants.
+
+"For instance, Alice creates the commitment transaction, signs it, sends it to Bob, and Bob will send it back with his signature. Or they could exchange their signatures for this particular transaction. Either way, the result is that they both have the same spendable commitment transaction."
+
+### Updating Channel Balance
+
+transactions in the lightning network are no more than a chain of commitment transactions spending the outputs in the funding transaction
+
+the commitment transaction always references the funding transaction.
+
+the Bitcoin network makes sure every transaction output can only be spent once, although the locking script provides two possible scenarios.
+
+### Closing a Payment Channel
+
+#### Mutually Closing a Channel
+
+agreement
+
+#### Unilaterally Closing a Channel
+
+via timeout or payment hash. participants have to wait, hence suboptimal
+
+#### Revokation
+
+ugly, cheater got caught
+
+### Building a Network with HTLCs
+
+"A technique that can allow payments to be securely routed across multiple payment channels.[citation needed] For example, if Alice has a channel open to Bob and Bob has a channel open to Charlie, Alice can use a HTLC to pay Charlie through Bob without any risk of Bob stealing the payment in transit"
+
+Idea: Carol creates secret and passes it's hash to Bob and Alice.
+
+Alice creates TX sending 1 Coin to Bob.
+
+Bob creates TX sending 1 Coin to Carol.
+
+To claim the coin, Carol must use her secret. Bob learns about this secret and uses it to spend Alice's TX.
+
+Hash lock to ensure one participant after the other can claim TX. Hashlock in case someone becomes inactive and participants can reclaim their money after some time.
+
+## Summary
+
+
+
+
+
+##### Revocable Sequence Maturing Contract - RSMC
+
+##### Hashed Time Lock Contract - HTLC
+
+
+
+## FR's 
+
+Mastering Lightning - https://github.com/lnbook/lnbook
+
+https://medium.com/swlh/till-its-lightning-fast-uncover-the-development-of-the-lightning-network-fbd01bc0ea80#
+
+https://medium.com/@yyforyongyu/till-its-lightning-fast-uncover-the-lightning-network-transactions-f3180e467857
+
+Rene Pickard Lighning Deck https://upload.wikimedia.org/wikipedia/commons/b/b7/Introduction_to_the_Lightning_Network_Protocol_and_the_Basics_of_Lightning_Technology_%28BOLT_aka_Lightning-rfc%29.pdf
+
+Bitcoin Magazine 3 Part Series https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
+
+Bolt: Anonymous Payment Channels https://eprint.iacr.org/2016/701.pdf
+
+Game Channels: State Channels with integrated PRNG https://eprint.iacr.org/2019/362.pdf
+
+Raiden Network 101 https://raiden.network/101.html
+
+Lightning Paper: https://lightning.network/lightning-network-paper.pdf
+
+General State Channel Networks https://eprint.iacr.org/2018/320.pdf
+
+Counterfactual: Generalized State Channels https://l4.ventures/papers/statechannels.pdf
+
+State Channels on Eth https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4
+
+
+**Include HTLC content if possible**
 
 https://medium.com/coinmonks/till-its-lightning-fast-uncover-the-lightning-network-transactions-f3180e467857
 
@@ -19,13 +155,15 @@ https://medium.com/coinmonks/till-its-lightning-fast-uncover-the-lightning-netwo
 
 Data on blockchain is expensive, blockchain itself has limited scalability if decentralization is to be maintained.
 
+![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
+
 "State channel networks allow execution of arbitrary complex smart contracts." So arbitrary exchange of data off chain. - state paper
 
 Payment channels allow off chain transactions between users, even several hops. special case of state channel.
 
 Very basic idea: "both parties can commit to signing a transaction and not broadcasting this transaction." - lightning paper... "Therefore, it is possible in bitcoin to devise a bitcoin script whereby all old transactions are invalidated, and only the new transaction is valid."
 
-Channels are implemented using **smart contracts**. 
+Channels are implemented using **smart contracts**.
 
 **TODO: Update -> little explanation for each box**
 
@@ -268,3 +406,6 @@ Sidechains on Ethereum: Plasma. Basically Plasma is a sidechain with "Bitcoin-es
 \url{https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4}
 
 "off-chain channel system that offers a new method for connecting channels that is more efficient than the existing technique of "routing transactions'' over multiple channels. To this end, Perun introduces a technique called "virtual payment channels'' that avoids involvement of the intermediary for each individual payment." Perun \url{https://eprint.iacr.org/2017/635}
+
+
+SIGHASH explained https://raghavsood.com/blog/2018/06/10/bitcoin-signature-types-sighash
