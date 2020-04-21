@@ -17,22 +17,15 @@ A common criticism of blockchain tech is that it doesn't scale in a decentralize
 
 We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that allows to spread the workload otherwised performed by a single set of nodes on the mainchain to several sets of nodes, each responsible for their own sidechain.
 
-We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise one-dimensional blockchain world. 
+We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise one-dimensional blockchain world.
 
-Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels.
+Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels. The general idea is as follows: two users place funds in a channel. Now the participants can send funds back and forth by exchanging signed transactions which are NOT broadcast to the blockchain, although they would be considered valid transactions. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the channel-opening and closing transaction.
 
-The general idea is as follows: two users who transact regularly place funds in a "channel". Now the participants can transact indefinitely, sending funds back and forth by exchanging signed transactions which are NOT broadcast to the blockchain, although they would be considered valid transactions. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the opening and the closing transaction.
-
-
-
-
-Complex topic. Focus on lightning as the most prominent example and the one that has seen the most adoption thus far.
-
-whats out there already
+Payment channels are no trivial topic and there are many different projects working on them. In order to cover the process from opening a channel, to updating its balance and lastly closing it we will, for the most part of this article, focus on the best-known and most active payment channel implementation: the Lightning Network. Afterward we will give a glimpse into the rest of the state channel world.
 
 ### Payment Channels
 
-Payment channel networks are built from multiple separate channels that can be coupled when needed. The most popular implementations of the approach are The Lightning Network for Bitcoin [15] and The Raiden Network for Ethereum. Can be build on UTXO as well as Account-based blockchains. Lightning vs. Raiden.
+Before we look into how several payment channels can be combined to form a network such as Lightning, let's consider an example where two users, Alice and Bob want to use a payment channel to save on transaction fees as they frequently send money back and forth.
 
 
 Building Blocks: https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
@@ -58,6 +51,8 @@ entirely off-chain."
 privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
 
 "the interaction of the parties with the contract instance is always “local”, i.e., the parties themselves compute the new states of $G$ and then just exchange signatures."
+
+Payment channel networks are built from multiple separate channels that can be coupled when needed. The most popular implementations of the approach are The Lightning Network for Bitcoin [15] and The Raiden Network for Ethereum. Can be build on UTXO as well as Account-based blockchains. Lightning vs. Raiden.
 
 ## Lightning Network
 
