@@ -9,25 +9,26 @@ level: expert
 chapter: "Transactions"
 ---
 
+## Introduction
+
+A common criticism of blockchain tech is that it doesn't scale in a decentralized setting and therefore won't be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can create more interaction leveraging the security of blockchain with the capacity we already have available? Meet layer-two transactions on payment or state channels.
+
 ![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
 
-## Intro
+We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that allows to spread the workload otherwised performed by a single set of nodes on the mainchain to several sets of nodes, each responsible for their own sidechain.
 
-Why useful
+We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise one-dimensional blockchain world. 
+
+Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels.
+
+The general idea is as follows: two users who transact regularly place funds in a "channel". Now the participants can transact indefinitely, sending funds back and forth by exchanging signed transactions which are NOT broadcast to the blockchain, although they would be considered valid transactions. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the opening and the closing transaction.
+
+
+
 
 Complex topic. Focus on lightning as the most prominent example and the one that has seen the most adoption thus far.
 
 whats out there already
-
-## State Channels
-
-general idea: data off-chain in second communications network
-
-Can be payments, but can also be other stuff (data)
-
-### Counterfactual
-
-### Game Channels
 
 ### Payment Channels
 
@@ -40,13 +41,32 @@ Building Blocks: https://bitcoinmagazine.com/articles/understanding-the-lightnin
 - Timelocks
 - Hash Functions
 
-A payment channel is a 2-2 multisig Address, more generally P2SH Address
+A payment channel is a 2-2 multisig Address, more generally P2SH Address. A simple smart contract if you will, whose code defines spending conditions more complex than the regular P2PKH transaction.
 
+The blockchain on its own, it has no way of knowing whether this is the most recent state or not. It's just acting on behalf of its users instructions after all.
 
+This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
+
+*All Commitment Transactions are valid on-chain transactions and will be valid until their input is spend elsewhere. This means, there needs to be a strong incentive to act honestly, or, put differently, a strong disincentive to cheat.
+
+--> " Parties are prevented from submitting old messages by their counterparties: if Alice submits
+an old state, Bob is given an opportunity to “rebut” it by broadcasting a more recent state. This
+design allows participants to treat updates within a state channel as “final”, despite taking place
+entirely off-chain."
+
+privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
 
 ## Lightning Network
 
 Essentially, transactions made in the lightning network can legitly be broadcasted into the Bitcoin network, which means the layer-two transaction can be viewed as a specialized layer-one transaction.
+
+"A Lightning Network channel uses funds locked in a funding transaction, a multisignature
+UTXO created and owned by the parties in the channel. Balance updates are done by signing
+two assymetrical commitment transactions, each of which spends the funding transaction,
+immediately releases remote funds to the counterparty, and start a challenge period after which
+the broadcaster receives the remaining local funds"
+
+stack of cheques that they could deposit whenever they want.
 
 open/close: cross-layer transaction as it’s interacting with both networks
 
@@ -56,7 +76,9 @@ RSMC, Revocable Sequence Maturing Contract
 
 focus on bidirectional payment channels. connecting them to a network of channels (Lightning Network) via HTLCs out of scope
 
-### Opening a Payment Channel
+### Opening a Payment Channel - Cross-Layer Transaction
+
+#### Bilateral Funding
 
 3 transactions in total:
 
@@ -68,9 +90,17 @@ Both are not signed.
 
 Now Commitment Transaction. Inputs are the two outputs above. Outputs refund participants.
 
+not possible yet, new sighash flag needed to allow users spending outputs not yet confirmed.
+
 "For instance, Alice creates the commitment transaction, signs it, sends it to Bob, and Bob will send it back with his signature. Or they could exchange their signatures for this particular transaction. Either way, the result is that they both have the same spendable commitment transaction."
 
-### Updating Channel Balance
+#### Unilateral Funding
+
+Alice funds channel.
+
+
+
+### Updating Channel Balance - Layer-Two Transaction
 
 transactions in the lightning network are no more than a chain of commitment transactions spending the outputs in the funding transaction
 
@@ -78,7 +108,7 @@ the commitment transaction always references the funding transaction.
 
 the Bitcoin network makes sure every transaction output can only be spent once, although the locking script provides two possible scenarios.
 
-### Closing a Payment Channel
+### Closing a Payment Channel - Cross-Layer Transaction
 
 #### Mutually Closing a Channel
 
@@ -106,7 +136,55 @@ To claim the coin, Carol must use her secret. Bob learns about this secret and u
 
 Hash lock to ensure one participant after the other can claim TX. Hashlock in case someone becomes inactive and participants can reclaim their money after some time.
 
+### Implications for the Fee Market
+
+-> Security is fine
+
+
+
+## Expanding on Payment Channels
+
+now there is more that you can with blockchain besides "simple" payments. Smart contracts allow for more complex logic, e.g. games running on decentralized infrastructure. But does it really make sense to have each move of your virtual chess game processed and verified by thousands of nodes all around the world?
+
+There are different approaches to expanding payment channels, so state updates can be exchanged off-chain, until they are settled. Generally, these more flexible constructions are referred to as state channels, and they come in different flavors, focusing on several use-cases.
+
+### State Channels
+
+general idea: data off-chain in second communications network
+
+Can be payments, but can also be other stuff (data)
+
+State channels are the more general form of payment channels — they can be used not only for payments, but for any arbitrary “state update” on a blockchain — like changes inside a smart contract.
+
+State channels rely on availability
+
+can use state channels on top of sidechains/shards/plasma chains
+
+### Counterfactual
+
+Goal is to make state channels accessible to projects/developers who are not state channel experts themselves
+
+### Game Channels
+
+For instance, Funfair has built state channels (which they call “Fate channels”) for their decentralized gambling platform, Spankchain has built one-way payment channels for adult performers (they also used a state channel for their ICO), and Horizon Games is using state channels in their first ethereum-based game.
+
+### Perun
+
+Perun channels have three innovations compared to other payment channels which are shared by our approach: first, their technique for routing-through-intermediaries, which they call virtual channels, is very similar to ours in that the virtual channel is “noninteractive” and
+does not require cooperation from the intermediary for every payment.
+
+### Bolt - Anonymous Payment Channels
+
 ## Summary
+
+"Layer 2 solutions share a common insight: once we have the hard kernel of certainty provided by a public blockchain, we can use it as an anchor for cryptoeconomic systems that extend the usefulness of blockchain applications.
+Now that we’ve surveyed some examples, we can be more specific about how layer 2 solutions apply this insight. The economic mechanisms used by layer 2 solutions tend to be interactive games: they work by creating incentives for different parties to compete against or “check” one another. A blockchain application can assume that a given claim is likely true, because we’ve created a strong incentive for another party to provide information showing it to be false.
+In state channels, this is how we confirm the final state of the channel — by giving parties a chance to “rebut” each other. In Plasma, it’s how we manage fraud-proofs and withdrawals. In Truebit, it’s how we ensure that solvers’ tell the truth — by giving an incentive to verifiers to prove the solver wrong."
+
+
+layers built “on top” of ethereum won’t always have the same guarantee as on-chain operations. But they can still be sufficiently final and secure to be very useful — especially when that slight decrease in finality lets us perform operations much faster or with lower overhead costs.
+
+
 
 
 
@@ -145,29 +223,37 @@ Counterfactual: Generalized State Channels https://l4.ventures/papers/statechann
 State Channels on Eth https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4
 
 
-**Include HTLC content if possible**
 
-https://medium.com/coinmonks/till-its-lightning-fast-uncover-the-lightning-network-transactions-f3180e467857
 
-\url{* https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791}
 
-\textbf{read counterfactual 4.3 again before writing!}
 
-Data on blockchain is expensive, blockchain itself has limited scalability if decentralization is to be maintained.
 
-![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
 
-"State channel networks allow execution of arbitrary complex smart contracts." So arbitrary exchange of data off chain. - state paper
 
-Payment channels allow off chain transactions between users, even several hops. special case of state channel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Very basic idea: "both parties can commit to signing a transaction and not broadcasting this transaction." - lightning paper... "Therefore, it is possible in bitcoin to devise a bitcoin script whereby all old transactions are invalidated, and only the new transaction is valid."
 
-Channels are implemented using **smart contracts**.
 
-**TODO: Update -> little explanation for each box**
 
-![Channel Hierarchy](/assets/post_files/technology/expert/4.2-state-payment-channels/channel_hierarchy_D.jpg)
 
 ### State Channels
 
