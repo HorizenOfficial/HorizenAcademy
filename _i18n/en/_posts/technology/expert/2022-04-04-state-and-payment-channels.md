@@ -7,6 +7,7 @@ permalink: /technology/expert/state-and-payment-channels/
 topic: technology
 level: expert
 chapter: "Transactions"
+further_reads: [mastering_lightning, till_its_lightning_fast, general_state_channel_networks, counterfactual, lightning_network, raiden_network, bolt]
 ---
 
 ## Introduction
@@ -209,6 +210,7 @@ In state channels, this is how we confirm the final state of the channel — by 
 
 
 layers built “on top” of ethereum won’t always have the same guarantee as on-chain operations. But they can still be sufficiently final and secure to be very useful — especially when that slight decrease in finality lets us perform operations much faster or with lower overhead costs.
+
 
 
 
