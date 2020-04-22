@@ -22,7 +22,7 @@ further_reads: [zendoo, blockstream_sidechains, coda_whitepaper, zk_poker_a_simp
   * [Ethereum Proof of Authority Sidechains](#ethereum-proof-of-authority-sidechains)
   * [Other Sidechain Constructions](#other-sidechain-constructions)
 - [The Zendoo Protocol](#the-zendoo-protocol)
-  * [Main Components](#main-components)
+  * [Main Components in Zendoo](#main-components-in-zendoo)
     + [The Mainchain Consensus Protocol - MCP](#the-mainchain-consensus-protocol---mcp)
     + [The Cross-Chain Transfer Protocol - CCTP](#the-cross-chain-transfer-protocol---cctp)
     + [The Sidechain Consensus Protocol - SCP](#the-sidechain-consensus-protocol---scp)
@@ -116,7 +116,7 @@ In more general terms, the Zendoo protocol allows a Bitcoin-based blockchain pro
 
 The innovation introduced with Zendoo is that backward transfers can be verified by the mainchain without relying on external validators or certifiers to bridge chains. This is although the mainchain does not monitor sidechains (asymmetric peg) and also doesn't know anything about their internal structure. This is achieved through recursive proofs generated for each state transition of the sidechain, but more on that later.
 
-### Main Components
+### Main Components in Zendoo
 
 Most sidechain constructions comprise three elements:
 
