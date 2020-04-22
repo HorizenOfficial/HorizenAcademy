@@ -10,29 +10,6 @@ chapter: "Transactions"
 further_reads: [zendoo]
 ---
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [The Zendoo Sidechain Construction](#the-zendoo-sidechain-construction)
-  * [Sidechain Transactions Commitment](#sidechain-transactions-commitment)
-  * [Sidechain Deployment](#sidechain-deployment)
-- [Forward Transfers](#forward-transfers)
-  * [Initiating a Forward Transfer on the Mainchain](#initiating-a-forward-transfer-on-the-mainchain)
-  * [Finalizing a Forward Transfer on the Sidechain](#finalizing-a-forward-transfer-on-the-sidechain)
-- [Sidechain Internal Transactions](#sidechain-internal-transactions)
-  * [Sidechain Internal Transactions in Latus](#sidechain-internal-transactions-in-latus)
-- [Backward Transfers](#backward-transfers)
-  * [Withdrawal Certificates](#withdrawal-certificates)
-  * [Withdrawal Epochs](#withdrawal-epochs)
-  * [Initiating a Backward Transfer on Sidechain](#initiating-a-backward-transfer-on-sidechain)
-  * [Initiating a Backwart Transfer on the Mainchain](#initiating-a-backwart-transfer-on-the-mainchain)
-    + [Backward Transfer Requests](#backward-transfer-requests)
-    + [Ceased Sidechain Withdrawal](#ceased-sidechain-withdrawal)
-  * [Handling incoming Backward Transfers on the Mainchain](#handling-incoming-backward-transfers-on-the-mainchain)
-- [Summary](#summary)
-
-## Introduction
-
 In this article we will take a close look at transactions that move assets between different blockchains - more specifically sidechains. Sidechains are blockchains interoperable with an existing mainchain. In order to transfer assets from one chain to another a special set of transactions is needed - cross-chain transactions.
 
 The way we structured this article follows the logic of a developer who wants to build a sidechains. First, the sidechain needs to be deployed. Next an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, money can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has, to trigger those actions.

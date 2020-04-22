@@ -10,37 +10,6 @@ chapter: "What is a Blockchain?"
 further_reads: [zendoo, blockstream_sidechains, coda_whitepaper, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
 ---
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Use Cases for Sidechains](#use-cases-for-sidechains)
-  * [Scalability](#scalability)
-  * [Governace](#governace)
-- [History of Sidechains](#history-of-sidechains)
-  * [Pegged Sidechains](#pegged-sidechains)
-    + [Symmetric vs. Asymmetric Peg](#symmetric-vs-asymmetric-peg)
-  * [Ethereum Proof of Authority Sidechains](#ethereum-proof-of-authority-sidechains)
-  * [Other Sidechain Constructions](#other-sidechain-constructions)
-- [The Zendoo Protocol](#the-zendoo-protocol)
-  * [Main Components in Zendoo](#main-components-in-zendoo)
-    + [The Mainchain Consensus Protocol - MCP](#the-mainchain-consensus-protocol---mcp)
-    + [The Cross-Chain Transfer Protocol - CCTP](#the-cross-chain-transfer-protocol---cctp)
-    + [The Sidechain Consensus Protocol - SCP](#the-sidechain-consensus-protocol---scp)
-  * [Modifications of the Mainchain Protocol](#modifications-of-the-mainchain-protocol)
-    + [Verification of Backward Transfers](#verification-of-backward-transfers)
-      - [Proof Systems](#proof-systems)
-      - [Recursion](#recursion)
-      - [State Transition Proofs](#state-transition-proofs)
-      - [Recursive State Transition Proofs](#recursive-state-transition-proofs)
-      - [Using SNARKS - Succinct Non-Interactive Arguments of Knowledge](#using-snarks---succinct-non-interactive-arguments-of-knowledge)
-      - [SNARK Usage in Latus Sidechain](#snark-usage-in-latus-sidechain)
-    + [Sidechains Transactions Commitment](#sidechains-transactions-commitment)
-    + [Withdrawal Safeguard](#withdrawal-safeguard)
-    + [Sidechain Deployment](#sidechain-deployment)
-- [Summary](#summary)
-
-## Introduction
-
 Blockchain technology offers some unique properties, most notably achieving consensus among a group of unknown actors, given a strong incentive mechanism for honest behavior in place. Building applications on blockchain technology can be challenging, though.
 
 Spinning up a small, application specific blockchain defies the argument of a secure and trustless technology. For that to hold true, you need a large number of shareholders in the system. The larger the group of network participants, the more secure the network.
