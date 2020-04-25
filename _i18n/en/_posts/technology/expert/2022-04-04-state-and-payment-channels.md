@@ -28,46 +28,55 @@ Payment channels are no trivial topic and there are many different projects work
 
 Before we look into how several payment channels can be combined to form a network such as Lightning, let's consider an example where two users, Alice and Bob want to use a payment channel to save on transaction fees as they frequently send money back and forth.
 
+The primitives used to build a payment channel are mostly familiar if you have read the previous articles in the Expert Level of the Academy:
 
-Building Blocks: https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
-
-- Regular Transactions
-- P2SH Addresses, more specifically MultiSig Addresses
+- Regular Transactions in the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}),
+- P2SH Addresses and more specifically MultiSig Addresses that we covered in our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}),
+- [Cryptographic hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}), and
 - Timelocks
-- Hash Functions
 
-A payment channel is a 2-2 multisig Address, more generally P2SH Address. A simple smart contract if you will, whose code defines spending conditions more complex than the regular P2PKH transaction.
+The premise is the construction being trustless by design: you must not have to rely on your counterparty to transact securely. Whereas the underlying blockchain derives it's security from the computational power of its miners in [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains it is derived from economic disincentives in the case of payment channels. Namely, when one party tries to cheat, the other party will be granted all the money within the bilateral channel. This allows participants to consider updates to the channel "final" although only computed locally.
 
-The blockchain on its own, it has no way of knowing whether this is the most recent state or not. It's just acting on behalf of its users instructions after all.
+#### Payment Channels are MultiSig Addresses
 
-This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
+Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent.
 
-*All Commitment Transactions are valid on-chain transactions and will be valid until their input is spend elsewhere. This means, there needs to be a strong incentive to act honestly, or, put differently, a strong disincentive to cheat.
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
 
---> " Parties are prevented from submitting old messages by their counterparties: if Alice submits
-an old state, Bob is given an opportunity to “rebut” it by broadcasting a more recent state. This
-design allows participants to treat updates within a state channel as “final”, despite taking place
-entirely off-chain."
+The spending conditions for MultiSig account are defined in the [*redeem script*](https://bitcoin.org/en/glossary/redeem-script). The hash of the redeem script functions as the address - a *Pay to Script-Hash* (P2SH) address. This address and the information contained in the redeem script comprises the locking script of UTXO sent to the P2SH address.
 
-privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
+#### Exchanging Signed Transactions
 
-"the interaction of the parties with the contract instance is always “local”, i.e., the parties themselves compute the new states of $G$ and then just exchange signatures."
+The general idea of a payment channel is the following: two frequently transacting parties deposit money in a 2-of-2 MultiSig account, opening the channel. Both parties need to sign off any transaction, that spends from this account. Now both parties exchange signed transactions whenever they transact.
+
+![The Concept of Payment Channels](/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept.jpg)
+
+These *commitment transactions*, although valid on-chain transactions, are never broadcast but only kept locally by participants as a kind of verifiable receipt of channel state modifications. Only when participants want to close the channel, they will broadcast the final channel update to the blockchain. 
+
+This allows them to perform an infinite number of bilateral transactions while only broadcasting two transactions on-chain: the opening transaction funding the channel, and the closing transaction settling the current balance.
+
+#### Payment Channel Implementations
+
+Raiden, Bolt, Lightning
 
 Payment channel networks are built from multiple separate channels that can be coupled when needed. The most popular implementations of the approach are The Lightning Network for Bitcoin [15] and The Raiden Network for Ethereum. Can be build on UTXO as well as Account-based blockchains. Lightning vs. Raiden.
 
+
 ## Lightning Network
+
+There are two systems to be focused on here, one is the original Bitcoin network, the other is the lightning network. Both systems are circulating bitcoins by making different types of transactions, depending on where the money flows, they can be categorized into,
 
 Essentially, transactions made in the lightning network can legitly be broadcasted into the Bitcoin network, which means the layer-two transaction can be viewed as a specialized layer-one transaction.
 
-"A Lightning Network channel uses funds locked in a funding transaction, a multisignature
-UTXO created and owned by the parties in the channel. Balance updates are done by signing
-two assymetrical commitment transactions, each of which spends the funding transaction,
 immediately releases remote funds to the counterparty, and start a challenge period after which
 the broadcaster receives the remaining local funds"
 
 stack of cheques that they could deposit whenever they want.
 
 open/close: cross-layer transaction as it’s interacting with both networks
+
+Later on, as we will see, the cross-layer transaction is essentially a layer one transaction, with the lightning network as an individual entity of the blockchain.
 
 If the transaction is meant to stay in the lightning network, then it’s called the layer-two transaction
 
@@ -99,15 +108,119 @@ SIGHASH explained https://raghavsood.com/blog/2018/06/10/bitcoin-signature-types
 
 #### Unilateral Funding
 
-Alice funds channel.
+At this point the Lightning network only supports unilateral channel funding. A single participant, usually the one paying the other for some reason, opens the channel by creating a funding transaction. In our example Alice wants to open a channel with Bob who might have an online shop that she uses regularly. As we already know, a payment channel is 2-of-2 MultiSig account. The first thing we need to ensure is that Alice doesn't loose her money when Bob becomes unresponsive and the money gets stuck in the account. This doesn't even have to be due to bad intentions; Bob could simply loose the key needed to sign of any spending from the MultiSig.
 
+Alice creates the funding transaction, signs it but does not broadcast it. She uses the transaction identifier (TXID) as well as the relevant output number to create a first commitment transaction refunding her. This commitment transaction is now signed by both parties, each of whom keep a copy locally.
 
+![Unilateral payment channel funding and opening](/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening.jpg)
+
+Only at this point is Alice safe to broadcast her funding transaction, which she does. She knows she can reclaim the money at any point as she already has a signed transaction spending her funding TX. She also knows Bob cannot spend her money as both signatures are required to consume the UTXO. The worst case scenario at this point is her spending transaction fees twice.
+
+The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
+
+![Established payment channel between Alice and Bob](/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel.jpg)
 
 ### Updating Channel Balance - Layer-Two Transaction
 
-transactions in the lightning network are no more than a chain of commitment transactions spending the outputs in the funding transaction
+Update: Alice pays 0.2 BTC to Bob
 
-the commitment transaction always references the funding transaction.
+Idea, Update Commitment transaction.
+
+Spend from Funding TX (all future commitment transactions or channel states will spend from the original funding TX) --> Inputs in all future, updated ComTX will need to be signed by both participants.
+
+Alice will create new ComTX accordingly, paying 0.2 to Bob and 0.8 to her. She can sign it and send it to bob for him to keep.
+
+Bob creates the same TX, signs and gives it to Alice. No risk for him, this updated TX is in his favor.
+
+two versions of the same tx, will get back shortly
+
+![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update.jpg)
+
+All TXs are valid Bitcoin transactions. Although they are meant to stay on the lightning they could become cross layer TXs moving coins out of a channel on the Bitcoin Network.
+
+TX in lightning just a special Bitcoin TX not supposed to go on-chain, none the less valid.
+
+first incentive to cheat for Alice.
+
+she received a service or good from Bob and maybe she doesn’t actually want to pay for it.
+
+Assume the service is received or the good is delivered, which Transactions would each of them rather like to see on the blockchain? 
+
+![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview.jpg)
+
+Bob the current one where he is being paid. 
+
+Alice would have an incentive to broadcast the old TX002 as she wouldn’t have to pay...
+
+Whats preventing her....--> disincentive
+
+#### Preventing Participants from Broadcsting old States
+
+said earlier two different versions of the same tx, each created by a different participant.
+
+To prevent this from happening we must modify the spending conditions of the output. Remember that the input to all commitment transactions remains the same: the funding TX.
+
+We want to punish cheaters.
+
+Idea: If one of the two broadcasts an old state, the other participant should have time to notice and act. By broadcasting a proveably more recent state the cheater should lose all the money in the channel. All goes to honest participant. Design choice.
+
+For the sake of demonstartion let’s say Alice is the cheater, as she is the one with an actual incentive to do so in our example and at this point.
+
+Now we need to do two things: give Bob time to react and introduce punishment for Alice. Lets start with giving Bob some time.
+
+#### Using Timelocks in the Spending Condition
+
+To give Bob time to react, we must make sure alice can’t spend her funds right away after she broadcast an old state. For that, we’ll use a timelock.
+
+Bitcoin supports essentially two ways to lock funds for some time, using relative or absolute timelocks.
+
+** spin: when output is spent, nodes will check (besides the usual stuff like valid sig) if the time constrain is satisfied
+
+The absoulte timelock `CheckLockTimeVerify` releases funds at a defined time.
+
+The relative timelock `CheckSequenceVerify` starts a countdown as soon as a transaction is confirmed. For relative timelocks a number of blocks is used as the unit to provide the locktime in.
+
+Timelock in TX 002A: 10 days before alice can spend funds. Remember, this TX served as an insurance for her in case bob becomes unavailable. It would return her money.
+
+![Securing transaction outputs using timelocks](/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock.jpg)
+
+But this is also the transaction she would try to broadcast in order to steal Bob’s 0.2 BTC.
+
+Modified spending conditions to give Bob time to react, but not sufficient as he could just steal all the money now. Could pretened to be unavailable so she broadcasts it and pooof, all the money is gone. Next protection for Alice.
+
+#### Generating One-Time Keys
+
+Only requring a single sig from Bob is not enough, so we expand on the second spending condition and make it a multisig.
+
+And we use a little trick: different private keys for different ComTXs. sk used to create sig. Will consider private keys and valid signatures as equivalent.
+
+With each channel update both, Alice and Bob generate a new private key and derive an address from it.
+
+![Generating One-Time Keys for each Commitment Transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys.jpg)
+
+Alice1 and used in funding TX. Alice2 and Bob2 used in first commitment TX spending condition. Once they agree on the updated channel state where Bob receives 0.2 BTC, the keys Alice2 and Bob2 are exchanged.
+
+Now Bob can be sure the transaction he already signed (002A) can’t be broadcast and spent immediately by Alice. Alice can be sure that if Bob becomes unresponsive, she is save to broadcast the TX, as she has not shared the key Alice2 yet.
+
+Since Bob has no interest in broadcasting the first TX, a single spending condition is sufficient here.
+
+![Generating One-Time Keys for each Commitment Transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection.jpg)
+
+To protect the outputs in the second channel update in which Alice pays Bob 0.2 BTC, a new key is generated by both parties, Alice3 and Bob3. and so on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 the Bitcoin network makes sure every transaction output can only be spent once, although the locking script provides two possible scenarios.
 
@@ -249,3 +362,14 @@ General State Channel Networks https://eprint.iacr.org/2018/320.pdf
 Counterfactual: Generalized State Channels https://l4.ventures/papers/statechannels.pdf
 
 State Channels on Eth https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4
+
+
+
+
+
+
+This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
+
+
+
+privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
