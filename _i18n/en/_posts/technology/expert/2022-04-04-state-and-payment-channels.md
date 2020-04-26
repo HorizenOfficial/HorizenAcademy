@@ -99,7 +99,7 @@ At this point the Lightning network only supports unilateral channel funding. On
 
 ![Unilateral payment channel funding and opening](/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening.jpg)
 
-Only at this point is Alice safe to broadcast her funding transaction. She knows she can reclaim the money at any point as she already has a commitment transaction signed by Bob spending her funding TX and refunding her. She also knows Bob cannot spend her money as both of their signatures are required to consume the funding UTXO and the transaction she signed is refunding her. The worst case scenario at this point is her spending transaction fees for sending her money on a round-trip.
+Only at this point is Alice safe to broadcast her funding transaction. She knows she can reclaim the money at any point as she already has a commitment transaction signed by Bob spending her funding TX and refunding her. She also knows Bob cannot spend her money as both of their signatures are required to consume the funding UTXO and the transaction she signed is refunding her. The worst-case scenario at this point is her spending transaction fees for sending her money on a round-trip.
 
 The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
 
@@ -107,51 +107,39 @@ The established payment channel now consists of a signed and broadcast funding t
 
 ### Updating Channel Balance - Layer-Two Transaction
 
-Now Alice wants to make a first transaction buying some item from Bob's shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in Alice's funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spening conditions defined when the channel was openend.
+Now Alice wants to make the first transaction paying for some item she bought in Bob's shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in the funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spending conditions defined when the channel was established.
 
 Alice wants to send Bob 0.2 BTC of the 1 BTC total she deposited in the channel. She does so by creating a new commitment TX which now has two outputs instead of one: the first output acting as a change output paying her the remaining 0.8 BTC and a second output paying Bob. She can sign this TX and send it to Bob for him to keep. Bob creates a TX with the same outputs, signs it, and gives it to Alice. Now there are two versions of the same commitment transaction, each paying the participants the same amount of money. We'll get to the *why* in a moment.
 
 ![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update.jpg)
 
-At this point there is a first incentive for one of the participants to cheat. A few days after both parties agreed on the updated commitment TX, Alice has received the good she paid for. It would now be in her best interest to broadcast the first commitment TX sending her the entire money. Bob on the other hand has an interest in the more recent state hitting the chain.
+At this point there is a first incentive for one of the participants to cheat. A few days after both parties agreed on the updated commitment TX, Alice has received the good she paid for. It would now be in her best interest to broadcast the first commitment TX sending her the entire money. Bob, on the other hand, has an interest in the more recent state hitting the chain.
 
 ![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview.jpg)
 
-All commtiment TXs are valid Bitcoin transactions. Although they are meant to stay on the Lightning Network, they can be broadcast to the blockchain at any time and will be considered valid. Blockchain nodes are agnostic of payment channels and have no way to verify whether a broadcast transaction represents a recent or old state.
+All commitment TXs are valid Bitcoin transactions. Although they are meant to stay on the Lightning Network, they can be broadcast on-chain at any time. Blockchain nodes are agnostic of payment channels and have no way to verify whether a broadcast transaction represents a recent or old state.
 
-The lighning network has strong incentives in place for payment channels participants to act honestly. If Alice was to broadcast an old state, Bob would be credited the enire money in the channel and vice versa. How does that work?
+The Lightning Network has strong incentives in place for payment channels participants to act honestly. If Alice was to broadcast an old state, Bob would be credited the entire balance of the channel and vice versa. How does that work?
 
-#### Preventing Participants from Broadcsting old States
+#### Preventing Participants from Broadcasting old States
 
 Here, we finally get to answer why Alice and Bob needed to create two versions of the same transaction earlier.
 
-
-
-
-
-
-
-
-
-To prevent this from happening we must modify the spending conditions of the output. Remember that the input to all commitment transactions remains the same: the funding TX.
-
-We want to punish cheaters.
-
-Idea: If one of the two broadcasts an old state, the other participant should have time to notice and act. By broadcasting a proveably more recent state the cheater should lose all the money in the channel. All goes to honest participant. Design choice.
-
-For the sake of demonstartion let’s say Alice is the cheater, as she is the one with an actual incentive to do so in our example and at this point.
-
-Now we need to do two things: give Bob time to react and introduce punishment for Alice. Lets start with giving Bob some time.
+The tools we have at our disposal for preventing Alice from submitting the old state are the spending conditions of the outputs commitment transaction. The idea is to give Bob time to notice that Alice broadcast an old state and to provide him with a tool to claim the entire channel balance when it happens. We combine two different mechanisms to guarantee said behavior: timelocks and one-time private keys. Let's give Bob some time to react to Alice's cheating attempt first.
 
 #### Using Timelocks in the Spending Condition
 
-To give Bob time to react, we must make sure alice can’t spend her funds right away after she broadcast an old state. For that, we’ll use a timelock.
+We need to make sure Alice cannot spent the UTXO of the first commitment transaction right away if she broadcasts it. Miners will accept the old commitment TX as soon as it is submitted on-chain. We cannot prevent this using the spending conditions. What we can prevent though, is Alice spending the UTXO right away. Therefore, we place a timelock in it.
+
+Bitcoin and most other Bitcoin-based protocols support essentially two different types of timelocks: absolute and relative. The absolute timelock `CheckLockTimeVerify` makes funds spendable at a defined time, e.g. 10 pm tomorrow night. The relative timelock `CheckSequenceVerify` starts a countdown as soon as a transaction is confirmed. The time unit for relative timelocks is a number of blocks, e.g. the output might become spendable in 100 blocks. When a timelock is placed in a transaction output, it basically adds another item to the checklist nodes will go through when validating a transaction. Besides checking whether the UTXO was previously unspent and valid signature was presented
+
+
 
 Bitcoin supports essentially two ways to lock funds for some time, using relative or absolute timelocks.
 
 ** spin: when output is spent, nodes will check (besides the usual stuff like valid sig) if the time constrain is satisfied
 
-The absoulte timelock `CheckLockTimeVerify` releases funds at a defined time.
+
 
 The relative timelock `CheckSequenceVerify` starts a countdown as soon as a transaction is confirmed. For relative timelocks a number of blocks is used as the unit to provide the locktime in.
 
