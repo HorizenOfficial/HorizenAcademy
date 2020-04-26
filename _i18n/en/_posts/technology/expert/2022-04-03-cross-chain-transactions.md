@@ -110,70 +110,70 @@ A more complex mechanism is required for Backward Transfers in Zendoo. Usually, 
 
 Backward Transfers in Zendoo are challenging due to the asymmetric design. On the other hand, the protocol allows great flexibility in sidechain design. There few limitations on how Backward Transfers and Withdrawal Certificates are generated besides those imposed through the CCTP.
 
-Before we look into the actual Backward Transfers, we need to talk about two concepts that are introduced with the CCTP and that effect all Backward Transfers alike.
+Before we look into actual Backward Transfers, we need to talk about two concepts that are introduced with the CCTP and that effect all Backward Transfers alike.
 
 ### Withdrawal Certificates
 
-The first concept is the Withdrawal Certificate which serves primarily as a container for Backward Transfers. Additionally, Withdrawal Certificates serve as a liveness indicator for sidechains. When there is no Withdrawal Certificate submitted for a given sidechain within a time period defined with the deployment of said sidechain, it is considered to be inactive by the mainchain and no further Withdrawal Certificates for that chain will be accepted by the mainchain.
+The first concept is the Withdrawal Certificate which serves primarily as a container for Backward Transfers. Additionally, it is used as a liveness indicator for sidechains. When there is no Withdrawal Certificate submitted for a given sidechain within a time period (`submit_len`) defined with the deployment of said sidechain, it is considered to be inactive by the mainchain. No further Withdrawal Certificates for that sidechain will be accepted by the mainchain.
 
-Grouping Backward Transfers comes with two advantages compared to broadcasting individual Backward Transfers to the mainchain. First, it reduces the amount of communication between chains. If you consider a system with a single sidechain this advantage could be considered negligible - in a system with tens and potentially hundreds of sidechains not so much. Second, it reduces the computational burden on the sidechain. Remember how each Withdrawal Certificate has a SNARK proof attached, which authorizes the transaction and proves the correct state transitions within the sidechain. Generating this proof comes at a computational cost which is reduced by broadcasting sidechain updates to the mainchain.
+Grouping Backward Transfers comes with two advantages compared to broadcasting them individually. First, it reduces the amount of inter-chain communication. If you consider a system with a single sidechain this advantage could be considered negligible - in a system with tens and potentially hundreds of sidechains not so much. Second, it reduces the computational burden on the sidechain. Remember how each Withdrawal Certificate has a SNARK proof attached, which authorizes the transaction and proves correct state transitions within the sidechain. Generating this proof comes at a computational cost which is reduced by broadcasting sidechain updates to the mainchain less frequently.
 
-Note that the mainchain consensus protocol does not impose any rules on how exactly a Withdrawal Certificate should be generated and by whom it should be submitted. It is up to the sidechain to define corresponding procedures.
+Note that the mainchain consensus protocol does not impose any rules on how exactly a Withdrawal Certificate should be generated and by whom it should be submitted.
 
 ### Withdrawal Epochs
 
-The concept of withdrawal epochs is introduced as a period of mainchain blocks in which a sidechain is collecting Backward Transfers to be broadcast to the mainchain. One withdraw certificate is submitted to the mainchain per withdraw epoch, accompanied by the proof that all state transitions are valid.
+The concept of Withdrawal Epochs is introduced as a period of mainchain blocks in which a sidechain is collecting Backward Transfers to be broadcast to the mainchain. One Withdrawal Certificate is submitted per Withdrawal Epoch, accompanied by a SNARK proof that all state transitions are valid.
 
 ![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
 
-The length of a withdrawal epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the withdrawal epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance because the sidechain is built for many small in-game payments, the withdrawal epoch in terms of mainchain blocks can be short. That way Withdrawal Certificates don't become too large in size due to the number of included Backward Transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a block time close to that of Horizen and a longer withdraw epoch compared to the in-game payment sidechain.
+The length of a Withdrawal Epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the Withdrawal Epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance, because the sidechain is built for many in-game micro-payments, the Withdrawal Epoch in terms of mainchain blocks can be short. This can prevent Withdrawal Certificates becoming too large due to the number of included Backward Transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a block time close to that of Horizen and a longer Withdrawal Epoch compared to the in-game payment sidechain.
 
 ### Initiating a Backward Transfer on Sidechain
 
-A regular Backward Transfer in a UTXO based sidechain works very similar to a regular blockchain-internal transaction. A number of previously unspent transaction outputs is consumed as inputs, spending of which is authorized through digital signatures. Outputs meant to be spendable on the mainchain must specify the receiver's mainchain address as well as the amount to be transferred.
+A regular Backward Transfer in a UTXO-based sidechain works very similar to a regular blockchain-internal transaction. Previously unspent transaction outputs are consumed as inputs, spending of which is authorized through digital signatures. Outputs meant to be spendable on the mainchain must specify the receiver's mainchain address and the amount to be transferred.
 
-All Backward Transfers initiated within a single withdrawal epoch are first grouped into a *Backward Transfers Transaction* (BTTx). This is a regular multi-output transaction in which all outputs are spendable on the mainchain. This Backward Transfers Transaction is then placed in the Withdrawal Certificate to be broadcast on the mainchain.
+All Backward Transfers initiated within a single Withdrawal Epoch are grouped into a *Backward Transfers Transaction* (BTTx). This is a regular multi-output transaction in which all outputs are spendable on the mainchain. This Backward Transfers Transaction is then placed in the Withdrawal Certificate to be broadcast on the mainchain.
 
 **Where in the output is the information included, that it is meant to be transferred to mainchain? In Forward Transfers the ledgerId indicates a cross-chain transfer. How about Backward Transfers?**
 
-### Initiating a Backwart Transfer on the Mainchain
+### Initiating a Backward Transfer on the Mainchain
 
-There might arise cases where a user needs to request a Backward Transfer directly from the mainchain. This could happen either because a sidechain is controlled by malicious actors, because it was implemented incorrectly or because it became inactive. Rather then trying to broadcast a Backward Transfer to all sidechain nodes, a user can instead use one of two mechansims that allow initiating Backward Transfers from the mainchain directly: *Backward Transfer Requests* (BTRs) and *Ceased Sidechain Withdrawals* (CSWs).
+A user might need to request a Backward Transfer directly from the mainchain. This could happen either because the sidechain is controlled by malicious actors, because it was implemented incorrectly or because it became inactive. Rather than trying to broadcast a Backward Transfer to all sidechain nodes, a user can instead use one of two mechanisms that allow initiating Backward Transfers from the mainchain directly: *Backward Transfer Requests* (BTRs) and *Ceased Sidechain Withdrawals* (CSWs).
 
 #### Backward Transfer Requests
 
-A Backward Transfer Requests is a special type of transaction created on the mainchain. It includes the *ledgerId* specifying the sidechain, the *receiver* address on the mainchain as well as the *amount* to be transferred and the *nullifier*, a unique identifier of the coins on the sidechain. Additionally, a *proof* and *proofdata* is submitted with the BTR, which allows sidechain nodes to verify incoming Backward Transfer Requests. The proofdata contains one or more UTXOs on the sidechain, which will be consumed by the BTR. The right to spend the UTXO(s) is provided through the *proof*.
+A Backward Transfer Requests is a special type of transaction created on the mainchain. It includes the *ledgerId* specifying the sidechain, the *receiver* address on the mainchain as well as the *amount* to be transferred. The *nullifier* serves as a unique identifier of coins on a sidechain. Additionally, a *proof* and *proofdata* is submitted with the BTR, which allows sidechain nodes to verify incoming Backward Transfer Requests. The proofdata contains one or more UTXOs on the sidechain, which will be consumed by the BTR. The right to spend the UTXO(s), i.e. the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}), is provided in the *proof* part.
 
 ![Processing Backward Transfer Requests on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/backward-transfer-request.jpg)
 
-When a BTR is submitted on the mainchain it will be synchronized to the sidechain through the same mechanism used to process Forward Transfers. First, it is included in the mainchains *Sidechain Transaction Comittment* Merkle tree and with the next mainchain block reference it is synched to the sidechain. Here, it is included in a special *Backward Transfer Requests Transaction* (BTRTx) which works similar to the *Forward Transfers Transaction* (FTTx) we already talked about. It is a single transaction in which all inputs are specified through BTRs and the outputs are Backward Transfers, as specified in the BTRs.
+When a Backward Transfer Request is submitted on the mainchain it will be synchronized to the sidechain through the same mechanism used to process Forward Transfers. First, it is included in the mainchains *Sidechain Transaction Commitment* Merkle tree. With the next mainchain block reference, it is synched to the sidechain. Here, it is included in a special *Backward Transfer Requests Transaction* (BTRTx) which works analogous to the *Forward Transfers Transaction* (FTTx) we already covered. It is a single transaction where all inputs are specified through BTRs and the outputs are Backward Transfers.
 
-Once a BTR is included in a sidechain blocks BTRTx, it will also be included in the next Withdrawal Certificate of that sidechain. After the Withdrawal Certificate is broadcast back to the mainchain the transfer is completed.
+Once a BTR is included in a BTRTx, it will also be included in the next Withdrawal Certificate. After the Withdrawal Certificate is broadcast back to the mainchain and included by the miners the transfer is deemed complete.
 
 #### Ceased Sidechain Withdrawal
 
 Another mechanism to initiate a Backward Transfer is the *Ceased Sidechain Withdrawal* (CSW). When a sidechain fails to submit a Withdrawal Certificate within its submit period it becomes inactive and no further Withdrawal Certificates will be accepted.
 
-A Ceased Sidechain Withdrawal is similar to a Backward Transfer Request, in that it is a transaction submitted on the mainchain, triggering an event effecting the sidechain. It differs from a BTR, in that it performs a direct payment. A Backward Transfer Request tells the sidechain notes to trigger a Backward Transfer. A Ceased Sidechain Withdrawal on the other hand makes a direct payment to the submitter.
+A Ceased Sidechain Withdrawal is similar to a Backward Transfer Request, in that it is a transaction submitted on the mainchain, triggering an event affecting the sidechain. It differs from a BTR, in that it performs a direct payment. A Backward Transfer Request tells the sidechain notes to trigger a Backward Transfer. A Ceased Sidechain Withdrawal, on the other hand, makes a direct payment to the submitter.
 
-A CSW has the exact same structure as a BTR from a data perspective. But since Withdrawal Certificates for inactive sidechains are not processed by the mainchain, it must trigger a direct payment. The proof-system interface for Ceased Sidechain Withdrawals works just like the SNARK interface for BTRs: the *proofdata* specifies which sidechain-UTXOs are consumed and *proof* comprises the authorization to spend them.
+A CSW has the exact same structure as a BTR from a data perspective. But since Withdrawal Certificates for inactive sidechains are not processed by the mainchain, it must trigger a direct payment. The proof-system interface for Ceased Sidechain Withdrawals works just like the SNARK interface for Backward Transfer Requests: the *proofdata* specifies which sidechain-UTXOs are consumed and the *proof* comprises the authorization to spend them.
 
-In Zendoo, not all sidechains need to support Ceased Sidechain Withdrawals and Backward Transfer Requests. The mainchain supports these mechanisms regardless and each sidechain development team is free to make use of these mechanisms as they see fit.
+In Zendoo, sidechains don't need to support Ceased Sidechain Withdrawals and Backward Transfer Requests. They are an option the mainchain supports and each sidechain development team is free to implement.
 
 ### Handling incoming Backward Transfers on the Mainchain
 
-Once all Backward Transfers of a withdrawal epoch are complete, submitted through regular Backward Transfers on the sidechain, or BTRs/CSWs on the sidechain, they are broadcast to the mainchain in a Withdrawal Certificate with an attached proof. Now this data needs to be verified by the mainchain.
+Once all Backward Transfers of a Withdrawal Epoch are submitted, either through regular Backward Transfers on the sidechain, or BTRs/CSWs on the mainchain, they are broadcast to the mainchain in a Withdrawal Certificate together with a SNARK proof. Now, this data needs to be verified by the mainchain.
 
-First, mainchain nodes will check if the *ledgerId* refers to a currently active sidechain. Next, the *epochId* must be a valid withdrawal epoch number for the given sidechain. Lastly, the proof must be a valid SNARK proof and evaluate to true, using the verification key submitted at the time of sidechain deployment. If the SNARK proof and public parameters are valid, then the certificate gets included and processed in the mainchain.
+First, mainchain nodes will check if the *ledgerId* refers to a currently active sidechain. Next, the *epochId* must be a valid Withdrawal Epoch number for the given sidechain. Lastly, the proof must be a valid SNARK proof and evaluate to true, using the verification key submitted at the time of sidechain deployment. If the SNARK proof and public parameters are valid, then the Withdrawal Certificate gets included and processed in the mainchain.
 
 ## Summary
 
-Now what's the information you should take away from reading this article?
+Now what's the information you should take away? After a quick recap of the modifications to the mainchain protocol we looked into Forward Transfers sending money to a sidechain. The transfers are initiated on the mainchain, synchronized to the sidechain through mainchain block references and grouped into *Forward Transfers Transactions* that "mint" coins on the sidechain, similar to coinbase transactions.
 
-After a quick recap of the modifications to the mainchain protocol we first looked into Forward Transfers sending money to a sidechain. The transfers are initiated on the mainchain, synchronized to the sidechain through mainchain block references and grouped into *Forward Transfers Transactions* that "mint" coins on the sidechain, similar to coinbase transactions on the mainchain.
+Money that resides on a sidechain can freely be transferred within the system and the option space for how these payments transactions can be handled by a sidechain is large. This is because sidechain internal transactions don't involve the Cross-Chain Transfer Protocol, which must be adhered by all sidechains.
 
-Money that resides on a sidechain can freely be transferred sidechain internally and there a large option space for how these payments transactions are handled on the sidechain. This is due to the fact that sidechain internal transactions don't involve the cross-chain transfer protocol which must be adhered to by all sidechains.
+When it comes to Backward Transfers, there are several ways how they can be initiated. In most cases, a user will create a Backward Transfer from within the sidechain. If this is not possible, he can submit a Backward Transfer Request on the mainchain. If the sidechain has become inactive, the Ceased Sidechain Withdrawal mechanisms serves as a last resort to recover funds.
 
-When it comes to Backward Transfers there are several ways how they can be triggered. In most every case, a user will just create a Backward Transfer from within the sidechain. If this is not possible for some reason, he can submit a Backward Transfer Request on the mainchain. If the sidechain has become inactive, the Ceased Sidechain Withdrawal mechanisms serves as a last resort to recover funds from a sidechain.
+All Backward Transfers and BTRs, are broadcast to the mainchain via Withdrawal Certificates, whereas CSWs trigger a payment directly on the mainchain without involving sidechain nodes.
 
-All Backward Transfers and BTRs, are broadcast to the mainchain via Withdrawal Certificates, whereas CSWs trigger a payment directly on the mainchain without involving sidechain nodes at all.
+The validity of Withdrawal Certificates is proven with SNARK proofs and verified based on the verification key submitted at the time of sidechain deployment.
