@@ -224,7 +224,7 @@ We simply replaced \\(s_2\\) from the second formula in this section with the ri
 The construction shown above follows the same pattern we discussed when calculating the factorial. Do you recognize the recursive pattern? The function `update` calls itself subsequently and opens new instances of the same function until the base case is reached.
 
 ![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
-![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
+![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_M.jpg)
 
 The base case here is the first state transition resulting in state \\(s_2\\). Once this base case is reached, the different instances of the `update` function return their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
 
@@ -261,15 +261,15 @@ $$
 (pk, vk) \leftarrow Setup(C)
 $$
 
-To prove a computation was performed correctly (or, in more general terms, a *statement*) a proof \\(\pi\\) is generated. Generating a proof for the correct state transition \\(t_1\\) from state \\(s_1\\) to the second state \\(s_2\\) happens based on four inputs:
+To prove a computation was performed correctly (or, in more general terms, a *statement*) a proof \\(\pi\\) is generated. Generating a proof for the correct state transition \\(t\\) from state \\(s_1\\) to the final state \\(s_n\\) happens based on four inputs:
 
 - the proving key \\(pk\\)
 - the initial state \\(s_1\\)
-- the transition \\(t_1\\)
-- and the resulting state \\(s_2\\).
+- the transition \\(t\\)
+- and the resulting state \\(s_n\\).
 
 $$
-\pi \leftarrow Prove(pk, (s_1, s_2), t_1)
+\pi \leftarrow Prove(pk, (s_1, s_n), t)
 $$
 
 Just like we computed states recursively, we can compute proofs recursively. The logic is exactly the same: starting from a base case (the first state transition) proofs are sequentially merged until a single proof for the state in question remains.
@@ -301,10 +301,10 @@ The entire process of key and proof generation as well as proof verification is 
 
 The structure of the mainchain block headers was upgraded and a new data field, the Sidechain Transactions Commitment (SCTxsCommitment) was introduced. The SCTxsCommitment is basically a Merkle root of an additional [Merkle tree](https://academy.horizen.global/technology/expert/blockchain-as-a-data-structure/#merkle-trees). Besides the regular Merkle root included in a block header serving as a summary of all transactions, this second Merkle tree comprises all sidechain-related transactions, namely:
 
-- **Forwart Transfers** (FTs)sending assets from main- to sidechain
-- **Withdrawal Certificates** (WCerts) communicating Backward Transfers to the mainchain
-- **Backward Transfer Requests** (BTRs) initiating backward transfers from within the mainchain
-- **Ceased Sidechain Withdrawals** (CSW) allowing a user to withdraw assets from a sidechain which has become inactive
+- **Forwart Transfers (FTs)** sending assets from main- to sidechain
+- **Withdrawal Certificates (WCerts)** communicating Backward Transfers to the mainchain
+- **Backward Transfer Requests (BTRs)** initiating backward transfers from within the mainchain
+- **Ceased Sidechain Withdrawals (CSW)** allowing a user to withdraw assets from a sidechain which has become inactive
 
 ![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_D.jpg)
 ![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_M.jpg)
