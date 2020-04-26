@@ -327,7 +327,7 @@ First, a unique identifier, the `ledgerId` for the sidechain is defined in the b
 
 This was a rather long read! Let us recap this article shortly, before we move on.
 
-First, we laid out why sidechains are useful. They increase a systems scalability and allow the deployment of new experimental features without having to achieve consensus among all network participants.
+First, we laid out why sidechains are useful. They increase a systems scalability and allow the deployment of new experimental features without having to achieve consensus among all network participants and keep the codebase managable. They also allow developers to spin up new ledger systems with instant access to a token of established value.
 
 Several sidechain implementations exist, some of them closer to production than others. A common shortcoming is that these constructions often times either rely on the mainchain keeping track of sidechains, or they require some sort of certifiers to process backward transfers from side- to mainchain. The Zendoo protocol allows an asymmetric sidechain construction where the mainchain doesn't monitor sidechains but can rely on objectively verifiable proofs to validate backward transfers.
 
