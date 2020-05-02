@@ -62,7 +62,7 @@ The proposed SCP is based on the Ouroboros Protocol developed by IOHK for the Ca
 
 The security of software is usually evaluated under certain assumptions. Consensus protocols are no different.
 
-POW consensus is based on the assumption of an honest majority in hashing power. The core assumption the Ouroboros POS protocol security is based on is a truly random Slot Leader Selection Procedure. No party should be able to predict who will be the assigned slot leader during a given time period.
+POW consensus is based on the assumption of an honest majority in hashing power. The core assumption the Ouroboros POS protocol security is based on is a random Slot Leader Selection Procedure. No party should be able to predict who will be the assigned slot leader during a given time period.
 
 To achieve this goal, a source of randomness is needed and creating true randomness is harder than one might think. The original Ouroboros POS protocol introduced a coin-tossing protocol based on verifiable secret sharing to generate randomness. The proposed (modified) solution leverages the POW mainchain for this. It is a simple, yet effective solution.
 
