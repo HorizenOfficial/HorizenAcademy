@@ -10,15 +10,15 @@ chapter: "Transactions"
 further_reads: [mastering_lightning, till_its_lightning_fast, general_state_channel_networks, counterfactual, lightning_network, raiden_network, bolt]
 ---
 
-A common criticism of blockchain tech is that it doesn't scale in a decentralized setting and therefore won't be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can create more interaction leveraging the security of blockchain with the capacity we already have available? Meet layer-two transactions on payment or state channels.
+A common criticism of blockchain technology is that it doesn't scale in a decentralized setting and therefore won't be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can allow for more interaction leveraging the security of blockchain with the capacity we already have available? Meet layer-two transactions on payment or state channels.
 
 ![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
 
 We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that allows to spread the workload otherwised performed by a single set of nodes on the mainchain to several sets of nodes, each responsible for their own sidechain.
 
-We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise one-dimensional blockchain world.
+We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise mostly one-dimensional blockchain world.
 
-Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels. The general idea is as follows: two users place funds in a channel. Now the participants can send funds back and forth by exchanging signed transactions (TXs) which are NOT broadcast to the blockchain, although they would be considered valid transactions. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the channel-opening and closing transaction.
+Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels. The general idea is as follows: two users place funds in a channel. Now the participants can send funds back and forth by exchanging signed transactions (TXs) which are NOT broadcast to the blockchain. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the channel opening and closing transaction.
 
 Payment channels are no trivial topic and there are many different projects working on them. In order to cover the process from opening a channel, to updating its balance and lastly closing it we will, for the most part of this article, focus on the best-known and most active payment channel implementation: the Lightning Network. Afterward we will give a glimpse into the rest of the state channel world.
 
@@ -26,18 +26,18 @@ Payment channels are no trivial topic and there are many different projects work
 
 Before we look into how several payment channels can be combined to form a network such as Lightning, let's consider an example where two users, Alice and Bob want to use a payment channel to save on transaction fees as they frequently send money back and forth.
 
-The primitives used to build a payment channel are mostly familiar if you have read the previous articles in the Expert Level of the Academy:
+The primitives used to build a payment channel are mostly familiar if you have read the previous articles in the Expert Level:
 
 - Regular Transactions in the [UTXO model]({{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}),
 - P2SH Addresses and more specifically MultiSig Addresses that we covered in our [article on wallets]({{ site.baseurl }}{% post_url /technology/expert/2022-03-01-wallets-expert %}),
 - [Cryptographic hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}), and
 - Timelocks
 
-The premise is the construction being trustless by design: you must not have to rely on your counterparty to transact securely. Whereas the underlying blockchain derives it's security from the computational power of its miners in [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains it is derived from economic disincentives in the case of payment channels. Namely, when one party tries to cheat, the other party will be granted all the money within the bilateral channel. This allows participants to consider updates to the channel "final" although only computed locally.
+One premise is the construction being trustless by design: you must not have to rely on your counterparty to transact securely. Whereas the underlying blockchain derives it's security from the computational power of its miners in [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains it is derived from economic (dis)incentives in the case of payment channels. Namely, when one party tries to cheat, the other party will be granted all the money within the bilateral channel. This allows participants to consider updates to the channel "final" although only computed locally.
 
 #### Payment Channels are MultiSig Addresses
 
-Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent.
+Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent. A 2-of-2 MultiSig account is based on two private keys, both of which need to sign a transaction for it to be valid.
 
 ![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
 ![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
@@ -46,17 +46,19 @@ The spending conditions for MultiSig account are defined in the [*redeem script*
 
 #### Exchanging Signed Transactions
 
-The general idea of a payment channel is the following: two frequently transacting parties deposit money via a *funding transaction* in a 2-of-2 MultiSig account, opening the channel. Both parties need to sign off any TX, that spends from this account. Now both parties exchange signed transactions whenever they transact.
+The general idea of a payment channel is the following: two frequently transacting parties deposit money via a *funding transaction* in a 2-of-2 MultiSig account, opening the channel (`TX 001` in example below). Both parties need to sign off on any TX, that spends from this account. Both parties exchange signed transactions repeatedly spending from the same funding transaction whenever they transact (`TX 002` - `TX n`).
 
 ![The Concept of Payment Channels](/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept.jpg)
 
-These *commitment transactions* updating the channel state are, although valid on-chain transactions, never broadcast but only kept locally by participants. They serve as verifiable receipts of channel state modifications. Only when participants want to close the channel, they will broadcast the final channel update via a *closing transaction* to the blockchain.
+These *commitment transactions* updating the channel state are, although valid on-chain transactions, never broadcast but only kept locally by participants. They serve as verifiable receipts of channel state modifications. Only when participants want to close the channel, they will broadcast the final channel update via a *closing transaction* to the blockchain (`TX (n+1)`).
 
-This allows them to perform an infinite number of bilateral transactions while only broadcasting two transactions: the funding TX opening the channel, and the closing TX settling the current balance on-chain.
+This allows an infinite number of bilateral transactions to occure, while only broadcasting two transactions: the funding TX opening the channel, and the closing TX settling the current balance on-chain.
 
 #### Payment Channel Implementations
 
 Payment channel networks are built from multiple separate channels that can be coupled when needed. There are several payment channel networks built on top of differnt blockchain protocols, some even making different protocols interoperable.
+
+**TODO**
 
 [Raiden](https://raiden.network/101.html) is a payment channel network build on Ethereum.
 
@@ -83,49 +85,53 @@ Later on, as we will see, the cross-layer transaction is essentially a layer one
 
 If the transaction is meant to stay in the lightning network, then it’s called the layer-two transaction
 
-RSMC, Revocable Sequence Maturing Contract
+RSMC, Revocable Sequence Maturing Contract. We'll get to this term later on, at a time where it will make a lot more sense to you.
+
+
 
 focus on bidirectional payment channels. connecting them to a network of channels (Lightning Network) via HTLCs out of scope
 
-Lightning paper 3.5: fidelity bond and breach remedy transaction
+**Add** Lightning paper 3.5: fidelity bond and breach remedy transaction
 
 ### Opening a Payment Channel - Cross-Layer Transaction
 
-A single participant, usually the one paying the other for some reason, opens the channel by creating a funding transaction. In our example Alice wants to open a channel with Bob who might have an online shop that she uses regularly. As we already know, a payment channel is 2-of-2 MultiSig account. The first thing we need to ensure is that Alice doesn't loose her money when Bob becomes unresponsive and the money gets stuck in the account. This doesn't even have to be due to bad intentions; Bob could simply loose the key needed to sign of any spending from the MultiSig.
+A single participant, usually the one paying the other, opens the channel by creating a funding transaction. In our example Alice wants to open a channel with Bob who might have an online shop that she uses regularly. As we already know, a payment channel is 2-of-2 MultiSig account. The first thing we need to ensure is that Alice doesn't loose her money when Bob becomes unresponsive and the money gets stuck in the channel. This doesn't even have to be due to bad intentions; Bob could simply loose the key needed to sign of any spending from the MultiSig.
 
 #### Unilateral Funding
 
-At this point the Lightning network only supports unilateral channel funding. One of the participants, in our example Alice, is funding the channel. To do so, she creates the funding transaction, signs it but does NOT broadcast it. She uses the transaction identifier (TXID) as well as the relevant output number to create a first commitment transaction refunding her and signs it. She also passes the [outpoint](https://bitcoin.org/en/glossary/outpoint) to Bob, who will create his version of the same transaction and sing it. The partially signed commitment transactions are now exchanged and stored locally. Soon we will see why we need two different versions of the same TX.
+At the time of writing the Lightning network only supports unilateral channel funding. Bilateral funding will be available as soon as spending from unsigned transcations is supported with the implementation of a new [SIGHASH flag](https://raghavsood.com/blog/2018/06/10/bitcoin-signature-types-sighash)(SIGHAS_NOINPUT).
+
+One of the participants, in our example Alice, is funding the channel. To do so, she creates the funding transaction, signs it but does NOT broadcast it yet. Next, she uses the transaction identifier (TXID) as well as the relevant output number to create a first commitment transaction (`TX 002`) refunding her and signs it. She also passes the [outpoint](https://bitcoin.org/en/glossary/outpoint) to Bob, who will create his version of the same transaction and sing it. The partially signed commitment transactions are now exchanged and stored locally. Soon we will see why we need two different versions of the same TX.
 
 ![Unilateral payment channel funding and opening](/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening.jpg)
 
-Only at this point is Alice safe to broadcast her funding transaction. She knows she can reclaim the money at any point as she already has a commitment transaction signed by Bob spending her funding TX and refunding her. She also knows Bob cannot spend her money as both of their signatures are required to consume the funding UTXO and the transaction she signed is refunding her. The worst-case scenario at this point is her spending transaction fees for sending her money on a round-trip.
-
-The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
+Only at this point is Alice safe to broadcast her funding transaction. She knows she can reclaim the money at any point as she already has a commitment transaction signed by Bob spending her funding TX and refunding her. She also knows Bob cannot spend her money as both of their signatures are required to consume the funding UTXO and the transaction she signed and passed to Bob is refunding her. The worst-case scenario at this point is Alice paying for transaction fees sending her money on a round-trip.
 
 ![Established payment channel between Alice and Bob](/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel.jpg)
 
+The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
+
 ### Updating Channel Balance - Layer-Two Transaction
 
-Now Alice wants to make the first transaction paying for some item she bought in Bob's shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in the funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spending conditions defined when the channel was established.
+Now Alice wants to make a first transaction paying Bob, maybe because she bought something in his shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in the funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spending conditions defined when the channel was established.
 
-Alice wants to send Bob 0.2 BTC of the 1 BTC total she deposited in the channel. She does so by creating a new commitment TX which now has two outputs instead of one: the first output acting as a change output paying her the remaining 0.8 BTC and a second output paying Bob. She can sign this TX and send it to Bob for him to keep. Bob creates a TX with the same outputs, signs it, and gives it to Alice. Now there are two versions of the same commitment transaction, each paying the participants the same amount of money. We'll get to the *why* in a moment.
+Alice wants to send Bob 0.2 BTC of the 1 BTC total. She does so by creating a new commitment TX which now has two outputs instead of one: the first output acting as a change output paying her the remaining 0.8 BTC and a second output paying Bob. She can sign this TX and send it to Bob for him to keep. Bob creates a TX with the same outputs, signs it, and gives it to Alice. Now there are two versions of the same commitment transaction, each paying the participants the same amount of money. We'll get to the *why* in a moment.
 
 ![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update.jpg)
 
-At this point there is a first incentive for one of the participants to cheat. A few days after both parties agreed on the updated commitment TX, Alice has received the good she paid for. It would now be in her best interest to broadcast the first commitment TX sending her the entire money. Bob, on the other hand, has an interest in the more recent state hitting the chain.
+At this point there is a first incentive for one of the participants to cheat. A few days after both parties agreed on the updated commitment TX, Alice has received the good she paid for. It would be in her best interest to broadcast the first commitment TX sending her the entire money in tha channel. Bob, on the other hand, has an interest in the more recent state hitting the chain.
 
 ![Updated commitment transaction modifying the channel state](/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview.jpg)
 
-All commitment TXs are valid Bitcoin transactions. Although they are meant to stay on the Lightning Network, they can be broadcast on-chain at any time. Blockchain nodes are agnostic of payment channels and have no way to verify whether a broadcast transaction represents a recent or old state.
+All commitment TXs are valid Bitcoin transactions. Although they are meant to stay on the Lightning Network, they can be broadcast on-chain at any time. Blockchain nodes are agnostic of payment channels and have no way to verify whether a broadcast transaction represents the most recent channel state or an old one.
 
-The Lightning Network has strong incentives in place for payment channels participants to act honestly. If Alice was to broadcast an old state, Bob would be credited the entire balance of the channel and vice versa. How does that work?
+In the Lightning Network strong incentives were put in place for payment channels participants to act honestly. If Alice was to broadcast an old state, Bob would be credited the entire balance of the channel and vice versa. How does that work?
 
 #### Preventing Participants from Broadcasting old States
 
-Here, we finally get to answer why Alice and Bob needed to create two versions of the same transaction earlier.
+Here, we finally get to answer why Alice and Bob needed to create two versions of the same transactions earlier.
 
-The tools we have at our disposal for preventing Alice from submitting the old state are the spending conditions of the outputs commitment transaction. The idea is to give Bob time to notice that Alice broadcast an old state and to provide him with a tool to claim the entire channel balance when it happens. We combine two different mechanisms to guarantee said behavior: timelocks and one-time private keys. Let's give Bob some time to react to Alice's cheating attempt first.
+The tools we have at our disposal for preventing Alice from submitting an old state are the spending conditions of the output's commitment transaction. The idea is to give Bob time to notice that Alice broadcast an old state and to provide him with a tool to claim the entire channel balance when it happens. We combine two different mechanisms to guarantee said behavior: timelocks and one-time private keys. Let's give Bob some time to react to Alice's cheating attempt first.
 
 #### Using Timelocks in the Spending Condition
 
