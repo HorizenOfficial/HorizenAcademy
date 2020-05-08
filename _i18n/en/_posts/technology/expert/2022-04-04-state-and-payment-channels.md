@@ -111,7 +111,7 @@ Only at this point is Alice safe to broadcast her funding transaction. She knows
 
 The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
 
-### Updating Channel Balance - Layer-Two Transaction
+### Commitment Transactions - Updating the Channel Balance
 
 Now Alice wants to make a first transaction paying Bob, maybe because she bought something in his shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in the funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spending conditions defined when the channel was established.
 
@@ -131,72 +131,102 @@ In the Lightning Network strong incentives were put in place for payment channel
 
 Here, we finally get to answer why Alice and Bob needed to create two versions of the same transactions earlier.
 
-The tools we have at our disposal for preventing Alice from submitting an old state are the spending conditions of the output's commitment transaction. The idea is to give Bob time to notice that Alice broadcast an old state and to provide him with a tool to claim the entire channel balance when it happens. We combine two different mechanisms to guarantee said behavior: timelocks and one-time private keys. Let's give Bob some time to react to Alice's cheating attempt first.
+The tools we have at our disposal for preventing Alice from submitting an old state are the spending conditions of the commitment transaction outputs. The idea is to give Bob time to notice that Alice cheated by broadcasting an old state and to provide him with a tool to claim the entire channel balance. We combine two different mechanisms to guarantee said behavior: timelocks and one-time private keys. Let's give Bob some time to react to Alice's cheating attempt first by introducing a timelock.
 
 #### Using Timelocks in the Spending Condition
 
-We need to make sure Alice cannot spent the UTXO of the first commitment transaction right away if she broadcasts it. Miners will accept the old commitment TX as soon as it is submitted on-chain. We cannot prevent this using the spending conditions. What we can prevent though, is Alice spending the UTXO right away. Therefore, we place a timelock in it.
+We need to make sure Alice cannot spent the UTXO of the first commitment transaction right away if she broadcasts it. Miners will accept the old commitment TX as soon as it is submitted on-chain. We cannot prevent this using the spending conditions. What we can prevent though, is Alice actually spending the money. Therefore, we place a timelock in it.
 
-Bitcoin and most other Bitcoin-based protocols support essentially two different types of timelocks: absolute and relative. The absolute timelock `CheckLockTimeVerify` makes funds spendable at a defined time, e.g. 10 pm tomorrow night. The relative timelock `CheckSequenceVerify` starts a countdown as soon as a transaction is confirmed. The time unit for relative timelocks is a number of blocks, e.g. the output might become spendable in 100 blocks. When a timelock is placed in a transaction output, it basically adds another item to the checklist nodes will go through when validating a transaction. Besides checking whether the UTXO was previously unspent and a valid signature was presented nodes check if either the absolute time has been crossed or the specified amount of blocks has been passed.
+Bitcoin and most other Bitcoin-based protocols support essentially two different types of timelocks: absolute and relative ones. The absolute timelock `CheckLockTimeVerify` makes funds spendable at a defined time, e.g. 10 pm tomorrow night. The relative timelock `CheckSequenceVerify` starts a countdown as soon as a transaction is confirmed. The time unit for relative timelocks is a number of blocks, e.g. the output might become spendable in 100- blocks time. When a timelock is placed in a transaction output, it basically adds another item to the checklist nodes will go through when validating a transaction. Besides checking whether the UTXO was previously unspent and a valid signature was presented nodes check if the absolute time has been crossed or if the specified amount of blocks has been passed.
 
-The output we modify to prevent Alice from cheating is in the first transaction 002A. It was created and signed by Bob before it was handed to Alice. Let's assume Alice and Bob agreed to provide each other with a 10 day rebuttal time. In reality, this would mean a relative timelock of 1440 blocks in Bitcoin or 5760 blocks in Horizen. For the sake of demonstration, we will simply pretend we can use 10 days as a time unit.
+The output we modify to prevent Alice from cheating is the one in the first commitment transaction: the one she would broadcast to steal Bob's 0.2 BTC. There are to versions of this transaction: one created and signed by Alice and sent to Bob, the other created and signed by Bob and shared with Alice. We denote the version signed by Bob as TX 002**A**, as Alice is the one that can broadcast it (her signature is missing).
+
+Let's assume Alice and Bob agreed to provide each other with a 10 day rebuttal-period. If one were to cheat, the other had 10 days to react. In reality, this would mean a relative timelock of 1440 blocks in Bitcoin or 5760 blocks in Horizen. For the sake of simplicity, we will simply pretend we can use 10 days as a time unit.
 
 ![Securing transaction outputs using timelocks](/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock.jpg)
 
-Remember this transaction initially served as an assurance for Alice that she would get refunded in case Bob becomes unresponsive. But this is also the transaction she would broadcast in order to steal Bob’s 0.2 BTC. By placing a timelock in the output, we have now insured Bob has time to react. As soon as Alice broadcasts the transaction, she has to wait for 10 days before the output becomes spendable with her signature. If Bob notices he can go ahead and spend the money immediately using his signature.
+Remember this transaction initially served as an assurance for Alice that she would get refunded in case Bob becomes unresponsive. By placing a timelock in the output, we have now ensured Bob has time to react in case Alice were to cheat. As soon as Alice broadcasts the transaction, she has to wait for 10 days before the output becomes spendable with her signature. If Bob notices he can go ahead and spend the money immediately using his signature.
 
-The timelock achieved our first objective, but it introduced a new weakness. If you look at the transaction above, Bob can take the money as soon as the transaction is confirmed. If he was sneaky, he would have Alice fund the channel and pretend to be unresponsive until she would finally decide to broadcast the transaction refunding her. Now he would go ahead and spend the UTXO. It's time to apply the second mechanism ensuring honest behavior: one-time private keys.
+The timelock achieved our first objective: Bob has tiome to notice the cheating attempt and react. At the same time it introduced a new weakness. If you look at the transaction above, Bob can take the money as soon as the transaction hits the blockchain. If he was sneaky, he would have Alice fund the channel and pretend to be unresponsive until she would finally decide to broadcast the transaction in an attempt to get refunded. Now Bob could go ahead and spend the UTXO right away. It's time to apply the second mechanism ensuring honest behavior: one-time private keys.
 
-#### Generating One-Time Keys
+#### Using One-Time Keys to Prevent Theft
 
-**Note**: For the sake of simplicity we consider [private keys]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}) and [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) as equivalent. Digital signatures are generated using a private key and a message. During the verification, the signature, public key and message are taken as inputs and the output is binary: valid or invalid.
+**Note**: For the sake of simplicity we consider [private keys]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}) and [digital signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) as "equivalent" in this article. Digital signatures are generated using a private key and a message. During the verification, the signature, public key and message are taken as inputs and the produced output is binary: either the signature is valid or not.
 
-Requring a single signature from Bob is not enough to protect Alice, so we expand on the second spending condition and make it a MultiSig account. Instead of using the initially used private keys `Alice1` and `Bob1` in the spending condition, we use a new pair of keys generated by each participant respectively.
+Requring Bob to simply sign-off on the TX does not protect Alice, so we expand on the second spending condition and make it a MultiSig account. Instead of using the initially used private keys `Alice1` and `Bob1` in the spending condition, we use a new pair of keys generated by each participant respectively.
 
-These keys are generated when the first commitment TX is created and the public keys derived from them are exchanged and placed in the spending condition. When participants agree on the first channel update, in this case Alice paying Bob 0.2 BTC, the one-time keys `Alice2` and `Bob2` are exchanged.
+These keys are generated when the first commitment TXs (TX 002A and 002B) are created and the public keys derived from them are exchanged and placed in the spending condition. When participants agree on the first channel update, here Alice paying Bob 0.2 BTC (TX 003), the one-time keys `Alice2` and `Bob2` used in the original commitment transaction's spending condition are exchanged.
 
 ![Generating One-Time Keys for each Commitment Transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys.jpg)
 
-At this point, Bob can be sure the transaction he already signed (002A) can’t be broadcast and spent immediately by Alice due to the timelock. Alice can be sure that if Bob becomes unresponsive, she is save to broadcast the transaction because she has not shared the key `Alice2` yet.
+At this point, Bob can be sure the transaction he already signed (`TX 002A`) can’t be broadcast and spent immediately by Alice due to the timelock. Alice can be sure that if Bob becomes unresponsive, she is save to broadcast the transaction because she has not shared the key `Alice2` yet and Bob can't steal the money.
 
-This also explains why it was importatn that each participant generated a separate version of the same transaction. Remember that TX 002A was created by Bob. He placed the timelock in Alice spending condition to protect himself and without including the second MultiSig Condition Alice would not have agreed to fund the channel in the first place. Since Bob has no interest in broadcasting the first commitment TX it is sufficient for Alice to place a single spending condition in the output.
+This explains why it was important that Alice and Bob generated two versions of the same transaction. Remember that `TX 002A` was created by Bob. He placed the timelock in Alice's spending condition to protect himself from Alice boradcasting an old state. Without including the second MultiSig condition, Alice would not have agreed to fund the channel in the first place. Since Bob has no interest in broadcasting the first commitment TX it is sufficient for Alice to place a single spending condition her version's output.
 
 ![Generating One-Time Keys for each Commitment Transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection.jpg)
 
-Above you can see the two different versions of the initial commitment TX refunding Alice. The green signature indicates which participant has signed which version and hence who created it. Going forward both, Alice and Bob will generate a new one-time private key with each channel update and exchange the keys used in the previous channel update's spending conditions.
+Above you can see the two different versions of the initial commitment TX refunding Alice. The green signature indicates which party has created and already signed it. Going forward both, Alice and Bob will each generate a new one-time private key with every channel update and exchange the one-time keys used in the previous transaction.
 
-Before we explained how the trustlessness is insured we were already one step ahead. Alice had agreed to pay Bob 0.2 BTC and the keys `Alice2` and `Bob2` were already exchanged. The level of security we wanted to achieve is now guaranteed: Bob has time to react (10 days) when Alice tries to cheat and he can claim the entire channel balance because he can provide `Alice2`, `Bob2` and `Bob1`.
+Before we explained how trustlessness is ensured we were already one step further. Alice had agreed to pay Bob 0.2 BTC and the keys `Alice2` and `Bob2` were exchanged. The level of security we wanted to achieve is now guaranteed: Bob has time to react (10 days) when Alice tries to cheat and he can claim the entire channel balance because he can provide `Alice2`, `Bob2` and `Bob1`.
 
-One of the biggest innovation introduced with blockchain technology was solving the double spend problem without a central point of control. This property is also crucial in this context, as it ensures the output in TX 002A is only spent once: either by satisfiying the first spending condition - Alice timelock - or the second spending condition - Bob's MultiSig.
+One of the innovations introduced with blockchain technology was solving the double spend problem without a central point of control. This property is also crucial in this context, as it ensures the output in `TX 002A` is only spent once: either by satisfiying the first spending condition - Alice timelock - or the second spending condition - Bob's MultiSig.
 
-breach remedy tx
+#### The Second Commitment Transaction
 
-Revocable Delivery Transactions
+The last set of transactions we need to look at are the ones paying Bob 0.2 BTC. While we looked at the, schematically, we didn't consider the spending conditions placed in their outputs yet.
 
-##### Revocable Sequence Maturing Contract - RSMC
+![The first channel update happening in the second commitment transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/second-commitment-transaction.jpg)
 
-"As its name indicates, it’s revocable because a layer-two transaction can be replaced by a newer one. It uses the timelock function OP_CHECKSEQUENCEVERIFY, so there is a sequence, which represents the time in the blockchain(as in block height or timestamp). Because the money is locked in time, it’s maturing till it becomes spendable when enough time has passed. Together this design was given the name Revocable Sequence Maturing Contract."
+The first version signed by Bob and broadcastable by Alice uses the same spending conditions in Alice's output of 0.8 BTC as the previous commitment TX did. It serves the same function: if Alice made a second payment to Bob she would again be incentivized to broadcast an old state once she received the good. The only difference is the updated set of one-time keys (`Alice3` and `Bob3`) needed to satisfy the MultiSig output.
 
-can only serve two people
-
-##### Hashed Time Lock Contract - HTLC
-
+This time, Alice also secured Bob's output in `TX 003B` with a timelock and a MultiSig based spending condition. If the next transaction (`TX 004`) was paying Alice, Bob would thereafter have an incentive to broadcast an old state and Alice is protecting herself against this.
 
 ### Closing a Payment Channel - Cross-Layer Transaction
 
+The bilateral payment channel between Alice and Bob can be closed in three different ways, two of which we have covered at least indirectly. If no dispute occures, both parties will agree on closing the channel mutually. When one party becomes unresponsiven, the other party might unilaterally close the channel. If one party tries cheating the other and gets caught, claiming the entire channel balance via the revocation mechanism is the third and last option to close a channel.
+
 #### Mutually Closing a Channel
 
-agreement
+Let's assume Alice and Bob realize that they won't use their channel any more. Both are happy with the current state of the channel paying Bob 0.2 BTC and Alice the remaining 0.8 BTC.
+
+![The first channel update happening in the second commitment transaction](/assets/post_files/technology/expert/4.3-state-and-payment-channels/mutual-channel-closing.jpg)
+
+They will cooperatively create and sign a closing transaction, with both outputs spendable immediately by either participant. This is the best case scenario: no party has their money locked.
 
 #### Unilaterally Closing a Channel
 
-via timeout or payment hash. participants have to wait, hence suboptimal
+The second best scenario is one of the participants broadcasting the current channel state. The commitment transaction being broadcasted in this scenario is the one we modified in two steps: using a time lock first and adding a MultiSig output next to prevent Bob from stealing Alice's money.
+
+This scenario is good in that both parties get the amount of money that they rightfully own. The only caveat is that the party broadcasting the commitment transaction has their funds locked for whatever time period was agreed upon when the transacion was created.
 
 #### Revokation
 
-ugly, cheater got caught
+The worst case scenario, at least for one of the channel participants is the revocation mechanism. If Alice tried to cheat Bob and he notices in time, he will claim the entire channel balance by fulfilling the MultiSig spending condition.
 
-use "posting stale state" to mix things up
+### Lightning Terminology
+
+Commitment transactions are sometimes referred to as *Revocable Sequence Maturity Contracts* (RSMCs).
+
+- Commitment transactions are *revocable* as they can be replaced with more recent channel updates.
+- *Sequence* refers to the sequence of blocks used in the relative timelock
+- *Maturity* refers to those outputs only becoming spendable after the relative lock time has passed - the contract has matured.
+
+The transaction granting one party the entire channel balance in case the other was cheating is called the *Breach Remedy Transaction*.
+
+- *Breach* as in breach of a contract, in which both parties agreed on only ever broadcasting recent channel states on-chain
+- *Remedy* as in compensating the cheated party for said breach of contract.
+
+While even this relatively simple composition of established features and functionalities supported by bitcoin-based protocols allows for a very useful construction, the truly interesting stuff happens, when you connect several payment channels to a network of channels - such as Lightning. In order to do so, we need another type of "contract" that extends the functionality of RSMCs- the *Hashed Time Lock Contract* or HTLC.
+
+### Hashed Time Lock Contracts - HTLCs
+
+
+
+
+
+
+
+
 
 
 ### Building a Network with HTLCs
