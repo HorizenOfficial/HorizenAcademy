@@ -130,11 +130,9 @@ The length of a Withdrawal Epoch, defined over a number of mainchain blocks, is 
 
 ### Initiating a Backward Transfer on Sidechain
 
-A regular Backward Transfer in a UTXO-based sidechain works very similarly to a regular blockchain-internal transaction. Previously unspent transaction outputs are consumed as inputs, spending of which is authorized through digital signatures. Outputs meant to be spendable on the mainchain must specify the receiver's mainchain address and the amount to be transferred.
+A regular Backward Transfer in a UTXO-based sidechain works very similarly to a regular blockchain-internal transaction. Previously unspent transaction outputs are consumed as inputs, spending of which is authorized through digital signatures. Outputs meant to be spendable on the mainchain must specify the receiver's mainchain address and the amount to be transferred. Because backward transfers are a special transction type by design, there is no need to specifically refer to the mainchain in the outputs.
 
 All Backward Transfers initiated within a single Withdrawal Epoch are grouped into a *Backward Transfers Transaction* (BTTx). This is a regular multi-output transaction in which all outputs are spendable on the mainchain. This Backward Transfers Transaction is then placed in the Withdrawal Certificate to be broadcast on the mainchain.
-
-**Where in the output is the information included, that it is meant to be transferred to mainchain? In Forward Transfers the ledgerId indicates a cross-chain transfer. How about Backward Transfers?**  ->  (MB) **Backward Trasfer are a special transaction, that trasfer to MC, so no need to specify!**
 
 ### Initiating a Backward Transfer on the Mainchain
 
