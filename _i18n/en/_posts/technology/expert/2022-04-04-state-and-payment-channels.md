@@ -246,26 +246,16 @@ Perun channels introduces the concept of *virtual payment channels* over interme
 
 ## Summary
 
+Let's recap: payment channels allow you to transfer cryptocurrecies in a secondary environment, built on top of the blockchain. They are constructed by cleverly using well known primitives: Pay to Script Hash addresses, [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) and time locks.
 
+Payment channels are trustless by design. Whereas the underlying blockchain derives it's security guarantees from the computational power supporting the network, the counterparty risk in payment channels is eliminated through strong economic incentives to behave honestly.
 
+A bilateral payment channel is simply a 2-of-2 MultiSig account, an output of the funding transaction that both participants need to sign off in order to spend from. Channel updates happen by exchanging signed commitment transaction, all of them spending from the same initial funding transaction and basically replacing one another subsequentially.
 
+Both parties are prevented from broadcasting old states, by a time lock that only lets them spend "their" funds after some period of time. If an old state is broadcast by Alice, Bob can use this time to broadcast a breach remedy transaction crediting him the entire channel balance. Because the risk of losing all the funds in the channel is so high, channel participants usually opt for one of two other closing mechanisms. In a mutual close both parties sign a transaction granting both of them instant access to their share of the channel balance. In case one party becomes inactive, the other party will broadcast the most recent commitment transaction with the only caveat of having their funds locked for some time.
 
+Payments can be routed through several existing payment channels using hashed time lock contracts (HTLCs). Connecting individual channels is the basis for forming payment channel networks like Lightning, Raiden or Bold.
 
+State channels expand on payment channels in that they not only allow the transfer of money but also the transmission of state updates, e.g. to move the interaction with a [smart contract] or dApp into a secondary environment.
 
-
-"Layer 2 solutions share a common insight: once we have the hard kernel of certainty provided by a public blockchain, we can use it as an anchor for cryptoeconomic systems that extend the usefulness of blockchain applications.
-Now that we’ve surveyed some examples, we can be more specific about how layer 2 solutions apply this insight. The economic mechanisms used by layer 2 solutions tend to be interactive games: they work by creating incentives for different parties to compete against or “check” one another. A blockchain application can assume that a given claim is likely true, because we’ve created a strong incentive for another party to provide information showing it to be false.
-In state channels, this is how we confirm the final state of the channel — by giving parties a chance to “rebut” each other. In Plasma, it’s how we manage fraud-proofs and withdrawals. In Truebit, it’s how we ensure that solvers’ tell the truth — by giving an incentive to verifiers to prove the solver wrong."
-
-
-layers built “on top” of ethereum won’t always have the same guarantee as on-chain operations. But they can still be sufficiently final and secure to be very useful — especially when that slight decrease in finality lets us perform operations much faster or with lower overhead costs.
-
-
-
-
-
-
-privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
-
-
-This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
+It's worth noting that layers built on top of existing blockchain protocols won't always provide the same level of security guarantees as the underlying blockchain, but the level of security is still high enough to make the highly useful for several use cases.
