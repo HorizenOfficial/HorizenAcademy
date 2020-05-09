@@ -12,7 +12,7 @@ further_reads: [mastering_lightning, till_its_lightning_fast, general_state_chan
 
 A common criticism of blockchain technology is that it doesn't scale in a decentralized setting and therefore won't be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can allow for more interaction leveraging the security of blockchain with the capacity we already have available? Meet layer-two transactions on payment or state channels.
 
-![Scaling](/assets/post_files/technology/expert/1.5-DAGs/scaling_dag_D.jpg)
+![Scaling](/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_D.jpg)
 
 We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that allows to spread the workload otherwised performed by a single set of nodes on the mainchain to several sets of nodes, each responsible for their own sidechain.
 
@@ -22,7 +22,7 @@ Here, we will cover another highly promising approach to make blockchains securi
 
 Payment channels are no trivial topic and there are many different projects working on them. In order to cover the process from opening a channel, to updating its balance and lastly closing it we will, for the most part of this article, focus on the best-known and most active payment channel implementation: the Lightning Network. Afterward we will give a glimpse into the rest of the state channel world.
 
-### Payment Channels
+## Payment Channels
 
 Before we look into how several payment channels can be combined to form a network such as Lightning, let's consider an example where two users, Alice and Bob want to use a payment channel to save on transaction fees as they frequently send money back and forth.
 
@@ -35,16 +35,15 @@ The primitives used to build a payment channel are mostly familiar if you have r
 
 One premise is the construction being trustless by design: you must not have to rely on your counterparty to transact securely. Whereas the underlying blockchain derives it's security from the computational power of its miners in [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains it is derived from economic (dis)incentives in the case of payment channels. Namely, when one party tries to cheat, the other party will be granted all the money within the bilateral channel. This allows participants to consider updates to the channel "final" although only computed locally.
 
-#### Payment Channels are MultiSig Addresses
+### Payment Channels are MultiSig Addresses
 
 Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent. A 2-of-2 MultiSig account is based on two private keys, both of which need to sign a transaction for it to be valid.
 
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
+![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_D.jpg)
 
 The spending conditions for MultiSig account are defined in the [*redeem script*](https://bitcoin.org/en/glossary/redeem-script). The hash of the redeem script functions as the address - a *Pay to Script-Hash* (P2SH) address. This address and the information contained in the redeem script comprises the locking script of UTXO sent to the P2SH address.
 
-#### Exchanging Signed Transactions
+### Exchanging Signed Transactions
 
 The general idea of a payment channel is the following: two frequently transacting parties deposit money via a *funding transaction* in a 2-of-2 MultiSig account, opening the channel (`TX 001` in example below). Both parties need to sign off on any TX, that spends from this account. Both parties exchange signed transactions repeatedly spending from the same funding transaction whenever they transact (`TX 002` - `TX n`).
 
@@ -54,9 +53,9 @@ These *commitment transactions* updating the channel state are, although valid o
 
 This allows a practically unlimited number of bilateral transactions to occure, while only broadcasting two transactions: the funding TX opening the channel, and the closing TX settling the current balance on-chain.
 
-#### Payment Channel Implementations
+### Payment Channel Implementations
 
-Payment channel networks are built from multiple separate channels that can be coupled when needed. There are several payment channel networks built on top of differnt blockchain protocols, some even making different protocols interoperable.
+Payment channel networks are built from multiple separate channels that can be coupled when needed. There are several payment channel networks built on top of differnt blockchain protocols, some even making protocols interoperable.
 
 The best known payment channel protocol built on Ethereum is [Raiden](https://raiden.network/101.html). It supports the transfer of ether, as well as ERC20 tokens off-chain.
 
@@ -74,11 +73,9 @@ When you think about the Lightning network there are two systems to consider. On
 
 The Lightning network relies on two differnt types of "contracts". Simple bilateral payment channels are realized using *Revocable Sequence Maturity Contracts* (RSMCs). Connecting payment channels to a network happens based on *Hashed Time Lock Contracts* (HTLCs). We will pick the terms up later in the article, at a time where they will make a lot more sense to you. In the following sections we will mostly focus on bilateral payment channels. A detailed description of payment channel networks is not in scope for this article.
 
-### Opening a Payment Channel - Cross-Layer Transaction
+### Opening a Payment Channel - The Funding Transaction
 
 A single participant, usually the one paying the other, opens the channel by creating a funding transaction. In our example Alice wants to open a channel with Bob who might have an online shop that she uses regularly. As we already know, a payment channel is 2-of-2 MultiSig account. The first thing we need to ensure is that Alice doesn't loose her money when Bob becomes unresponsive and the money gets stuck in the channel. This doesn't even have to be due to bad intentions; Bob could simply loose the key needed to sign of any spending from the MultiSig.
-
-#### Unilateral Funding
 
 At the time of writing the Lightning network only supports unilateral channel funding. Bilateral funding will be available as soon as spending from unsigned transcations is supported with the implementation of a new [SIGHASH flag](https://raghavsood.com/blog/2018/06/10/bitcoin-signature-types-sighash)(SIGHAS_NOINPUT).
 
@@ -92,7 +89,7 @@ Only at this point is Alice safe to broadcast her funding transaction. She knows
 
 The established payment channel now consists of a signed and broadcast funding transaction and a first commitment transaction serving as an insurance for Alice. This commitment transaction is signed by both participants but ideally it is never broadcast, although it is a valid on-chain transaction.
 
-### Commitment Transactions - Updating the Channel Balance
+### Updating the Channel Balance - Commitment Transactions
 
 Now Alice wants to make a first transaction paying Bob, maybe because she bought something in his shop. The idea is to create a new commitment transaction, updating the channel balance. It's important to note that all commitment transactions spend the same UTXO created in the funding transaction. This also means that all commitment transactions need to be signed by both participants as these are the spending conditions defined when the channel was established.
 
@@ -162,7 +159,7 @@ The first version signed by Bob and broadcastable by Alice uses the same spendin
 
 This time, Alice also secured Bob's output in `TX 003B` with a timelock and a MultiSig based spending condition. If the next transaction (`TX 004`) was paying Alice, Bob would thereafter have an incentive to broadcast an old state and Alice is protecting herself against this.
 
-### Closing a Payment Channel - Cross-Layer Transaction
+### Closing a Payment Channel
 
 The bilateral payment channel between Alice and Bob can be closed in three different ways, two of which we have covered at least indirectly. If no dispute occures, both parties will agree on closing the channel mutually. When one party becomes unresponsiven, the other party might unilaterally close the channel. If one party tries cheating the other and gets caught, claiming the entire channel balance via the revocation mechanism is the third and last option to close a channel.
 
@@ -201,21 +198,23 @@ While even this relatively simple composition of established features and functi
 
 ### Hashed Time Lock Contracts - HTLCs
 
-Let's consider a situation where Alice and Bob want to transact using the Lightning network but don't have an open payment channel, yet. Both do have a channel with a third intermediary person, let's call her Ingrid. Instead of opening a new channel, can't we just route a payment from Alice through Ingrid to Bob? It turns out we can and what we need to do so is a Hashed Time Lock Contract.
+Let's consider a situation where Alice and Bob want to transact using the Lightning network but don't have an open payment channel, yet. Both do have a channel with an intermediary person, let's call her Ingrid. Instead of opening a new channel, can't we just route a payment from Alice through Ingrid to Bob? It turns out we can and what we need to do so is a Hashed Time Lock Contract.
 
-But does it make sense to worry about this construction if Alice and Bob can just create their own payment channel? You can consider each participant in the Lightning network a node *n*, that has some connections *e* (from *edges* as they are called in graph theory) to other nodes. The number of edges needed to connect a set of nodes individually can be computed as
+But does it make sense to worry about this construction if Alice and Bob can just create their own payment channel? You can consider each participant in the Lightning network a node *n*, that has a number of connections *e* (from *edges* as they are called in graph theory) to other nodes. The number of edges needed to connect a set of nodes individually can be computed as
 
 $$
 e = \frac{n(n-1)}{2}
 $$
 
-To connect three nodes, you need three edges, for five nodes you need ten edges, and for 5000 nodes you need 12,497,500 edges. In other words: individual connections don't scale very well.
+To connect three nodes, you need three edges, for five nodes you need ten edges, and for 5000 nodes you need 12,497,500 edges. In other words: individual connections don't scale well.
 
 As the name suggests, HTLCs rely on cryptographic [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) and for the most part on two of their key properties: being preimage resistant one-way functions and mapping inputs to a large output space making them collision resistant. In other words, you can't reverse a hash function and it's practically impossible to find two different inputs producing the same output.
 
 #### Building a Network with HTLCs
 
 The general idea of routing a payment through several payment channels is the payee creating a secret and passing the secrets hash to the payer as well as all the intermediaries. If Alice were to pay Bob through Ingrid, Bob would create a secret and provide its hash to Alice and Ingrid. Alice creates a (commitment) transaction paying Ingrid and Ingrid creates a (commitment) transaction paying Bob. The hash is part of the spending condition in each of those transactions and revealing its preimage (the secret) allows a a participant to claim the money. Once all transactions are set up, Bob reveals his secret and claims his money from Ingrid. Ingrid learns the secret in the process and uses it to unlock Alice's transaction paying her.
+
+![Routing a payment through an intermediary from Alice to Bob using HTLCs](/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-routing.jpg)
 
 What needs to be ensured by design is that the intermediaries are never at risk of losing money and that funds can be retrieved from the payment route in case one of the parties becomes inactive.
 
@@ -266,62 +265,7 @@ layers built “on top” of ethereum won’t always have the same guarantee as 
 
 
 
-
-
-
-## FR's 
-
-Mastering Lightning - https://github.com/lnbook/lnbook
-
-https://medium.com/swlh/till-its-lightning-fast-uncover-the-development-of-the-lightning-network-fbd01bc0ea80#
-
-https://medium.com/@yyforyongyu/till-its-lightning-fast-uncover-the-lightning-network-transactions-f3180e467857
-
-Rene Pickard Lighning Deck https://upload.wikimedia.org/wikipedia/commons/b/b7/Introduction_to_the_Lightning_Network_Protocol_and_the_Basics_of_Lightning_Technology_%28BOLT_aka_Lightning-rfc%29.pdf
-
-Bitcoin Magazine 3 Part Series https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
-
-
-Game Channels: State Channels with integrated PRNG https://eprint.iacr.org/2019/362.pdf
-
-Perunn: Virtual Payment Hubs over Cryptocurrencies https://eprint.iacr.org/2017/635.pdf
-
-Raiden Network 101 https://raiden.network/101.html
-
-Lightning Paper: https://lightning.network/lightning-network-paper.pdf
-
-General State Channel Networks https://eprint.iacr.org/2018/320.pdf
-
-Counterfactual: Generalized State Channels https://l4.ventures/papers/statechannels.pdf
-
-State Channels on Eth https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4
-
-
-
-
-
-
-This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
-
-
-
 privacy. high in bidirectionl channel. Nobody will ever know about intermediary balances and payments as only the final state is broadcast on-chain. Even when routing a payment through several channels privacy is generally better compared to eternally recorded on-chain transactions, although relayers might get information....
 
 
-#### Bilateral Funding
-
-3 transactions in total:
-
-Alice funds channel with 1 coin. outputs locking script based on both, Alice's and Bob's signatures
-
-Bob funds channel with 2 coins. outputs locking script based on both, Alice's and Bob's signatures
-
-Both are not signed.
-
-Now Commitment Transaction. Inputs are the two outputs above. Outputs refund participants.
-
-not possible yet, new sighash flag needed to allow users spending outputs not yet confirmed.
-
-SIGHASH explained https://raghavsood.com/blog/2018/06/10/bitcoin-signature-types-sighash
-
-"For instance, Alice creates the commitment transaction, signs it, sends it to Bob, and Bob will send it back with his signature. Or they could exchange their signatures for this particular transaction. Either way, the result is that they both have the same spendable commitment transaction."
+This property is based on the principle of *total consent*. For every modification of the state within a state channel requires explicit cryptographic consent or proof from all parties involved. While this has the advantage of all state changes (most recent ones) being broadcastable to the blockchain at all times, it requires all parties to keep records of the changes and be responsive at all times.
