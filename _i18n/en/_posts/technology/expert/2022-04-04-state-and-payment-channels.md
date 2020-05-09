@@ -50,52 +50,29 @@ The general idea of a payment channel is the following: two frequently transacti
 
 ![The Concept of Payment Channels](/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept.jpg)
 
-These *commitment transactions* updating the channel state are, although valid on-chain transactions, never broadcast but only kept locally by participants. They serve as verifiable receipts of channel state modifications. Only when participants want to close the channel, they will broadcast the final channel update via a *closing transaction* to the blockchain (`TX (n+1)`).
+These *commitment transactions* updating the channel state are, although valid on-chain transactions, never broadcast but kept locally by the channel participants. They serve as verifiable receipts of channel state modifications. Only when participants want to close the channel, they will broadcast a final channel update via a *closing transaction* on the blockchain (`TX (n+1)`).
 
-This allows an infinite number of bilateral transactions to occure, while only broadcasting two transactions: the funding TX opening the channel, and the closing TX settling the current balance on-chain.
+This allows a practically unlimited number of bilateral transactions to occure, while only broadcasting two transactions: the funding TX opening the channel, and the closing TX settling the current balance on-chain.
 
 #### Payment Channel Implementations
 
 Payment channel networks are built from multiple separate channels that can be coupled when needed. There are several payment channel networks built on top of differnt blockchain protocols, some even making different protocols interoperable.
 
-**TODO**
+The best known payment channel protocol built on Ethereum is [Raiden](https://raiden.network/101.html). It supports the transfer of ether, as well as ERC20 tokens off-chain.
 
-[Raiden](https://raiden.network/101.html) is a payment channel network build on Ethereum.
+[Bolt](https://eprint.iacr.org/2016/701.pdf) is a network proposed by Matthew Green and Ian Miers in 2016. Bolt stands for *Blind Off-chain Lightweight Transactions*. It is currently [being considered](\footnote{\url{https://github.com/ZcashFoundation/libbolt}}) for the Zcash protocol by the Zcash foundation but could also be deployed on top of other blockchain protocols. Bolt achieves high privacy guarantees by leveraging *blind signatures* and *zero knowledge proofs*. To make privacy guarantees even stronger, channel opening can be done with *shielded transactions*. The authors not only plan to build Bolt on Zcash, but also retrofit it to offer a private payment channel option on Bitcoin and Litecoin.
 
-[Bolt](https://eprint.iacr.org/2016/701.pdf) is an anonymous payment channel network
+The [Lightning Network](https://lightning.network/lightning-network-paper.pdf) is a payment channel network built on top of the Bitcoin protocol, but also deployed on Litecoin. It is the second-layer network that has seen the most activity in terms of development as well as [transacted volume](https://1ml.com/). We use the lightning network as an example to lead you through the creation of a payment channel, updating its balance and finally closing it.
 
-[*Bolt: Anonymous Payment Channels for Decentralized Currencies*](\footnote{\url{https://eprint.iacr.org/2016/701.pdf}}) is a network proposed by Matthew Green and Ian Miers in 2016. Bolt stands for *Blind Off-chain Lightweight Transactions*. It is currently [being considered](\footnote{\url{https://github.com/ZcashFoundation/libbolt}}) for the Zcash protocol by the Zcash foundation.
-
-Privacy is achieved by leveraging [*blind signatures*] and [*zero knowledge*] proofs. To make privacy guarantees even stronger, channel opening can be done with [*shielded transactions*]. The authors not only plan to build Bolt on Zcash, but also retrofit it to offer a private payment channel option on Bitcoin and Litecoin.
-
-The [Lightning Network](https://lightning.network/lightning-network-paper.pdf) is a payment channel network built on top of the Bitcoin protocol, but also deployed on Litecoin. It is the second-layer network that has seen the most activity in terms of development as well as [transacted volume](https://1ml.com/). We use the lightning network as an example to lead you through the creation of a payment channel, updating its balance and finally closing it. While the different implementations of second-layer payment networks differ, the general idea remains and by focusing on a single example we can take a more in-depth look at the technology.
+Implementations of second-layer payment networks differ in their details but the general idea remains and by focusing on the primitives of Lightning as a single example we can take a more in-depth look at the technology in general.
 
 ## Lightning Network
 
-There are two systems to be focused on here, one is the original Bitcoin network, the other is the lightning network. Both systems are circulating bitcoins by making different types of transactions, depending on where the money flows, they can be categorized into,
+When you think about the Lightning network there are two systems to consider. One is the original Bitcoin network, the other is the Lightning network. Both systems are circulating bitcoin by making different types of transactions. But Lightning is not limited to Bitcoin.
 
-"Any blockchain with the necessary characteristics can plug into the Lightning Network, which means intermediary nodes are able to process transfers between users holding different assets in a non-custodial manner. For example, a node connected to both the Bitcoin and Litecoin networks can route a payment from a Litecoin user to a Bitcoin user via the Lightning Network."
+> "Any blockchain with the necessary characteristics can plug into the Lightning Network, which means intermediary nodes are able to process transfers between users holding different assets in a non-custodial manner. For example, a node connected to both the Bitcoin and Litecoin networks can route a payment from a Litecoin user to a Bitcoin user via the Lightning Network." - [Kyle Torpey](https://en.longhash.com/news/litecoins-role-in-the-development-of-bitcoins-lightning-network)
 
-Essentially, transactions made in the lightning network can legitly be broadcasted into the Bitcoin network, which means the layer-two transaction can be viewed as a specialized layer-one transaction.
-
-immediately releases remote funds to the counterparty, and start a challenge period after which
-the broadcaster receives the remaining local funds"
-
-stack of cheques that they could deposit whenever they want.
-
-open/close: cross-layer transaction as it’s interacting with both networks
-
-Later on, as we will see, the cross-layer transaction is essentially a layer one transaction, with the lightning network as an individual entity of the blockchain.
-
-If the transaction is meant to stay in the lightning network, then it’s called the layer-two transaction
-
-RSMC, Revocable Sequence Maturing Contract. We'll get to this term later on, at a time where it will make a lot more sense to you.
-
-
-
-focus on bidirectional payment channels. connecting them to a network of channels (Lightning Network) via HTLCs out of scope
-
-**Add** Lightning paper 3.5: fidelity bond and breach remedy transaction
+The Lightning network relies on two differnt types of "contracts". Simple bilateral payment channels are realized using *Revocable Sequence Maturity Contracts* (RSMCs). Connecting payment channels to a network happens based on *Hashed Time Lock Contracts* (HTLCs). We will pick the terms up later in the article, at a time where they will make a lot more sense to you. In the following sections we will mostly focus on bilateral payment channels. A detailed description of payment channel networks is not in scope for this article.
 
 ### Opening a Payment Channel - Cross-Layer Transaction
 
@@ -304,7 +281,6 @@ Rene Pickard Lighning Deck https://upload.wikimedia.org/wikipedia/commons/b/b7/I
 
 Bitcoin Magazine 3 Part Series https://bitcoinmagazine.com/articles/understanding-the-lightning-network-part-building-a-bidirectional-payment-channel-1464710791
 
-Bolt: Anonymous Payment Channels https://eprint.iacr.org/2016/701.pdf
 
 Game Channels: State Channels with integrated PRNG https://eprint.iacr.org/2019/362.pdf
 
