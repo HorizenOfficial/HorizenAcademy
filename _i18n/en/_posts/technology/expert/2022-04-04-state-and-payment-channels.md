@@ -64,6 +64,10 @@ Payment channel networks are built from multiple separate channels that can be c
 
 [Bolt](https://eprint.iacr.org/2016/701.pdf) is an anonymous payment channel network
 
+[*Bolt: Anonymous Payment Channels for Decentralized Currencies*](\footnote{\url{https://eprint.iacr.org/2016/701.pdf}}) is a network proposed by Matthew Green and Ian Miers in 2016. Bolt stands for *Blind Off-chain Lightweight Transactions*. It is currently [being considered](\footnote{\url{https://github.com/ZcashFoundation/libbolt}}) for the Zcash protocol by the Zcash foundation.
+
+Privacy is achieved by leveraging [*blind signatures*] and [*zero knowledge*] proofs. To make privacy guarantees even stronger, channel opening can be done with [*shielded transactions*]. The authors not only plan to build Bolt on Zcash, but also retrofit it to offer a private payment channel option on Bitcoin and Litecoin.
+
 The [Lightning Network](https://lightning.network/lightning-network-paper.pdf) is a payment channel network built on top of the Bitcoin protocol, but also deployed on Litecoin. It is the second-layer network that has seen the most activity in terms of development as well as [transacted volume](https://1ml.com/). We use the lightning network as an example to lead you through the creation of a payment channel, updating its balance and finally closing it. While the different implementations of second-layer payment networks differ, the general idea remains and by focusing on a single example we can take a more in-depth look at the technology.
 
 ## Lightning Network
@@ -216,94 +220,62 @@ The transaction granting one party the entire channel balance in case the other 
 - *Breach* as in breach of a contract, in which both parties agreed on only ever broadcasting recent channel states on-chain
 - *Remedy* as in compensating the cheated party for said breach of contract.
 
-While even this relatively simple composition of established features and functionalities supported by bitcoin-based protocols allows for a very useful construction, the truly interesting stuff happens, when you connect several payment channels to a network of channels - such as Lightning. In order to do so, we need another type of "contract" that extends the functionality of RSMCs- the *Hashed Time Lock Contract* or HTLC.
+While even this relatively simple composition of established features and functionalities supported by bitcoin-based protocols allows for a very useful construction, the truly interesting stuff happens, when you connect several payment channels to a network of channels - such as Lightning. In order to do so, we need another type of "contract" that extends the functionality of RSMCs - the *Hashed Time Lock Contract* or HTLC.
 
 ### Hashed Time Lock Contracts - HTLCs
 
+Let's consider a situation where Alice and Bob want to transact using the Lightning network but don't have an open payment channel, yet. Both do have a channel with a third intermediary person, let's call her Ingrid. Instead of opening a new channel, can't we just route a payment from Alice through Ingrid to Bob? It turns out we can and what we need to do so is a Hashed Time Lock Contract.
 
+But does it make sense to worry about this construction if Alice and Bob can just create their own payment channel? You can consider each participant in the Lightning network a node *n*, that has some connections *e* (from *edges* as they are called in graph theory) to other nodes. The number of edges needed to connect a set of nodes individually can be computed as
 
+$$
+e = \frac{n(n-1)}{2}
+$$
 
+To connect three nodes, you need three edges, for five nodes you need ten edges, and for 5000 nodes you need 12,497,500 edges. In other words: individual connections don't scale very well.
 
+As the name suggests, HTLCs rely on cryptographic [hash functions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-03-hash-functions %}) and for the most part on two of their key properties: being preimage resistant one-way functions and mapping inputs to a large output space making them collision resistant. In other words, you can't reverse a hash function and it's practically impossible to find two different inputs producing the same output.
 
+#### Building a Network with HTLCs
 
+The general idea of routing a payment through several payment channels is the payee creating a secret and passing the secrets hash to the payer as well as all the intermediaries. If Alice were to pay Bob through Ingrid, Bob would create a secret and provide its hash to Alice and Ingrid. Alice creates a (commitment) transaction paying Ingrid and Ingrid creates a (commitment) transaction paying Bob. The hash is part of the spending condition in each of those transactions and revealing its preimage (the secret) allows a a participant to claim the money. Once all transactions are set up, Bob reveals his secret and claims his money from Ingrid. Ingrid learns the secret in the process and uses it to unlock Alice's transaction paying her.
 
+What needs to be ensured by design is that the intermediaries are never at risk of losing money and that funds can be retrieved from the payment route in case one of the parties becomes inactive.
 
+The time lock part comes into play as all participants need to responsive in order to route the payment through the hops. Once the chain of transactions is set up Bob has *x* days to claim his money from Ingrid. She in turn has *x-y* days to claim her money from Alice. This decreasing time lock construction ensures participants can reclaim their money if it gets stuck somewhere on the route.
 
-### Building a Network with HTLCs
-
-"A technique that can allow payments to be securely routed across multiple payment channels.[citation needed] For example, if Alice has a channel open to Bob and Bob has a channel open to Charlie, Alice can use a HTLC to pay Charlie through Bob without any risk of Bob stealing the payment in transit"
-
-Idea: Carol creates secret and passes it's hash to Bob and Alice.
-
-Alice creates TX sending 1 Coin to Bob.
-
-Bob creates TX sending 1 Coin to Carol.
-
-To claim the coin, Carol must use her secret. Bob learns about this secret and uses it to spend Alice's TX.
-
-Hash lock to ensure one participant after the other can claim TX. Hashlock in case someone becomes inactive and participants can reclaim their money after some time.
+If you would like to learn more about the details of constructing a network of payment channels we would like to refer you to the original [Lightning Network paper](https://lightning.network/lightning-network-paper.pdf). It is quite easy to digest if you approach it with the knowledge gained from reading this article and describes in depth how a trustless concatenation of payment channels is constructed.
 
 ### Implications for the Fee Market
 
--> Security is fine
+The Lightning Network or, in more general terms, second layer payment networks are also interesting from an economic perspective. The transactions fees for on-chain transactions are calculated based on the amount of data a transaction takes up in the blockchain. Blocks are limited in size, hence miners select the transactions they want to include based on a "money per data" basis. It doesn't matter if you are transferring 1 Billion dollars or a single cent as long as the transaction takes up the same amount of storage capacity.
 
-The Lightning Network, or in more general terms, second layer payment networks are also interesting from an economic perspective.
+Transaction fees in a payment channel network are based on the volume of a transaction. Liquidity is the limiting factor in such a network, hence tying up liquidity is what intermediaries will base their fees on. In economic terms, they charge the time-value of money plus an amount for the counterparty risk of becoming unresponsive. Transactions of a few cents or dollars come at almost no cost, while transferring large amounts of money will come with premiums for the provided liquidity.
 
-On chain fees based on TX data size as data storage is limited resource. Off chain fees (if routed through hubs) based on transaction volume, as liquidity is the limited resource. Inflection point where transactions of large volume are cheaper to conduct on chain than off-chain. Where this inflection point will be is an open question as of now. The more adoption LN will see, the less hubs will be able to charge for routing and the higher the overall liquidity. Inflection point at higher value TXs.
+Currently, transacting in second-layer networks is mostly cheaper than on-chainn, but once payment channel networks will see more adoption, there should be an inflection point at which transactions over a certain amount of value will be cheaper to conduct on-chain where fees are based on data size. Where this equilibrium will establish is anyones guess today, but it will certainly be interesting to watch unfold.
 
-"The fees pay for the time-value of money for consuming the channel for a determined maximum period of time, and for counterparty risk of non-communication." - lightning paper
+## State Channels
 
-“\textit{The adoption of quantum resistant techniques will also result in larger (and more expensive) transactions. Post-quantum crypto algorithms require larger key sizes, which in turn increase the size of non-witness data in a transaction.}” - Lucas Nuzzi
+Now there is more that you can with blockchain besides "simple" payments. Smart contracts allow running more sophisticated logic on a blockchain and you can even run simple games on a decentralized infrastructure using these constructions. But does it really make sense to have each move of your virtual chess game processed and verified by thousands of nodes all around the world? Scalability is an issue in blockchain-land.
 
+With regards to throughput it suffices to look at the events around the launch of [CryptoKitties](https://www.cryptokitties.co/) on the Ethereum network in November 2017. It was the first decentralized Application, or dApp, that gained significant traction. At some point the dApp accounted for around 105 of total traffic on the Ethereum blockchain, causing transaction confirmation to take much longer than usual and increasing transaction fees significantly.
 
-## Expanding on Payment Channels
+Many dApps don't just rely on the transfer of token, but also the transfer of data. This data, sent to a smart contract, updates the contracts state to represent the most recent contract interactions. The idea behind more generalized state channel constructions is moving these data transfers off-chain into state channel networks where they can be performed at lower financial and computational cost. Just like with payment channels, only the channel opening and closing happen on chain, while participants can transact money and data almost indefinitely while the channel is established. State channels are designed in a way that makes channel updates broadcastable on the underlying blockchain, just like commitment transactions in payment channels represent valid on-chain transactions when broadcast. State channels can also be combined to form networks, similar to the Lightning network.
 
-now there is more that you can with blockchain besides "simple" payments. Smart contracts allow for more complex logic, e.g. games running on decentralized infrastructure. But does it really make sense to have each move of your virtual chess game processed and verified by thousands of nodes all around the world?
+Some notable examples of state channel projects include [Counterfactual](https://www.counterfactual.com/) and [Perun](https://www.perun.network/).
 
-There are different approaches to expanding payment channels, so state updates can be exchanged off-chain, until they are settled. Generally, these more flexible constructions are referred to as state channels, and they come in different flavors, focusing on several use-cases.
+Counterfactual provides, besides a library for off-chain applications and a set of smart contracts, a [generalized state channel protocol](https://l4.ventures/papers/statechannels.pdf). The protocol aims to become a generalized framework, that application developers can use to leverage the benefits of state channels without developing them themselves. The protocol allows installing new functionalities into existing state channels without requiring on-chain transactions.
 
-### State Channels
-
-general idea: data off-chain in second communications network
-
-Can be payments, but can also be other stuff (data)
-
-State channels are the more general form of payment channels — they can be used not only for payments, but for any arbitrary “state update” on a blockchain — like changes inside a smart contract.
-
-State channels rely on availability
-
-can use state channels on top of sidechains/shards/plasma chains
-
-construction of network a "modular recursive approach" used, "virtual state channels are built recursively on top of ledger or other – already constructed – virtual state channels."
-
-### Counterfactual
-
-Goal is to make state channels accessible to projects/developers who are not state channel experts themselves
-
-
-
-"We describe \textit{generalized} state channels, a construction that allows users to install new functionality in an existing channel without touching the blockchain, using \textit{counterfactual instantiation} of contracts within a channel."
-
-"propose to build a generalized framework where state is deposited once, and can then be utilized by any application compliant to the framework."
-
-"Similarly, participants in a state channel should be able to counterfactually instan- tiate smart contracts within a state channel, installing new functionality9 into the state channel without any on-chain action."
-
-### Game Channels
-
-For instance, Funfair has built state channels (which they call “Fate channels”) for their decentralized gambling platform, Spankchain has built one-way payment channels for adult performers (they also used a state channel for their ICO), and Horizon Games is using state channels in their first ethereum-based game.
-
-### Perun
-
-Perun channels have three innovations compared to other payment channels which are shared by our approach: first, their technique for routing-through-intermediaries, which they call virtual channels, is very similar to ours in that the virtual channel is “noninteractive” and
-does not require cooperation from the intermediary for every payment.
-
-### Bolt - Anonymous Payment Channels
-
-[*Bolt: Anonymous Payment Channels for Decentralized Currencies*](\footnote{\url{https://eprint.iacr.org/2016/701.pdf}}) is a network proposed by Matthew Green and Ian Miers in 2016. Bolt stands for *Blind Off-chain Lightweight Transactions*. It is currently [being considered](\footnote{\url{https://github.com/ZcashFoundation/libbolt}}) for the Zcash protocol by the Zcash foundation.
-
-Privacy is achieved by leveraging [*blind signatures*] and [*zero knowledge*] proofs. To make privacy guarantees even stronger, channel opening can be done with [*shielded transactions*]. The authors not only plan to build Bolt on Zcash, but also retrofit it to offer a private payment channel option on Bitcoin and Litecoin.
+Perun channels introduces the concept of *virtual payment channels* over intermediaries. These channels are non-interactive in that they don't rely on intermediaries responsiveness. The general idea is construct virtual channels based on a number of already exisiting channels, that in the end work similar to a bilateral channel.
 
 ## Summary
+
+
+
+
+
+
+
 
 "Layer 2 solutions share a common insight: once we have the hard kernel of certainty provided by a public blockchain, we can use it as an anchor for cryptoeconomic systems that extend the usefulness of blockchain applications.
 Now that we’ve surveyed some examples, we can be more specific about how layer 2 solutions apply this insight. The economic mechanisms used by layer 2 solutions tend to be interactive games: they work by creating incentives for different parties to compete against or “check” one another. A blockchain application can assume that a given claim is likely true, because we’ve created a strong incentive for another party to provide information showing it to be false.
@@ -317,11 +289,6 @@ layers built “on top” of ethereum won’t always have the same guarantee as 
 
 
 
-
-
-##### Revocable Sequence Maturing Contract - RSMC
-
-##### Hashed Time Lock Contract - HTLC
 
 
 
@@ -340,6 +307,8 @@ Bitcoin Magazine 3 Part Series https://bitcoinmagazine.com/articles/understandin
 Bolt: Anonymous Payment Channels https://eprint.iacr.org/2016/701.pdf
 
 Game Channels: State Channels with integrated PRNG https://eprint.iacr.org/2019/362.pdf
+
+Perunn: Virtual Payment Hubs over Cryptocurrencies https://eprint.iacr.org/2017/635.pdf
 
 Raiden Network 101 https://raiden.network/101.html
 
