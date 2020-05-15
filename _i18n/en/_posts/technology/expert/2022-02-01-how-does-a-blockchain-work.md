@@ -9,7 +9,7 @@ level: expert
 chapter: "How Does a Blockchain Work?"
 ---
 
-You do know what a blockchain is by now, and we are sure you have a good idea of how it works if you made it this far. In this chapter we will take a detailed look at each concept that makes a blockchain work individually. It's worth noting that Bitcoin and thus blockchain as we know it is more than ten years old by now, but most concepts described in this chapter preceded blockchains by years or even decades. The clever combination of these parts in a formerly (pre-Bitcoin) unknown way enabled something truly impressive though. This chapter is by far the most extensive chapter in our Expert Section. For the ambitious audience we didn't spare much detail.
+You do know what a blockchain is by now, and we are sure you have a good idea of how it works if you made it this far. In this chapter we will take a detailed look at each concept that makes a blockchain work individually. It's worth noting that Bitcoin and thus blockchain as we know it is more than ten years old by now, but most concepts described in this chapter preceded blockchains by years or even decades. The clever combination of these parts in a formerly unknown way enabled something truly impressive.
 
 <div class="row mt-5">
     <div class="col-md-3">

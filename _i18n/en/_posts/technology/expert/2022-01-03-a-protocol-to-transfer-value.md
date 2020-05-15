@@ -149,7 +149,7 @@ Over time accounting has evolved in three steps. First single-entry accounting w
   caption="Schematic of the triple-entry bookkeeping principle."
 %}
 
-Triple-entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article ["Why Bitcoin’s Lightning Network is Ingenious"](https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae) that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double-entry bookkeeping system on top of the blockchain - a second layer solution like the [Lightning Network]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}).
+Triple-entry bookkeeping still comes with a downside: the total transaction throughput is limited, as it has to be processed by all participants of the network. We would like to refer to Todd Kronenberg's article ["Why Bitcoin’s Lightning Network is Ingenious"](https://medium.com/coinmonks/why-bitcoins-lightning-network-is-the-ingenious-10dc1ad9ccae) that the section above borrowed from to learn about the upsides and downsides of triple entry accounting and the "ingenious" mitigation strategy of having a double-entry bookkeeping system on top of the blockchain - a second layer solution like the [Lightning Network]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}).
 
 ### Separation of Money and State
 
@@ -170,5 +170,3 @@ But incentives can also be of a non-financial nature. If, for example, a group o
 In this article, we looked at the protocol of a blockchain at the application layer and defined it as a value transfer protocol. Some examples of the rules that comprise the protocol we mentioned are the longest chain rule that applies when there is a temporary chain split, the difficulty adjustment to keep the block production rate constant and the disinflationary monetary schedule.
 
 Next, we touched on blockchain governance and continued by listing the major innovations blockchain technology introduced: the self-enforcing agreement between network participants, digital scarcity, triple-entry bookkeeping, and the separation of money and state. Lastly, we gave an example of incentives to maintain a blockchain for a different purpose than digital money like a shared dataset.
-
-In the next article, we will look at [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) and their self-enforcing nature.
