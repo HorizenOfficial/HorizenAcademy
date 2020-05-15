@@ -7,7 +7,7 @@ permalink: /technology/expert/cross-chain-transactions/
 topic: technology
 level: expert
 chapter: "Transactions"
-further_reads: [zendoo]
+further_reads: [zendoo, poa_erc20_token_bridge]
 ---
 
 In this article, we will take a close look at transactions that move assets between different blockchains - more specifically a mainchain and its sidechains. Sidechains are blockchains interoperable with an existing mainchain. In order to transfer assets from one chain to another a special set of transactions is needed - cross-chain transactions.
