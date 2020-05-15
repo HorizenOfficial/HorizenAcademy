@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "State and Payment Channels"
+title: "Payment and State Channels"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/state-and-payment-channels/
 topic: technology
@@ -10,21 +10,19 @@ chapter: "Transactions"
 further_reads: [mastering_lightning, till_its_lightning_fast, general_state_channel_networks, counterfactual, lightning_network, raiden_network, bolt]
 ---
 
-A common criticism of blockchain technology is that it doesn't scale in a decentralized setting and therefore won't be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can allow for more interaction leveraging the security of blockchain with the capacity we already have available? Meet layer-two transactions on payment or state channels.
+A common criticism of blockchain technology is that it doesn't scale in a decentralized setting and therefore is not be able to support mainstream adoption. Now there are different ways to scale blockchains and increase their throughput, but what if we can allow for more interaction leveraging the security of existing protocols with the capacity we already have available? Meet layer-two transactions on payment and state channels.
 
 ![Scaling](/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_D.jpg)
 
-We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that allows to spread the workload otherwised performed by a single set of nodes on the mainchain to several sets of nodes, each responsible for their own sidechain.
+We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that spreads the workload otherwised performed by a single set of mainchain nodes to several sets of nodes, each responsible for their own sidechain.
 
 We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise mostly one-dimensional blockchain world.
 
-Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels. The general idea is as follows: two users place funds in a channel. Now the participants can send funds back and forth by exchanging signed transactions (TXs) which are NOT broadcast to the blockchain. Only when participants are done transacting do they use the blockchain to settle their current balances. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the channel opening and closing transaction.
+Here, we will cover another highly promising approach to make blockchains security promise accessible to a larger user-base - payment and state channels. The general idea is as follows: two users place funds in a payment channel. Now the participants can send funds back and forth within the channel by exchanging signed transactions which are NOT broadcast to the blockchain. Only when participants are done transacting do they use the blockchain to settle their current balances in a channel closing transaction. That way, they can exchange an arbitrary amount of transactions while placing only two of them on-chain: the channel opening and closing transaction.
 
-Payment channels are no trivial topic and there are many different projects working on them. In order to cover the process from opening a channel, to updating its balance and lastly closing it we will, for the most part of this article, focus on the best-known and most active payment channel implementation: the Lightning Network. Afterward we will give a glimpse into the rest of the state channel world.
+Payment channels are no trivial topic and there are many different projects working on them. In order to cover the process from opening a channel, to updating its balance and lastly closing it we will, for the most part of this article, focus on the best-known and most active payment channel implementation: the Lightning Network.
 
 ## Payment Channels
-
-Before we look into how several payment channels can be combined to form a network such as Lightning, let's consider an example where two users, Alice and Bob want to use a payment channel to save on transaction fees as they frequently send money back and forth.
 
 The primitives used to build a payment channel are mostly familiar if you have read the previous articles in the Expert Level:
 
@@ -232,7 +230,7 @@ Currently, transacting in second-layer networks is mostly cheaper than on-chainn
 
 ## State Channels
 
-Now there is more that you can with blockchain besides "simple" payments. Smart contracts allow running more sophisticated logic on a blockchain and you can even run simple games on a decentralized infrastructure using these constructions. But does it really make sense to have each move of your virtual chess game processed and verified by thousands of nodes all around the world? Scalability is an issue in blockchain-land.
+Now, there is more that you can with blockchain besides "simple" payments. Smart contracts allow running more sophisticated logic on a blockchain and you can even run simple games on a decentralized infrastructure using these constructions. But does it really make sense to have each move of your virtual chess game processed and verified by thousands of nodes all around the world? Scalability is an issue in blockchain-land.
 
 With regards to throughput it suffices to look at the events around the launch of [CryptoKitties](https://www.cryptokitties.co/) on the Ethereum network in November 2017. It was the first decentralized Application, or dApp, that gained significant traction. At some point the dApp accounted for around 105 of total traffic on the Ethereum blockchain, causing transaction confirmation to take much longer than usual and increasing transaction fees significantly.
 
