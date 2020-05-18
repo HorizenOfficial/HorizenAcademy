@@ -78,7 +78,8 @@ A sidechain developer is free to come up with a mechanism to process incoming Fo
 
 The overall idea is to group Forward Transfers from one or more mainchain blocks into a special *Forward Transfers Transaction* (FTTx). This transaction is similar to the coinbase transaction on the mainchain in that it does not include any chain-internal inputs. It can be considered a transaction minting coins on the sidechain. A Forward Transfers Transaction comprises only outputs from Forward Transfers. If there are no Forward Transfers to a sidechain over a period of mainchain blocks, there will be no Forward Transfers Transaction.
 
-![Processing Forward Transfers on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer-transaction.jpg)
+![Processing Forward Transfers on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer-transaction_D.jpg)
+![Processing Forward Transfers on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/forward-transfer-transaction_M.jpg)
 
 In Latus, the `receiverMetadata` entails the receivers address on the sidechain, as well as a payback address used to refund the sender on the mainchain in case a Forward Transfer was to fail. This could be because the mainchain block that includes the Forward Transfer is not referenced or the receiver's address is not provided correctly. The latter would only become apparent once the Forward Transfer is synched to the sidechain as the mainchain does not verify sidechain specific data. Let's look at an example:
 
@@ -124,7 +125,8 @@ Note that the mainchain consensus protocol does not impose any rules on how exac
 
 The concept of Withdrawal Epoch is introduced as a number of mainchain blocks in which a sidechain is collecting Backward Transfers to be broadcasted to the mainchain. One Withdrawal Certificate is submitted per Withdrawal Epoch, accompanied by a SNARK proof that all backward transfers are valid.
 
-![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch.jpg)
+![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch_D.jpg)
+![Withdrawal Epochs in Zendoo](/assets/post_files/technology/expert/4.2-cross-chain-transactions/withdrawal-epoch_M.jpg)
 
 The length of a Withdrawal Epoch, defined over a number of mainchain blocks, is fixed with the deployment of the sidechain. The choice of the Withdrawal Epochs length depends on parameters such as the block time of a sidechain. If blocks are produced at a high frequency, for instance, because the sidechain is built for many in-game micro-payments, the Withdrawal Epoch in terms of mainchain blocks can be short. This can prevent Withdrawal Certificates becoming too large due to the number of included Backward Transfers. A sidechain primarily used to store data, e.g. for a supply chain tracking system, might choose a block time close to that of Horizen and a longer Withdrawal Epoch compared to the in-game payment sidechain.
 
@@ -142,7 +144,8 @@ A user might need to request a Backward Transfer directly from the mainchain. Th
 
 A Backward Transfer Requests is a special type of transaction created on the mainchain. It includes the *ledgerId* specifying the sidechain, the *receiver* address on the mainchain as well as the *amount* to be transferred. The *nullifier* serves as a unique identifier of coins on a sidechain. Additionally, a *proof* and *proofdata* is submitted with the BTR, which allows sidechain nodes to verify incoming Backward Transfer Requests. The proofdata contains one or more UTXOs on the sidechain, which will be consumed by the BTR. The right to spend the UTXO(s), i.e. the [digital signature]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}), is provided in the *proof* part.
 
-![Processing Backward Transfer Requests on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/backward-transfer-request.jpg)
+![Processing Backward Transfer Requests on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/backward-transfer-request_D.jpg)
+![Processing Backward Transfer Requests on a Zendoo Sidechain](/assets/post_files/technology/expert/4.2-cross-chain-transactions/backward-transfer-request_M.jpg)
 
 When a Backward Transfer Request is submitted on the mainchain it will be synchronized to the sidechain through the same mechanism used to process Forward Transfers. First, it is included in the mainchains *Sidechain Transaction Commitment* Merkle tree. With the next mainchain block reference, it is synched to the sidechain. Here, it is included in a special *Backward Transfer Requests Transaction* (BTRTx) which works analogous to the *Forward Transfers Transaction* (FTTx) we already covered. It is a single transaction where all inputs are specified through BTRs and the outputs are Backward Transfers.
 
