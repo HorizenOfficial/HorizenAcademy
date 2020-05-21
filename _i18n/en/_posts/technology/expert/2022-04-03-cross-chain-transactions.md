@@ -14,7 +14,7 @@ In this article, we take a close look at transactions that move assets between d
 
 The way we structured this article follows the process of a developer building a sidechain. First, the sidechain needs to be deployed. Next, an address or account on the sidechain needs to be funded. The assets transferred to the sidechain can now be sent from one account to another within the sidechain. Finally, money can be transferred back to the mainchain. We will explain how all these actions can be performed, and what options a developer or user has in order to trigger those actions.
 
-This article builds heavily on our article about [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}). We recommend reading this article before getting into cross-chain transactions.
+This article builds heavily on our article about [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-sidechains-interoperable-blockchains %}). We recommend reading this article before getting into cross-chain transactions.
 
 ## The Zendoo Sidechain Construction
 
