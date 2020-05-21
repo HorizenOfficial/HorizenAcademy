@@ -15,7 +15,7 @@ A common criticism of blockchain technology is that it doesn't scale in a decent
 ![Scaling](/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_D.jpg)
 ![Scaling](/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_M.jpg)
 
-We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-expanding-blockchain-with-sidechains %}) as a scaling approach that spreads the workload otherwised performed by a single set of mainchain nodes to several sets of nodes, each responsible for their own sidechain.
+We already talked about scalability in several of our previous articles. We introduced [sidechains]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-sidechains-interoperable-blockchains %}) as a scaling approach that spreads the workload otherwised performed by a single set of mainchain nodes to several sets of nodes, each responsible for their own sidechain.
 
 We also talked about [Directed Acyclic Graphs (DAGs)]({{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}) that hold the potential to dynamically adjust the on-chain (or "on-DAG") throughput by introducing a new type of data structure supporting two-dimensionality in an otherwise mostly one-dimensional blockchain world.
 
