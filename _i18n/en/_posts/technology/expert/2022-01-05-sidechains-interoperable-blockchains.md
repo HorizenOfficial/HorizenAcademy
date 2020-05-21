@@ -77,7 +77,7 @@ There is a range of other sidechain constructions being worked on. Drivechains a
 
 The sidechain constructions mentioned above assume one of two things: either the design is symmetric and the mainchain needs to monitor all sidechains in order to verify backward transfers, or the mainchain relies on some sort of certifiers to broadcast incoming backward transactions from the sidechains to mainchain. A [first iteration of Horizen's sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) relied on certifiers to sign backward transfers batched in withdrawal certificates.
 
-Another promising approach to sidechains relying on zk-SNARKs is [ZK Rollup](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/). It is based on Ethereum, utilizing [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) to enable cross-chain communication and transfers. While this approach has merits, it is limited in its application to blockchain protocols supporting sophisticated smart contracts unlike most Bitcoin-based ledgers.
+Another promising approach to sidechains relying on zk-SNARKs is [ZK Rollup](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/). It is based on Ethereum, utilizing [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) to enable cross-chain communication and transfers. While this approach has merits, it is limited in its application to blockchain protocols supporting sophisticated smart contracts unlike most Bitcoin-based ledgers.
 
 ## The Zendoo Protocol
 
