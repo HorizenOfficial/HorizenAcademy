@@ -36,7 +36,7 @@ One premise is the construction being trustless by design: you must not have to 
 
 ### Payment Channels are MultiSig Addresses
 
-Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent. A 2-of-2 MultiSig account is based on two private keys, both of which need to sign a transaction for it to be valid.
+Simply speaking a payment channel is 2-of-2 MultiSig account, or more generally speaking a [Pay to Script Hash (P2SH)](https://bitcoin.org/en/glossary/p2sh-address) address. This can be understood as a simple [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) controlling funds (the channel balance) and defining the conditions under which these funds can be spent. A 2-of-2 MultiSig account is based on two private keys, both of which need to sign a transaction for it to be valid.
 
 ![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_D.jpg)
 ![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_M.jpg)
