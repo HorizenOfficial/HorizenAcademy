@@ -40,7 +40,7 @@ A data-intensive use case could be a supply chain tracking system. If this syste
 
 Deploying a domain-specific sidechain would allow quick feature iterations by circumventing the consensus-building process used on a public network. This decoupling protects the mainchain because bugs resulting from new feature deployment would only affect the destination sidechain.
 
-Horizen is evaluating which sidechains to develop first. Options include sidechains supporting sophisticated (Turing complete) smart contracts, near instant payment settlements, or a sidechain handling the Zen Blockchain Foundation treasury funds.
+Horizen is evaluating which sidechains to develop first. Options include sidechains supporting sophisticated (Turing complete) [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}), near instant payment settlements, or a sidechain handling the Zen Blockchain Foundation treasury funds.
 
 While Horizen's mainchain does not support custom tokens, a sidechain could provide this functionality. Any developer is free to build and deploy sidechains on Horizen's mainchain without permission and without the risk of "breaking" things on the main network.
 
@@ -85,7 +85,7 @@ The most significant number of sidechain protocols are buildt on the Ethereum ne
 
 The sidechain constructions mentioned above assume one of two things. Either the design is symmetric, requiring the mainchain to monitor all sidechains to verify Backward Transfers, or the mainchain relies on some sort of certifiers to broadcast incoming backward transactions from the sidechains to the mainchain. A [first iteration of Horizen's sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) also relied on certifiers to sign Backward Transfers batched in Withdrawal Certificates.
 
-Another promising approach to sidechains relying on zk-SNARKs is [ZK Rollup](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/). This approach is based on Ethereum, utilizing [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-05-guaranteed-execution-with-smart-contracts %}) to enable cross-chain communication and transfers. While this approach has merits, it is limited in its application to blockchain protocols supporting sophisticated smart contracts.
+Another promising approach to sidechains relying on zk-SNARKs is [ZK Rollup](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/). This approach is based on Ethereum, utilizing [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) to enable cross-chain communication and transfers. While this approach has merits, it is limited in its application to blockchain protocols supporting sophisticated smart contracts.
 
 ## The Zendoo Protocol
 
