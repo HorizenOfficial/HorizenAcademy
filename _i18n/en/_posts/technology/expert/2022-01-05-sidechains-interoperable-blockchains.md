@@ -358,4 +358,4 @@ Next, we looked at the necessary modifications to Horizen's mainchain protocol t
 
 Another modification to the mainchain is the addition of the Sidechain Transactions Commitment (SCTxsCommitment) serving as a summary of all sidechain related transactions on the mainchain in the form of a Merkle tree. The withdrawal safeguard protects against unintended inflation originating from a buggy or malicious sidechain. Lastly, a special type of bootstrapping transaction is introduced to allow the permissionless deployment of a sidechain.
 
-In chapter four, covering [transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}) we will come back to our sidechain construction again to take a close look at [cross-chain transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}).
+In chapter four, covering [transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}) we will come back to our sidechain construction to take a close look at [cross-chain transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}).
