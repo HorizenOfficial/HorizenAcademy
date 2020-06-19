@@ -269,6 +269,6 @@ In a mutual closing, both parties sign a transaction granting both of them insta
 
 Payments can be routed through several existing payment channels using hashed time lock contracts (HTLCs). Connecting individual channels is the basis for forming payment channel networks like Lightning, Raiden, or Bold.
 
-State channels expand on payment channels in that they not only allow the transfer of money but also the transmission of state updates, e.g. to move the interaction with a [smart contract] or dApp into a secondary environment.
+State channels expand on payment channels in that they not only allow the transfer of money but also the transmission of state updates, e.g. to move the interaction with a [smart contract]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) or dApp into a secondary environment.
 
 It's worth noting that layers built on top of existing blockchain protocols won't always provide the same level of security guarantees as the underlying blockchain. However, the level of security is still high enough to make them highly useful for several u
