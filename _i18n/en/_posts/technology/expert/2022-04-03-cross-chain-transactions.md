@@ -68,7 +68,7 @@ type Transaction
         ForwardTransfer(ledgerId: 0x300c..., receiverMetadata: 0x8451..., amount: 3),
     }
 }
-`"
+```
 
 In the example above, a total of eight coins are spent, and two UTXOs are consumed. The transaction creates four new outputs, two of which are regular outputs spendable on the mainchain. The other two outputs are sending coins to a single sidechain (ledgerId 0x300C...) with two and three coins, respectively.
 
@@ -89,7 +89,7 @@ type ForwardTransfersTx (mcid: BlockID, ft: List[FT])
     outputs: List [UTXO];
     rejectedTransfers: List [BackwardTransfer]
 }
-`"
+```
 
 The mainchain identifier (`mcid`) identifies the mainchain block, whose Forward Transfers are synchronized in the FTTx. The list of synchronized Forward Transfers (`List[FT]`) is similar to the inputs in a regular mainchain transaction, with the difference that the sidechain doesn't verify their validity. They would not have been included in the mainchain if they violated the mainchain consensus rules. (`List[UTXO]`) comprises the newly created outputs on the sidechain, spendable under the conditions defined in the sidechain consensus protocol.
 
