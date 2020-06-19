@@ -20,7 +20,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
     <div class="col-md-9">
         <h5 class="intro-article-title">UTXO vs. Account Model</h5>
         <p class="mb-1">
-            In order to have users transfer money, they need some concept of an "account balance" in the first place. We compare two different accounting methods in the first article of this chapter.
+            In order to have users transfer money, they need some concept of an "account balance" in the first place. We compare two different accounting methods, the UTXO and the account model in the first article of this chapter. Both models have merits and depending on the use case one or the other might be better suited.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}">Read Article</a>
@@ -37,7 +37,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
     <div class="col-md-9">
         <h5 class="intro-article-title">Cross-Chain Transactions</h5>
         <p class="mb-1">
-            The second article in this chapter explains Cross-Chain Transactions. There are different ways to make blockchains interoperable. The Horizen protocol allows the deployment of sidechains, independent domain-specific blockchains that can interact with the Horizen mainchain. In order to transfer assets from the mainchain to one of the sidechains and back, a special type of transaction is introduced - the cross-chain transaction.
+            The second article explains Cross-Chain Transactions. There are different ways to make blockchains interoperable. The Horizen protocol allows the deployment of sidechains, domain-specific blockchains that can interact with the main blockchain. To transfer assets from the mainchain to a sidechain, a special type of transaction is introduced - the cross-chain transaction.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}">Read Article</a>
@@ -54,7 +54,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
     <div class="col-md-9">
         <h5 class="intro-article-title">State- and Payment Channels</h5>
         <p class="mb-1">
-            Blockchains are very secure, but not very efficient or fast. In order to facilitate widespread adoption of cryptocurrencies as a payment method, different scaling solutions are being worked on. A very promising approach is posed by second-layer solutions using a technology called state- and payment channels. We take a look at how this technolopgy works in our last article of this chapter
+            Blockchains are highly secure, but not very efficient. In order to facilitate widespread adoption of cryptocurrencies as a payment method, different scaling solutions are being worked on. A promising approach is posed by second-layer solutions using state- and payment channels. We take a look at how they work in this article.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}">Read Article</a>
