@@ -15,7 +15,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/data-structure.svg" alt="Blockchain Data" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/data-structure-1.svg" alt="Blockchain Data" />
         </a>
     </div>
     <div class="col-md-9">
@@ -32,7 +32,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/protocol.svg" alt="Protocols" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/protocol-2.svg" alt="Protocols" />
         </a>
     </div>
     <div class="col-md-9">
@@ -49,13 +49,13 @@ In this first chapter we will look at what a blockchain is and how the concept o
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/smart-contracts.svg" alt="Smart Contracts" />
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/smart-contracts-4.svg" alt="Smart Contracts" />
         </a>
     </div>
     <div class="col-md-9">
         <h5 class="intro-article-title">Guaranteed Execution with Smart Contracts</h5>
         <p class="mb-1">
-            Thirdly, we discuss smart contracts, a technology that blockchain technology enables. You can summarize smart contracts as digital contracts with guaranteed execution. You might have heard the term programmable money in the context of cryptocurrencies before. Smart contracts are the technology that enables this programmability.
+            Fourthly, we discuss smart contracts, a technology that blockchain technology enables. You can summarize smart contracts as digital contracts with guaranteed execution. You might have heard the term programmable money in the context of cryptocurrencies before. Smart contracts are the technology that enables this programmability.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}">Read Article</a>
@@ -65,8 +65,25 @@ In this first chapter we will look at what a blockchain is and how the concept o
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}">
-            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/dag.svg" alt="DAG" />
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-sidechains-interoperable-blockchains %}">
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/sidechain-3.svg" alt="Sidechains" />
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h5 class="intro-article-title">Sidechains - Interoperable Blockchains</h5>
+        <p class="mb-1">
+            Thirdly, we examine sidechains. Sidechains are a way to expand on blockchain technology in several ways. Development becomes easier and systems become more scalable and performant with domain specific, interoperable sidechains.
+        </p>
+        <p class="mb-0">
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-sidechains-interoperable-blockchains %}">Read Article</a>
+        </p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}">
+            <img src="/assets/post_files/technology/expert/1.0-what-is-a-blockchain/dag-5.svg" alt="DAG" />
         </a>
     </div>
     <div class="col-md-9">
@@ -75,7 +92,7 @@ In this first chapter we will look at what a blockchain is and how the concept o
             Lastly, we look at DAGs - directed acyclic graphs. A blockchain is the most simple form of a DAG, which is a term used in mathematics to describe a structure of elements in a certain relation to one another. How the concept of blockchain and decentralized consensus can be extended to other data structures is covered in this article.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-05-a-relative-the-dag %}">Read Article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-06-a-relative-the-dag %}">Read Article</a>
         </p>
     </div>
 </div>

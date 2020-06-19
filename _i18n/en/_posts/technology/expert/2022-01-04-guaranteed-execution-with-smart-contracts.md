@@ -23,14 +23,14 @@ Smart contracts are most often discussed in the context of decentralized applica
 
 Most crypto tokens are issued on the Ethereum blockchain using the [*Ethereum Request for Comment* (ERC-20) standard](https://eips.ethereum.org/EIPS/eip-20). A token is issued within a smart contract that defines the total supply and the conditions for token transfers among other things. The ERC-20 token standard is a smart contract template, that allows for easy issuance and integration with different wallets and exchanges. If you would like to take a closer look at the process of issuing a token or even try it out for yourself, [here](https://medium.com/coinmonks/6-steps-to-erc20-tokens-and-ico-smart-contracts-e90523afafa1) is an easy to follow guide for you.
 
-Other use cases of smart contracts that are oftentimes omitted, are  [payment and state channels](({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %})) as well as [HTLCs](({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-htlcs %})) - Hashed Timelock Contracts - which enable atomic swaps. In most general terms, they allow for interaction happening off-chain to be just as trustless, as if they were to happen on-chain. The most popular payment channel network is arguably the [Lightning Network](https://lightning.network/) on Bitcoin.
+Other use cases of smart contracts that are oftentimes omitted, are  [payment and state channels](({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %})) as well as [HTLCs](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) - Hashed Timelock Contracts - which enable atomic swaps. In most general terms, they allow for interaction happening off-chain to be just as trustless, as if they were to happen on-chain. The most popular payment channel network is arguably the [Lightning Network](https://lightning.network/) on Bitcoin.
 
 The term smart contract can have two meanings. It can either refer to static code in a given language or a  *contract instance*, a dynamic object that executes the code. There is a similar distinction between programs and processes in operating systems.
 
 > "One can think of a smart contract instance as a trusted third party to which users can send coins, and that can distribute coins between the parties, according to conditions written in its static code." - Dziembowski, Faust, Hostáková, [State Channel Paper](https://eprint.iacr.org/2018/320.pdf)
 
-![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/expert/1.3-smart-contracts/smart_contract_M.jpg)
+![Smart Contract](/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_D.jpg)
+![Smart Contract](/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_M.jpg)
 
 ## The Promise of Smart Contracts
 
@@ -77,10 +77,10 @@ A dApp - or decentralized application - allows its users to perform a group of c
 
 A dApp uses one or more smart contracts to communicate with its underlying blockchain. The smart contracts can be used to detect incoming payments from users, issue payments to its users, to serve as an escrow or to trigger an action based on some form of submitted data.
 
-![dApp](/assets/post_files/technology/expert/1.3-smart-contracts/dapp_D.jpg)
-![dApp](/assets/post_files/technology/expert/1.3-smart-contracts/dapp_M.jpg)
+![dApp](/assets/post_files/technology/expert/1.4-smart-contracts/dapp_D.jpg)
+![dApp](/assets/post_files/technology/expert/1.4-smart-contracts/dapp_M.jpg)
 
-We are still in the early stages of decentralized applications. There have been and will be many growing pains such as bugs that cause loss of funds and inefficient usage of on-chain transactions. While well developed and audited smart contract libraries will make the development of smart contracts easier and more secure, scaling methods like [state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}) will allow the communication of smart contracts off-chain. Smart contract platforms are specifically designed to enable not just money on the blockchain, but also the deployment of smart contracts and dApps.
+We are still in the early stages of decentralized applications. There have been and will be many growing pains such as bugs that cause loss of funds and inefficient usage of on-chain transactions. While well developed and audited smart contract libraries will make the development of smart contracts easier and more secure, scaling methods like [state channels]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) will allow the communication of smart contracts off-chain. Smart contract platforms are specifically designed to enable not just money on the blockchain, but also the deployment of smart contracts and dApps.
 
 ## Smart Contract Platforms
 
@@ -110,8 +110,8 @@ Another scaling approach besides moving interactions off-chain to a second layer
 
 A dApp can be launched on a sidechain, possibly even running a different [consensus mechanism]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}) than the mainchain. Depending on the specific construction, incentives might have to be provided in order for nodes to run sidechains (in a PoS sidechain model) or for miners to perform merged mining (in a PoW sidechain model).
 
-![Scaling](/assets/post_files/technology/expert/1.3-smart-contracts/scaling_contracts_D.jpg)
-![Scaling](/assets/post_files/technology/expert/1.3-smart-contracts/scaling_contracts_M.jpg)
+![Scaling](/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_D.jpg)
+![Scaling](/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_M.jpg)
 
 There are many approaches to enable scalable smart contract platforms, oftentimes also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the *oracle problem*.
 
@@ -125,8 +125,8 @@ The other another major challenge to overcome is called the oracle problem. A sm
 
 Imagine a smart contract running a betting platform in a supposedly trustless environment. An oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because the oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracles](/assets/post_files/technology/expert/1.3-smart-contracts/oracle_D.jpg)
-![Oracles](/assets/post_files/technology/expert/1.3-smart-contracts/oracle_M.jpg)
+![Oracles](/assets/post_files/technology/expert/1.4-smart-contracts/oracle_D.jpg)
+![Oracles](/assets/post_files/technology/expert/1.4-smart-contracts/oracle_M.jpg)
 
 Centralized oracles are not considered a solution to the oracle problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some cases. And what is the point of having trustless execution on the basis of information provided by a trusted third party? As Jimmy Song puts it: “A smart contract that trusts a third party removes the killer feature of trustlessness.”
 
@@ -136,8 +136,8 @@ No matter if centralized or decentralized, an oracle will always come at a cost.
 
 A decentralized approach to solving the oracle problem is using [*prediction markets*](https://www.getsmarter.com/blog/wp-content/uploads/2017/07/mit_prediction_markets_report.pdf). A prediction market generally works by first creating a market for a specific event. Let's assume an event with a binary outcome: does team X or team Y win the Superbowl. A participant buys in for $1 and gets two *futures contracts*, one for each outcome. The futures contract whose outcome materialized pays $1, the other one $0.
 
-![Prediction Markets](/assets/post_files/technology/expert/1.3-smart-contracts/prediction_markets_D.jpg)
-![Prediction Markets](/assets/post_files/technology/expert/1.3-smart-contracts/prediction_markets_M.jpg)
+![Prediction Markets](/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_D.jpg)
+![Prediction Markets](/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_M.jpg)
 
 With an equally likely outcome, a participant wouldn't know which contract to keep and which to sell. Both should trade at around $0.50. If a participant has high confidence in out outcome, let's say team X wins, he will sell the contract that pays in case Y wins. If many people think alike, this creates an increasing demand for contract X and increasing supply for contract Y. Futures contract X rises in price, while Y gets cheaper, e.g. $0.70 vs. $0.30. The price of the futures contracts can be interpreted as the likelihood of the respective event happening, in this case, a 70% chance of team X winning.
 
@@ -151,6 +151,6 @@ Before solving the problem of creating legally binding smart contracts and the o
 
 Smart Contracts can ensure objective execution on the basis of mutually agreed upon terms enforced by code. They have the potential to reduce middlemen and thereby reduce cost and save time. They will most likely foster a closer connection between software developers and the judicial system.
 
-The creation of tokens and the deployment of state- and payment channel networks are the most common use cases for smart contracts. Before we can see widespread adoption, we have to overcome some hurdles. Scaling issues have to be addressed because smart contracts running entirely on-chain put a lot of stress on their underlying blockchain. [*Second layer technologies*]({{ site.baseurl }}{% post_url /technology/expert/2022-04-03-state-payment-channels %}) such as state channels or parallelization approaches like [*sidechains*]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) could solve this. 
+The creation of tokens and the deployment of state- and payment channel networks are the most common use cases for smart contracts. Before we can see widespread adoption, we have to overcome some hurdles. Scaling issues have to be addressed because smart contracts running entirely on-chain put a lot of stress on their underlying blockchain. [*Second layer technologies*]({{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}) such as state channels or parallelization approaches like [*sidechains*]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) could solve this.
 
 For many use cases, smart contracts need to learn about real-world events through *oracles*. Centralized solutions remove the killer feature of smart contracts - trustlessness - while *prediction markets* might create incentives around the probability of an event in a problematic fashion. There is a long way to go before we will see the broad use of smart contracts across different domains, but they are most definitely a concept worth exploring.
