@@ -2,7 +2,7 @@
 layout: post
 type: article
 title: "Sidechains - Interoperable Blockchains"
-description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/sidechains-interoperable-blockchains/
 topic: technology
 level: expert
@@ -10,22 +10,22 @@ chapter: "What is a Blockchain?"
 further_reads: [zendoo, blockstream_sidechains, coda_whitepaper, zk_poker_a_simple_zk_snark_circuit, poa_erc20_token_bridge]
 ---
 
-Blockchain technology offers some unique properties, such as achieving consensus among a group of unknown actors and giving a strong incentive mechanism for honest behavior. However, building real world applications on blockchain technology can be challenging.
+Blockchain technology offers some unique properties, such as achieving consensus among unknown actors and providing a strong incentive mechanism for honest behavior. However, building real-world applications on blockchain technology can be challenging.
 
-The first challenge of building real world applications is security. A blockchain's security increases as the number of network participants grow. As a result, spinning up a small application-specific blockchain with just a few stakeholders does not provide the same level of security as utilizing an established one with thousands of nodes.
+The first challenge of building applications on the blockchain is security. A blockchain's security increases as the number of network participants grow. As a result, spinning up a small application-specific blockchain with just a few stakeholders does not provide the same security level as utilizing an established one with thousands of nodes.
 
-Additionally, a blockchain's security depends on utilizing a token with real value, tradeable on established markets. This is true in the case of [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains in which miners are rewarded for their computational power, as well as in Proof of Stake blockchains where a validator's security deposit need to have economic weight. A native token with real-world value thus incentivizes users to add security (by mining/staking) and allows applications to transfer value easily.
+A blockchain's security model, in turn, depends on utilizing a token with real value, tradeable on established markets. This holds in the case of [Proof of Work]({{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}) blockchains in which miners get rewarded for their computational power with a token, as well as in Proof of Stake blockchains where a validator's security deposit need to have economic weight. A native token with real-world value, thus incentivizes users to provide additional security to the network (by mining/staking) and allows applications to transfer value easily.
 
-Building directly on top of a public blockchain comes with other challenges. First, blockchains are not well suited for handling large amounts of data and/or transactions. Second, deploying a new feature, which might be necessary for a given application, would require consensus-building among the entire community of stakeholders. If only a small subset of participants benefit from the feature, it is unlikely to be implemented. Lastly, the codebase would quickly become unmanageable if features and applications were built directly on the mainchain.
+Building directly on top of a public blockchain comes with other challenges. First, blockchains are not well suited for handling large amounts of data and transactions. Second, deploying a new feature, which might be necessary for a given application, would require consensus-building among the entire community of stakeholders. If only a small subset of participants benefit from the feature, it is unlikely to be implemented. Lastly, the codebase would quickly become unmanageable if features and applications were built directly on the mainchain.
 
 In summary, the three major roadblocks to building on public blockchains are security and scalability, the burdensome governance processes required for introducing new functionality, and the lack of a token with real-world value.
 
 ![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_D.jpg)
 ![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_M.jpg)
 
-Meet sidechains. Sidechains benefit from the decentralization and security of the underlying main blockchain and maintain the flexibility to solve highly specific use cases. Adding and removing features onto a sidechain does not depend on the mainchain's community consensus, since new features will only effect sidechain users. Also, new features can be added to separate sidechain ledgers, reducing stress on the mainchain.
+Meet sidechains. Sidechains benefit from the decentralization and security of the underlying main blockchain and maintain the flexibility to solve highly specific use cases. Adding and removing features onto a sidechain does not depend on the mainchain's community consensus since new features will only effect sidechain users. Also, new features can be added to separate sidechain ledgers, reducing stress on the mainchain.
 
-Sidechains cannot derive 100% of their security from the mainchain, they still require dedicated nodes. But incentive mechanism can be build that lead to existing mainchain nodes also supporting sidechains built on top.
+Sidechains cannot derive 100% of their security from the mainchain; they still require dedicated nodes. But incentive mechanisms can be constructed that lead to existing mainchain nodes also supporting sidechains built on top of it.
 
 ## Use Cases for Sidechains
 
@@ -33,25 +33,25 @@ To illustrate the benefits mentioned above, let's look at some tangible sidechai
 
 ### Scalability
 
-Use cases for sidechains include data or transaction heavy applications.
+Use cases for sidechains include data or transaction-heavy applications.
 
 A transaction-intensive use case could be a real-time in-game payment system in which users can earn and spend tokens. A traditional blockchain would not be suited to handle the load if the system had several thousand simultaneous users and logged all rewards on the mainchain. A sidechain with short block intervals and a centralized consensus mechanism to verify transactions efficiently is a much more feasible approach.
 
-A data-intensive use case could be a supply chain tracking system. If this system was used by producers, logistic companies, retailers, and other third parties, the amount of data would soon exceed the limits most public blockchain nodes are willing to handle. A dedicated sidechain with additional data fields for storing product-specific metadata can be a possible solution. The blocksize would likely be increased to accomodate more data storage per time unit.
+A data-intensive use case could be a supply chain tracking system. If this system was used by producers, logistic companies, retailers, and other third parties, the amount of data would soon exceed the limits most public blockchain nodes are willing to handle. A dedicated sidechain with additional data fields for storing product-specific metadata can be a possible solution. The blocksize would likely be increased to accommodate more data storage per time unit.
 
-### Governace
+### Governance
 
 Deploying a domain-specific sidechain would allow quick feature iterations by circumventing the consensus-building process used on a public network. This decoupling protects the mainchain because bugs resulting from new feature deployment would only affect the destination sidechain.
 
 Horizen is evaluating which sidechains to develop first. Options include sidechains supporting sophisticated (Turing complete) [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}), near instant payment settlements, or a sidechain handling the Zen Blockchain Foundation treasury funds.
 
-While Horizen's mainchain does not support custom tokens, a sidechain could provide this functionality. Any developer is free to build and deploy sidechains on Horizen's mainchain without permission and without the risk of "breaking" things on the main network.
+While Horizen's mainchain does not support custom tokens, a sidechain could provide this functionality. Any developer is free to build and deploy sidechains on Horizen's mainchain without permission and without the risk of breaking things.
 
 Sidechains are an essential technological step to expanding the capabilities of distributed ledgers and making them suitable for a broader range of use cases.
 
 ## History of Sidechains
 
-Sidechains are a concept people have been talking about for years. The first sidechain proposal was introduced in 2014, and since then, several teams have implement them in different ways.
+Sidechains are a concept people have been talking about for years. The first sidechain proposal was written in 2014, and since then, several teams have implemented them in different ways.
 
 ### Pegged Sidechains
 
@@ -59,9 +59,9 @@ The first mention of sidechains came from Adam Back et al. in a paper released i
 
 #### Symmetric vs. Asymmetric Peg
 
-The authors distinguish between *symmetric* and *asymmetric pegs*. In a symmetrically pegged sidechain construction, the mainchain monitors the sidechain and vice versa. Because both systems are aware of each other, cross-chain transfers work the same both ways - they are symmetric.
+The authors distinguish between *symmetric* and *asymmetric pegs*. In a symmetrically-pegged sidechain construction, the mainchain monitors the sidechain and vice versa. Because both systems are aware of each other, cross-chain transfers work the same both ways - they are symmetric.
 
-In an asymmetric two-way peg construction, the sidechains monitor the mainchain, but the mainchain does not track events on the sidechain. In this construct, the transfer of assets from mainchain to sidechain (*Forward Transfer*) is simple because sidechain nodes can verify incoming transactions themselves. The transfer of assets back to the mainchain (*Backward Transfer*) is more complex. The mainchain needs to "be told" about incoming transfers and relies on some previous verification of transactions.  One of the conclusions of the paper reads as follows:
+In an asymmetric two-way peg construction, the sidechains monitor the mainchain, but the mainchain does not track the sidechain. In this construct, the transfer of assets from mainchain to sidechain, a *Forward Transfer*, is simple because sidechain nodes can verify incoming transactions themselves. The transfer of assets back to the mainchain , a *Backward Transfer*, is more complex. The mainchain needs to "be told" about incoming transfers and relies on some previous verification of transactions.  One of the conclusions of the paper reads as follows:
 
 > "The key observation is that any enhancement to Bitcoin Script can be implemented externally by having a trusted federation of mutually distrusting functionaries evaluate the script and accept by signing for an ordinary multisignature script." - [Enabling Blockchain Innovations with Pegged Sidechains](https://blockstream.com/sidechains.pdf)
 
@@ -79,21 +79,24 @@ Nonetheless, each sidechain in the POA Network depends on a group of individuals
 
 ### Other Sidechain Constructions
 
-Several teams are working on other sidechain constructions. Drivechains are sidechains built on the Bitcoin network in which the verification of transactions from drive- to mainchain is performed by mainchain miners.
+Several teams are working on other sidechain constructions. Drivechains are sidechains built on the Bitcoin network in which mainchain miners perform the verification of transactions from drive- to mainchain.
 
-The most significant number of sidechain protocols are buildt on the Ethereum network. Besides the POA network, Plasma is another noteworthy example. It was [presented](http://plasma.io/plasma-deprecated.pdf) by Jospeh Poon and Vitalik Buterin in 2017 and is based on smart contracts deployed on the Ethereum main net.
+The most significant number of sidechain protocols are built on the Ethereum network. Besides the POA network, Plasma is another noteworthy example. It was [presented](http://plasma.io/plasma-deprecated.pdf) by Joseph Poon and Vitalik Buterin in 2017 and is based on smart contracts deployed on the Ethereum main net.
 
-The sidechain constructions mentioned above assume one of two things. Either the design is symmetric, requiring the mainchain to monitor all sidechains to verify Backward Transfers, or the mainchain relies on some sort of certifiers to broadcast incoming backward transactions from the sidechains to the mainchain. A [first iteration of Horizen's sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) also relied on certifiers to sign Backward Transfers batched in Withdrawal Certificates.
+The sidechain constructions mentioned above assume one of two things:
 
-Another promising approach to sidechains relying on zk-SNARKs is [ZK Rollup](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/). This approach is based on Ethereum, utilizing [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) to enable cross-chain communication and transfers. While this approach has merits, it is limited in its application to blockchain protocols supporting sophisticated smart contracts.
+The design is symmetric, requiring the mainchain to monitor all sidechains to verify Backward Transfers
+The construction is asymmetric, and the mainchain relies on some sort of certifiers to verify and broadcast transactions from the sidechains to the mainchain. 
+
+A [first iteration of Horizen's sidechain construction](https://www.horizen.global/assets/files/Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf) also relied on certifiers to sign Backward Transfers batched in Withdrawal Certificates.
 
 ## The Zendoo Protocol
 
-Horizen's sidechain implementation, the [Zendoo protocol](https://arxiv.org/abs/2002.01847) was released early in 2020. It introduces "a standardized mechanism to register and interact with separate sidechain systems. By interaction, we mean the Cross-Chain Transfer Protocol, which enables sending a native asset to a sidechain and receiving it back in a secure and verifiable way without the need to know anything about the internal sidechain construction or operations."
+Horizen's current sidechain implementation, the [Zendoo protocol](https://arxiv.org/abs/2002.01847) was released early in 2020. It introduces "a standardized mechanism to register and interact with separate sidechain systems. By interaction, we mean the Cross-Chain Transfer Protocol, which enables sending a native asset to a sidechain and receiving it back in a secure and verifiable way without the mainchain knowing anything about the internal sidechain construction or operations."
 
-In more general terms, the Zendoo protocol allows a Bitcoin-based blockchain protocol to operate with any domain-specific blockchains or blockchain-like systems. The [blockchain protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) is upgraded only once to introduce the mechanism for deploying sidechains and to enable cross-chain transfers.
+In more general terms, the Zendoo protocol allows a Bitcoin-based blockchain protocol to operate with any domain-specific blockchain or blockchain-like system. The [blockchain protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}) is upgraded only once to introduce the mechanism for deploying sidechains and to enable cross-chain transfers.
 
-Zendoo allows Backward Transfers to be verified by the mainchain without relying on external validators or certifiers. The mainchain does not monitor sidechains (asymmetric peg) and doesn't know anything about their internal structure. Zendoo accomplished this by generating recursive proofs for each sidechain state transition.
+Zendoo allows Backward Transfers to be verified by the mainchain without relying on external validators or certifiers. The mainchain does not monitor sidechains (asymmetric peg) and doesn't know anything about their internal structure. Zendoo accomplishes this by generating recursive proofs for each sidechain state transition.
 
 ### Main Components in Zendoo
 
