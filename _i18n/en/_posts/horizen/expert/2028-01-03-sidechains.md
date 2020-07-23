@@ -162,7 +162,7 @@ Enforcing this measure is based on the assumption of an honest majority. As you 
  - The fraudulent certificate CCCert(i) is then sent to the mainchain and included into a block(i). The mainchain is not able to verify the certificate and detect the fraud itself.
  - The fraudulent certificate syncs back into the sidechain (see Full Referencing).
  - The next group of certifiers(i+1) verify the previous CCCert(i) on the sidechain, detect the fraud and include a Fraud Report in their certificate CCCert(i+1).
- - Ones the mainchain receives CCCert(i+1) containing the fraud report, the group of malicious certifiers(i) will not be able to unlock their deposit.
+ - Once the mainchain receives CCCert(i+1) containing the fraud report, the group of malicious certifiers(i) will not be able to unlock their deposit.
  - If the group(i+1) does not include a fraud report, the group after them(i+2) will and both fraudulent groups from before (i and i+1) will lose their deposit.
 
 By not reporting a detected fraud a group would risk losing their deposit, as well as the originally malicious group. It’s also important to note that it is not possible by protocol design to have one certifier in a certifier group back-to-back.
