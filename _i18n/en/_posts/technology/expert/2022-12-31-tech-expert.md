@@ -26,7 +26,7 @@ level: expert
     <div class="col-md-9">
         <h5 class="intro-article-title">What is a Blockchain?</h5>
         <p class="mb-1">
-            In the first chapter of the Expert Level, we talk about how blockchains store date and why this allows you to transfer value. We explain smart contracts and look at a close relative - the DAG.
+            In the first chapter of the Expert Level, we talk about how blockchains store data and why this allows you to transfer value. We explain smart contracts and look at a close relative - the DAG.
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-01-01-what-is-a-blockchain %}">Read Chapter</a>
