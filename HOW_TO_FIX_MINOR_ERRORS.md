@@ -8,7 +8,7 @@ If you are submitting code or editing a text file - the process remains the same
 
 ## So, let's get going:
 
-1) Go to [our GitHub](https://github.com/ZencashOfficial) and find the Horizen Academy repository. Repositories on GitHub are similar to what you would normally call folders.
+1) Go to [our GitHub](https://github.com/HorizenOfficial) and find the Horizen Academy repository. Repositories on GitHub are similar to what you would normally call folders.
 
 ![Step 1](/assets/post_files/guides/fix_academy_content1.png)
 
