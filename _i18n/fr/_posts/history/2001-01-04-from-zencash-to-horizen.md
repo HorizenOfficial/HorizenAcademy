@@ -129,7 +129,7 @@ Nous avons déterminé que la meilleure solution était d'améliorer la règle d
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Pour en savoir plus sur l'attaque et notre chronologie détaillée, consultez notre blog
-    “<a href="https://blog.zencash.com/zencash-statement-on-double-spend-attack/" class="font-weight-bold" target="_blank">ici</a>”
+    “<a href="https://blog.horizen.global/zencash-statement-on-double-spend-attack/" class="font-weight-bold" target="_blank">ici</a>”
     </div>
 
 ### Expansion de la marque - de ZenCash à Horizen
@@ -143,8 +143,8 @@ La dernière impulsion dont nous avions besoin pour démarrer l'expansion de not
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Vous pouvez en savoir plus sur le processus d'expansion de notre marque sur notre blog 
-    “<a href="https://blog.zencash.com/zencash-brand-expansion/" class="font-weight-bold" target="_blank">ici</a>”
-    et “<a href="https://blog.zencash.com/hello-horizen/" class="font-weight-bold" target="_blank">ici</a>”.
+    “<a href="https://blog.horizen.global/zencash-brand-expansion/" class="font-weight-bold" target="_blank">ici</a>”
+    et “<a href="https://blog.horizen.global/hello-horizen/" class="font-weight-bold" target="_blank">ici</a>”.
 </div>
 
 
