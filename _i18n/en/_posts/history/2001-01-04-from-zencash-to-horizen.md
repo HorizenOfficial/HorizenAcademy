@@ -146,8 +146,8 @@ The last push we needed to kick start our brand expansion came in the form of a 
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     For more information, read our blog posts
-    “<a href="https://blog.zencash.com/zencash-brand-expansion/" class="font-weight-bold" target="_blank">New Brand Reveal</a>”
-    and “<a href="https://blog.zencash.com/hello-horizen/" class="font-weight-bold" target="_blank">Hello Horizen!</a>”.
+    “<a href="https://blog.horizen.global/zencash-brand-expansion/" class="font-weight-bold" target="_blank">New Brand Reveal</a>”
+    and “<a href="https://blog.horizen.global/hello-horizen/" class="font-weight-bold" target="_blank">Hello Horizen!</a>”.
 </div>
 
 
