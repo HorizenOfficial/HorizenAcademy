@@ -29,7 +29,7 @@ Cryptographic hash functions are *pseudo-random*. This means one cannot predict 
 
 115792089237316195423570985008687907853269984665640564039457584007913129639936
 
-The easiest way to imagine the dimension of this number is to play with this [interactive scale of the universe](https://scaleofuniverse.com/) and paying attention to the dimensions in the bottom right corner.
+The easiest way to imagine the dimension of this number is to play with this [interactive scale of the universe](https://htwins.net/scale2/) and paying attention to the dimensions in the bottom right corner.
 
 Because of the enormous output range, hash functions are almost *collision-resistant*. It is infeasible to find an input *x'* that maps to the same output as another input *x*. The only strategy would be a brute-force approach, which would take even the most advanced supercomputers thousands of years.
 
