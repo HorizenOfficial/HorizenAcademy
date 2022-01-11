@@ -4,12 +4,12 @@ timezone: America/New_York
 email: info@horizen.global
 description: Horizen Academy
 baseurl: ""
-url: https://academy.horizen.io/
+url: https://academy.horizen.io
 logo: /assets/img/Logo-beta.svg
 author:
   name: Horizen Academy
   email: info@horizen.global
-  uri: https://academy.horizen.io/
+  uri: https://academy.horizen.io
   bio:
   facebook: https://www.facebook.com/horizenglobal/
   twitter: horizenglobal

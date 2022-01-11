@@ -69,7 +69,7 @@ While all this might sound very complex at first you will see shortly that a gra
 
 ## Math on the Elliptic Curve
 
-**Note**: We already covered the basic operations of adding two points and multiplying points with _scalars_ in the [advanced section](https://academy.horizen.io//technology/advanced/public-key-cryptography/) of the Horizen Academy. Feel free to catch up on the basic operations before you continue reading this article.
+**Note**: We already covered the basic operations of adding two points and multiplying points with _scalars_ in the [advanced section](https://academy.horizen.io/technology/advanced/public-key-cryptography/) of the Horizen Academy. Feel free to catch up on the basic operations before you continue reading this article.
 
 Adding two points (_P_ and _Q_) on the curve can be done graphically by connecting them with a straight line, taking the intersection of that line with the curve and projecting it across the x-axis (_R_). When a point is added to itself the tangent line at that point is taken, the intersection with the curve found and again projected across the x-axis.
 

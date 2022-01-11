@@ -44,7 +44,7 @@ This is not the right place to ask general questions about the Horizen Academy, 
 ## The Horizen Academy Structure
 
 There are four structural elements to the Horizen Academy content: **Levels**, **Topics**, **Chapters** and **Articles**.
-To get an overview of the exsiting content follow take a look at our [Content Overview](https://academy.horizen.io//content-overview/), sorted by topics.
+To get an overview of the exsiting content follow take a look at our [Content Overview](https://academy.horizen.io/content-overview/), sorted by topics.
 
 ### Languages
 
@@ -68,7 +68,7 @@ As of now, we DO NOT consider adding additional levels.
 We currently cover three main topics Technology, Privacy, and Horizen.
 Additionally, we have a History section covering the evolution of blockchain from the Cypherpunk movement to the creation of Horizen, an Explain It Like I'm 5 (ELI5) section and a list of useful Resources.
 
-For each topic you can find a [content overview](https://academy.horizen.io//content-overview/) on our website. For our English content, you can find each topic [here](_i18n/en/_posts/).
+For each topic you can find a [content overview](https://academy.horizen.io/content-overview/) on our website. For our English content, you can find each topic [here](_i18n/en/_posts/).
 
 We DO consider adding additional, **developer focused content** and therefore a new Topic. Please refer to our process for [suggesting additional content](#suggesting-additional-content).
 
@@ -89,7 +89,7 @@ If you think we are missing a hugely important chapter and we must add it, pleas
 
 ### Articles
 
-The most basic element of the Horizen Academy are articles. You can find all our articles in our [content overview](https://academy.horizen.io//content-overview/).
+The most basic element of the Horizen Academy are articles. You can find all our articles in our [content overview](https://academy.horizen.io/content-overview/).
 Each article should adhere to the standards defined in the [Levels](#levels) section of this document.
 
 We DO consider adding additional articles to the Academy. Please refer to our process for [suggesting additional content](#suggesting-additional-content).
