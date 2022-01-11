@@ -38,7 +38,7 @@ The first significant difference between the two balance models is how the state
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_D.jpg)
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_M.jpg)
 
-A _graph_ is defined as a set of nodes or _vertices_ connected by _edges_. In a directed graph, each edge has a direction, usually indicated through arrows. _Directed acyclic graphs_ don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.io//technology/expert/a-relative-the-dag/#what-is-a-dag).
+A _graph_ is defined as a set of nodes or _vertices_ connected by _edges_. In a directed graph, each edge has a direction, usually indicated through arrows. _Directed acyclic graphs_ don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.io/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
 The graphic above shows a _directed acyclic graph_ of the UTXO model on the left. Each state represents a block in the blockchain. Each transaction output comprises a node in the DAG, and each transaction is represented by one or more edges originating from a transaction output. Hence, an _unspent_ transaction output does not have an edge originating from it. In the example above, the transaction outputs 3, 5, 6, and 7 are unspent.
 

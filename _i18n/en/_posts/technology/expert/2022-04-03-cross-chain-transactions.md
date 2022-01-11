@@ -29,7 +29,7 @@ The cryptographic proofs allow the mainchain to verify state transitions of the 
 
 ### Sidechain Transactions Commitment
 
-A new data field called _Sidechain Transactions Commitment_ (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.io//technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.io//technology/expert/blockchain-as-a-data-structure/#merkle-trees) whose leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without needing to know the entire mainchain block.
+A new data field called _Sidechain Transactions Commitment_ (SCTxsCommitment) is added to the mainchain [block header](https://academy.horizen.io/technology/expert/blockchain-as-a-data-structure/#the-block-header). It is the root of a [Merkle tree](https://academy.horizen.io/technology/expert/blockchain-as-a-data-structure/#merkle-trees) whose leaves are made up of sidechain relevant transactions contained in that specific block. Including this data in the block header allows sidechain nodes to easily synchronize and verify incoming transactions without needing to know the entire mainchain block.
 
 ### Sidechain Deployment
 

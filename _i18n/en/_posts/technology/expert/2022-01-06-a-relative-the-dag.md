@@ -42,7 +42,7 @@ Strictly speaking, a DAG is a mathematical concept and nothing particularly inno
 ![DAG](/assets/post_files/technology/expert/1.5-DAGs/dag_D.jpg)
 ![DAG](/assets/post_files/technology/expert/1.5-DAGs/dag_M.jpg)
 
-Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes (the blocks), and edges (the references) that have a direction and no cyclic relationships. The [innovation introduced with Bitcoin]](https://academy.horizen.io//technology/expert/a-protocol-to-transfer-value/#the-great-innovations-introduced-with-bitcoin) and blockchain technology was achieving consensus and Sybil-resistance in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
+Technically, a blockchain is the most simple form of a DAG. It is a linear structure of nodes (the blocks), and edges (the references) that have a direction and no cyclic relationships. The [innovation introduced with Bitcoin]](https://academy.horizen.io/technology/expert/a-protocol-to-transfer-value/#the-great-innovations-introduced-with-bitcoin) and blockchain technology was achieving consensus and Sybil-resistance in a decentralized environment. This innovation can be applied to different, more sophisticated data structures as well.
 
 > "Both [, Blockchains and DAGs,] are digital ledgers. Both may be distributed. Both may be decentralized. Both may have token-economic incentive-mechanisms. They are both subject to immutability attributes as defined by their networks/communities. And finally each network is comprised by its constituents, including users, devs, miners, and other stakeholders" - Bunny Hernandez
 

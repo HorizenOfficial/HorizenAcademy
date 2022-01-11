@@ -39,7 +39,7 @@ Lastly, hash functions must be _deterministic_. Hashing a given input must alway
 
 Not all hash functions are the same. One differentiator is the output space which affects the collision resistance. If the output space was only 10-bit, performing 1024 hash operations would statistically suffice to find a second input _x'_ mapping to the same output as _x_.
 
-The required properties vary depending on what a hash function is used for. When a hash function is used in a [_hash table_](https://academy.horizen.io//technology/expert/blockchain-as-a-data-structure/#hash-table) for mapping _keys_ to _buckets_, collisions are acceptable. If a hash function does not meet all previously mentioned requirements the hash function is called _non-cryptographic_.
+The required properties vary depending on what a hash function is used for. When a hash function is used in a [_hash table_](https://academy.horizen.io/technology/expert/blockchain-as-a-data-structure/#hash-table) for mapping _keys_ to _buckets_, collisions are acceptable. If a hash function does not meet all previously mentioned requirements the hash function is called _non-cryptographic_.
 
 ### Non-Cryptographic Hash Functions
 
@@ -88,7 +88,7 @@ Another use case for hash functions is creating short, data saving identifiers f
 
 ### Merkle Trees
 
-Hash functions are also used in [_Merkle trees_](https://academy.horizen.io//technology/expert/blockchain-as-a-data-structure/#merkle-trees), a construction used to create a succinct (256-bit) summary of all transactions in a block. This summary is then included in the block header.
+Hash functions are also used in [_Merkle trees_](https://academy.horizen.io/technology/expert/blockchain-as-a-data-structure/#merkle-trees), a construction used to create a succinct (256-bit) summary of all transactions in a block. This summary is then included in the block header.
 
 Transactions are first hashed and then combined pairwise until a single hash, the _Merkle root_, is obtained. If there is an odd number of transactions in a given round, the last transaction is interlinked with itself, as you can see with _H(C)_ in the graphic below.
 
@@ -128,7 +128,7 @@ In a [_length extension attack_](https://en.wikipedia.org/wiki/Length_extension_
 
 ### Birthday Attack
 
-Another known attack on hash functions is the [_Birthday Attack_](https://en.wikipedia.org/wiki/Birthday_attack). It exploits the mathematics behind the [_birthday problem_](https://academy.horizen.io//technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as there is one more person than days in a leap year. However, with just 23 people in the group, the chance of two of them sharing a birthday is already at 50%, while it reaches 99.9% with just 70 people.
+Another known attack on hash functions is the [_Birthday Attack_](https://en.wikipedia.org/wiki/Birthday_attack). It exploits the mathematics behind the [_birthday problem_](https://academy.horizen.io/technology/expert/proof-of-work/#the-generalized-birthday-problem) in probability theory to find collisions in hash functions more efficiently. The birthday problem describes an interesting property regarding a group of people and their birthdays. In a group of 367 people, the probability of two of those people sharing a birthday is 1, as there is one more person than days in a leap year. However, with just 23 people in the group, the chance of two of them sharing a birthday is already at 50%, while it reaches 99.9% with just 70 people.
 
 ![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_D.jpg)
 ![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_M.jpg)

@@ -51,7 +51,7 @@ If you would like to go through the process of creating a private key for yourse
 
 ### Your Mnemonic Phrase
 
-It is good practice to backup your private key in an analog format but copying and writing down your private key in one of the formats above is very error prone. In 2013 a _Bitcoin Improvement Proposal_ (BIP) was submitted suggesting the use of [mnemonic phrases](https://academy.horizen.io//technology/expert/wallets-expert/#mnemonic-phrase) to represent private keys.
+It is good practice to backup your private key in an analog format but copying and writing down your private key in one of the formats above is very error prone. In 2013 a _Bitcoin Improvement Proposal_ (BIP) was submitted suggesting the use of [mnemonic phrases](https://academy.horizen.io/technology/expert/wallets-expert/#mnemonic-phrase) to represent private keys.
 
 > _"A mnemonic code or sentence is superior for human interaction compared to the handling of raw binary or hexadecimal representations of a wallet seed. The sentence could be written on paper or spoken over the telephone. This guide is meant to be a way to transport computer-generated randomness with a human readable transcription." - [BIP 0039](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), Palatinus, Rusnak, Voisine, Bowe_
 
