@@ -4,12 +4,12 @@ timezone: America/New_York
 email: info@horizen.global
 description: Horizen Academy
 baseurl: ""
-url: https://academy.horizen.global
+url: https://academy.horizen.io
 logo: /assets/img/Logo-beta.svg
 author:
   name: Horizen Academy
   email: info@horizen.global
-  uri: https://academy.horizen.global
+  uri: https://academy.horizen.io
   bio:
   facebook: https://www.facebook.com/horizenglobal/
   twitter: horizenglobal
@@ -40,22 +40,22 @@ permalink: pretty
 excerpt_separator:
 markdown: kramdown
 plugins:
-- jekyll-last-modified-at
-- jekyll-seo-tag
-- jekyll-multiple-languages-plugin
+  - jekyll-last-modified-at
+  - jekyll-seo-tag
+  - jekyll-multiple-languages-plugin
 exclude:
-- _dev
-- bower.json
-- .env.json
-- Gemfile
-- Gemfile.lock
-- gulpfile.js
-- LICENSE.md
-- node_modules
-- package.json
-- package-lock.json
-- README.md
-- vendor
+  - _dev
+  - bower.json
+  - .env.json
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - vendor
 
 languages: ["en", "es", "fr"]
 exclude_from_localizations: ["assets"]

@@ -4,7 +4,7 @@
 
 [I don't want to read all this I just want to fix a typo!](#correcting-minor-errors)
 
-The Horizen Academy has the purpose to be a valuable resource for all people interested in learning about blockchain technology and online privacy, as well as the Horizen software platform itself. You can find the current version of the Horizen Academy [here](https://academy.horizen.global).
+The Horizen Academy has the purpose to be a valuable resource for all people interested in learning about blockchain technology and online privacy, as well as the Horizen software platform itself. You can find the current version of the Horizen Academy [here](https://academy.horizen.io/).
 
 This is not your standard code-focused project, therefore this is also not your standard CONTRIBUTING.md.
 
@@ -18,20 +18,20 @@ The following list is a set of guidelines, for contributing to the Horizen Acade
 
 [The Horizen Academy Structure](#the-horizen-academy-structure)
 
-* [Languages](#languages)
-* [Levels](#levels)
-* [Topics](#topics)
-* [Chapters](#chapters)
-* [Articles](#articles)
+- [Languages](#languages)
+- [Levels](#levels)
+- [Topics](#topics)
+- [Chapters](#chapters)
+- [Articles](#articles)
 
 [How Can I Contribute?](#how-can-i-contribute)
 
-* [Reporting Bugs](#reporting-bugs)
-* [Correcting Minor Errors](#correcting-minor-errors)
-* [Suggesting Additional Content](#suggesting-additional-content)
-* [Suggesting Additional Features](#suggesting-additional-features)
+- [Reporting Bugs](#reporting-bugs)
+- [Correcting Minor Errors](#correcting-minor-errors)
+- [Suggesting Additional Content](#suggesting-additional-content)
+- [Suggesting Additional Features](#suggesting-additional-features)
 
-____________________
+---
 
 ### Code of Conduct
 
@@ -44,7 +44,7 @@ This is not the right place to ask general questions about the Horizen Academy, 
 ## The Horizen Academy Structure
 
 There are four structural elements to the Horizen Academy content: **Levels**, **Topics**, **Chapters** and **Articles**.
-To get an overview of the exsiting content follow take a look at our [Content Overview](https://academy.horizen.global/content-overview/), sorted by topics.
+To get an overview of the exsiting content follow take a look at our [Content Overview](https://academy.horizen.io/content-overview/), sorted by topics.
 
 ### Languages
 
@@ -54,12 +54,12 @@ Currently we have an English and Spanish version of our content live. We are als
 
 The content of the Horizen Academy is seperated into three Levels: **Beginner**, **Advanced** and **Expert**. Each Level comes with its own requirements.
 
-| Beginner | Advanced | Expert |
-|--|--|--|
+| Beginner                                                         | Advanced                                                                                       | Expert                                                                                          |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | users new to the topic (blockchain/cryptocurrency/online privacy | users with a general idea of what a blockchain/cryptocurrency is, but not sure on how it works | users that have spend significant time with blockchain or with a background in computer science |
-| explaining **what it does** on a high level| explaining **what it is** |  explaining **how it works** |
-| try to avoid technical language | introduce technical language | frequent use of technical language |
-| [3 - 8 min per article](https://niram.org/read/)| [8 - 15 min per article](https://niram.org/read/) | [10 - 20 min per article](https://niram.org/read/) |
+| explaining **what it does** on a high level                      | explaining **what it is**                                                                      | explaining **how it works**                                                                     |
+| try to avoid technical language                                  | introduce technical language                                                                   | frequent use of technical language                                                              |
+| [3 - 8 min per article](https://niram.org/read/)                 | [8 - 15 min per article](https://niram.org/read/)                                              | [10 - 20 min per article](https://niram.org/read/)                                              |
 
 As of now, we DO NOT consider adding additional levels.
 
@@ -68,7 +68,7 @@ As of now, we DO NOT consider adding additional levels.
 We currently cover three main topics Technology, Privacy, and Horizen.
 Additionally, we have a History section covering the evolution of blockchain from the Cypherpunk movement to the creation of Horizen, an Explain It Like I'm 5 (ELI5) section and a list of useful Resources.
 
-For each topic you can find a [content overview](https://academy.horizen.global/content-overview/) on our website. For our English content, you can find each topic [here](_i18n/en/_posts/).
+For each topic you can find a [content overview](https://academy.horizen.io/content-overview/) on our website. For our English content, you can find each topic [here](_i18n/en/_posts/).
 
 We DO consider adding additional, **developer focused content** and therefore a new Topic. Please refer to our process for [suggesting additional content](#suggesting-additional-content).
 
@@ -76,20 +76,20 @@ We DO consider adding additional, **developer focused content** and therefore a 
 
 Each of our three main topics - Technology, Privacy, and Horizen - is seperated into several chapters. Our goal when designing the initial structure was to create chapters suitable for all levels throughout the topic, e.g. all levels in the technology section share the Levels.
 
-* What is a Blockchain?
-* How Does a Blockchain Work?
-* Wallets
-* Transactions
-* Privacy
+- What is a Blockchain?
+- How Does a Blockchain Work?
+- Wallets
+- Transactions
+- Privacy
 
-The Advanced level introduces an additional chapter *Attacks* and on the Expert level there will be another chapter on *Programming Blockchain*.
+The Advanced level introduces an additional chapter _Attacks_ and on the Expert level there will be another chapter on _Programming Blockchain_.
 
 As of now, we DO NOT consider adding additional chapters, as we believe that most every new article can be categorized in one of the exsisting chapters.
 If you think we are missing a hugely important chapter and we must add it, please refer to our process for [suggesting additional content](#suggesting-additional-content).
 
 ### Articles
 
-The most basic element of the Horizen Academy are articles. You can find all our articles in our [content overview](https://academy.horizen.global/content-overview/).
+The most basic element of the Horizen Academy are articles. You can find all our articles in our [content overview](https://academy.horizen.io/content-overview/).
 Each article should adhere to the standards defined in the [Levels](#levels) section of this document.
 
 We DO consider adding additional articles to the Academy. Please refer to our process for [suggesting additional content](#suggesting-additional-content).

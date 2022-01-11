@@ -7,35 +7,40 @@ permalink: /technology/expert/utxo-vs-account-model/
 topic: technology
 level: expert
 chapter: "Transactions"
-further_reads: [cell_model, how_data_is_stored_in_ethereum, qtums_account_abstraction_layer_aal_explanation]
+further_reads:
+  [
+    cell_model,
+    how_data_is_stored_in_ethereum,
+    qtums_account_abstraction_layer_aal_explanation,
+  ]
 ---
 
 For digital money to be useful, it needs to be transferable. The transfer of money on a blockchain is initiated by the owner, creating a transaction. This transaction informs the network about how much money is changing hands and who the new owner is.
 
 So far we've explained [what data comprises a transaction]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) when we looked at the blockchain as a data structure. When we talked about [public key cryptography]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}) we covered how ownership is proven and verified on a blockchain, a key aspect of enabling secure transactions.
 
-In this article, we will look at the accounting/balance models used in blockchains. We've already introduced the commonly used UTXO model [in our Advanced Level]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}) and assume basic knowledge of it for this article. The second method to track user balances, as applied in Ethereum, is the *account model*.
+In this article, we will look at the accounting/balance models used in blockchains. We've already introduced the commonly used UTXO model [in our Advanced Level]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}) and assume basic knowledge of it for this article. The second method to track user balances, as applied in Ethereum, is the _account model_.
 
 We will start by looking at their similarities and then dive deep into each model individually. Lastly, we will compare the two models and briefly show how they can be combined to create a hybrid system.
 
 ## The Blockchain is a State Machine
 
-Before we get into the different balance models, it makes sense to take a step back and look at the blockchain in more general terms - as a *state machine*.
+Before we get into the different balance models, it makes sense to take a step back and look at the blockchain in more general terms - as a _state machine_.
 
-Per Wikipedia, "a system is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system." Hence, a blockchain qualifies as a stateful system. Its entire purpose is to record past events and user interactions. With each new block the system undergoes a *state transition* that happens according to the *state transition logic* defined in its [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}).
+Per Wikipedia, "a system is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system." Hence, a blockchain qualifies as a stateful system. Its entire purpose is to record past events and user interactions. With each new block the system undergoes a _state transition_ that happens according to the _state transition logic_ defined in its [protocol]({{ site.baseurl }}{% post_url /technology/expert/2022-01-03-a-protocol-to-transfer-value %}).
 
 Every blockchain, no matter if it uses the UTXO or account model, follows this scheme. The user interactions, mostly transactions, are broadcast to the network, and with each new block, a set of them is permanently recorded. The balances of the transacting parties are updated when the system transitions to the new state. The difference between the UTXO and the account model lies in the way the bookkeeping is handled. With bookkeeping, we mean recording the state and transitioning from one state to another.
 
 ### Recording the State
 
-The first significant difference between the two balance models is how the state of the system is recorded. In the UTXO model, the movement of assets is recorded as a *directed acyclic graph* (DAG) between addresses, whereas the account model maintains a database of network states.
+The first significant difference between the two balance models is how the state of the system is recorded. In the UTXO model, the movement of assets is recorded as a _directed acyclic graph_ (DAG) between addresses, whereas the account model maintains a database of network states.
 
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_D.jpg)
 ![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_M.jpg)
 
-A *graph* is defined as a set of nodes or *vertices* connected by *edges*. In a directed graph, each edge has a direction, usually indicated through arrows. *Directed acyclic graphs* don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.global/technology/expert/a-relative-the-dag/#what-is-a-dag).
+A _graph_ is defined as a set of nodes or _vertices_ connected by _edges_. In a directed graph, each edge has a direction, usually indicated through arrows. _Directed acyclic graphs_ don't allow circular relationships between nodes. We take a more detailed look at graphs [here](https://academy.horizen.io/technology/expert/a-relative-the-dag/#what-is-a-dag).
 
-The graphic above shows a *directed acyclic graph* of the UTXO model on the left. Each state represents a block in the blockchain. Each transaction output comprises a node in the DAG, and each transaction is represented by one or more edges originating from a transaction output. Hence, an *unspent* transaction output does not have an edge originating from it. In the example above, the transaction outputs 3, 5, 6, and 7 are unspent.
+The graphic above shows a _directed acyclic graph_ of the UTXO model on the left. Each state represents a block in the blockchain. Each transaction output comprises a node in the DAG, and each transaction is represented by one or more edges originating from a transaction output. Hence, an _unspent_ transaction output does not have an edge originating from it. In the example above, the transaction outputs 3, 5, 6, and 7 are unspent.
 
 On the right, the graphic shows a representation of the different states in the account model. With each new block, the state of the system is updated according to the transactions contained in the block. The number of accounts remains constant and independent of the number of transactions conducted, as long as the number of users or [smart contracts]({{ site.baseurl }}{% post_url /technology/expert/2022-01-04-guaranteed-execution-with-smart-contracts %}) remains constant.
 
@@ -58,7 +63,7 @@ Transaction outputs must be spent as a whole because the records in previous blo
 However, there are two crucial differences:
 
 - In a cash payment, you rely on your counterparty to return the change. In the case of the UTXO model, the payee is never in control of the change in the first place.
-- The other difference is that cash exists in defined, *discrete* denominations. There are $1, $5, $10 bills, and so on. Transaction outputs in the UTXO model can have arbitrary values, e.g., 11.79327 ZEN.
+- The other difference is that cash exists in defined, _discrete_ denominations. There are $1, $5, $10 bills, and so on. Transaction outputs in the UTXO model can have arbitrary values, e.g., 11.79327 ZEN.
 
 ![Calculating the user balance in the UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
 ![Calculating the user balance in the UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_M.jpg)
@@ -117,9 +122,9 @@ The setting is the same as before: Alice wants to transfer 8 ZEN to Bob. Her wal
 
 When the system transitions to a new state (n+1) with the next block, Alice's account balance will globally be reduced to 2 ZEN, whereas Bob's balance will be increased to 9 ZEN.
 
-The PubKey- and Signature Script do not exist in account-based blockchains. The verification of [signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) in account-based blockchain, Ethereum for example, is based on three parameters, *r*, *s*, and *V* provided by the sender. These three values comprise the signature. Solidity, the programming language used in Ethereum, provides a method, [ecrecover](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsign) that returns an address given these parameters. If the returned address matches the sender's address, the signature, and in return, the transaction is valid.
+The PubKey- and Signature Script do not exist in account-based blockchains. The verification of [signatures]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}) in account-based blockchain, Ethereum for example, is based on three parameters, _r_, _s_, and _V_ provided by the sender. These three values comprise the signature. Solidity, the programming language used in Ethereum, provides a method, [ecrecover](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsign) that returns an address given these parameters. If the returned address matches the sender's address, the signature, and in return, the transaction is valid.
 
-Where in the UTXO model part of the verification process is checking if a transaction output in *unspent*, nodes in the account model check if the sender's balance is larger than or equal to the transferred amount. This is true for the native asset of the chain, e.g., ether, as well as all other tokens on the network.
+Where in the UTXO model part of the verification process is checking if a transaction output in _unspent_, nodes in the account model check if the sender's balance is larger than or equal to the transferred amount. This is true for the native asset of the chain, e.g., ether, as well as all other tokens on the network.
 
 A transaction in the account-based model is an instruction for how to transition two or more accounts to the next state. The actual transition is executed by the nodes. Because the final state is not specified in the transaction, the resulting transaction size is a lot smaller than in the UTXO model.
 
@@ -129,9 +134,9 @@ The state of accounts in Ethereum is not stored on the blockchain but computed a
 
 Below, we will compare the strengths and weaknesses of the UTXO and account model. We will start by comparing them at a high-level computational view, and then move onto scalability, privacy, smart contract capabilities, and more.
 
-In short, The UTXO model is a *verification model*. This means users submit transactions that specify the results of the state transition, defined as new transaction outputs spendable by the receiver(s). Nodes then verify if the consumed inputs are unspent and if the signature(s) satisfy the spending conditions.
+In short, The UTXO model is a _verification model_. This means users submit transactions that specify the results of the state transition, defined as new transaction outputs spendable by the receiver(s). Nodes then verify if the consumed inputs are unspent and if the signature(s) satisfy the spending conditions.
 
-The account model, on the other hand, is a *computational model*. In this model, users submit transactions instructing nodes on what state transitions should look like. The network then computes the new state based on the instructions. This method comes with specific implications regarding second layer scalability solutions like state channels and sharding.
+The account model, on the other hand, is a _computational model_. In this model, users submit transactions instructing nodes on what state transitions should look like. The network then computes the new state based on the instructions. This method comes with specific implications regarding second layer scalability solutions like state channels and sharding.
 
 ### Scalability
 
@@ -194,7 +199,7 @@ QTUM is one example of a blockchain that utilizes a hybrid system of UTXOs and a
 
 > "Early on when Qtum was first being designed, the thought process was to build a business-ready blockchain that was versatile yet secure. To accomplish these motivations, Qtum chose the underlying UTXO (Unspent Transaction Output) model that Bitcoin is built on over the Accounts model that Ethereum style blockchains are built on." - [Dev Bharel](https://blog.qtum.org/qtums-utxo-design-decision-d3cb415a3a6e)
 
-The UTXO model was used as the basis for the overall architecture because it was considered "significantly securer" at the time of conception. On top of this UTXO layer, QTUM enables "creating and executing smart contracts using the account model offered by Ethereum" through a construction they call the [*Account Abstraction Layer* (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
+The UTXO model was used as the basis for the overall architecture because it was considered "significantly securer" at the time of conception. On top of this UTXO layer, QTUM enables "creating and executing smart contracts using the account model offered by Ethereum" through a construction they call the [_Account Abstraction Layer_ (AAL)](https://blog.qtum.org/qtums-account-abstraction-layer-aal-explanation-143cb06cf08)
 
 The AAL combines UTXOs for a given contract in a new transaction as soon as there are two or more of them available to the contract code. By using the UTXO model as a base layer, QTUM is also able to implement [BlackCoin's Proof of Stake Protocol](https://blackcoin.org/blackcoin-pos-protocol-v2-whitepaper.pdf), which requires parallel proofs and UTXO activity.
 

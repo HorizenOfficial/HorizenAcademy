@@ -23,4 +23,5 @@ group :jekyll_plugins do
    gem 'jekyll-last-modified-at'
    gem 'jekyll-seo-tag'
    gem 'jekyll-multiple-languages-plugin'
+   gem 'kramdown-parser-gfm'
 end
