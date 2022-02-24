@@ -7,6 +7,7 @@ permalink: /technology/expert/the-elements-of-a-blockchain/
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+canonical_link: "/technology/beginner/the-elements-of-a-blockchain/"
 ---
 
 This article is a high-level overview of the topics we discuss in this chapter. It is not focused on details but on providing context before each topic is covered on a granular level.

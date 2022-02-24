@@ -5,6 +5,7 @@ title: "What is a Wallet?"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency wallets in a simple, understandable way."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
+canonical_link: "/technology/advanced/types-of-wallets/"
 ---
 
 <table class="table lead">

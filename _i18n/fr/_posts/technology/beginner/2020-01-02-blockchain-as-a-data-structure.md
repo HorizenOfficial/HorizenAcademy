@@ -7,6 +7,7 @@ permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner
 chapter: "Qu’est-ce que la Blockchain ?"
+canonical_link: "/fr/technology/advanced/blockchain-as-a-data-structure/"
 ---
 
 Bienvenue dans le tout premier article de la section Technologie de notre Académie Horizen. Les deux premiers articles ont pour but d’expliquer ce qu’est une blockchain. Si vous vous êtes déjà informé sur le Bitcoin, la blockchain et les cryptomonnaies, vous devez savoir qu’il y a une distinction à faire entre :

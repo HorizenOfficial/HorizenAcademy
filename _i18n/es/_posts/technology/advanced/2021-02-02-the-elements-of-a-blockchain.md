@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "¿Cómo funciona una cadena de bloques?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity]
+canonical_link: "/es/technology/beginner/the-elements-of-a-blockchain/"
 ---
 
 Cuando Satoshi Nakamoto publicó el libro blanco de Bitcoin, introdujo una innovación que mezclaba componentes conocidos con varios novedosos. Este capítulo está diseñado para explicar cómo funciona la cadena de bloques y qué función cumple cada parte individual. Nuestro objetivo es contextualizar cada parte antes de explicar a fondo los conceptos.

@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "Privacidad"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
+canonical_link: "/es/technology/advanced/privacy-on-the-blockchain/"
 ---
 
 Una de las propuestas de valor más grandes de las cadenas de bloques es la transparencia que ofrecen como libros contables públicos. Sin embargo, hay muchos casos en los que resulta deseable llevar a cabo una transacción privada.

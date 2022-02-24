@@ -5,6 +5,7 @@ title: "What is Public-Key Cryptography?"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about public-key cryptography in a simple, understandable way."
 permalink: /eli5/what-is-public-key-cryptography/
 topic: eli5
+canonical_link: "/technology/advanced/public-key-cryptography/"
 ---
 
 <table class="table lead">

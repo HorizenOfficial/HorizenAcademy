@@ -5,6 +5,7 @@ title: "Qu'est-ce qu'un wallet ou portefeuille ?"
 description: "Un wallet est un programme sur votre ordinateur ou votre téléphone, qui vous permet de recevoir et d'envoyer de l'argent."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
+canonical_link: "/fr/technology/advanced/types-of-wallets/"
 ---
 
 <table class="table lead">

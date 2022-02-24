@@ -5,6 +5,7 @@ title: "¿Qué es el minado? "
 description: "Un minero es alguien que observa lo que está sucediendo en la red y registra cada transferencia de dinero."
 permalink: /eli5/what-is-mining/
 topic: eli5
+canonical_link: "/es/technology/advanced/mining/"
 ---
 
 <table class="table lead">

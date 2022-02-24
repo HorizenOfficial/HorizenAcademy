@@ -7,6 +7,7 @@ permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner
 chapter: "Transacciones"
+canonical_link: "/es/technology/advanced/block-explorer-continued/"
 ---
 
 Un explorador de bloques es una herramienta que permite al usuario explorar la cadena de bloques, así como un explorador de internet te permite acceder a la información en la web. Utilizando un explorador el usuario puede consultar cuántas monedas hay guardadas en una dirección específica, con cuántas monedas cuenta actualmente e incluso cuántas monedas ha tenido ese usuario en total (lo cual logra repasando el historial de transacciones de esa dirección). Esto resulta útil cuando un usuario crea una transacción y desea luego consultar su estatus. Tomemos un ejemplo de la vida real:

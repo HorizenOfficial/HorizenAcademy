@@ -6,6 +6,7 @@ description: "Comparaison de la blockchain et ses blocs avec un livre et ses pag
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]
+canonical_link: "/fr/technology/advanced/blockchain-as-a-data-structure/"
 ---
 
 Une blockchain fonctionne comme un grand livre sur internet. Ce livre garde la trace de combien d'argent tout le monde a. 

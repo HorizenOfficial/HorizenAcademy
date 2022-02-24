@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Why Privacy?"
 further_reads: [i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy, im_not_an_international_drug_dealer]
+canonical_link: "/privacy/advanced/the-nothing-to-hide-argument/"
 ---
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), "The nothing to hide argument states that government surveillance programs do not threaten privacy unless they uncover illegal activities and that if they do uncover illegal activities, the person committing these activities does not have the right to keep them private. Hence, a person who favours this argument may state "I've got nothing to hide" and therefore does not express opposition to government surveillance. An individual using this argument may say that a person should not worry about government or surveillance if he/she has "nothing to hide."
