@@ -7,6 +7,7 @@ permalink: /privacy/advanced/best-practices/
 topic: privacy
 level: advanced
 chapter: "Mejores prácticas"
+no_index: true
 ---
 
 Este es el nivel avanzado, el cual resulta ideal para el usuario que entiende de manera general el funcionamiento de la privacidad digital y la tecnología que le permite controlar su huella digital, pero que quiere aprender más al respecto.

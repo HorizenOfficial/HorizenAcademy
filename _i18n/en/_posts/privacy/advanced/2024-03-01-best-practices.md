@@ -7,6 +7,7 @@ permalink: /privacy/advanced/best-practices/
 topic: privacy
 level: advanced
 chapter: "Best Practices"
+no_index: true
 ---
 
 This is the Advanced Level and is best for users who have a general understanding of digital privacy and the technology that can enable you to control your digital footprint but want to know about it in more detail.

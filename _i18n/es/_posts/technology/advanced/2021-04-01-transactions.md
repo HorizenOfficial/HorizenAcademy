@@ -7,6 +7,7 @@ permalink: /technology/advanced/transactions/
 topic: technology
 level: advanced
 chapter: "Transacciones"
+no_index: true
 ---
 
 Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques si ha leído los capítulos anteriores a este. Tras cubrir la idea de una cadena de bloques y sus propuestas de valor en el primer capítulo, nos adentramos a los elementos que la hacen funcionar. En este capítulo, nos concentraremos en una subunidad de la cadena, una pequeñísima pieza del rompecabezas. La cadena de bloques está compuesta de muchos bloques, los cuales funcionan como contenedores de transacciones.

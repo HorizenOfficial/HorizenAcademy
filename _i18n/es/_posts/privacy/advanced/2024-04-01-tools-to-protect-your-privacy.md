@@ -7,6 +7,7 @@ permalink: /privacy/advanced/tools-to-protect-your-privacy/
 topic: privacy
 level: advanced
 chapter: "Herramientas para proteger la privacidad"
+no_index: true
 ---
 
 Este capítulo describe las herramientas necesarias para que el usuario mantenga protegida su privacidad. Hemos elegido herramientas que proporcionan un mayor nivel de privacidad que aquellas mencionadas en el nivel principiante. Es importante mencionar de antemano que las herramientas presentadas en este capítulo pueden tener costos mensuales o anuales más elevados y tomar más tiempo para instalarse adecuadamente.

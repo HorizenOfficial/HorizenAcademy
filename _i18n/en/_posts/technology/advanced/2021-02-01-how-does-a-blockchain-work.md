@@ -7,6 +7,7 @@ permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
+no_index: true
 ---
 
 In this chapter of our Advanced Level about blockchain technology, we will introduce you to the most important ideas, elements, and entities of a public blockchain starting with an [overview]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).

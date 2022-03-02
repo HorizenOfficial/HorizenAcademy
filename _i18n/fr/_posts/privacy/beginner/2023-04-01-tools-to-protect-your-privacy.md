@@ -7,6 +7,7 @@ permalink: /privacy/beginner/tools-to-protect-your-privacy/
 topic: privacy
 level: beginner
 chapter: "Outils pour protéger votre vie privée"
+no_index: true
 ---
 
 C'est le niveau pour les débutants. Nous présenterons à l'utilisateur novice le monde de la vie privée en ligne et de la technologie quelques outils qui lui permettront de contrôler son empreinte numérique.

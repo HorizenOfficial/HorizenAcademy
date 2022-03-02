@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /privacy/advanced/
 topic: privacy
 level: advanced
+no_index: true
 ---
 
 <div class="row mb-3">

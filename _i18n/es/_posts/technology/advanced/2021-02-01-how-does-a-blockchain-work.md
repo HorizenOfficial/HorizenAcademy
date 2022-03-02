@@ -7,6 +7,7 @@ permalink: /technology/advanced/how-does-a-blockchain-work/
 topic: technology
 level: advanced
 chapter: "¿Cómo funciona una cadena de bloques?"
+no_index: true
 ---
 
 En este capítulo del nivel avanzado de tecnología, el usuario conocerá las ideas, elementos y entidades más importantes de una cadena de bloques pública, empezando por una breve [vista general]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}).

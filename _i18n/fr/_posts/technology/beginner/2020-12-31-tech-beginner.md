@@ -6,6 +6,7 @@ description: "Ce niveau donne une introduction simple aux blockchains, la techno
 permalink: /technology/beginner/
 topic: technology
 level: beginner
+no_index: true
 ---
 
 <div class="row mb-3">

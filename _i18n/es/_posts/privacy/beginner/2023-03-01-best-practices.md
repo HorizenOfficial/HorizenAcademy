@@ -7,6 +7,7 @@ permalink: /privacy/beginner/best-practices/
 topic: privacy
 level: beginner
 chapter: "Mejores prácticas"
+no_index: true
 ---
 
 Este capítulo describe las mejores prácticas de seguridad personal y le presenta al usuario un par de herramientas para controlar su huella digital. 
