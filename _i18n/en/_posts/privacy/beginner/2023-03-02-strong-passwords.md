@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Best Practices"
 further_reads: [how_to_create_a_strong_password]
+canonical_link: "/privacy/advanced/strong-passwords/"
 ---
 
 Reusing same passwords on many websites and applications is the number one security bad practice. Even large and strong platforms are being hacked and their users' credentials are getting sold over black markets. There have been cases when the stolen data was available publicly too. Imagine if your credentials were in one of such databases - every account you used the same password for, is essentially hacked too.

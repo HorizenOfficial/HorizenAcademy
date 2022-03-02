@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 further_reads: [hashing]
+canonical_link: "/technology/expert/hash-functions/"
 ---
 
 <table class="table lead">

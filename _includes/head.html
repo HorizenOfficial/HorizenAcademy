@@ -20,13 +20,19 @@
   {% elsif page.keywords != '' %}
   <meta name="keywords" content="{{ page.keywords }}">
   {% endif %}
-  {% if site.lang == 'en' %}
-  <link rel="canonical" href="{{site.url}}{{page.url}}">
-  <meta property="og:url" content="{{site.url}}{{page.url}}">
+  {% if page.canonical_link %}
+    <link rel="canonical" href="{{site.url}}{{page.canonical_link}}">
+    <meta property="og:url" content="{{site.url}}{{page.canonical_link}}">
   {% else %}
-  <link rel="canonical" href="{{site.url}}/{{site.lang}}{{page.url}}">
-  <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
+    {% if site.lang == 'en' %}
+    <link rel="canonical" href="{{site.url}}{{page.url}}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
+    {% else %}
+    <link rel="canonical" href="{{site.url}}/{{site.lang}}{{page.url}}">
+    <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
+    {% endif %}
   {% endif %}
+  
   {% for language in site.languages %}
   {% if language == 'en' %}
   <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />

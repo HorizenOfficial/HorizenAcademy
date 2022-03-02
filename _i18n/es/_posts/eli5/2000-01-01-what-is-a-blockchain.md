@@ -6,6 +6,7 @@ description: "Comparando una blockchain y sus bloques con un libro y sus página
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]
+canonical_link: "/es/technology/advanced/blockchain-as-a-data-structure/"
 ---
 
 Una cadena de bloques (blockchain) es como un gran libro contable que existe en el internet. El libro mantiene un registro de cuánto dinero tienen todos.

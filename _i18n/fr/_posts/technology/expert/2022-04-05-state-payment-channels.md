@@ -1,7 +1,7 @@
 ---
 layout: post
 type: article
-title: "Statut/canaux de paiement
+title: "Statut/canaux de paiement"
 permalink: /technology/expert/state-payment-channels/
 topic: technology
 level: expert

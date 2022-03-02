@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /horizen/expert/sidechains/
 topic: horizen
 level: expert
+canonical_link: "/horizen/advanced/sidechains/"
 ---
 
 In our [Advanced Section]({{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}) we talked about why sidechains are an elegant way to overcome current limitations regarding scalability, interoperability, and governance in the blockchain ecosystem. This article is the second part to our advanced take on the topic. If you are not familiar with the concept of sidechains you might want to catch up on it before starting with this article

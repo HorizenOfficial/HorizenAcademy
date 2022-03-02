@@ -5,6 +5,7 @@ title: "What is Mining?"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about cryptocurrency miners in a simple, understandable way."
 permalink: /eli5/what-is-mining/
 topic: eli5
+canonical_link: "/technology/expert/mining/"
 ---
 
 <table class="table lead">

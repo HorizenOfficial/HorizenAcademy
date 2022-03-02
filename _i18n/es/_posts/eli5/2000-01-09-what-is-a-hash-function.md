@@ -6,6 +6,7 @@ description: "Una función de hash es algo que se utiliza para crear una huella 
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 further_reads: [hashing]
+canonical_link: "/es/technology/advanced/hash-functions/"
 ---
 
 <table class="table lead">

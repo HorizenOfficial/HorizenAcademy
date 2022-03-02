@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "¿Por qué privacidad?"
 further_reads: [i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy, im_not_an_international_drug_dealer]
+canonical_link: "/es/privacy/advanced/the-nothing-to-hide-argument/"
 ---
 
 El argumento “No tengo nada que ocultar” propone que acciones invasivas como los programas de vigilancia en masa del gobierno no amenazan la privacidad de la persona salvo que revelen actividades ilegales, en cuyo caso la persona cometiendo dichas actividades no tendría el derecho de mantenerlas privadas. Por lo tanto, alguien a favor de este argumento puede declarar “No tengo nada que ocultar” y así no expresar oposición a la vigilancia gubernamental. De acuerdo con el argumento, quien no tenga nada que ocultar no tiene que preocuparse por ser vigilado

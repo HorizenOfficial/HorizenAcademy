@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Mejores prácticas"
 further_reads: [how_to_set_up_2fa_using_google_authenticator]
+canonical_link: "/es/privacy/advanced/2fa-two-factor-authentication/"
 ---
 
 En breve, la autenticación de dos factores (A2F) es una manera de permitirle al usuario acceder a un servicio por medio de una combinación de dos métodos de autenticación. La segunda medida puede ser un código PIN o contraseña adicional, una contraseña de uso único (OTP), una huella dactilar u otros datos biométricos o inclusive un chip de seguridad o token instalado dentro del dispositivo del usuario.

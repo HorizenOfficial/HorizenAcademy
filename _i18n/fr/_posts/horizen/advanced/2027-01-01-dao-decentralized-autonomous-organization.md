@@ -6,6 +6,7 @@ description: "Notre objectif est d'adopter un modèle d'organisation décentrali
 permalink: /horizen/advanced/dao-decentralized-autonomous-organization/
 topic: horizen
 level: advanced
+canonical_link: "/fr/horizen/expert/dao-decentralized-autonomous-organization/"
 ---
 
 L'objectif à long terme d'Horizen est de faire évoluer sa structure organisationnelle vers une DAO. Une DAO, soit une Organisation Autonome Décentralisée (Decentralized Autonomous Organization en anglais), est un logiciel agissant comme une organisation et en fonction d'un certain nombre de règles et procédures prédéfinies.

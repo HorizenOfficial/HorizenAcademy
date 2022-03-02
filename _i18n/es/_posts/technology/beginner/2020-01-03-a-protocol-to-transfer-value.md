@@ -8,6 +8,7 @@ topic: technology
 level: beginner
 chapter: "¿Qué es una cadena de bloques?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
+canonical_link: "/es/technology/advanced/a-protocol-to-transfer-value/"
 ---
 
 Una de las grandes innovaciones de la cadena de bloques es su función como protocolo para transferir valor. Andreas Antonopoulos describió a Bitcoin como “un lenguaje para comunicar valor”, una declaración que tiene mucho de cierto.

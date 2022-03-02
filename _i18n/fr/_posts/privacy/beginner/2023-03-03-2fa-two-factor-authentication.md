@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Meilleures pratiques"
 further_reads: [how_to_set_up_2fa_using_google_authenticator]
+canonical_link: "/fr/privacy/advanced/2fa-two-factor-authentication/"
 ---
 
 L'authentification à deux facteurs ou, en abrégé, 2FA est un moyen donné aux utilisateurs afin d’accéder à un service en utilisant une combinaison de deux méthodes d'authentification. Il peut s'agir d'un code PIN supplémentaire ou d'un mot de passe, d'un mot de passe unique (OTP: One-time Password), d'une empreinte digitale ou autres données biométriques ou également d'une puce ou d'un jeton de sécurité supplémentaire dans votre appareil.

@@ -6,6 +6,7 @@ description: "Une fonction de hachage est quelque chose que nous utilisons pour 
 permalink: /eli5/what-is-a-hash-function/
 topic: eli5
 further_reads: [hashing]
+canonical_link: "/fr/technology/advanced/hash-functions/"
 ---
 
 <table class="table lead">

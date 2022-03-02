@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /eli5/what-is-consensus/
 topic: eli5
 further_reads: [consensus_for_kids]
+canonical_link: "/technology/expert/consensus-in-distributed-systems/"
 ---
 
 <table class="table lead">

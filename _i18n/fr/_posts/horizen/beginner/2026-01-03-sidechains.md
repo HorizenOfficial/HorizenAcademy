@@ -6,6 +6,7 @@ description: "Les Sidechains représentent un développement prometteur pour les
 permalink: /horizen/beginner/sidechains/
 topic: horizen
 level: beginner
+canonical_link: "/fr/horizen/advanced/sidechains/"
 ---
 
 Comme nous l'avons déjà mentionné, une limite importante de l'adoption en masse de la technologie blockchain est la scalabilité. Actuellement, une blockchain est capable de traiter une poignée de transactions par seconde, alors que VISA peut en traiter des milliers.

@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /eli5/what-is-a-blockchain/
 topic: eli5
 further_reads: [explain_bitcoin_like_im_five]
+canonical_link: "/technology/expert/blockchain-as-a-data-structure/"
 ---
 
 A blockchain works like a large book on the internet. This book keeps track of how much money everybody has. A single block in the blockchain is like a single page in a book. You can fit only so many words on one page before the page is full and you have to use the next one.

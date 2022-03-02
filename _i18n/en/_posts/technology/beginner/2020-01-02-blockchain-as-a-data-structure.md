@@ -7,6 +7,7 @@ permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner
 chapter: "What is a Blockchain?"
+canonical_link: "/technology/expert/blockchain-as-a-data-structure/"
 ---
 
 Welcome to the very first article in the technology section of our Horizen Academy. The first two articles aim to explain what a blockchain is. If you have read up on Bitcoin, blockchain, and cryptocurrencies before you may know there is a distinction between:
@@ -32,7 +33,7 @@ This entity decides who can add data to the database and who can access it, but 
 
 ##### A Blockchain: Less Efficient, but Decentralized
 
-Many different entities, or peers, operate a blockchain. These peers don't know or trust each other (therefore, "trustless"). The good thing is that they *don't need to trust each other*. Many peers keep a copy of the data, and no single peer has the power to change or censor the data. Participants (or nodes in technical terms) consistently communicate to keep each other updated on new events. Most of the events on the blockchain are commonly transactions.
+Many different entities, or peers, operate a blockchain. These peers don't know or trust each other (therefore, "trustless"). The good thing is that they _don't need to trust each other_. Many peers keep a copy of the data, and no single peer has the power to change or censor the data. Participants (or nodes in technical terms) consistently communicate to keep each other updated on new events. Most of the events on the blockchain are commonly transactions.
 
 There is no centralized entity, like a bank or clearinghouse, responsible for accepting and processing new transactions. Cryptocurrencies are permissionless because every individual abiding by the rules of the protocol can create a wallet and send a transaction without needing to sign up to use the service. The transaction is then broadcast to the network, and every participant (or node or peer) keeps a copy of it. A node can be operated by a person, a store accepting crypto, or a bank. It makes no difference who you are. The amount of copies makes a blockchain slower than a database but makes it more secure.
 
@@ -47,7 +48,7 @@ The blockchain does not keep data in a single huge continuous ledger but separat
 ![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_M.jpg)
 
 One of these single pages represents a block in this comparison, and the pile of the pages he already used represent the blockchain.
-Instead of one bookkeeper, there are many of them working simultaneously on a blockchain. *Miners* are the bookkeepers of a blockchain, and we will explain their role in the chapter on [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}). For now, all you need to know is that they are the ones creating new blocks.
+Instead of one bookkeeper, there are many of them working simultaneously on a blockchain. _Miners_ are the bookkeepers of a blockchain, and we will explain their role in the chapter on [how a blockchain works]({{ site.baseurl }}{% post_url /technology/beginner/2020-02-01-how-does-a-blockchain-work %}). For now, all you need to know is that they are the ones creating new blocks.
 
 ### Summary
 

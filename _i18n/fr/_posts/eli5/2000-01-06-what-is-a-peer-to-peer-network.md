@@ -5,6 +5,7 @@ title: "Qu'est-ce qu'un réseau peer-to-peer ?"
 description: "Dans un réseau peer-to-peer, chaque participant est connecté à tous les autres. C'est ce qui le rend si robuste."
 permalink: /eli5/what-is-a-peer-to-peer-network/
 topic: eli5
+canonical_link: "/fr/technology/advanced/a-peer-to-peer-p2p-network/"
 ---
 
 Dans un réseau Peer-to-Peer (pair-à-pair), chaque participant est connecté à tous les autres. Lorsque vous le comparez à un site Web ordinaire, cela le rend beaucoup plus robuste. Un ordinateur spécial sur Internet stocke la plupart des sites Web.

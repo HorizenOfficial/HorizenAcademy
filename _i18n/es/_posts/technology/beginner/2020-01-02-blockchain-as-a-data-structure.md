@@ -7,6 +7,7 @@ permalink: /technology/beginner/blockchain-as-a-data-structure/
 topic: technology
 level: beginner
 chapter: "¿Qué es una cadena de bloques?"
+canonical_link: "/es/technology/advanced/blockchain-as-a-data-structure/"
 ---
 
 Bienvenido al primer artículo de la sección de tecnología de Horizen Academy. Los dos artículos introductorios se enfocarán en explicar la naturaleza de la cadena de bloques. Antes de introducir el artículo, resulta pertinente establecer una distinción entre tres conceptos esenciales:

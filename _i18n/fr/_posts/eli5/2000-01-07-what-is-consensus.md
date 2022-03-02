@@ -6,6 +6,7 @@ description: "Le mécanisme de consensus s'assure que tout le réseau s'accorde 
 permalink: /eli5/what-is-consensus/
 topic: eli5
 further_reads: [consensus_for_kids]
+canonical_link: "/fr/technology/advanced/consensus-mechanisms/"
 ---
 
 <table class="table lead">

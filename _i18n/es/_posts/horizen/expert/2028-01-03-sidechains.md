@@ -6,6 +6,7 @@ description: "Las cadenas laterales son un desarrollo prometedor para las cadena
 permalink: /horizen/expert/sidechains/
 topic: horizen
 level: expert
+canonical_link: "/es/horizen/advanced/sidechains/"
 ---
 
 En la [sección avanzada]({{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}) discutimos lo que hace de las cadenas laterales (sidechains) una buena solución a varias de las limitantes que existían en los ámbitos de la escalabilidad, interoperabilidad y gobernanza del ecosistema blockchain.
