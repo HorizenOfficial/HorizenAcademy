@@ -32,11 +32,7 @@
                     </a>
                 </div>
                 <div class="col-4">
-                    {% assign href = "#" %}
-                    {% if page.url contains "/privacy" %}
-                    {% assign href = "/technology" %}
-                    {% endif%}
-                    <a href="{{ site.baseurl }}{{href}}" class="js-SelectLevel" data-level="expert">
+                    <a href="#" class="js-SelectLevel" data-level="expert">
                         <div class="level expert">
                             <div class="icon">
                                 <img src="/assets/img/icons/levels/expert-1.svg" alt="{% t levels.expert %}" class="icon-inactive">
@@ -121,7 +117,6 @@
 
             </div>
 
-            {% unless page.url contains "/expert" %}
             <a
                 href="{{ site.baseurl }}{% post_url /privacy/2025-12-30-privacy %}"
                 class="js-SelectTopic" data-topic="privacy"
@@ -136,7 +131,6 @@
                     <span class="topic-name">{% t topics.privacy %}</span>
                 </div>
             </a>
-            {% endunless %}
             <a href="#list-privacy-articles" data-toggle="collapse" class="d-none"></a>
             <div id="list-privacy-articles" class="articles list-topic-articles collapse" data-parent="#list-topics">
 
@@ -194,8 +188,6 @@
             </div>
 
 
-
-
             <a
                     href="{{ site.baseurl }}{% post_url /horizen/2028-12-30-horizen %}"
                     class="js-SelectTopic" data-topic="horizen"
@@ -243,7 +235,6 @@
                 <div style="height: 8px;"></div>
 
             </div>
-
             <hr/>
 
 
