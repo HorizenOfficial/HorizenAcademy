@@ -32,7 +32,11 @@
                     </a>
                 </div>
                 <div class="col-4">
-                    <a href="/technology/expert" class="js-SelectLevel" data-level="expert">
+                    {% assign href = "#" %}
+                    {% if page.url contains "/privacy" %}
+                    {% assign href = "/technology" %}
+                    {% endif%}
+                    <a href="{{ site.baseurl }}{{href}}" class="js-SelectLevel" data-level="expert">
                         <div class="level expert">
                             <div class="icon">
                                 <img src="/assets/img/icons/levels/expert-1.svg" alt="{% t levels.expert %}" class="icon-inactive">
@@ -51,7 +55,6 @@
                     class="js-SelectTopic" data-topic="technology"
                     data-url-beginner="{{ site.baseurl }}{% post_url /technology/beginner/2020-12-31-tech-beginner %}"
                     data-url-advanced="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}"
-                    data-url-expert="{{ site.baseurl }}{% post_url /technology/expert/2022-12-31-tech-expert %}"
             >
                 <div class="topic technology">
                     <div class="icon">
