@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "Comment fonctionne une Blockchain ?"
 further_reads: [three_elements_to_understanding_blockchain_and_its_greatest_opportunity]
+canonical_link: "/fr/technology/beginner/the-elements-of-a-blockchain/"
 ---
 
 Lorsque Satoshi Nakamoto a publié le livre blanc Bitcoin, il a présenté une innovation composée de plusieurs composants bien connus et de quelques nouveaux. Nous avons conçu ce chapitre pour expliquer comment fonctionne une blockchain. Nous voulons mettre les différents éléments en contexte avant de passer à l'explication de chaque concept.

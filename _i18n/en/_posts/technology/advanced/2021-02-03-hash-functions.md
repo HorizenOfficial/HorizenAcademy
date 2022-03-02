@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "How Does a Blockchain Work?"
 further_reads: [hash_functions_explained_with_emojis]
+canonical_link: "/technology/expert/hash-functions/"
 ---
 
 Blockchains are a way to record data in an immutable way. For this to be a valuable feature, the data written to the blockchain better be correct. Verifying what data gets added makes a lot of sense, especially as storage on the blockchain is limited. One tool in the toolbox used to verify data is the *hash function*.

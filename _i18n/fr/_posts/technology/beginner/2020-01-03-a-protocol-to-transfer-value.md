@@ -8,6 +8,7 @@ topic: technology
 level: beginner
 chapter: "Qu’est-ce que la Blockchain ?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
+canonical_link: "/fr/technology/advanced/a-protocol-to-transfer-value/"
 ---
 
 L'une des grandes innovations de la blockchain se résume à être un protocole de transfert de valeur. Andreas Antonopoulos aime appeler le Bitcoin "un langage pour communiquer de la valeur" qui me semble être une description exacte.

@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Pourquoi la confidentialité ?"
 further_reads: [i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy, im_not_an_international_drug_dealer]
+canonical_link: "/fr/privacy/advanced/the-nothing-to-hide-argument/"
 ---
 
 Selon [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), l'argument de rien avoir à cacher affirme que les programmes de surveillance gouvernementaux ne menacent pas la vie privée à moins qu'ils ne découvrent des activités illégales et que s'ils découvrent des activités illégales, la personne qui commet ces activités n'a pas le droit de les garder privées. Par conséquent, une personne qui est en faveur de cet argument peut dire "Je n'ai rien à cacher" et n'exprime donc pas d'opposition à la surveillance gouvernementale. Une personne utilisant cet argument peut dire qu'une personne ne devrait pas s'inquiéter du gouvernement ou de la surveillance si elle n'a "rien à cacher".

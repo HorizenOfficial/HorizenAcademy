@@ -5,6 +5,7 @@ title: "Qu'est-ce que le minage (ou mining) ? "
 description: "Un mineur est quelqu'un qui regarde ce qui se passe sur le réseau et qui enregistre chaque transfert d'argent."
 permalink: /eli5/what-is-mining/
 topic: eli5
+canonical_link: "/fr/technology/advanced/mining/"
 ---
 
 <table class="table lead">

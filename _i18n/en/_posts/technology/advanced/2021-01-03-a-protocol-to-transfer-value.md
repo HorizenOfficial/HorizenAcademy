@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "What is a Blockchain?"
 further_reads: [why_bitcoin_lightning_network_is_ingenious]
+canonical_link: "/technology/expert/a-protocol-to-transfer-value/"
 ---
 
 Money is one of the oldest "technologies" of humankind - a technology to communicate value. There have been many forms of money throughout several centuries and even millennia - from barter to bones, feathers to precious metals, gold-backed currencies to today's fiat currencies. Blockchain might be the technological advance that was needed to move to the next chapter in the history of monies: cryptocurrencies.

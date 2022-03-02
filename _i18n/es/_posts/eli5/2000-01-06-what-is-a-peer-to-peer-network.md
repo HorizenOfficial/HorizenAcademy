@@ -5,6 +5,7 @@ title: "¿Qué es una red de par a par?"
 description: "En una red par a par, cada participante está conectado a todos los demás. Esto lo hace muy robusto."
 permalink: /eli5/what-is-a-peer-to-peer-network/
 topic: eli5
+canonical_link: "/es/technology/advanced/a-peer-to-peer-p2p-network/"
 ---
 
 En una red par a par (peer to peer), cada participante está conectado con todos los demás. Comparada con un sitio web regular, esto la hace más robusta. 

@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "What is a Blockchain?"
 further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
+canonical_link: "/technology/expert/guaranteed-execution-with-smart-contracts/"
 ---
 
 We have looked at blockchain in two different ways. First as a [data structure]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}) and second as a [protocol to transfer value]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}). For the last article of this chapter about what a blockchain is we want to talk about *smart contracts*. Besides AI, IoT, and blockchain, smart contracts have been one of the hottest topics over the last two years in the tech world. They are software on the blockchain.

@@ -7,6 +7,7 @@ permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner
 chapter: "Transactions"
+canonical_link: "/technology/advanced/block-explorer-continued/"
 ---
 
 An often-cited benefit of blockchain technology is the transparency it offers. Transactions, blocks, and addresses are publicly auditable, and the tool you use for that job is called the block explorer.

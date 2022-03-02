@@ -8,6 +8,7 @@ topic: technology
 level: beginner
 chapter: "Vie privée"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
+canonical_link: "/fr/technology/advanced/privacy-on-the-blockchain/"
 ---
 
 C'est une idée fausse courante que le bitcoin et d'autres cryptomonnaies sont un moyen de paiement anonyme. En fait, ils ne sont pas anonymes, mais pseudonymes. La blockchain est un registre transparent et public. N’importe qui peut chercher des données sur une blockchain en utilisant un [explorateur de bloc]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}) et voir quel montant a été transféré sur quelle adresse, à n’importe quel moment.

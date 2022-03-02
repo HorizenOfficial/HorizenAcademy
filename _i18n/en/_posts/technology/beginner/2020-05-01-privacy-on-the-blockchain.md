@@ -8,6 +8,7 @@ topic: technology
 level: beginner
 chapter: "Privacy"
 further_reads: [how_zcoin_privacy_technology_compares_to_the_competition]
+canonical_link: "/technology/advanced/privacy-on-the-blockchain/"
 ---
 
 It is a common misconception that Bitcoin and other cryptocurrencies are an anonymous means of payment. In fact, they are anything but. The blockchain is a public, fully transparent ledger. Anybody can browse the data of a blockchain using a [block explorer]({{ site.baseurl }}{% post_url /technology/beginner/2020-04-03-block-explorer-introduction %}) and see which addresses transferred how much money at what time.

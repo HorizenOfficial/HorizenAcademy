@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Mejores prácticas"
 further_reads: [how_to_create_a_strong_password]
+canonical_link: "/es/privacy/advanced/strong-passwords/"
 ---
 
 Utilizar la misma contraseña en diferentes sitios y aplicaciones es quizás la práctica digital más insegura de todas. Hay plataformas que a pesar de su tamaño y fortaleza han sido hackeadas para vender la información que almacenan sobre sus usuarios, así como ha habido casos en los que la información robada se ha hecho pública. Si el usuario tuviera su contraseña e información personal en alguna de estas bases de datos, todas sus cuentas con la misma contraseña correrían peligro de ser infiltradas.

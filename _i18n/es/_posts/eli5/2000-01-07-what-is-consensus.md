@@ -6,6 +6,7 @@ description: "El mecanismo de consenso asegura que toda la red acuerde un único
 permalink: /eli5/what-is-consensus/
 topic: eli5
 further_reads: [consensus_for_kids]
+canonical_link: "/es/technology/advanced/consensus-mechanisms/"
 ---
 
 <table class="table lead">

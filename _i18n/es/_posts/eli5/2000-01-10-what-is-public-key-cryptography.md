@@ -5,6 +5,7 @@ title: "¿Qué es la criptografía de llave pública?"
 description: "Las cadenas de bloques utilizan la criptografía de llave pública para identificar al propietario legítimo de su dinero."
 permalink: /eli5/what-is-public-key-cryptography/
 topic: eli5
+canonical_link: "/es/technology/advanced/public-key-cryptography/"
 ---
 
 <table class="table lead">
