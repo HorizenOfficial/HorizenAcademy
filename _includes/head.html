@@ -33,13 +33,15 @@
     {% endif %}
   {% endif %}
   
-  {% for language in site.languages %}
-  {% if language == 'en' %}
-  <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
-  {% else %}
-  <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
-  {% endif %}
-  {% endfor %}
+  {% unless page.no_alternate %}
+    {% for language in site.languages %}
+    {% if language == 'en' %}
+    <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
+    {% else %}
+    <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
+    {% endif %}
+    {% endfor %}
+  {% endunless%}
   <meta property="og:site_name" content="{{ site.title }}">
   <meta name="twitter:card" content="summary" />
   <script type="application/ld+json">
