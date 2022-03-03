@@ -9,20 +9,43 @@ keywords:
   homepage: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
   content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
 
-
 nav:
-  home: Home
-  built: Construido sobre Horizen
-  get-zen: Obtén ZEN
-  use-zen: Utiliza ZEN
-  earn-zen: Gana ZEN
-  mine-zen: Mina ZEN
-  secure-nodes: Nodos Seguros
-  super-nodes: Super Nodos
-  faucet: Fuente ZEN
-  forum: Entrega una Propuesta
+  home: Horizen
+  explore: Explorar
+  explore_links:
+    ecosystem: Ecosistema
+    getZen: Obtener ZEN
+    downloadAWallet: Descargar una billetera
+    mineZen: Mina ZEN
+    zenNodes: Nodos Zen
+    faucet: ZEN Gratis Todos Los Días
+    team: Equipo
+    roadmap: Plan de Trabajo
+    store: Tienda Horizen
+  build: Construir
+  build_links:
+    zendoo: Zendoo
+    testnet: Sahara Testnet
+    sdks: SDKs (Kit de Desarrollo)
+    documentation: Documentación
+    tutorials: Tutoriales
+    developer: Noticias para desarrolladores
+  contribute: Contribuir
+  contribute_links:
+    zenNodes: Arma un Nodo Zen
+    bounties: Recompensas
+    ambassadors: Conviértete en un Evangelista Zen
+    heap: Descubre Nuevos Lanzamientos
+  learn: Aprender
+  learn_links:
+    news: Noticias y Actualizaciones
+    horizen: Qué es Horizen
+    zk: Pruebas de Cero Conocimiento (Tecnología Zk)
+    technology: La Tecnología Horizen
+    research: Investigación y Documentos Técnicos
+    academy: Academia Blockchain
   community: Comunidad
-  academy: Academia
+  academy: Academia Blockchain
 
 levels:
   beginner: Principiante
@@ -40,13 +63,11 @@ topics:
 menu:
   see-all-content: See all Content
 
-
 footer:
   legal: Legal
-  privacy-policy: Privacy Policy
-  copyright: All rights reserved
-  share-this-article: 'Share this article:'
-
+  privacy-policy: Política de Privacidad
+  copyright: Todos los derechos reservados
+  share-this-article: "Compartir este artículo:"
 
 newsletter:
   name: Tu nombre
@@ -58,7 +79,6 @@ newsletter:
 
 post:
   further-reading: Lecturas adicionales (inglés)
-
 
 # pages
 content-overview:
