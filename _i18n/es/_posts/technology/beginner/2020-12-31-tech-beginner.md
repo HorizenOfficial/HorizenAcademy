@@ -6,6 +6,7 @@ description: "Este nivel da una introducción sencilla a las cadenas de bloques,
 permalink: /technology/beginner/
 topic: technology
 level: beginner
+no_index: true
 ---
 
 <div class="row mb-3">

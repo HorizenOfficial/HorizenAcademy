@@ -6,6 +6,7 @@ description: "The Horizen Academy is an educational platform on blockchain techn
 permalink: /technology/advanced/
 topic: technology
 level: advanced
+no_index: true
 ---
 
 <div class="row mb-3">

@@ -8,18 +8,41 @@ keywords:
   homepage: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
   content-overview: Horizen, Academy, ZenCash, Horizen Global, Zen, zk-SNARKs, shielded transaction, privacy coin, privacy platform
 
-
 nav:
-  home: Home
-  built: Built on Horizen
-  get-zen: Get ZEN
-  use-zen: Use ZEN
-  earn-zen: Earn ZEN
-  mine-zen: Mine ZEN
-  secure-nodes: Secure Nodes
-  super-nodes: Super Nodes
-  faucet: ZEN Faucet
-  forum: Submit a Proposal
+  home: Horizen
+  explore: Explore
+  explore_links:
+    ecosystem: Ecosystem
+    getZen: Get ZEN
+    downloadAWallet: Download A Wallet
+    mineZen: Mine ZEN
+    zenNodes: ZenNodes
+    faucet: Free ZEN Every Day
+    team: Team
+    roadmap: Roadmap
+    store: Horizen Store
+  build: Build
+  build_links:
+    zendoo: Zendoo
+    testnet: Sahara Testnet
+    sdks: SDKs
+    documentation: Documentation
+    tutorials: Tutorials
+    developer: Developer Updates
+  contribute: Contribute
+  contribute_links:
+    zenNodes: Run A ZenNode
+    bounties: Bounties
+    ambassadors: Become A Zenvangelist
+    heap: Test New Releases
+  learn: Learn
+  learn_links:
+    news: News & Updates
+    horizen: What is Horizen
+    zk: Zero-knowledge
+    technology: The Horizen Technology
+    research: Research & Whitepapers
+    academy: Blockchain Academy
   community: Community
   academy: Academy
 
@@ -39,13 +62,11 @@ topics:
 menu:
   see-all-content: See all Content
 
-
 footer:
   legal: Legal
   privacy-policy: Privacy Policy
   copyright: All rights reserved
-  share-this-article: 'Share this article:'
-
+  share-this-article: "Share this article:"
 
 newsletter:
   name: Name
@@ -55,10 +76,8 @@ newsletter:
   subscribe: Subscribe to updates
   msg-success: Success! Please check your email to confirm we have the right one.
 
-
 post:
   further-reading: Further Reading
-
 
 # pages
 content-overview:

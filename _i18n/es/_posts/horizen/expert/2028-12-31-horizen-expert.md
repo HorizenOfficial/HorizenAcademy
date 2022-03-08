@@ -6,6 +6,7 @@ description: "Le mostramos cómo funciona nuestra organización, cómo nos finan
 permalink: /horizen/expert/
 topic: horizen
 level: expert
+no_index: true
 ---
 
 <div class="row mb-3">

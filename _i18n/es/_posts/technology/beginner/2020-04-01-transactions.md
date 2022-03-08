@@ -7,6 +7,7 @@ permalink: /technology/beginner/transactions/
 topic: technology
 level: beginner
 chapter: "Transacciones"
+no_index: true
 ---
 
 Si ya leyó los artículos anteriores, ya sabe más que la mayoría sobre tecnología blockchain. Hemos hablado ya sobre lo que son las cadenas de bloques, así como sobre billeteras de criptomoneda y sus funciones. Previamente, establecimos que las billeteras son programas que ayudan a crear transacciones y a recibir dinero. En este capítulo, se introducirá cómo lucen estas transacciones y cómo pueden consultarse.

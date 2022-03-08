@@ -6,6 +6,7 @@ description: "Si es nuevo en la privacidad digital, puede averiguar dónde está
 permalink: /privacy/beginner/
 topic: privacy
 level: beginner
+no_index: true
 ---
 
 <div class="row mb-3">

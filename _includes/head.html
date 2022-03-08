@@ -20,6 +20,9 @@
   {% elsif page.keywords != '' %}
   <meta name="keywords" content="{{ page.keywords }}">
   {% endif %}
+  {% if page.no_index %}
+    <meta name="robots" content="follow, noindex"/>
+  {% endif %}
   {% if page.canonical_link %}
     <link rel="canonical" href="{{site.url}}{{page.canonical_link}}">
     <meta property="og:url" content="{{site.url}}{{page.canonical_link}}">
@@ -33,13 +36,15 @@
     {% endif %}
   {% endif %}
   
-  {% for language in site.languages %}
-  {% if language == 'en' %}
-  <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
-  {% else %}
-  <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
-  {% endif %}
-  {% endfor %}
+  {% unless page.no_alternate %}
+    {% for language in site.languages %}
+    {% if language == 'en' %}
+    <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
+    {% else %}
+    <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
+    {% endif %}
+    {% endfor %}
+  {% endunless%}
   <meta property="og:site_name" content="{{ site.title }}">
   <meta name="twitter:card" content="summary" />
   <script type="application/ld+json">

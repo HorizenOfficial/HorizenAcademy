@@ -6,6 +6,7 @@ description: "En esta sección de la Academia Horizen, analizamos un poco más d
 permalink: /technology/advanced/
 topic: technology
 level: advanced
+no_index: true
 ---
 
 <div class="row mb-3">

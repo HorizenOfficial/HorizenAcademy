@@ -7,6 +7,7 @@ permalink: /privacy/beginner/best-practices/
 topic: privacy
 level: beginner
 chapter: "Meilleures pratiques"
+no_index: true
 ---
 
 Ce chapitre décrit les meilleures pratiques en matière de sécurité personnelle et vous propose quelques outils pour commencer à maîtriser votre empreinte numérique.

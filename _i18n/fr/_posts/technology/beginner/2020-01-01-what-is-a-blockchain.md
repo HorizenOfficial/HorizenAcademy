@@ -7,6 +7,7 @@ permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner
 chapter: "Qu’est-ce que la Blockchain ?"
+no_index: true
 ---
 
 La plupart des gens ont entendu le terme blockchain, mais peu peuvent vous dire ce que c'est, et encore moins comment elle fonctionne. Nous vous aiderons à comprendre ce qu'est une blockchain et comment elle fonctionne. Dans le niveau Débutant, nous nous concentrerons sur les idées principales et les propositions de valeur de la Blockchain sans entrer dans les détails techniques. Dans ce premier chapitre, nous examinerons la blockchain de deux façons différentes :

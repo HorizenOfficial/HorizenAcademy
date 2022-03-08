@@ -6,6 +6,7 @@ description: "Cette section s'adresse aux utilisateurs qui ont une compréhensio
 permalink: /privacy/advanced/
 topic: privacy
 level: advanced
+no_index: true
 ---
 
 <div class="row mb-3">

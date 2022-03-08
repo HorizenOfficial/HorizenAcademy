@@ -15,46 +15,66 @@
         <div class="collapse navbar-collapse" id="header-navbars">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global" target="_blank">{% t nav.home %}</a>
+                    <a class="nav-link" href="https://www.horizen.io/" target="_blank">{% t nav.home %}</a>
                 </li>
-                <li class="nav-item dropdown" id="built-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="built-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.built %}</a>
-                    <div class="dropdown-menu" aria-labelledby="built-nav">
-                        <a class="dropdown-item" href="https://www.horizen.global/zen/" target="_blank">ZEN</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/zenchat/" target="_blank">ZenChat</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/zendao/" target="_blank">ZenDAO</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/zennodes/" target="_blank">ZenNodes</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/spherebyhorizen/" target="_blank">Sphere by Horizen</a>
+                <li class="nav-item dropdown" id="explore-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="explore-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.explore %}</a>
+                    <div class="dropdown-menu" aria-labelledby="explore-nav">
+                        <a class="dropdown-item" href="https://www.horizen.io/dapps/" target="_blank">{% t nav.explore_links.ecosystem %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/exchanges/" target="_blank">{% t nav.explore_links.getZen %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/wallets/" target="_blank">{% t nav.explore_links.downloadAWallet %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/mining-pools/" target="_blank">{% t nav.explore_links.mineZen %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/zennodes/" target="_blank">{% t nav.explore_links.zenNodes %}</a>
+                        <a class="dropdown-item" href="https://getzen.cash/" target="_blank">{% t nav.explore_links.faucet %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/team/" target="_blank">{% t nav.explore_links.team %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/roadmap/" target="_blank">{% t nav.explore_links.roadmap %}</a>
+                        <a class="dropdown-item" href="https://store.horizen.io/" target="_blank">{% t nav.explore_links.store %}</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global/exchanges/" target="_blank">{% t nav.get-zen %}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.horizen.global/wallets/" target="_blank">{% t nav.use-zen %}</a>
-                </li>
-                <li class="nav-item dropdown" id="earn-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="earn-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.earn-zen %}</a>
-                    <div class="dropdown-menu" aria-labelledby="earn-nav">
-                        <a class="dropdown-item" href="https://www.horizen.global/mining-pools/" target="_blank">{% t nav.mine-zen %}</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/securenodes/" target="_blank">{% t nav.secure-nodes %}</a>
-                        <a class="dropdown-item" href="https://www.horizen.global/supernodes/" target="_blank">{% t nav.super-nodes %}</a>
-                        <a class="dropdown-item" href="https://getzen.cash/" target="_blank">{% t nav.faucet %}</a>
-                        <a class="dropdown-item" href="https://forum.horizen.global/" target="_blank">{% t nav.forum %}</a>
+                <li class="nav-item dropdown" id="build-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="build-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.build %}</a>
+                    <div class="dropdown-menu" aria-labelledby="build-nav">
+                        <a class="dropdown-item" href="https://www.horizen.io/zendoo/" target="_blank">{% t nav.build_links.zendoo %}</a>
+                        <a class="dropdown-item" href="https://heap.horizen.io/" target="_blank">{% t nav.build_links.testnet %}</a>
+                        <a class="dropdown-item" href="https://github.com/HorizenOfficial/Sidechains-SDK/tree/dev" target="_blank">{% t nav.build_links.sdks %}</a>
+                        <a class="dropdown-item" href="https://docs.horizen.io/en/latest/" target="_blank">{% t nav.build_links.documentation %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/tutorials/" target="_blank">{% t nav.build_links.tutorials %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/news/developer-community/" target="_blank">{% t nav.build_links.developer %}</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.community %}</a>
-                    <div class="dropdown-menu" aria-labelledby="community">
+                <li class="nav-item dropdown" id="contribute-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contribute-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.contribute %}</a>
+                    <div class="dropdown-menu" aria-labelledby="contribute-nav">
+                        <a class="dropdown-item" href="https://www.horizen.io/zennodes/" target="_blank">{% t nav.contribute_links.zenNodes %}</a>
+                        <a class="dropdown-item" href="https://hde.horizen.io/" target="_blank">{% t nav.contribute_links.bounties %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/ambassadors/" target="_blank">{% t nav.contribute_links.ambassadors %}</a>
+                        <a class="dropdown-item" href="https://heap.horizen.io/" target="_blank">{% t nav.contribute_links.heap %}</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="learn-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="learn-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.learn %}</a>
+                    <div class="dropdown-menu" aria-labelledby="learn-nav">
+                        <a class="dropdown-item" href="https://www.horizen.io/news/" target="_blank">{% t nav.learn_links.news %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/what-is-horizen/" target="_blank">{% t nav.learn_links.horizen %}</a>
+                        <a class="dropdown-item" href="https://academy.horizen.io/technology/beginner/intro-to-privacy-on-the-blockchain/" target="_blank">{% t nav.learn_links.zk %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/technology/" target="_blank">{% t nav.learn_links.technology %}</a>
+                        <a class="dropdown-item" href="https://www.horizen.io/research/" target="_blank">{% t nav.learn_links.research %}</a>
+                        <a class="dropdown-item" href="https://academy.horizen.io/" target="_blank">{% t nav.learn_links.academy %}</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="community-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="community-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% t nav.community %}</a>
+                    <div class="dropdown-menu" aria-labelledby="community-nav">
                         <a class="dropdown-item" href="https://twitter.com/horizenglobal" target="_blank">Twitter</a>
-                        <a class="dropdown-item" href="https://horizen.global/invite/discord" target="_blank">Discord</a>
-                        <a class="dropdown-item" href="https://horizen.global/invite/telegram" target="_blank">Telegram</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/horizenglobal" target="_blank">Facebook</a>
+                        <a class="dropdown-item" href="https://horizen.io/invite/discord" target="_blank">Discord</a>
+                        <a class="dropdown-item" href="https://www.youtube.com/horizen" target="_blank">Youtube</a>
+                        <a class="dropdown-item" href="https://www.linkedin.com/company/horizenofficial/" target="_blank">Linkedin</a>
+                        <a class="dropdown-item" href="https://t.me/horizencommunity" target="_blank">Telegram</a>
                         <a class="dropdown-item" href="https://www.reddit.com/r/Horizen/" target="_blank">Reddit</a>
-                        <a class="dropdown-item" href="https://bitcointalk.org/index.php?topic=2047435.0" target="_blank">Bitcointalk</a>
-                        <a class="dropdown-item" href="https://forum.horizen.global/" target="_blank">Forum</a>
-                        <a class="dropdown-item" href="https://github.com/ZencashOfficial" target="_blank">GitHub</a>
-                        <a class="dropdown-item" href="https://blog.horizen.global/" target="_blank">Blog</a>
-                        <a class="dropdown-item" href="https://store.horizen.global/" target="_blank">Store</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/horizenglobal/" target="_blank">Instagram</a>
+                        <a class="dropdown-item" href="https://medium.com/@horizen" target="_blank">Medium</a>
+                        <a class="dropdown-item" href="https://github.com/HorizenOfficial" target="_blank">GitHub</a>
                     </div>
                 </li>
                 <li class="nav-item active">

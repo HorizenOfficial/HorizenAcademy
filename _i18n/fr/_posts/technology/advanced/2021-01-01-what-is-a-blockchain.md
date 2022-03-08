@@ -7,6 +7,7 @@ permalink: /technology/advanced/what-is-a-blockchain/
 topic: technology
 level: advanced
 chapter: "Qu’est-ce que la Blockchain ?"
+no_index: true
 ---
 
 Nous souhaitons regarder la blockchain depuis trois différentes perspectives dans ce premier chapitre de notre section technologie avancé.

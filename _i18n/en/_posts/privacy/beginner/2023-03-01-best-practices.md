@@ -7,6 +7,7 @@ permalink: /privacy/beginner/best-practices/
 topic: privacy
 level: beginner
 chapter: "Best Practices"
+no_index: true
 ---
 
 This chapter describes personal security best practices and provides you with a couple of tools to get started on your way to controlling your digital footprint. 
