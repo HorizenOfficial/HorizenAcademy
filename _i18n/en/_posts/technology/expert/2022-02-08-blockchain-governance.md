@@ -177,11 +177,11 @@ Now, that we have established an understanding of the most important concepts ar
 
 From the very beginning Horizen envisioned a decentralized platform where the infrastructure, funding decisions, and decision making where all decentralized. 
 
-Introducing the [ZenIP process](https://github.com/ZencashOfficial/ZenIPs/blob/master/zenip-42000.md) was an important step towards a decentralized decision making process. Similar processes have proven to work well for decentralized projects, hence it was considered the best way to distribute influence and power towards the broader community.
+Introducing the [ZenIP process](https://github.com/HorizenOfficial/ZenIPs/blob/master/zenip-42000.md) was an important step towards a decentralized decision making process. Similar processes have proven to work well for decentralized projects, hence it was considered the best way to distribute influence and power towards the broader community.
 
 ZenIPs are meant to standardize the process of suggesting major changes to the Horizen code base and ecosystem as a whole. A ZenIP in and of itself is a document that describes a new feature. It explains the rationale behind the proposed idea and elaborates on why certain design decisions were made. Each ZenIP starts with an *Owner* proposing a new idea in the form of a ZenIP. After investigating if the idea is original and if it has chances of being accepted, the idea is put in the form of a ZenIP.
 
-The document needs to contain an abstract, a section about the motivation for the proposed change, a specification, as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/ZencashOfficial/ZenIPs).
+The document needs to contain an abstract, a section about the motivation for the proposed change, a specification, as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/HorizenOfficial/ZenIPs).
 
 ![The ZenIP Workflow](/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
 
@@ -193,7 +193,7 @@ Next, the status of code-related ZenIPs is changed from *Proposed* to *Implement
 
 A Process or Informational ZenIP may change status from Proposed to Active when it achieves rough consensus on the forum or the pull request. Such a proposal is said to have rough consensus if it has been open to discussion for at least one month, and no person maintains any unaddressed substantiated objections to it.
 
-We invite you to check out the [ZenIP repository](https://github.com/ZencashOfficial/ZenIPs), get involved in the discussions around it and propose your ideas to the Horizen community.
+We invite you to check out the [ZenIP repository](https://github.com/HorizenOfficial/ZenIPs), get involved in the discussions around it and propose your ideas to the Horizen community.
 
 ### The Horizen Treasury DAO
 

@@ -131,7 +131,7 @@ Determinamos que la mejor solución era mejorar la regla de la cadena más larga
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Si le interesa saber más al respecto, lea nuestra entrada de blog
-    “<a href="https://blog.zencash.com/declaracion-zencash-transacciones-doble-gasto/" class="font-weight-bold" target="_blank">Declaración De Zencash En Transacciones De Doble Gasto</a>”
+    “<a href="https://blog.horizen.global/declaracion-zencash-transacciones-doble-gasto/" class="font-weight-bold" target="_blank">Declaración De Zencash En Transacciones De Doble Gasto</a>”
     y el libro blanco “<a href="https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-ZenCash-Spanish.pdf" class="font-weight-bold" target="_blank">Prevención de Ataques del 51%: Una solución para modificar el consenso de Bitcoin.</a>”
 </div>
 
@@ -146,8 +146,8 @@ El motivo decisivo para realizar la expansión de marca fue la llegada de una ca
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Para mayor información, puede leer las entradas de blog
-    “<a href="https://blog.zencash.com/zencash-estara-revelando-proximamente-su-nuevo-cambio-de-marca/" class="font-weight-bold" target="_blank">Revelación de Nueva Marca</a>”
-    y “<a href="https://blog.zencash.com/hola-horizen/" class="font-weight-bold" target="_blank">¡Hola Horizen!</a>”.
+    “<a href="https://blog.horizen.global/zencash-estara-revelando-proximamente-su-nuevo-cambio-de-marca/" class="font-weight-bold" target="_blank">Revelación de Nueva Marca</a>”
+    y “<a href="https://blog.horizen.global/hola-horizen/" class="font-weight-bold" target="_blank">¡Hola Horizen!</a>”.
 </div>
 
 

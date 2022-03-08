@@ -541,7 +541,7 @@ $(function () {
             searchResult.empty();
 
             if (!content.hits.length) {
-                searchResult.append("<p class='no-result'>We didn't find any result for \"" + keyword + "\". Sorry!</p>");
+                searchResult.append($("<p class='no-result'></p>").text("We didn't find any result for \"" + keyword + "\". Sorry!"));
                 return;
             }
 
