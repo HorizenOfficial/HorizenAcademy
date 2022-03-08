@@ -8,6 +8,7 @@ topic: privacy
 level: beginner
 chapter: "Meilleures pratiques"
 further_reads: [how_to_create_a_strong_password]
+canonical_link: "/fr/privacy/advanced/strong-passwords/"
 ---
 
 La réutilisation des mêmes mots de passe sur de nombreux sites Web et applications est la première mauvaise pratique en matière de sécurité. Même les plateformes les plus importantes et les plus solides sont piratées et les informations d'identification de leurs utilisateurs sont vendues sur le marché noir. Il y a eu des cas où les données volées étaient également accessibles au public. Imaginez si vos informations d'identification se trouvaient dans l'une de ces bases de données; chaque compte pour lequel vous avez utilisé le même mot de passe serait alors piraté.

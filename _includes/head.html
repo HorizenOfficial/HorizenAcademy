@@ -20,20 +20,31 @@
   {% elsif page.keywords != '' %}
   <meta name="keywords" content="{{ page.keywords }}">
   {% endif %}
-  {% if site.lang == 'en' %}
-  <link rel="canonical" href="{{site.url}}{{page.url}}">
-  <meta property="og:url" content="{{site.url}}{{page.url}}">
-  {% else %}
-  <link rel="canonical" href="{{site.url}}/{{site.lang}}{{page.url}}">
-  <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
+  {% if page.no_index %}
+    <meta name="robots" content="follow, noindex"/>
   {% endif %}
-  {% for language in site.languages %}
-  {% if language == 'en' %}
-  <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
+  {% if page.canonical_link %}
+    <link rel="canonical" href="{{site.url}}{{page.canonical_link}}">
+    <meta property="og:url" content="{{site.url}}{{page.canonical_link}}">
   {% else %}
-  <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
+    {% if site.lang == 'en' %}
+    <link rel="canonical" href="{{site.url}}{{page.url}}">
+    <meta property="og:url" content="{{site.url}}{{page.url}}">
+    {% else %}
+    <link rel="canonical" href="{{site.url}}/{{site.lang}}{{page.url}}">
+    <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
+    {% endif %}
   {% endif %}
-  {% endfor %}
+  
+  {% unless page.no_alternate %}
+    {% for language in site.languages %}
+    {% if language == 'en' %}
+    <link rel="alternate" href="{{site.url}}{{page.url}}" hreflang="{{language}}" />
+    {% else %}
+    <link rel="alternate" href="{{site.url}}/{{language}}{{page.url}}" hreflang="{% if language == 'jp' %}ja{% else %}{{language}}{% endif %}" />
+    {% endif %}
+    {% endfor %}
+  {% endunless%}
   <meta property="og:site_name" content="{{ site.title }}">
   <meta name="twitter:card" content="summary" />
   <script type="application/ld+json">

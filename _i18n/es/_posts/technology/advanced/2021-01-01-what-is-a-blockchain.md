@@ -7,6 +7,7 @@ permalink: /technology/advanced/what-is-a-blockchain/
 topic: technology
 level: advanced
 chapter: "¿Qué es una cadena de bloques?"
+no_index: true
 ---
 
 En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspectivas diferentes.

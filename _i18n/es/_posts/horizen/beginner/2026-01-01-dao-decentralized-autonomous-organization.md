@@ -6,6 +6,7 @@ description: "Con el tiempo nuestra fundación se convertirá en una OAD - Organ
 permalink: /horizen/beginner/dao-decentralized-autonomous-organization/
 topic: horizen
 level: beginner
+canonical_link: "/es/horizen/expert/dao-decentralized-autonomous-organization/"
 ---
 
 En Horizen nos hemos puesto como meta a largo plazo hacer una transición de nuestra estructura organizacional hacia una OAD, un pedazo de software que funciona como una organización con un cierto número de reglas.

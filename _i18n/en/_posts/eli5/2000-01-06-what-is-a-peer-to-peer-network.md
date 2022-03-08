@@ -5,6 +5,7 @@ title: "What is a Peer-to-Peer Network?"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, you learn about peer-to-peer networks in a simple, understandable way."
 permalink: /eli5/what-is-a-peer-to-peer-network/
 topic: eli5
+canonical_link: "/technology/expert/the-p2p-network/"
 ---
 
 In a peer-to-peer network (P2P), every participant plays the same role; they are all peers.  Each peer is both a client - requesting data, and a server - providing data. When you compare it to a regular website, this makes it a lot more robust.

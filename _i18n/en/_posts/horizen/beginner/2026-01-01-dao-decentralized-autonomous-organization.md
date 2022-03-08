@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /horizen/beginner/dao-decentralized-autonomous-organization/
 topic: horizen
 level: beginner
+canonical_link: "/horizen/expert/dao-decentralized-autonomous-organization/"
 ---
 
 Horizen has the long-term goal of moving its organizational structure towards a DAO. A DAO, or Decentralized Autonomous Organization, is a piece of software that acts as an organization with a number of rules.

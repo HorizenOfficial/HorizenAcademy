@@ -6,6 +6,7 @@ description: "Nuestra meta es adoptar un modelo de organización autónoma desce
 permalink: /horizen/advanced/dao-decentralized-autonomous-organization/
 topic: horizen
 level: advanced
+canonical_link: "/es/horizen/expert/dao-decentralized-autonomous-organization/"
 ---
 
 En Horizen nos hemos propuesto hacer una transición de nuestra estructura organizacional hacia una OAD. Una OAD, u organización autónoma descentralizada, es un software que funciona como si fuera una organización con un número de reglas y procedimientos predefinidos.

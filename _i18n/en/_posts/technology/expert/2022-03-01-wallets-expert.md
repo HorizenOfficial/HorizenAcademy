@@ -4,10 +4,13 @@ type: intro
 title: "Wallets Expert"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/wallets-expert/
+no_alternate: true
 topic: technology
 level: expert
 chapter: "Wallets"
 further_reads: [private_key_generation_in_bitcoin_wallets]
+canonical_link: "/technology/advanced/types-of-wallets/"
+no_index: true
 ---
 
 By now you most likely know what a wallet is and what it does. A wallet generates a random private key *sk*, derives your public key *pk* using [*elliptic curve cryptography*]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}) and derives your address(es) from you public key. A wallet then stores your private key(s) and takes care of [*signing* transactions]({{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}).

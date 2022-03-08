@@ -5,6 +5,7 @@ title: "¿Qué es una billetera?"
 description: "Una billetera es un programa en su computadora o teléfono, que le permite recibir y enviar dinero digital."
 permalink: /eli5/what-is-a-wallet/
 topic: eli5
+canonical_link: "/es/technology/advanced/types-of-wallets/"
 ---
 
 <table class="table lead">

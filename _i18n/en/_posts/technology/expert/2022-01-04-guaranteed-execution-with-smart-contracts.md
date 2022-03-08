@@ -4,6 +4,7 @@ type: article
 title: "Guaranteed Execution with Smart Contracts"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/guaranteed-execution-with-smart-contracts/
+no_alternate: true
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"

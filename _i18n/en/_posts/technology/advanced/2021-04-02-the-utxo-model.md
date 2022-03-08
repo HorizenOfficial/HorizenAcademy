@@ -8,6 +8,7 @@ topic: technology
 level: advanced
 chapter: "Transactions"
 further_reads: [uncover_bitcoin_transactions]
+canonical_link: "/technology/expert/utxo-vs-account-model/"
 ---
 
 Before we get into how transactions (TXs) on a blockchain work we want to introduce you to the UTXO (Unspent Transaction Output) model that we already talked about this in the Beginner Level article on transactions

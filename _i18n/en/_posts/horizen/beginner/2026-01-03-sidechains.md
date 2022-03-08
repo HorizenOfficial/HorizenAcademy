@@ -6,6 +6,7 @@ description: "The Horizen Academy is a free educational platform on blockchain t
 permalink: /horizen/beginner/sidechains/
 topic: horizen
 level: beginner
+canonical_link: "/horizen/advanced/sidechains/"
 ---
 
 One of the major challenges in making blockchain technology ready for mass adoption is scalability. Today most blockchains can only process a handful of transactions per second, while payment networks like VISA support several thousand transactions per second.

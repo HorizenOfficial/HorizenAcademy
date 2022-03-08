@@ -4,9 +4,11 @@ type: intro
 title: "How Does a Blockchain Work?"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/how-does-a-blockchain-work/
+no_alternate: true
 topic: technology
 level: expert
 chapter: "How Does a Blockchain Work?"
+no_index: true
 ---
 
 You do know what a blockchain is by now, and we are sure you have a good idea of how it works if you made it this far. In this chapter we will take a detailed look at each concept that makes a blockchain work individually. It's worth noting that Bitcoin and thus blockchain as we know it is more than ten years old by now, but most concepts described in this chapter preceded blockchains by years or even decades. The clever combination of these parts in a formerly unknown way enabled something truly impressive.

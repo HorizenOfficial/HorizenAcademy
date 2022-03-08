@@ -7,6 +7,7 @@ permalink: /technology/beginner/block-explorer-introduction/
 topic: technology
 level: beginner
 chapter: "Les transactions"
+canonical_link: "/fr/technology/advanced/block-explorer-continued/"
 ---
 
 Un bénéfice souvent cité à propos de la technologie blockchain est la transparence qu’elle offre. Les transactions, les blocs et les adresses sont publiquement auditables et l’outil nécessaire pour faire ce travail est l’explorateur de bloc.

@@ -6,6 +6,7 @@ description: "Les Sidechains sont une approche prometteuse pour améliorer les b
 permalink: /horizen/expert/sidechains/
 topic: horizen
 level: expert
+canonical_link: "/fr/horizen/advanced/sidechains/"
 ---
 
 Dans notre section [Avancé]({{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}), nous avons expliqué pourquoi les sidechains sont un moyen ingénieux de surmonter les limites actuelles concernant la scalabilité, l'interopérabilité et la gouvernance dans l'écosystème de la blockchain. Cet article est la suite de notre approche avancée du sujet. Si vous n'êtes pas familier avec le concept de sidechains, vous devriez peut-être faire le point avant de continuer à lire cet article.

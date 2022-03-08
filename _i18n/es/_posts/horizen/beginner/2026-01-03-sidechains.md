@@ -6,6 +6,7 @@ description: "Las cadenas laterales son un desarrollo prometedor para las cadena
 permalink: /horizen/beginner/sidechains/
 topic: horizen
 level: beginner
+canonical_link: "/es/horizen/advanced/sidechains/"
 ---
 
 Como ya mencionamos, una limitante importante para la adopción en masa de la tecnología blockchain es la cuestión de escalabilidad. En la actualidad, una cadena de bloques ordinaria es capaz de manejar unas pocas transacciones por segundo, mientras que la red de pago de VISA procesa miles por segundo.

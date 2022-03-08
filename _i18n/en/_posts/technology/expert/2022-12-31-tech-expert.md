@@ -4,6 +4,7 @@ type: intro
 title: "Technology Expert"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. This chapter is is not available yet. We add content frequently, sign up for our newsletter for notifications when it's released."
 permalink: /technology/expert/
+no_alternate: true
 topic: technology
 level: expert
 ---
@@ -49,7 +50,7 @@ level: expert
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
         </p>
     </div>
-</div>  
+</div>
 
 <div class="row mt-5">
     <div class="col-md-3">
@@ -84,6 +85,6 @@ level: expert
         </p>
     </div>
 </div>  
-  
+
 
 ### The Next Chapters Are Coming Soon!

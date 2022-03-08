@@ -7,6 +7,7 @@ permalink: /privacy/advanced/tools-to-protect-your-privacy/
 topic: privacy
 level: advanced
 chapter: "Tools to protect your Privacy"
+no_index: true
 ---
 
 This chapter describes the necessary tools to protect your privacy. We selected tools for advanced users that provide a higher level of privacy than the tools we introduced in our beginner level. The tools in this chapter might take a little more time to set up and will come with some cost on a monthly or annual basis.
