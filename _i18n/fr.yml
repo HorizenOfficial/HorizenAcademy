@@ -10,16 +10,40 @@ keywords:
 
 
 nav:
-  home: Home
-  built: Construit sur Horizen
-  get-zen: Obtenir des ZEN
-  use-zen: Utiliser des ZEN
-  earn-zen: Gagner des ZEN
-  mine-zen: Miner des ZEN
-  secure-nodes: Secure Nodes
-  super-nodes: Super Nodes
-  faucet: Faucet ZEN
-  forum: Soumettre une proposition
+  home: Horizen
+  explore: Explorer
+  explore_links:
+    ecosystem: Écosystème
+    getZen: Obtenir des ZEN
+    downloadAWallet: Télécharger Un Wallet
+    mineZen: Miner Des ZEN
+    zenNodes: ZenNodes
+    faucet: Des ZEN Gratuits Tous Les Jours
+    team: Équipe
+    roadmap: Roadmap
+    store: Boutique
+  build: Construire
+  build_links:
+    zendoo: Zendoo
+    testnet: Sahara Testnet
+    sdks: SDKs
+    documentation: Documentation
+    tutorials: Tutoriels
+    developer: News Développeurs
+  contribute: Contribuer
+  contribute_links:
+    zenNodes: Exécuter Un ZenNode
+    bounties: Bounties
+    ambassadors: Devenir Zenvangelist
+    heap: Tester Les Nouvelles Versions
+  learn: Apprendre
+  learn_links:
+    news: Nouvelles et Mises à Jour
+    horizen: Qu'est-ce qu'Horizen
+    zk: Zéro-Knowledge
+    technology: La technologie Horizen
+    research: Recherche & Livres Blancs
+    academy: Académie Blockchain
   community: Communauté
   academy: Académie
 
@@ -42,7 +66,7 @@ menu:
 
 footer:
   legal: Légal
-  privacy-policy: Politique de confidentialité
+  privacy-policy: Politique de Confidentialité
   copyright: Tous droits réservés
   share-this-article: 'Partager cet article:'
 
