@@ -18,7 +18,7 @@ further_reads: [pow_is_efficient, equihash_paper, loaded_pow, understanding_prog
 
 Blockchain Proof of Work serves a similar purpose. It demonstrates the difficulty of building a blockchain by adding zeros to every block hash. While the [blockchain as a data structure]({{ site.baseurl }}{% post_url /technology/expert/2022-01-02-blockchain-as-a-data-structure %}) is inherently *tamper-evident*, only PoW makes it immutable. A blockchain allows spectators to easily detect changes to records, but it doesn't prevent changes from occuring. Proof of Work, on the other hand, makes it infeasible to change any records, because an attacker would have to redo all the work that went into building the block(s).
 
-In our last article, we concluded that the consensus mechanism in most blockchains comprises two components - Proof of Work and the longest chain rule. PoW mostly provides [Sybil resistance]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}) combined with an incentive system that makes honest behavior the most profitable strategy. The longest chain rule resolves disputes in case two valid blocks are found at the same time.
+In our last article, we concluded that the consensus mechanism in most blockchains comprises two components - Proof of Work and the longest chain rule. PoW mostly provides Sybil resistance combined with an incentive system that makes honest behavior the most profitable strategy. The longest chain rule resolves disputes in case two valid blocks are found at the same time.
 
 ### Voting With Computational Power
 
@@ -72,7 +72,7 @@ The target is adjusted regularly. With Horizen, the difficulty adjustment happen
 
 > "A Proof-of-Work (PoW) system (or protocol, or function) is an economic measure to deter denial of service attacks and other service abuses such as spam on a network by requiring some work from the service requester, usually meaning processing time by a computer." - [Wikipedia](https://en.wikipedia.org/wiki/Proof_of_work)
 
-Proof of Work is the bridge connecting the digital and the physical world. It ties the voting power in a purely digital system to a costly real world resource. Prior to PoW, consensus was only achievable with a known set of participants or a reliable communications network. Making the consensus process public left the system vulnerable to [Sybil attacks]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}). With Proof of Work, creating many Sybil identities does not provide an attacker with an advantage unless he backs them with meaningful computational resources.
+Proof of Work is the bridge connecting the digital and the physical world. It ties the voting power in a purely digital system to a costly real world resource. Prior to PoW, consensus was only achievable with a known set of participants or a reliable communications network. Making the consensus process public left the system vulnerable to Sybil attacks. With Proof of Work, creating many Sybil identities does not provide an attacker with an advantage unless he backs them with meaningful computational resources.
 
 While a Proof of Work system typically uses a one-way function like a hash function, a proof of work algorithm can be more than just a hash function.
 The most used type of Proof of Work is the Hashcash style PoW depicted in the graphic above. Hashcash was introduced in 1997 by Adam Back as a measure against spam. Recipients would require the sender to perform a Proof of Work in order to accept the mail. While this computational overhead does not effect regular users sending a few mails per day, "professional" spam would be much harder to produce. The principle is the same as described above: performing repeated hashing until the resulting hash is less than some target value.
@@ -218,7 +218,7 @@ For long delays, e.g. 20 blocks, the penalty would incur an additional 252 block
 
 ### DDos Attacks
 
-Another potential threat is (Distributed) Denial of Service or [(D)DoS attacks]({{ site.baseurl }}{% post_url /technology/expert/2022-06-04-ddos-sybil-eclipse %}), where a malicious actor tries to slow down or halt the network by sending a large number of messages in order to limit the network's capacity. In blockchain, the attacker would replace messages with transactions to flood the network. While (D)DoS attacks can certainly harm the system, they can't effect the integrity of the ledger. It doesn't make much sense for a rational actor to spend resources on a DoS attack (the attacker has to pay transaction fees as well!) if the only affect is a temporary slow down of the network.
+Another potential threat is (Distributed) Denial of Service or (D)DoS attacks, where a malicious actor tries to slow down or halt the network by sending a large number of messages in order to limit the network's capacity. In blockchain, the attacker would replace messages with transactions to flood the network. While (D)DoS attacks can certainly harm the system, they can't effect the integrity of the ledger. It doesn't make much sense for a rational actor to spend resources on a DoS attack (the attacker has to pay transaction fees as well!) if the only affect is a temporary slow down of the network.
 
 ### Sybil Attacks
 
