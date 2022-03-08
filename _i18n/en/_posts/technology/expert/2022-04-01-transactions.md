@@ -7,6 +7,7 @@ permalink: /technology/expert/transactions/
 topic: technology
 level: expert
 chapter: "Transactions"
+no_index: true
 ---
 
 Digital money would be useless if there was no way to transfer it. Fortunately, there is not just one way to transfer cryptocurrencies but many more advanced techniques that allow a transfer of value with different properties. In order to understand those other transaction mechanisms we examine the two most common accounting techniques used in blockchains: the UTXO and account model. Afterward, we look at two special types of transactions: using cross-chain transactions between different interoperable blockchains and state- and payment channels to transact almost entirely off-chain.

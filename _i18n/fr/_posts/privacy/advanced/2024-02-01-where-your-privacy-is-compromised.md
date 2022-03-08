@@ -7,6 +7,7 @@ permalink: /privacy/advanced/where-your-privacy-is-compromised/
 topic: privacy
 level: advanced
 chapter: "Lorsque votre vie privée est compromise"
+no_index: true
 ---
 
 Le temps que les gens passent à utiliser leur ordinateur et leur téléphone est incroyable ! Non seulement vous utilisez vos appareils plusieurs heures par jour en moyenne, mais vous produisez également une grande quantité de données pendant cette période.

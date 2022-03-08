@@ -7,6 +7,7 @@ permalink: /technology/beginner/what-is-a-blockchain/
 topic: technology
 level: beginner
 chapter: "¿Qué es una cadena de bloques?"
+no_index: true
 ---
 
 Muchos han escuchado hablar de las cadenas de bloques, pero pocos pueden explicar qué son y muchos menos cómo funcionan. Aquí explicaremos ambas cosas.

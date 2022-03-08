@@ -7,6 +7,7 @@ permalink: /technology/advanced/transactions/
 topic: technology
 level: advanced
 chapter: "Les transactions"
+no_index: true
 ---
 
 Vous devriez avoir une bonne compréhension de la blockchain si vous avez lu nos premiers chapitres de la section avancé et êtes arrivés jusqu’ici. Après avoir couvert les idées et les valeurs de proposition de la blockchain dans ce premier chapitre nous regardons les concepts qui font qu’une blockchain fonctionne. Dans ce chapitre, nous regarderons une partie de la blockchain, une petite pièce du puzzle. La blockchain est constituée de nombreux blocs qui sont à leur tour des contenants pour les transactions.

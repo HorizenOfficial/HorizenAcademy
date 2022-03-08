@@ -7,6 +7,7 @@ permalink: /privacy/advanced/best-practices/
 topic: privacy
 level: advanced
 chapter: "Les bonnes pratiques"
+no_index: true
 ---
 
 Il s'agit du niveau avancé qui convient le mieux aux utilisateurs qui ont une compréhension générale de la confidentialité numérique et de la technologie qui peut vous permettre de contrôler votre empreinte numérique, mais qui veulent en savoir plus à son sujet.

@@ -7,6 +7,7 @@ permalink: /technology/advanced/transactions/
 topic: technology
 level: advanced
 chapter: "Transactions"
+no_index: true
 ---
 
 You should have a pretty good understanding of blockchain if you have read through our first chapters in the Advanced Level and made it this far. After we have covered the ideas and value propositions of blockchain in the first chapter we looked at the concepts that make blockchain work. In this chapter, we will look at a small subunit of the blockchain, a tiny piece in the puzzle. The blockchain is made of many blocks which in turn are containers for transactions.

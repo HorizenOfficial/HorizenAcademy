@@ -7,6 +7,7 @@ permalink: /technology/expert/what-is-a-blockchain/
 topic: technology
 level: expert
 chapter: "What is a Blockchain?"
+no_index: true
 ---
 
 Welcome to our Expert Section on blockchain technology!

@@ -7,6 +7,7 @@ permalink: /privacy/advanced/tools-to-protect-your-privacy/
 topic: privacy
 level: advanced
 chapter: "Les outils pour protéger la vie privée"
+no_index: true
 ---
 
 Ce chapitre décrit les outils nécessaires pour protéger votre vie privée. Nous avons sélectionné des outils qui offrent un niveau de confidentialité plus élevé que les outils que nous avons introduits dans notre niveau débutant. Les outils de ce chapitre peuvent prendre un peu plus de temps à mettre en place et auront un coût sur une base mensuelle ou annuelle.

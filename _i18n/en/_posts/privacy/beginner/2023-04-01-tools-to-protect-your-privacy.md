@@ -7,6 +7,7 @@ permalink: /privacy/beginner/tools-to-protect-your-privacy/
 topic: privacy
 level: beginner
 chapter: "Tools to protect your Privacy"
+no_index: true
 ---
 
 This is the Beginner Level. This level is best for users who are new to digital privacy and the technology that can enable you to control your digital footprint.

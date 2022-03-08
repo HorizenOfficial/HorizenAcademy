@@ -7,6 +7,7 @@ permalink: /technology/beginner/how-does-a-blockchain-work/
 topic: technology
 level: beginner
 chapter: "¿Cómo funciona una cadena de bloques?"
+no_index: true
 ---
 
 En nuestros primeros dos artículos sobre la cadena de bloques explicamos que, en una de sus formas más sencillas, esta funciona como una manera de almacenar datos. Este método de manejar datos le permite al usuario transferir valor sin involucrar a una autoridad central. Antes de eso, comparamos a la cadena como protocolo para transferir valor con el internet, un protocolo de transferencia de información. La comparamos también al servicio de correos, un protocolo para transferir bienes físicos.

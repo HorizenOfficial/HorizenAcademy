@@ -6,6 +6,7 @@ description: "Si vous êtes nouveau dans le domaine de la confidentialité numé
 permalink: /privacy/beginner/
 topic: privacy
 level: beginner
+no_index: true
 ---
 
 <div class="row mb-3">

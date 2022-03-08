@@ -7,6 +7,7 @@ permalink: /privacy/beginner/tools-to-protect-your-privacy/
 topic: privacy
 level: beginner
 chapter: "Herramientas para proteger la privacidad"
+no_index: true
 ---
 
 Este es el nivel para principiantes. Presentaremos al usuario novato al mundo de la privacidad digital y la tecnología algunas herramientas que le permitirán controlar su huella digital.

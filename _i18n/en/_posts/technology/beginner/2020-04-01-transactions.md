@@ -7,6 +7,7 @@ permalink: /technology/beginner/transactions/
 topic: technology
 level: beginner
 chapter: "Transactions"
+no_index: true
 ---
 
 If you have read our prior articles, then you already know more about blockchain than most people. We talked about what blockchain is, how it works, and what cryptocurrency wallets do. You know that wallets are programs that help you create transactions and receive money. In this chapter, we will introduce you to what these transactions look like and how you can take a look at them.

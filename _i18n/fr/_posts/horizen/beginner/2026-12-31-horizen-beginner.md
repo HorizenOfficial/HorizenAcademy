@@ -6,6 +6,7 @@ description: "Nous montrons comment fonctionne et comment nous finançons notre 
 permalink: /horizen/beginner/
 topic: horizen
 level: beginner
+no_index: true
 ---
 
 <div class="row mb-3">

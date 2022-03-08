@@ -7,6 +7,7 @@ permalink: /privacy/advanced/where-your-privacy-is-compromised/
 topic: privacy
 level: advanced
 chapter: "¿Dónde se compromete la privacidad del usuario?"
+no_index: true
 ---
 
 La cantidad de tiempo que pasamos en nuestras computadoras y celulares es increíble. No solo utilizamos estos dispositivos varias horas al día, sino que producimos enormes cantidades de dato durante ese tiempo.
