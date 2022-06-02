@@ -11,7 +11,7 @@ chapter: "Les transactions"
 
 L'argent numérique ne servirait à rien s'il n'y avait aucun moyen de l'envoyer d'une personne à l'autre. Dans cet article, nous voulons vous montrer comment fonctionnent les transactions et à quoi servent vos clés.
 
-Dans le tout premier article de la section technologie, nous avons dit que la [blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}) est un grand registre public qui garde la trace de toutes les transactions qui se sont passées sur le réseau. Dans le dernier article, nous avons indiqué qu'un [portefeuille]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) est une application qui vous aide à gérer vos clés et à créer des transactions.
+Dans le tout premier article de la section technologie, nous avons dit que la [blockchain]({{ site.baseurl }}{% post_url /technology/beginner/2020-01-02-blockchain-as-a-data-structure %}) est un grand registre public qui garde la trace de toutes les transactions qui se sont passées sur le réseau. Dans le dernier article, nous avons indiqué qu'un [portefeuille]({{ site.baseurl }}/technology/advanced/types-of-wallets/) est une application qui vous aide à gérer vos clés et à créer des transactions.
 
 ![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T1_balance_D.jpg)
 

@@ -39,7 +39,7 @@ La llave pública del usuario equivale a su dirección en la cadena de bloques, 
 ![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_D.jpg)
 ![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_M.jpg)
 
-Las [billeteras]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) simplifican el manejo de las llaves del usuario y toda encriptación que está ocurriendo tras bambalinas. Una billetera es una interfaz amigable con el usuario que crea transacciones y funciona más bien como un llavero, pues puede crear y administrar llaves por el usuario, mostrarle su saldo al encontrar todas las transacciones recibidas en la cadena y crear nuevas transacciones. Así, nunca se almacenan fondos en la billetera, sino solo las llaves que permiten al usuario acceder a los fondos que ha registrado en la cadena de bloques.
+Las billeteras simplifican el manejo de las llaves del usuario y toda encriptación que está ocurriendo tras bambalinas. Una billetera es una interfaz amigable con el usuario que crea transacciones y funciona más bien como un llavero, pues puede crear y administrar llaves por el usuario, mostrarle su saldo al encontrar todas las transacciones recibidas en la cadena y crear nuevas transacciones. Así, nunca se almacenan fondos en la billetera, sino solo las llaves que permiten al usuario acceder a los fondos que ha registrado en la cadena de bloques.
 
 ![Wallet does in ES](/assets/post_files/technology/beginner/wallets/ES_wallet_does_D.jpg)
 ![Wallet does in ES](/assets/post_files/technology/beginner/wallets/ES_wallet_does_M.jpg)

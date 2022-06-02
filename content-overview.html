@@ -76,9 +76,6 @@ css: |
                 <li class="nav-item">
                     <a class="nav-link" id="label-eli5" data-toggle="pill" href="#tab-eli5" role="tab" aria-controls="tab-eli5" aria-selected="false">{% t content-overview.eli5 %}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="label-resources" data-toggle="pill" href="#tab-resources" role="tab" aria-controls="tab-resources" aria-selected="false">{% t topics.resources %}</a>
-                </li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab-technology" role="tabpanel" aria-labelledby="label-technology">
@@ -87,10 +84,6 @@ css: |
                         <tr class="text-uppercase">
                             <th scope="col">
                                 {% t content-overview.chapter %}
-                            </th>
-                            <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
-                                {% t levels.beginner %}
                             </th>
                             <th scope="col">
                                 <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
@@ -124,13 +117,6 @@ css: |
                             <th scope="row">{{ post.chapter }}</th>
                             <td>
                                 {% for post2 in site.posts reversed %}
-                                {% if post2.topic == "technology" and post2.level == "beginner" and post2.chapter == current_chapter %}
-                                <a href="{{ post2.url }}" class="article-link" data-type="{{ post2.type }}">{{ post2.title }}</a>
-                                {% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>
-                                {% for post2 in site.posts reversed %}
                                 {% if post2.topic == "technology" and post2.level == "advanced" and post2.chapter == current_chapter %}
                                 <a href="{{ post2.url }}" class="article-link" data-type="{{ post2.type }}">{{ post2.title }}</a>
                                 {% endif %}
@@ -158,10 +144,6 @@ css: |
                         <tr class="text-uppercase">
                             <th scope="col">
                                 {% t content-overview.chapter %}
-                            </th>
-                            <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
-                                {% t levels.beginner %}
                             </th>
                             <th scope="col">
                                 <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
@@ -195,13 +177,6 @@ css: |
                             <th scope="row">{{ post.chapter }}</th>
                             <td>
                                 {% for post2 in site.posts reversed %}
-                                {% if post2.topic == "privacy" and post2.level == "beginner" and post2.chapter == current_chapter %}
-                                <a href="{{ post2.url }}" class="article-link" data-type="{{ post2.type }}">{{ post2.title }}</a>
-                                {% endif %}
-                                {% endfor %}
-                            </td>
-                            <td>
-                                {% for post2 in site.posts reversed %}
                                 {% if post2.topic == "privacy" and post2.level == "advanced" and post2.chapter == current_chapter %}
                                 <a href="{{ post2.url }}" class="article-link" data-type="{{ post2.type }}">{{ post2.title }}</a>
                                 {% endif %}
@@ -229,10 +204,6 @@ css: |
                         <thead>
                         <tr class="text-uppercase">
                             <th scope="col">
-                                <img src="/assets/img/icons/levels/beginner-4.svg" alt="{% t levels.beginner %}" class="icon-level">
-                                {% t levels.beginner %}
-                            </th>
-                            <th scope="col">
                                 <img src="/assets/img/icons/levels/advanced-4.svg" alt="{% t levels.advanced %}" class="icon-level">
                                 {% t levels.advanced %}
                             </th>
@@ -245,13 +216,6 @@ css: |
                         <tbody>
 
                         <tr>
-                            <td>
-                                {% for post in site.posts reversed %}
-                                {% if post.topic == "horizen" and post.level == "beginner" and post.type == "article" %}
-                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
-                                {% endif %}
-                                {% endfor %}
-                            </td>
                             <td>
                                 {% for post in site.posts reversed %}
                                 {% if post.topic == "horizen" and post.level == "advanced" and post.type == "article" %}
@@ -305,23 +269,7 @@ css: |
                         </tbody>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="tab-resources" role="tabpanel" aria-labelledby="label-resources">
-                    <table class="table">
-                        <tbody>
-
-                        <tr>
-                            <td>
-                                {% for post in site.posts reversed %}
-                                {% if post.topic == "resources" and post.type == "article" %}
-                                <a href="{{ post.url }}" class="article-link">{{ post.title }}</a>
-                                {% endif %}
-                                {% endfor %}
-                            </td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
+                
             </div>
 
         </section>

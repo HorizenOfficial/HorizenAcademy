@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">
@@ -55,7 +54,7 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">
+        <a href="{{ site.baseurl }}/technology/advanced/types-of-wallets/">
             <img src="/assets/post_files/technology/beginner/intro/wallets.svg" alt="Billeteras" />
         </a>
     </div>
@@ -65,7 +64,7 @@ no_index: true
             Para poder recibir y enviar criptomonedas se utilizan las denominadas billeteras de criptomonedas. En el tercer capítulo se habla del funcionamiento de esta herramienta.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Leer el artículo</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}/technology/advanced/types-of-wallets/">Leer el artículo</a>
         </p>
     </div>
 </div>

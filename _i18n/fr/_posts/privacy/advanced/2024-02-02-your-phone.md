@@ -7,10 +7,14 @@ permalink: /privacy/advanced/your-phone/
 topic: privacy
 level: advanced
 chapter: "Lorsque votre vie privée est compromise"
-further_reads: [your_phone_number_is_all_a_hacker_needs_to_read_texts_listen_to_calls_and_track_you, do_not_let_criminals_steal_your_cellphone_number_with_this_scam]
+further_reads:
+  [
+    your_phone_number_is_all_a_hacker_needs_to_read_texts_listen_to_calls_and_track_you,
+    do_not_let_criminals_steal_your_cellphone_number_with_this_scam,
+  ]
 ---
 
-Dans notre article de niveau débutant ; [Votre téléphone et votre ordinateur]({{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}) nous avons abordé la façon dont la vie privée est compromise sur deux appareils les plus utilisés aujourd'hui : le téléphone et l'ordinateur. Dans cet article, nous allons nous concentrer sur le téléphone, le plus utilisé des deux.
+Dans notre article de niveau débutant ; [Votre téléphone et votre ordinateur]({{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}) nous avons abordé la façon dont la vie privée est compromise sur deux appareils les plus utilisés aujourd'hui : le téléphone et l'ordinateur. Dans cet article, nous allons nous concentrer sur le téléphone, le plus utilisé des deux.
 
 Les téléphones mobiles d'aujourd'hui sont de minuscules ordinateurs puissants; ils ont des quantités énormes de stockage et de puissance de traitement à leur disposition et grâce à leur maniabilité, leur facilité et leur fréquence d'utilisation, il existe des tonnes d'applications de productivité pour smartphones, pas encore vues sur un ordinateur personnel. Les e-mails, la messagerie, les applications de chat, les portefeuilles, les logiciels bancaires, les notes personnelles, les photos et les vidéos ne sont qu'un petit exemple de ce que nous utilisons ou stockons sur nos téléphones. La surface d'attaque plus importante des smartphones attire beaucoup d'intérêt malveillant pour eux. Abordons en détail certains compromis en matière de protection de la vie privée :
 
@@ -24,8 +28,6 @@ Les téléphones mobiles d'aujourd'hui sont de minuscules ordinateurs puissants;
 En dehors de cela, il existe d'autres méthodes plus sophistiquées et plus dangereuses qui peuvent être utilisées afin de suivre les personnes sur les réseaux mobiles, et cela peu importe les mesures de sécurité que l'utilisateur prend de son côté, à part éteindre le téléphone lui-même, bien sûr. L'un des plus effrayants est un piratage qui utilise un service d'échange de réseau appelé Signalling System No. 7 (SS7). En l'exploitant avec succès, l'attaquant peut lire des messages texte, écouter des appels et suivre un smartphone grâce à la triangulation, en utilisant uniquement un numéro de téléphone comme identifiant. Vous pouvez en savoir plus sur l'attaque SS7 ci-dessous, dans la section lectures complémentaires.
 
 L'utilisation d'un chiffrement complet de l'appareil est également indispensable pour éviter toute récupération des données en cas de vol de l'appareil. Les deux systèmes d'exploitation populaires, iOS et Android offrent les options pour cela.
-
-
 
 ### Note spéciale sur l'utilisation du SMS comme méthode 2FA
 

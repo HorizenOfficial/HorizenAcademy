@@ -7,7 +7,11 @@ permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced
 chapter: "Pourquoi la vie privée ?"
-further_reads: [im_not_an_international_drug_dealer, i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy]
+further_reads:
+  [
+    im_not_an_international_drug_dealer,
+    i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy,
+  ]
 ---
 
 Selon [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), l'argument de rien avoir à cacher affirme que les programmes de surveillance gouvernementaux ne menacent pas la vie privée à moins qu'ils ne découvrent des activités illégales et que s'ils découvrent des activités illégales, la personne qui commet ces activités n'a pas le droit de les garder privées. Par conséquent, une personne qui est en faveur de cet argument peut dire "Je n'ai rien à cacher" et n'exprime donc pas d'opposition à la surveillance gouvernementale. Une personne utilisant cet argument peut dire qu'une personne ne devrait pas s'inquiéter du gouvernement ou de la surveillance si elle n'a "rien à cacher".
@@ -59,14 +63,13 @@ Selon [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), l'arg
     </tbody>
 </table>
 
-
 L'argument "Rien à cacher" est faussé et sans pertinence aujourd'hui. Les gens qui pensent qu'ils n'ont rien à cacher disent essentiellement qu'ils sont tellement inoffensifs et inintéressants que cela ne signifie rien pour eux si quelqu'un piste constamment leur vie, ce qui, si on l'explique en détail, serait évidemment inacceptable.
 
 Même si la vie privée est envahie à droite et à gauche, vous avez toujours le pouvoir de la protéger de bien des façons. Il existe des étapes simples que vous pouvez suivre pour reprendre le contrôle et augmenter considérablement votre niveau de confidentialité :
 
- - **Chiffrer les mails, les messages et les appels**
- - **Modifier les paramètres de confidentialité de vos appareils et logiciels**
- - **Utiliser des outils et des applications différents et plus privés**
+- **Chiffrer les mails, les messages et les appels**
+- **Modifier les paramètres de confidentialité de vos appareils et logiciels**
+- **Utiliser des outils et des applications différents et plus privés**
 
 <hr class="mt-5 mb-5">
 
@@ -75,7 +78,7 @@ Même si la vie privée est envahie à droite et à gauche, vous avez toujours l
     <tr>
         <td style="width: 80px;"><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/privacy.svg" alt="Privacy"></td>
         <td>
-            Suivez nos articles dans la section sur la protection de la vie privée pour en savoir plus sur les endroits <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">où et comment votre vie privée est compromise</a>, lisez les <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">meilleures pratiques</a> et les différents <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">outils que vous pouvez utiliser pour protéger votre vie privée</a>.
+            Suivez nos articles dans la section sur la protection de la vie privée pour en savoir plus sur les endroits <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">où et comment votre vie privée est compromise</a>, lisez les <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">meilleures pratiques</a> et les différents <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">outils que vous pouvez utiliser pour protéger votre vie privée</a>.
         </td>
     </tr>
     </tbody>

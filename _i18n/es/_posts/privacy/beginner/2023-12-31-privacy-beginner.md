@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-01-01-the-nothing-to-hide-argument %}">
@@ -38,7 +37,7 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">
             <img src="/assets/post_files/privacy/beginner/intro/where.svg" alt="¿Dónde se compromete la privacidad del usuario?" />
         </a>
     </div>
@@ -48,7 +47,7 @@ no_index: true
             Este capítulo expone las maneras en las que la privacidad del usuario puede verse comprometida, ya sea en su computadora o su celular.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">Leer el artículo</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">Leer el artículo</a>
         </p>
     </div>
 </div>

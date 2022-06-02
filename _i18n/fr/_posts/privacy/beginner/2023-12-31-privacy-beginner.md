@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-01-01-the-nothing-to-hide-argument %}">
@@ -38,7 +37,7 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">
+        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">
             <img src="/assets/post_files/privacy/beginner/intro/where.svg" alt="Lorsque votre vie privée est compromise" />
         </a>
     </div>
@@ -48,7 +47,7 @@ no_index: true
             Dans le chapitre suivant, nous vous montrons comment votre vie privée en ligne est compromise sur votre téléphone aussi bien que sur votre ordinateur.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">Lire l'article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">Lire l'article</a>
         </p>
     </div>
 </div>

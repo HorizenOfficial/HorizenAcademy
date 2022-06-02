@@ -12,10 +12,9 @@ no_index: true
 
 C'est le niveau pour les débutants. Nous présenterons à l'utilisateur novice le monde de la vie privée en ligne et de la technologie quelques outils qui lui permettront de contrôler son empreinte numérique.
 
-
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %}">
+        <a href="https://academy.horizen.io/privacy/advanced/where-your-privacy-is-compromised/">
             <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/browser.svg" alt="Les navigateurs" />
         </a>
     </div>
@@ -25,7 +24,7 @@ C'est le niveau pour les débutants. Nous présenterons à l'utilisateur novice 
             Il est important d'utiliser un navigateur qui stocke le moins d'informations possible. Cet article présente quelques suggestions.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %}">Lire l'article</a>
+            <a class="font-weight-bold" href="https://academy.horizen.io/privacy/advanced/where-your-privacy-is-compromised/">Lire l'article</a>
         </p>
     </div>
 </div>

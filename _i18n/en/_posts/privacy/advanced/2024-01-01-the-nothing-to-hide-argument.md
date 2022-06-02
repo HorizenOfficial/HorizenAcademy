@@ -2,12 +2,16 @@
 layout: post
 type: intro
 title: 'The "Nothing to Hide" Argument'
-description: 'The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we discuss the Nothing to Hide Arguement and why it is fundamentally flawed.'
+description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this article, we discuss the Nothing to Hide Arguement and why it is fundamentally flawed."
 permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced
 chapter: "Why Privacy?"
-further_reads: [im_not_an_international_drug_dealer, i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy]
+further_reads:
+  [
+    im_not_an_international_drug_dealer,
+    i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy,
+  ]
 ---
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), "The nothing to hide argument states that government surveillance programs do not threaten privacy unless they uncover illegal activities and that if they do uncover illegal activities, the person committing these activities does not have the right to keep them private. Hence, a person who favours this argument may state "I've got nothing to hide" and therefore does not express opposition to government surveillance. An individual using this argument may say that a person should not worry about government or surveillance if he/she has "nothing to hide."
@@ -59,26 +63,13 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument)
     </tbody>
 </table>
 
-
 The "Nothing to hide" argument is flawed and irrelevant today. People who think they have nothing to hide essentially say that they are so harmless and uninteresting person that it means nothing for them if someone eavesdrops on their lives constantly, which, if explained in detail, will obviously be unacceptable.
 
 Even though privacy is being invaded left and right, you still have the power to protect it in many ways. There are simple steps you can follow to regain control and dramatically increase your privacy level:
 
- - **Encrypt emails, messages, and calls**
- - **Change privacy settings on your devices and software**
- - **Use different, more private tools and applications**
- - **Learn more about privacy protection techniques and advanced methodologies**
+- **Encrypt emails, messages, and calls**
+- **Change privacy settings on your devices and software**
+- **Use different, more private tools and applications**
+- **Learn more about privacy protection techniques and advanced methodologies**
 
 <hr class="mt-5 mb-5">
-
-<table class="table table-borderless">
-    <tbody>
-    <tr>
-        <td style="width: 80px;"><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/privacy.svg" alt="Privacy"></td>
-        <td>
-            Follow our articles in the privacy section to learn more about <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">where and how your privacy is compromised</a>, read about <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">best practices</a> and different <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">tools you can use to protect your privacy</a>.
-        </td>
-    </tr>
-    </tbody>
-</table>
-

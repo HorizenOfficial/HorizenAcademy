@@ -17,8 +17,7 @@ no_index: true
         <p>Horizen Academy está diseñado para ser un recurso indispensable de educación en línea en materia de blockchain, criptomonedas y privacidad en línea. No importa si el usuario quiere aprender solo por curiosidad o si lo necesita porque su empresa está en vías de implementar esta tecnología; este proyecto queda abierto a todos.</p>
         <p>Este es el nivel avanzado, su contenido está orientado hacia usuarios con una comprensión general de cómo funcionan la privacidad digital y la tecnología que permite al usuario controlar su huella digital, pero que desean dominar el tema a detalle.</p>
     </div>
-</div> 
-
+</div>
 
 <div class="row mt-5">
     <div class="col-md-3">
@@ -87,4 +86,3 @@ no_index: true
         </p>
     </div>
 </div>
-

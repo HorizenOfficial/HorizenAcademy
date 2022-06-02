@@ -7,7 +7,11 @@ permalink: /privacy/advanced/the-nothing-to-hide-argument/
 topic: privacy
 level: advanced
 chapter: "¿Por qué privacidad?"
-further_reads: [im_not_an_international_drug_dealer, i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy]
+further_reads:
+  [
+    im_not_an_international_drug_dealer,
+    i_have_got_nothing_to_hide_and_other_misunderstandings_of_privacy,
+  ]
 ---
 
 Acorde a [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), El argumento "Si no has hecho nada malo, no tienes nada que esconder" propone que acciones invasivas como los programas de vigilancia en masa del gobierno no amenazan la privacidad de la persona salvo que revelen actividades ilegales, en cuyo caso la persona cometiendo dichas actividades no tendría el derecho de mantenerlas privadas. Por lo tanto, alguien a favor de este argumento puede declarar “No tengo nada que ocultar” y así no expresar oposición a la vigilancia gubernamental. De acuerdo con el argumento, quien no tenga nada que ocultar no tiene que preocuparse por ser vigilado.
@@ -59,15 +63,14 @@ Acorde a [Wikipedia](https://en.wikipedia.org/wiki/Nothing_to_hide_argument), El
     </tbody>
 </table>
 
-
 Por estas razones, el argumento “No tengo nada que ocultar” resulta tanto impreciso como irrelevante. Quienes creen que no tienen nada que ocultar están expresando que se consideran personas tan inocuas o poco interesantes que no les afecta en lo más mínimo que se les esté patrullando constantemente, lo cual, de conocer la realidad, les parecería inaceptable.
 
 Aunque en la actualidad la privacidad del usuario se ve atacada a diestra y siniestra, existen muchas medios que le permiten protegerla. Hay algunos pasos sencillos de tomar que le permitirán retomar el control e incrementar drásticamente su nivel de privacidad:
 
- - **Encriptar correos electrónicos, mensajes y llamadas**
- - **Actualizar los ajustes de privacidad de dispositivos y software**
- - **Empezar a utilizar herramientas y aplicaciones más seguras**
- - **Aprender técnicas y metodologías avanzadas para proteger información**
+- **Encriptar correos electrónicos, mensajes y llamadas**
+- **Actualizar los ajustes de privacidad de dispositivos y software**
+- **Empezar a utilizar herramientas y aplicaciones más seguras**
+- **Aprender técnicas y metodologías avanzadas para proteger información**
 
 <hr class="mt-5 mb-5">
 
@@ -76,7 +79,7 @@ Aunque en la actualidad la privacidad del usuario se ve atacada a diestra y sini
     <tr>
         <td style="width: 80px;"><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/privacy.svg" alt="Privacy"></td>
         <td>
-            Siga nuestros artículos en la sección de privacidad para obtener más información sobre <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-02-01-your-phone-and-computer %}">dónde y cómo se compromete su privacidad</a>, lea <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">las mejores prácticas</a> y las diferentes <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">herramientas que puede usar para proteger su privacidad</a>.
+            Siga nuestros artículos en la sección de privacidad para obtener más información sobre <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-02-your-phone %}">dónde y cómo se compromete su privacidad</a>, lea <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-03-01-best-practices %}">las mejores prácticas</a> y las diferentes <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-01-tools-to-protect-your-privacy %}">herramientas que puede usar para proteger su privacidad</a>.
         </td>
     </tr>
     </tbody>

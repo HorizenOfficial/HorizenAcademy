@@ -39,7 +39,7 @@ Votre clé publique est comme votre adresse sur la blockchain et votre clé priv
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_D.jpg)
 ![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_M.jpg)
 
-Les [Les portefeuilles (les wallets)]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) peuvent générer et gérer les clés pour vous, vous montrer votre solde en trouvant toutes les transactions que vous avez reçues sur la blockchain, et créer de nouvelles transactions.
+Les [Les portefeuilles (les wallets)]({{ site.baseurl }}/technology/advanced/types-of-wallets/) peuvent générer et gérer les clés pour vous, vous montrer votre solde en trouvant toutes les transactions que vous avez reçues sur la blockchain, et créer de nouvelles transactions.
 
 ![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_D.jpg)
 ![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_M.jpg)

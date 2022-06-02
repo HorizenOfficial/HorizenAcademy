@@ -56,23 +56,6 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">
-            <img src="/assets/post_files/privacy/advanced/intro/tools2.svg" alt="Best Practices" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Best Practices</h5>
-        <p class="mb-1">
-            The third chapter looks at two best practices, that everybody should use: strong passwords and 2-Factor-Authentication or 2FA. They make it much harder for an attacker to get access to your accounts.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">Read Chapter</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-01-tools-to-protect-your-privacy %}">
             <img src="/assets/post_files/privacy/advanced/intro/best2.svg" alt="Tools to Protect your Privacy - Advanced" />
         </a>

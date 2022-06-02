@@ -14,8 +14,6 @@ A wallet is an app for generating, managing, and storing cryptographic keys - yo
 ![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_M.jpg)
 
-If you are unsure about a wallets main functionality you can read our [introduction to wallets]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). The main differentiator between the different types of wallets is the physical location your keys are stored in.
-
 ### Your Mnemonic Phrase
 
 Your mnemonic phrase is a backup of your private key that is used by most wallets. It is a list of random words given to you when creating a wallet, usually 12 or 24. If you break or lose a device with a wallet - no matter if mobile, desktop or hardware wallet - your mnemonic phrase is usually your last line of defense against a loss of funds.

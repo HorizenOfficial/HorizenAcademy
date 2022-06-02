@@ -12,10 +12,9 @@ no_index: true
 
 Este es el nivel para principiantes. Presentaremos al usuario novato al mundo de la privacidad digital y la tecnología algunas herramientas que le permitirán controlar su huella digital.
 
-
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %}">
+        <a href="https://academy.horizen.io/privacy/advanced/where-your-privacy-is-compromised/">
             <img src="/assets/post_files/privacy/beginner/tools-to-protect-your-privacy/browser.svg" alt="Exploradores" />
         </a>
     </div>
@@ -25,7 +24,7 @@ Este es el nivel para principiantes. Presentaremos al usuario novato al mundo de
             Es importante utilizar un explorador que guarde la menor cantidad de información posible. Este artículo presenta algunas sugerencias.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/beginner/2023-04-02-browser %}">Leer el artículo</a>
+            <a class="font-weight-bold" href="https://academy.horizen.io/privacy/advanced/where-your-privacy-is-compromised/">Leer el artículo</a>
         </p>
     </div>
 </div>

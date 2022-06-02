@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-01-01-what-is-a-blockchain %}">
@@ -55,7 +54,7 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">
+        <a href="{{ site.baseurl }}/technology/advanced/types-of-wallets/">
             <img src="/assets/post_files/technology/beginner/intro/wallets.svg" alt="Portefeuilles" />
         </a>
     </div>
@@ -65,7 +64,7 @@ no_index: true
             Pour recevoir, stocker et envoyer des cryptomonnaies, on utilise des portefeuilles de cryptomonnaies. Dans ce troisième article, nous vous expliquerons le fonctionnement de ces portefeuilles.
         </p>
         <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}">Lire l’article</a>
+            <a class="font-weight-bold" href="{{ site.baseurl }}/technology/advanced/types-of-wallets/">Lire l’article</a>
         </p>
     </div>
 </div>

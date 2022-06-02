@@ -25,7 +25,7 @@ Cuando una criptomoneda opera en una cadena de bloques, la red —un servicio de
 ![Mail protocol in ES](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_M.jpg)
 
 Las direcciones de una cadena de bloques son diferentes a las empleadas por el servicio de correos. La dirección de una, por ejemplo, cadena se ve así: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX.
-Las firmas también funcionan de manera diferente a lo esperado, pero los aspectos clave de las direcciones y firmas no se discutirán en los siguientes artículos de esta sección, así como las [billeteras]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) que crean direcciones y envían transacciones criptomonetarias.
+Las firmas también funcionan de manera diferente a lo esperado, pero los aspectos clave de las direcciones y firmas no se discutirán en los siguientes artículos de esta sección, así como las billeteras que crean direcciones y envían transacciones criptomonetarias.
 
 ### Resumen
 

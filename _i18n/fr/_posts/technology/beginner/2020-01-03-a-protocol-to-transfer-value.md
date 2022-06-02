@@ -7,7 +7,12 @@ permalink: /technology/beginner/a-protocol-to-transfer-value/
 topic: technology
 level: beginner
 chapter: "Qu’est-ce que la Blockchain ?"
-further_reads: [why_bitcoin_lightning_network_is_ingenious, explain_bitcoin_like_im_five, money_as_language]
+further_reads:
+  [
+    why_bitcoin_lightning_network_is_ingenious,
+    explain_bitcoin_like_im_five,
+    money_as_language,
+  ]
 canonical_link: "/fr/technology/advanced/a-protocol-to-transfer-value/"
 ---
 
@@ -17,14 +22,14 @@ Une analogie qui vous aidera peut-être à comprendre ce concept est le fonction
 
 Le courrier est sans permission dans le sens où n'importe qui, qui veut envoyer une lettre à quelqu'un peut trouver une boîte postale près de lui et y déposer la lettre. Il arrivera à destination quelques jours plus tard. Vous n'avez pas besoin de demander la permission de qui que ce soit pour le faire. Le "protocole" pour l'envoi d'une lettre comprend deux choses : vous devez y apposer un timbre d'une valeur suffisante et fournir l'adresse à laquelle vous voulez que la lettre soit livrée de manière "standard" : nom, adresse et pays si vous voulez envoyer la lettre à l'étranger.
 
-Avec une blockchain qui exploite une monnaie digitale, le réseau (← Un service décentralisé de “type postal”)  prend soin de délivrer une transaction (← Une lettre ) au destinataire. Le protocole vous demande d’y ajouter de légers frais de transaction (← Le timbre) et fournit l’information nécessaire de façon standard : votre adresse, l’adresse du destinataire, le montant du transfert et votre signature.
+Avec une blockchain qui exploite une monnaie digitale, le réseau (← Un service décentralisé de “type postal”) prend soin de délivrer une transaction (← Une lettre ) au destinataire. Le protocole vous demande d’y ajouter de légers frais de transaction (← Le timbre) et fournit l’information nécessaire de façon standard : votre adresse, l’adresse du destinataire, le montant du transfert et votre signature.
 
 ![Mail protocol in FR](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_D.jpg)
 ![Mail protocol in FR](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_M.jpg)
 
 Les adresses sur la blockchain sont bien sûr un peu différentes des adresses réelles. Elles ressemblent à ça : 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX. Les signatures sont également un peu différentes des signatures que vous connaissez dans le monde réel. Nous parlerons plus en détail des adresses et des signatures dans les prochains articles de cette section.
 
- Les [portefeuilles ]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}) de cryptomonnaie vous aident à créer une adresse et envoyer des transactions.
+Les [portefeuilles ]({{ site.baseurl }}/technology/advanced/types-of-wallets/) de cryptomonnaie vous aident à créer une adresse et envoyer des transactions.
 
 ## Résumé
 
