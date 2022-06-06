@@ -62,4 +62,4 @@ Dans un premier temps, nous voulons décentraliser la prise de décision concern
 
 Le mécanisme de vote que nous mettons en place est un système de démocratie liquide, où le votant peut choisir de voter directement ou de déléguer son vote à un expert. Pour lutter contre l'apathie des électeurs, nous prévoyons d'encourager la participation au processus de prise de décision par des récompenses financières.
 
-Pour une explication détaillée de notre système de trésorerie à venir, consultez notre article sur ce sujet au [niveau expert]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-01-dao-decentralized-autonomous-organization %}).
+Pour une explication détaillée de notre système de trésorerie à venir, consultez notre article sur ce sujet au niveau expert.

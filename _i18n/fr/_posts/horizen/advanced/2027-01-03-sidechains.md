@@ -24,7 +24,7 @@ _"A sidechain is a blockchain that validates data from other blockchains. […] 
 
 **Français**
 
-_"Une sidechain est une blockchain qui valide les données des autres blockchains. Une sidechain connectée est une sidechain dont les actifs peuvent être importés depuis et vers d'autres chaînes ; ainsi, la sidechain supporte les actifs 2WP"_  A. Back et al. – “Enabling blockchain innovations with pegged sidechains”, 2014
+_"Une sidechain est une blockchain qui valide les données des autres blockchains. Une sidechain connectée est une sidechain dont les actifs peuvent être importés depuis et vers d'autres chaînes ; ainsi, la sidechain supporte les actifs 2WP"_ A. Back et al. – “Enabling blockchain innovations with pegged sidechains”, 2014
 
 En d'autres termes, une sidechain est une blockchain en soi, mais avec la capacité de communiquer et d'interopérer avec une ou plusieurs autres chaînes. Lorsque vous entendez le terme sidechain aujourd'hui, les gens parlent surtout de sidechains connectées, qui vous permettent de transférer des ressources d'une chaîne à l'autre.
 
@@ -65,10 +65,10 @@ De cette façon, il sera possible d'exécuter les sidechains par le biais desque
 
 La construction du modèle de sidechain se compose de deux parties :
 
- 1. Le _protocole de consensus de la sidechain (Sidechain Consensus Protocol)_ — SCP
- 2. Le _protocole de transfert inter-chaînes (Cross Chain Transfer protocol)_ ou 2-way pegged — CCT
+1.  Le *protocole de consensus de la sidechain (Sidechain Consensus Protocol)* — SCP
+2.  Le _protocole de transfert inter-chaînes (Cross Chain Transfer protocol)_ ou 2-way pegged — CCT
 
-Le _protocole de consensus de la sidechain_ régit la façon dont le réseau s'entend sur les nouveaux blocs et donc sur l'historique des transactions. Le protocole de transfert inter-chaînes détermine comment les ressources peuvent être envoyées de la chaîne principale à une sidechain et vice versa. Nous examinerons ces deux protocoles dans notre article sur les [sidechains]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) du niveau expert.
+Le _protocole de consensus de la sidechain_ régit la façon dont le réseau s'entend sur les nouveaux blocs et donc sur l'historique des transactions. Le protocole de transfert inter-chaînes détermine comment les ressources peuvent être envoyées de la chaîne principale à une sidechain et vice versa. Nous examinerons ces deux protocoles dans notre article sur les sidechains du niveau expert.
 
 ![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_D.jpg)
 ![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_M.jpg)
@@ -79,4 +79,4 @@ Les sidechains peuvent être un moyen élégant de surmonter les limites actuell
 
 La capacité de déployer des sidechains améliorera considérablement les possibilités de construire sur les blockchains publiques existantes. L'un des premiers cas d'utilisation d'une sidechain pour le projet Horizen sera probablement la Trésorerie, ce qui permettra à l'organisation de se rapprocher un peu plus d'une organisation autonome décentralisée (DAO).
 
-Nous continuerons cet article sur l'article sur les sidechains dans la [Section Expert]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}). Nous examinerons comment la solution proposée fonctionne sur le plan technique ainsi que le _protocole de consensus de la sidechain (SCP)_ et le _protocole de transfert inter-chaîne (CCT)_.
+Nous continuerons cet article sur l'article sur les sidechains dans la Section Expert. Nous examinerons comment la solution proposée fonctionne sur le plan technique ainsi que le _protocole de consensus de la sidechain (SCP)_ et le _protocole de transfert inter-chaîne (CCT)_.

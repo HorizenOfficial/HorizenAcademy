@@ -19,24 +19,6 @@ no_index: true
     </div>
 </div>
 
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">
-            <img src="/assets/post_files/privacy/advanced/intro/why2.svg" alt="Pourquoi la protection de la vie privée ?" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Pourquoi la protection de la vie privée ?</h5>
-        <p class="mb-1">
-            Tout d'abord, nous examinerons l'argument "Je n'ai rien à cacher", qui est fréquemment utilisé lorsqu'on dit qu'une personne ne devrait pas se soucier de la surveillance gouvernementale si elle n'a "rien à cacher".
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">Lire l'article</a>
-        </p>
-    </div>
-</div>
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">
@@ -50,40 +32,6 @@ no_index: true
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">Lire le chapitre</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">
-            <img src="/assets/post_files/privacy/advanced/intro/tools2.svg" alt="Meilleures pratiques" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Meilleures pratiques</h5>
-        <p class="mb-1">
-            Le troisième chapitre se penche sur deux meilleures pratiques, que tout le monde devrait utiliser : des mots de passe forts et l'authentification à deux facteurs (2-Factor-Authentication) ou 2FA. Ils rendent l'accès à vos comptes beaucoup plus difficile pour un attaquant.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">Lire le chapitre</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-01-tools-to-protect-your-privacy %}">
-            <img src="/assets/post_files/privacy/advanced/intro/best2.svg" alt="Outils pour protéger votre vie privée" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Outils pour protéger votre vie privée</h5>
-        <p class="mb-1">
-            Enfin, nous vous présenterons quelques outils avancés pour protéger votre vie privée en ligne.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-01-tools-to-protect-your-privacy %}">Lire le chapitre</a>
         </p>
     </div>
 </div>

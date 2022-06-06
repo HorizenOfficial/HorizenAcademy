@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">
@@ -66,23 +65,6 @@ no_index: true
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">Lire l'article</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">
-            <img src="/assets/post_files/horizen/advanced/intro/zenchat.svg" alt="ZenChat" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">ZenChat</h5>
-        <p class="mb-1">
-            ZenChat est la première application en dehors de notre cryptomonnaie ZEN, qui fonctionne sur la blockchain Horizen.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">Lire l'article</a>
         </p>
     </div>
 </div>
