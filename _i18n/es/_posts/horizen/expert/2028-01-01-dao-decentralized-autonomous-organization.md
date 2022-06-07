@@ -21,18 +21,17 @@ En este artículo hemos resumido el contenido del artículo antes mencionado, pr
 
 La constitución de una criptomoneda requiere muchas cosas, entre ellas:
 
- - Desarrolladores dispuestos a dedicarle su tiempo al proyecto.
- - Algo de marketing; no solo para hacer de la divisa algo atractivo al usuario potencial, sino también para atraer desarrolladores.
- - Un equipo legal. Ya que hay más entidades regulatorias monitoreando el espacio cripto, un equipo legal se asegurará de que todos los aspectos del proyecto cumplan con regulaciones presentes y futuras.
-
+- Desarrolladores dispuestos a dedicarle su tiempo al proyecto.
+- Algo de marketing; no solo para hacer de la divisa algo atractivo al usuario potencial, sino también para atraer desarrolladores.
+- Un equipo legal. Ya que hay más entidades regulatorias monitoreando el espacio cripto, un equipo legal se asegurará de que todos los aspectos del proyecto cumplan con regulaciones presentes y futuras.
 
 Podríamos agregar muchas más cosas a la lista, pero la mayoría tendría una cosa en común; el requisito de algún tipo de fondos.
 
 La obtención de fondos debe ser sostenible a la larga. El documento identifica tres fuentes principales de fondos:
 
- - Organizaciones benéficas y donaciones
- - Una oferta inicial de monedas (initial coin offering) o ICO
- - Recompensa de fundadores (parte de la recompensa del minero)
+- Organizaciones benéficas y donaciones
+- Una oferta inicial de monedas (initial coin offering) o ICO
+- Recompensa de fundadores (parte de la recompensa del minero)
 
 Hay quienes agregan las tarifas de transacción a esta lista, pero el monto sumado de estas transacciones más allá de proyectos a gran escala como Bitcoin o Ethereum no suele ser suficiente para el desarrollo de un proyecto.
 
@@ -73,10 +72,10 @@ El voto se puede delegar a quien sea; ya sea al hermano del usuario, que por coi
 
 Ya que nos estamos acercando a la descripción del proceso de votación en sí, es necesario que introduzcamos a los participantes:
 
- - _Líderes de proyecto {O}_ Son los usuarios que han presentado una propuesta. Cualquier puede presentar una propuesta tras pagar una pequeña transacción para evitar el spam.
- - _Comité de votación {C}_ Son los participantes dispuestos a ayudar con el proceso de votación. Son responsables de la generación de la llave pública y de anunciar el resultado del voto una vez concluida la época de votaciones.
- - _Votantes {V}_ Guardan una cierta cantidad de participación para poder involucrarse en el proceso. Su voto se pesa conforme a la cantidad guardada.
- - _Expertos {E}_ Son un tipo especial de votantes con experiencia en algún campo particular. Cualquiera puede registrarse como experto.
+- _Líderes de proyecto {O}_ Son los usuarios que han presentado una propuesta. Cualquier puede presentar una propuesta tras pagar una pequeña transacción para evitar el spam.
+- _Comité de votación {C}_ Son los participantes dispuestos a ayudar con el proceso de votación. Son responsables de la generación de la llave pública y de anunciar el resultado del voto una vez concluida la época de votaciones.
+- _Votantes {V}_ Guardan una cierta cantidad de participación para poder involucrarse en el proceso. Su voto se pesa conforme a la cantidad guardada.
+- _Expertos {E}_ Son un tipo especial de votantes con experiencia en algún campo particular. Cualquiera puede registrarse como experto.
 
 Cualquiera puede hacer una propuesta para recibir fondos y convertirse en líder de proyecto, y cualquiera que tenga una participación en la red puede registrarse como votante o experto. Algunos de los votantes recibirán aleatoriamente una invitación para convertirse en miembros del comité de votación.
 
@@ -108,7 +107,7 @@ Si ya se encuentra familiarizado con el concepto de suma de vectores le será f�
 ![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_D.jpg)
 ![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_M.jpg)
 
-Más específicamente, la calificación de cada propuesta se calcula tomando el número de votos afirmativos y restándole el número negativos. La diferencia resultante tiene que abarcar por lo menos el 10% de todos los votos emitidos para que la propuesta sea considerada para la repartición de fondos. Si se emiten 100 votos (sin abstenciones) debe haber por lo menos 55 votos a favor para alcanzar esta marca. Las propuestas con las calificaciones más altas recibirán fondos hasta que los fondos mensuales de la tesorería se agoten. 
+Más específicamente, la calificación de cada propuesta se calcula tomando el número de votos afirmativos y restándole el número negativos. La diferencia resultante tiene que abarcar por lo menos el 10% de todos los votos emitidos para que la propuesta sea considerada para la repartición de fondos. Si se emiten 100 votos (sin abstenciones) debe haber por lo menos 55 votos a favor para alcanzar esta marca. Las propuestas con las calificaciones más altas recibirán fondos hasta que los fondos mensuales de la tesorería se agoten.
 
 ![score](/assets/post_files/horizen/expert/dao/ES_score_D.jpg)
 ![score](/assets/post_files/horizen/expert/dao/ES_score_M.jpg)
@@ -119,7 +118,7 @@ Durante la **etapa de ejecución** el comité firma en conjunto las transaccione
 
 ### Recompensas
 
-La última función de la que queremos hablar es la recompensa que reciben los votantes, expertos y miembros del comité por participar en la gobernanza del protocolo. 
+La última función de la que queremos hablar es la recompensa que reciben los votantes, expertos y miembros del comité por participar en la gobernanza del protocolo.
 
 Existe un fenómeno llamado ignorancia racional. La ignorancia racional es el acto de abstenerse de adquirir un conocimiento dado porque el costo de educarse para obtenerlo superaría el beneficio que dicho conocimiento proporcionaría.
 
@@ -129,7 +128,7 @@ Para atacar la cuestión de la apatía de los votantes, quienes participan en el
 
 ### El plan de implementación del sistema de votaciones de Horizen
 
-Planeamos integrar el sistema de tesorería en una cadena lateral. Las [cadenas laterales (sidechains)]({{ site.baseurl }}{% post_url /horizen/expert/2028-01-03-sidechains %}) son una de las mejoras al protocolo de Horizen que nos encontramos desarrollando actualmente. La implementación de las cadenas laterales les permitirá a diferentes dApps ejecutarse sobre su propia cadena lateral con garantías de seguridad separadas. Incluso si algo sale mal en la cadena lateral, la cadena principal no se verá afectada.
+Planeamos integrar el sistema de tesorería en una cadena lateral. Las cadenas laterales (sidechains) son una de las mejoras al protocolo de Horizen que nos encontramos desarrollando actualmente. La implementación de las cadenas laterales les permitirá a diferentes dApps ejecutarse sobre su propia cadena lateral con garantías de seguridad separadas. Incluso si algo sale mal en la cadena lateral, la cadena principal no se verá afectada.
 
 La interfaz y experiencia del usuario son factores muy importantes en el caso de un sistema así. Tener el mejor sistema de tesorería no ayuda si la participación resulta difícil. Un reto será el idear un centro de gobernanza estructurado e informativo. Nos referimos a un lugar de fácil acceso, quizás un sitio web o una función embebida en una billetera donde puedan llevarse a cabo los registros de propuestas, votantes y expertos y al comité de votación. Formalmente, el registro es una transacción, por lo que resultaría práctico implementar la función en una billetera, facilitándoles así a los participantes el formar parte de la gobernanza de la cadena.
 

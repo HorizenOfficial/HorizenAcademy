@@ -117,8 +117,6 @@ Así, un usuario podría utilizar “MiessellSiBoytemuam_fb” para ingresar a s
 
 Un mejor método es el de utilizar un administrador de contraseñas capaz de generar y almacenar contraseñas largas y difíciles de adivinar. En este caso, el usuario tendría que recordar solo la contraseña segura de administrador para obtener acceso a cualquiera de sus cuentas personales.
 
-Hablamos a detalle sobre los administradores de contraseñas en un [artículo del nivel principiante]({{ site.baseurl }}{% post_url /privacy/beginner/2023-04-06-password-manager %}).
-
 ### Resumen - Una Contraseña Segura
 
 Utilizar contraseñas seguras es el primer paso que el usuario debe tomar para proteger su información, mientras que el segundo es utilizar una contraseña diferente para cada una de sus cuentas.

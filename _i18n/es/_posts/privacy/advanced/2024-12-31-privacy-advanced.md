@@ -21,23 +21,6 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">
-            <img src="/assets/post_files/privacy/advanced/intro/why2.svg" alt="¿Por qué la privacidad?" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">¿Por qué la privacidad?</h5>
-        <p class="mb-1">
-            Examinaremos primero el argumento “No tengo nada que ocultar” que a menudo se emplea para dar a entender que fenómenos como la vigilancia gubernamental no deben preocupar al usuario si este “no tiene nada que ocultar”.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-01-01-the-nothing-to-hide-argument %}">Leer el artículo</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">
             <img src="/assets/post_files/privacy/advanced/intro/where2.svg" alt="¿Cuándo se compromete la privacidad del usuario?" />
         </a>
@@ -49,40 +32,6 @@ no_index: true
         </p>
         <p class="mb-0">
             <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">Leer el capítulo</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">
-            <img src="/assets/post_files/privacy/advanced/intro/tools2.svg" alt="Mejores prácticas" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Mejores prácticas</h5>
-        <p class="mb-1">
-            El tercer capítulo presenta dos mejores prácticas del ámbito de la seguridad: utilizar contraseñas robustas e implementar autenticación de dos factores (A2F). Estas herramientas hacen mucho más difícil que un atacante logre obtener acceso a las cuentas del usuario.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-03-01-best-practices %}">Leer el capítulo</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-01-tools-to-protect-your-privacy %}">
-            <img src="/assets/post_files/privacy/advanced/intro/best2.svg" alt="Herramientas para proteger la privacidad - Avanzado" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">Herramientas para proteger la privacidad - Avanzado</h5>
-        <p class="mb-1">
-            Por último, se dan a conocer al usuario varias herramientas avanzadas para aumentar su privacidad en línea.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-04-01-tools-to-protect-your-privacy %}">Leer el capítulo</a>
         </p>
     </div>
 </div>
