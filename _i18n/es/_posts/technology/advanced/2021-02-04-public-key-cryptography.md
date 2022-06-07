@@ -7,7 +7,6 @@ permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
 chapter: "¿Cómo funciona una cadena de bloques?"
-further_reads: [how_to_create_a_bitcoin_wallet_address_from_a_private_key, what_is_the_math_behind_elliptic_curve_cryptography, elliptic_curve_cryptography_a_gentle_introduction]
 ---
 
 Es necesario que el usuario tenga alguna manera de representar su identidad para poder reclamar propiedad en la cadena de bloques, pues no hay propiedad sin representación del propietario. La criptografía de llave pública hace posible el presentar identidad en la cadena. Junto con las funciones hash discutidas en el último artículo, esta es la segunda piedra angular de la tecnología blockchain. Mientras que las funciones hash se utilizan para verificar la autenticidad e integridad de la información, la criptografía de llave pública se utiliza para verificar propiedad dentro de la cadena de bloques.
@@ -89,7 +88,7 @@ $$
 y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
 $$
 
-Ahora, el punto base se suma a sí mismo tantas veces como lo indique la llave privada. Si el número de la llave privada del usuario fuera 3, se llevaría a cabo la operación que acaba de demostrarse. Si sumamos el valor punto base a ese mismo valor tantas veces como indique la llave privada (* P) se obtiene la llave pública.
+Ahora, el punto base se suma a sí mismo tantas veces como lo indique la llave privada. Si el número de la llave privada del usuario fuera 3, se llevaría a cabo la operación que acaba de demostrarse. Si sumamos el valor punto base a ese mismo valor tantas veces como indique la llave privada (\* P) se obtiene la llave pública.
 
 ![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_6.jpg)
 
@@ -123,3 +122,20 @@ La llave privada se utiliza más bien para firmar transacciones. El usuario pued
 Al crear una billetera el software generará primero un número aleatorio extenso que servirá de llave privada al usuario. El punto base P en la curva elíptica se multiplica por el valor de la llave privada para obtener la llave pública del usuario; un punto en la curva. La llave pública se pasa por una función hash y se retiran los caracteres 1, I, 0 y O para reducir errores de lectura. Es necesario también que el usuario proporcione su firma digital para poder gastar sus fondos.
 
 Continúe al siguiente artículo para aprender sobre las redes par a par, la infraestructura que emplean la mayoría de las cadenas de bloques públicas.
+
+## Explicación Simple a Continuación - ¿Qué es la criptografía de llave pública?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
+        <td>
+            Las cadenas de bloques utilizan criptografía de llave pública para identificar al verdadero dueño de una cantidad de dinero. Cada usuario crea dos llaves cuando se une a una red, una llave pública y una privada.
+        </td>
+    </tr>
+</table>
+
+La llave pública es como la dirección de correo electrónico que el usuario utiliza para recibir dinero. Si un usuario quiere enviarle dinero a otro, necesita conocer su llave pública. Las llaves públicas cumplen la función de permitir el envío de dinero.
+
+Al igual que con la contraseña de un correo electrónico, la cual permite que el usuario inicie sesión a su cuenta y envíe correos desde ella, la llave privada le permite acceso a su dinero y le da la capacidad de gastarlo.
+
+Es importante proteger a toda costa una llave privada, pues si cae en manos de cualquier otra persona, esa persona tendría libre acceso al dinero de la cuenta correspondiente.

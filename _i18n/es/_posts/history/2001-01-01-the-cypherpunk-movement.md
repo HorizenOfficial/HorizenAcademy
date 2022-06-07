@@ -6,27 +6,26 @@ description: "Los Cypherpunks son un grupo de científicos informáticos que des
 permalink: /history/the-cypherpunk-movement/
 topic: history
 chapter: "De Cypherpunks a Horizen"
-further_reads: [bitcoin_and_the_rise_of_the_cypherpunks, a_cypherpunk_manifesto]
 ---
 
 En nuestro primer artículo, nos remontaremos al pasado para entender los orígenes de la tecnología blockchain y las criptomonedas, lo cual nos lleva a los orígenes del movimiento Cypherpunk alrededor de 1970.
 
 ### Criptografía para el pueblo
 
-Antes de los años 70, la encriptación se utilizaba principalmente con motivos militares. La gente de la época vivía aún en un mundo analógico. Pocos tenían computadoras y menos aún  podían imaginar una tecnología que conectaría a casi todos los seres humanos del planeta; el internet.
+Antes de los años 70, la encriptación se utilizaba principalmente con motivos militares. La gente de la época vivía aún en un mundo analógico. Pocos tenían computadoras y menos aún podían imaginar una tecnología que conectaría a casi todos los seres humanos del planeta; el internet.
 
 Fueron dos publicaciones las que le introdujeron la criptografía al mundo. La primera fue la de Data Encryption Standard, presentada por el gobierno de Estados Unidos; la segunda, el libro blanco titulado ["New Directions in Cryptography,"](https://ee.stanford.edu/~hellman/publications/24.pdf) de los doctores Whitfield Diffie y Martin Hellman, publicado en 1976.
 
 ![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
 ![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
 
-El Dr. David Chaum empezó a escribir sobre temas como el dinero digital anónimo y los sistemas de reputación seudónima hacia 1980, cuando los describió en ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://www.chaum.com/publications/Security_Wthout_Identification.html). Este fue el primer paso hacia las divisas digitales que tenemos en la actualidad.
+El Dr. David Chaum empezó a escribir sobre temas como el dinero digital anónimo y los sistemas de reputación seudónima hacia 1980, cuando los describió en ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://chaum.com/security-without-identification/). Este fue el primer paso hacia las divisas digitales que tenemos en la actualidad.
 
 ### Los Cypherpunks
 
 No fue hasta 1992 cuando un grupo de criptógrafos en San Francisco comenzó a reunirse frecuentemente para discutir su trabajo e ideas afines. Fueron ellos quienes cimentaron las bases de años de investigación criptográfica por venir. Además de sus reuniones recurrentes, empezaron también la lista de correo Cypherpunk, en la que discutieron ideas varias, incluyendo las que detonaron el nacimiento de Bitcoin. A finales de 1992, Eric Hughes, uno de los primeros Cypherpunks; escribió ["A Cypherpunk’s Manifesto"](https://www.activism.net/cypherpunk/manifesto.html) exponiendo la visión e ideales del movimiento.
 
-_Nota: Lo exhortamos a leer el manifiesto, pues su contenido y postulados continúan siendo extremadamente relevantes hoy en día. La lectura toma solo unos pocos minutos y captura la admirable visión que tuvieron los primeros cypherpunks en una época en la que muchos no podían ni concebir aún lo que era computadora._ 
+_Nota: Lo exhortamos a leer el manifiesto, pues su contenido y postulados continúan siendo extremadamente relevantes hoy en día. La lectura toma solo unos pocos minutos y captura la admirable visión que tuvieron los primeros cypherpunks en una época en la que muchos no podían ni concebir aún lo que era computadora._
 
 ### El Manifiesto de los Cypherpunks
 
@@ -52,7 +51,7 @@ _“Nosotros debemos defender nuestra propia privacidad, si es que esperamos ten
 
 _“Nosotros los cypherpunks estamos dedicados a construir sistemas anónimos. Estamos defendiendo nuestra privacidad con criptografía, sistemas anónimos de correo, firmas digitales y dinero electrónico.”_
 
-### Dinero electrónico 
+### Dinero electrónico
 
 Puede que este sea su primer encuentro con el movimiento cypherpunk, pero ciertamente se ha beneficiado ya de los esfuerzos de sus miembros, algunos de ellos creadores de Tor, BitTorrent, SSL y la encriptación PGP. Así pues, no resulta sorprendente que muchos de los conceptos e ideas cypherpunk gestionaron la creación de las criptomonedas.
 

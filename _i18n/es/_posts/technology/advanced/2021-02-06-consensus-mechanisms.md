@@ -7,7 +7,6 @@ permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
 chapter: "¿Cómo funciona una cadena de bloques?"
-further_reads: [how_does_distributed_consensus_work]
 ---
 
 El mecanismo de consenso de una cadena de bloques le permite ponerse de acuerdo sobre una versión única del historial. En el caso de una cadena criptomonetaria, el historial es el orden en el que sucedieron las transacciones.
@@ -92,3 +91,18 @@ Retomaremos esta discusión en la conclusión de nuestro artículo sobre el mina
 ### Resumen
 
 En el método PoW, los mineros votan por una versión del historial utilizando el peso del poder computacional que controlan. En el método PoS, los validadores votan por una versión del historial utilizando el peso de los fondos o participación que tienen en la cadena de bloques misma. Mientras que el método PoW ha demostrado ser seguro por más de una década, la seguridad de las cadenas PoS aún está por verse. En nuestro próximo artículo, finalmente se explicará la naturaleza del “acertijo computacionalmente costoso” del que hemos hablado vagamente hasta ahora.
+
+## Explicación Simple a Continuación - ¿Qué es el consenso?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
+        <td>
+            La <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-01-what-is-a-blockchain %}">cadena de bloques</a> registra todas las transferencias de dinero. Si el usuario cuenta con solo un ZEN y crea dos transacciones simultáneas gastando la misma moneda, es deber de la red determinar cuál de las dos sucedió primero y por ende la válida.
+        </td>
+    </tr>
+</table>
+
+El mecanismo de consenso se asegura de que la red entera determine cuál es el orden correcto de las transacciones. Cada varios minutos, cuando un nuevo bloque se agrega a la cadena de bloques, la red se pone de acuerdo respecto al orden de las transacciones más recientes. De esta manera, nadie puede engañar al sistema y gastar más de lo que posee.
+
+Hay varias maneras de lograr consenso en una red de par a par. En la cadena de bloques de Horizen, los usuarios votan por medio de su poder computacional para determinar el orden de las transacciones. Si la computadora de un usuario es el doble de rápida que la de otro, ese usuario tiene una oportunidad dos veces mayor de decidir el orden.

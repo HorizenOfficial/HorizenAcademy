@@ -24,7 +24,7 @@ Hemos encontrado una visualización simple pero efectiva de un sistema distribui
 
 ### Variaciones
 
-Las variaciones de la mayoría de las redes distribuidas se relacionan a la estructura de la información mantenida y al mecanismo de transmisión o propagación de mensajes que los nodos emplean para comunicarse e intercambiar datos. Los dos protocolos de propagación más comunes son los de inundación y difusión. 
+Las variaciones de la mayoría de las redes distribuidas se relacionan a la estructura de la información mantenida y al mecanismo de transmisión o propagación de mensajes que los nodos emplean para comunicarse e intercambiar datos. Los dos protocolos de propagación más comunes son los de inundación y difusión.
 
 En el caso de la inundación, los nodos propagan un mensaje con una demora de transmisión constante o determinística. La difusión es una versión refinada de la inundación. En las redes que emplean difusión, como las de Bitcoin y muchas otras criptomonedas, los nodos propagan mensajes con demoras de transmisión aleatorias. Esto hace más difícil que un tercero determine el origen de un mensaje y en consecuencia identifique la ubicación geográfica de los nodos y posiblemente hasta al dueño.
 
@@ -46,3 +46,14 @@ Consideramos que la Web 3.0 se beneficiará enormemente del surgimiento de las r
 Las redes par a par ofrecen robustez y resistencia a las fallas a cambio de cierto grado de eficiencia. Cada nodo hace las mismas tareas dentro de la red y funciona al mismo tiempo como cliente y servidor. Si un par se desconecta, basta con que el usuario se conecte a otro. Si un usuario ejecuta un nodo pero se desconecta de la red durante un tiempo, es necesario que vuelva a conectarse en algún momento para que sus pares le proporcionen toda la información faltante hasta ponerlo al corriente nuevamente.
 
 En los dos artículos siguientes, presentaremos los dos mecanismos más seguros utilizados para lograr un consenso sobre el historial de eventos de una red distribuida. Explicaremos en qué consisten las pruebas de trabajo y participación (proof of work y proof of stake), y luego veremos a detalle el proceso de minado, incluyendo el problema computacional que deben resolver los mineros.
+
+## Explicación Simple a Continuación - ¿Qué es una red de par a par?
+
+En una red par a par (peer to peer), cada participante está conectado con todos los demás. Comparada con un sitio web regular, esto la hace más robusta.
+
+Hay computadoras especiales en el internet que almacenan la mayoría de los sitios web. A estas se les conoce como servidores. Para acceder a un sitio web, es necesario conectarse a su servidor. Si la computadora del servidor resulta tener un problema, el sitio web no funcionará.
+
+En una red par a par, la conexión también falla si el par de un usuario llega a desconectarse. Sin embargo, solo es necesario que este se conecte a otro par en la red para que todo vuelva a funcionar regularmente. Esto hace robustas a las cadenas de bloques y criptomonedas.
+
+![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
+![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)

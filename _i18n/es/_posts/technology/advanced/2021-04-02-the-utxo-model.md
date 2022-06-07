@@ -6,6 +6,7 @@ description: "La mayoría de las cadenas de bloques emplean el modelo UTXO (Unsp
 permalink: /technology/advanced/the-utxo-model/
 topic: technology
 level: advanced
+no_alternate: true
 chapter: "Transacciones"
 ---
 
