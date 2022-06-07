@@ -7,12 +7,11 @@ permalink: /technology/advanced/public-key-cryptography/
 topic: technology
 level: advanced
 chapter: "Comment fonctionne une Blockchain ?"
-further_reads: [how_to_create_a_bitcoin_wallet_address_from_a_private_key, what_is_the_math_behind_elliptic_curve_cryptography, elliptic_curve_cryptography_a_gentle_introduction]
 ---
 
 Puisque le but de la conception originale de la blockchain était de permettre une nouvelle forme d'argent équitable, ce serait formidable de pouvoir réellement posséder de l'argent dans ce système, n'est-ce pas ? Il doit y avoir un concept d'identité pour avoir la propriété sur la blockchain ; vous ne pouvez pas avoir la propriété s'il n'y a pas de représentation du propriétaire.
 
-La _cryptographie à clé publique_ permet de représenter l'identité sur la blockchain. C'est la deuxième pierre angulaire de la technologie de la blockchain en plus des [fonctions de hachage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %})  dont nous avons parlé dans le dernier article. Les fonctions de hachage vérifient l’authenticité et l’intégrité de la donnée pendant que la cryptographie à clé publique vérifie la propriété sur la blockchain.
+La _cryptographie à clé publique_ permet de représenter l'identité sur la blockchain. C'est la deuxième pierre angulaire de la technologie de la blockchain en plus des [fonctions de hachage](https://academy.horizen.io/fr/technology/advanced/hash-functions/) dont nous avons parlé dans le dernier article. Les fonctions de hachage vérifient l’authenticité et l’intégrité de la donnée pendant que la cryptographie à clé publique vérifie la propriété sur la blockchain.
 
 ![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_how_it_works_D.jpg)
 ![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_how_it_works_M.jpg)
@@ -87,7 +86,7 @@ $$
 y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
 $$
 
-Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée * P), vous obtenez votre clé publique.
+Ce point de base est maintenant ajouté à lui-même autant de fois que votre clé privée le dicte. Si votre clé privée était le chiffre "3", alors vous feriez le calcul que nous venons de vous montrer. Si vous ajoutez le point de base à lui-même aussi souvent que votre clé privée le dit (clé privée \* P), vous obtenez votre clé publique.
 
 ![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_6_D.jpg)
 ![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/FR_ecc_6_M.jpg)
@@ -109,7 +108,7 @@ Lorsqu'on examine le fonctionnement d'un ordinateur au niveau matériel, on cons
 
 Base58Check est un moyen de convertir les bits en caractères alphanumériques, mais il exclut les quatre caractères 0, O, I et l. Base58Check supprime ces caractères de votre adresse afin de réduire les erreurs lors de la copie manuelle des adresses et de leur correction.
 
-Vous pouvez générer autant d'adresses que vous le souhaitez à partir d'une seule clé privée, et la plupart des portefeuilles le font aujourd'hui pour vous. Il s'agit d'une fonction pour améliorer votre vie privée, car il est plus difficile pour une tierce partie de lier tous vos paiements ensemble. Nous parlerons de ce concept et de la façon dont il fonctionne avec les adresses de changement dans le chapitre suivant sur [la vie privée sur la Blockchain]({{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}).
+Vous pouvez générer autant d'adresses que vous le souhaitez à partir d'une seule clé privée, et la plupart des portefeuilles le font aujourd'hui pour vous. Il s'agit d'une fonction pour améliorer votre vie privée, car il est plus difficile pour une tierce partie de lier tous vos paiements ensemble.
 
 ### Signature numérique
 
@@ -121,4 +120,21 @@ Votre clé privée est utilisée pour la signature des transactions. Vous ne pou
 
 Lorsque vous configurez un portefeuille, le logiciel génère d'abord un grand nombre aléatoire qui est votre clé privée. Le point de base P de la courbe elliptique est multiplié par votre clé privée afin d’obtenir votre clé publique, un point sur la courbe. Votre clé publique est alors hashée et supprime les caractères I, l, 0 et O pour améliorer la lisibilité. Vous devez fournir une signature numérique que vous ne pouvez produire que pour dépenser des fonds.
 
-Consultez notre prochain article pour en savoir plus sur le réseau [Peer-to-Peer]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}) : l'infrastructure sur laquelle la plupart des blockchains publiques sont construites.
+Consultez notre prochain article pour en savoir plus sur le réseau [Peer-to-Peer](https://academy.horizen.io/fr/technology/advanced/a-peer-to-peer-p2p-network/) : l'infrastructure sur laquelle la plupart des blockchains publiques sont construites.
+
+## Explication Simple Ci-dessous - Qu'est-ce que la cryptographie à clé publique ?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
+        <td>
+            Les blockchains utilisent la cryptographie à clé publique pour identifier le propriétaire légitime de leur argent. Chaque utilisateur crée deux clés lorsqu'il rejoint le réseau : une clé publique et une clé privée.
+        </td>
+    </tr>
+</table>
+
+La clé publique est comme une adresse e-mail que quelqu'un utilise pour recevoir de l'argent. Si un ami veut vous envoyer de la cryptomonnaie, vous lui montrerez votre clé publique. Votre ami utilise votre clé publique pour vous envoyer de l'argent.
+
+La clé privée est comme le mot de passe de votre compte email. Elle permet d’accéder à votre argent et de le dépenser, tout comme le mot de passe d’un compte email permet à quiconque le connaissant d’accéder à ce compte.
+
+Il est important de protéger vos clés privées de tout le monde. Si des personnes mettent la main sur vos clés privées, elles peuvent voler votre argent.

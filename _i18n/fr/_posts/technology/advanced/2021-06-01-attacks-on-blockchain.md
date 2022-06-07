@@ -26,11 +26,10 @@ Vous pourriez envoyer des messagers à cheval, mais que faire si l'un d'eux est 
 
 La technologie Blockchain prétend avoir résolu ce problème, bien que cela n’ait pas aidé l’armée Byzantine.
 
-
 ![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_byz_1_D.jpg)
 ![Byzantine](/assets/post_files/technology/advanced/6.0-attacks-on-blockchain/FR_byz_1_M.jpg)
 
-Le Général maintenant un registre des événements qui est toujours synchronisé avec les registres de l'autre Général sans qu'une partie centrale ne soit responsable de la coordination. Chaque fois qu'un bloc est miné, tous les participants s'entendent sur l'ordre des événements des deux dernières minutes. Pour en revenir au problème de notre général, ils ont maintenant un moyen de savoir s'ils vont tous attaquer, ou s'ils doivent battre en retraite collectivement. Maintenant que nous avons parlé du problème général qu'un [mécanisme de consensus]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}) vise à résoudre, examinons quelques scénarios d'attaque simples et intuitifs et comment nous les abordons.
+Le Général maintenant un registre des événements qui est toujours synchronisé avec les registres de l'autre Général sans qu'une partie centrale ne soit responsable de la coordination. Chaque fois qu'un bloc est miné, tous les participants s'entendent sur l'ordre des événements des deux dernières minutes. Pour en revenir au problème de notre général, ils ont maintenant un moyen de savoir s'ils vont tous attaquer, ou s'ils doivent battre en retraite collectivement. Maintenant que nous avons parlé du problème général qu'un [mécanisme de consensus](https://academy.horizen.io/fr/technology/advanced/consensus-mechanisms/) vise à résoudre, examinons quelques scénarios d'attaque simples et intuitifs et comment nous les abordons.
 
 ### Attaque DDoS
 
@@ -72,7 +71,7 @@ Une fois que l'attaquant a reçu le bien ou une autre devise achetée avec ses c
 
 C'est ce qui est arrivé à de nombreuses petites blockchains dans le passé. En fait, Horizen a souffert d'une attaque 51% début juin 2018. Nous avons immédiatement commencé à travailler sur une solution pour atténuer le risque d'une attaque de 51% sur des blockchains plus petites qui ne sont pas sécurisées par autant de puissance de calcul que par exemple la blockchain Bitcoin.
 
-Nous avons trouvé [une solution](https://www.horizen.global/assets/files/FR_A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) qui pénalise les soumissions en bloc retardées. Il n'y a aucune raison légitime pour un mineur de diffuser plusieurs blocs à la fois sur le réseau. Notre mécanisme de protection rend ces attaques très coûteuses. Si coûteux qu'il n'est pas rentable d'effectuer une telle attaque sur notre réseau. Beaucoup d'autres blockchains cherchent maintenant à mettre en œuvre un mécanisme de protection similaire avec leur protocole.
+Nous avons trouvé [une solution](https://www.horizen.io/assets/files/FR_A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) qui pénalise les soumissions en bloc retardées. Il n'y a aucune raison légitime pour un mineur de diffuser plusieurs blocs à la fois sur le réseau. Notre mécanisme de protection rend ces attaques très coûteuses. Si coûteux qu'il n'est pas rentable d'effectuer une telle attaque sur notre réseau. Beaucoup d'autres blockchains cherchent maintenant à mettre en œuvre un mécanisme de protection similaire avec leur protocole.
 
 ### Résumé
 
