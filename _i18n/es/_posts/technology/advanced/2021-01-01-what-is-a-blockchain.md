@@ -19,12 +19,9 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">La cadena como estructura de datos</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}"><h5 class="intro-article-title">La cadena como estructura de datos</h5></a>
         <p class="mb-1">
             Primero, la perspectiva de un experto computacional sobre la cadena de bloques como una estructura de datos.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -36,12 +33,9 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">La cadena como protocolo para transferir valor</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}"><h5 class="intro-article-title">La cadena como protocolo para transferir valor</h5></a>
         <p class="mb-1">
             Un acercamiento más filosófico a la cadena de bloques. Se revisarán las implicaciones del uso de la tecnología blockchain para transferir valor.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -53,12 +47,9 @@ En el nivel avanzado nos acercaremos a la cadena de bloques desde tres perspecti
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Ejecución garantizada por medio de contratos inteligentes</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}"><h5 class="intro-article-title">Ejecución garantizada por medio de contratos inteligentes</h5></a>
         <p class="mb-1">
             Discutiremos por último los llamados contratos inteligentes, una tecnología hecha posible por las cadenas de bloques. Un contrato inteligente es un tipo de contrato digital que se ejecuta de manera garantizada. Si ya ha escuchado hablar del dinero programable, aprenderá ahora sobre la tecnología que permite dicha programabilidad.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">Leer el artículo</a>
         </p>
     </div>
 </div>

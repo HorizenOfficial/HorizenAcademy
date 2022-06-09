@@ -19,12 +19,11 @@ Vous devriez avoir une bonne compréhension de la blockchain si vous avez lu nos
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
         <h5 class="intro-article-title">Le modèle UTXO</h5>
+        </a>
         <p class="mb-1">
             La plupart des blockchains utilisent le modèle UTXO (Unspent Transaction Output) pour suivre les fonds d’un utilisateur. Nous vous montrons ici comment cela fonctionne.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -36,12 +35,11 @@ Vous devriez avoir une bonne compréhension de la blockchain si vous avez lu nos
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
         <h5 class="intro-article-title">L’explorateur de blocs, la suite</h5>
+        </a>
         <p class="mb-1">
             Un explorateur de bloc est un outil qui vous laisse rechercher des données sur une blockchain. Ici, nous regardons quel type d’information vous trouverez.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -53,12 +51,11 @@ Vous devriez avoir une bonne compréhension de la blockchain si vous avez lu nos
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">
         <h5 class="intro-article-title">Les Atomic Swaps</h5>
+        </a>
         <p class="mb-1">
             Pour finir, nous souhaitons vous montrer un type spécial de transaction. Un Atomic Swap vous permet d’échanger deux différents types de cryptomonnaies sans avoir besoin d’une plateforme d’échange.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Lire l’article</a>
         </p>
     </div>
 </div>

@@ -61,7 +61,7 @@ We dedicated the third chapter to [cryptocurrency wallets ]({{ site.baseurl }}{%
 
 ### Transactions
 
-In the fourth chapter, we talked about transactions. With the first article, we introduced you to the [UTXO (Unspent Transaction Output) Model]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}). It is the accounting method that is used in most blockchains. The blockchain does not maintain a balance for every address. Instead, your wallet goes through the transaction history on the blockchain and takes all the incoming transactions that you haven't spent yet - your UTXOs - and adds them together in order to generate your available balance.
+In the fourth chapter, we talked about transactions. With the first article, we introduced you to the UTXO (Unspent Transaction Output) Model. It is the accounting method that is used in most blockchains. The blockchain does not maintain a balance for every address. Instead, your wallet goes through the transaction history on the blockchain and takes all the incoming transactions that you haven't spent yet - your UTXOs - and adds them together in order to generate your available balance.
 
 ![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_D.jpg)
 ![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_M.jpg)

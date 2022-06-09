@@ -26,12 +26,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Lorsque votre vie privée est compromise</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}"><h5 class="intro-article-title">Lorsque votre vie privée est compromise</h5></a>
         <p class="mb-1">
-            Ensuite, nous examinerons où et comment votre vie privée est compromise sur les différents appareils et services que vous utilisez. La plupart des gens utilisent leur téléphone et leur ordinateur plusieurs heures par jour. La quantité de données qu'une personne produit en une seule journée est immense. Grâce à une analyse sophistiquée des données, votre comportement numérique permet de tirer de puissantes conclusions sur votre vie.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">Lire le chapitre</a>
+            Nous examinerons où et comment votre vie privée est compromise sur les différents appareils et services que vous utilisez. La plupart des gens utilisent leur téléphone et leur ordinateur plusieurs heures par jour. La quantité de données qu'une personne produit en une seule journée est immense. Grâce à une analyse sophistiquée des données, votre comportement numérique permet de tirer de puissantes conclusions sur votre vie.
         </p>
     </div>
 </div>

@@ -26,12 +26,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">¿Cuándo se compromete la privacidad del usuario?</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}"><h5 class="intro-article-title">¿Cuándo se compromete la privacidad del usuario?</h5></a>
         <p class="mb-1">
-            Después, veremos dónde y cómo es que se ve comprometida la privacidad del usuario en los diferentes dispositivos y servicios que utiliza. Mucha gente utiliza su computadora durante una buena parte del día, y la cantidad de información generada es inmensa. A través del análisis de datos sofisticado, el comportamiento digital del usuario les permite a terceros llegar a conclusiones importantes sobre su vida privada.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">Leer el capítulo</a>
+            Veremos dónde y cómo es que se ve comprometida la privacidad del usuario en los diferentes dispositivos y servicios que utiliza. Mucha gente utiliza su computadora durante una buena parte del día, y la cantidad de información generada es inmensa. A través del análisis de datos sofisticado, el comportamiento digital del usuario les permite a terceros llegar a conclusiones importantes sobre su vida privada.
         </p>
     </div>
 </div>

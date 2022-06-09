@@ -19,12 +19,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Los elementos de una cadena de bloques</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}"><h5 class="intro-article-title">Los elementos de una cadena de bloques</h5></a>
         <p class="mb-1">
             En este primer artículo se presentarán los diversos elementos que hacen funcionar a la cadena de bloques.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -36,12 +33,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Funciones hash</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}"><h5 class="intro-article-title">Funciones hash</h5></a>
         <p class="mb-1">
             Estas funciones son una parte importante de toda cadena de bloques, pues su función es verificar la integridad de los datos que contiene.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -53,12 +47,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Criptografía de llave pública</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}"><h5 class="intro-article-title">Criptografía de llave pública</h5></a>
         <p class="mb-1">
             Otro elemento importante para la tecnología blockchain es la criptografía de llave pública, la cual se utiliza para verificar propiedad y darle a cada criptomoneda su nombre.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -70,12 +61,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Redes par a par (P2P)</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}"><h5 class="intro-article-title">Redes par a par (P2P)</h5></a>
         <p class="mb-1">
             Esta sección trata la infraestructura “física” que hace operar a la cadena; la red par a par.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -87,12 +75,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Mecanismos de consenso</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}"><h5 class="intro-article-title">Mecanismos de consenso</h5></a>
         <p class="mb-1">
             La cadena de bloques la conforman muchas partes, y todas necesitan ponerse de acuerdo respecto al historial de transacciones. Aquí se explica cómo lo logran.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -104,12 +89,9 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Minado</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}"><h5 class="intro-article-title">Minado</h5></a>
         <p class="mb-1">
             Este último capítulo desglosa la función que cumplen los mineros al asegurar la cadena de bloques con su poder computacional.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Leer el artículo</a>
         </p>
     </div>
 </div>

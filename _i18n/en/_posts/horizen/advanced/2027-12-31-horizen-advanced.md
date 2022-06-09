@@ -18,7 +18,6 @@ no_index: true
     </div>
 </div>
 
-
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">
@@ -26,12 +25,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">DAO - Decentralized Autonomous Organization</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}"><h5 class="intro-article-title">DAO - Decentralized Autonomous Organization</h5></a>
         <p class="mb-1">
             We want to transition our foundation to a DAO over time, a Decentralized Autonomous Organization. This article shows you what this means.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -43,12 +39,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Sidechains</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}"><h5 class="intro-article-title">Sidechains</h5></a>
         <p class="mb-1">
             Sidechains are a promising approach to improve blockchains. Here we show you what sidechains are and how we plan to use them.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -60,29 +53,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Block DAG</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}"><h5 class="intro-article-title">Block DAG</h5></a>
         <p class="mb-1">
             Horizen is working on a Block-DAG protocol in cooperation with IOHK. This article explains what a DAG is and why it is interesting to us.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">Read Article</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">
-            <img src="/assets/post_files/horizen/advanced/intro/zenchat.svg" alt="ZenChat" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">ZenChat</h5>
-        <p class="mb-1">
-            ZenChat is the first application aside from our cryptocurrency, ZEN, that is running on top of the Horizen Blockchain.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-04-zenchat %}">Read Article</a>
         </p>
     </div>
 </div>

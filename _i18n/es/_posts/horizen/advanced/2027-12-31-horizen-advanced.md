@@ -25,12 +25,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">OAD - Organización autónoma descentralizada</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}"><h5 class="intro-article-title">OAD - Organización autónoma descentralizada</h5></a>
         <p class="mb-1">
             Nuestra meta es adoptar un modelo de organización autónoma descentralizada (OAD) con el tiempo. Este artículo explica lo que eso significa.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -42,12 +39,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Cadenas laterales</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}"><h5 class="intro-article-title">Cadenas laterales</h5></a>
         <p class="mb-1">
             Las cadenas laterales son un desarrollo prometedor para las cadenas de bloques. Hablaremos de qué son y cómo pensamos implementarlas.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -59,12 +53,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">DAG de bloques</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}"><h5 class="intro-article-title">DAG de bloques</h5></a>
         <p class="mb-1">
             En conjunto con IOHK, Horizen está creando un protocolo DAG de bloques. Te dejaremos claro qué significa esto y por qué nos interesa.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">Leer el artículo</a>
         </p>
     </div>
 </div>

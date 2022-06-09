@@ -26,12 +26,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">What is a Blockchain?</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}"><h5 class="intro-article-title">What is a Blockchain?</h5></a>
         <p class="mb-1">
             In the first chapter of this section, we talk about how blockchains store transactions, why this allows you to transfer value, and what smart contracts are.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">Read Chapter</a>
         </p>
     </div>
 </div>
@@ -43,12 +40,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">How Does a Blockchain Work?</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}"><h5 class="intro-article-title">How Does a Blockchain Work?</h5></a>
         <p class="mb-1">
             Next, we will bring you up to speed on the different elements that make blockchains work.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">Read Chapter</a>
         </p>
     </div>
 </div>
@@ -60,12 +54,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Wallets</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}"><h5 class="intro-article-title">Wallets</h5></a>
         <p class="mb-1">
             In order to receive and send cryptocurrencies you will use a wallet. In the third chapter we will show you the different types of wallets.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -77,12 +68,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Transactions</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}"><h5 class="intro-article-title">Transactions</h5></a>
         <p class="mb-1">
             After we covered wallets, the interfaces you use to create transactions, we will take a closer look at what transactions are and how they work.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">Read Chapter</a>
         </p>
     </div>
 </div>
@@ -94,12 +82,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Privacy</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}"><h5 class="intro-article-title">Privacy</h5></a>
         <p class="mb-1">
             While most cryptocurrencies are not private by default, you have the option to create truly private transactions. This chapter introduces the different methods that achieve privacy on the blockchain.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -111,12 +96,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Attacks</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}"><h5 class="intro-article-title">Attacks</h5></a>
         <p class="mb-1">
             Blockchains are a secure way to store data but there are ways to attack a blockchain. We show you the most common attacks and how their risk is mitigated.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -128,12 +110,12 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Summary</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">
+            <h5 class="intro-article-title">Summary</h5>
+        </a>
         <p class="mb-1">
             We end the Advanced Level of the Technology section with a summary of all the previous chapters.
         </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">Read the Summary</a>
-        </p>
+        
     </div>
 </div>
