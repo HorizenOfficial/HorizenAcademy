@@ -25,12 +25,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">¿Qué es una cadena de bloques?</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}"><h5 class="intro-article-title">¿Qué es una cadena de bloques?</h5></a>
         <p class="mb-1">
             En el primer capítulo de la sección, hablaremos de la manera en la que las cadenas de bloques almacenan transacciones y cómo hacen posible la transferencia de valor, así como de los llamados contratos inteligentes.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">Leer el capítulo</a>
         </p>
     </div>
 </div>
@@ -42,12 +39,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">¿Cómo funciona una cadena de bloques?</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}"><h5 class="intro-article-title">¿Cómo funciona una cadena de bloques?</h5></a>
         <p class="mb-1">
             Pasaremos a presentar y discutir los diferentes elementos que hacen funcionar a la cadena de bloques.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">Leer el capítulo</a>
         </p>
     </div>
 </div>
@@ -59,12 +53,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Billeteras</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}"><h5 class="intro-article-title">Billeteras</h5></a>
         <p class="mb-1">
             Para recibir y enviar criptomonedas es necesario utilizar una billetera. En este capítulo se expondrán los diferentes tipos que hay disponibles.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -76,12 +67,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Transacciones</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}"><h5 class="intro-article-title">Transacciones</h5></a>
         <p class="mb-1">
             Habiendo cubierto el tema de las billeteras digitales, las interfaces que crean transacciones, nos acercaremos a la naturaleza de las transacciones y cómo funcionan.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">Leer el capítulo</a>
         </p>
     </div>
 </div>
@@ -93,12 +81,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Privacidad</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}"><h5 class="intro-article-title">Privacidad</h5></a>
         <p class="mb-1">
             Aunque la mayoría de las criptomonedas no son privadas por defecto, el usuario tiene la opción de realizar transacciones netamente privadas. Este capítulo presenta varios métodos que logran darle privacidad al usuario dentro de cadena de bloques.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -110,12 +95,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Ataques</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}"><h5 class="intro-article-title">Ataques</h5></a>
         <p class="mb-1">
             Las cadenas de bloques son un medio seguro de almacenar datos, pero existen también maneras de atacarlas. Aprenderemos sobre los ataques más comunes y cómo mitigar sus riesgos.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -127,12 +109,9 @@ no_index: true
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Resumen</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}"><h5 class="intro-article-title">Resumen</h5></a>
         <p class="mb-1">
             Concluimos el nivel avanzado de tecnología con un resumen de todo el contenido presentado.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">Leer el resumen</a>
         </p>
     </div>
 </div>

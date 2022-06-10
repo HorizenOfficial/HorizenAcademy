@@ -7,7 +7,6 @@ permalink: /technology/advanced/consensus-mechanisms/
 topic: technology
 level: advanced
 chapter: "Comment fonctionne une Blockchain ?"
-further_reads: [how_does_distributed_consensus_work]
 ---
 
 Le réseau distribué d'une blockchain comprend plusieurs milliers de participants - certains altruistes, d'autres rationnels et d'autres malveillants. Dans cet environnement difficile, il faut résoudre un problème crucial pour faire fonctionner la monnaie numérique : tous les nœuds doivent se mettre d'accord sur un historique unique des transactions. En l'absence d'un consensus sur qui possède quoi, le réseau ne vaudrait rien.
@@ -51,16 +50,16 @@ Si 80 % des mineurs reçoivent d'abord le bloc A et les 20 % restants le bloc B,
 
 **Français**
 
- _“D'une façon ou d'une autre, les algorithmes de consensus de la blockchain se résument à une sorte de vote où le nombre de votes d'un utilisateur est lié à la quantité d'une ressource limitée qui est sous le contrôle de l'utilisateur.”_
+_“D'une façon ou d'une autre, les algorithmes de consensus de la blockchain se résument à une sorte de vote où le nombre de votes d'un utilisateur est lié à la quantité d'une ressource limitée qui est sous le contrôle de l'utilisateur.”_
 
 ![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_D.jpg)
 ![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_M.jpg)
 
-La preuve de travail est l'un des mécanismes de consensus les plus sûrs. Ce mécanisme n'est réalisable que s'il y a une puissance de calcul suffisante (taux de hachage) dans le réseau. Le protocole Bitcoin a prouvé depuis plus de 10 ans à quel point le consensus sur la preuve de travail est sûr, avec une puissance de calcul suffisante sur le réseau. Nous avons déjà parlé de la théorie des jeux dans notre article décrivant la blockchain comme un protocole de transfert de valeur et dans l'article sur les [smart contracts]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}).
+La preuve de travail est l'un des mécanismes de consensus les plus sûrs. Ce mécanisme n'est réalisable que s'il y a une puissance de calcul suffisante (taux de hachage) dans le réseau. Le protocole Bitcoin a prouvé depuis plus de 10 ans à quel point le consensus sur la preuve de travail est sûr, avec une puissance de calcul suffisante sur le réseau. Nous avons déjà parlé de la théorie des jeux dans notre article décrivant la blockchain comme un protocole de transfert de valeur et dans l'article sur les [smart contracts](https://academy.horizen.io/fr/technology/advanced/guaranteed-execution-with-smart-contracts/).
 
-La théorie des jeux "est l'étude des modèles mathématiques de l'interaction stratégique entre décideurs rationnels" selon [Wikipedia](https://en.wikipedia.org/wiki/Game_theory) (_sur la page en anglais, ndt_). Les mineurs sont un groupe de décideurs rationnels dans une blockchain en PoW. Les incitations à agir selon les règles du protocole de mining sont intégrées dans le protocole lui-même. C'est ce qui rend une blockchain PoW mature si robuste.
+La théorie des jeux "est l'étude des modèles mathématiques de l'interaction stratégique entre décideurs rationnels" selon Wikipedia (_sur la page en anglais, ndt_). Les mineurs sont un groupe de décideurs rationnels dans une blockchain en PoW. Les incitations à agir selon les règles du protocole de mining sont intégrées dans le protocole lui-même. C'est ce qui rend une blockchain PoW mature si robuste.
 
-Dans notre article sur le [minage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}), nous parlerons plus en détail de ce processus et vous apprendrez quel est le puzzle dont nous parlons dans le contexte du PoW.
+Dans notre article sur le [minage](https://academy.horizen.io/fr/technology/advanced/mining/), nous parlerons plus en détail de ce processus et vous apprendrez quel est le puzzle dont nous parlons dans le contexte du PoW.
 
 ## La preuve d’enjeu (Proof-of-Stake: PoS)
 
@@ -91,3 +90,18 @@ Les partisans de la preuve d'enjeu se réfèrent au coût élevé de l'énergie 
 Dans la méthode de la preuve de travail, les mineurs votent sur une version de l'historique avec le poids de la puissance de calcul qu'ils contrôlent. Dans la méthode de la preuve d'enjeu, les validateurs votent sur une version de l'historique avec le poids des fonds ou de l'enjeu qu'ils possèdent sur la blockchain. Bien que le PoW se soit avéré sûr depuis plus d'une décennie maintenant, la sécurité des blockchains en PoS reste à prouver.
 
 Dans notre prochain article sur le mining, nous expliquerons enfin ce qu'est le "puzzle" ou la "tâche coûteuse en calcul", dont nous avons vaguement parlé jusqu'à présent.
+
+## Explication Simple Ci-dessous - Qu'est-ce que le Consensus ?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
+        <td>
+            La blockchain enregistre tous les transferts d'argent. Si vous n'avez qu'un seul ZEN et que vous créez deux transactions en même temps en dépensant deux fois le même coin (la même pièce de monnaie numérique), le réseau doit s'entendre sur laquelle des deux transactions est la première et donc la plus valable.
+        </td>
+    </tr>
+</table>
+
+Le mécanisme de consensus permet de s'assurer que l'ensemble du réseau est d'accord sur l'ordre des transactions. Toutes les quelques minutes, lorsqu'un nouveau bloc est ajouté à la blockchain, le réseau s'accorde sur l'ordre des transactions les plus récentes. De cette façon, personne ne peut tromper le système et dépenser plus qu'il ne l'a fait.
+
+Il y a différentes façons de parvenir à un consensus dans un réseau Peer-to-Peer. Sur la blockchain Horizen, les gens votent avec leur puissance de calcul sur l'ordre des transactions. Si votre ordinateur est deux fois plus rapide que le mien, la probabilité que vous décidiez de l'ordre des transactions est deux fois plus élevée que la mienne.

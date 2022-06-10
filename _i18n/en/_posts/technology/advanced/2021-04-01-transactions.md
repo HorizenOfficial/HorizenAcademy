@@ -14,34 +14,14 @@ You should have a pretty good understanding of blockchain if you have read throu
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
-            <img src="/assets/post_files/technology/advanced/4.0-transactions/utxo.svg" alt="The UTXO Model" />
-        </a>
-    </div>
-    <div class="col-md-9">
-        <h5 class="intro-article-title">The UTXO Model</h5>
-        <p class="mb-1">
-            Most blockchains use the UTXO (Unspent Transaction Output) Model to track a user's funds. Here we show you how it works.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Read Article</a>
-        </p>
-    </div>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
-            <img src="/assets/post_files/technology/advanced/4.0-transactions/block_explorer.svg" alt="Block Explorer Continued" />
+            <img src="/assets/post_files/technology/advanced/4.0-transactions/block_explorer.svg" alt="Block Explorer" />
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Block Explorer Continued</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}"><h5 class="intro-article-title">Block Explorer</h5></a>
         <p class="mb-1">
             A block explorer is a tool that lets you browse the data on a blockchain. Here we take a look at what kind of information you will find.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Read Article</a>
         </p>
     </div>
 </div>
@@ -53,12 +33,9 @@ You should have a pretty good understanding of blockchain if you have read throu
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Atomic Swaps</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}"><h5 class="intro-article-title">Atomic Swaps</h5></a>
         <p class="mb-1">
             Lastly, we want to show you a special type of transaction. An Atomic Swap lets you exchange two different cryptocurrencies without using an exchange.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Read Article</a>
         </p>
     </div>
 </div>

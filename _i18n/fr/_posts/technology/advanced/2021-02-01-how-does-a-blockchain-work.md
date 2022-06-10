@@ -18,12 +18,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">
         <h5 class="intro-article-title">Les éléments d’une Blockchain</h5>
+        </a>
         <p class="mb-1">
             Dans ce premier article de ce chapitre, nous vous donnons une vue d’ensemble des différents éléments qui font fonctionner une blockchain.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -35,12 +34,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">
         <h5 class="intro-article-title">Les Fonctions de Hachage</h5>
+        </a>
         <p class="mb-1">
             Les Fonctions de Hachage sont une part importante dans n’importe quelle blockchain car elles sont utilisées pour vérifier l’intégrité des données.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -52,12 +50,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">
         <h5 class="intro-article-title">La Cryptographie à Clé Publique</h5>
+        </a>
         <p class="mb-1">
             Un autre élément majeur est la Cryptographie à Clé Publique. Elle est utilisée pour vérifier la propriété et donne leur nom aux cryptomonnaies.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -69,12 +66,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">
         <h5 class="intro-article-title">Un réseau Peer-to-Peer (P2P)</h5>
+        </a>
         <p class="mb-1">
             Ici nous parlons de l’infrastructure “physique” sur laquelle les blockchains fonctionnent; le réseau Peer-to-Peer.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -86,12 +82,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">
         <h5 class="intro-article-title">Les mécanismes de Consensus</h5>
+        </a>
         <p class="mb-1">
             Il y a différentes parties dans une blockchain et toutes ont besoin d’être d’accord sur l’historique des transactions. Ici, nous montrons comment cela est achevé.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">Lire l’article</a>
         </p>
     </div>
 </div>
@@ -103,12 +98,11 @@ Dans ce chapitre de notre section avancée de la technologie blockchain, nous vo
         </a>
     </div>
     <div class="col-md-9">
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">
         <h5 class="intro-article-title">Le minage</h5>
+        </a>
         <p class="mb-1">
             Dans ce dernier de ce chapitre, nous montrons comment les mineurs sécurisent la blockchain avec leur puissance de calcul.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">Lire l’article</a>
         </p>
     </div>
 </div>

@@ -7,7 +7,6 @@ permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced
 chapter: "Les transactions"
-further_reads: [atomic_swaps_the_interoperability_revolution_in_cryptos, everything_you_need_to_know_about_atomic_swaps_and_how_komodo_is_advancing_the_technology, atomic_swap_compatibility_of_different_cryptocurrencies]
 ---
 
 Si vous voulez échanger une cryptomonnaie contre une autre, vous irez très probablement sur une plateforme d'échange centralisée. D’abord, vous devez vérifier si la plateforme d’échange offre la paire de trading qui vous intéresse. Ensuite, vous transférez vos fonds à leur adresse, ce qui demande de faire confiance à un tiers. La plupart des plateformes d'échange proposent des paires BTC et ETH. Pour trader avec d’autres paires, vous devrez souvent acheter du bitcoin que vous convertirez ensuite en la cryptomonnaie souhaité.
@@ -18,7 +17,7 @@ Les Atomic Swaps sont une technologie qui vous permet de trader en Peer-to-Peer 
 
 ### La technologie derrière les Atomics Swaps
 
-Si vous avez lu l’article sur la [cryptographie à clé publique]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}), vous savez qu’une transaction valide demande une signature. Cette signature peut être créée uniquement par la personne qui a accès à la clé privée. Lorsque vous envoyez une transaction, vous la signez et la diffusez sur le réseau par la suite. Les HTLCs sont basés sur la technologie _state channels_. Nous les expliquerons en détail dans notre niveau expert, mais pour le moment, tout ce que vous devez savoir c’est qu’ils vous permettent d’échanger des transactions signées de manière sécurisée. Seulement lorsque les participants décident qu’ils ont fini la transaction, l’état final est diffusé sur la blockchain.
+Si vous avez lu l’article sur la [cryptographie à clé publique](https://academy.horizen.io/fr/technology/advanced/public-key-cryptography/), vous savez qu’une transaction valide demande une signature. Cette signature peut être créée uniquement par la personne qui a accès à la clé privée. Lorsque vous envoyez une transaction, vous la signez et la diffusez sur le réseau par la suite. Les HTLCs sont basés sur la technologie _state channels_. Nous les expliquerons en détail dans notre niveau expert, mais pour le moment, tout ce que vous devez savoir c’est qu’ils vous permettent d’échanger des transactions signées de manière sécurisée. Seulement lorsque les participants décident qu’ils ont fini la transaction, l’état final est diffusé sur la blockchain.
 
 ![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_D.jpg)
 ![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_M.jpg)
@@ -31,7 +30,7 @@ Le processus d'un Atomic Swap ressemble généralement à ce qui suit. Supposons
 
 ![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_1.jpg)
 
-Premièrement, Alice génère un HTLC qui a une adresse sur la blockchain Bitcoin. Le contrat possède une adresse utile à l’interaction, ici ce sera ABC. Ensuite, Alice génère ou choisi un secret; dans cet exemple son secret est XYZ. En utilisant une [fonction de hachage]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}) elle génère un cadenas (_lock_) (ici: _1b9f_…), qui est simplement le _hash_ du secret. Maintenant elle dépose le montant en bitcoin qui a été défini avec Bob dans le contrat qui est bloqué. Enfin, elle envoie le cadenas à Bob.
+Premièrement, Alice génère un HTLC qui a une adresse sur la blockchain Bitcoin. Le contrat possède une adresse utile à l’interaction, ici ce sera ABC. Ensuite, Alice génère ou choisi un secret; dans cet exemple son secret est XYZ. En utilisant une [fonction de hachage](https://academy.horizen.io/fr/technology/advanced/hash-functions/) elle génère un cadenas (_lock_) (ici: _1b9f_…), qui est simplement le _hash_ du secret. Maintenant elle dépose le montant en bitcoin qui a été défini avec Bob dans le contrat qui est bloqué. Enfin, elle envoie le cadenas à Bob.
 
 Le contrat peut avoir deux résultats :
 
@@ -66,5 +65,3 @@ La technologie est très prometteuse, mais pour obtenir l'adoption de wallets to
 ### Résumé
 
 Les Atomic Swaps représenteront une alternative aux plateformes d'échanges centralisés utilisées aujourd'hui une fois qu'ils seront disponibles entre la majorité des cryptomonnaies. Il n'y a à aucun moment un tiers impliqué qui a accès aux fonds d'un utilisateur. Le processus d'échange est entièrement fiable et presque instantané. Les contrats Hashed Timelock sont au cœur des contrats Atomic Swaps. Je soupçonne qu'il ne faudra pas longtemps avant que la compatibilité Atomic Swap soit une fonctionnalité nécessaire pour qu'une blockchain soit adoptée.
-
-C'était le dernier article sur les transactions dans la section avancée. Pour en savoir plus sur le fonctionnement des transactions et les types de transactions, vous pouvez consulter notre niveau expert. Au niveau avancé, nous continuerons avec une introduction aux techniques de préservation de la vie privée sur la blockchain.

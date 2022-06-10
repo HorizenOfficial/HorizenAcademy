@@ -59,13 +59,13 @@ Rob et Rolf ont alors forké ZClassic et cofondé ZenCash. Ils ont finalement pu
 
 ### D'un passe-temps à temps partiel à un emploi à temps plein
 
-Rob voulait que ZenCash soit un emploi à temps partiel. Il ne pouvait pas savoir ce qui allait se passer. Une semaine après le lancement officiel de ZenCash, un ancien développeur principal a annoncé une attaque zero-day. Le développeur a partagé une méthode d'attaque de la blockchain Zen publiquement. Cette attaque aurait pu conduire à une réexécution des transactions de la blockchain ZClassic vers la blockchain Zen. Les cerveaux de ZenCash ont agi rapidement. Cronic, le gestionnaire de l'infrastructure Horizen, a joué un rôle déterminant dans la réussite de notre projet. Cronic et les développeurs de ZenCash ont conçu et déployé une méthode qui empêche les attaques zero-day. Le soutien de Bittrex et de Team Veritas a été d'un grand secours durant cette période. Rob et Rolf ont fourni deux mises à jour quotidiennes à la communauté pendant que la transaction était réexécutée jusqu'à ce que le problème soit résolu. Au fil du temps, tous les utilisateurs qui ont perdu des fonds en raison des réexécutions ont été remboursés avec les fonds communautaires. Rob s'est rendu compte qu'il ne suffirait pas de travailler à temps partiel. Il a renoncé à terminer son doctorat (et oui, Rob n'a pas encore soutenu sa thèse pour terminer son doctorat) et a commencé à travailler sur le projet à temps plein. Ils ont déployé la mesure préventive le 12 juin 2017, à la hauteur du bloc 117000, préparant le terrain pour les succès futurs du projet. 
+Rob voulait que ZenCash soit un emploi à temps partiel. Il ne pouvait pas savoir ce qui allait se passer. Une semaine après le lancement officiel de ZenCash, un ancien développeur principal a annoncé une attaque zero-day. Le développeur a partagé une méthode d'attaque de la blockchain Zen publiquement. Cette attaque aurait pu conduire à une réexécution des transactions de la blockchain ZClassic vers la blockchain Zen. Les cerveaux de ZenCash ont agi rapidement. Cronic, le gestionnaire de l'infrastructure Horizen, a joué un rôle déterminant dans la réussite de notre projet. Cronic et les développeurs de ZenCash ont conçu et déployé une méthode qui empêche les attaques zero-day. Le soutien de Bittrex et de Team Veritas a été d'un grand secours durant cette période. Rob et Rolf ont fourni deux mises à jour quotidiennes à la communauté pendant que la transaction était réexécutée jusqu'à ce que le problème soit résolu. Au fil du temps, tous les utilisateurs qui ont perdu des fonds en raison des réexécutions ont été remboursés avec les fonds communautaires. Rob s'est rendu compte qu'il ne suffirait pas de travailler à temps partiel. Il a renoncé à terminer son doctorat (et oui, Rob n'a pas encore soutenu sa thèse pour terminer son doctorat) et a commencé à travailler sur le projet à temps plein. Ils ont déployé la mesure préventive le 12 juin 2017, à la hauteur du bloc 117000, préparant le terrain pour les succès futurs du projet.
 
 Au cours de ces premiers jours, Rosario et d'autres ont joué un rôle de premier plan afin d’aider la communauté et les premiers partenariats ont commencé à se former - ZenCash a engagé Tatiana Moroz et Crypto Media Hub pour le marketing.
 
 ### Lisbonne
 
-L'équipe initiale d'Horizen n'était pas sélectionnée. Elle est née de l'engagement et de la passion de bénévoles qui ont manifesté leur engagement et leur passion pour le projet. 
+L'équipe initiale d'Horizen n'était pas sélectionnée. Elle est née de l'engagement et de la passion de bénévoles qui ont manifesté leur engagement et leur passion pour le projet.
 
 Les développeurs communautaires ont joué un rôle important en 2017. Ils ont ajouté des outils importants, tels que Insight API par anarch3, NodeJS ZenChat et Zen Android wallet par Kendricktan, Arizen wallet par Lukas, et Swing Wallet par Vaklinov. Grâce à Hellcatz, ils ont également été en mesure d'identifier et de résoudre des problèmes avec le logiciel de pool de minage.
 
@@ -77,7 +77,7 @@ Les bénévoles contribueront si un projet est intéressant, mais vous n'attirez
 
 ### Incitatifs pour les nœuds et autres intervenants
 
-Au fur et à mesure que le modèle économique a été intégré au protocole, l'équipe a pu commencer à offrir des incitatifs. Ils ont déterminé qu'une partie des coins nouvellement créés irait aux opérateurs de Secure Node qui exploitaient (et exploitent toujours) des nœuds complets sur la blockchain ZEN. Ces opérateurs utilisent du matériel puissant, une adresse IP dédiée et un certificat TLS pour chiffrer les communications. Pour ce faire, l'incitatif était de 3,5 % de la prime globale au début, mais il est passé à 10 % avec l'introduction des Super Nodes. Notre décision d'encourager les opérateurs de nœuds a permis à Horizen d'avoir le plus grand réseau de nœuds de l'industrie. Le projet compte à ce jour plus de 23 000 Secure Nodes et plus de 3 000 Super Nodes dans le monde. 
+Au fur et à mesure que le modèle économique a été intégré au protocole, l'équipe a pu commencer à offrir des incitatifs. Ils ont déterminé qu'une partie des coins nouvellement créés irait aux opérateurs de Secure Node qui exploitaient (et exploitent toujours) des nœuds complets sur la blockchain ZEN. Ces opérateurs utilisent du matériel puissant, une adresse IP dédiée et un certificat TLS pour chiffrer les communications. Pour ce faire, l'incitatif était de 3,5 % de la prime globale au début, mais il est passé à 10 % avec l'introduction des Super Nodes. Notre décision d'encourager les opérateurs de nœuds a permis à Horizen d'avoir le plus grand réseau de nœuds de l'industrie. Le projet compte à ce jour plus de 23 000 Secure Nodes et plus de 3 000 Super Nodes dans le monde.
 
 Nous allons dans la bonne direction en tant que projet, mais nous n'avons pas terminé. Nous nous sommes engagés à identifier en permanence les parties prenantes qui méritent d'être encouragées. Par exemple, les contributeurs au système ZenDAO recevront une incitation à participer au processus de vote.
 
@@ -124,12 +124,12 @@ Le réseau zen fut la cible d'une attaque à 51% le 3 juin 2018, vers 00:26 UTC 
 
 L'équipe Horizen l'a su immédiatement grâce au système de tripwire. L'équipe a commencé à exécuter les procédures d'atténuation sur lesquelles elle travaillait afin d'augmenter considérablement la difficulté des attaques futures. Comme notre équipe d'ingénieurs travaillait déjà sur des solutions possibles pour les attaques 51%, nous avons fait le POC et le codage rapidement et avons procédé à la mise à jour du réseau.
 
-Nous avons déterminé que la meilleure solution était d'améliorer la règle de la chaîne la plus longue (Consensus Nakamoto) et d'introduire une pénalité pour les déclarations de bloc retardés. Cela rend les choses exponentiellement plus difficiles et plus coûteuses pour ceux qui cherchent à effectuer une attaque à 51%. Vous pouvez lire notre livre blanc "Solution à 51% des attaques" [ici](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) (sélectionnez l'onglet FR pour le télécharger en français).
+Nous avons déterminé que la meilleure solution était d'améliorer la règle de la chaîne la plus longue (Consensus Nakamoto) et d'introduire une pénalité pour les déclarations de bloc retardés. Cela rend les choses exponentiellement plus difficiles et plus coûteuses pour ceux qui cherchent à effectuer une attaque à 51%. Vous pouvez lire notre livre blanc "Solution à 51% des attaques" [ici](https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) (sélectionnez l'onglet FR pour le télécharger en français).
 
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Pour en savoir plus sur l'attaque et notre chronologie détaillée, consultez notre blog
-    “<a href="https://blog.horizen.global/zencash-statement-on-double-spend-attack/" class="font-weight-bold" target="_blank">ici</a>”
+    “<a href="https://blog.horizen.io/zencash-statement-on-double-spend-attack/" class="font-weight-bold" target="_blank">ici</a>”
     </div>
 
 ### Expansion de la marque - de ZenCash à Horizen
@@ -137,16 +137,6 @@ Nous avons déterminé que la meilleure solution était d'améliorer la règle d
 Au fur et à mesure que notre projet prenait de l'ampleur et devenait de plus en plus populaire, nous devenions de plus en plus souvent confondus avec ZCash. Cela a commencé à avoir plus de sens pour nous de changer notre image de marque. Notre projet s'est concentré sur l'offre de produits tels qu'un système de vote de trésorerie et des sidechains dotées d'une capacité de smart contracts. Nous étions plus que notre monnaie. Le mot "cash" dans notre nom ne décrivait pas ce que notre projet avait commencé à devenir.
 
 La dernière impulsion dont nous avions besoin pour démarrer l'expansion de notre marque est venue sous la forme d'une lettre d'une grande banque internationale. Dans la lettre, ils ont exprimé que le logo de ZenCash était similaire à celui de leur organisation sœur, et ils ont demandé que nous changions le nôtre. Ça n'avait pas de sens de se battre pour une marque qui ne nous allait plus. Nous avons donc créé un groupe de travail spécial et nous nous sommes associés à BrandTuitive. Nos équipes ont passé des heures et des heures à travailler ensemble à l'expansion de notre marque. Le résultat a été (et est toujours) phénoménal. Le nom Horizen correspond parfaitement à la mission et aux objectifs de notre projet. L'équipe et notre communauté ont adoré le fait que nous ayons pu garder ZEN comme partie intégrante de notre nom. Ètant donné que ZEN est resté une partie de nous, nous avons également été en mesure de maintenir le symbole de notre cryptomonnaie, ZEN.
-
-<img src="/assets/post_files/history/from-zencash-to-horizen/HZ-logos.svg" alt="Horizen logos" style="width: 500px; margin-top: 2rem; margin-bottom: 5rem;">
-
-<div class="learn-more">
-    <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
-    Vous pouvez en savoir plus sur le processus d'expansion de notre marque sur notre blog 
-    “<a href="https://blog.horizen.global/zencash-brand-expansion/" class="font-weight-bold" target="_blank">ici</a>”
-    et “<a href="https://blog.horizen.global/hello-horizen/" class="font-weight-bold" target="_blank">ici</a>”.
-</div>
-
 
 <table class="table table-borderless">
 <tbody>
@@ -163,8 +153,8 @@ La dernière impulsion dont nous avions besoin pour démarrer l'expansion de not
 </table>
 
 <div class="row">
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://blog.horizen.global/" target="_blank">DERNIÈRES NOUVELLES</a></div>
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/fr/roadmap/" target="_blank">ROADMAP HORIZEN</a></div>
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/fr/team/" target="_blank">L’EQUIPE HORIZEN AUJOURD’HUI
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/news/" target="_blank">DERNIÈRES NOUVELLES</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/roadmap/" target="_blank">ROADMAP HORIZEN</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/team/" target="_blank">L’EQUIPE HORIZEN AUJOURD’HUI
 </a></div>
 </div>

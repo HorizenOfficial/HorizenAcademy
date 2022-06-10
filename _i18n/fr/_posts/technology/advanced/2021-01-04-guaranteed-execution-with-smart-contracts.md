@@ -7,7 +7,6 @@ permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
 chapter: "Qu’est-ce que la Blockchain ?"
-further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 
 Nous avons examiné la blockchain de deux façons différentes. D'abord en tant que structure de données et ensuite en tant que protocole de transfert de valeur. Pour le dernier article de ce chapitre sur ce qu'est une blockchain, nous voulons parler de smart contract. Outre l'IA, l'IoT (internet des objets) et la blockchain, les smart contracts (contrats intelligents) ont été l'un des sujets les plus branchés au cours des deux dernières années dans le monde de la technologie. Ce sont des logiciels qui s’exécutent sur la blockchain.
@@ -23,7 +22,7 @@ Les smart contracts promettent d'éliminer le besoin d'intermédiaires, tels que
 
 Par exemple, un propriétaire et un locataire pourraient utiliser un smart contract pour régir le contrat de location. Le smart contract pourrait automatiquement bloquer le locataire à l'extérieur de l'appartement si le locataire ne paie pas son loyer. Dans ce cas, l'énoncé “si-alors”, ressemblerait à quelque chose comme :
 
-*Si l'adresse du contrat reçoit le montant X au plus tard le 3 de chaque mois de l'adresse d’Y, accordez à Y l'accès à l'appartement. Si le paiement échoue pendant 2 mois consécutifs, révoquez le droit d’Y de déverrouiller l'appartement.*
+_Si l'adresse du contrat reçoit le montant X au plus tard le 3 de chaque mois de l'adresse d’Y, accordez à Y l'accès à l'appartement. Si le paiement échoue pendant 2 mois consécutifs, révoquez le droit d’Y de déverrouiller l'appartement._
 
 Un autre cas d'utilisation possible pour les smart contracts serait la décentralisation d'eBay. On pourrait construire un smart contract avec une date d'expiration définissant la période de l'enchère et une offre de départ. Le plus offrant recevrait l'article à la fin de la période d'enchère en échange de son argent. Les enchérisseurs perdants seraient automatiquement remboursés par le smart contract. Une telle version décentralisée d'eBay serait considérée comme une application dApp (une application décentralisée).
 
@@ -59,7 +58,7 @@ Il y a un autre défi majeur à relever. Le monde numérique a besoin d'en savoi
 ![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_D.jpg)
 ![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_M.jpg)
 
-Les oracles centralisés ne sont pas considérés comme une solution au problème d'oracle. Peu importe à quoi ressemble la mise en œuvre réelle, les incitations à soumettre des données mensongères pourraient l'emporter sur les avantages d'agir honnêtement dans certaines décisions. Qu'il soit centralisé ou décentralisé, un oracle aura toujours un coût. Agir honnêtement doit toujours être la stratégie la plus rentable et, par conséquent, des incitations fortes doivent être en place. C'est un autre problème qui nécessite une évaluation de la théorie des jeux et la conception d'incitations, tout comme les incitations pour les mineurs dont nous avons parlé dans notre [dernier article]({{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %})
+Les oracles centralisés ne sont pas considérés comme une solution au problème d'oracle. Peu importe à quoi ressemble la mise en œuvre réelle, les incitations à soumettre des données mensongères pourraient l'emporter sur les avantages d'agir honnêtement dans certaines décisions. Qu'il soit centralisé ou décentralisé, un oracle aura toujours un coût. Agir honnêtement doit toujours être la stratégie la plus rentable et, par conséquent, des incitations fortes doivent être en place. C'est un autre problème qui nécessite une évaluation de la théorie des jeux et la conception d'incitations, tout comme les incitations pour les mineurs dont nous avons parlé dans notre [dernier article](https://academy.horizen.io/fr/technology/advanced/a-protocol-to-transfer-value/)
 
 Des projets tels qu'Augur et Gnosis travaillent sur des solutions décentralisées au problème d'oracle via des marchés de prédiction. Avant que ces marchés prédictifs ne soient sérieusement adoptés, ils resteront faciles à jouer. Et puisque les marchés prédictifs ont le potentiel d'influencer le résultat d'un événement comme le suggère Dan Finley, il reste à voir s'ils peuvent devenir une solution.
 
@@ -71,12 +70,10 @@ Des projets tels qu'Augur et Gnosis travaillent sur des solutions décentralisé
 
 Avant de résoudre le problème de la création de smarts contracts juridiquement contraignants et le problème d'oracle, l'utilisation des smart contracts sera limitée aux petits domaines expérimentaux à faible risque. Un exemple de cas d'utilisation potentielle serait les paiements dans un jeu déclenchés par certaines réussites qui sont objectivement vérifiables par code.
 
-Comme [le dit Jimmy Song](https://medium.com/@jimmysong/the-truth-about-smart-contracts-ae825271811f) : "Un smart contract qui fait confiance à un tiers enlève la caractéristique remarquable du “sans confiance”." Il reste encore un long chemin à parcourir avant de voir l'utilisation généralisée de smart contracts “sans confiance” dans différents domaines, mais il s'agit sans aucun doute d'un concept à explorer.
+Comme [le dit Jimmy Song](https://jimmysong.medium.com/the-truth-about-smart-contracts-ae825271811f) : "Un smart contract qui fait confiance à un tiers enlève la caractéristique remarquable du “sans confiance”." Il reste encore un long chemin à parcourir avant de voir l'utilisation généralisée de smart contracts “sans confiance” dans différents domaines, mais il s'agit sans aucun doute d'un concept à explorer.
 
 ### Résumé
 
 Vous devriez avoir une bonne idée de ce qu'est une blockchain. Nous l'avons considérée comme une structure de données et comme un ensemble de règles. Une blockchain peut stocker des données de façon fiable en raison de la nature décentralisée du registre. N'importe qui peut participer au réseau sans autorisation ni inscription, à condition de respecter les règles du protocole. Cela rend les blockchains publiques résistantes à la censure, sans permission, sans confiance et valables. Elle peut non seulement stocker des données mais aussi des programmes fonctionnant de manière distribuée.
 
 Les smart contracts peuvent garantir une exécution objective sur la base de conditions convenues d'un commun accord et appliquées par un code. Ils ont le potentiel de réduire le nombre d'intermédiaires et, par conséquent, de réduire les coûts et le temps de travail. Ils favoriseront très probablement un lien plus étroit entre les développeurs de logiciels et le système judiciaire. Avant que l'adoption généralisée ne se produise, nous devons surmonter certains obstacles. Les régulateurs doivent créer un cadre pour permettre le déploiement de smart contracts juridiquement contraignants et des oracles décentralisés doivent être développés.
-
-C'était le dernier article du chapitre sur ce qu'est une blockchain et ce qu'elle peut faire. Dans le chapitre suivant, nous verrons comment fonctionnent les blockchains.

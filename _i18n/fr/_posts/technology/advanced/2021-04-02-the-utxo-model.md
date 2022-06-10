@@ -6,6 +6,7 @@ description: "La mayoría de las cadenas de bloques emplean el modelo UTXO (Unsp
 permalink: /technology/advanced/the-utxo-model/
 topic: technology
 level: advanced
+no_alternate: true
 chapter: "Les transactions"
 ---
 
@@ -20,7 +21,7 @@ La blockchain ne crée pas de "compte" pour vous permettre de maintenir un solde
 
 Chaque transaction sur la blockchain a une ou plusieurs entrées et une ou plusieurs sorties. Examinons un exemple réel au cours d'une série de quatre transactions :
 
-Habituellement, un explorateur de blocs vous montrera d'abord les transactions les plus récentes. Pour cet exemple, nous allons passer en revue les transactions dans l’ordre dans lequel elles se sont passé; chronologiquement. Nous avons raccourci les adresses pour une meilleure lisibilité. L'adresse qui nous intéresse ici est l'adresse grise : znRwe....  Disons que c'est Bob et l'autre, c'est Alice (en bleu).
+Habituellement, un explorateur de blocs vous montrera d'abord les transactions les plus récentes. Pour cet exemple, nous allons passer en revue les transactions dans l’ordre dans lequel elles se sont passé; chronologiquement. Nous avons raccourci les adresses pour une meilleure lisibilité. L'adresse qui nous intéresse ici est l'adresse grise : znRwe.... Disons que c'est Bob et l'autre, c'est Alice (en bleu).
 
 Bob reçoit sa première transaction
 
@@ -48,4 +49,4 @@ La plupart des blockchains utilisent le modèle UTXO pour la comptabilité. Il y
 
 Quand les gens demandent ce qu'est un ZEN ou un bitcoin, ce serait la réponse exacte. Une sortie de transaction non dépensée ou UTXO que vous pouvez déverrouiller avec votre clé privée EST votre coin. Il n'y a pas d'abstraction en plus. Cela peut prendre un moment ou une seconde lecture pour se familiariser avec cela, mais c'est un concept simple et soigné et nous espérons que l'exemple ci-dessus vous a aidé à comprendre ce qu'est le modèle UTXO. Si vous avez bien compris le modèle UTXO, cela vous aidera beaucoup à comprendre les articles suivants.
 
-L'article suivant traite de l'[explorateur de blocs]({{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}), un outil qui vous permet d'accéder à l'information sur une blockchain, comme la façon dont un navigateur Web vous permet d'accéder à l'information sur Internet. C'est ce que nous avons fait avec les captures d'écran ci-dessus. Nous vous encourageons à l'utiliser car il vous aidera à comprendre le modèle UTXO et les blockchains en général si vous explorez quelques transactions par vous-même.
+L'article suivant traite de l'[explorateur de blocs](https://academy.horizen.io/fr/technology/advanced/block-explorer-continued/), un outil qui vous permet d'accéder à l'information sur une blockchain, comme la façon dont un navigateur Web vous permet d'accéder à l'information sur Internet. C'est ce que nous avons fait avec les captures d'écran ci-dessus. Nous vous encourageons à l'utiliser car il vous aidera à comprendre le modèle UTXO et les blockchains en général si vous explorez quelques transactions par vous-même.
