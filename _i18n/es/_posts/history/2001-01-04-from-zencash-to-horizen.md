@@ -47,7 +47,7 @@ css: |
     <img src="/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
 </div>
 
-Todo empezó casi por accidente. Rob Viglione, cofundador de Horizen, se encontraba terminando su doctorado en la Universidad de Carolina del Sur, impartiendo un curso sobre blockchain y trabajando en ZClassic como pasatiempo. ZClassic tenia un equipo informal, pero Rob se apasionó por el proyecto, por lo que fue incrementando su compromiso y actividad en la comunidad hasta asumir el papel de líder del proyecto cuando este se desarrolló. Rob conoció a Rolf Versluis mientras trabajaban en ZClassic. A ambos les importaba profundamente el proyecto, pero tenían visiones diferentes  del futuro de la privacidad, gobernanza y economía. Se dieron cuenta de que compartían visiones similares al trabajar juntos en un proyecto, así que decidieron conocerse un día. Rob invitó a Rolf, que vivía en Georgia, a darles una clase a sus alumnos de universidad y discutir los términos de su colaboración.
+Todo empezó casi por accidente. Rob Viglione, cofundador de Horizen, se encontraba terminando su doctorado en la Universidad de Carolina del Sur, impartiendo un curso sobre blockchain y trabajando en ZClassic como pasatiempo. ZClassic tenia un equipo informal, pero Rob se apasionó por el proyecto, por lo que fue incrementando su compromiso y actividad en la comunidad hasta asumir el papel de líder del proyecto cuando este se desarrolló. Rob conoció a Rolf Versluis mientras trabajaban en ZClassic. A ambos les importaba profundamente el proyecto, pero tenían visiones diferentes del futuro de la privacidad, gobernanza y economía. Se dieron cuenta de que compartían visiones similares al trabajar juntos en un proyecto, así que decidieron conocerse un día. Rob invitó a Rolf, que vivía en Georgia, a darles una clase a sus alumnos de universidad y discutir los términos de su colaboración.
 
 ZClassic fue un proyecto comunitario. Mientras que Rob y Rolf tenían buenas ideas, no contaban con la autoridad para expandir el alcance fundamental del proyecto. Así que ambos decidieron separarse de ZClassic, creando un proyecto propio que los liberara de estas limitaciones. Rob y Rolf habían elegido trabajar en ZClassic por su creencia en el derecho universal a la privacidad. El amor de Rob por la criptografía de cero conocimiento y la pasión combinada de ambos por la privacidad terminó rindiendo frutos y dejando su huella en cuanto a la verdadera privacidad en el mundo de las criptomonedas.
 
@@ -77,7 +77,7 @@ Los voluntarios contribuyen a un proyecto si les parece interesante, pero eso no
 
 ### Incentivos para los nodos y otras partes interesadas
 
-Conforme el modelo económico se fue implementado dentro del protocolo, el equipo fue pudiendo ofrecer incentivos. Se determinó que parte de las monedas recién generadas se destinaría a los operadores de nodos seguros encargados de operar un nodo completo en la cadena de bloques. Estos operadores utilizaban hardware poderoso, una dirección IP dedicada y un certificado TLS para encriptar las comunicaciones. El incentivo para hacer esto fue primero un 3.5% de la recompensa de bloque, pero incrementó luego a 10% cuando se introdujeron los supernodos. La decisión de incentivar a los operadores de nodos llevó a Horizen a tener la red de nodos más grande de la industria. Hoy en día, el proyecto cuenta con más de 23,000 nodos seguros y más de 3,000 supernodos en todo el mundo. 
+Conforme el modelo económico se fue implementado dentro del protocolo, el equipo fue pudiendo ofrecer incentivos. Se determinó que parte de las monedas recién generadas se destinaría a los operadores de nodos seguros encargados de operar un nodo completo en la cadena de bloques. Estos operadores utilizaban hardware poderoso, una dirección IP dedicada y un certificado TLS para encriptar las comunicaciones. El incentivo para hacer esto fue primero un 3.5% de la recompensa de bloque, pero incrementó luego a 10% cuando se introdujeron los supernodos. La decisión de incentivar a los operadores de nodos llevó a Horizen a tener la red de nodos más grande de la industria. Hoy en día, el proyecto cuenta con más de 23,000 nodos seguros y más de 3,000 supernodos en todo el mundo.
 
 Vamos por buen camino como proyecto, pero aún no estamos satisfechos. Nos hemos dedicado continuamente a identificar más partes interesadas que merezcan incentivos. Por ejemplo, los contribuyentes al sistema de la ZenDAO recibirán un incentivo por participar en el proceso de votación.
 
@@ -126,13 +126,13 @@ La red ZEN fue blanco de un ataque del 51% el 3 de junio de 2018, aproximadament
 
 El equipo de Horizen se enteró inmediatamente gracias al sistema de alerta previamente establecido y se dio inicio a los procedimientos de mitigación que se habían diseñado para incrementar la dificultad de llevar a cabo un ataque contra la red. Ya que el equipo ingenieril había estado trabajando en soluciones posibles para un ataque del 51%, realizamos la prueba de concepto y la programación rápidamente y continuamos con las actualizaciones de la red.
 
-Determinamos que la mejor solución era mejorar la regla de la cadena más larga (consenso de Satoshi) e introdujimos una penalización por la entrega tardía de bloques, lo cual hizo exponencialmente más difícil y costoso realizar un ataque del 51%. Puedes consultar nuestro libro blanco sobre la “Solución al ataque del 51%” [aquí.](https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf)
+Determinamos que la mejor solución era mejorar la regla de la cadena más larga (consenso de Satoshi) e introdujimos una penalización por la entrega tardía de bloques, lo cual hizo exponencialmente más difícil y costoso realizar un ataque del 51%. Puedes consultar nuestro libro blanco sobre la “Solución al ataque del 51%” [aquí.](https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf)
 
 <div class="learn-more">
     <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Si le interesa saber más al respecto, lea nuestra entrada de blog
-    “<a href="https://blog.horizen.global/declaracion-zencash-transacciones-doble-gasto/" class="font-weight-bold" target="_blank">Declaración De Zencash En Transacciones De Doble Gasto</a>”
-    y el libro blanco “<a href="https://www.horizen.global/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-ZenCash-Spanish.pdf" class="font-weight-bold" target="_blank">Prevención de Ataques del 51%: Una solución para modificar el consenso de Bitcoin.</a>”
+    “<a href="https://blog.horizen.io/declaracion-zencash-transacciones-doble-gasto/" class="font-weight-bold" target="_blank">Declaración De Zencash En Transacciones De Doble Gasto</a>”
+    y el libro blanco “<a href="https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-ZenCash-Spanish.pdf" class="font-weight-bold" target="_blank">Prevención de Ataques del 51%: Una solución para modificar el consenso de Bitcoin.</a>”
 </div>
 
 ### Expansión de marca: de ZenCash a Horizen
@@ -140,16 +140,6 @@ Determinamos que la mejor solución era mejorar la regla de la cadena más larga
 Conforme fue creciendo nuestro proyecto se volvió más y más común que se nos confundiera con ZCash, lo que nos llevó a pensar en que era tiempo de un cambio de marca. Nuestro proyecto se enfocaba en la oferta de productos como sistemas de votación de tesorería y cadenas laterales con la capacidad de soportar contratos inteligentes. Como éramos más que una divisa digital, sentíamos que la palabra cash de nuestro nombre ya no describía adecuadamente ya nuestro proyecto.
 
 El motivo decisivo para realizar la expansión de marca fue la llegada de una carta de una institución bancaria internacional. En la carta, expresaban que el logo de ZenCash era similar al de uno de sus organizaciones y nos solicitaron cambiarlo. No tenía sentido pelear por una marca que ya no nos representaba. Entonces, creamos un equipo especial y nos asociamos con BranTuitive para dar inicio a la transformación. Los equipos se combinaron e invirtieron largas horas de trabajo en la expansión de marca. El resultado fue grandioso. El nombre Horizen se alineó perfectamente con la misión y metas del proyecto; al equipo y comunidad les encantó que fuéramos capaces de conservar “Zen” como parte del nombre y de que, como resultado, ZEN pudiera seguir siendo el símbolo de nuestra divisa.
-
-<img src="/assets/post_files/history/from-zencash-to-horizen/HZ-logos.svg" alt="Horizen logos" style="width: 500px; margin-top: 2rem; margin-bottom: 5rem;">
-
-<div class="learn-more">
-    <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
-    Para mayor información, puede leer las entradas de blog
-    “<a href="https://blog.horizen.global/zencash-estara-revelando-proximamente-su-nuevo-cambio-de-marca/" class="font-weight-bold" target="_blank">Revelación de Nueva Marca</a>”
-    y “<a href="https://blog.horizen.global/hola-horizen/" class="font-weight-bold" target="_blank">¡Hola Horizen!</a>”.
-</div>
-
 
 <table class="table table-borderless">
 <tbody>
@@ -166,7 +156,7 @@ El motivo decisivo para realizar la expansión de marca fue la llegada de una ca
 </table>
 
 <div class="row">
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://blog.horizen.global/category/spanish/" target="_blank">NOTICIAS MÁS RECIENTES</a></div>
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/es/roadmap/" target="_blank">HORIZEN PLAN DE TRABAJO</a></div>
-    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.global/es/team/" target="_blank">EQUIPO DE HORIZEN</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/news/" target="_blank">NOTICIAS MÁS RECIENTES</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/roadmap/" target="_blank">HORIZEN PLAN DE TRABAJO</a></div>
+    <div class="col-md-4 mt-3"><a class="btn btn-info btn-block pt-2 pb-2" href="https://www.horizen.io/team/" target="_blank">EQUIPO DE HORIZEN</a></div>
 </div>

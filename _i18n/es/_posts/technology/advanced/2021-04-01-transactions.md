@@ -19,12 +19,9 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">El modelo UTXO</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}"><h5 class="intro-article-title">El modelo UTXO</h5></a>
         <p class="mb-1">
             La mayoría de las cadenas de bloques emplean el modelo UTXO (Unspent Transaction Output) para rastrear los fondos de un usuario. Aquí explicaremos cómo funciona.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -36,12 +33,9 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">El explorador de bloques</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}"><h5 class="intro-article-title">El explorador de bloques</h5></a>
         <p class="mb-1">
             El explorador de bloques es una herramienta que permite al usuario navegar la información contenida en la cadena. Este artículo habla del tipo de información que encontrará el usuario.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">Leer el artículo</a>
         </p>
     </div>
 </div>
@@ -53,12 +47,9 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
         </a>
     </div>
     <div class="col-md-9">
-        <h5 class="intro-article-title">Atomic Swaps</h5>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}"><h5 class="intro-article-title">Atomic Swaps</h5></a>
         <p class="mb-1">
             Por último, queremos explorar un tipo especial de transacción. Un intercambio atómico (atomic swap) le permite a un usuario intercambiar criptomonedas diferentes sin la intermediación de un centro cambiario.
-        </p>
-        <p class="mb-0">
-            <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">Leer el artículo</a>
         </p>
     </div>
 </div>

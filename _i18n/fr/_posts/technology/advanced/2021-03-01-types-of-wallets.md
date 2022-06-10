@@ -16,7 +16,7 @@ Un wallet est un programme pour générer, gérer et stocker une paire de clés 
 ![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_D.jpg)
 ![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_M.jpg)
 
-Si vous n'êtes pas sûr de la fonctionnalité principale d'un portefeuille, vous pouvez lire notre [introduction aux portefeuilles]({{ site.baseurl }}{% post_url /technology/beginner/2020-03-01-wallets %}). La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
+La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
 
 ### Votre phrase mnémonique
 
@@ -114,3 +114,109 @@ Avec un wallet de bureau, mobile, papier ou hardware, vous possédez les clés e
 Tout ce mouvement de cryptomonnaies vise à vous redonner le pouvoir sur votre argent, mais...
 
 ![with great power comes great responsibility](/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)
+
+## Contenu Débutant Ci-dessous - Introduction aux Portefeuilles (Wallets)
+
+_Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de wallets, qui en est le mot anglais. En effet, dans le langage courant en français, vous pourrez entendre à la fois wallet, et portefeuille._
+
+Parfois, il y a un peu de confusion sur ce qu'un portefeuille peut et ne peut pas faire, alors nous allons commencer par ce qu'il ne peut pas faire. Les portefeuilles ne vous permettent généralement pas d'acheter des cryptomonnaies, c'est à cela que servent les [plateformes d'échange](https://www.horizen.io/exchanges/). Toutes les plateformes d'échange vous fournissent des portefeuilles pour y ranger vos fonds jusqu'à ce que vous les retiriez, mais les portefeuilles ne vous fournissent généralement pas de service d'échange.
+
+Voyons ce qu'un portefeuille peut faire. Un portefeuille est un programme qui a trois fonctions principales :
+
+- La génération, le stockage et la gestion de vos clés et adresses;
+- Vous montrer votre balance;
+- Créer et signer des transactions pour envoyer des fonds.
+
+![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_D.jpg)
+![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_M.jpg)
+
+La première fonction est en fait la fonction principale et le principal différenciateur de tous les portefeuilles : **générer**, **stocker et manipuler vos clés**. Avoir accès à vos clés privées signifie avoir accès à vos fonds.
+
+Par conséquent, l'emplacement dans lequel vos clés sont stockées détermine la sécurité de vos fonds et, en même temps, la commodité de leur utilisation. Avec les portefeuilles, il y a un compromis entre la sécurité et le confort :avoir de l'argent sur son portefeuille mobile (son smartphone) le rend facile à dépenser, mais pas très sûr. Garder de plus grandes quantités sur un hardware wallet est très sûr, mais pas aussi pratique à dépenser. Dans la section Avancé, nous vous détaillons les différents [types de portefeuilles](https://academy.horizen.io/fr/technology/advanced/types-of-wallets/) qui existent.
+
+## Un portefeuille fait office de porte-clés
+
+Nous aimerions vous présenter une autre analogie qui, à notre avis, aide beaucoup à comprendre le concept de vos clés et l'importance de leur sécurité. Il serait peut-être plus intuitif de considérer votre portefeuille comme un porte-clés plutôt que comme un véritable portefeuille. Le langage qui est couramment utilisé dans ce contexte est en quelque sorte trompeur, de sorte qu'il est clair comme de l'eau de roche :
+
+**Vous ne stockez jamais de fonds dans votre portefeuille, juste les clés pour y accéder !**
+
+La blockchain enregistre qu'une certaine quantité de coins est associée à une [paire de clés spécifique](https://academy.horizen.io/fr/technology/advanced/public-key-cryptography/). Elle "sait" combien de fonds sont associés à ces clés parce qu'elle stocke toutes les transactions qui ont déjà eu lieu. Si vous recevez 10 ZEN dans une première transaction et un peu plus tard 10 ZEN de nouveau, il ressort clairement de l'historique des transactions que vous, le propriétaire de la paire de clés, possédez 20 ZEN au total.
+
+![Wallet in FR](/assets/post_files/technology/beginner/wallets/FR_wallet2_D.jpg)
+![Wallet in FR](/assets/post_files/technology/beginner/wallets/FR_wallet2_M.jpg)
+
+Pour dépenser ces fonds, vous avez besoin de vos clés qui sont stockées dans votre portefeuille. Comparer un portefeuille de cryptomonnaies à un porte-clés est donc l'analogie la plus exacte. Si vous ne contrôlez pas vos clés, vous ne contrôlez pas vos fonds. Pour utiliser les cryptomonnaies, vous n'avez pas besoin de comprendre en détail comment tout fonctionne sous le capot. Le concept de vos clés vous donnant accès à vos fonds est néanmoins très important à garder à l'esprit.
+
+Les portefeuilles sont là pour créer une couche d'abstraction et ils deviennent de plus en plus ergonomiques. Ils vous montrent votre solde, génèrent une adresse pour recevoir des fonds en cliquant simplement sur "déposer" ou "recevoir", et vous fournissent une interface simple pour envoyer des fonds. Tout ce que vous avez à faire est d'entrer l'adresse à laquelle vous voulez envoyer les fonds et le montant que vous voulez transférer. La procédure de signature se déroulera en arrière-plan lorsque vous cliquerez sur Envoyer.
+
+## Et si je perds mes clés ?
+
+Vous n'avez pas besoin de demander à qui que ce soit de rejoindre le réseau et vous n'avez pas besoin de vous inscrire auprès d'une autorité centrale. Avoir cette possibilité vient avec la responsabilité de la sûreté de vos coins. Personne ne peut vous aider à récupérer vos clés au cas où vous les perdriez. Vous avez peut-être entendu parler de gens qui cherchent de vieux disques durs parce qu'ils ont "perdu leur bitcoin". Plus précisément, ils ont perdu les clés d'accès à leur bitcoin.
+
+Néanmoins, il existe une sorte de mécanisme de récupération avec la plupart des portefeuilles et il s'agit d'une phrase mnémonique ou phrase de sauvegarde. Une phrase mnémonique comprend habituellement 12 ou 24 mots. Avec ces mots, vous pouvez récupérer vos clés en cas de casse ou de perte d'un appareil avec un portefeuille. Lorsque vous installez un portefeuille et que vous recevez une phrase mnémonique pendant la procédure d'installation, notez-la sur une feuille de papier et conservez-la dans un endroit sûr. Si vous stockez de grandes quantités, vous devriez avoir au moins deux versions de votre phrase de sauvegarde, chacune stockée dans un emplacement différent.
+
+Il est essentiel de comprendre que votre phrase de sauvegarde est tout aussi importante que votre clé privée elle-même. Si quelqu'un met la main sur votre phrase de secours, il peut voler vos fonds. Par conséquent, l'enregistrer sous forme de capture d'écran ou de fichier texte sur votre ordinateur n'est pas une bonne idée.
+
+## Résumé
+
+En résumé, nous pouvons dire qu'un portefeuille est un programme qui vous aide à gérer vos clés et à créer des transactions d'une manière simple. Pour savoir combien d'argent vous possédez, votre porte-monnaie examine la blockchain pour voir combien de coins vous avez reçu. Pour envoyer des fonds, il écrit une transaction et la signe, c'est-à-dire qu'il la chiffre avec votre clé privée.
+
+Pour vous mettre à l'aise avec un portefeuille, pourquoi ne pas vous procurer notre portefeuille, [Sphere by Horizen](https://www.horizen.io/wallets/) , et visiter notre [Faucet](https://getzen.cash/). Vous recevrez une petite quantité de ZEN gratuitement pour recevoir et envoyer votre première transaction en cryptomonnaie sans avoir à vous inscrire ou à vous enregistrer où que ce soit. Installez simplement Sphere, créez un portefeuille (et enregistrez votre phrase de récupération sur une feuille de papier), donnez votre adresse au Faucet et après quelques minutes vous aurez votre première crypto pour jouer avec !
+
+## Explication Simple Ci-dessous - Qu'est-ce qu'un wallet ou portefeuille ?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
+        <td>
+            Un wallet est un programme sur votre ordinateur ou votre téléphone, qui vous permet de recevoir et d'envoyer de l'argent. Pour ce faire, il a besoin d'accéder à vos clés. Un wallet vous aidera à créer et gérer votre clé publique et privée qui fonctionnent comme votre adresse email et votre mot de passe. Une différence importante par rapport à un portefeuille ordinaire que vous utilisez tous les jours est que vous ne gardez pas votre argent dans votre portefeuille.
+        </td>
+    </tr>
+</table>
+
+Votre argent vit sur la blockchain. Pour pouvoir dépenser votre argent, vous devez utiliser votre clé privée pour le déverrouiller. En ce sens, un wallet ressemble plus à un porte-clés qu'à un véritable portefeuille.
+
+La meilleure façon de comprendre le fonctionnement d'un portefeuille de cryptomonnaie est de l'utiliser !
+
+## Contenu Débutant Ci-dessous - Introduction aux transactions
+
+L'argent numérique ne servirait à rien s'il n'y avait aucun moyen de l'envoyer d'une personne à l'autre. Dans cet article, nous voulons vous montrer comment fonctionnent les transactions et à quoi servent vos clés.
+
+Dans le tout premier article de la section technologie, nous avons dit que la [blockchain](https://academy.horizen.io/fr/technology/advanced/blockchain-as-a-data-structure/) est un grand registre public qui garde la trace de toutes les transactions qui se sont passées sur le réseau. Dans le dernier article, nous avons indiqué qu'un portefeuille est une application qui vous aide à gérer vos clés et à créer des transactions.
+
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T1_balance_D.jpg)
+
+Un portefeuille obtient votre solde en surveillant la blockchain pour toute transaction impliquant votre adresse. Initialement, toutes les transactions sont verrouillées cryptographiquement. Le verrouillage est basé sur l'adresse à laquelle la transaction est envoyée et ne peut être déverrouillé qu'avec la clé privée correspondante.
+
+Supposons maintenant que nous sommes sur votre portefeuille. Vous avez reçu un total de 20 ZEN en deux transactions différentes de 10 ZEN chacune. Maintenant vous voulez dépenser 2 ZEN pour le déjeuner. Votre portefeuille commence par une transaction vide et, dans un premier temps, choisit une de vos transactions précédentes à dépenser. Dans ce cas, les deux transactions ont une valeur suffisante pour que votre portefeuille puisse choisir au hasard la première.
+
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T2_input_D.jpg)
+
+L'argent qui est dépensé dans une transaction est appelé l'entrée (input) et l'argent qui est reçu est appelé la sortie (outpout). Votre portefeuille place l'une des sorties que vous possédez dans la transaction vide et utilise votre clé privée pour la déverrouiller afin qu'elle devienne utilisable ; c'est ce que nous appelons signer la transaction. La sortie déverrouillée est maintenant utilisée comme entrée pour une nouvelle transaction.
+
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_outputs_D.jpg)
+
+Ensuite, votre portefeuille crée les sorties. Il vous demande une adresse pour envoyer de l'argent et un montant. Vous voulez envoyer 2 ZEN à l'adresse XYZ pour payer votre déjeuner, donc votre portefeuille crée la première sortie en conséquence. La deuxième sortie est générée automatiquement ; c'est ce qu'on appelle la sortie de change. Les sorties sont semblables aux coupures en espèces. Si vous devez payer 2 $ US, mais que vous n'avez qu'un billet de 10 $, vous vous attendez à recevoir 8 $ en monnaie. Votre portefeuille inclut automatiquement le change dans la transaction. Les sorties nouvellement générées sont verrouillées par défaut.
+
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T4_broadcast_D.jpg)
+
+Enfin, votre portefeuille diffuse la transaction sur le réseau, où tous les nœuds et les mineurs vérifieront si la signature que vous avez utilisée pour débloquer votre argent est valide. Si c'est le cas, les mineurs incluront votre transaction dans le bloc suivant. La sortie de 10 ZEN que vous avez utilisé est désormais visible publiquement comme dépensée. Les sorties 2 et 8 ZEN nouvellement créées sont incluses dans un nouveau bloc et bloquées ; ou non dépensées. C'est ici qu'on parle du terme UTXO - Unspent Transaction Output _(sortie de transaction non dépensée, ndt)_ - c'est à cela qu'il fait référence.
+
+![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T5_confirmed_D.jpg)
+
+Lorsque vous possédez 10 ZEN, cela signifie que vous avez reçu 10 ZEN dans une transaction et que vous n'avez pas encore débloqué ou dépensé cette sortie.
+
+## Résumé
+
+Une transaction est une entrée unique dans la blockchain. Pour recevoir une transaction, vous devez fournir votre adresse à l'expéditeur. Un verrou cryptographique est automatiquement placé sur chaque sortie de transaction. Pour dépenser votre argent - la sortie d'une transaction - votre portefeuille utilise votre clé privée pour déverrouiller la sortie et l'utilise comme entrée pour la nouvelle transaction. Les résultats de votre transaction sont générés par votre portefeuille en fonction de l'adresse et du montant à transférer. Une fois que la transaction est envoyée au réseau, vérifiée et incluse dans le bloc suivant, la sortie que vous avez utilisée est marquée publiquement comme dépensée.
+
+## Explication Simple Ci-dessous - Qu'est-ce qu'une transaction ?
+
+Une transaction, c'est quand vous envoyez de l'argent à quelqu'un d'autre. Lorsque vous créez une transaction, vous envoyez un message au réseau indiquant qu'une partie de votre argent appartient maintenant à quelqu'un d'autre. La blockchain enregistre ce message.
+
+Par exemple, Alice souhaite envoyer un ZEN à son ami Bob. Alice envoie alors un message à tout le monde sur le réseau indiquant qu'elle vient d'envoyer un ZEN à Bob.
+
+Quand Bob veut dépenser ce ZEN, plus tard, il va créer un nouveau message pour le réseau. Ce message dira : J'ai reçu un ZEN de mon amie tout à l'heure, je veux l'envoyer à quelqu'un d'autre maintenant. C'est ainsi que vous envoyez de l'argent d'une personne à une autre sans l'aide de personne d'autre. C'est semblable à la façon dont vous obtenez un billet de banque de quelqu'un et le remettez à la personne suivante lorsque vous voulez le dépenser.
+
+![Transaction in FR](/assets/post_files/eli5/what-is-a-transaction/FR_transaction_D.jpg)
+![Transaction in FR](/assets/post_files/eli5/what-is-a-transaction/FR_transaction_M.jpg)

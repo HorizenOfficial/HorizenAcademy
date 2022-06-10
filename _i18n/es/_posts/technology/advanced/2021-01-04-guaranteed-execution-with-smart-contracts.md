@@ -7,7 +7,6 @@ permalink: /technology/advanced/guaranteed-execution-with-smart-contracts/
 topic: technology
 level: advanced
 chapter: "¿Qué es una cadena de bloques?"
-further_reads: [the_oracle_problem, the_truth_about_smart_contracts]
 ---
 
 Nos hemos acercado a la tecnología blockchain desde dos perspectivas. Primero como una estructura de datos y segundo como un protocolo para transferir valor. En el último artículo de este capítulo sobre las cadenas de bloques hablaremos de contratos inteligentes. Junto con la inteligencia artificial, el internet de las cosas y la blockchain, los contratos inteligentes han sido uno de los temas más debatidos del mundo tecnológico. En resumen, son un tipo de software en la cadena de bloques.
@@ -25,7 +24,7 @@ En teoría, un contrato inteligente podría determinar la transferencia de activ
 
 En un caso hipotético, el propietario y arrendatario de un inmueble podrían utilizar un contrato inteligente para regir su acuerdo de arrendamiento. Por ejemplo, el contrato podría cerrar los candados de la casa automáticamente si la renta no se pagara a tiempo. En este caso, la declaración “if, then”, luciría algo así:
 
-*Si la dirección del contrato recibe X cantidad antes del tercer día de cada mes de la cuenta con la dirección Y, entonces darle a Y acceso al departamento. Si esta cantidad no se recibe durante dos meses consecutivos, entonces negarle a Y acceso al departamento.*
+_Si la dirección del contrato recibe X cantidad antes del tercer día de cada mes de la cuenta con la dirección Y, entonces darle a Y acceso al departamento. Si esta cantidad no se recibe durante dos meses consecutivos, entonces negarle a Y acceso al departamento._
 
 Otro posible uso de los contratos inteligentes sería el de una especie de eBay descentralizada. El vendedor podría elaborar un contrato con una fecha de expiración que definiera la duración de la subasta y el monto inicial. El interesado recibiría su compra al final de la subasta a cambio del dinero ofrecido. Por su parte, los demás postores recibirán de manera automática una devolución de parte del contrato inteligente. Dicha versión descentralizada de eBay se consideraría un app descentralizada, o dApp.
 
@@ -52,11 +51,11 @@ Vale la pena mencionar que las plantillas de contratos inteligentes más usados 
 
 La promesa de los contratos inteligentes es ejecutarse sin ningún tipo de intermediario (trustless) por medio de un reglamento aplicado automáticamente. Queda por verse si realmente pueden cumplir con este promesa.
 
-Casi cualquier tipo de activo queda sujeto a la jurisdicción local del usuario. Esto quiere decir que cualquier contrato, inteligente o no, requiere que el usuario confíe en esta jurisdicción además de en el contrato en sí. La posesión de un contrato inteligente no significa posesión en el mundo real. Al igual que con un contrato regular, las condiciones quedan sujetas a la interpretación y a circunstancias cambiantes. Un contrato ilegal, por ejemplo, no tiene validez alguna. 
+Casi cualquier tipo de activo queda sujeto a la jurisdicción local del usuario. Esto quiere decir que cualquier contrato, inteligente o no, requiere que el usuario confíe en esta jurisdicción además de en el contrato en sí. La posesión de un contrato inteligente no significa posesión en el mundo real. Al igual que con un contrato regular, las condiciones quedan sujetas a la interpretación y a circunstancias cambiantes. Un contrato ilegal, por ejemplo, no tiene validez alguna.
 
 El usuario debe considerar que la aptitud para escribir contratos tradicionales surge de años de estudiar el marco legal que regula los ámbitos cubiertos por el contrato. Redactar un contrato inteligente resulta aún más complicado, pues debe considerarse el aspecto técnico del que dependen. Será necesaria una nueva generación de abogados letrados en el mundo digital para que se les pueda dar un uso más extendido a contratos inteligentes con validez legal.
 
-Hay incluso un obstáculo más por afrontar. El ámbito digital del contrato debe mantenerse al tanto de eventos reales para que los contratos inteligentes puedan funcionar y ejecutarse. Se le llama oráculo a una entidad que introduce este tipo de datos a una cadena de bloques o contacto inteligente. Al problema que surge de la necesidad de depositar confianza en esta entidad se le denomina problema del oráculo. 
+Hay incluso un obstáculo más por afrontar. El ámbito digital del contrato debe mantenerse al tanto de eventos reales para que los contratos inteligentes puedan funcionar y ejecutarse. Se le llama oráculo a una entidad que introduce este tipo de datos a una cadena de bloques o contacto inteligente. Al problema que surge de la necesidad de depositar confianza en esta entidad se le denomina problema del oráculo.
 
 Si hay un contrato inteligente ejecutando una plataforma de apuestas en un ambiente sin intermediarios, es deber del oráculo introducir el resultado del partido para que el contrato pueda distribuirles los fondos a los ganadores. Ya que el oráculo determina lo que el contrato ve, también controla lo que hace.
 
@@ -69,7 +68,7 @@ Algunos proyectos como Augur y Gnosis están buscando encontrar soluciones desce
 
 {% include blocks/tweet.html id="1089550845698396167" %}
 
-*Teoría: Ya que los mercados predictivos descentralizados pueden influenciar los incentivos de la probabilidad de un evento, nunca son solo herramientas de predicción, por lo que deben tratarse siempre como herramientas de incentivación*
+_Teoría: Ya que los mercados predictivos descentralizados pueden influenciar los incentivos de la probabilidad de un evento, nunca son solo herramientas de predicción, por lo que deben tratarse siempre como herramientas de incentivación_
 
 Antes de verse resueltos los problemas de crear contratos inteligentes con validez legal y el llamado problema del oráculo, el uso de este tipo de documentos se verá limitado a ámbitos experimentales donde las posibles pérdidas sean bajas. Un posible uso sería el de recompensas entregadas dentro de un videojuego, donde el pago se haría al usuario al ser activado por un logro objetivamente verificable en el código del juego.
 
@@ -80,5 +79,3 @@ En palabras de Jimmy Song, “Un contrato inteligente que confía en un tercero 
 Habiendo completado esta lección, ya debe tener una buena idea de la naturaleza de una cadena de bloques, pues la hemos analizado como estructura de datos y como un conjunto de reglas. La cadena puede almacenar información confiablemente dada la naturaleza distribuida del libro contable. Todos pueden participar en la red sin permiso o registro alguno mientras se apeguen a las reglas del protocolo. Así, se logra que las cadenas de bloques sean resistentes a la censura, sin permisos, libres de intermediarios y, sobre todo, muy valiosas. Una blockchain puede no solo almacenar pedazos de información sino también programas ejecutados de manera distribuida.
 
 Los contactos inteligentes pueden asegurar la ejecución objetiva de un contrato a partir de términos previamente acordados y hechos valer por el código mismo. Poseen el potencial de eliminar intermediarios y así disminuir costos y pérdidas de tiempo. Asimismo, es probable que incentiven una relación más estrecha entre desarrolladores de software y el sistema judicial. Habrá que superar varios obstáculos para que la tecnología se adopte de manera general, si embargo. Los reguladores tendrán que crear un marco que permita la implementación de contratos inteligentes con validez y tendrán que desarrollarse oráculos descentralizados.
-
-Este fue el último artículo en nuestro capítulo sobre la cadena de bloques y sus capacidades. En el siguiente capítulo, veremos a fondo cómo es que funcionan.

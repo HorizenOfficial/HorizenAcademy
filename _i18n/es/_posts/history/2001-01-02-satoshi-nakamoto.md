@@ -6,14 +6,13 @@ description: "Un desarrollador desconocido que usaba el seudónimo Satoshi Nakam
 permalink: /history/satoshi-nakamoto/
 topic: history
 chapter: "De Cypherpunks a Horizen"
-further_reads: [planting_bitcoin]
 ---
 
 Bitcoin acaba de celebrar su décimo aniversario, pero el creador de la primera criptomoneda aún permanece anónimo. Ha habido varios intentos por identificar al hombre, mujer o grupo detrás del seudónimo de Satoshi Nakamoto, pero ninguno de ellos ha sido exitoso.
 
 No pretendemos especular aquí sobre la identidad de Satoshi, sino solo exponer los hechos que conocemos. Para Satoshi, fue más una fortaleza que una debilidad haber desaparecido tras detonar el movimiento Bitcoin, pero hablaremos más de eso después.
 
-La historia de Bitcoin inicia el 31 de octubre de 2008, con la publicación del libro blanco de Satoshi Nakamoto  ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://bitcoin.org/bitcoin.pdf) en la lista de correos de criptografía. Al publicarlo, Satoshi mencionó que había trabajado el código a lo largo de casi dos años, y que había considerado necesario reservárselo hasta terminar de escribirlo y convencerse de que el software podría funcionar.
+La historia de Bitcoin inicia el 31 de octubre de 2008, con la publicación del libro blanco de Satoshi Nakamoto ["Bitcoin: A Peer-to-Peer Electronic Cash System"](https://bitcoin.org/bitcoin.pdf) en la lista de correos de criptografía. Al publicarlo, Satoshi mencionó que había trabajado el código a lo largo de casi dos años, y que había considerado necesario reservárselo hasta terminar de escribirlo y convencerse de que el software podría funcionar.
 
 Diez días después, el 9 de noviembre de 2008, publicó el código fuente de Bitcoin en Sourceforge con la intención de que otros lo revisaran y se convencieran también de que resultaba operable.
 
@@ -29,7 +28,7 @@ El 9 de enero del mismo año, se publicó en Sourceforge la versión 0.1 de Bitc
 
 A través de la lista de correos de criptografía y la fundación P2P, un gran número de cypherpunks se unieron a la discusión sobre Bitcoin. Algunos de ellos, como Adam Back, Wei Dai y Nick Szabo habían estado trabajando en sistemas electrónicos de dinero por cuenta propia, y en aquel momento eran de las pocas personas capaces de hablar del tema competentemente.
 
-Otro de los cypherpunks, Hal Finney, condujo la primera transacción de bitcoins el 12 de del mismo año, la cual se grabó en el [bloque 170](https://blockexplorer.com/block/00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee) de la blockchain de Bitcoin (al momento de escribirse este artículo, la altura de bloque actual es de 557,200). En la transaccoón, Finney recibió 10 BTC de Satoshi Nakamoto.
+Otro de los cypherpunks, Hal Finney, condujo la primera transacción de bitcoins el 12 de del mismo año, la cual se grabó en el bloque 170 de la blockchain de Bitcoin (al momento de escribirse este artículo, la altura de bloque actual es de 557,200). En la transaccoón, Finney recibió 10 BTC de Satoshi Nakamoto.
 
 Tomó varios meses, hasta el 5 de octubre de 2008, para que se estableciera el primer tipo de cambio entre el Bitcoin y el dólar americano. New Liberty Standard publicó ese día un tipo de cambio que igualaba el valor de 1 USD con el de 1309.03 BTC. ¿¡Dónde quedó la máquina del tiempo?! En ese momento, el tipo de cambio no se basó en ningún mercado real sino en el costo eléctrico de minar un bitcoin.
 
@@ -37,7 +36,7 @@ Pasó otro medio año hasta que se registró la primera transacción por interca
 
 Fue alrededor de este momento cuando Satoshi decidió salir del proyecto. Entregó la responsabilidad del repositorio del código fuente a Gavin Andresen y se retiró sin mayor aviso.
 
-Para visualizar mejor el orden de eventos y todo lo sucedido, se encuentra disponible una  [línea de tiempo (liga en inglés)](http://historyofbitcoin.org/) bastante comprensiva que detalla todos los hechos hasta inicios de 2014.
+Para visualizar mejor el orden de eventos y todo lo sucedido, se encuentra disponible una [línea de tiempo (liga en inglés)](http://historyofbitcoin.org/) bastante comprensiva que detalla todos los hechos hasta inicios de 2014.
 
 ### La ausencia como una fortaleza
 

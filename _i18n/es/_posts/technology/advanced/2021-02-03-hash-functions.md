@@ -7,12 +7,11 @@ permalink: /technology/advanced/hash-functions/
 topic: technology
 level: advanced
 chapter: "¿Cómo funciona una cadena de bloques?"
-further_reads: [hash_functions_explained_with_emojis]
 ---
 
 Las funciones hash son una parte esencial de la tecnología blockchain, por lo que sirven muchos propósitos. Son funciones matemáticas que toman una entrada de cualquier extensión y producen una salida con una extensión predefinida. A la salida suele llamársele valor hash, compendio hash o simplemente hash.
 
-Hay tantas [funciones hash](https://en.wikipedia.org/wiki/List_of_hash_functions) que hay calculadoras en línea para funciones hash (como [esta](https://www.fileformat.info/tool/hash.htm), por ejemplo). Las llamadas calculadoras permiten al usuario aplicarle un hash a una misma entrada utilizando a la vez diferentes funciones. La extensión de la salida puede oscilar desde un solo carácter hasta archivos completos, pero el tamaño de la salida siempre será el mismo por función.
+Hay tantas funciones hash que hay calculadoras en línea para funciones hash (como [esta](https://www.fileformat.info/tool/hash.htm), por ejemplo). Las llamadas calculadoras permiten al usuario aplicarle un hash a una misma entrada utilizando a la vez diferentes funciones. La extensión de la salida puede oscilar desde un solo carácter hasta archivos completos, pero el tamaño de la salida siempre será el mismo por función.
 
 Una función hash criptográfica debe cumplir con los siguientes criterios para utilizarse en una cadena de bloques de manera viable:
 
@@ -34,4 +33,19 @@ Cada conjunto de datos utilizado como entrada puede identificarse fácilmente po
 
 Las funciones hash son la piedra angular de la tecnología blockchain. El hash de un archivo es como una huella digital. Resulta fácil detectar si dos archivos son idénticos o no comparando sus hashes. Las funciones hash encadenan a los bloques, por lo que no puede modificarse información pasada sin incluir el hash del bloque anterior. Al intentar modificar los datos, las referencias o enlaces se romperán.
 
-En nuestro próximo artículo veremos a fondo el tema de criptografía de llave pública. Este tipo de criptografía puede considerarse la segunda piedra angular de la tecnología de cadenas de bloques y de la asignación de una identidad dentro de las mismas.
+## Explicación Simple a Continuación - ¿Qué es una función hash?
+
+<table class="table lead">
+    <tr>
+        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td>
+            Una función hash se utiliza para crear la huella digital de un archivo. Es posible emplear una función hash para hacer esto con casi cualquier tipo de archivo.
+        </td>
+    </tr>
+</table>
+
+Si el usuario desea mandar un archivo de texto sin que el receptor pueda modificarlo, este puede utilizar una función hash para adjuntarle una huella digital al archivo antes de mandarlo.
+
+Al recibir de nuevo el archivo de texto compartido, el remitente original puede utilizar otra vez la función hash para crear una segunda huella digital. Si ambas huellas coinciden, significa que no se ha modificado el archivo. Si las huellas no coinciden, en cambio, significa que el archivo ha sufrido modificaciones.
+
+La cadena de bloques utiliza funciones hash para crear una huella digital del historial de las transacciones. Si alguien quisiera engañar al sistema modificando el registro de alguna transacción, todos los usuarios de la cadena se enterarían, pues la huella digital del historial de las transacciones antes y después de su manipulación no coincidiría.

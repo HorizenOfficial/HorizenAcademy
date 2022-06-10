@@ -7,7 +7,6 @@ permalink: /technology/advanced/atomic-swaps/
 topic: technology
 level: advanced
 chapter: "Transacciones"
-further_reads: [atomic_swaps_the_interoperability_revolution_in_cryptos, everything_you_need_to_know_about_atomic_swaps_and_how_komodo_is_advancing_the_technology, atomic_swap_compatibility_of_different_cryptocurrencies]
 ---
 
 El último tipo de transacción que nos gustaría cubrir es el del intercambio atómico. Este es un tipo de transacción que toca los temas de escalabilidad e interoperabilidad a la vez.
@@ -32,18 +31,18 @@ Deben cumplirse dos condiciones para realizar un intercambio atómico entre dos 
 
 El usuario es capaz de crear un HTLC una vez cumplidas ambas condiciones. El proceso de un intercambio atómico suele lucir como lo describiremos a continuación. Empecemos por suponer que Alice tiene BTC y Bob tiene algo de ZEN. Ambos acuerdan intercambiar sus monedas.
 
- 1. Alice genera un HTLC con una dirección en la cadena de bloques de Bitcoin. Los contratos inteligentes suelen incluir una dirección para que el usuario pueda interactuar con ellos; los HTLC no son la excepción.
- 2. Alice genera una llave (un número aleatorio) y deriva el candado hash de su llave hasheando el número aleatorio (la llave), así, es seguro que el candado y la llave coincidirán. Este paso es similar al de crear una llave privada y derivar de ella una dirección, tal como lo explicamos en nuestro artículo sobre criptografía de llave pública.
- 3. Alice deposita la cantidad acordada de BTC en el HTLC.
- 4. Alice le pone candado a sus fondos con el candado hash que creó y le envía una copia de este a Bob.
- 5. Bob crea un HTLC con una dirección en la cadena de bloques de Horizen utilizando el candado hash de Alice.
- 6. Bob deposita la cantidad acordada de ZEN en la dirección del contrato y le pone candado.
+1.  Alice genera un HTLC con una dirección en la cadena de bloques de Bitcoin. Los contratos inteligentes suelen incluir una dirección para que el usuario pueda interactuar con ellos; los HTLC no son la excepción.
+2.  Alice genera una llave (un número aleatorio) y deriva el candado hash de su llave hasheando el número aleatorio (la llave), así, es seguro que el candado y la llave coincidirán. Este paso es similar al de crear una llave privada y derivar de ella una dirección, tal como lo explicamos en nuestro artículo sobre criptografía de llave pública.
+3.  Alice deposita la cantidad acordada de BTC en el HTLC.
+4.  Alice le pone candado a sus fondos con el candado hash que creó y le envía una copia de este a Bob.
+5.  Bob crea un HTLC con una dirección en la cadena de bloques de Horizen utilizando el candado hash de Alice.
+6.  Bob deposita la cantidad acordada de ZEN en la dirección del contrato y le pone candado.
 
 A estas alturas, ambos participantes han guardado los fondos que habían acordado intercambiar. Ya que ambas cadenas de bloques son públicas, cada uno puede verificar que las cantidades han sido depositadas. Solo Alice cuenta con la llave para abrir ambos fondos por el momento, pero en caso de que no lo hiciera, el bloqueo temporal les regresaría los fondos a sus dueños originales tras cierto tiempo. De esta manera, Alice no puede estafar a Bob poniéndole candado a sus fondos sin darle la llave para abrirlos. Si se decide proceder, los dos pasos siguientes suceden de manera casi simultánea:
 
- 7. Alice utiliza la llave para acceder a los ZEN de Bob y los transfiere a una cuenta bajo su control. Bob se entera de la existencia de llave cuando Alice le quita el candado a sus fondos monitoreando su HTLC.
- 8. Bob utiliza la llave que acaba de recibir para acceder a las bitcoins de Alice y transferirlas a la dirección Bitcoin que controla.
- 9. Ambos partidos han intercambiado exitosamente sus fondos sin necesidad de tenerse confianza.
+7.  Alice utiliza la llave para acceder a los ZEN de Bob y los transfiere a una cuenta bajo su control. Bob se entera de la existencia de llave cuando Alice le quita el candado a sus fondos monitoreando su HTLC.
+8.  Bob utiliza la llave que acaba de recibir para acceder a las bitcoins de Alice y transferirlas a la dirección Bitcoin que controla.
+9.  Ambos partidos han intercambiado exitosamente sus fondos sin necesidad de tenerse confianza.
 
 Ya que el proceso es automático, los pasos 7 y 8 suceden simultáneamente, por lo que no se necesita confiar en ninguna de las partes. De esta manera, o ambas partes obtienen sus fondos o ninguna los obtiene.
 
@@ -64,5 +63,3 @@ Esta tecnología resulta muy prometedora, pero para lograr la adopción general 
 ### Resumen
 
 Los intercambios atómicos representarán una alternativa a los centros cambiarios centralizados utilizados en la actualidad una vez que estén disponibles para la mayoría de las criptomonedas. En ningún momento del intercambio hay terceros con acceso a los fondos de los usuarios. El proceso de intercambio queda libre de terceros y es casi instantáneo. Los HTLC son un tipo de contrato que forman el núcleo de los intercambios atómicos. Es posible que pronto la compatibilidad con intercambios atómicos sea una necesidad par que una cadena de bloques logre adopción.
-
-Este fue el último artículo sobre transacciones del nivel avanzado. Para aprender más sobre cómo funcionan las transacciones y qué tipo de transacciones existen, puede pasar al nivel experto. En el nivel avanzado, pasaremos a una introducción de las técnicas que ayudan al usuario a mantener su privacidad dentro de la blockchain.

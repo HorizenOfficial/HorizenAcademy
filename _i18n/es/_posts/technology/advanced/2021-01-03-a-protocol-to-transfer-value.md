@@ -7,7 +7,6 @@ permalink: /technology/advanced/a-protocol-to-transfer-value/
 topic: technology
 level: advanced
 chapter: "¿Qué es una cadena de bloques?"
-further_reads: [why_bitcoin_lightning_network_is_ingenious]
 ---
 
 Es momento de abordar la cadena de bloques desde otra perspectiva, una que considera tanto el uso de esta tecnología como una red de pago para transacciones financieras como las reglas y acuerdos que la hacen funcionar.
@@ -16,7 +15,7 @@ Es momento de abordar la cadena de bloques desde otra perspectiva, una que consi
 
 > “El protocolo Bitcoin y su red son hoy en día una red para transferir valor. Más allá, es un importante servicio de seguridad que es la columna de la aseguración de contratos, propiedad física y digital, patrimonio, bonos, inteligencia artificial y un número enorme de aplicaciones que no se han concebido aún." - Jeff Garzik, Desarrollador de Bitcoin Core
 
-El protocolo es un grupo de reglas que gobierna la validad de las transacciones y el funcionamiento general de la cadena de bloques. La [definición de Technopedia](https://www.techopedia.com/definition/12938/network-protocols) de un protocolo de red es la siguiente:
+El protocolo es un grupo de reglas que gobierna la validad de las transacciones y el funcionamiento general de la cadena de bloques. La definición de Technopedia de un protocolo de red es la siguiente:
 
 > "Network protocols are formal standards and policies comprised of rules, procedures and formats that define communication between two or more devices over a network. Network protocols govern the end-to-end processes of timely, secure and managed data or network communication."
 
@@ -79,4 +78,27 @@ Para concluir esta lección de la manera en que empezó, tomemos otra cita de Je
 
 > "Do not try to stuff every feature into the Bitcoin protocol. Let it do what it does best. Build systems on top of Bitcoin which use its strengths.... Putting all the world’s coffee Transacciones, and all the world’s stock trades, and all the world’s Internet of Things device samplings, on the Bitcoin blockchain seems misguided" - Jeff Garzik
 
-> "No hay por qué atiborrar el protocolo Bitcoin. Déjenlo hacer lo que mejor hace. Se deben construir sobre Bitcoin sistemas que aprovechen sus fortalezas....  Incluir en la blockchain de Bitcoin todas las compraventas de café, operaciones bursátiles del mundo y muestreos de todo el internet de las cosas es un esfuerzo equivocado." - Jeff Garzik
+> "No hay por qué atiborrar el protocolo Bitcoin. Déjenlo hacer lo que mejor hace. Se deben construir sobre Bitcoin sistemas que aprovechen sus fortalezas.... Incluir en la blockchain de Bitcoin todas las compraventas de café, operaciones bursátiles del mundo y muestreos de todo el internet de las cosas es un esfuerzo equivocado." - Jeff Garzik
+
+## Encuentre nuestro contenido para principiantes sobre este tema a continuación
+
+Una de las grandes innovaciones de la cadena de bloques es su función como protocolo para transferir valor. Andreas Antonopoulos describió a Bitcoin como “un lenguaje para comunicar valor”, una declaración que tiene mucho de cierto.
+
+Una analogía útil para entender este concepto es la de un servicio de correos. Haciendo de lado a la oficina de correos como la entidad central que opera el servicio, es posible considerar lo siguiente:
+
+El correo es un sistema sin permisos en el sentido de que cualquiera puede enviar una carta con solo encontrar un buzón y depositar la carta, la cual llegará a su destino algunos días después. No se necesita el permiso de nadie para poder hacerlo.
+
+El protocolo para enviar una carta se compone de dos requisitos: primeramente, se debe poner en la carta un sello o estampilla de valor suficiente y por último, se debe indicar la dirección del destinatario. El formato estándar de una dirección es nombre, dirección y país (en caso de que la carta vaya al extranjero).
+
+Cuando una criptomoneda opera en una cadena de bloques, la red —un servicio descentralizado como el del correo— se encarga de entregar la transacción —carta— al destinatario. El protocolo exige una pequeña tarifa por transacción —estampilla— y que se proporcione la información necesaria de forma estandarizada: dirección, dirección del beneficiario, cantidad a transferir y firma del usuario.
+
+![Mail protocol in ES](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_D.jpg)
+![Mail protocol in ES](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_M.jpg)
+
+Las direcciones de una cadena de bloques son diferentes a las empleadas por el servicio de correos. La dirección de una, por ejemplo, cadena se ve así: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX.
+
+Las firmas también funcionan de manera diferente a lo esperado, pero los aspectos clave de las direcciones y firmas no se discutirán en los siguientes artículos de esta sección, así como las [billeteras](https://academy.horizen.io/es/technology/advanced/types-of-wallets/) que crean direcciones y envían transacciones criptomonetarias.
+
+### Resumen
+
+Es posible considerar al sistema de correos como un protocolo para transferir bienes físicos, mientras que el internet, con su protocolo TCP/IP subyacente, permite al usuario transferir información. La tecnología blockchain y criptomonedas le dan al usuario un protocolo para poder transferir valor sin intermediarios.

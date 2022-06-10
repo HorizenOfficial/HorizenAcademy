@@ -39,7 +39,7 @@ Veamos primero un solo bloque. La altura del primer bloque fue 0. Si el usuario 
 
 Repasemos la información que tenemos aquí. Puede parecer mucha en un principio, pero analizándola paso por paso resulta bastante fácil de entender.
 
-El bloque génesis contiene solo una transacción. Una transacción por bloque es la cantidad  mínima, pues cada bloque registra la transacción coinbase que marca la creación de nuevas monedas entregadas como recompensa al minero que resolvió el bloque.
+El bloque génesis contiene solo una transacción. Una transacción por bloque es la cantidad mínima, pues cada bloque registra la transacción coinbase que marca la creación de nuevas monedas entregadas como recompensa al minero que resolvió el bloque.
 
 La recompensa por minar Bitcoin, en un principio, era de 50 BTC. La recompensa por bloque se reduce a la mitad cada cuatro años (o más precisamente cada 210,000 bloques). Esto ha sucedido dos veces hasta ahora. Un minero recibe actualmente 12.5 BTC por bloque.
 
@@ -49,7 +49,7 @@ Como ya hemos discutido la altura del bloque, pasaremos a hablar de la marca de 
 
 El campo de “Transmitido por” contiene información sobre el minero del bloque. Los grupos de minería de la actualidad, así como sus direcciones de recompensa, suelen ser de conocimiento público. De esta manera, el explorador de bloques sabe quién minó el bloque; compara las direcciones que recibieron las monedas recién generadas (1A1zP1…) en la transacción coinbase con los números de las direcciones de grupos de minería conocidos. En este caso, conocemos la identidad del minero aunque el explorador del bloque no nos la proporciona; el mismo Satoshi Nakamoto.
 
-Hablamos de _dificultad_ a más detalle en nuestro [artículo sobre minería]({{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}). La dificultad describe qué tan difícil es el acertijo que deben resolver los mineros, y se refiere al número de ceros iniciales en el hash del bloque. Como podemos apreciar a la derecha, el hash del bloque génesis tenía diez ceros iniciales. Hoy en día (al momento de redactar el artículo) un bloque como el 539772 exige por lo menos 18 ceros iniciales. Entre mayor el número de ceros, mayor la dificultad del acertijo.
+Hablamos de _dificultad_ a más detalle en nuestro [artículo sobre minería](https://academy.horizen.io/es/technology/advanced/mining/). La dificultad describe qué tan difícil es el acertijo que deben resolver los mineros, y se refiere al número de ceros iniciales en el hash del bloque. Como podemos apreciar a la derecha, el hash del bloque génesis tenía diez ceros iniciales. Hoy en día (al momento de redactar el artículo) un bloque como el 539772 exige por lo menos 18 ceros iniciales. Entre mayor el número de ceros, mayor la dificultad del acertijo.
 
 Los bits, el tamaño y el peso se refieren al tamaño de los datos de un bloque determinado, nada espectacular. La versión se refiere al software que se ejecutó en el momento en que se creó el bloque.
 
@@ -66,3 +66,35 @@ Si queremos visitar la primera transacción de criptomonedas de la historia tene
 Este bloque es el primero en la cadena de bloques de Bitcoin que contiene más de una transacción. La transacción coinbase aparece arriba, como es de esperarse, y debajo de esta se registra la primera transacción; una persona enviándole monedas a otra.
 
 Esperamos que este artículo lo haya ayudado a navegar un explorador de bloques (o varios). Lo animamos a usarlos y analizarlos, pues esto lo ayudará a entender la manera en la que se organiza información en la cadena de bloques.
+
+## Contenido para Principiantes a Continuación - El explorador de bloques
+
+Un explorador de bloques es una herramienta que permite al usuario explorar la cadena de bloques, así como un explorador de internet te permite acceder a la información en la web. Utilizando un explorador el usuario puede consultar cuántas monedas hay guardadas en una dirección específica, con cuántas monedas cuenta actualmente e incluso cuántas monedas ha tenido ese usuario en total (lo cual logra repasando el historial de transacciones de esa dirección). Esto resulta útil cuando un usuario crea una transacción y desea luego consultar su estatus. Tomemos un ejemplo de la vida real:
+
+Esto es lo que puede esperarse al explorar una dirección con un explorador de bloques (la mayoría de ellos funcionan de manera similar). La dirección que se buscó para este ejemplo tomado de un explorador de bloques de Horizen se encuentra en la parte superior: znf7; digamos que esta dirección le pertenece a Bob.
+
+<div class="my-4">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.jpg" alt="Resumen de dirección del explorador">
+</div>
+
+En la parte superior de la página, se encuentra un resumen de la actividad de la dirección. La información que aparece incluye la cantidad total recibida y enviada desde esta dirección, así como el saldo actual. La dirección en cuestión ha recibido un total de 42 ZEN. Bob no le ha enviado ningún ZEN a nadie, por lo que aún tiene un saldo de 42 ZEN.
+
+<div class="my-4">
+    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.jpg" alt="Transacción de la dirección en el explorador">
+</div>
+
+Todas las transacciones relacionadas a esta dirección pueden encontrarse debajo del resumen de la dirección. Esta cuenta ha participado en una sola transacción hasta ahora. Una transacción se caracteriza por su número de identificación individual, en este caso la secuencia de números azules en la parte superior de la caja gris (a46f…).
+
+Esta transacción cuenta con una entrada (a la izquierda) y dos salidas (a la derecha). Las entradas son lo que se envía, y las salidas lo que se recibe.
+
+Digamos que Bob recibió fondos de parte de Alice. La dirección de Alice aparecerá junto a la entrada en la izquierda, znd3…
+
+Alice contaba con 46.6 ZEN en su dirección, pero solo quería enviarle 42 a Bob. Alice puede lograr esto utilizando su saldo entero de 46.6 ZEN como entrada (izquierda) para crear dos salidas, una con los 42 ZEN que desea enviarle a Bob, y otra con los 4.6 ZEN restantes que desea enviarse a sí misma. Así mismo se pagan $45 en una tienda si el cliente solo tiene un billete de $50. Se entregan los $50 y se esperan $5 de regreso. A la parte de la transacción que envía los 4.66 ZEN de vuelta a la dirección de origen se le llama cambio en el ámbito criptomonetario.
+
+Discutiremos el concepto de entradas y salidas en el siguiente nivel con la introducción del modelo UTXO (salida de transacciones no utilizadas). Por ahora, quedan aún tres informaciones importantes que presentar:
+
+- El remitente agregó una comisión por transacción de 0.0001 ZEN. Estas comisiones se implementan como una medida para evitar el spam.
+- El número de confirmaciones revela la edad de una transacción. Cada bloque que sea crea (mina) después de una transacción y se incluye en la cadena de bloques se considera una confirmación de esa transacción.
+- Existe un volumen total de la transacción.
+
+Lo animamos a regresar a nuestro [explorador de bloques](https://explorer.zensystem.io/) para que empiece a descubrir sus funcionalidades. La página de inicio le mostrará las transacciones más recientes en tiempo real si aún no cuenta con una dirección para empezar a explorar. Solo elija una dándole clic para poder visualizar las cuentas relacionadas. Puede empezar a explorar de ahí.

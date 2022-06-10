@@ -6,7 +6,6 @@ description: "Les Cypherpukns sont un groupe d'informaticiens dévoués à fourn
 permalink: /history/the-cypherpunk-movement/
 topic: history
 chapter: "Des Cypherpunks à Horizen"
-further_reads: [bitcoin_and_the_rise_of_the_cypherpunks, a_cypherpunk_manifesto]
 ---
 
 Pour le tout premier article de l'Académie Horizen, nous aimerions remonter le temps et voir d'où viennent la technologie de la blockchain et des cryptomonnaies. Cela nous ramène au mouvement Cypherpunk qui a commencé dans les années 1970.
@@ -20,13 +19,13 @@ Deux publications ont rendu la cryptographie connue du grand public, à savoir l
 ![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
 ![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
 
-Dans les années 1980, David Chaum a commencé à écrire sur des sujets tels que la monnaie numérique anonyme et les systèmes de réputation pseudonymes, tels que ceux décrits dans  ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://www.chaum.com/publications/Security_Wthout_Identification.html). C'était le premier pas vers les monnaies numériques que nous voyons aujourd'hui.
+Dans les années 1980, David Chaum a commencé à écrire sur des sujets tels que la monnaie numérique anonyme et les systèmes de réputation pseudonymes, tels que ceux décrits dans ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://chaum.com/security-without-identification/). C'était le premier pas vers les monnaies numériques que nous voyons aujourd'hui.
 
 ### Les Cypherpunks
 
-Ce n'est qu'en 1992 qu'un groupe de cryptographes de la région de la baie de San Francisco a commencé à se réunir régulièrement afin de discuter de leur travail et de leurs idées semblables. Ils ont établi les bases de la recherche cryptographique pour les années à venir. En plus de leurs réunions régulières, ils ont également commencé la liste de diffusion Cypherpunk dans laquelle de nombreuses idées qui ont conduit à la naissance de Bitcoin ont été discutées. Fin 1992, Eric Hughes, l'un des premiers cypherpunks, écrivit le ["A Cypherpunk’s Manifesto"](https://www.activism.net/cypherpunk/manifesto.html), exposant les idéaux et la vision du mouvement. 
+Ce n'est qu'en 1992 qu'un groupe de cryptographes de la région de la baie de San Francisco a commencé à se réunir régulièrement afin de discuter de leur travail et de leurs idées semblables. Ils ont établi les bases de la recherche cryptographique pour les années à venir. En plus de leurs réunions régulières, ils ont également commencé la liste de diffusion Cypherpunk dans laquelle de nombreuses idées qui ont conduit à la naissance de Bitcoin ont été discutées. Fin 1992, Eric Hughes, l'un des premiers cypherpunks, écrivit le ["A Cypherpunk’s Manifesto"](https://www.activism.net/cypherpunk/manifesto.html), exposant les idéaux et la vision du mouvement.
 
-_Note : Nous vous encourageons à le lire, car il nous semble tout aussi pertinent, sinon plus qu'il ne l'était en 1992 et cela ne prend que 5 minutes de votre temps. C'est étonnant de voir à quel point les premiers membres ont fait preuve de prévoyance quand la plupart des gens ne pensaient même pas encore aux ordinateurs._ 
+_Note : Nous vous encourageons à le lire, car il nous semble tout aussi pertinent, sinon plus qu'il ne l'était en 1992 et cela ne prend que 5 minutes de votre temps. C'est étonnant de voir à quel point les premiers membres ont fait preuve de prévoyance quand la plupart des gens ne pensaient même pas encore aux ordinateurs._
 
 ### Le manifeste des cypherpunks
 
@@ -52,7 +51,7 @@ _Nous devons défendre notre vie privée si nous voulons en avoir. Nous devons n
 
 _“Nous, les Cypherpunks, sommes dédiés à la construction de systèmes anonymes. Nous défendons notre vie privée grâce à la cryptographie, aux systèmes de transmission anonyme du courrier aux signatures numériques et à l'argent électronique.”_
 
-### Le cash électronique 
+### Le cash électronique
 
 Bien que vous ayez peut-être entendu parler de ce mouvement pour la première fois, vous avez très certainement bénéficié des travaux de certains de leurs membres qui ont servi à développer le chiffrement Tor, BitTorrent, SSL et PGP. Et après avoir lu la dernière citation du Manifeste ci-dessus, il ne vous surprendra probablement pas que de nombreux concepts et idées qui ont conduit à l'émergence des cryptomonnaies proviennent de ce groupe.
 
