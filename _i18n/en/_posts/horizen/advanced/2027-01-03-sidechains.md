@@ -41,7 +41,7 @@ Sidechains are a concept that people have been looking into for a while now. The
 
 When _Back et al._ introduced the sidechain concept in 2014, they provided the following definition along with it:
 
-> “A sidechain is a blockchain that validates data from other blockchains. […] A pegged sidechain is a sidechain whose assets can be imported from and returned to other chains; that is, a sidechain that supports two-way pegged assets.” ***A. *Back et al\*.** - Enabling Blockchain Innovations with Pegged Sidechains, 2014\*
+> “A sidechain is a blockchain that validates data from other blockchains. […] A pegged sidechain is a sidechain whose assets can be imported from and returned to other chains; that is, a sidechain that supports two-way pegged assets.” **A. Back et al.** - Enabling Blockchain Innovations with Pegged Sidechains, 2014
 
 **In other words**, a sidechain is a blockchain that can communicate and interoperate with one or more other chains. When you hear the term sidechain today, people are mostly talking about pegged sidechains, which allow you to transfer assets back and forth between chains.
 
@@ -51,7 +51,7 @@ Most blockchains facilitating cryptocurrencies use the **proof-of-work** consens
 
 As debates across the recent years have shown, making changes to the codebase in decentralized projects tends to be a cumbersome process. **This is arguably a feature, not a bug.** Stability, not in regards to token price but code, is crucial, especially for projects such as **Bitcoin**, and the overall security of the protocol benefits greatly from the careful consideration of every change applied to the system.
 
-**\*Sidechains** offer a mechanism to implement features on top of a first layer protocol without compromising the security or stability of said protocol.\* After an initial **fork** that includes the capability to deploy sidechains and introduces a way to transfer assets from the mainchain to the sidechain and vice versa, **a number of parallel chains can be built**, each serving a different purpose, without having to build consensus for each individual feature.
+**Sidechains** offer a mechanism to implement features on top of a first layer protocol without compromising the security or stability of said protocol. After an initial **fork** that includes the capability to deploy sidechains and introduces a way to transfer assets from the mainchain to the sidechain and vice versa, **a number of parallel chains can be built**, each serving a different purpose, without having to build consensus for each individual feature.
 
 **It is important to note** that the initial change to the codebase enabling the deployment of sidechains and cross chain transfers has to be done carefully and possible solutions should be evaluated with great caution. If a project manages to deploy those features, then developers can start playing around and build on top of projects where changes to the protocol traditionally required consensus building for months, or even years. **Ideally**, the sidechain implementation will give developers on the sidechain _many degrees_ of freedom while eliminating the possibility to compromise mainchain security. **If a user has no need to use a particular sidechain, he doesn’t have to care about the security of those sidechains.**
 
@@ -378,7 +378,7 @@ $$
 5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120
 $$
 
-Writing a function that calculates the factorial of a given number is elegantly achieved using **recursion**. **The idea is that the factorial of the number **5** is equal to five times the factorial of the number four:**
+Writing a function that calculates the factorial of a given number is elegantly achieved using **recursion**. **The idea is that the factorial of the number 5** is equal to five times the factorial of the number four:
 
 **\\(5! = 5 \cdot 4!\\)**
 
@@ -451,7 +451,7 @@ $$
 
 This construction is of great value for verifiable sidechains. Not only can states be computed recursively, but so can proofs for each state and state transition. **What is needed for the Zendoo protocol is a proof of the statement:**
 
-There was a series of state transitions **\\((t\*1, ..., t_n)\\)** and by applying these state transitions to the initial state **\\(s_1\\)** one after another the state **\\((s\*{n+1}))\\** is reached.
+There was a series of state transitions **\\((t\*1, ..., t_n)\\)** and by applying these state transitions to the initial state **\\(s_1\\)** one after another the state **\\((s{n+1}))\\** is reached.
 
 We now understand how to compute states recursively. _But why do we want to compute a proof for each of those transitions?_ Remember that the mainchain does not monitor the different sidechains and verify the state transitions.
 
