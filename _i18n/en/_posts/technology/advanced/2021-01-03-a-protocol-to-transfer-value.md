@@ -43,7 +43,7 @@ When numerous people want to cooperate, a set of standards is always needed to s
 
 The *internet protocol* - **TCP/IP** - defines standards for how data is split up and transferred from a server to your computer, for example, when you access this website. A blockchain is defined by a protocol that determines how its participants exchange value.
 
-### The Mail - A Protocol to Transfer Physical Goods**
+### The Mail - A Protocol to Transfer Physical Goods
 
 A straightforward analogy would be comparing blockchain to the mail - a “*protocol*” to transfer physical goods. Let’s forget about the post as an entity operating the mail service for a minute and think about it this way:
 

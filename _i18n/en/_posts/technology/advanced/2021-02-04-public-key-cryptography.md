@@ -16,7 +16,7 @@ Since the goal of the original blockchain design was to enable a new and fair fo
 ![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_D.jpg)
 ![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_M.jpg)
 
-\**Let’s take a step back and start from the beginning. The basis of public-key cryptography is *private keys, public keys, addresses, and digital signatures\*. When you own some cryptocurrency, the blockchain contains a record that there are some coins associated with your public key. You must provide a digital signature to authorize the spending of those coins. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
+**Let’s take a step back and start from the beginning.** The basis of public-key cryptography is *private keys, public keys, addresses, and digital signatures*. When you own some cryptocurrency, the blockchain contains a record that there are some coins associated with your public key. You must provide a digital signature to authorize the spending of those coins. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
 
 ## What is Public Key Cryptography?
 
@@ -24,7 +24,7 @@ Since the goal of the original blockchain design was to enable a new and fair fo
 <tr>
 <td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
 <td>
-Blockchains use public-key cryptography, also known as *asymmetric cryptography*, to verify ownership. Every user creates two keys when he joins the network, a *public*, and a *private* key.
+Blockchains use public-key cryptography, also known as asymmetric cryptography, to verify ownership. Every user creates two keys when he joins the network, a public, and a private key.
 </td>
 </tr>
 </table>

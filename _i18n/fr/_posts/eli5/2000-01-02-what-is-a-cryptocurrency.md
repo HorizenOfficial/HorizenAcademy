@@ -5,7 +5,6 @@ title: "Qu'est-ce qu'une cryptomonnaie ?"
 description: "Une cryptomonnaie est de l'argent numérique. Il y a beaucoup de cryptomonnaies, comme il y a beaucoup de monnaies traditionnelles."
 permalink: /eli5/what-is-a-cryptocurrency/
 topic: eli5
-further_reads: [explain_bitcoin_like_im_five]
 ---
 
 <table class="table lead">

@@ -30,7 +30,7 @@ There are many approaches to achieving consensus in a distributed network but th
 
 ## Proof of Work - PoW
 
-Miners are the entities who work to achieve consensus within the network in a **Proof of Work** blockchain. They collect all transactions that are forwarded to them through the [P2P network](https://academy.horizen.io/technology/advanced/a-peer-to-peer-p2p-network/) and save them in their _mempool_ (memory pool). While they collect incoming transactions, they verify if the transactions are valid according to the protocol and add them to the block they are currently working on. At the same time, they are solving a computationally expensive puzzle.\*\*
+Miners are the entities who work to achieve consensus within the network in a **Proof of Work** blockchain. They collect all transactions that are forwarded to them through the [P2P network](https://academy.horizen.io/technology/advanced/a-peer-to-peer-p2p-network/) and save them in their _mempool_ (memory pool). While they collect incoming transactions, they verify if the transactions are valid according to the protocol and add them to the block they are currently working on. **At the same time, they are solving a computationally expensive puzzle.**
 
 The miner who solves the puzzle first broadcasts her block to the network and gets to extend the blockchain by one block. The miner receives newly created coins for his work and he gets to write the history of the blockchain for the past couple of minutes. In
 

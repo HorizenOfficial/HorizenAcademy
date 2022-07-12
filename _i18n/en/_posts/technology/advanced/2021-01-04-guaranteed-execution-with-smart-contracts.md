@@ -125,7 +125,7 @@ Smart contracts put an additional burden on the limited throughput of a blockcha
 
 There are two different balance or accounting systems in blockchains - the [UTXO model and the Account-Based Model](https://academy.horizen.io/technology/expert/utxo-vs-account-model/). The following quote helps to differentiate between them.
 
-> “\*The first model is a directed graph of assets moving between users, the second is a database with the current network state.I” - Dmitry Mishunin
+> “The first model is a directed graph of assets moving between users, the second is a database with the current network state.I” - Dmitry Mishunin
 
 The account model is used by most smart contract platforms because it makes it easier to develop smart contracts and allows for better scalability. There can be two types of accounts: _private key controlled user_ accounts and _contract-code controlled_ accounts. Each has its own balance, storage, and code-space for calling other accounts or addresses.
 

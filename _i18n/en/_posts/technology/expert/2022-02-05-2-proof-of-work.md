@@ -115,7 +115,7 @@ The **CPU-bound** approach gives large players with capital a decisive advantage
 
 It was long thought that memory-bound puzzles were less prone to hardware optimizations. The **Equihash algorithm** for instance was thought to be ASIC-resistant for a long time, but things turned out differently.
 
-> **\*The memory-bound** approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently."\* - **Jeffrey Emanuel**
+> **The memory-bound** approach suffers from an obvious flaw: if you could find a way to store all that data in memory once, using a lot of expensive DRAM, but then share this data across a large group of inexpensive processors, you would effectively share the cost across a large number of processors and thus undermine the supposed difficulty of the problem. And this is exactly what has happened recently." - **Jeffrey Emanuel**
 
 The author is referring to the emergence of ASIC miners for the Equihash mining algorithm.
 
@@ -129,7 +129,7 @@ If Tangle was widely adopted for micro-payments in the IOT sector, computational
 
 ### Metrics to Assess Computational Hardness
 
-**There are two different metrics to rate the difficulty of a computational task**: _time complexity_ and \*space complexity\*\*.
+**There are two different metrics to rate the difficulty of a computational task**: _time complexity_ and _space complexity_.
 
 **Time complexity** refers to how many additional computations result from an increase in the input to a function. With infeasible time complexity, slight increases in input size will result in an exponential increase in time for the computation to finish.
 

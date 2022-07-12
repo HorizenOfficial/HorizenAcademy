@@ -154,7 +154,7 @@ Note that these attacks do not affect the security of blockchains, but only the 
 
 ### Length Extension Attack
 
-In a **Length Extension Attack**, an attacker can use the hash of a message **m** and the length of **m** to calculate \*hash**\*(m, m’)**, where **m’** is a message of the attacker. He doesn’t need to know what **m** is, just its length. The _SHA-2_ family is vulnerable to this type of attack.
+In a **Length Extension Attack**, an attacker can use the hash of a message **m** and the length of **m** to calculate hash **(m, m’)**, where **m’** is a message of the attacker. He doesn’t need to know what **m** is, just its length. The _SHA-2_ family is vulnerable to this type of attack.
 
 There are no known exploits of this vulnerability in cryptocurrencies, but in order to protect against potential threats, most operations that involve hashing are performed twice in a row. An example would be constructing Merkle trees. In the graphic used earlier, you can see that the hash function **H** is denoted as the double hash, **SHA256(SHA256())**.
 
