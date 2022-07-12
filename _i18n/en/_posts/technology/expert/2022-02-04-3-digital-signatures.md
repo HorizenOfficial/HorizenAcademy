@@ -97,13 +97,13 @@ $$
 
 **This is the equation we will be working with from here to prove the following claim:**
 
-*If you can provide an *R* and *s* together with a message *m* that satisfy the equation*
+_If you can provide an **R** and **s**_ together with a message **m** that satisfy the equation
 
 $$
 \text{hash}(m, R) \bullet (PK + R) = s \bullet P
 $$
 
-*This proves you know the private key *sk* that corresponds to the public key *PK\*\*.
+_This proves you know the private key sk_ that corresponds to the public key **PK**.
 
 **Two conditions must be met in order for this to be the case:**
 
@@ -185,7 +185,7 @@ In the context of cryptocurrencies, signatures are used to prove that you own a 
 
 A transaction typically informs the network about a transfer of money or data. The message **m** is to be signed, with **s** and **R** comprising the signature of that message.
 
-Because **s** depends on the message **m**, **the verification process is only successful if two conditions are met**: The _sender_ of the message knows the private key **sk** used to generate the UTXO's address _AND_ the signature **\*(R**, **s**)\* was created for that specific transaction **m**.
+Because **s** depends on the message **m**, **the verification process is only successful if two conditions are met**: The _sender_ of the message knows the private key **sk** used to generate the UTXO's address _AND_ the signature **(R**, **s**) was created for that specific transaction **m**.
 
 **With cryptocurrencies**, the message **m** is the unsigned part of a transaction.
 

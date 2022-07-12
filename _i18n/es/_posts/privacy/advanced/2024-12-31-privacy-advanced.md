@@ -6,7 +6,6 @@ description: "Esta sección es para usuarios que tienen una comprensión general
 permalink: /privacy/advanced/
 topic: privacy
 level: advanced
-no_index: true
 ---
 
 <div class="row mb-3">

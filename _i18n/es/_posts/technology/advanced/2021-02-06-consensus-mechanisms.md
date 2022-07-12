@@ -26,7 +26,7 @@ Hay muchas maneras de lograr consenso en una red distribuida, pero las dos más 
 ![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_consensus_D.jpg)
 ![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/ES_consensus_M.jpg)
 
-### Prueba de trabajo (Proof-of-work; PoW)
+### Prueba de trabajo (Proof-of-work - PoW)
 
 Son los mineros quienes se encargan de lograr un consenso en una cadena de bloques PoW. Cada uno recolecta las transacciones que recibe a través de la red par a par y las almacena en su mempool. Mientras recolectan las transacciones entrantes, verifican también que sean válidas de acuerdo con el protocolo y las agregan al bloque que están trabajando. A la vez, intentan resolver un acertijo computacionalmente exigente. Haremos explícita la naturaleza de este acertijo en el siguiente artículo.
 
