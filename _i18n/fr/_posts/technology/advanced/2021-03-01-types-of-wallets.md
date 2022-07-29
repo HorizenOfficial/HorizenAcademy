@@ -6,7 +6,7 @@ description: "Pour recevoir, stocker et envoyer des cryptomonnaies, on utilise d
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
-chapter: "Portefeuilles"
+chapter: "Les types de portefeuilles"
 ---
 
 _Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de wallets, qui en est le mot anglais. En effet, dans le langage courant en français, vous pourrez entendre à la fois wallet, et portefeuille._

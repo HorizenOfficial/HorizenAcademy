@@ -1,12 +1,12 @@
 ---
 layout: post
-type: article
+type: intro
 title: "What is a Cold Wallet?"
 description: "A cold wallet or hardware wallet is a type of wallet that lives on a hardware device like a USB and does not require a connection to the internet to function."
 permalink: /technology/advanced/cold-wallet/
 topic: technology
 level: advanced
-chapter: "Wallets"
+chapter: "What is a Cold Wallet?"
 ---
 
 ## What is a Cold Wallet?

@@ -6,7 +6,7 @@ description: "Para recibir y enviar criptomonedas es necesario utilizar una bill
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
-chapter: "Billeteras"
+chapter: "Tipos de billetera"
 ---
 
 Una billetera es una programa que genera, administra y almacena un par de llaves criptográficas. El usuario puede revisar su saldo, recibir y enviar fondos desde su billetera; (si no le quedan claras las funciones principales de la billetera, lo invitamos a leer nuestro artículo de nivel principiante sobre el tema). En resumen, sin embargo, la principal diferencia entre los distintos tipos de billetera es la ubicación física en la que se almacenan las llaves del usuario.

@@ -1,12 +1,12 @@
 ---
 layout: post
-type: article
+type: intro
 title: "Cryptocurrency Wallets"
 description: "A wallet is an app for generating, managing, and storing cryptographic keys - public and private keys. You can check your balance, receive, and send funds."
 permalink: /technology/advanced/types-of-wallets/
 topic: technology
 level: advanced
-chapter: "Wallets"
+chapter: "Cryptocurrency Wallets"
 ---
 
 A **wallet** is an app for generating, managing, and storing cryptographic keys - your [public and private keys](https://academy.horizen.io/technology/advanced/public-key-cryptography/).
