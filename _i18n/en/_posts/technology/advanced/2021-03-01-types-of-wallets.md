@@ -1,6 +1,6 @@
 ---
 layout: post
-type: intro
+type: article
 title: "Cryptocurrency Wallets"
 description: "A wallet is an app for generating, managing, and storing cryptographic keys - public and private keys. You can check your balance, receive, and send funds."
 permalink: /technology/advanced/types-of-wallets/
