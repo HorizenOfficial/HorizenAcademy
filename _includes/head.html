@@ -35,6 +35,10 @@
     <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
     {% endif %}
   {% endif %}
+  {% if page.image %}
+    <meta property="og:image" content={{page.image}} />
+    <meta name="twitter:image" content={{page.image}} />
+  {% endif %}
   
   {% unless page.no_alternate %}
     {% for language in site.languages %}
