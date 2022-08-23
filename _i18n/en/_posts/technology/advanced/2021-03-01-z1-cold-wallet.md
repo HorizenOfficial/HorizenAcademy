@@ -7,6 +7,7 @@ permalink: /technology/advanced/cold-wallet/
 topic: technology
 level: advanced
 chapter: "What is a Cold Wallet?"
+image: assets/post_files/technology/advanced/3.0-z1-cold-wallet/meta.jpg
 ---
 
 ## What is a Cold Wallet?
