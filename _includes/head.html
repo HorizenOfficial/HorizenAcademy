@@ -5,15 +5,19 @@
   <!-- SEO -->
   <title>{% if page.title contains 'titles.' %}{% t page.title %}{% elsif page.title %}{{ page.title }}{% else %}{{site.title}}{% endif %}</title>
   <meta property="og:title" content="{% if page.title contains 'titles.' %}{% t page.title %}{% elsif page.title %}{{ page.title }}{% else %}{{site.title}}{% endif %}">
+  <meta name="twitter:title" content="{% if page.title contains 'titles.' %}{% t page.title %}{% elsif page.title %}{{ page.title }}{% else %}{{site.title}}{% endif %}">
   {% if page.description contains 'descriptions.' %}
   <meta name="description" content="{% t page.description %}">
   <meta property="og:description" content="{% t page.description %}">
+  <meta name="twitter:description" content="{% t page.description %}">
   {% elsif page.description != '' %}
   <meta name="description" content="{{ page.description }}">
   <meta property="og:description" content="{{ page.description }}">
+  <meta name="twitter:description" content="{{ page.description }}">
   {% else %}
   <meta name="description" content="{{ site.description }}">
   <meta property="og:description" content="{{ site.description }}">
+  <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
   {% if page.keywords contains 'keywords.' %}
   <meta name="keywords" content="{% t page.keywords %}">
@@ -34,6 +38,11 @@
     <link rel="canonical" href="{{site.url}}/{{site.lang}}{{page.url}}">
     <meta property="og:url" content="{{site.url}}/{{site.lang}}{{page.url}}">
     {% endif %}
+  {% endif %}
+  {% if page.image %}
+    <meta property="og:image" content={{page.image}} />
+    <meta name="twitter:image" content={{page.image}} />
+    <meta name="twitter:card" content="summary_large_image" />
   {% endif %}
   
   {% unless page.no_alternate %}
