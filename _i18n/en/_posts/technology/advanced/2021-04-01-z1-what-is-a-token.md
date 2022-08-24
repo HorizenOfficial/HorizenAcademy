@@ -7,6 +7,7 @@ permalink: /technology/advanced/what-is-a-token/
 topic: technology
 level: advanced
 chapter: "What is a Token?"
+image: assets/post_files/technology/advanced/4.0-z1-what-is-a-token/meta.jpg
 ---
 
 **A Token** is _a digital unit of account that can be used to represent any kind of physical or digital asset on a blockchain_, including a **currency**, a **video** or **music** **file**, a **piece of artwork**, **machinery** or even a **person**.
