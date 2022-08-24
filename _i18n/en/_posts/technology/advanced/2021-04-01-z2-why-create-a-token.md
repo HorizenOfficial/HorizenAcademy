@@ -7,6 +7,7 @@ permalink: /technology/advanced/why-create-a-token/
 topic: technology
 level: advanced
 chapter: "Why Create a Token?"
+image: assets/post_files/technology/advanced/4.0-z2-why-create-a-token/meta.jpg
 ---
 
 **For many people who are new to the web3 space**, the idea of launching a [token](https://academy.horizen.io/technology/advanced/what-is-a-token/) is as exciting and innovative as it was to create a website in the late 90’s or a mobile app in the early 2010’s.
