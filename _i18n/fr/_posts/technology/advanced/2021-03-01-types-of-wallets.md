@@ -13,8 +13,8 @@ _Note du traducteur : Pour parler des portefeuilles, je parle aussi souvent de w
 
 Un wallet est un programme pour générer, gérer et stocker une paire de clés cryptographiques. Vous pouvez vérifier votre solde, recevoir et envoyer des fonds dans votre wallet.
 
-![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_D.jpg)
-![Wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_M.jpg)
+![Wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_D.jpg)
+![Wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_wallet2_M.jpg)
 
 La principale différence entre les différents types de wallets est l'emplacement physique dans lequel vos clés sont stockées.
 
@@ -28,15 +28,15 @@ Votre phrase mnémonique est une sauvegarde de votre clé privée qui est utilis
 
 Dans cet article, nous voulons vous donner une vue d’ensemble des différents types de portefeuilles afin de vous aider à trouver celui qui convient à vos besoins.
 
-![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_D.jpg)
-![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_M.jpg)
+![overview]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_D.jpg)
+![overview]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_overview_M.jpg)
 
 ### Web wallets hébergés
 
 Nous pouvons distinguer les web wallets hébergés et non hébergés. Avec les web wallets hébergés, vos clés sont stockées en ligne par un tiers de confiance. Il s'agit le plus souvent de plateformes d'échange tels que Coinbase, Binance ou Bittrex. Lorsque vous créez un compte auprès de ces entités, elles créeront une entrée dans leur base de données interne reliant votre compte à un ensemble de paires de clés pour les différents coins qu'elles ont inscrits.
 
-![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_D.jpg)
-![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_M.jpg)
+![Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_D.jpg)
+![Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_hosted_webwallet_M.jpg)
 
 Un des avantages d'un web wallet hébergé est la possibilité de récupérer votre mot de passe au cas où vous l'oublieriez ou le perdriez. La perte de vos clés privées (avec votre phrase mnémonique respectivement) entraîne une perte de fonds dans tous les autres cas.
 
@@ -48,8 +48,8 @@ Vous aurez besoin de garder des fonds sur une plateforme d'échange de façon pe
 
 Outre les web wallets hébergés, il existe également une gamme de web wallets non hébergés. Le web wallet non hébergé le plus populaire est probablement MyEtherWallet, qui peut stocker l'éther (ETH) et tous les jetons ERC-20 (jetons qui "vivent" sur la blockchain Ethereum). Ces wallets fournissent une interface pour vérifier vos fonds ou créer des transactions dans votre navigateur web, mais vous devez fournir les clés à chaque connexion.
 
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
 
 Il y a une gamme d'options afin d’accéder à votre wallet avec MyEtherWallet (souvent abrégé MEW). La première option nécessite votre adresse, mais vous permet uniquement de consulter vos fonds.
 
@@ -71,9 +71,9 @@ Vous connaissez maintenant les tâches qu'un wallet effectue : visualiser, recev
 Avec les wallets de bureau et les wallets mobiles, vous avez le choix entre des options à monnaie unique ou multidevises. Ces termes devraient être assez explicites. Le premier vous permet de stocker un coin spécifique, tandis que le second prend en charge plusieurs devises. Certains des exemples les plus populaires pour le bureau incluent Coinomi et Sphere by Horizen. Pour le mobile, il y a Coinomi, Mycelium ou Paytomat pour n'en citer que quelques-uns.
 
 <div class="row align-items-center">
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/coinomi.jpg" alt="coinomi"></div>
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
-    <div class="col-md-4"><img src="/assets/post_files/technology/advanced/3.0-types-of-wallets/mycelium.png" alt="mycelium"></div>
+    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/coinomi.jpg" alt="coinomi"></div>
+    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
+    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/mycelium.png" alt="mycelium"></div>
 </div>
 
 Si vous avez reçu vos premiers coins sur une plateforme d'échange, je vous recommande de transférer vos fonds hors de la plateforme d'échange (Web wallet hébergé) sur un ordinateur de bureau, de papier ou un hardware wallet. Envoyez d'abord une fraction pour vous assurer que tout fonctionne comme prévu. Si votre première transaction fonctionne, vous envoyez le reste. Vous êtes désormais protégé contre le risque de tiers, mais vous êtes entièrement responsable de vos fonds.
@@ -84,7 +84,7 @@ Reprenons notre fil d'or et demandons-nous "où sont les clés". Le [paper walle
 
 Lorsque vous imprimez votre paper wallet, vous ne devriez pas utiliser une imprimante partagée comme celle de votre bureau. Dans le meilleur des cas, l'imprimante ne dispose même pas d'une fonction WiFi/réseau. Les imprimantes conservent généralement une copie des fichiers qu'elles ont imprimés en dernier, et un attaquant pourrait l'exploiter. Vous obtiendrez quelque chose ressemblant à ceci après avoir imprimé le wallet de façon sécuritaire :
 
-![paper wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.jpg)
+![paper wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.jpg)
 
 Il ne reste qu'une seule chose à faire : envoyer les fonds à la clé publique. Après cela, vous avez un cadeau parfait ou un stockage à long terme pour vos coins. Le principal risque avec un paper wallet est que vous le perdiez ou le détruisiez par accident. Si vous n'avez pas une phrase mnémonique pour récupérer la clé privée, vous risquez de perdre tous les fonds sur le wallet par accident. Choisissez donc judicieusement l'endroit où ranger votre paper wallet. Imprimez plusieurs copies si vous vous sentez mal à l'aise d'en avoir une seule et rangez-les toutes dans des endroits séparés et sûrs.
 
@@ -96,8 +96,8 @@ Comment un tel wallet fonctionne-t-il réellement ?
 
 L'interface génère une adresse à partir de votre clé publique si vous souhaitez recevoir des fonds. L'utilisation de cette fonction est assez simple : si vous cliquez sur le bouton de réception, le processus s'exécute en arrière-plan et l'adresse est affichée pour que vous puissiez la partager avec l'expéditeur. Si vous voulez envoyer des fonds, l'application crée la transaction formelle qui doit être signée. La transaction non signée est maintenant envoyée dans votre hardware wallet, où elle est signée avec votre clé privée sur l'appareil. La signature est ensuite renvoyée à votre ordinateur et la transaction complète, y compris la signature diffusée sur le réseau.
 
-![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_D.jpg)
-![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_M.jpg)
+![signing hardware wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_D.jpg)
+![signing hardware wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/FR_signing_hardware_wallet_M.jpg)
 
 Votre/Vos clé(s) privée(s) ne quittent pas l'appareil, elles ne sont donc pas visibles par l'ordinateur avec lequel vous utilisez votre hardware wallet à chaque instant. C'est pourquoi un hardware wallet est considéré comme le moyen le plus sûr de stocker des cryptos, en particulier de grandes quantités.
 
@@ -113,7 +113,7 @@ Avec un wallet de bureau, mobile, papier ou hardware, vous possédez les clés e
 
 Tout ce mouvement de cryptomonnaies vise à vous redonner le pouvoir sur votre argent, mais...
 
-![with great power comes great responsibility](/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)
+![with great power comes great responsibility]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)
 
 ## Contenu Débutant Ci-dessous - Introduction aux Portefeuilles (Wallets)
 
@@ -127,8 +127,8 @@ Voyons ce qu'un portefeuille peut faire. Un portefeuille est un programme qui a 
 - Vous montrer votre balance;
 - Créer et signer des transactions pour envoyer des fonds.
 
-![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_D.jpg)
-![Wallet does in FR](/assets/post_files/technology/beginner/wallets/FR_wallet_does_M.jpg)
+![Wallet does in FR]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/FR_wallet_does_D.jpg)
+![Wallet does in FR]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/FR_wallet_does_M.jpg)
 
 La première fonction est en fait la fonction principale et le principal différenciateur de tous les portefeuilles : **générer**, **stocker et manipuler vos clés**. Avoir accès à vos clés privées signifie avoir accès à vos fonds.
 
@@ -142,8 +142,8 @@ Nous aimerions vous présenter une autre analogie qui, à notre avis, aide beauc
 
 La blockchain enregistre qu'une certaine quantité de coins est associée à une [paire de clés spécifique](https://academy.horizen.io/fr/technology/advanced/public-key-cryptography/). Elle "sait" combien de fonds sont associés à ces clés parce qu'elle stocke toutes les transactions qui ont déjà eu lieu. Si vous recevez 10 ZEN dans une première transaction et un peu plus tard 10 ZEN de nouveau, il ressort clairement de l'historique des transactions que vous, le propriétaire de la paire de clés, possédez 20 ZEN au total.
 
-![Wallet in FR](/assets/post_files/technology/beginner/wallets/FR_wallet2_D.jpg)
-![Wallet in FR](/assets/post_files/technology/beginner/wallets/FR_wallet2_M.jpg)
+![Wallet in FR]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/FR_wallet2_D.jpg)
+![Wallet in FR]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/FR_wallet2_M.jpg)
 
 Pour dépenser ces fonds, vous avez besoin de vos clés qui sont stockées dans votre portefeuille. Comparer un portefeuille de cryptomonnaies à un porte-clés est donc l'analogie la plus exacte. Si vous ne contrôlez pas vos clés, vous ne contrôlez pas vos fonds. Pour utiliser les cryptomonnaies, vous n'avez pas besoin de comprendre en détail comment tout fonctionne sous le capot. Le concept de vos clés vous donnant accès à vos fonds est néanmoins très important à garder à l'esprit.
 
@@ -167,7 +167,7 @@ Pour vous mettre à l'aise avec un portefeuille, pourquoi ne pas vous procurer n
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
+        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
         <td>
             Un wallet est un programme sur votre ordinateur ou votre téléphone, qui vous permet de recevoir et d'envoyer de l'argent. Pour ce faire, il a besoin d'accéder à vos clés. Un wallet vous aidera à créer et gérer votre clé publique et privée qui fonctionnent comme votre adresse email et votre mot de passe. Une différence importante par rapport à un portefeuille ordinaire que vous utilisez tous les jours est que vous ne gardez pas votre argent dans votre portefeuille.
         </td>
@@ -184,25 +184,25 @@ L'argent numérique ne servirait à rien s'il n'y avait aucun moyen de l'envoyer
 
 Dans le tout premier article de la section technologie, nous avons dit que la [blockchain](https://academy.horizen.io/fr/technology/advanced/blockchain-as-a-data-structure/) est un grand registre public qui garde la trace de toutes les transactions qui se sont passées sur le réseau. Dans le dernier article, nous avons indiqué qu'un portefeuille est une application qui vous aide à gérer vos clés et à créer des transactions.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T1_balance_D.jpg)
+![Balance]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T1_balance_D.jpg)
 
 Un portefeuille obtient votre solde en surveillant la blockchain pour toute transaction impliquant votre adresse. Initialement, toutes les transactions sont verrouillées cryptographiquement. Le verrouillage est basé sur l'adresse à laquelle la transaction est envoyée et ne peut être déverrouillé qu'avec la clé privée correspondante.
 
 Supposons maintenant que nous sommes sur votre portefeuille. Vous avez reçu un total de 20 ZEN en deux transactions différentes de 10 ZEN chacune. Maintenant vous voulez dépenser 2 ZEN pour le déjeuner. Votre portefeuille commence par une transaction vide et, dans un premier temps, choisit une de vos transactions précédentes à dépenser. Dans ce cas, les deux transactions ont une valeur suffisante pour que votre portefeuille puisse choisir au hasard la première.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T2_input_D.jpg)
+![Balance]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T2_input_D.jpg)
 
 L'argent qui est dépensé dans une transaction est appelé l'entrée (input) et l'argent qui est reçu est appelé la sortie (outpout). Votre portefeuille place l'une des sorties que vous possédez dans la transaction vide et utilise votre clé privée pour la déverrouiller afin qu'elle devienne utilisable ; c'est ce que nous appelons signer la transaction. La sortie déverrouillée est maintenant utilisée comme entrée pour une nouvelle transaction.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_outputs_D.jpg)
+![Balance]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T3_outputs_D.jpg)
 
 Ensuite, votre portefeuille crée les sorties. Il vous demande une adresse pour envoyer de l'argent et un montant. Vous voulez envoyer 2 ZEN à l'adresse XYZ pour payer votre déjeuner, donc votre portefeuille crée la première sortie en conséquence. La deuxième sortie est générée automatiquement ; c'est ce qu'on appelle la sortie de change. Les sorties sont semblables aux coupures en espèces. Si vous devez payer 2 $ US, mais que vous n'avez qu'un billet de 10 $, vous vous attendez à recevoir 8 $ en monnaie. Votre portefeuille inclut automatiquement le change dans la transaction. Les sorties nouvellement générées sont verrouillées par défaut.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T4_broadcast_D.jpg)
+![Balance]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T4_broadcast_D.jpg)
 
 Enfin, votre portefeuille diffuse la transaction sur le réseau, où tous les nœuds et les mineurs vérifieront si la signature que vous avez utilisée pour débloquer votre argent est valide. Si c'est le cas, les mineurs incluront votre transaction dans le bloc suivant. La sortie de 10 ZEN que vous avez utilisé est désormais visible publiquement comme dépensée. Les sorties 2 et 8 ZEN nouvellement créées sont incluses dans un nouveau bloc et bloquées ; ou non dépensées. C'est ici qu'on parle du terme UTXO - Unspent Transaction Output _(sortie de transaction non dépensée, ndt)_ - c'est à cela qu'il fait référence.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T5_confirmed_D.jpg)
+![Balance]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/FR_T5_confirmed_D.jpg)
 
 Lorsque vous possédez 10 ZEN, cela signifie que vous avez reçu 10 ZEN dans une transaction et que vous n'avez pas encore débloqué ou dépensé cette sortie.
 
@@ -218,5 +218,5 @@ Par exemple, Alice souhaite envoyer un ZEN à son ami Bob. Alice envoie alors un
 
 Quand Bob veut dépenser ce ZEN, plus tard, il va créer un nouveau message pour le réseau. Ce message dira : J'ai reçu un ZEN de mon amie tout à l'heure, je veux l'envoyer à quelqu'un d'autre maintenant. C'est ainsi que vous envoyez de l'argent d'une personne à une autre sans l'aide de personne d'autre. C'est semblable à la façon dont vous obtenez un billet de banque de quelqu'un et le remettez à la personne suivante lorsque vous voulez le dépenser.
 
-![Transaction in FR](/assets/post_files/eli5/what-is-a-transaction/FR_transaction_D.jpg)
-![Transaction in FR](/assets/post_files/eli5/what-is-a-transaction/FR_transaction_M.jpg)
+![Transaction in FR]({{site.baseurl}}/assets/post_files/eli5/what-is-a-transaction/FR_transaction_D.jpg)
+![Transaction in FR]({{site.baseurl}}/assets/post_files/eli5/what-is-a-transaction/FR_transaction_M.jpg)

@@ -28,8 +28,8 @@ _"Une sidechain est une blockchain qui valide les données des autres blockchain
 
 En d'autres termes, une sidechain est une blockchain en soi, mais avec la capacité de communiquer et d'interopérer avec une ou plusieurs autres chaînes. Lorsque vous entendez le terme sidechain aujourd'hui, les gens parlent surtout de sidechains connectées, qui vous permettent de transférer des ressources d'une chaîne à l'autre.
 
-![sidechains](/assets/post_files/horizen/advanced/sidechains/FR_sidechains_D.jpg)
-![sidechains](/assets/post_files/horizen/advanced/sidechains/FR_sidechains_M.jpg)
+![sidechains]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/FR_sidechains_D.jpg)
+![sidechains]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/FR_sidechains_M.jpg)
 
 ### Quel est donc l'avantage de cette technologie ?
 
@@ -70,8 +70,8 @@ La construction du modèle de sidechain se compose de deux parties :
 
 Le _protocole de consensus de la sidechain_ régit la façon dont le réseau s'entend sur les nouveaux blocs et donc sur l'historique des transactions. Le protocole de transfert inter-chaînes détermine comment les ressources peuvent être envoyées de la chaîne principale à une sidechain et vice versa.
 
-![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_D.jpg)
-![SCP_CCT](/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_M.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_D.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/FR_SCP_CCT_M.jpg)
 
 ### Résumé
 
@@ -81,8 +81,8 @@ La capacité de déployer des sidechains améliorera considérablement les possi
 
 ## Contenu Expert Ci-dessous - Sidechains
 
-![sidechains](/assets/post_files/horizen/expert/sidechains/FR_sidechains_D.jpg)
-![sidechains](/assets/post_files/horizen/expert/sidechains/FR_sidechains_M.jpg)
+![sidechains]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_sidechains_D.jpg)
+![sidechains]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_sidechains_M.jpg)
 
 Le fait d'avoir la capacité de déployer des sidechains améliorera considérablement les possibilités de construire sur des blockchains publiques existantes. L'un des premiers cas d'utilisation d'une sidechain pour le projet Horizen sera la [trésorerie](https://www.horizen.io/assets/files/FR_Horizen-Sidechains-Decoupled-Consensus-Between-Chains.pdf), qui rapprochera l'organisation de son objectif de devenir une organisation autonome décentralisée ou [DAO](https://academy.horizen.io/fr/horizen/advanced/dao-decentralized-autonomous-organization/).
 
@@ -99,8 +99,8 @@ Le CCT se compose de deux sous-protocoles que nous allons expliquer.
 
 Le premier sous-protocole traite des _transactions vers l'avant_ (forward transactions), qui sont des transactions de la chaîne principale (mainchain) à la sidechain. Le deuxième sous-protocole traite des _transactions vers l'arrière_ (backward transactions), qui sont des transactions de la sidechain à la chaîne principale.
 
-![SCP_CCT](/assets/post_files/horizen/expert/sidechains/FR_SCP_CCT_D.jpg)
-![SCP_CCT](/assets/post_files/horizen/expert/sidechains/FR_SCP_CCT_M.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_SCP_CCT_D.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_SCP_CCT_M.jpg)
 
 La première décision de conception à prendre est de déterminer si la chaîne principale devrait être au courant de ce que font les sidechains. L'équipe dirigée par Alberto Garoffolo a décidé de développer le SCP et le CCT indépendamment l'un de l'autre.
 
@@ -126,8 +126,8 @@ Le SCP proposé est basé sur le protocole Ouroboros développé par IOHK pour l
   Avant qu'une époque ne commence, il y a une Procédure de Sélection des Slot Leaders qui assigne un slot leader par slot pour l'époque suivante (dans notre exemple, 8 slot leaders seront sélectionnés par procédure/époque de sélection) ;
 - Si un slot leader n’arrive pas à forger son bloc dans le temps imparti, le prochain slot leader inclura dans son bloc les transactions qui n'avaient pas été incluses dans le bloc non créé du précédent créneau.
 
-![epoch](/assets/post_files/horizen/expert/sidechains/FR_epoch_D.jpg)
-![epoch](/assets/post_files/horizen/expert/sidechains/FR_epoch_M.jpg)
+![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_epoch_D.jpg)
+![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_epoch_M.jpg)
 
 #### Modifications du Protocole d'Ouroboros
 
@@ -195,8 +195,8 @@ L'objectif est de permettre les transferts inter-chaînes, il doit donc y avoir 
 
 La validation des transactions vers l'avant s'effectue par référencement complet. Il résout deux problèmes à la fois : permettre des transferts de la chaîne principale vers la sidechain de manière simple et traiter de la finalité (ou de l'absence de finalité).
 
-![full referencing](/assets/post_files/horizen/expert/sidechains/FR_full_referencing_D.jpg)
-![full referencing](/assets/post_files/horizen/expert/sidechains/FR_full_referencing_M.jpg)
+![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_full_referencing_D.jpg)
+![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_full_referencing_M.jpg)
 
 **Anglais**
 
@@ -213,8 +213,8 @@ Alors, comment le référencement complet permet-il d'atteindre les objectifs me
 
 Les nœuds de la sidechain peuvent facilement vérifier les transferts en incluant l'en-tête de bloc et le chemin Merkle des transactions vers l'avant. Vous pourriez considérer les deux registres, sidechain et chaîne principale, comme deux registres distincts. Puisque les teneurs de registre de la sidechain surveillent constamment le registre de la chaîne principale, ils peuvent facilement ajouter des transactions inter-chaînes à leur registre. En incluant les transactions avec leurs chemins Merkle et l'en-tête de bloc correspondant, chaque entité de la sidechain pourra vérifier que la transaction est valide par elle-même sans avoir à se connecter à la chaîne principale.
 
-![forward](/assets/post_files/horizen/expert/sidechains/FR_forward_D.jpg)
-![forward](/assets/post_files/horizen/expert/sidechains/FR_forward_M.jpg)
+![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_forward_D.jpg)
+![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_forward_M.jpg)
 
 L'activation du protocole de transfert vers l'avant implique d'apporter des modifications à la logique actuelle de la chaîne principale. Un nouveau type de transaction doit être introduit, qui brûle les coins et fournit un ensemble de métadonnées qui permet à l'utilisateur de réclamer le même montant (moins les frais de TX) sur la sidechain. Il en va de même pour les transactions vers l'arrière : les coins sur la sidechain sont brûlés et un montant équivalent moins les frais de TX sont créés sur la chaîne principale. Une construction avec une procédure de verrouillage et de déverrouillage est également possible.
 
@@ -240,8 +240,8 @@ Nous avons décidé de développer le SCP et le CCP indépendamment l'un de l'au
 
 Du point de vue des données, pour que tout cela fonctionne, il faut qu'il y ait un mécanisme de transfert, initié sur la sidechain, qui informe la chaîne principale des transactions vers l'arrière entrantes. Pour ce faire, on introduit un nouveau type de conteneur de données appelé Cross-Chain Certificates (CCCert's).
 
-![CCCert](/assets/post_files/horizen/expert/sidechains/FR_CCCert_D.jpg)
-![CCCert](/assets/post_files/horizen/expert/sidechains/FR_CCCert_M.jpg)
+![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_CCCert_D.jpg)
+![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/FR_CCCert_M.jpg)
 
 Le CCCert contient des informations de base, telles que l'identificateur de sidechain (SCid) et l'ID CCCert comme en-tête. La liste des transferts vers l'arrière regroupe toutes les transactions inter-chaînes. Les trois derniers champs de données concernent les certificateurs qui remplissent le rôle des validateurs mentionnés dans la citation ci-dessus.
 
@@ -292,8 +292,8 @@ Comme nous l'avons déjà mentionné, une limite importante de l'adoption en mas
 
 Il y a plusieurs manières de rendre une blockchain plus scalable, mais Horizen a décidé de se concentrer sur deux d'entre elles pour le moment. L'article précédent traitait d'un protocole Block-DAG, cet article se concentre sur notre système novateur de sidechains.
 
-![Sidechains in FR](/assets/post_files/horizen/beginner/sidechains/FR_sidechains_D.jpg)
-![Sidechains in FR](/assets/post_files/horizen/beginner/sidechains/FR_sidechains_M.jpg)
+![Sidechains in FR]({{site.baseurl}}/assets/post_files/horizen/beginner/sidechains/FR_sidechains_D.jpg)
+![Sidechains in FR]({{site.baseurl}}/assets/post_files/horizen/beginner/sidechains/FR_sidechains_M.jpg)
 
 Lorsque vous activez les sidechains, vous autorisez plusieurs blockchains différentes à fonctionner en parallèle. Une sidechain est une blockchain en soi avec la caractéristique supplémentaire d'être interopérable avec la chaîne principale. L'interaction avec une blockchain de type cryptomonnaie, telle que notre blockchain Horizen actuelle, concernera principalement les transactions. La partie la plus importante de la construction de notre sidechain est ce protocole de transfert inter-chaînes, qui permet d'envoyer des ZEN de la chaîne principale à l'une des sidechains et inversement.
 

@@ -20,7 +20,7 @@ The DAO _founders_ define the criteria for allowing a change in the _beginning_ 
 
 **The _community_ can review the proposal,** which can range from translating the website to another language, creating a video for marketing purposes, building an app on top of Horizen, developing a new feature for a wallet, or covering the cost of attending a conference. E*very month* there will be a voting period. The community can cast votes on whether a proposal should be funded or not within this period. After the tally phase, the approved proposals will automatically receive the allocated funds, and the community members that have submitted the proposal can begin working.
 
-![DAO](/assets/post_files/horizen/advanced/dao/DAO.jpg)
+![DAO]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/DAO.jpg)
 
 _For this decentralized decision making_, there needs to be a voting system in place. This _voting system_ needs to be reliable, we decided to implement it on a dedicated **sidechain** which will run in parallel with our main blockchain.
 
@@ -77,7 +77,7 @@ Most democracies evolved into _representative democracies_ over time for this re
 
 **As a delegate**, you can entrust your vote to whomever you like, and you can withdraw your delegation at any given time - making the whole process liquid. This reduces the barrier to entry and keeps delegates accountable because they can lose delegations at any time. This holds experts accountable. **In liquid democracy,** there are no election terms
 
-![liquid_democracy](/assets/post_files/horizen/advanced/dao/liquid_democracy.jpg)
+![liquid_democracy]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/liquid_democracy.jpg)
 
 ### The Different Entities
 
@@ -96,8 +96,8 @@ To _register_ as one of the entities mentioned above, a user will need to submit
 
 _There are **three epochs** in each treasury period._ During the **pre-voting** epoch all the project owners have time to submit their encrypted proposals. All proposals will be decrypted at once when the proposing stage ends. This increases fairness and prevents tactical timing of proposal submissions. _During the pre-voting epoch_, the community members also have time to register as a voter or an expert by submitting a special kind of transaction.
 
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_D.jpg)
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/treasury_epochs_M.jpg)
+![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/treasury_epochs_D.jpg)
+![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/treasury_epochs_M.jpg)
 
 During the **voting epoch**, the voting committee is selected, a voting key is set up, and the ballot is held. For the committee selection, a set of voting committees will be randomly selected from the registered voters who are willing to be considered for the committee selection. The probability of being selected is proportional to their locked stake.
 
@@ -107,23 +107,23 @@ The key setup stage is where a _public voting key_ for the treasury epoch is gen
 
 The _voters_ and _experts_ cast their votes during the ballot casting stage. Each vote is represented as a **vector**. Since there are three possible votes — *Yes, No, Abstain* — there are three possible vectors that can be submitted.
 
-![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_D.jpg)
-![yes no abstain](/assets/post_files/horizen/expert/dao/yes_no_abstain_M.jpg)
+![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/yes_no_abstain_D.jpg)
+![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/yes_no_abstain_M.jpg)
 
 **The concept works like this:** In the example _below_ there are **4** votes, **2** voted Yes on the proposal, 1 No and **1** Abstain.
 
-![votes](/assets/post_files/horizen/expert/dao/votes_D.jpg)
-![votes](/assets/post_files/horizen/expert/dao/votes_M.jpg)
+![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/votes_D.jpg)
+![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/votes_M.jpg)
 
 If you are familiar with the concept of vector addition, it is easy to tell the sum of those four vectors. **One** of the _Yes_ votes is canceled out by the **No** vote. The _remaining_ **Yes** vote added together with the **Abstain** vote yields the diagonal vector shown below. For the tally, only the **x-axis** is considered. The final result of this proposal revealed in the **tally stage** would be a _Yes_.
 
-![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_D.jpg)
-![votes sum](/assets/post_files/horizen/expert/dao/votes_sum_M.jpg)
+![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/votes_sum_D.jpg)
+![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/votes_sum_M.jpg)
 
 More specifically, a _score_ for each proposal will be calculated by taking the number of **Yes** votes minus the number of **No** votes. The resulting difference has to account for at least **10%** of all the votes submitted to be considered for funding. If **100** votes are cast, not including **Abstain** votes, there have to be at least **55** **Yes** votes to reach that threshold. **The highest scoring proposals will be funded until the treasury is depleted for the month.**
 
-![score](/assets/post_files/horizen/expert/dao/score_D.jpg)
-![score](/assets/post_files/horizen/expert/dao/score_M.jpg)
+![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/score_D.jpg)
+![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/score_M.jpg)
 
 The **post-voting** epoch consists of the _tally_ stage and _execution_ stage. Note that each vector is submitted in an encrypted fashion and only in the **tally stage** the committee jointly reveals all the casted votes. The score for each proposal will be calculated and the proposals ranked according to their score.
 

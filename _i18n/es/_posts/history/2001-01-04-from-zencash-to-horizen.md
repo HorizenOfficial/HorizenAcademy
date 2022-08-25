@@ -44,7 +44,7 @@ css: |
 ### El nacimiento de ZenCash
 
 <div class="rocket-image d-none d-md-block">
-    <img src="/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
+    <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
 </div>
 
 Todo empezó casi por accidente. Rob Viglione, cofundador de Horizen, se encontraba terminando su doctorado en la Universidad de Carolina del Sur, impartiendo un curso sobre blockchain y trabajando en ZClassic como pasatiempo. ZClassic tenia un equipo informal, pero Rob se apasionó por el proyecto, por lo que fue incrementando su compromiso y actividad en la comunidad hasta asumir el papel de líder del proyecto cuando este se desarrolló. Rob conoció a Rolf Versluis mientras trabajaban en ZClassic. A ambos les importaba profundamente el proyecto, pero tenían visiones diferentes del futuro de la privacidad, gobernanza y economía. Se dieron cuenta de que compartían visiones similares al trabajar juntos en un proyecto, así que decidieron conocerse un día. Rob invitó a Rolf, que vivía en Georgia, a darles una clase a sus alumnos de universidad y discutir los términos de su colaboración.
@@ -55,7 +55,7 @@ Al separarse de ZClassic, Ron y Rolf fundan ZenCash. Finalmente libres de fijar 
 
 > Nota: Tomando en cuenta detalles técnicos, fue el bloque #110000 fue de donde Rob y Rolf se bifurcaron. ZenCash comenzó su nueva blockchain con un modelo de tesorería a partir del bloque #110001. Nótese la emisión de 1.0625 en la transacción Coinbase, la cual forma parte de la nueva emisión que se fue hacía la tesorería.
 
-![History Horizen logos](/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
+![History Horizen logos]({{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
 
 ### De pasatiempo a trabajo de tiempo completo
 
@@ -85,7 +85,7 @@ Vamos por buen camino como proyecto, pero aún no estamos satisfechos. Nos hemos
     <table class="table table-borderless">
     <tbody>
         <tr>
-            <td style="width: 80px;" class="p-0"><img src="/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
+            <td style="width: 80px;" class="p-0"><img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
             <td class="pt-0 pb-0 pr-0 pl-3">
                 Los Súper Nodos alojarán las cadenas laterales de Horizen que serán implementadas en un futuro cercano, convirtiéndolas en las primeras cadenas laterales verdaderamente descentralizadas en la industria.
             </td>
@@ -108,13 +108,13 @@ Code Particle, otro de nuestros asociados importantes, colabora en el desarrollo
 
 <div class="row mb-4 align-items-center">
     <div class="col-md-4 mt-4">
-        <img src="/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
+        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
+        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
+        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
     </div>
 </div>
 
@@ -129,7 +129,7 @@ El equipo de Horizen se enteró inmediatamente gracias al sistema de alerta prev
 Determinamos que la mejor solución era mejorar la regla de la cadena más larga (consenso de Satoshi) e introdujimos una penalización por la entrega tardía de bloques, lo cual hizo exponencialmente más difícil y costoso realizar un ataque del 51%. Puedes consultar nuestro libro blanco sobre la “Solución al ataque del 51%” [aquí.](https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf)
 
 <div class="learn-more">
-    <img src="/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
+    <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Si le interesa saber más al respecto, lea nuestra entrada de blog
     “<a href="https://blog.horizen.io/declaracion-zencash-transacciones-doble-gasto/" class="font-weight-bold" target="_blank">Declaración De Zencash En Transacciones De Doble Gasto</a>”
     y el libro blanco “<a href="https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-ZenCash-Spanish.pdf" class="font-weight-bold" target="_blank">Prevención de Ataques del 51%: Una solución para modificar el consenso de Bitcoin.</a>”
@@ -144,7 +144,7 @@ El motivo decisivo para realizar la expansión de marca fue la llegada de una ca
 <table class="table table-borderless">
 <tbody>
     <tr>
-        <td style="width: 100px;" class="pl-0 pr-0"><img src="/assets/img/horizen-icon.svg" alt="Horizen"></td>
+        <td style="width: 100px;" class="pl-0 pr-0"><img src="{{site.baseurl}}/assets/img/horizen-icon.svg" alt="Horizen"></td>
         <td class="pl-3 pl-lg-4">
             <h3 class="mt-0">Horizen a futuro</h3>
             <p>

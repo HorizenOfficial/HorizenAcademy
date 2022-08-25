@@ -21,8 +21,8 @@ Il existe de nombreuses approches afin de parvenir à un consensus dans un rése
 
 "La principale différence entre les mécanismes de consensus réside dans la manière dont ils délèguent et récompensent la vérification des transactions. (...) D'une manière ou d'une autre, les algorithmes de consensus de la blockchain se résument à une sorte de vote où le nombre de votes d'un utilisateur est lié à la quantité d'une ressource limitée qui est sous son contrôle."
 
-![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_consensus_M.jpg)
+![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_consensus_D.jpg)
+![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_consensus_M.jpg)
 
 ## Preuve de travail (Proof-of-work; PoW)
 
@@ -34,8 +34,8 @@ La puissance de calcul est la ressource limitée d'une blockchain basée sur le 
 
 Les mineurs ont besoin de puissance de calcul parce que le problème qu'ils essaient de résoudre ne peut être résolu que par des suppositions aléatoires. Le PoW ne fonctionne que parce que ce problème est sans optimisation et sans approximation. Sans optimisation, il n'y a pas de raccourci pour essayer un grand nombre de solutions différentes jusqu'à ce que vous trouviez une solution valable. Vous ne pouvez pas calculer une solution, vous devez la trouver par le biais d'une approche d'essai et d'erreur. Sans approximation signifie qu'il n'est pas possible d'avoir une partie de la solution ou “d'être proche de résoudre le problème”. Soit vous avez une solution, soit vous n'en avez pas, ce qui en fait une situation binaire.
 
-![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POW_D.jpg)
-![POW](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POW_M.jpg)
+![POW]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POW_D.jpg)
+![POW]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POW_M.jpg)
 
 Tous les nœuds et les mineurs vérifient la validité d'un nouveau bloc dès que le bloc est découvert et diffusé sur le réseau. Si c'est le cas, ils suppriment toutes les transactions qui sont déjà enregistrées sur la blockchain de leur mempool, qui est le stockage qu
 'ils utilisent pour collecter les transactions. Ils commencent à travailler sur le bloc suivant une fois que leur mempool contient uniquement des transactions qui n'ont pas été minées. C'est ainsi que le réseau s'accorde sur une version unique de l'historique de toutes les transactions d'une blockchain en preuve de travail.
@@ -52,8 +52,8 @@ Si 80 % des mineurs reçoivent d'abord le bloc A et les 20 % restants le bloc B,
 
 _“D'une façon ou d'une autre, les algorithmes de consensus de la blockchain se résument à une sorte de vote où le nombre de votes d'un utilisateur est lié à la quantité d'une ressource limitée qui est sous le contrôle de l'utilisateur.”_
 
-![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_D.jpg)
-![Longest chain](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_M.jpg)
+![Longest chain]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_D.jpg)
+![Longest chain]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_longest_chain_M.jpg)
 
 La preuve de travail est l'un des mécanismes de consensus les plus sûrs. Ce mécanisme n'est réalisable que s'il y a une puissance de calcul suffisante (taux de hachage) dans le réseau. Le protocole Bitcoin a prouvé depuis plus de 10 ans à quel point le consensus sur la preuve de travail est sûr, avec une puissance de calcul suffisante sur le réseau. Nous avons déjà parlé de la théorie des jeux dans notre article décrivant la blockchain comme un protocole de transfert de valeur et dans l'article sur les [smart contracts](https://academy.horizen.io/fr/technology/advanced/guaranteed-execution-with-smart-contracts/).
 
@@ -69,8 +69,8 @@ Alors que les mineurs minent des blocs dans le PoW, _les validateurs forgent des
 
 La ressource rare dans un environnement en PoS est la devise native de la blockchain. Plus vous misez d'argent sur une blockchain en PoS, plus vos chances de valider un nouveau bloc sont élevées. Dans (la plupart) des blockchains de preuve d'enjeu, il n'y a pas de récompense de bloc. L'incitation des validateurs à travailler est uniquement basée sur la perception des frais de transaction attachés aux transactions
 
-![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POS_D.jpg)
-![POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POS_M.jpg)
+![POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POS_D.jpg)
+![POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_POS_M.jpg)
 
 ### PoW vs. PoS
 
@@ -78,8 +78,8 @@ Les sceptiques remettent en question la sécurité globale du modèle de consens
 
 Dans le PoW, il y a un coût réel (l'électricité) pour chaque bloc qui est miné. Reste à savoir si les blockchain en PoS peuvent fournir les mêmes garanties de sécurité sur une longue période de temps que Bitcoin avec sa blockchain en PoW a montré depuis plus d'une décennie maintenant.
 
-![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_compare_D.jpg)
-![Comparing POW and POS](/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_compare_M.jpg)
+![Comparing POW and POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_compare_D.jpg)
+![Comparing POW and POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/FR_compare_M.jpg)
 
 Une autre différence entre le PoW et le PoS est que dans une blockchain PoS chaque nœud de validation doit être identifiable. Les coins misés doivent être tenus responsables de tout acte malveillant. Dans une blockchain en PoW, il n'est pas nécessaire d'avoir des mineurs ou des nœuds identifiables. En fait, c'est une caractéristique, que si un noeud reçoit un bloc, il n'y a aucune information incluse au sujet de qui était le mineur du bloc. Il se peut que ce soit le nœud dont vous venez de recevoir le bloc ou qu'il ait été relayé plusieurs fois avant d'arriver jusqu'à vous. Ce n’est, ni ne devrait avoir d'importance de savoir qui était le mineur. Tout ce qui compte, c'est que la solution au puzzle et que toutes les transactions dans le bloc soient valides. Vous n'avez besoin de faire confiance qu'aux mathématiques et à personne d'autre pour faire confiance à la preuve de travail.
 
@@ -95,7 +95,7 @@ Dans notre prochain article sur le mining, nous expliquerons enfin ce qu'est le 
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
+        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-consensus/Consensus.jpg" alt="Consensus"></td>
         <td>
             La blockchain enregistre tous les transferts d'argent. Si vous n'avez qu'un seul ZEN et que vous créez deux transactions en même temps en dépensant deux fois le même coin (la même pièce de monnaie numérique), le réseau doit s'entendre sur laquelle des deux transactions est la première et donc la plus valable.
         </td>

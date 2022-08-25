@@ -11,7 +11,7 @@ no_index: true
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl}}/assets/img/icons/topics/horizen-bp.svg" alt="Horizen blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         Cette section vous présente les différents éléments de la plateforme Blockchain Horizen. Nous abordons le fonctionnement de notre organisation, la façon dont nous finançons actuellement notre projet et la façon dont nous financerons notre projet à l'avenir au moyen du modèle de financement durable de <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">DAO</a>.
@@ -21,7 +21,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-01-dao-decentralized-autonomous-organization %}">
-            <img src="/assets/post_files/horizen/advanced/intro/dao.svg" alt="DAO - Organisation autonome décentralisée"/>
+            <img src="{{site.baseurl}}/assets/post_files/horizen/advanced/intro/dao.svg" alt="DAO - Organisation autonome décentralisée"/>
         </a>
     </div>
     <div class="col-md-9">
@@ -37,7 +37,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-03-sidechains %}">
-            <img src="/assets/post_files/horizen/advanced/intro/sidechains.svg" alt="Sidehcains" />
+            <img src="{{site.baseurl}}/assets/post_files/horizen/advanced/intro/sidechains.svg" alt="Sidehcains" />
         </a>
     </div>
     <div class="col-md-9">
@@ -53,7 +53,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-01-02-block-dag %}">
-            <img src="/assets/post_files/horizen/advanced/intro/dag.svg" alt="BlockDAG" />
+            <img src="{{site.baseurl}}/assets/post_files/horizen/advanced/intro/dag.svg" alt="BlockDAG" />
         </a>
     </div>
     <div class="col-md-9">

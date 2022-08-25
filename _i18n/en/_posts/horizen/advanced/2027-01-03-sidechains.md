@@ -18,8 +18,8 @@ _Building directly on top of a public blockchain comes with other challenges_. *
 
 **In summary**, the three major roadblocks to building on public blockchains are security and scalability, the burdensome governance processes required for introducing new functionality, and the lack of a token with real-world value.
 
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_D.jpg)
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechains_M.jpg)
+![Horizen Sidechain Construction]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechains_D.jpg)
+![Horizen Sidechain Construction]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechains_M.jpg)
 
 _Meet sidechains_. **Sidechains** benefit from the decentralization and security of the underlying main blockchain and maintain the flexibility to solve highly specific use cases.
 
@@ -148,8 +148,8 @@ The **CCT** consists of two sub-protocols that we want to introduce shortly.
 
 The **first** sub-protocol deals with forward transactions, which are transactions from mainchain to sidechain. The **second** sub-protocol deals with backward transactions, which are transactions from sidechain to mainchain.
 
-![SCP_CCT](/assets/post_files/horizen/expert/sidechains/SCP_CCT_D.jpg)
-![SCP_CCT](/assets/post_files/horizen/expert/sidechains/SCP_CCT_M.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/SCP_CCT_D.jpg)
+![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/SCP_CCT_M.jpg)
 
 The **first** design decision to make is whether the mainchain should be aware of the sidechains. The team led by **Alberto Garoffolo** decided to develop the SCP and CCT independently of each other.
 
@@ -167,8 +167,8 @@ The proposed SCP is based on the **Ouroboros Protocol** developed by **IOHK** fo
 - Before an epoch begins, there is a **Slot Leader Selection Procedure** that assigns one slot leader per slot for the next epoch. In our example, **8** slot leaders will be selected per selection procedure/epoch.
 - If a slot leader **misses** their time slot to forge a block, the next slot leader will include the transactions that weren’t included previously.
 
-![epoch](/assets/post_files/horizen/expert/sidechains/epoch_D.jpg)
-![epoch](/assets/post_files/horizen/expert/sidechains/epoch_M.jpg)
+![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/epoch_D.jpg)
+![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/epoch_M.jpg)
 
 #### Modifications of the Ouroboros Protocol
 
@@ -216,8 +216,8 @@ It is the **goal** to enable cross-chain transfers, so there must be a form of c
 
 _The enablement of forward transactions is achieved through full referencing._ **It solves two problems at once:** enabling transfers from the main- to the sidechain in a straightforward fashion and dealing with finality (or lack thereof).
 
-![full referencing](/assets/post_files/horizen/expert/sidechains/full_referencing_D.jpg)
-![full referencing](/assets/post_files/horizen/expert/sidechains/full_referencing_M.jpg)
+![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/full_referencing_D.jpg)
+![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/full_referencing_M.jpg)
 
 > _"Full referencing implies that the sidechain blocks contain the full chain of the mainchain block references. Even if some block forger missed his opportunity to include a reference to the newly generated MC [mainchain] block, some of the following block forgers will include the missed mainchain reference."_ - **Sidechain Whitepaper**; **Garoffolo**, **Viglione**
 
@@ -228,8 +228,8 @@ So how does full referencing achieve the goals mentioned above? **The references
 
 **Sidechain nodes** can easily verify the transfers by including the _block header_ and _Merkle path_ of forward transactions. **You could think of the two ledgers, sidechain and mainchain, as two separate books**. Since the sidechain bookkeepers constantly monitor the main(chain) book, they can easily add cross chain transactions to their book. By including the transactions together with their Merkle paths and the corresponding block header, every entity on the sidechain will be able to verify the transaction is valid for themselves without having to check in with the mainchain.
 
-![forward](/assets/post_files/horizen/expert/sidechains/forward_D.jpg)
-![forward](/assets/post_files/horizen/expert/sidechains/forward_M.jpg)
+![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/forward_D.jpg)
+![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/forward_M.jpg)
 
 Enabling the forward transfer protocol implies making changes to the current mainchain logic. **A new type of transaction needs to be introduced** that burns coins and provides a set of metadata which allows the user to claim the same amount, minus the _TX_ fee, of newly created coins on the sidechain. **The same goes for backward transactions:** coins on the sidechain are burned and an equivalent amount minus TX fees created on the mainchain. A construction with a locking and unlocking procedure is also feasible.
 
@@ -249,8 +249,8 @@ We decided on developing the SCP and CCP independently of each other. **Since it
 
 From a data point of view, to make all of this work there needs to be a transfer mechanism, initiated on the sidechain, that informs the mainchain of incoming backward transactions. This is done by introducing a new type of data container called **Cross-Chain Certificates** (_CCCert’s_).
 
-![CCCert](/assets/post_files/horizen/expert/sidechains/CCCert_D.jpg)
-![CCCert](/assets/post_files/horizen/expert/sidechains/CCCert_M.jpg)
+![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/CCCert_D.jpg)
+![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/CCCert_M.jpg)
 
 The **CCCert** contains basic information, such as the **sidechain identifier** (_SCid_) and the **CCCert ID** as a header. **The Backward Transfer List** collects all cross-chain transactions. The last three data fields concern the certifiers that fulfill the role of the validators mentioned in the quote above.
 
@@ -299,8 +299,8 @@ Enforcing this measure is based on the assumption of an honest majority. As you 
 
 Depending on the sidechain structure, these components can be either highly dependent on one another or highly decoupled. **The Zendoo protocol allows various degrees of freedom concerning the SCP**. The Cross-Chain Transfer Protocol serves as a bridge between MCP and all sidechains.
 
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_D.jpg)
-![Horizen Sidechain Construction](/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_M.jpg)
+![Horizen Sidechain Construction]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_D.jpg)
+![Horizen Sidechain Construction]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechain-elements_M.jpg)
 
 #### The Mainchain Consensus Protocol - MCP
 
@@ -384,8 +384,8 @@ Writing a function that calculates the factorial of a given number is elegantly 
 
 The solution to the problem _5!_ then depends on a smaller instance of the same problem: **4!**.
 
-![Recursively Calculating the Factorial of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_D.jpg)
-![Recursively Calculating the Factorial of any Number](/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_M.jpg)
+![Recursively Calculating the Factorial of any Number]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_D.jpg)
+![Recursively Calculating the Factorial of any Number]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/recursive_factorial_M.jpg)
 
 **In the example above,** the recursive function starts with the first recursive case **\\(5! = 5 \cdot 4!\\)**, then starts another instance of the function that computes **4!** - and so on. This continues until the **base case** is reached. The base case is the factorial of the number **2**, which equals **2**.
 
@@ -411,8 +411,8 @@ We want to achieve a proof of state transitions in the context of our sidechains
 
 The blockchain's **state transition logic** is a function that takes the current state **\\(s\*i\\)** and the most recent set of transactions **\\(t_i\\)** as an input, and returns the next state **\\(s\*{i+1}\\)** as an output. The factorial of five is expressed as the number five times the result of the function for computing the factorial of four. The current state can also be computed based on the current transition and the result of the function for computing the last state. Let us look at a tangible example.
 
-![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_D.jpg)
-![States and State Transitions](/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_M.jpg)
+![States and State Transitions]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_D.jpg)
+![States and State Transitions]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/states-and-state-transitions_M.jpg)
 
 Let's assume a sidechain starts in state **1 \\(s_1\\)** with its **genesis block**. The **first** transition **\\(t_1\\)** consists of all transactions included in the first "real" block applied to the first state. The transition function, let's call it `update`, takes these two parameters, the **initial state** (Genesis Block) and the first transition (read: transactions), and computes the next state **\\(s_2\\)**, given the inputs constitute valid arguments to the `update` function.
 
@@ -438,8 +438,8 @@ We simply replaced **\\(s_2\\)** from the second formula in this section with th
 
 The construction shown above follows the same pattern we discussed when calculating the factorial. _Do you recognize the recursive pattern?_ The function `update` calls itself subsequently and opens new instances of the same function until the base case is reached.
 
-![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
-![Recursive State Transitions](/assets/post_files/technology/expert/1.3-sidechains/recursive_state_M.jpg)
+![Recursive State Transitions]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/recursive_state_D.jpg)
+![Recursive State Transitions]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/recursive_state_M.jpg)
 
 The base case here is the first state transition resulting in state **\\(s_2\\)**. Once this base case is reached, the different instances of the `update` function return their result to the next highest instance of the same function until finally, the current state is returned and all instances of the function are closed.
 
@@ -467,8 +467,8 @@ _So how does generating a proof work exactly for a given sidechain?_ **First**, 
 
 With _SNARKs_ we can produce proofs of constant size for almost any type of computation. **A SNARK proving system comprises a triplet of algorithms:** _Setup_, _Prove_, and _Verify_.
 
-![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_D.jpg)
-![Proof Generation and Verification](/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_M.jpg)
+![Proof Generation and Verification]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_D.jpg)
+![Proof Generation and Verification]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/proof-generation-and-verification_M.jpg)
 
 When a SNARK system is setup, a proving key **\\(pk\\)** and a verification key **\\(vk\\)** are generated for the system **C**. The verification key is registered on the mainchain at the time of sidechain deployment.
 
@@ -523,8 +523,8 @@ The structure of the mainchain block headers was upgraded and a new data field, 
 
 All these sidechain-related events are placed into a Merkle tree, grouped by sidechain identifiers into different branches. The resulting Merkle tree root is placed in the mainchain block header as the sidechain transactions commitment.
 
-![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_D.jpg)
-![Sidechains Transactions Commitment in Mainchain Block Header](/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_M.jpg)
+![Sidechains Transactions Commitment in Mainchain Block Header]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_D.jpg)
+![Sidechains Transactions Commitment in Mainchain Block Header]({{site.baseurl}}/assets/post_files/technology/expert/1.3-sidechains/sidechain-transaction-commitment_M.jpg)
 
 **Including this data in the block header** allows sidechain nodes to easily synchronize and verify sidechain related transactions (sidechains DO monitor the mainchain) without the need to transmit the entire mainchain block. **Furthermore**, it allows the construction of a SNARK, proving that all sidechain-related transactions of a given mainchain block have been processed correctly.
 

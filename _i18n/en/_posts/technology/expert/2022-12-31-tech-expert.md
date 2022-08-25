@@ -11,7 +11,7 @@ level: expert
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl}}/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are interested in learning about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
@@ -21,7 +21,7 @@ level: expert
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-01-transactions %}">
-            <img src="/assets/post_files/technology/expert/0.0-tech-expert/transactions.svg" alt="Transactions" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/expert/0.0-tech-expert/transactions.svg" alt="Transactions" />
         </a>
     </div>
     <div class="col-md-9">

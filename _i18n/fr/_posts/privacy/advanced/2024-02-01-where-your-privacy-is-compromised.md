@@ -75,7 +75,7 @@ Réutiliser le même mot de passe sur de nombreux sites Web et applications est 
 
 Il est important que vous utilisiez un mot de passe différent pour chaque site Web ou application pour lequel vous créez un compte. Considérez ceci comme la meilleure pratique de sécurité.
 
-![password](/assets/post_files/privacy/advanced/strong-passwords/FR_password.jpg)
+![password]({{site.baseurl}}/assets/post_files/privacy/advanced/strong-passwords/FR_password.jpg)
 
 [Source](https://xkcd.com/936/)
 
@@ -129,7 +129,7 @@ Nous utilisons déjà la 2FA dans la vraie vie. Un exemple notable est l'utilisa
 
 La bonne nouvelle, c'est que presque tous les services du monde de la blockchain ont une 2FA optionnelle intégrée. C'est devenu un standard de fait dans ce domaine. L'activation de la 2FA est l'une des meilleures pratiques de sécurité que vous puissiez employer car elle vous protège même en cas de piratage au niveau de la plateforme lorsque les mots de passe sont exposés. Bien sûr, si l'on considère que la plateforme elle-même a la 2FA correctement implémentée. La 2FA fonctionne en vous demandant de prouver votre identité par une méthode d'authentification secondaire en plus de votre mot de passe. Le plus souvent, la méthode secondaire d'authentification est un message SMS envoyé à votre numéro de téléphone ou un code généré sur une application dédiée, comme Microsoft Authenticator, Google Authenticator ou autres.
 
-![2FA](/assets/post_files/privacy/advanced/2fa/FR_2fa.jpg)
+![2FA]({{site.baseurl}}/assets/post_files/privacy/advanced/2fa/FR_2fa.jpg)
 
 ### La 2FA par messages texte (SMS)
 
@@ -169,37 +169,37 @@ Selon Wikipedia, l'argument de rien avoir à cacher affirme que les programmes d
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="La protection de la vie privée ne consiste pas à se cacher, mais à protéger"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="La protection de la vie privée ne consiste pas à se cacher, mais à protéger"></td>
         <td>
             <strong>La protection de la vie privée ne consiste pas à se cacher, mais à protéger</strong> : Donneriez-vous les mots de passe de vos adresses mails et autres comptes à n'importe qui ? Permettriez-vous à tout le monde de lire vos messages sur les réseaux sociaux ? Aimeriez-vous avoir toujours quelqu'un qui écoute chacune de vos conversations, qui consulte votre dossier médical et qui est au courant de vos rendez-vous avec votre médecin ? Ou alors, pourquoi avez-vous des rideaux aux fenêtres de votre maison ou même un pantalon ?
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="La vie privée est un droit humain fondamental"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="La vie privée est un droit humain fondamental"></td>
         <td>
             <strong>La vie privée est un droit humain fondamental</strong> : Le droit à la liberté d'expression et le droit de réunion sont les droits fondamentaux de l'homme, même si vous n'avez rien à dire ou protester maintenant. La vie privée aussi. Pensez au vote, aux renseignements médicaux et aux renseignements bancaires. Il est évident que vous souhaitez qu'ils restent confidentiels.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="Le manque de privacité est nuisible"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="Le manque de privacité est nuisible"></td>
         <td>
             <strong>Le manque de privacité est nuisible</strong> : Vous pourriez faire l'objet de discrimination ou d’harcèlement en raison de vos renseignements personnels ou devenir victime d'un vol ou d'une usurpation d'identité.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Les données de localisation sont sensibles"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Les données de localisation sont sensibles"></td>
         <td>
             <strong>Les données de localisation sont sensibles</strong> : Elles peuvent déterminer où vous vivez, où vous travaillez, où vous faites les magasins et où vous sortez avec vos amis. Chaque smartphone moderne détecte la maison et le lieu de travail juste après plusieurs jours d'utilisation.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Les réseaux sociaux rassemblent encore plus de données"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Les réseaux sociaux rassemblent encore plus de données"></td>
         <td>
             <strong>Les réseaux sociaux rassemblent encore plus de données</strong> : Ce que vous aimez ou suivez et les applications que vous utilisez sur les réseaux sociaux déterminent les types de publicités que vous allez voir. Votre âge, votre sexe, votre profession, votre titre de poste et tous les autres petits détails peuvent également être pris en compte pour le ciblage publicitaire. Les réseaux sociaux sont la meilleure plateforme de marketing que nous ayons vue jusqu'à présent. Non seulement ces détails déterminent le type d'annonces que vous voyez, mais aussi parfois le prix qui vous est indiqué. Surtout lorsque vous réservez des vols, vos métadonnées déterminent les prix qui seront disponibles.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Chaque petit détail compte"></td>
+        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Chaque petit détail compte"></td>
         <td>
             <strong>Chaque petit détail compte</strong> : Certaines entreprises recueillent les mails tandis que d'autres localisent l'endroit où vous allez faire les boutiques ou manger. Certains grands moteurs de recherche conservent même votre historique de recherche si vous avez un compte chez eux. D'autres regroupent toutes les données et donnent une image complète de qui vous êtes, d’où vous allez et avec qui ainsi que ce que vous faites. Comme le dit cet article complet, si cela fait peur, c'est parce que c'est le cas.
         </td>
@@ -316,8 +316,8 @@ Le plus difficile est de choisir un gestionnaire de mots de passe - il y en a te
 
 Habituellement, les données que vous envoyez et recevez risquent d'être interceptées lorsque vous utilisez un réseau public non sécurisé comme un point d'accès Wifi dans un café ou un aéroport. En utilisant un réseau privé virtuel (VPN), vous pouvez être assuré que toute la communication entre votre ordinateur et le terminal de votre connexion est protégée. Un VPN chiffrera toutes les données que vous transmettez sur votre appareil et les déchiffrera lorsqu'il atteindra son point de destination désiré.
 
-![vpn](/assets/post_files/privacy/advanced/vpn/vpn_D.jpg)
-![vpn](/assets/post_files/privacy/advanced/vpn/vpn_M.jpg)
+![vpn]({{site.baseurl}}/assets/post_files/privacy/advanced/vpn/vpn_D.jpg)
+![vpn]({{site.baseurl}}/assets/post_files/privacy/advanced/vpn/vpn_M.jpg)
 
 Un VPN est un canal sécurisé entre deux ou plusieurs périphériques. Un VPN sécurise votre connexion comme si vous utilisiez un réseau privé. Par exemple, de nombreuses entreprises exigent que leurs employés utilisent un VPN pour accéder au réseau privé du bureau lorsqu'ils travaillent à distance. Ainsi, les données sont aussi sécurisées que si elles étaient sur place, sans risque de fuite de données.
 

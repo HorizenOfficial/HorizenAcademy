@@ -16,8 +16,8 @@ Antes de los años 70, la encriptación se utilizaba principalmente con motivos 
 
 Fueron dos publicaciones las que le introdujeron la criptografía al mundo. La primera fue la de Data Encryption Standard, presentada por el gobierno de Estados Unidos; la segunda, el libro blanco titulado ["New Directions in Cryptography,"](https://ee.stanford.edu/~hellman/publications/24.pdf) de los doctores Whitfield Diffie y Martin Hellman, publicado en 1976.
 
-![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
-![New directions](/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
+![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
+![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
 
 El Dr. David Chaum empezó a escribir sobre temas como el dinero digital anónimo y los sistemas de reputación seudónima hacia 1980, cuando los describió en ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://chaum.com/security-without-identification/). Este fue el primer paso hacia las divisas digitales que tenemos en la actualidad.
 

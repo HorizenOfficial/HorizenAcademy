@@ -31,8 +31,8 @@ A blockchain is a data structure in the eyes of a computer scientist. This struc
 
 The term blockchain comes from the structure that stores your data. All data becomes separated into blocks. Every _block_ states which block came before it creating a “_chain_” of blocks. Stating which block came previously is commonly referred to as referencing.
 
-![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_D.jpg)
-![List table chain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_M.jpg)
+![List table chain]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_D.jpg)
+![List table chain]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/list_table_chain_M.jpg)
 
 ### A Database: Efficient but Centralized
 
@@ -54,15 +54,15 @@ There is no centralized entity, like a bank or clearinghouse, responsible for ac
 
 The transaction is then broadcast to the network, and every participant (or node or peer) keeps a copy of it. A node can be operated by a person, a store accepting crypto, or a bank; it makes no difference who you are. The amount of copies makes a blockchain slower than a database but makes it more secure.
 
-![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_D.jpg)
-![Decentralised clearing](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_M.jpg)
+![Decentralised clearing]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_D.jpg)
+![Decentralised clearing]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/decentralised_clearing_M.jpg)
 
 ### Where Does the Term Blockchain Come From?
 
 The blockchain does not keep data in a single huge continuous ledger, but separates the data into _blocks_. These blocks are then connected like individual pages in a book. That is how the term blockchain came to be. Imagine a bookie recording entries using single pages of a book instead of one large scroll. Every few minutes, he starts using a new page and adds a reference to the last page - _“**this page follows page x**”_. The reference he includes “chains” the pages together. He can easily arrange the pages if he ever drops them because each page references its predecessor.
 
-![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_D.jpg)
-![Book blockchain](/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_M.jpg)
+![Book blockchain]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_D.jpg)
+![Book blockchain]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/book_blockchain_M.jpg)
 
 One of these single pages represents a block in this comparison, and the pile of the pages he already used represent the blockchain. Instead of one bookkeeper, there are many of them working simultaneously on a blockchain. **Miners** are the bookkeepers of a blockchain, they are the ones creating new blocks.
 
@@ -82,10 +82,16 @@ Each element of an array has an **index** that starts at **0**. You can instantl
 
 Arrays are useful for their simplicity and instant access property.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/array_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/array_M.jpg"
+  image=image
+  image2=image2
   caption="One-dimensional array with six elements."
 %}
 
@@ -97,8 +103,8 @@ If you look at the first piece of data on the list and wish to access the second
 
 If you are searching for a specific piece of data in your linked list you will look at the first node, the _head_ of the linked list. If it is not the element you were looking for, you follow the pointer, that will lead you to the next node. If this node does not contain the data you were looking for either, you continue by following the links throughout all nodes until you find the desired data.
 
-![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_D.jpg)
-![Linked List](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_M.jpg)
+![Linked List]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_D.jpg)
+![Linked List]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/linked_list_M.jpg)
 
 Programs that use a linked list to store data don’t have to know how many data elements you want to store beforehand, but the linked list does need to know what each element consists of. As previously stated, data elements of a linked list are called nodes. Each node can contain several objects of different types.
 
@@ -106,19 +112,31 @@ Programs that use a linked list to store data don’t have to know how many data
 
 The first element of a linked list is called the head, and the last one is called the tail.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/linked_list_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/linked_list_M.jpg"
+  image=image
+  image2=image2
   caption="Linked list with three nodes and n objects per node."
 %}
 
 Each node also contains a _pointer_ to the next node. The **pointer** tells your computer where the following node is located in memory. This allows you to expand a linked list easily because the data doesn’t have to be in a single, continuous location in memory.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/array_vs_list_M.jpg"
+  image=image
+  image2=image2
   caption="Usage of RAM by arrays and linked lists. Array stored in a single location; linked list stored across memory."
 %}
 
@@ -140,10 +158,16 @@ A linked list within the hash table is used to store several keys within a singl
 
 If the hash table is well-dimensioned, the cost, or the number of instructions/computations, for each lookup is independent of the total number of elements stored in the table. Hash tables give you instant access without even knowing the location of every element in memory. The location is defined by the data itself, making it convenient for systems that have to store large amounts of data and repeatedly access them.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/hash_table_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/hash_table_M.jpg"
+  image=image
+  image2=image2
   caption= "Schematic of a hash table. Keys mapped to buckets (array elements) using a hash function. Buckets expanded as linked lists to accommodate overflow entries."
 %}
 
@@ -155,17 +179,23 @@ The blockchain is a rather sophisticated data structure, made up of many sub-str
 
 The _blockchain_ is like a linked list in the context of data structures. The **blockchain** organizes data by splitting it into subsets or containers, referred to as _blocks_. The blocks are quite analogous to nodes in a linked list. Each block contains a _reference_, which is the hash of the preceding block. This serves as a link to the preceding block and establishes the order throughout the chain of blocks.
 
-![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_D.jpg)
-![Blockchain data](/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_M.jpg)
+![Blockchain data]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_D.jpg)
+![Blockchain data]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/blockchain_data_M.jpg)
 
 Each block contains several elements. _The elements of a block_ are generally separated into the **_block header_** and its _transactions_. While the transactions in a block account for most of the data, the block header contains essential metadata about each block, such as a timestamp and _block height_.
 
 The key difference between a blockchain and a linked list is that each reference in a blockchain is cryptographically secured, and therefore _tamper-evident_. In contrast, the pointers in a linked list can be changed at any time without affecting the integrity of the data. The secured references establish order throughout the blocks and effectively make the blockchain an _append-only_ data structure where new data can only be added with new blocks. This means you can only add data to a blockchain by appending it to the front.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/blockchain_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/blockchain_M.jpg"
+  image=image
+  image2=image2
   caption="Schematic of a blockchain with three blocks, separated into block header and transactions."
 %}
 
@@ -173,10 +203,16 @@ The hash value of the previous block header is included in the following block a
 
 The secured links are constantly checked for validity. If you were to insert a malicious block in the middle of a blockchain or change data in an existing block, for example, between **Blocks 1** and **3** in the graphic below, you could include a reference to its predecessor, **Block 1**. Still, it would be infeasible to make **Block 3** reference your newly inserted block.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/blockchain_broken_M.jpg"
+  image=image
+  image2=image2
   caption= "Schematic of a blockchain where an attacker is trying to insert a malicious block not referenced by its successor."
 %}
 
@@ -227,10 +263,16 @@ After looking at the properties that result from the design, let’s take a look
 
 Blocks consist of a **header** that contains essential data about the block - a sort of summary. The largest part of a block in terms of storage comprises the transactions.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/block_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/block_M.jpg"
+  image=image
+  image2=image2
   caption="Schematic of a block. Metadata provided in the block header and transactions including the coinbase transaction."
 %}
 
@@ -253,19 +295,31 @@ A **Merkle tree** is a data structure used within blocks. The transactions in a 
 
 **Constructing a Merkle tree goes like this**: The coinbase transaction rewarding the miner with new coins is placed first, followed by all other transactions in the block. First, each leave (transaction) is hashed. Next, the hashes of the two transactions are concatenated and hashed again. If the number of transactions is odd, the last transaction’s hash is concatenated with a copy of itself. This process continues until only a single hash is left - the Merkle root.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/merkle_tree_M.jpg"
+  image=image
+  image2=image2
   caption="Merkle tree data structure used to consolidate transactions into a single 256-bit identifier - the Merkle root."
 %}
 
 The **Merkle path** is simply the set of hash values needed to reconstruct the entire tree. The Merkle path for transaction **K** consists of the hash of transaction **L (\\(HL\\))** it is first concatenated with and the combined hashes **\\(H{IJ}\\), \\(H{MNOP}\\)** and lastly, **\\(H{ABCDEFGH}\\)**. Those four hashes, together with the original transaction, allow a verifier to check the tree's integrity.
 
+{% capture image %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg
+{% endcapture %}
+{% capture image2 %}
+{{site.baseurl}}/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg
+{% endcapture %}
 {%
   include image_caption.html
-  image="/assets/post_files/technology/expert/1.1-data-structure/merkle_path_D.jpg"
-  image2="/assets/post_files/technology/expert/1.1-data-structure/merkle_path_M.jpg"
+  image=image
+  image2=image2
   caption=" Merkle path (also Merkle proof) of transaction hash K. Hashes shown in blue comprise the Merkle path needed to verify hash K is included in the Merkle root."
 %}
 

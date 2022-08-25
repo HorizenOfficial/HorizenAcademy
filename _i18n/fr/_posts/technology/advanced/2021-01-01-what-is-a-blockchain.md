@@ -15,7 +15,7 @@ Nous souhaitons regarder la blockchain depuis trois différentes perspectives da
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-02-blockchain-as-a-data-structure %}">
-            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/data-structure.svg" alt="La blockchain comme structure de données" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/data-structure.svg" alt="La blockchain comme structure de données" />
         </a>
     </div>
     <div class="col-md-9">
@@ -29,7 +29,7 @@ Nous souhaitons regarder la blockchain depuis trois différentes perspectives da
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-03-a-protocol-to-transfer-value %}">
-            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/value-transfer.svg" alt="Un protocole pour transférer de la valeur" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/value-transfer.svg" alt="Un protocole pour transférer de la valeur" />
         </a>
     </div>
     <div class="col-md-9">
@@ -43,7 +43,7 @@ Nous souhaitons regarder la blockchain depuis trois différentes perspectives da
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-04-guaranteed-execution-with-smart-contracts %}">
-            <img src="/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/smart-contracts.svg" alt="La garantie d'exécution avec les Smart contracts" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/1.0-what-is-a-blockchain/smart-contracts.svg" alt="La garantie d'exécution avec les Smart contracts" />
         </a>
     </div>
     <div class="col-md-9">

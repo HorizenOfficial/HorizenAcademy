@@ -17,30 +17,30 @@ Une [fonction de hachage](https://academy.horizen.io/fr/technology/advanced/hash
 
 L'entrée n'a pas besoin d'être un nombre, il peut s'agir de n'importe quel type de données d'un seul caractère jusqu'à un gros fichier comme une vidéo. La sortie d'une fonction de hachage donnée a une longueur constante quelle que soit l'entrée. Il existe de nombreuses fonctions de hachage et la plupart d'entre elles portent la longueur de la sortie qu'elles produisent en leur nom. L'une des fonctions de hachage les plus couramment utilisées est SHA256 (Secure Hash Algorithm 256 bit). Le nombre indique que la sortie de la fonction de hachage sera toujours de 256 bits, quelle que soit l'entrée. La valeur de hachage sert d'empreinte digitale des données. On peut vérifier l'intégrité des fichiers ou détecter s'ils diffèrent les uns des autres en comparant les hashs.
 
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_hash_D.jpg)
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_hash_M.jpg)
+![Hash]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_hash_D.jpg)
+![Hash]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_hash_M.jpg)
 
 ### Cryptographie à clé publique
 
 La [cryptographie à clé publique](https://academy.horizen.io/fr/technology/advanced/public-key-cryptography/), est également connue sous le nom de _cryptographie asymétrique_. Le terme asymétrique provient de la propriété des clés qui viennent toujours par paires et utilisées de façon complémentaire. Si vous avez chiffré quelque chose avec l'une des clés, vous avez besoin de l'autre pour le déchiffrer et vice versa. Ces clés sont la _clé publique_ et la _clé privée_ (ou _clé secrète_). Vos clés se traduisent par votre identité sur la blockchain. Vous recevez des fonds avec votre clé publique et envoyez des fonds avec votre clé privée. La cryptographie à clé publique est aussi l'origine du nom des cryptomonnaies.
 
-![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_asymmetric_D.jpg)
-![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_asymmetric_M.jpg)
+![Asymmetric]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_asymmetric_D.jpg)
+![Asymmetric]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_asymmetric_M.jpg)
 
 ### Un réseau Peer-to-Peer (pair-à-pair)
 
 Vous avez probablement déjà rencontré le terme de réseau [Peer-to-Peer](https://academy.horizen.io/fr/technology/advanced/a-peer-to-peer-p2p-network/) (P2P), très probablement dans le contexte de services de partage de fichiers comme BitTorrent. Dans un réseau distribué, les utilisateurs ne se connectent pas à un serveur central ou à une entité pour accéder à un service, mais à de nombreux pairs. Les pairs sont d'autres participants au réseau qui fournissent le service les uns aux autres. Les réseaux P2P sont très résistants, car il n'y a pas de point de défaillance unique.
 Les blockchains utilisent ce concept et c'est l’une des raisons pour lesquelles elles sont si robustes. Vous entendrez souvent les attributs "_sans permission_" et "_résistant à la censure_" lorsque vous lirez la proposition de valeur de la technologie de la blockchain. Le réseau Peer-to-Peer joue un rôle important dans l'attribution de ces propriétés aux blockchains.
 
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_central-distri_M.jpg)
+![Central distri]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_central-distri_D.jpg)
+![Central distri]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_central-distri_M.jpg)
 
 ### Mécanisme de consensus
 
 Si vous voulez construire une forme de monnaie numérique sur un réseau P2P avec beaucoup de participants, vous aurez besoin de construire un consensus sur l'ordre des transactions. Si un utilisateur a un ZEN et crée deux transactions différentes qui dépensent le même coin simultanément, certains pairs recevront d'abord la version A, tandis que d'autres recevront peut-être la version B en premier. Le réseau doit parvenir à un accord, ou à un consensus, sur laquelle des deux transactions a eu lieu en premier. Le [mécanisme de consensus](https://academy.horizen.io/fr/technology/advanced/consensus-mechanisms/) est ce qui permet à un grand nombre d'entités différentes qui ne se connaissent pas et ne se font pas confiance de se mettre d’accord sur une version unique de la blockchain.
 
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_consensus_block_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_consensus_block_M.jpg)
+![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_consensus_block_D.jpg)
+![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/FR_consensus_block_M.jpg)
 
 ### Le Minage
 
@@ -69,8 +69,8 @@ Un _nœud complet_ est tel une antenne de téléphone à laquelle votre téléph
 
 De même, dans le réseau distribué d'une blockchain, les _nœuds complets_ sont généralement toujours opérationnels et constituent le réseau distribué. Ils conservent également une copie de l'ensemble de la blockchain. Vous utilisez généralement un _noeud léger_ lorsque vous utilisez un wallet sur votre ordinateur ou sur votre mobile. Dans ce cas, vous allez d’abord devoir vous connecter à un _noeud complet_ avant de pouvoir interagir avec la blockchain.
 
-![Nodes in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_D.jpg)
-![Nodes in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_M.jpg)
+![Nodes in FR]({{site.baseurl}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_D.jpg)
+![Nodes in FR]({{site.baseurl}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_nodes_M.jpg)
 
 ## Les mineurs
 
@@ -80,8 +80,8 @@ Les mineurs vont avoir le but qui suit : chaque nouveau bloc fait suite à une d
 
 Chaque mineur a un bloc légèrement différent des autres mineurs. Cela s'explique par le fait qu'il faut un certain temps pour qu'une nouvelle transaction s'étende à l'ensemble du réseau, et que différents mineurs peuvent recevoir ces transactions dans un ordre légèrement différent.
 
-![Miner in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_miner_D.jpg)
-![Miner in FR](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_miner_M.jpg)
+![Miner in FR]({{site.baseurl}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_miner_D.jpg)
+![Miner in FR]({{site.baseurl}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/FR_miner_M.jpg)
 
 Les mineurs commencent à résoudre un puzzle cryptographique afin de créer un bloc valide. Les mineurs commencent à travailler sur un nouveau bloc - et donc un nouveau puzzle - immédiatement après que le bloc précédent ait été ajouté à la chaîne. Ils rassemblent toutes les transactions sur le réseau qui n'ont pas encore été incluses dans un bloc et les mettent dans leur version du bloc suivant.
 
@@ -115,13 +115,13 @@ Dans notre dernier article traitant des éléments d'une blockchain, nous avons 
 L'un des concepts fondamentaux qui font fonctionner les blockchains et les cryptomonnaies est le concept de _cryptographie asymétrique_ aussi connu comme _cryptographie à clé publique_.
 Avec la cryptographie symétrique, vous utilisez la même clé pour chiffrer un texte que vous utiliserez pour le déchiffrer plus tard (comme un cadenas).
 
-![Symmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_D.jpg)
-![Symmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_M.jpg)
+![Symmetric in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_D.jpg)
+![Symmetric in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_symmetric_M.jpg)
 
 Avec la cryptographie asymétrique, vous chiffrez et déchiffrez un message en utilisant deux clés différentes, la clé publique, et la clé privée. Les clés viennent toujours par paire. Si vous chiffrez un message avec une clé publique, il devra être déchiffré avec la clé privée correspondante et vice versa. Vous avez toujours une paire de clés. Cela se résume à un concept simple : votre paire de clé est votre identité sur la blockchain.
 
-![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_D.jpg)
-![Asymmetric in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_M.jpg)
+![Asymmetric in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_D.jpg)
+![Asymmetric in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_asymmetric_M.jpg)
 
 ## Votre paire de clés est votre identité
 
@@ -145,8 +145,8 @@ La comparaison dans la vraie vie que vous entendrez le plus souvent est que votr
 
 Vos clés sont importantes pour envoyer et recevoir des transactions. Techniquement, une transaction est un message vers tous les noeuds du réseau. Ce message inclut le montant des fonds que vous souhaitez envoyer, et à qui. Cette information est ensuite chiffrée avec votre clé privée, une étape que nous appelons _signature de la transaction_.
 
-![Signing in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_signing_D.jpg)
-![Signing in FR](/assets/post_files/technology/beginner/identity-in-blockchain/FR_signing_M.jpg)
+![Signing in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_signing_D.jpg)
+![Signing in FR]({{site.baseurl}}/assets/post_files/technology/beginner/identity-in-blockchain/FR_signing_M.jpg)
 
 Une signature digitale fonctionne de la même manière que pour l’autorisation d’une transaction dans la vie réelle en utilisant votre signature “analogique”. Même avec les supercalculateurs modernes, il est impossible de forger une telle signature numérique. Par conséquent, la cryptographie à clé publique est considérée comme l'un des moyens de chiffrement les plus sûrs actuellement disponibles.
 

@@ -13,16 +13,16 @@ Since the goal of the original blockchain design was to enable a new and fair fo
 
 **_Public-Key Cryptography_** makes it possible to represent identity on the blockchain. It is the second cornerstone of blockchain technology besides [hash functions](https://academy.horizen.io/technology/advanced/hash-functions/). While hash functions are used to verify the authenticity and integrity of data, public-key cryptography is used to verify ownership on the blockchain.
 
-![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_D.jpg)
-![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_M.jpg)
+![How it works]({{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_D.jpg)
+![How it works]({{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/how_it_works_M.jpg)
 
-**Let’s take a step back and start from the beginning.** The basis of public-key cryptography is *private keys, public keys, addresses, and digital signatures*. When you own some cryptocurrency, the blockchain contains a record that there are some coins associated with your public key. You must provide a digital signature to authorize the spending of those coins. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
+**Let’s take a step back and start from the beginning.** The basis of public-key cryptography is _private keys, public keys, addresses, and digital signatures_. When you own some cryptocurrency, the blockchain contains a record that there are some coins associated with your public key. You must provide a digital signature to authorize the spending of those coins. You can only provide this digital signature if you are in the possession of the private key that corresponds to the public key.
 
 ## What is Public Key Cryptography?
 
 <table class="table lead">
 <tr>
-<td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
+<td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
 <td>
 Blockchains use public-key cryptography, also known as asymmetric cryptography, to verify ownership. Every user creates two keys when he joins the network, a public, and a private key.
 </td>
@@ -41,7 +41,7 @@ To understand how your keys and addresses work together, we must introduce **Ell
 
 <div class="row align-items-center">
     <div class="col-lg-6 d-none d-lg-block">
-        <img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;">
+        <img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;">
     </div>
     <div class="col-lg-6" markdown="1">
 
@@ -49,42 +49,42 @@ _Bitcoin, Ethereum_ and _many other currencies_ use a curve called **secp256k1**
 
 </div>
 
-<div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
+<div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-<div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+<div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
 <div class="col-lg-6" markdown="1">
 
 The graph above shows an example of adding two points on the curve together. When we want to add points **P** and **Q** together, we first connect them with a straight line. This straight line will intersect with the curve at a third point. Now we must project the third point onto the other side of the **x-axis** (_multiply the y-coordinate by -1_) and we get the sum of point **P and Q: R**. The key takeaway is that the sum of two points on the curve is a third point on the curve and it is easy to compute.
 
   </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6" markdown="1">
 
 When we want to multiply a point on the curve we must add it to itself. To multiply point **P** by two we add it to itself once. In this case, we can't really connect two points, so we go for the tangent line (the one with the arrows).
 
 </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
 
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6" markdown="1">
 
 Why the tangent line you might ask... If you look at a random point close to **P** (the lightest gray), connecting the two points will result in the lightest gray line. Moving this point closer and closer towards **P** (from light to dark) brings the connecting line closer to the tangent line. The closer two points on the curve get, the closer their connecting line resembles the tangent until they become the same.
 
    </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6" markdown="1">
 
 Now the addition to itself is easy. We take the intersection of the tangent line with the curve once again and project it onto the other side of the **x-axis** - easy.
@@ -118,7 +118,7 @@ $$
 
 This base point is now added to itself as many times as your private key dictates. If your private key was the number **“3”**, then you would perform the calculation we just demonstrated above. If you add the base point to itself as often as your private key says (_private key_ \* P) you get your public key.
 
-![Base Point](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_6.jpg)
+![Base Point]({{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_6.jpg)
 
 **To recap:** Your private key is a large random number. Your public key is a point on the elliptic curve that you get when you multiply the base point **P** with your private key.
 
@@ -130,8 +130,8 @@ At this point, your public key is pretty large, _512 bit_, and it is easy to com
 
 Lastly, to get your address, your public key is hashed. First, using the _SHA-256_ hash function and a second time using _RIPEMD 160_. After adding a byte to state if this address will go to the main or test net and calculating a checksum, there is a final step before you get your address.
 
-![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_7_D.jpg)
-![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_7_M.jpg)
+![ECC]({{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_7_D.jpg)
+![ECC]({{site.baseurl}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_7_M.jpg)
 
 When we look at how a computer is working at the hardware level it is _zeros and ones_. Data is always stored in a binary format no matter what type of data you’re looking at, whether images, sound files, and even your Bitcoin address. There are different ways to convert a string of bits into data that humans can digest. Humans do best with a string of numbers or alphanumeric characters.
 

@@ -21,11 +21,11 @@ El contenido de este artículo da por hecho que se encuentra familiarizado ya co
 
 ### Direcciones de cambio
 
-![Change Addresses](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_0.png)
+![Change Addresses]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_0.png)
 
 Las direcciones de cambio (change addresses) se introdujeron con el propósito de que ningún tercero tenga la habilidad de acceder al historial completo de transacciones del usuario con solo buscar la dirección que utilizó para hacer una transacción. Por suerte, la mayoría de las billeteras disponibles actualmente generan direcciones de cambio de manera automática al crear una transacción. En la imagen superior, una transacción regular de bitcoins, pueden apreciarse una entrada y dos salidas en la transacción. La primera salida se dirigió a otra dirección y contiene la cantidad que el usuario quería gastar. El UTXO restante se regresó a la dirección que originó los fondos.
 
-![Change Addresses](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_1.png)
+![Change Addresses]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_1.png)
 
 Una billetera habilitada con direcciones de cambio genera una dirección nueva cada vez que el usuario recibe fondos, indistintamente de si la transacción es regular o contiene el cambio. El ejemplo anterior es de una transacción con los mismos montos que antes, pero en esta ocasión el cambio se envió a una dirección de cambio recién creada. Esta función mejora la privacidad del usuario haciendo más difícil rastrear su historial de transacciones.
 
@@ -33,8 +33,8 @@ Una billetera habilitada con direcciones de cambio genera una dirección nueva c
 
 Los protocolos de mezclado de monedas (coin mixing protocols) como SharedCoin, TumbleBit o CoinJoin (utilizado por Dash) representan el siguiente paso para mejorar la privacidad del usuario de una cadena de bloques. Su función es mezclar diferentes entradas y salidas en una sola transacción, muchas veces incluso en el caso de varias transacciones intermediarias.
 
-![Coin Mixing](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_coinjoin_D.jpg)
-![Coin Mixing](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_coinjoin_M.jpg)
+![Coin Mixing]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_coinjoin_D.jpg)
+![Coin Mixing]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_coinjoin_M.jpg)
 
 Las transacciones de mezclado de monedas no necesitan que se le haga ningún cambio al protocolo básico de Bitcoin empleado por muchas criptomonedas (como Horizen). En el mapa anterior, puede apreciarse el esquema de una transacción de mezclado. Un número determinado de entradas se combina en un centro de mezclado (mixing pool) y se distribuye luego a sus direcciones destino. Una transacción de mezclado de monedas le dificulta a un atacante saber quién le está mandando dinero a quién.
 
@@ -48,8 +48,8 @@ El concepto de firma anular (ring signature) lo introdujeron Rivest, Shamir y Ta
 
 Imaginemos que un alto funcionario de la Casa Blanca (Alice) quiere divulgar a los medios un secreto sobre el presidente. A Alice le interesa que el periodista que reciba el leak tenga una manera de verificar la fuente de la información sin revelar su identidad. Lo que Alice puede hacer en este caso es utilizar una firma anular para firmar el mensaje. Para construir la la firma, lo único que necesita es su llave privada y las llaves públicas de otros posibles denunciantes (por ejemplo, otros miembros del gabinete; Bob y Carol).
 
-![Ring Signatures](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_ring_sig_D.jpg)
-![Ring Signatures](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_ring_sig_M.jpg)
+![Ring Signatures]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_ring_sig_D.jpg)
+![Ring Signatures]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_ring_sig_M.jpg)
 
 El verificador (periodista) puede verificar que el mensaje fue firmado por un alto funcionario, pero le resulta imposible determinar cuál de los tres (si Alice, Bob o Carol) construyó la firma.
 
@@ -65,8 +65,8 @@ En resumen, una prueba de cero conocimiento permite al usuario demostrarle a un 
 
 La persona vidente (el probador) quiere convencer a la persona invidente (el verificador) de que las bolas son de distintos colores, pero sin revelarle los colores. Ambos se sientan en una mesa y la persona invidente le muestra al probador una de las bolas. La persona invidente vuelve a esconder las bolas y revela una por segunda vez, ya sea la misma bola o la segunda. Si muestra la misma bola, el probador lo sabe por el color y le transmite esta información a la persona invidente. Si la persona invidente muestra la otra bola, el probador puede saber con confianza que que el verificador (la persona invidente) cambió las bolas debajo de la mesa.
 
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_zkproof_D.jpg)
-![Zero-Knowledge Proofs](/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_zkproof_M.jpg)
+![Zero-Knowledge Proofs]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_zkproof_D.jpg)
+![Zero-Knowledge Proofs]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/ES_zkproof_M.jpg)
 
 En la segunda ronda, el probador tiene una oportunidad del 50% de adivinar si tuviera que hacerlo. Tendría que adivinar en caso de que la aseveración que busca comprobar (que las bolas son de diferentes colores) fuera falsa. En este momento de la prueba, la persona invidente no puede estar segura de si la aseveración es correcta o si el probador tuvo suerte.
 
@@ -109,8 +109,8 @@ Una prueba de cero conocimiento permite al usuario demostrarle a un verificador 
 
 La persona vidente (el probador) quiere convencer a la persona de ojos vendados (el verificador) de que las bolas son de distintos colores, pero sin revelarle los colores. Ambos se sientan en una mesa y la persona invidente le muestra al probador una de las bolas. La persona invidente vuelve a esconder las bolas y revela una por segunda vez, ya sea la misma bola o la segunda. Si muestra la misma bola, el probador lo sabe por el color y le transmite esta información a la persona invidente. Si la persona invidente muestra la otra bola, el probador puede saber con confianza que que el verificador (la persona invidente) cambió las bolas debajo de la mesa.
 
-![zkproof in ES](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/ES_zkproof_D.jpg)
-![zkproof in ES](/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/ES_zkproof_M.jpg)
+![zkproof in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/ES_zkproof_D.jpg)
+![zkproof in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/ES_zkproof_M.jpg)
 
 En la segunda ronda, el probador tiene una oportunidad del 50% de adivinar si tuviera que hacerlo. Tendría que adivinar en caso de que la aseveración que busca comprobar (que las bolas son de diferentes colores) fuera falsa. En este momento de la prueba, la persona invidente no puede estar segura de si la aseveración es correcta o si el probador tuvo suerte.
 

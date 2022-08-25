@@ -11,7 +11,7 @@ no_index: true
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl}}/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         Nous avons conçu l'Académie Horizen pour qu'elle soit le lieu de prédilection pour l'éducation sur la blockchain, la cryptomonnaie et la confidentialité en ligne. Que vous souhaitiez en apprendre davantage sur ces sujets par curiosité ou que vous ayez besoin de le faire car votre entreprise s'intéresse à la technologie de la blockchain : ce projet s'adresse à vous.
@@ -21,7 +21,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain ?" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/what_is_blockchain.svg" alt="Qu’est-ce que la Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">
@@ -35,7 +35,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain ?" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/how_does_a_bc_work.svg" alt="Comment fonctionne une Blockchain ?" />
         </a>
     </div>
     <div class="col-md-9">
@@ -49,7 +49,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/wallets.svg" alt="Les portefeuilles" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/wallets.svg" alt="Les portefeuilles" />
         </a>
     </div>
     <div class="col-md-9">
@@ -63,7 +63,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Les transactions" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Les transactions" />
         </a>
     </div>
     <div class="col-md-9">
@@ -77,7 +77,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/privacy.svg" alt="La confidentialité en ligne" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/privacy.svg" alt="La confidentialité en ligne" />
         </a>
     </div>
     <div class="col-md-9">
@@ -91,7 +91,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/attacks.svg" alt="Les attaques" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/attacks.svg" alt="Les attaques" />
         </a>
     </div>
     <div class="col-md-9">
@@ -105,7 +105,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/summary.svg" alt="Résumé" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/summary.svg" alt="Résumé" />
         </a>
     </div>
     <div class="col-md-9">

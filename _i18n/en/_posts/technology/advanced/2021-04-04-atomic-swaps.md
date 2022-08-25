@@ -28,8 +28,8 @@ The "Hashed" part of _HTLC_ means that a hash serves as a lock for the contract,
 
 The process of an Atomic Swap would generally look like the following. Let's assume **Alice** has some **BTC** and **Bob** has some **ZEN**. Both agree to swap a certain amount of their assets.
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_1_D.jpg)
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_1_M.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_1_D.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_1_M.jpg)
 
 **First**, **Alice** creates an HTLC on the **Bitcoin Blockchain** that we will simply call a _contract_. The contract comes with an address, otherwise, you could not interact with it. **Next**, Alice generates or picks a secret - in this example her secret is **XYZ**. Using a [hash function](https://academy.horizen.io/technology/advanced/hash-functions/) she generates a lock, here: **1b9f...**, which is simply the hash of the secret.
 Now she deposits the amount of bitcoin she and **Bob** agreed to exchange in the contract where they are locked. **Lastly**, she sends the lock to Bob.
@@ -41,15 +41,15 @@ Now she deposits the amount of bitcoin she and **Bob** agreed to exchange in the
 
 **Now it's Bob's turn.**
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_2_D.jpg)
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_2_M.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_2_D.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_2_M.jpg)
 
 **Bob** also creates a Hashed Timelock Contract, but this time on the **Horizen** blockchain. His contract also has an address, _BCD_ in this example. **Alice** sent him a lock, the same one she used, so he goes ahead and locks his contract with the same lock. **Lastly**, he deposits the amount of **ZEN** the two agreed to exchange. **Just like the contract Alice created, Bob's contract can execute in two ways**: Either Bob gets refunded after a timeout period or Alice provides the secret and the funds are distributed to her address.
 
 **Now, both contracts are set up on their respective blockchain**. Alice has to take the next step within the locking period, otherwise, both are refunded as nothing happened at all.
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_3_D.jpg)
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_3_M.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_3_D.jpg)
+![swaps]({{site.baseurl}}/assets/post_files/technology/advanced/4.3-atomic-swaps/atomic_swaps_3_M.jpg)
 
 Alice will now use the secret she chose earlier to unlock the _hashlock_ of Bob's contract on the **Horizen** blockchain and the **ZEN** will be released to her. **This is a public operation, auditable on the blockchain**. Bob can, therefore, see the secret now, and uses it to unlock the bitcoin locked up in Alice's contract. By providing the secret the HTLC will automatically release the funds to Bob's previously specified Bitcoin address.
 

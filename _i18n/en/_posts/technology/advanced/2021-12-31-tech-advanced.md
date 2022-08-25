@@ -11,7 +11,7 @@ no_index: true
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl}}/assets/img/icons/topics/technology-blueprint.svg" alt="Horizen technology blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         We designed the Zen Academy to be the go-to place for education on blockchain, cryptocurrency, and online privacy. It doesn't matter if you are interested in learning about the topics out of curiosity or need to learn about them because your company is exploring blockchain technology. No matter your comfort level or interest: this project is for you.
@@ -22,7 +22,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-01-01-what-is-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/what_is_blockchain.svg" alt="What is a Blockchain" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/what_is_blockchain.svg" alt="What is a Blockchain" />
         </a>
     </div>
     <div class="col-md-9">
@@ -36,7 +36,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-01-how-does-a-blockchain-work %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/how_does_a_bc_work.svg" alt="How Does a Blockchain Work" />
         </a>
     </div>
     <div class="col-md-9">
@@ -50,7 +50,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-03-01-types-of-wallets %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/wallets.svg" alt="Wallets" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/wallets.svg" alt="Wallets" />
         </a>
     </div>
     <div class="col-md-9">
@@ -64,7 +64,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Transactions" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Transactions" />
         </a>
     </div>
     <div class="col-md-9">
@@ -78,7 +78,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-05-01-intro-to-privacy-on-the-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/privacy.svg" alt="Privacy" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/privacy.svg" alt="Privacy" />
         </a>
     </div>
     <div class="col-md-9">
@@ -92,7 +92,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-06-01-attacks-on-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/attacks.svg" alt="Attacks" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/attacks.svg" alt="Attacks" />
         </a>
     </div>
     <div class="col-md-9">
@@ -106,7 +106,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-07-01-summary-tech-advanced %}">
-            <img src="/assets/post_files/technology/advanced/0.0-tech-advanced/summary.svg" alt="Summary" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/advanced/0.0-tech-advanced/summary.svg" alt="Summary" />
         </a>
     </div>
     <div class="col-md-9">

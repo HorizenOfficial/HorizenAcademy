@@ -12,8 +12,8 @@ En Horizen nos hemos propuesto hacer una transición de nuestra estructura organ
 
 Las reglas y procedimientos que gobiernan a dicha organización se incluyen en el código cuando se crea la OAD. La meta principal de nuestra OAD es la descentralización de la toma de decisiones respecto a cómo se utilizan los fondos de nuestra organización benéfica. Cualquier miembro de la comunidad podrá presentar propuestas para recibir fondos. Esto podría representar una nueva función en una billetera digital o al asistir a una conferencia.
 
-![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
-![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
+![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
+![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
 
 Para esta toma de decisiones descentralizada, tiene que haberse establecido un sistema de votación. El sistema debe ser confiable, por lo que en Horizen tomamos la decisión de implementarlo en una cadena lateral dedicada paralela a nuestra cadena de bloques principal. Hablaremos más de cadenas laterales en un artículo más adelante.
 
@@ -31,8 +31,8 @@ La democracia líquida es un híbrido dinámico de estas dos formas establecidas
 
 En una democracia líquida no hay mandatos con duraciones establecidas. El votante puede delegarle su voto a un experto o retomar control de él en cualquier momento dado. Esto significa también que los expertos deben hacerse responsables de sus votos.
 
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
 
 ### Entidades
 
@@ -69,8 +69,8 @@ Rob Viglione, por su parte, explicó las implicaciones de este sistema en un vid
 
 En este artículo hemos resumido el contenido del artículo antes mencionado, proporcionando también el contexto necesario.
 
-![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
-![DAO](/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
+![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_DAO_D.jpg)
+![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_DAO_M.jpg)
 
 ### Introducción
 
@@ -120,8 +120,8 @@ La democracia líquida es un híbrido dinámico de estas dos formas establecidas
 
 El voto se puede delegar a quien sea; ya sea al hermano del usuario, que por coincidencia posee una gran cantidad de conocimientos sobre un tema dado, o a cualquier otra persona. También es posible retirar la delegación en cualquier momento, lo cual hace de todo un proceso líquido. Estas medidas reducen el número de obstáculos para participar y hace responsables a los delegados de la manera en la que votan, pues pueden perder delegaciones en cualquier momento.
 
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_liquid_democracy_M.jpg)
 
 ### Las diferentes entidades
 
@@ -138,8 +138,8 @@ Cualquiera puede hacer una propuesta para recibir fondos y convertirse en líder
 
 Hay tres épocas en cada periodo de tesorería. Durante la **época anterior a las votaciones** los líderes de proyecto tienen tiempo de presentar sus propuestas encriptadas. Todas las propuestas se desencriptan una vez concluida la etapa de presentación de propuestas. Esto incrementa la imparcialidad y evita que los usuarios presentan sus propuestas de manera táctica. Durante la época anterior a las votaciones los miembros de la comunidad también tienen tiempo de registrarse como votantes o expertos llevando a cabo un tipo especial de transacción.
 
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/ES_treasury_epochs_D.jpg)
-![Treasury System Epochs](/assets/post_files/horizen/expert/dao/ES_treasury_epochs_M.jpg)
+![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_treasury_epochs_D.jpg)
+![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_treasury_epochs_M.jpg)
 
 Durante la **época de votaciones (voting epoch)** se selecciona el comité de votaciones, se establece una llave para votar y se lleva a cabo la votación. Para la **selección del comité** “se selecciona un grupo de comités de votación aleatoriamente de entre los votantes registrados dispuestos a ser considerados para la selección del comité. La probabilidad de ser seleccionado es proporcional a la cantidad de la participación guardada del usuario.”
 
@@ -149,23 +149,23 @@ La votación privada se logra pidiendo a todos los votantes y expertos que encri
 
 Los votantes y expertos emiten sus votos durante la **etapa de emisión de boletas+** Cada voto se ve representado por un vector. Como hay varias opciones posibles; sí, no y abstención, hay también tres tipos de vectores.
 
-![yes no abstain](/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_D.jpg)
-![yes no abstain](/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_M.jpg)
+![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_D.jpg)
+![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_yes_no_abstain_M.jpg)
 
 El concepto funciona así: En el ejemplo que aparece a continuación hay cuatro votos, dos sís, dos nos y dos abstenciones.
 
-![votes](/assets/post_files/horizen/expert/dao/ES_votes_D.jpg)
-![votes](/assets/post_files/horizen/expert/dao/ES_votes_M.jpg)
+![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_votes_D.jpg)
+![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_votes_M.jpg)
 
 Si ya se encuentra familiarizado con el concepto de suma de vectores le será fácil determinar la suma de estos cuatro vectores. Uno de los dos sís se ve cancelado por el voto negativo. El voto afirmativo restante sumado con la abstención resulta en el vector diagonal que aparece debajo. Para el conteo, se considera únicamente el eje “x”. El resultado final de esta propuesta revelado en la etapa de conteo sería un sí.
 
-![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_D.jpg)
-![votes sum](/assets/post_files/horizen/expert/dao/ES_votes_sum_M.jpg)
+![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_votes_sum_D.jpg)
+![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_votes_sum_M.jpg)
 
 Más específicamente, la calificación de cada propuesta se calcula tomando el número de votos afirmativos y restándole el número negativos. La diferencia resultante tiene que abarcar por lo menos el 10% de todos los votos emitidos para que la propuesta sea considerada para la repartición de fondos. Si se emiten 100 votos (sin abstenciones) debe haber por lo menos 55 votos a favor para alcanzar esta marca. Las propuestas con las calificaciones más altas recibirán fondos hasta que los fondos mensuales de la tesorería se agoten.
 
-![score](/assets/post_files/horizen/expert/dao/ES_score_D.jpg)
-![score](/assets/post_files/horizen/expert/dao/ES_score_M.jpg)
+![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_score_D.jpg)
+![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/ES_score_M.jpg)
 
 La **época posvotación** consiste de las etapas de conteo y ejecución. Debe notarse que cada vector se recibe encriptado y es solo en la etapa de conteo que el comité revela el conjunto los votos emitidos. Se calcula la calificación de cada propuesta y se rankean las propuestas de acuerdo a su calificación.
 
@@ -208,7 +208,7 @@ Cualquier miembro de la comunidad podrá presentar una propuesta de lo que les g
 
 Después, durante un periodo de votaciones mensual, la comunidad emite sus votos, indicando cuáles propuestas son o no dignas de ser fondeadas. Tras un conteo de votos, las propuestas aprobadas reciben automáticamente los fondos que se les habían designado, y los miembros de la comunidad que las presentaron pueden empezar a trabajarlas.
 
-![DAO - Decentralized Autonomous Organization in ES](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/ES_DAO_D.jpg)
-![DAO - Decentralized Autonomous Organization in ES](/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/ES_DAO_M.jpg)
+![DAO - Decentralized Autonomous Organization in ES]({{site.baseurl}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/ES_DAO_D.jpg)
+![DAO - Decentralized Autonomous Organization in ES]({{site.baseurl}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/ES_DAO_M.jpg)
 
 En Horizen consideramos importante empoderar a nuestra comunidad. Nos encontramos en vías de crear los bloques necesarios para hacer realidad nuestra visión de ZenDAO, una OAD propia. Buscamos que la votación que determinará el desarrollo de la plataforma de nuestra cadena de bloques sea un proceso justo que le permita a la comunidad participar en la toma de decisiones y legitime las decisiones tomadas.

@@ -22,14 +22,14 @@ The use cases of _hash functions_ extend beyond blockchain technology. Previousl
 - **Collision-resistant** - It should be nearly impossible to find two inputs to a hash function producing the same output.
 - **Deterministic** - A given input always needs to produce the same output
 
-![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_D.jpg)
-![Hash function](/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_M.jpg)
+![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_D.jpg)
+![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/hash_function_M.jpg)
 
 ## What is a Hash Function?
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
         <td>
             A hash function is something that we use to create a fingerprint of a file. You can use a hash function to create a fingerprint for every type of file you can imagine.
         </td>
@@ -124,8 +124,8 @@ Hash functions are also used in _Merkle trees_, a construction used to create a 
 
 Transactions are first hashed and then combined pairwise until a single hash, the _Merkle root_, is obtained. If there is an odd number of transactions in a given round, the last transaction is interlinked with itself, as you can see with **H ( C )** in the graphic below.
 
-![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_D.jpg)
-![Merkle Tree](/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_M.jpg)
+![Merkle Tree]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_D.jpg)
+![Merkle Tree]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/merkle_tree_M.jpg)
 
 ### Creating Addresses
 
@@ -141,8 +141,8 @@ An entire industry has formed around performing hash functions as efficiently as
 
 Specialized hardware optimized for performing hash operations with a single specific hash function only, such as **SHA-256**, are available on the market. These specialized processors are called **ASICs** _(Application Specific Integrated Circuits)_.
 
-![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_D.jpg)
-![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs](/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_M.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_D.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/cpu-asic_M.jpg)
 
 Processors display trade-offs between versatility and efficiency. While **CPUs** (_Central Processing Units_) can handle many tasks at low efficiency. GPUs (_Graphical Processing Units_) are more efficient at certain tasks at the cost of overall versatility. At the other end of the scale, there are ASICs, which are only useful for one specific task, but are highly efficient.
 
@@ -164,8 +164,8 @@ Another known attack on hash functions is the **Birthday Attack**. It exploits t
 
 In a group of **367** people, the probability of two of those people sharing a birthday is **1**, as there is one more person than days in a leap year. However, with just **23** people in the group, the chance of two of them sharing a birthday is already at **50%**, while it reaches **99.9%** with just **70** people.
 
-![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_D.jpg)
-![The Birthday Problem](/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_M.jpg)
+![The Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_D.jpg)
+![The Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.2-hash-functions/birthday-problem_M.jpg)
 
 This relates to hash functions in that finding collisions in hash functions efficiently opens up potential exploits. The Birthday Attack reduces the number of required hash operations to find a collision (two inputs producing the same output).
 

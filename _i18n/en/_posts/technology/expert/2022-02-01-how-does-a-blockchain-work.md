@@ -16,7 +16,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-0-public-key-cryptography %}">
-            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/pkc.svg" alt="Public Key Cryptography" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.0-how-does-it-work/pkc.svg" alt="Public Key Cryptography" />
         </a>
     </div>
     <div class="col-md-9">
@@ -30,7 +30,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-0-consensus-mechanisms %}">
-            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/consensus_4.svg" alt="Consensus Mechanisms" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.0-how-does-it-work/consensus_4.svg" alt="Consensus Mechanisms" />
         </a>
     </div>
     <div class="col-md-9">
@@ -44,7 +44,7 @@ You do know what a blockchain is by now, and we are sure you have a good idea of
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-08-blockchain-governance %}">
-            <img src="/assets/post_files/technology/expert/2.0-how-does-it-work/governance_7.svg" alt="Blockchain Governance" />
+            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.0-how-does-it-work/governance_7.svg" alt="Blockchain Governance" />
         </a>
     </div>
     <div class="col-md-9">

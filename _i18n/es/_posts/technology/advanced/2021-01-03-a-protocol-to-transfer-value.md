@@ -38,8 +38,8 @@ EL SSL (Secure Sockets Layer) es un protocolo utilizado para establecer enlaces 
 
 El SNMP (Simple Network Management Protocol) es un conjunto de protocolos ejecutado por dispositivos de red como routers, servidores o impresoras. Un SNMP se encarga de los diferentes dispositivos de una red para operarlos a la perfección.
 
-![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_D.jpg)
-![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_M.jpg)
+![Protocols]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_D.jpg)
+![Protocols]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_protocols_M.jpg)
 
 A lo largo de la historia del internet, muchos han definido los estándares para el intercambio de diferentes tipos de información. Es importante mencionar que, en estos casos, no siempre era el mejor protocolo el que terminaba por adoptarse. Además, es difícil lograr que un usuario se mude de protocolo al haber empezado a utilizar otro, salvo que el segundo sea miles de veces mejor. Los desarrolladores se ven atraídos al tremendo número de bibliotecas y herramientas disponibles gracias a estos protocolos, y el ciclo se repite hasta que un solo protocolo se adopta como estándar.
 
@@ -59,8 +59,8 @@ Otro subconjunto concierne la estructura de un bloque válido. Es importante rec
 
 Después del encabezado del bloque, aparece una lista de todas las transacciones incluidas.
 
-![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_D.jpg)
-![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_M.jpg)
+![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_D.jpg)
+![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/ES_block_M.jpg)
 
 Queda ahora la cuestión de definir un conjunto de reglas que describan cómo debe lucir una transacción individual. Trataremos a detalle las transacciones en un artículo aparte, pero es suficiente saber por ahora que cada transacción debe incluir información sobre el remitente y receptor, la cantidad transferida y una firma digital. Esta firma es un medio para autorizar la utilización de los fondos del usuario, y es la llave privada la que se encarga de crearla. Explicaremos más este proceso en un artículo posterior sobre criptografía de llave abierta.
 
@@ -92,8 +92,8 @@ El protocolo para enviar una carta se compone de dos requisitos: primeramente, s
 
 Cuando una criptomoneda opera en una cadena de bloques, la red —un servicio descentralizado como el del correo— se encarga de entregar la transacción —carta— al destinatario. El protocolo exige una pequeña tarifa por transacción —estampilla— y que se proporcione la información necesaria de forma estandarizada: dirección, dirección del beneficiario, cantidad a transferir y firma del usuario.
 
-![Mail protocol in ES](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_D.jpg)
-![Mail protocol in ES](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_M.jpg)
+![Mail protocol in ES]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_D.jpg)
+![Mail protocol in ES]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/ES_mail_protocol_M.jpg)
 
 Las direcciones de una cadena de bloques son diferentes a las empleadas por el servicio de correos. La dirección de una, por ejemplo, cadena se ve así: 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX.
 

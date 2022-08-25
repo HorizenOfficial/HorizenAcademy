@@ -20,7 +20,7 @@ Finalement, le 3 janvier 2009, le bloc Genesis de Bitcoin a été miné et les p
 
 <h3 class="text-center font-italic">"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks."</h3>
 
-![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
+![chancellor]({{site.baseurl}}/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
 
 Choisir ce titre suggère que l'une des principales motivations pour développer Bitcoin était de créer une alternative au système bancaire de réserves qui déstabilise manifestement l'économie et prive, de toute évidence, le grand public de ses droits.
 

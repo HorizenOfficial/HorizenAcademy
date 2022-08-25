@@ -41,8 +41,8 @@ Vous trouverez ci-dessous une collection de protocoles, dont beaucoup sont utili
 SSL (Secure Sockets Layer) est un protocole standard utilisé pour établir des liens chiffrés entre un serveur Web et un client (comme votre ordinateur) dans la communication en ligne. Par exemple, lorsque vous envoyez vos détails de paiement à une boutique en ligne, vous utilisez SSL pour établir une connexion chiffrée avant d'envoyer vos informations de carte de crédit sur Internet.
 Le protocole SNMP (Simple Network Management Protocol) est un ensemble de protocoles pris en charge par des périphériques réseau tels que des routeurs, des serveurs ou des imprimantes. Le SNMP prend en charge les différents périphériques d'un réseau interopérable en toute transparence.
 
-![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_D.jpg)
-![Protocols](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_M.jpg)
+![Protocols]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_D.jpg)
+![Protocols]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_protocols_M.jpg)
 
 Tout au long de l'histoire d'Internet, les gens ont défini des normes pour l'échange de divers types de données. Il est important de noter que ce n'est pas toujours le meilleur protocole qui a été adopté en masse. Il est peu probable que les gens adoptent un protocole différent une fois qu'ils commencent à l'utiliser et à s'en inspirer, à moins que ce ne soit mieux pour confédérer. Les développeurs sont attirés par le nombre croissant de bibliothèques et d'outils disponibles sur ces protocoles. Ce cycle se répète jusqu'à ce qu'un protocole devienne finalement un standard.
 
@@ -62,8 +62,8 @@ Un autre sous-ensemble de règles concerne la structure d'un bloc valide. Rappel
 
 Après l'en-tête de bloc, le bloc contient toutes les transactions qui ont été incluses.
 
-![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_D.jpg)
-![Block](/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_M.jpg)
+![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_D.jpg)
+![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/FR_block_2_M.jpg)
 
 Il faut maintenant établir un ensemble de règles décrivant à quoi doit ressembler une transaction individuelle. Nous parlerons des transactions en détail dans un article dédié mais pour l'instant, il devrait suffire de savoir qu'une transaction doit inclure l'expéditeur, le destinataire, le montant du transfert, et une signature numérique. La signature numérique est un moyen d'autoriser l'utilisation de vos fonds. La clé privée d'un utilisateur créée cette signature numérique. Nous expliquons ce processus plus en détail dans notre article sur la cryptographie à clé publique.
 
@@ -95,8 +95,8 @@ Le courrier est sans permission dans le sens où n'importe qui, qui veut envoyer
 
 Avec une blockchain qui exploite une monnaie digitale, le réseau (← Un service décentralisé de “type postal”) prend soin de délivrer une transaction (← Une lettre ) au destinataire. Le protocole vous demande d’y ajouter de légers frais de transaction (← Le timbre) et fournit l’information nécessaire de façon standard : votre adresse, l’adresse du destinataire, le montant du transfert et votre signature.
 
-![Mail protocol in FR](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_D.jpg)
-![Mail protocol in FR](/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_M.jpg)
+![Mail protocol in FR]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_D.jpg)
+![Mail protocol in FR]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/FR_mail_protocol_M.jpg)
 
 Les adresses sur la blockchain sont bien sûr un peu différentes des adresses réelles. Elles ressemblent à ça : 1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX. Les signatures sont également un peu différentes des signatures que vous connaissez dans le monde réel. Nous parlerons plus en détail des adresses et des signatures dans les prochains articles de cette section.
 
