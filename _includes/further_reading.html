@@ -9,7 +9,8 @@
                     <div class="link">{{ include.url }}</div>
                 </div>
             </div>
-            <div class="d-none d-md-block col-md-3 preview-img" style="background-image: url({{ include.image | default: '/assets/img/icons/further-reading.jpg' }})"></div>
+            {% capture default_further_reading_img %}{{site.baseurl_root}}/assets/img/icons/further-reading.jpg{% endcapture %}
+            <div class="d-none d-md-block col-md-3 preview-img" style="background-image: url({{ include.image | default: default_further_reading_img }})"></div>
         </div>
     </a>
 </div>
