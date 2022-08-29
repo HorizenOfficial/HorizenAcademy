@@ -36,7 +36,7 @@ After we have talked about [hash functions](https://academy.horizen.io/technolog
 
 A miner starts creating a block by including the _coinbase_ transaction as the **first** transaction. The coinbase transaction is a special type of transaction that does not have any inputs, but has an output sending coins to an address controlled by the miner. This output is worth the current _block subsidy_ (6.25 **ZEN** at the time of writing) together with the _transaction fees_ of all included transactions. The sum of the block subsidy and the transaction fees make up the **block reward**.
 
-![Block Reward: The sum of block subsidy and transaction fees]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/block-reward.jpg)
+![Block Reward: The sum of block subsidy and transaction fees]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/block-reward.jpg)
 
 By allowing miners to include the coinbase transaction, they are incentivized to perform the computationally expensive task of producing new blocks. **When a block is produced**, new coins are created to pay the miner, which means the protocol can pay for its own maintenance. Each existing **ZEN** or **BTC** started out in a coinbase transaction.
 
@@ -46,15 +46,15 @@ By allowing miners to include the coinbase transaction, they are incentivized to
 
 Now, a miner builds a **merkle tree** of all transactions included in the block and includes the _merkle root_ in the block header. She adds all the other necessary data, such as the hash of the previous block, and some other metadata.
 
-![Merkle Tree]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
-![Merkle Tree]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_M.jpg)
+![Merkle Tree]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_D.jpg)
+![Merkle Tree]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/merkle_tree_M.jpg)
 
 Once the **candidate block** is completed, the miner inserts some value in the **nonce** data field. The nonce - _number used once_ - is a variable whose only purpose is to modify the block hash. When a first nonce is inserted, the miner performs the first hash operation. She compares the resulting block hash with the current _target_ and if it is greater than the target, she increments the nonce and performs the same steps again.
 
 All miners do this simultaneously and are in a competition to find a nonce that produces a hash equal to or below the target.
 
-![Hash Cash Proof of Work (PoW)]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_D.jpg)
-![Hash Cash Proof of Work (PoW)]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_M.jpg)
+![Hash Cash Proof of Work (PoW)]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_D.jpg)
+![Hash Cash Proof of Work (PoW)]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/hash_cash_pow_M.jpg)
 
 Once such a block, or better nonce, is found, the miner will broadcast the block to the network. Nodes and other miners will then check whether the block contains conflicting transactions and if the hash meets the current target. When both criteria are met, the block is added to all copies of the blockchain. All other miners drop their current candidate block, remove the transactions that were just added to the blockchain from their mempool, and start working on a new block.
 
@@ -108,8 +108,8 @@ All schemes have certain advantages and shortcomings. **Network-bound** approach
 
 The **CPU-bound** approach gives large players with capital a decisive advantage. Proof of Work usually involves performing a single computational task many times in a row. Special hardware, so called **Application Specific Integrated Circuits** (ASICs), can be built for CPU-bound tasks. They sacrifice versatility for efficiency and thereby offer an advantage in performance. Because ASICs are domain specific and expensive, most users don't have access to them.
 
-![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_D.jpg)
-![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_M.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_D.jpg)
+![Flexibility - Efficiency Trade-Off in Mining Hardware: CPUs, GPUs, FPGAs and ASICs]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/cpu-asic_M.jpg)
 
 #### Memory-bound Algorithms
 
@@ -133,13 +133,13 @@ If Tangle was widely adopted for micro-payments in the IOT sector, computational
 
 **Time complexity** refers to how many additional computations result from an increase in the input to a function. With infeasible time complexity, slight increases in input size will result in an exponential increase in time for the computation to finish.
 
-![Time Complexity in Computational Problems]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/time-complexity_D.jpg)
-![Time Complexity in Computational Problems]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/time-complexity_M.jpg)
+![Time Complexity in Computational Problems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/time-complexity_D.jpg)
+![Time Complexity in Computational Problems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/time-complexity_M.jpg)
 
 **Space complexity** refers to how much additional memory is needed when the input to a function increases. With infeasible space complexity, the memory requirements quickly exceed all hardware limits.
 
-![Space Complexity in Computational Problems]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/space-complexity_D.jpg)
-![Space Complexity in Computational Problems]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/space-complexity_M.jpg)
+![Space Complexity in Computational Problems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/space-complexity_D.jpg)
+![Space Complexity in Computational Problems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/space-complexity_M.jpg)
 
 An algorithm designed for a Proof of Work has to make tradeoffs between the two. When we talked about CPU-bound algorithms, we meant those with a high level of time complexity. On the other hand, memory-bound algorithms have a high level of space complexity.
 
@@ -149,22 +149,22 @@ Let us take a look at the parameters of a PoW scheme so that we better understan
 
 There are much more complex PoW algorithms though. One of the more widely used ones is **Equihash**, which is based on the _Generalized Birthday Problem_ and used by the **Horizen** blockchain.
 
-![The Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_D.jpg)
-![The Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_M.jpg)
+![The Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_D.jpg)
+![The Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem_M.jpg)
 
 The **birthday problem** describes an interesting property regarding a group of people and their birthdays. In a group of **367** people, the probability of two of those people sharing a birthday is **1**, because there is one more person than there are days in a leap year. However, with just **23** people in the group, the chance of two of them sharing a birthday is already at **50%**, while it reaches **99.9%** with just **70** people.
 
 ### The Generalized Birthday Problem
 
-![The Generalized Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_D.jpg)
-![The Generalized Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_M.jpg)
+![The Generalized Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_D.jpg)
+![The Generalized Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized_M.jpg)
 
 The **generalized birthday problem** refers to the difficulty of calculating those probabilities in a more general context. We define a time period of **d** days, and ask how many people **n** do we need to have a **50%** likelihood of a birthday coincidence.
 
 ### The Multi-Dimensional Generalized Birthday Problem
 
-![The Multi-Dimensional Generalized Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_D.jpg)
-![The Multi-Dimensional Generalized Birthday Problem]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_M.jpg)
+![The Multi-Dimensional Generalized Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_D.jpg)
+![The Multi-Dimensional Generalized Birthday Problem]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/birthday-problem-generalized-md_M.jpg)
 
 **Next**, we can increase the number of dimensions for the problem.
 
@@ -198,7 +198,7 @@ Proof of Work in cryptocurrencies has an intricate but ingenious built-in incent
 
 If an attacker controls the majority of hash rate, he can reliably perform a **51% attack**. This means he can create blocks faster than the honest partition of the network. **According to the longest chain rule,** the honest and rational actors of the network will accept the malicious chain as valid, once it is broadcast. This allows the malicious actor to perform double spends.
 
-![Double Spend Attack]({{site.baseurl}}/assets/post_files/technology/expert/2.4.2-pow/percent.gif)
+![Double Spend Attack]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.2-pow/percent.gif)
 
 The attacker spends coins in a transaction that is included in the honest chain. He then rewrites this part of the transaction history with his own blocks, which don't include his spending transaction. Once this sequence of blocks is broadcast and accepted by the other network participants he is in control of his coins again and can spend them a second time - a double spend.
 

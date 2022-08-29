@@ -53,8 +53,8 @@ The mail is permissionless because anyone who wants to send a letter can access 
 
 When you are sending some cryptocurrency, the decentralized network transfers your money to the recipient. The protocol requires you to add a small transaction fee - similar to a stamp - and provide the necessary information in a standardized way: _the recipient’s address, the amount to transfer, and your signature._
 
-![Mail protocol]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_D.jpg)
-![Mail protocol]({{site.baseurl}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_M.jpg)
+![Mail protocol]({{site.baseurl_root}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_D.jpg)
+![Mail protocol]({{site.baseurl_root}}/assets/post_files/technology/beginner/a-protocol-to-transfer-value/mail_protocol_M.jpg)
 
 [Wallets](https://academy.horizen.io/technology/advanced/types-of-wallets/) make it easy to receive and send transactions. They also create your signature for you, without you even noticing, so don’t worry if this sounds complex at first. _Addresses on a blockchain_ are, of course, a little different to addresses that you are used to - they look like this:
 
@@ -88,10 +88,10 @@ You can distinguish between several broad types of networking protocols. _Some e
 - **Value transfer protocols** such as _Horizen_ or _Bitcoin_
 
 {% capture image %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/network_protocols_D.jpg
 {% endcapture %}
 {% capture image2 %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/network_protocols_M.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/network_protocols_M.jpg
 {% endcapture %}
 {%
   include image_caption.html
@@ -134,18 +134,18 @@ When a node receives a new block from its peers, it checks the validity of the b
 
 _Another subset of rules_ is concerned with the structure of a valid block. A block is just a container for data. A block has a block header that contains information about the version of the client it was created with, a reference to it’s preceding block (its hash), a summary of all transactions that are contained in the block (the Merkle root), a _timestamp_, and other metadata. Following the block header, the block contains all the transactions that were included.
 
-![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_D.jpg)
-![Block]({{site.baseurl}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_M.jpg)
+![Block]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_D.jpg)
+![Block]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.2-a-protocol-to-transfer-value/block_M.jpg)
 
 Now there needs to be a set of rules describing what an individual transaction must look like. **A transaction needs** to include the _sender_, the _recipient_, the _amount to transfer_, and a _digital signature_. The digital signature is a way to authorize the spending of your funds. The private key of a user creates this digital signature.
 
 The **consensus mechanism** determines how the process of adding new blocks to the chain works and how the network agrees on a single version of history. The _longest chain rule_ or _Nakamoto Consensus_ determines which block is valid in case two miners find two valid blocks shortly after another, creating a tie situation.
 
 {% capture image %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/longest_chain_D.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/longest_chain_D.jpg
 {% endcapture %}
 {% capture image2 %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/longest_chain_M.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/longest_chain_M.jpg
 {% endcapture %}
 {%
   include image_caption.html
@@ -159,10 +159,10 @@ The **consensus mechanism** determines how the process of adding new blocks to t
 Lastly, the monetary policy is defined in the protocol. Most cryptocurrencies have a maximum circulating supply defined with their inception. By cutting the _block subsidy_ in half regularly, with Horizen every 840,000 blocks, with Bitcoin every 210,000 blocks, both roughly equal to 4 years, the total circulating supply asymptotically approaches its limit but never crosses it.
 
 {% capture image %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/supply_D.jpg
 {% endcapture %}
 {% capture image2 %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/supply_M.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/supply_M.jpg
 {% endcapture %}
 {%
   include image_caption.html
@@ -244,10 +244,10 @@ _Double-entry bookkeeping_ posed a revolution in commerce. Each participant crea
 _Triple-entry bookkeeping_ now makes it impossible to create funds out of thin air, assuming the overall network is controlled by a majority of honest participants. **Each transaction comes with three entries**: a _credit_ to the _recipient_, a _debit_ to the _payer_, and a _public_ receipt, the recorded transaction on the ledger. Because everyone can keep a copy of the entire transaction history, no actor can create a fraudulent credit for themselves. You can trust the system itself instead of having to trust a third party like auditors or banks.
 
 {% capture image %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/tripple_entry_D.jpg
 {% endcapture %}
 {% capture image2 %}
-{{site.baseurl}}/assets/post_files/technology/expert/1.2-protocol/tripple_entry_M.jpg
+{{site.baseurl_root}}/assets/post_files/technology/expert/1.2-protocol/tripple_entry_M.jpg
 {% endcapture %}
 {%
   include image_caption.html

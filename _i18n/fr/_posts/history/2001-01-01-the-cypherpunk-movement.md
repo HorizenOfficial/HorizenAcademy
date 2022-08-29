@@ -16,8 +16,8 @@ Avant les années 1970, le chiffrement était principalement utilisé à des fin
 
 Deux publications ont rendu la cryptographie connue du grand public, à savoir le "Data Encryption Standard" publié par le gouvernement américain et un article intitulé ["New Directions in Cryptography,"](https://ee.stanford.edu/~hellman/publications/24.pdf) du Dr Whitfield Diffie et du Dr Martin Hellman, publié en 1976.
 
-![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
-![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
+![New directions]({{site.baseurl_root}}/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
+![New directions]({{site.baseurl_root}}/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
 
 Dans les années 1980, David Chaum a commencé à écrire sur des sujets tels que la monnaie numérique anonyme et les systèmes de réputation pseudonymes, tels que ceux décrits dans ["Security without Identification: Transaction Systems to make Big Brother Obsolete"](https://chaum.com/security-without-identification/). C'était le premier pas vers les monnaies numériques que nous voyons aujourd'hui.
 

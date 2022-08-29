@@ -20,8 +20,8 @@ Una función hash criptográfica debe cumplir con los siguientes criterios para 
 - Resistencia a las colisiones - Debe ser muy difícil (entiéndase imposible) encontrar dos entradas que al pasar por una función hash produzcan la misma salida (colisionen).
 - Determinismo - Dos entradas iguales deben siempre producir también dos salidas iguales.
 
-![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_D.jpg)
-![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_M.jpg)
+![Hash function]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_D.jpg)
+![Hash function]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.2-hash-functions/ES_hash_function_M.jpg)
 
 La función hash más utilizada en la actualidad es SHA-256 (Secure Hash Algorithm). El número indica la extensión de la salida en bits. Por ejemplo, hay cuatro extensiones de salida en la familia SHA: 224, 256, 384 y 512 bits. Otro tipo de funciones hash relevantes a las cadenas de bloques son las de la familia RIPEMD. Muchas criptomonedas suelen utilizar RIPEMD160, el cual, como es de esperarse, produce salidas de 160 bits.
 
@@ -37,7 +37,7 @@ Las funciones hash son la piedra angular de la tecnología blockchain. El hash d
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td class="icon"><img src="{{site.baseurl_root}}/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
         <td>
             Una función hash se utiliza para crear la huella digital de un archivo. Es posible emplear una función hash para hacer esto con casi cualquier tipo de archivo.
         </td>

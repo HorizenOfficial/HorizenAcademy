@@ -13,8 +13,8 @@ A blockchain can do more than simply storing data; it can also execute applicati
 
 The term **_“smart”_** comes from the automatic execution of these digital contracts. Simply speaking they consist of many _“if, then”_ statements that are written in and enforced by code. The contract executes automatically if the contract conditions are met.
 
-![Smart Contract]({{site.baseurl}}/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_D.jpg)
-![Smart Contract]({{site.baseurl}}/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_M.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_D.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/smart_contract_M.jpg)
 
 ## What is a Smart Contract
 
@@ -28,8 +28,8 @@ The term **smart contract** can have two meanings. It can refer to static code i
 
 > "_One can think of a smart contract instance as a trusted third party to which users can send coins, and that can distribute coins between the parties, according to conditions written in its static code._" - **Dziembowski, Faust, Hostáková**, [_State Channel Paper_](https://eprint.iacr.org/2018/320.pdf)
 
-![Smart Contract]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_D.jpg)
-![Smart Contract]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_M.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_D.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/smart_contract_M.jpg)
 
 ## The Promise of Smart Contracts
 
@@ -92,8 +92,8 @@ A dApp - or decentralized application - is a more sophisticated use case for sma
 
 A dApp uses one or more smart contracts to communicate with its underlying blockchain. Imagine a future with smart contract libraries that hold a large number of template contracts that can be used for various purposes. We are already seeing such developments with smart contract platforms like **Ethereum**.
 
-![dApp]({{site.baseurl}}/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_D.jpg)
-![dApp]({{site.baseurl}}/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_M.jpg)
+![dApp]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_D.jpg)
+![dApp]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/dapp_M.jpg)
 
 The smart contracts can be used to detect incoming payments from users, issue payments to its users, to serve as an escrow, or to trigger an action based on some form of submitted data. We are still in the early stages of decentralized applications. There have been and will be many growing pains such as bugs that cause loss of funds and inefficient usage of on-chain transactions.
 
@@ -140,8 +140,8 @@ Another scaling approach is using [sidechains](https://academy.horizen.io/horize
 
 A dApp can be launched on a _sidechain_, possibly even running a different [consensus mechanism](https://academy.horizen.io/technology/advanced/consensus-mechanisms/) than the _mainchain_. Depending on the specific construction, incentives might have to be provided in order for nodes to run sidechains, in a PoS sidechain model, or for miners to perform merged mining in a PoW sidechain model.
 
-![Scaling]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_D.jpg)
-![Scaling]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_M.jpg)
+![Scaling]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_D.jpg)
+![Scaling]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/scaling_contracts_M.jpg)
 
 There are many approaches to enable scalable smart contract platforms, oftentimes also combining different methods. But besides creating systems with sufficient throughput to enable large scale adoption of smart contracts and dApps, there is another problem to solve: the **oracle problem**.
 
@@ -157,8 +157,8 @@ The other major challenge to overcome is called the oracle problem. A smart cont
 
 Imagine a smart contract running a betting platform in a supposedly trustless environment. The oracle needs to submit the result of a game in order to have the smart contract distribute funds to the winners. Because the oracle determines what a smart contract sees, it also controls what it does.
 
-![Oracles]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/oracle_D.jpg)
-![Oracles]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/oracle_M.jpg)
+![Oracles]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/oracle_D.jpg)
+![Oracles]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/oracle_M.jpg)
 
 _Centralized oracles_ are not considered a solution to the oracle problem. No matter what the actual implementation looks like, the incentives to untruthfully submit data might outweigh the benefits of acting honestly in some cases. And what is the point of having trustless execution on the basis of information provided by a trusted third party? As **Jimmy Song** puts it: “A smart contract that trusts a third party removes the killer feature of trustlessness.”
 
@@ -168,8 +168,8 @@ No matter if centralized or decentralized, an oracle will always come at a cost.
 
 A decentralized approach to solving the oracle problem is using prediction markets. A prediction market generally works by first creating a market for a specific event. Let’s assume an event with a binary outcome: does team **X** or team **Y** win the Super Bowl. A participant buys in for **$1** and gets **two futures contracts**, _one for each outcome_. The futures contract whose outcome materialized pays **$1**, the other one **$0**.
 
-![Prediction Markets]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_D.jpg)
-![Prediction Markets]({{site.baseurl}}/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_M.jpg)
+![Prediction Markets]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_D.jpg)
+![Prediction Markets]({{site.baseurl_root}}/assets/post_files/technology/expert/1.4-smart-contracts/prediction_markets_M.jpg)
 
 With an equally likely outcome, a participant wouldn’t know which contract to keep and which to sell. Both should trade at around **$0.50**. If a participant has high confidence in out outcome, let’s say team **X** wins, he will sell the contract that pays in case **Y** wins. If many people think alike, this creates an increasing demand for **contract X** and increasing supply for **contract Y**. Futures contract **X** rises in price, while **Y** gets cheaper, for example, _$0.70 vs. $0.30_. The price of the futures contracts can be interpreted as the likelihood of the respective event happening, in this case, a **70%** chance of team **X** winning.
 

@@ -16,7 +16,7 @@ One of the great innovations introduced with blockchain was solving the Byzantin
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-05-2-proof-of-work %}">
-            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.4.0-consensus/pow.png" alt="Proof of Work" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/2.4.0-consensus/pow.png" alt="Proof of Work" />
         </a>
     </div>
     <div class="col-md-9">

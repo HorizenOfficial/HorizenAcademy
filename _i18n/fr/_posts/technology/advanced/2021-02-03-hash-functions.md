@@ -22,8 +22,8 @@ Une fonction de hachage cryptographique doit remplir l'ensemble de critères sui
 - Résistante aux collisions - Il devrait être difficile (lire impossible) de trouver deux entrées pour une fonction de hachage donnant la même sortie.
 - Déterministe - La même entrée doit toujours produire la même sortie.
 
-![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_D.jpg)
-![Hash function]({{site.baseurl}}/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_M.jpg)
+![Hash function]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_D.jpg)
+![Hash function]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.2-hash-functions/FR_hash_function_M.jpg)
 
 Les fonctions de hachage les plus fréquemment utilisées aujourd'hui sont SHA-256. SHA est un acronyme pour Secure Hash Algorithm. Le nombre indique la longueur de la sortie en bits, par exemple, il y a quatre longueurs différentes de sorties dans la famille SHA : 224, 256, 384 ou 512 bits. Un autre type de fonctions de hachage pertinentes dans la technologie de la blockchain est la famille RIPEMD. RIPEMD160 est souvent utilisé dans de nombreuses cryptomonnaies et comme vous l'aurez deviné, produit une sortie de 160 bits.
 
@@ -43,7 +43,7 @@ Les fonctions de hachage sont la première pierre angulaire de la technologie de
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
+        <td class="icon"><img src="{{site.baseurl_root}}/assets/post_files/eli5/what-is-a-hash-function/Hash.jpg" alt="Cryptocurrency"></td>
         <td>
             Une fonction de hachage est quelque chose que nous utilisons pour créer l'empreinte digitale d'un fichier. Vous pouvez utiliser une fonction de hachage pour créer une empreinte digitale pour tout type de fichier.
         </td>

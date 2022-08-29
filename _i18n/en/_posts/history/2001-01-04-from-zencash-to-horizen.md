@@ -44,7 +44,7 @@ css: |
 ### The Birth of ZenCash
 
 <div class="rocket-image d-none d-md-block">
-    <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
+    <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
 </div>
 
 **It started almost by accident**. **Rob Viglione**, the _co-founder_ of **Horizen**, was finishing his **Ph.D**. at the **University of South Carolina**, teaching a blockchain course, and working at **ZClassic** as a part-time hobby. ZClassic had a really informal team, but Rob was passionate about this project. He gradually increased his commitment and activity in the community and took on a leadership role as the project developed.
@@ -57,7 +57,7 @@ Rob and Rolf forked ZClassic and co-founded **ZenCash**. They were finally able 
 
 > On the more technical side, this is the block **#110000** that Rob and Rolf forked from. **ZenCash** began their new blockchain with a treasury model on block **#110001**. Note the **1.0625** ZEN emission in the coinbase transaction, which is the part of new coin emission that went to the treasury.
 
-![History Horizen logos]({{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
+![History Horizen logos]({{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
 
 ### From a Part-time Hobby to a Full-Time Job
 
@@ -93,7 +93,7 @@ We are moving in the right direction as a project, **but we are not done**. We h
     <table class="table table-borderless">
     <tbody>
         <tr>
-            <td style="width: 80px;" class="p-0"><img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
+            <td style="width: 80px;" class="p-0"><img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
             <td class="pt-0 pb-0 pr-0 pl-3">
                 Super Nodes will host Horizen's upcoming sidechains, making them the first fully decentralized sidechains in the industry.
             </td>
@@ -116,13 +116,13 @@ We have met many of our partners through Charles. He introduced us to **InfoPuls
 
 <div class="row mb-4 align-items-center">
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
     </div>
 </div>
 
@@ -144,12 +144,12 @@ We determined the best solution was to enhance the _longest chain rule_ (**Nakam
 
 So, we created a special task force and partnered with **BrandTuitive**. Our teams combined and spent hours upon hours working on our brand expansion. The result was, and still is, phenomenal. The name **Horizen** aligned perfectly with the mission and goals of our project. The team and our community loved that we were able to keep **ZEN** as part of our name. Since ZEN remained a part of us we were also able to maintain our **cryptocurrency's ticker symbol**, ZEN.
 
-<img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/HZ-logos.svg" alt="Horizen logos" style="width: 500px; margin-top: 2rem; margin-bottom: 5rem;">
+<img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/HZ-logos.svg" alt="Horizen logos" style="width: 500px; margin-top: 2rem; margin-bottom: 5rem;">
 
 <table class="table table-borderless">
 <tbody>
     <tr>
-        <td style="width: 100px;" class="pl-0 pr-0"><img src="{{site.baseurl}}/assets/img/horizen-icon.svg" alt="Horizen"></td>
+        <td style="width: 100px;" class="pl-0 pr-0"><img src="{{site.baseurl_root}}/assets/img/horizen-icon.svg" alt="Horizen"></td>
         <td class="pl-3 pl-lg-4">
             <h3 class="mt-0">Horizen to the Future</h3>
             <p>

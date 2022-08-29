@@ -180,7 +180,7 @@ _ZenIPs_ are meant to standardize the process of suggesting major changes to the
 
 The document needs to contain an abstract, a section about the motivation for the proposed change, a specification, as well as a reference implementation. The draft is publicized by creating a pull request against the [ZenIP GitHub repository](https://github.com/HorizenOfficial/ZenIPs).
 
-![The ZenIP Workflow]({{site.baseurl}}/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
+![The ZenIP Workflow]({{site.baseurl_root}}/assets/post_files/technology/expert/2.7-governance/zenip_workflow.jpg)
 
 **Editors** act as the repository maintainers and there are currently three of them, one representing **the Zen Blockchain Foundation**, another one representing the **Horizen Community Council** and one for **Horizen Labs**.
 
@@ -208,8 +208,8 @@ There are many types of voting mechanisms and electoral systems to choose from. 
 
 Most democracies evolved into representative democracies over time for this reason. While they allow a large number of voters to participate in the decision-making process, there are many issues. These issues include the transparency of representatives’ votes, accountability of representatives, and high barriers to entry for participants wanting to get involved in the decision-making process.
 
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
 
 **Liquid democracy can be understood as a dynamic hybrid of direct and representative democracies**. It combines many of the upsides of each while doing away with most of their weaknesses. With liquid democracy, you have the option of delegating your vote to an "expert" who represents your views.
 

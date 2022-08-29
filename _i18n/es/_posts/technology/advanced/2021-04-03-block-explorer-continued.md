@@ -17,7 +17,7 @@ Si el usuario sabe navegar un explorador de bloques, sabe navegarlos todos. Son 
 
 La información contenida en el explorador de bloques se estructura ya sea por bloques, direcciones o transacciones individuales. Veamos un primer ejemplo para hacer de todo esto algo más tangible:
 
-![Latest Blocks]({{site.baseurl}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
+![Latest Blocks]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
 
 Hay muchos exploradores de bloques disponibles, muchas veces más de uno para la misma cadena de bloques. Ya que visitaremos el origen de las criptomonedas en este ejemplo, estudiaremos el caso de Bitcoin y de uno de los exploradores más populares: blockchain.com.
 
@@ -35,7 +35,7 @@ El usuario verá un resumen de los bloques más recientes en la página de inici
 
 Veamos primero un solo bloque. La altura del primer bloque fue 0. Si el usuario quiere encontrar la primera bitcoin en ser minada, puede usar la función de búsqueda e ingresar “0”. Si no ha entrado aún al sitio, [este enlace](https://explorer.zensystem.io/block/0007104ccda289427919efc39dc9e4d499804b7bebc22df55f8b834301260602) lo llevará directamente al bloque génesis, que es el nombre que recibe siempre el primer bloque minado de una cadena.
 
-![Genesis Block]({{site.baseurl}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
+![Genesis Block]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
 
 Repasemos la información que tenemos aquí. Puede parecer mucha en un principio, pero analizándola paso por paso resulta bastante fácil de entender.
 
@@ -61,7 +61,7 @@ La función más común del explorador de bloques es la de revisar el estatus de
 
 Si queremos visitar la primera transacción de criptomonedas de la historia tenemos que remitirnos al bloque #170, donde se incluyó la primera transacción de bitcoins entre Satoshi Nakamoto y Hal Finney.
 
-![Transacciónes]({{site.baseurl}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
+![Transacciónes]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
 
 Este bloque es el primero en la cadena de bloques de Bitcoin que contiene más de una transacción. La transacción coinbase aparece arriba, como es de esperarse, y debajo de esta se registra la primera transacción; una persona enviándole monedas a otra.
 
@@ -74,13 +74,13 @@ Un explorador de bloques es una herramienta que permite al usuario explorar la c
 Esto es lo que puede esperarse al explorar una dirección con un explorador de bloques (la mayoría de ellos funcionan de manera similar). La dirección que se buscó para este ejemplo tomado de un explorador de bloques de Horizen se encuentra en la parte superior: znf7; digamos que esta dirección le pertenece a Bob.
 
 <div class="my-4">
-    <img src="{{site.baseurl}}/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.jpg" alt="Resumen de dirección del explorador">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_summary.jpg" alt="Resumen de dirección del explorador">
 </div>
 
 En la parte superior de la página, se encuentra un resumen de la actividad de la dirección. La información que aparece incluye la cantidad total recibida y enviada desde esta dirección, así como el saldo actual. La dirección en cuestión ha recibido un total de 42 ZEN. Bob no le ha enviado ningún ZEN a nadie, por lo que aún tiene un saldo de 42 ZEN.
 
 <div class="my-4">
-    <img src="{{site.baseurl}}/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.jpg" alt="Transacción de la dirección en el explorador">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/beginner/block-explorer-introduction/ES_explorer_address_tx.jpg" alt="Transacción de la dirección en el explorador">
 </div>
 
 Todas las transacciones relacionadas a esta dirección pueden encontrarse debajo del resumen de la dirección. Esta cuenta ha participado en una sola transacción hasta ahora. Una transacción se caracteriza por su número de identificación individual, en este caso la secuencia de números azules en la parte superior de la caja gris (a46f…).

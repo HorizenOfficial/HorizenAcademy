@@ -28,8 +28,8 @@ _"Una cadena lateral es una cadena de bloques que valida los datos de otras cade
 
 En otras palabras, una cadena lateral es una cadena de bloques, pero con la habilidad de comunicarse e interoperar con una o más cadenas. Cuando alguien se refiere a una cadena lateral en la actualidad, generalmente se refieren a una cadena vinculada, las cuales permiten al usuario transferir activos entre cadenas en ambos sentidos.
 
-![sidechains]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/ES_sidechains_D.jpg)
-![sidechains]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/ES_sidechains_M.jpg)
+![sidechains]({{site.baseurl_root}}/assets/post_files/horizen/advanced/sidechains/ES_sidechains_D.jpg)
+![sidechains]({{site.baseurl_root}}/assets/post_files/horizen/advanced/sidechains/ES_sidechains_M.jpg)
 
 ### ¿Qué beneficios tiene esta tecnología?
 
@@ -66,8 +66,8 @@ El desarrollo del modelo de cadenas laterales (sidechains) consiste de dos parte
 
 El _protocolo de consenso de la cadena lateral_ gobierna cómo se pone de acuerdo la red respecto a la creación de bloques nuevos y el historial de transacciones. El CTT determina cómo pueden enviarse activos de la cadena principal a la lateral y viceversa.
 
-![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_D.jpg)
-![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_M.jpg)
+![SCP_CCT]({{site.baseurl_root}}/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_D.jpg)
+![SCP_CCT]({{site.baseurl_root}}/assets/post_files/horizen/advanced/sidechains/ES_SCP_CCT_M.jpg)
 
 ### Resumen
 
@@ -77,8 +77,8 @@ La habilidad de implementar cadenas laterales aumentará dramáticamente la posi
 
 ## Contenido Experto a Continuación - Cadenas laterales
 
-![sidechains]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_sidechains_D.jpg)
-![sidechains]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_sidechains_M.jpg)
+![sidechains]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_sidechains_D.jpg)
+![sidechains]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_sidechains_M.jpg)
 
 La habilidad de implementar cadenas laterales aumentará dramáticamente la posibilidad de construir encima de las cadenas de bloques públicas existentes. Uno de los primeros usos que Horizen piensa darle a su cadena lateral tendrá que ver con la tesorería, y será uno de los primeros pasos para hacer de Horizen una organización autónoma descentralizada (OAD).
 
@@ -95,8 +95,8 @@ El CCT consiste de dos subprotocolos, de los cuales hablaremos a continuación.
 
 El primer subprotocolo concierne las _transacciones hacia delante_ (forward transactions), que son transacciones de la cadena principal (mainchain) a la lateral. El segundo subprotocolo concierne las _transacciones hacia atrás_ (backward transactions), que son transacciones de la cadena lateral a la principal.
 
-![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_SCP_CCT_D.jpg)
-![SCP_CCT]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_SCP_CCT_M.jpg)
+![SCP_CCT]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_SCP_CCT_D.jpg)
+![SCP_CCT]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_SCP_CCT_M.jpg)
 
 La primera decisión con respecto al diseño de nuestro modelo fue si queríamos que la cadena principal tuviera conocimiento de las cadenas laterales. Finalmente, el equipo de Alberto Garoffolo decidió desarrollar el SCP y CCT por separado.
 
@@ -122,8 +122,8 @@ El SCP propuesto se desarrolló a partir del protocolo Ouroboros desarrollado po
 - Antes de empezar cada época, el procedimiento de selección de líderes de posición (slot leader selection procedure) le asigna un líder a cada posición de la época (en nuestro ejemplo, ocho líderes serán asignados por época).
 - Si el líder de posición de un bloque dado no forja un bloque nuevo durante su lapso, el próximo líder de posición en forjar un bloque incluirá en él las transacciones no incluidas en ningún bloque hasta entonces.
 
-![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_epoch_D.jpg)
-![epoch]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_epoch_M.jpg)
+![epoch]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_epoch_D.jpg)
+![epoch]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_epoch_M.jpg)
 
 #### Modificaciones al protocolo Ouroboros
 
@@ -189,8 +189,8 @@ Cuando el objetivo es la posibilidad de hacer transferencias entre cadenas, debe
 
 Las transacciones hacia delante son posibles gracias a la referencia completa (full referencing), la cual resuelve dos problemas a la vez: permite transferencia de la CP a la CL de manera directa y se encarga de definir finalidad (o la falta de ella).
 
-![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_full_referencing_D.jpg)
-![full referencing]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_full_referencing_M.jpg)
+![full referencing]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_full_referencing_D.jpg)
+![full referencing]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_full_referencing_M.jpg)
 
 **Inglés**
 
@@ -207,8 +207,8 @@ Y bueno, ¿cómo es que la referencia completa logra habilitar las funciones que
 
 Los nodos de una CL pueden verificar las transferencias fácilmente incluyendo el encabezado del bloque y el camino de Merkle de las transacciones hacia delante. Podemos considerar cada cadena, lateral y principal, como un libro contable individual. Ya que los contables de la cadena lateral monitorean constantemente el libro de la cadena principal, les resulta fácil agregar las transacciones entre cadenas a su libro contable. Al incluir con las transacciones sus caminos de Merkle y el encabezado del bloque correspondiente, todas las entidades de la cadena lateral pueden verificar la validez de cada transacción sin tener que confirmar la información en la cadena principal por cuenta propia.
 
-![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_forward_D.jpg)
-![forward]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_forward_M.jpg)
+![forward]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_forward_D.jpg)
+![forward]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_forward_M.jpg)
 
 Habilitar el protocolo de transferencia hacia delante implica hacer cambios en la lógica de la cadena principal. Debe introducirse un nuevo tipo de transacción, una que consume monedas y produce metadatos que le permiten al usuario recibir la misma cantidad de monedas recién creadas en la cadena lateral (menos la tarifa de transacción). Lo mismo pasa en el caso de una transacción hacia atrás; se consumen monedas en la cadena lateral y se crea una cantidad equivalente en la cadena principal (de nuevo, menos el monto de la tarifa de transacción). (Podría crearse también una estructura con un procedimiento de candados abiertos y cerrados).
 
@@ -234,8 +234,8 @@ Decidimos desarrollar el SCP y CCP por separado. Ya que uno de nuestros objetivo
 
 En cuanto a los datos, para que todo esto funcione es necesario contar con un mecanismo de transferencia iniciado en la cadena lateral que informe a la cadena principal si hay transacciones hacia atrás entrantes. Esto se logra introduciendo un nuevo tipo de contenedor de datos llamado certificado entre cadenas (cross-chain certificate) o CCCert.
 
-![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_CCCert_D.jpg)
-![CCCert]({{site.baseurl}}/assets/post_files/horizen/expert/sidechains/ES_CCCert_M.jpg)
+![CCCert]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_CCCert_D.jpg)
+![CCCert]({{site.baseurl_root}}/assets/post_files/horizen/expert/sidechains/ES_CCCert_M.jpg)
 
 El CCCert contiene información básica como el identificador de la cadena lateral (SCid) y el identificador del CCCert como encabezado. La lista de transferencias hacia atrás (backward transfer list) registra todas las transacciones entre cadenas. Los tres últimos campos de datos conciernen a los certificadores que cumplen la función de validadores conforme a la cita anterior.
 
@@ -286,8 +286,8 @@ Como ya mencionamos, una limitante importante para la adopción en masa de la te
 
 Hay muchas maneras de escalar una blockchain, pero Horizen ha decidido concentrarse en dos por el momento. El artículo anterior trató sobre nuestros esfuerzos en la construcción de un protocolo basado en un DAG de bloques, este artículo tratará sobre el desarrollo de nuestro sistema de cadenas laterales (sidechains).
 
-![Sidechains in ES]({{site.baseurl}}/assets/post_files/horizen/beginner/sidechains/ES_sidechains_D.jpg)
-![Sidechains in ES]({{site.baseurl}}/assets/post_files/horizen/beginner/sidechains/ES_sidechains_M.jpg)
+![Sidechains in ES]({{site.baseurl_root}}/assets/post_files/horizen/beginner/sidechains/ES_sidechains_D.jpg)
+![Sidechains in ES]({{site.baseurl_root}}/assets/post_files/horizen/beginner/sidechains/ES_sidechains_M.jpg)
 
 Cuando se habilitan las cadenas laterales, se permite a varias cadenas de bloques diferentes funcionar paralelamente. Una cadena lateral es, en esencia, una cadena de bloques con la habilidad adicional de poder interoperar con la cadena principal. Las interacciones con una cadena de bloques atada a una criptomoneda, como es es el caso con Horizen, consisten principalmente de transacciones. Por esta razón, el elemento más importante en la construcción de nuestra cadena lateral será el protocolo de transferencia entre cadenas. Este protocolo permitirá que se envíen ZEN de la cadena principal a una de las cadenas laterales y viceversa.
 

@@ -11,8 +11,8 @@ chapter: "How Does a Blockchain Work?"
 
 There are many ways to classify a blockchain. One of them is to determine if the blockchain is _public_ or _permissioned_. Permissioned blockchains are meant for defined groups of people, such as a consortium of companies that want to share a consistent database.
 
-![DAG]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
-![DAG]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
+![DAG]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/central-distri_D.jpg)
+![DAG]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/central-distri_M.jpg)
 
 Public blockchains are commodities, digital goods that anyone with an internet connection can access. Nobody owns these commodities, so there is no central infrastructure provider. Instead, the infrastructure is provided by many independent peers, spread all over the globe. The distributed **Peer-to-Peer** (_P2P_) network of a decentralized blockchain is highly resilient because the network’s nodes run independently from one another.
 
@@ -26,8 +26,8 @@ A special computer on the internet stores most websites. This special computer i
 
 In a P2P network, you are usually connected to several peers and if one goes offline, everything still works as usual. This makes blockchain networks very robust.
 
-![Peer-to-Peer Network]({{site.baseurl}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
-![Peer-to-Peer Network]({{site.baseurl}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)
 
 The Internet that we are experiencing today is highly centralized. Most data that we as the users of the internet produce, end up in the hands of a few large corporations. But there are a number of truly distributed systems out there living on the internet.
 
@@ -43,8 +43,8 @@ In computer science, the _CAP theorem_ describes the cost of a robust and scalab
 
 In a second step, all the nodes have to reach consensus on the order in which events happened.
 
-![Central distri]({{site.baseurl}}/assets/post_files/technology/advanced/2.4-p2p/central-distri_D.jpg)
-![Central distri]({{site.baseurl}}/assets/post_files/technology/advanced/2.4-p2p/central-distri_M.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/central-distri_D.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/central-distri_M.jpg)
 
 We have found a simple yet [great visualization](http://mg8.org/processing/bt.html) of a distributed system that demonstrates the process of new peers joining a network and syncing with all other nodes. It lets you add and delete random nodes to show the robustness of the overall system.
 
@@ -56,8 +56,8 @@ The variations of distributed networks mostly regard the [data structure](https:
 
 With flooding, nodes propagate a message with a constant or _deterministic_ transmission delay. Diffusion is a refined version of flooding. In networks using diffusion, such as Bitcoin and most other cryptocurrencies the nodes propagate messages with a random transmission delay. This makes it harder for an eavesdropper to determine the origin of a message and thereby identify a node’s geographical location and possibly owner.
 
-![Spreading]({{site.baseurl}}/assets/post_files/technology/advanced/2.4-p2p/spreading_D.jpg)
-![Spreading]({{site.baseurl}}/assets/post_files/technology/advanced/2.4-p2p/spreading_M.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/spreading_D.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/spreading_M.jpg)
 
 Many distributed systems are built with an append-only data structure and blockchains are an example of this. The blocks in a blockchain are cryptographically connected data containers in an append-only log. It is infeasible to change or delete data from the past. In other distributed networks it can be desirable to delete data, for storage efficiency or to maintain only relevant information.
 
@@ -100,8 +100,8 @@ While security benefits from the redundancy of information, this comes at a perf
 
 To illustrate distributed networks we use graphs. This term sounds very simple at first but there is a bit more to it. The field of graph theory is a mathematical discipline studying the different types of graphs. We touch on graph theory in an article on [Directed Acyclic Graphs](https://academy.horizen.io/horizen/advanced/block-dag/) or DAGs. There, we talked about graphs in the context of data structures - namely how blocks can be interconnected at the application layer. Here the graph describes the connectivity between nodes at the network layer.
 
-![The Graph of a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_D.jpg)
-![The Graph of a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_M.jpg)
+![The Graph of a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_D.jpg)
+![The Graph of a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/graph-distributed-network_M.jpg)
 
 A graph \\(G = (V, E)\\) is defined as a set of vertices $V$ and edges $E$. Each edge connects two vertices and has a time delay $d$ for a message to travel along its path. The graph of a distributed network changes constantly. This happens when nodes go offline and their peers reconnect to different nodes, or when new nodes join the P2P network. The rate of change can vary, and this has implications on privacy.
 
@@ -111,13 +111,13 @@ There are two extremes when it comes to the dynamicity of the network graph. A f
 
 When we talked about [distributed consensus](https://academy.horizen.io/technology/advanced/consensus-mechanisms/) we introduced two types of malfunctions at the network layer: **_node failures_** and **_network failures_**.
 
-![Node Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/node_failures_D.jpg)
-![Node Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/node_failures_M.jpg)
+![Node Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/node_failures_D.jpg)
+![Node Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/node_failures_M.jpg)
 
 Nodes can crash or go offline, they can have trouble receiving or processing messages, or they can display _Byzantine_ behavior. When nodes act Byzantine, this means they act randomly and deviate from the protocol. Usually the term is used to refer to malicious behavior.
 
-![Network Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/network_failures_D.jpg)
-![Network Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/network_failures_M.jpg)
+![Network Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/network_failures_D.jpg)
+![Network Failures in a Distributed Peer-2-Peer (P2P) Network]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/network_failures_M.jpg)
 
 Network failures are classified using their effect on message propagation, not by the reason that led to the failure.
 
@@ -181,8 +181,8 @@ This mechanism needs to ensure that all messages reach all nodes within some tim
 
 There are three broadcasting mechanisms we want to look at further in this article: _flooding, diffusion, and the Dandelion protocol_.
 
-![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_D.jpg)
-![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_M.jpg)
+![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_D.jpg)
+![Broadcasting Mechanism - Flooding, Diffusion, and Dandelion]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/broadcasting_expert_M.jpg)
 
 ### Flooding
 
@@ -224,8 +224,8 @@ Most privacy preserving techniques are not effective if messages can be linked t
 
 To assess the security and privacy properties of the broadcasting mechanism, one assumes there are two types of nodes: _honest nodes_ and _adversarial nodes_ colluding to deanonymize users. An attacker can apply two different techniques to deanonymize users: **eavesdropping** or the **spy-based approach**:
 
-![Spy vs. Eavesdropper]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_D.jpg)
-![Spy vs. Eavesdropper]({{site.baseurl}}/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_M.jpg)
+![Spy vs. Eavesdropper]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_D.jpg)
+![Spy vs. Eavesdropper]({{site.baseurl_root}}/assets/post_files/technology/expert/2.5-p2p/spy_based_eavesdropper_M.jpg)
 
 The _eavesdropper_ connects to as many nodes as possible using a highly performant node. This node can establish several connections to a single honest server, with each connection coming from a different IP address. The _honest node_ doesn’t realize that more than one of its connections originates from the same node.
 

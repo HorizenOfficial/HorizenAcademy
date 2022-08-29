@@ -16,7 +16,7 @@ An integral part of blockchain technology is public-key cryptography (PKC). Ther
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-1-elliptic-curve-cryptography %}">
-            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.3.0-pkc/curve.png" alt="Elliptic Curve Cryptography" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/2.3.0-pkc/curve.png" alt="Elliptic Curve Cryptography" />
         </a>
     </div>
     <div class="col-md-9">
@@ -29,7 +29,7 @@ We explain ECC and show you the basics of how the math on an elliptic curve work
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-2-generating-keys-and-addresses %}">
-            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.3.0-pkc/keys-and-addresses.png" alt="Generating Keys and Addresses" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/2.3.0-pkc/keys-and-addresses.png" alt="Generating Keys and Addresses" />
         </a>
     </div>
     <div class="col-md-9">
@@ -43,7 +43,7 @@ We explain ECC and show you the basics of how the math on an elliptic curve work
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-02-04-3-digital-signatures %}">
-            <img src="{{site.baseurl}}/assets/post_files/technology/expert/2.3.0-pkc/digital-signatures.png" alt="Digital Signatures" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/2.3.0-pkc/digital-signatures.png" alt="Digital Signatures" />
         </a>
     </div>
     <div class="col-md-9">

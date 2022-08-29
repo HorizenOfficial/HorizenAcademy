@@ -25,8 +25,8 @@ There are many approaches to achieving consensus in a distributed network but th
 
 > “_The main difference between consensus mechanisms is the way in which they delegate and reward the verification of transactions. (…) In one way or another, blockchain consensus algorithms boil down to some kind of vote where the number of votes that a user has is tied to the amount of a limited resource that is under the user’s control._” - _Demiro Massessi_
 
-![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_D.jpg)
-![Consensus]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_M.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_D.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/consensus_M.jpg)
 
 ## Proof of Work - PoW
 
@@ -42,8 +42,8 @@ Miners require computational power because the problem they are trying to solve 
 
 You cannot calculate a solution, you need to find it through a trial-and-error approach. _Approximation-free_ means that it is not possible to have a part of the solution or to “be close to solving the problem”. You either have a solution or not, making it a binary situation.
 
-![POW]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_D.jpg)
-![POW]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_M.jpg)
+![POW]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_D.jpg)
+![POW]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POW_M.jpg)
 
 All nodes and miners verify the validity of a new block as soon as it is discovered and broadcast. If it is valid, they add it to their local copy of the blockchain and delete all transactions that are now already recorded on the blockchain from their mempool.
 
@@ -59,8 +59,8 @@ The miners will start building the next block on top of the block they received 
 
 If **80%** of miners receive **block A** first and the other **20% block B**, then the chances of **block A** getting extended are **80%**, assuming all miners have the same computational power. In a way, the miners vote with their computational power on one version of the history. This aligns perfectly with our quote from the beginning of the article.
 
-![Longest chain]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_D.jpg)
-![Longest chain]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_M.jpg)
+![Longest chain]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_D.jpg)
+![Longest chain]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/longest_chain_M.jpg)
 
 Proof of Work is one of the most secure consensus mechanisms but it is only secure if there is a sufficient amount of hash rate on the network. The **Bitcoin** protocol has proven how secure Proof of Work consensus can be for _over 10 years_.
 
@@ -76,8 +76,8 @@ To become a validator, a user needs to send funds in a special type of transacti
 
 The scarce resource in a PoS environment is the native currency of the blockchain. The more money you stake on a PoS blockchain, the higher your chances of validating a new block. In most Proof of Stake blockchains, there is no block reward. The validator’s incentive to achieve consensus is solely based on collecting the transaction fees attached to each transaction.
 
-![POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_D.jpg)
-![POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_M.jpg)
+![POS]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_D.jpg)
+![POS]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/POS_M.jpg)
 
 ## Comparing POW and POS
 
@@ -85,8 +85,8 @@ Skeptics question the overall security of the Proof of Stake consensus model bec
 
 In PoW, there is a real-world cost, electricity, to every block that gets mined. It remains to be seen if PoS blockchains can provide the same security guarantees over an extended period of time that Bitcoin with its PoW blockchain has shown for over a decade now.
 
-![Comparing POW and POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_D.jpg)
-![Comparing POW and POS]({{site.baseurl}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_M.jpg)
+![Comparing POW and POS]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_D.jpg)
+![Comparing POW and POS]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.5-consensus-mechanisms/compare_M.jpg)
 
 Another difference between PoW and PoS is that in a PoS blockchain each validating node needs to be identifiable. The staked coins must be held accountable for any malicious acts. In a PoW blockchain, there is no need to have miners or nodes identifiable. In fact, it is a feature that if a node receives a block, there is no information included about who the miner of the block was.
 
@@ -139,8 +139,8 @@ Failures can broadly be categorized into one of the following three cases:
 - **Omission** means that a node sends a message which is not received by its peers.
 - Lastly, **Byzantine** failures refer to random behavior that can be guided by malicious intentions or simply malfunctioning clients. They are the hardest failures to address as they are random by definition. Any malicious actor trying to attack the system by deviating from the [protocol](https://academy.horizen.io/technology/advanced/a-protocol-to-transfer-value/) would be an example of a Byzantine failure. Handling Byzantine behavior is difficult because parties can be online or offline and can lie, coordinate or act arbitrarily.
 
-![Node Failure]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_D.jpg)
-![Node Failure]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_M.jpg)
+![Node Failure]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_D.jpg)
+![Node Failure]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/node_failures_M.jpg)
 
 The system should be fault-tolerant, in that it continues to work regardless of failures in its components. Depending on which type of failures it can handle, the distributed system can be classified as either **simple fault tolerant** or **Byzantine Fault-Tolerant**.
 
@@ -154,8 +154,8 @@ The system needs to be robust enough to handle communication failure. If you ass
 
 There are three standard models for how well the message propagation works, which affect the system design to a great extent.
 
-![Network Failure]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_D.jpg)
-![Network Failure]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_M.jpg)
+![Network Failure]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_D.jpg)
+![Network Failure]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/network_failures_M.jpg)
 
 - When you assume **synchronous** message propagation, all messages are received within some fixed and known amount of time by the receiver.
 - If message propagation is **partially synchronous**, messages are assumed to be delivered in bounded time, so within a fixed timeframe, but the bound is unknown.
@@ -236,8 +236,8 @@ If a transition fails or halts, there is a timeout mechanism after which the sys
 
 What we can learn from Paxos and Raft is that handling Byzantine behavior in an asynchronous environment is a hard problem.
 
-![Paxos and Raft]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_D.jpg)
-![Paxos and Raft]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_M.jpg)
+![Paxos and Raft]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_D.jpg)
+![Paxos and Raft]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/paxos-raft_M.jpg)
 
 ### The Byzantine Generals Problem
 
@@ -245,8 +245,8 @@ The challenge of handling Byzantine actors is widely researched. It is referred 
 
 The result is less than a third of all nodes _n_: \\(\frac{(n-1)}{3}\\)
 
-![Calculating the Maximum Number of Byzantine Actors]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_D.jpg)
-![Calculating the Maximum Number of Byzantine Actors]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_M.jpg)
+![Calculating the Maximum Number of Byzantine Actors]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_D.jpg)
+![Calculating the Maximum Number of Byzantine Actors]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/maximum-byzantine-actors_M.jpg)
 
 The argumentation for getting this result is straight-forward:
 
@@ -264,8 +264,8 @@ The _DLS algorithm_ contributed greatly to the development of consensus research
 
 It assumed a synchronized clock between all nodes, an assumption that is not realistic in a permissionless system.
 
-![Dwork, Lynch and Stockmeyer Consensus]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_D.jpg)
-![Dwork, Lynch and Stockmeyer Consensus]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_M.jpg)
+![Dwork, Lynch and Stockmeyer Consensus]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_D.jpg)
+![Dwork, Lynch and Stockmeyer Consensus]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/dls_M.jpg)
 
 ### pBFT - Practical Byzantine Fault-Tolerance
 
@@ -275,8 +275,8 @@ It got pretty close to achieving the final goal:
 
 _handling malicious actors in an unreliable network while ensuring safety and liveness._
 
-![Practical Byzantine-Fault Tolerance]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_D.jpg)
-![Practical Byzantine-Fault Tolerance]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_M.jpg)
+![Practical Byzantine-Fault Tolerance]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_D.jpg)
+![Practical Byzantine-Fault Tolerance]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/pBFT_M.jpg)
 
 pBFT can guarantee safety under all circumstances (assuming a maximum of \\(x = \frac{(n-1)}{3}\\) Byzantine nodes), but it relies on the synchronous model to achieve liveness. Put differently, in an unreliable communications network the system might halt.
 
@@ -294,8 +294,8 @@ Using determinism means, that each new state is decided on by all nodes in a bin
 
 In the non-deterministic model, the consensus mechanism lets all nodes agree on the probability of a new state being the global state. Remember that a new state in a blockchain is reached when a new block is added to the chain. When a new, valid block is proposed, nodes can be fairly certain that it will stay valid, but they do not know for sure. With each additional state transition - in our context each new block or confirmation - the probability of the state being _safe_ slowly but surely approaches **1**.
 
-![Nakamoto Consensus]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_D.jpg)
-![Nakamoto Consensus]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_M.jpg)
+![Nakamoto Consensus]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_D.jpg)
+![Nakamoto Consensus]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/nakamoto_consensus_M.jpg)
 
 It is important to note, that the _Nakamoto Consensus_ cannot provide finality. Although the probability of a block being reversed approaches **0** the more confirmations it has, it _never actually equals_ **zero**.
 
@@ -325,8 +325,8 @@ The longest chain rule is applied in case two miners find valid blocks at roughl
 
 The other miners start building on the block they received first, but keep the second candidate in memory. Different miners can have different views on which block came first, depending on their geographical location and their connectivity in the network graph. The tie is broken once the next block is found.
 
-![Longest Chain Rule]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_D.jpg)
-![Longest Chain Rule]({{site.baseurl}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_M.jpg)
+![Longest Chain Rule]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_D.jpg)
+![Longest Chain Rule]({{site.baseurl_root}}/assets/post_files/technology/expert/2.4.1-distributed-consensus/longest_chain_M.jpg)
 
 The resulting chain of state transitions - _the blockchain_ - does not only entail the chronological order of events, but also proves that it came from the largest pool of computing power.
 

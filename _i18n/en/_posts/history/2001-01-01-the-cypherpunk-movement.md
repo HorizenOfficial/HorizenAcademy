@@ -16,8 +16,8 @@ chapter: "From Cypherpunks to Horizen"
 
 Two publications brought cryptography into the open, namely the **"Data Encryption Standard"** published by the **US Government**, and a paper called ["New Directions in Cryptography"](https://ee.stanford.edu/~hellman/publications/24.pdf) by **Dr. Whitfield Diffie** and **Dr. Martin Hellman**, published in **1976**.
 
-![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
-![New directions]({{site.baseurl}}/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
+![New directions]({{site.baseurl_root}}/assets/post_files/history/the-cypherpunk-movement/new_directions_D.jpg)
+![New directions]({{site.baseurl_root}}/assets/post_files/history/the-cypherpunk-movement/new_directions_M.jpg)
 
 **Dr. David Chaum** started writing on topics such as **anonymous digital cash** and **pseudonymous reputation systems** in the **1980s**, such as the ones described in ["Security Without Identification: Transaction Systems to make Big Brother Obsolete"](https://chaum.com/security-without-identification/).
 

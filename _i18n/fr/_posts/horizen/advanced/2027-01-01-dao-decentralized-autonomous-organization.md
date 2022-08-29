@@ -12,8 +12,8 @@ L'objectif à long terme d'Horizen est de faire évoluer sa structure organisati
 
 Les règles et procédures qui régissent l'organisation sont transcrites en code lorsque le DAO est créé. L'objectif principal de notre DAO est de décentraliser le processus décisionnel concernant la façon dont est dépensé le budget de notre organisation à but non lucratif. Tous les membres de la communauté auront la possibilité de soumettre des propositions et d'être rémunérés pour leur contribution. Cela peut être une nouvelle fonctionnalité de notre portefeuille ou lors d’une conférence.
 
-![DAO]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/FR_DAO_D.jpg)
-![DAO]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/FR_DAO_M.jpg)
+![DAO]({{site.baseurl_root}}/assets/post_files/horizen/advanced/dao/FR_DAO_D.jpg)
+![DAO]({{site.baseurl_root}}/assets/post_files/horizen/advanced/dao/FR_DAO_M.jpg)
 
 Pour que le processus décisionnel soit décentralisé il faut qu'il y ait un système de vote en place. Ce système de vote doit être fiable et nous avons décidé de l'implémenter sur une sidechain qui fonctionnera en parallèle de notre blockchain principale. Nous parlerons davantage des sidechains dans article dédié.
 
@@ -31,8 +31,8 @@ La démocratie liquide est un hybride dynamique des deux branches établies de l
 
 Dans une démocratie liquide, il n'y a pas de mandat électoral. Vous pouvez déléguer votre vote à un expert ou le retirer à tout moment. Les experts sont ainsi tenus de rendre des comptes.
 
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_D.jpg)
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/horizen/advanced/dao/FR_liquid_democracy_M.jpg)
 
 ### Les entités
 
@@ -65,8 +65,8 @@ Le mécanisme de vote que nous mettons en place est un système de démocratie l
 
 Roman Oliynykov, d'IOHK, a publié, en coopération avec Bingsheng Zhang et Hamed Balogun de l'Université de Lancaster, un article décrivant un système de trésorerie qui pourrait être déployé sur diverses cryptomonnaies, indépendamment du mécanisme de consensus utilisé. Un prototype a été implémenté en Scala sur le framework Scorex 2.0. Horizen travaille à la mise en œuvre du système de trésorerie proposé pour décider de l’utilisation nos fonds de trésorerie de manière décentralisée. Nous résumons le rapport et fournissons un aperçu du contexte dans cet article.
 
-![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_DAO_D.jpg)
-![DAO]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_DAO_M.jpg)
+![DAO]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_DAO_D.jpg)
+![DAO]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_DAO_M.jpg)
 
 ### Introduction
 
@@ -116,8 +116,8 @@ La démocratie liquide (DL) peut être comprise comme un système hybride des de
 
 Une différence essentielle est que vous pouvez déléguer votre vote à qui vous voulez, qu'il s'agisse de votre frère qui connaît vraiment un sujet donné ou de n'importe qui d'autre et vous pouvez retirer votre délégation à tout moment, ce qui rend tout le processus liquide. Cela réduit la barrière à l'entrée et responsabilise les délégués, car ils peuvent perdre des délégations à tout moment.
 
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_liquid_democracy_D.jpg)
-![Liquid Democracy]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_liquid_democracy_M.jpg)
 
 ### Les différentes entités
 
@@ -134,8 +134,8 @@ N'importe qui peut soumettre une proposition de financement et devenir porteur d
 
 Il y a trois époques dans chaque période d’allocation des fonds de trésorerie. Durant l'**époque du pré-vote**, tous les porteurs de projet ont le temps de soumettre leurs propositions encryptées. Toutes les propositions seront déchiffrées immédiatement à la fin de la phase de soumission. Cela accroît l'équité et empêche la présentation tactique des propositions à un moment opportun. Pendant l'époque pré-vote, les membres de la communauté ont également l’opportunité de s'inscrire en tant que votant ou expert en effectuant un type particulier de transaction.
 
-![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_treasury_epochs_D.jpg)
-![Treasury System Epochs]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_treasury_epochs_M.jpg)
+![Treasury System Epochs]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_treasury_epochs_D.jpg)
+![Treasury System Epochs]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_treasury_epochs_M.jpg)
 
 Durant l’**époque du vote (voting epoch)**, la commission de vote est choisie, une clé de vote est établie et le scrutin a lieu. Pour la **sélection du comité** "...un ensemble de comités de vote seront choisis au hasard parmi les électeurs inscrits qui acceptent d'être pris en considération pour la sélection en comité. La probabilité d'être sélectionné est proportionnelle à leur mise bloquée."
 
@@ -145,23 +145,23 @@ Le vote anonyme est réalisé par le fait que tous les électeurs et les experts
 
 Les électeurs et les experts envoient leur vote durant l' **étape des votes**. Chaque vote est représenté par un vecteur. Puisqu'il y a trois votes possibles - Oui, Non, Abstention - trois vecteurs possibles peuvent être soumis.
 
-![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_yes_no_abstain_D.jpg)
-![yes no abstain]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_yes_no_abstain_M.jpg)
+![yes no abstain]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_yes_no_abstain_D.jpg)
+![yes no abstain]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_yes_no_abstain_M.jpg)
 
 Le concept fonctionne ainsi : Dans l'exemple ci-dessous, il y a 4 votes, 2 ont voté oui à la proposition, 1 non et 1 abstention.
 
-![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_votes_D.jpg)
-![votes]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_votes_M.jpg)
+![votes]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_votes_D.jpg)
+![votes]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_votes_M.jpg)
 
 Si vous êtes familier avec le concept d'addition de vecteurs, il est facile de dire la somme de ces quatre vecteurs. Un des votes Oui est annulé par le vote Non. Le reste du vote Oui additionné au vote Abstention donne le vecteur diagonal illustré ci-dessous. Pour le comptage, seul l'axe des abscisses est pris en compte. Le résultat final de cette proposition révélé à l'étape du décompte serait un Oui.
 
-![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_votes_sum_D.jpg)
-![votes sum]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_votes_sum_M.jpg)
+![votes sum]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_votes_sum_D.jpg)
+![votes sum]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_votes_sum_M.jpg)
 
 Plus précisément, un score pour chaque proposition sera calculé en prenant le nombre de votes positifs moins le nombre de votes négatifs. La différence qui en résulte doit représenter au moins 10 % de tous les votes soumis pour être pris en considération pour le financement. Si 100 votes sont exprimés (sans abstention), il doit y avoir au moins 55 votes positifs pour atteindre ce seuil. Les propositions ayant obtenu les scores les plus élevés seront financées l’une après l’autre en partant des meilleures jusqu'à ce que la trésorerie du mois soit épuisée.
 
-![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_score_D.jpg)
-![score]({{site.baseurl}}/assets/post_files/horizen/expert/dao/FR_score_M.jpg)
+![score]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_score_D.jpg)
+![score]({{site.baseurl_root}}/assets/post_files/horizen/expert/dao/FR_score_M.jpg)
 
 L'**époque du post-vote** se compose de l'étape du comptage des voix et de l'étape de l'exécution. Notez que chaque vecteur est soumis de manière encryptée et que ce n'est qu'au stade du comptage que les comités révèlent conjointement tous les votes exprimés. La note de chaque proposition sera calculée et les propositions seront classées en fonction de leur résultat.
 
@@ -199,7 +199,7 @@ L'équipe d’Horizen détermine tous les mois la façon dont le budget sera dé
 
 Chaque mois, il y aura une période de vote. Au cours de cette période, la communauté pourra voter sur l'approbation ou non d'une proposition. Après la phase de décompte des votes, les propositions approuvées seront financées et les membres de la communauté qui ont soumis ces propositions pourront commencer le travail.
 
-![DAO - Decentralized Autonomous Organization in FR]({{site.baseurl}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/FR_DAO_D.jpg)
-![DAO - Decentralized Autonomous Organization in FR]({{site.baseurl}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/FR_DAO_M.jpg)
+![DAO - Decentralized Autonomous Organization in FR]({{site.baseurl_root}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/FR_DAO_D.jpg)
+![DAO - Decentralized Autonomous Organization in FR]({{site.baseurl_root}}/assets/post_files/horizen/beginner/dao-decentralized-autonomous-organization/FR_DAO_M.jpg)
 
 Chez Horizen nous croyons qu'il est important de donner le pouvoir à notre communauté. Nous sommes en train de créer les éléments de base nécessaires à la réalisation de notre vision de la ZenDAO. Le fait de voter sur le développement de la plateforme Horizen sera un bon moyen pour les membres de la communauté de prendre part au processus décisionnel et c'est également une excellente façon de légitimer les décisions de développement futures.

@@ -44,7 +44,7 @@ css: |
 ### La naissance de ZenCash
 
 <div class="rocket-image d-none d-md-block">
-    <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
+    <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/rocket.svg" alt="ZenCash to Horizen" style="">
 </div>
 
 Ça a commencé presque par accident. Rob Viglione, cofondateur d'Horizen, terminait son doctorat à l'Université de Caroline du Sud, enseignait un cours sur la blockchain et travaillait chez ZClassic comme hobby à temps partiel. ZClassic avait une équipe vraiment informelle, mais Rob était passionné par ce projet. Il a graduellement agrandi son engagement et son activité dans la communauté et a assumé un rôle de leadership au fur et à mesure que le projet se développait. Rob a rencontré Rolf Versluis alors qu'ils travaillaient en collaboration chez ZClassic. Ils ont tous deux aimé le projet ZClassic, mais ils avaient une vision de ce à quoi pourrait ressembler l'avenir de la protection de la vie privée, de la gouvernance et de l'économie. Ils ont appris des visions communes de l’un et de l’autre en travaillant ensemble sur le projet. Ils ont donc décidé de se rencontrer un jour. Rob a invité Rolf, qui vivait en Géorgie, à donner une conférence à ses étudiants universitaires et à s'asseoir pour discuter des perspectives de leur collaboration.
@@ -55,7 +55,7 @@ Rob et Rolf ont alors forké ZClassic et cofondé ZenCash. Ils ont finalement pu
 
 > Note : D'un côté plus technique, c'est le bloc #110000 d'où Rob et Rolf ont réalisé le fork. ZenCash a commencé sa nouvelle blockchain avec un modèle de trésorerie sur le bloc #110001, notez l'émission de 1,0625 ZEN dans la transaction Coinbase, qui est la partie de la nouvelle émission de coins qui est allée à la trésorerie.
 
-![History Horizen logos]({{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
+![History Horizen logos]({{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/ZenCash.png)
 
 ### D'un passe-temps à temps partiel à un emploi à temps plein
 
@@ -85,7 +85,7 @@ Nous allons dans la bonne direction en tant que projet, mais nous n'avons pas te
     <table class="table table-borderless">
     <tbody>
         <tr>
-            <td style="width: 80px;" class="p-0"><img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
+            <td style="width: 80px;" class="p-0"><img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/superNodes.svg" alt="Super Nodes"></td>
             <td class="pt-0 pb-0 pr-0 pl-3">
                 Les Super Nodes accueilleront les prochaines sidechains d'Horizen, ce qui en fera les premières sidechains entièrement décentralisées de l'industrie.
             </td>
@@ -108,13 +108,13 @@ Code Particle est un autre partenaire remarquable qui travaille au développemen
 
 <div class="row mb-4 align-items-center">
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/IO.png" alt="Input Output">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/codeP.png" alt="Code Particle">
     </div>
     <div class="col-md-4 mt-4">
-        <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
+        <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/infopulse.png" alt="Infopluse">
     </div>
 </div>
 
@@ -127,7 +127,7 @@ L'équipe Horizen l'a su immédiatement grâce au système de tripwire. L'équip
 Nous avons déterminé que la meilleure solution était d'améliorer la règle de la chaîne la plus longue (Consensus Nakamoto) et d'introduire une pénalité pour les déclarations de bloc retardés. Cela rend les choses exponentiellement plus difficiles et plus coûteuses pour ceux qui cherchent à effectuer une attaque à 51%. Vous pouvez lire notre livre blanc "Solution à 51% des attaques" [ici](https://www.horizen.io/assets/files/A-Penalty-System-for-Delayed-Block-Submission-by-Horizen.pdf) (sélectionnez l'onglet FR pour le télécharger en français).
 
 <div class="learn-more">
-    <img src="{{site.baseurl}}/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
+    <img src="{{site.baseurl_root}}/assets/post_files/history/from-zencash-to-horizen/read.svg" alt="Read more">
     Pour en savoir plus sur l'attaque et notre chronologie détaillée, consultez notre blog
     “<a href="https://blog.horizen.io/zencash-statement-on-double-spend-attack/" class="font-weight-bold" target="_blank">ici</a>”
     </div>
@@ -141,7 +141,7 @@ La dernière impulsion dont nous avions besoin pour démarrer l'expansion de not
 <table class="table table-borderless">
 <tbody>
     <tr>
-        <td style="width: 100px;" class="pl-0 pr-0"><img src="{{site.baseurl}}/assets/img/horizen-icon.svg" alt="Horizen"></td>
+        <td style="width: 100px;" class="pl-0 pr-0"><img src="{{site.baseurl_root}}/assets/img/horizen-icon.svg" alt="Horizen"></td>
         <td class="pl-3 pl-lg-4">
             <h3 class="mt-0">Horizen vers l'avenir</h3>
             <p>

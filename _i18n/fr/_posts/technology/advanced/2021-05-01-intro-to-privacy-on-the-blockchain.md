@@ -19,11 +19,11 @@ Pour cet article, nous supposons que vous connaissez le modèle UTXO que de nomb
 
 ### Les Changements d’adresse
 
-![Les changements d'adresse]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_0.png)
+![Les changements d'adresse]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_0.png)
 
 Les changements d'adresse ont été introduits pour que les personnes avec qui vous faites des transactions n'aient pas accès à l'historique complet de vos transactions simplement en cherchant l'adresse que vous avez utilisée pour faire des transactions avec elles. La plupart des portefeuilles modernes génèrent automatiquement des nouvelles adresses pour vous lorsque vous créez une transaction. Dans l'exemple ci-dessus d'une transaction bitcoin normale, vous pouvez voir une entrée et deux sorties pour la transaction. La première sortie est allée à une adresse différente et est le montant que l'utilisateur voulait dépenser. Le reste de l'UTXO est retourné à la même adresse que celle d'où provenaient les fonds.
 
-![Les changements d'adresse]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_1.png)
+![Les changements d'adresse]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/change_address_1.png)
 
 Un wallet qui prend en charge le changement d'adresse génère une nouvelle adresse, à chaque fois que vous recevez des fonds, peu importe s'il s'agit d'une première transaction ou d'une transaction régulière. L'exemple ci-dessus montre une transaction avec exactement les mêmes montants qu'auparavant, mais cette fois-ci le change est retourné à une adresse modifiée nouvellement créée. Cette fonction améliore la confidentialité en rendant plus difficile la traçabilité de l'historique des transactions d'un utilisateur donné.
 
@@ -31,8 +31,8 @@ Un wallet qui prend en charge le changement d'adresse génère une nouvelle adre
 
 Les protocoles de Coin Mixing comme SharedCoin, TumbleBit ou CoinJoin (utilisés par Dash) sont la prochaine étape évolutive pour améliorer la confidentialité en mélangeant plusieurs entrées et sorties différentes en une seule transaction, souvent plusieurs fois pendant plusieurs transactions intermédiaires.
 
-![Coin Mixing]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_coinjoin_D.jpg)
-![Coin Mixing]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_coinjoin_M.jpg)
+![Coin Mixing]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_coinjoin_D.jpg)
+![Coin Mixing]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_coinjoin_M.jpg)
 
 Les transactions en Coin Mixing ne nécessitent aucun changement au protocole de base Bitcoin que beaucoup d'autres cryptomonnaies (comme Horizen) utilisent. Dans le graphique ci-dessus, vous pouvez voir les schémas d'une transaction en Coin Mixing. Un certain nombre d'entrées sont combinées dans un pool de mélange (au centre) et ensuite distribuées à leurs adresses de destination. Une transaction en Coin Mixing rend plus difficile pour un attaquant de savoir qui envoyait de l'argent à qui.
 
@@ -46,8 +46,8 @@ Les _ring signatures_ (traduit littéralement par signature en anneau, mais on u
 
 Imaginez un haut fonctionnaire de la Maison-Blanche (Alice) voulant révéler un secret à la presse au sujet du président. Elle doit s'assurer que le journaliste qui reçoit la fuite a un moyen de vérifier la source de l'information sans révéler son identité. Ce qu'elle peut faire, c'est utiliser une _ring signature_ pour signer le message. Pour construire la _ring signature_, il lui suffit d'avoir sa clé privée et les clés publiques des autres dénonciateurs possibles, par exemple d'autres membres du cabinet (Bob et Carole).
 
-![Ring Signatures]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_ring_sig_D.jpg)
-![Ring Signatures]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_ring_sig_M.jpg)
+![Ring Signatures]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_ring_sig_D.jpg)
+![Ring Signatures]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_ring_sig_M.jpg)
 
 Le vérificateur (journaliste) peut vérifier que le message a bien été signé par un haut fonctionnaire, mais il ne peut déterminer qui a construit la signature (parmi Alice, Bob et Carole).
 
@@ -59,8 +59,8 @@ Les Zero-Knowledge Proofs (zk-Proofs) étaient connues bien avant l'apparition d
 
 Le voyant (prouveur) veut convaincre la personne qui a les yeux bandés (vérificateur) que les deux boules sont de couleurs différentes, sans révéler les couleurs. Ils s'assoient à une table et la personne aux yeux bandés montre au prouveur l'une des boules. La personne aux yeux bandés continue à placer les deux boules sous la table et choisit de montrer une boule dans un deuxième tour ; soit la même boule qu'avant, soit l'autre. S'il choisit de montrer la même balle, le prouveur le sait parce qu'il voit la même couleur et le dit à l'aveugle. Si la personne aveugle montrait l'autre boule, le prouveur pourrait dire avec certitude que le vérificateur (personne aux yeux bandés) a changé les boules sous la table.
 
-![Zero-Knowledge Proofs]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_zkproof_D.jpg)
-![Zero-Knowledge Proofs]({{site.baseurl}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_zkproof_M.jpg)
+![Zero-Knowledge Proofs]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_zkproof_D.jpg)
+![Zero-Knowledge Proofs]({{site.baseurl_root}}/assets/post_files/technology/advanced/5.0-privacy-on-the-blockchain/FR_zkproof_M.jpg)
 
 Au deuxième tour, le prouveur aurait une chance sur deux d'obtenir la bonne réponse s'il devait deviner. Il devrait deviner au cas où l'affirmation qu'il essaie de prouver (les boules sont d'une couleur différente) était fausse. À ce stade, l'aveugle ne peut pas être sûr si la demande est correcte, ou si le prouveur a eu de la chance.
 
@@ -99,8 +99,8 @@ Les Zero-Knowledge Proofs vous permettent de prouver à un vérificateur que vou
 
 Un exemple intuitif et non numérique de ce à quoi cela peut ressembler peut être construit avec une personne voyante comme prouveur, une personne aveugle comme vérificateur et deux boules de couleur différente. Le voyant (le prouveur) veut convaincre l'aveugle (le vérificateur) que les deux boules sont de couleurs différentes, sans révéler les couleurs. Ils s'assoient à une table et l'aveugle montre au prouveur l'une des boules. L'aveugle continue à placer les deux boules sous la table et choisit de montrer une boule dans un deuxième tour ; soit la même boule qu'avant, soit l'autre. S'il choisit de montrer la même balle, le prouveur le sait parce qu'il voit la même couleur et le dit à l'aveugle. Si la personne aveugle montrait l'autre boule, le prouveur pourrait dire avec certitude que le vérificateur (personne aveugle) a changé les boules sous la table.
 
-![zkproof in FR]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_D.jpg)
-![zkproof in FR]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_M.jpg)
+![zkproof in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_D.jpg)
+![zkproof in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-privacy-on-the-blockchain/FR_zkproof_M.jpg)
 
 Au deuxième tour, le prouveur aurait une chance sur deux d'obtenir la bonne réponse s'il devait deviner. Il devrait deviner au cas où l'affirmation qu'il essaie de prouver (les boules sont d'une couleur différente) était fausse. À ce stade, l'aveugle ne peut pas être sûr si la demande est correcte, ou si le prouveur a eu de la chance.
 

@@ -20,7 +20,7 @@ On **January 3rd, 2009** the **Genesis Block** of Bitcoin was mined and the firs
 
 <h3 class="text-center font-italic">"The Times 03/Jan/2009 Chancellor on Brink of Second Bailout for Banks."</h3>
 
-![chancellor]({{site.baseurl}}/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
+![chancellor]({{site.baseurl_root}}/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
 
 **Choosing to include this headline** suggests that one of the main motivations to build Bitcoin was to create an alternative to the **fractional reserve banking system** that probably destabilizes the economy and arguably disenfranchises the general public.
 

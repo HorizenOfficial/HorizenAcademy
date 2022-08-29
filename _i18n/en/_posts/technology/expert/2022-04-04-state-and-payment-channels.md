@@ -12,8 +12,8 @@ chapter: "Transactions"
 
 **A common criticism of blockchain technology** is that it doesn't scale in a decentralized setting and therefore is not able to support mainstream adoption. **Now** there are different ways to scale blockchains and increase their throughput, **but what if we can allow for more interaction leveraging the security of existing protocols with the capacity we already have available?** _Meet layer-two transactions on payment and state channels._
 
-![Scaling]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_D.jpg)
-![Scaling]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_M.jpg)
+![Scaling]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_D.jpg)
+![Scaling]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/scaling_dag_M.jpg)
 
 We introduced [sidechains](https://academy.horizen.io/horizen/advanced/sidechains/) as a scaling approach that spreads the workload otherwise performed by a single set of mainchain nodes to several sets of **nodes**, each responsible for their sidechain.
 
@@ -40,8 +40,8 @@ The primitives used to build a payment channel are:
 
 **Simply speaking**, a payment channel is a **2-of-2 MultiSig account**, or more generally speaking, a **Pay to Script Hash** (P2SH) address. This can be understood as a simple [smart contract](https://academy.horizen.io/technology/advanced/guaranteed-execution-with-smart-contracts/) controlling funds, the **channel balance**, and defining the conditions under which these funds can be spent. A _2-of-2 MultiSig account_ is based on **two** private keys, both of which need to sign a transaction for it to be valid.
 
-![Spending from a P2SH Multi-Signature Address]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_D.jpg)
-![Spending from a P2SH Multi-Signature Address]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_M.jpg)
+![Spending from a P2SH Multi-Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_D.jpg)
+![Spending from a P2SH Multi-Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multi-sig-spending_M.jpg)
 
 The spending conditions for the MultiSig account are defined in the _redeem script_. The hash of the redeem script functions as the address - a **Pay to Script-Hash** (P2SH) address. This address and the information contained in the redeem script comprises the locking script of UTXO sent to the **P2SH** address.
 
@@ -49,8 +49,8 @@ The spending conditions for the MultiSig account are defined in the _redeem scri
 
 **The general idea of a payment channel is the following:** Two frequently transacting parties deposit money via a **funding transaction** in a _2-of-2 MultiSig account_, opening the channel (`TX 001` in the example below). Both parties need to sign off on any **TX**, that spends from this account. Both parties exchange signed transactions repeatedly spending from the same funding transaction whenever they transact (`TX 002` - `TX n`).
 
-![The Concept of Payment Channels]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept_D.jpg)
-![The Concept of Payment Channels]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept_M.jpg)
+![The Concept of Payment Channels]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept_D.jpg)
+![The Concept of Payment Channels]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-channel-concept_M.jpg)
 
 These **commitment transactions** updating the channel state, although valid on-chain transactions, are never broadcast, but kept locally by the _channel participants_. They serve as verifiable receipts of channel state modifications. Only when participants want to close the channel will they broadcast a final channel update via a **closing transaction** on the blockchain (`TX (n+1)`).
 
@@ -82,13 +82,13 @@ When you think about the **Lightning network**, there are two systems to conside
 
 One of the participants, in our example **Alice**, is _funding_ the channel. To do so, she creates the funding transaction, signs it, but does _not_ broadcast it yet. **Next**, she uses the **transaction identifier** (TXID) as well as the relevant output number to create a first **commitment transaction** (`TX 002`), refunding her, and signs it. She also passes the outpoint to **Bob**, who will create his version of the same transaction and sing it. The partially signed commitment transactions are now exchanged and stored locally. **Soon we will see why we need two different versions of the same TX.**
 
-![Unilateral payment channel funding and opening]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening_D.jpg)
-![Unilateral payment channel funding and opening]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening_M.jpg)
+![Unilateral payment channel funding and opening]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening_D.jpg)
+![Unilateral payment channel funding and opening]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/channel-opening_M.jpg)
 
 Only at this point is **Alice** safe to broadcast her funding transaction. She knows she can reclaim the money at any point as she already has a _commitment transaction_ signed by **Bob** spending her funding **TX** and refunding her. She also knows **Bob** cannot spend her money as both of their signatures are required to consume the funding UTXO, and the transaction she signed and passed to **Bob** is refunding her. _The worst-case scenario at this point is Alice paying for transaction fees sending her money on a round-trip._
 
-![Established payment channel between Alice and Bob]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel_D.jpg)
-![Established payment channel between Alice and Bob]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel_M.jpg)
+![Established payment channel between Alice and Bob]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel_D.jpg)
+![Established payment channel between Alice and Bob]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/open-channel_M.jpg)
 
 The established payment channel now comprises a signed and broadcast funding transaction and a first commitment transaction serving as insurance for **Alice**. Both participants sign this commitment transaction, but ideally never broadcast it, although it is a valid on-chain transaction.
 
@@ -98,13 +98,13 @@ Now **Alice** wants to make a first transaction paying **Bob**, maybe because sh
 
 **Alice** wants to send **Bob** **0.2** BTC of the **1** BTC total. _She does so by creating a new commitment TX which now has two outputs instead of one:_ The **first output** acting as a change output paying her the remaining **0.8** BTC and a **second output** paying **Bob**. She can sign this **TX** and send it to **Bob** for him to keep. **Bob** creates a **TX** with the same outputs, signs it, and gives it to **Alice**. Now there are _two_ versions of the same commitment transaction, each paying the participants the same amount of money. We'll get to the _why_ in a moment.
 
-![Updated commitment transaction modifying the channel state]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update_D.jpg)
-![Updated commitment transaction modifying the channel state]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update_M.jpg)
+![Updated commitment transaction modifying the channel state]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update_D.jpg)
+![Updated commitment transaction modifying the channel state]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/first-channel-update_M.jpg)
 
 **At this point**, there is a first incentive for one of the participants to cheat. A few days after both parties agreed on the updated commitment **TX**, **Alice** has received the goods she paid for. It would be in her best interest to broadcast the first commitment **TX** sending her the entire money in the channel. **Bob**, on the other hand, has an interest in the more recent state hitting the chain.
 
-![Updated commitment transaction modifying the channel state]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview_D.jpg)
-![Updated commitment transaction modifying the channel state]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview_M.jpg)
+![Updated commitment transaction modifying the channel state]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview_D.jpg)
+![Updated commitment transaction modifying the channel state]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-overview_M.jpg)
 
 All commitment **TXs** are valid **Bitcoin** transactions. Although they are meant to stay on the Lightning Network, they can be broadcast on-chain. **Blockchain nodes** are agnostic of payment channels and have no way to verify whether a broadcast transaction represents the most recent channel state or an old one.
 
@@ -128,8 +128,8 @@ The output we modify to prevent **Alice** from cheating is the one in the first 
 
 Let's assume **Alice** and **Bob** agreed to provide each other with a **10**-day rebuttal-period. If one were to cheat, the other had ten days to react. In reality, this would mean a relative timelock of **1440** blocks in **Bitcoin** or **5760** blocks in **Horizen**. For simplicity, we will pretend we can use _ten days_ as a time unit.
 
-![Securing transaction outputs using timelocks]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock_D.jpg)
-![Securing transaction outputs using timelocks]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock_M.jpg)
+![Securing transaction outputs using timelocks]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock_D.jpg)
+![Securing transaction outputs using timelocks]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/timelock_M.jpg)
 
 **Remember**, this transaction initially served as an assurance for **Alice** that she would get refunded in case **Bob** becomes unresponsive. By placing a timelock in the output, we have ensured **Bob** has time to react if **Alice** were to cheat. As soon as **Alice** broadcasts the transaction, she has to wait for ten days before the output becomes spendable with her signature. If **Bob** notices he can go ahead and spend the money immediately using his signature.
 
@@ -143,15 +143,15 @@ Requiring **Bob** to simply sign-off on the **TX** does not protect **Alice**, s
 
 These keys are generated when the first commitment **TXs** (**TX 002A** and **002B**) are created, and the public keys derived from them are exchanged and placed in the spending condition. When participants agree on the first channel update, here **Alice** paying **Bob 0.2** BTC (**TX 003**), the one-time keys `Alice2` and `Bob2` used in the original commitment transaction's spending condition are exchanged.
 
-![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys_D.jpg)
-![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys_M.jpg)
+![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys_D.jpg)
+![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/commitment-keys_M.jpg)
 
 **At this point,** **Bob** can be sure the transaction he already signed (`TX 002A`) can't be broadcast and spent immediately by **Alice** due to the timelock. **Alice** can be sure that if **Bob** becomes unresponsive, she is save to broadcast the transaction because she has not shared the key `Alice2` yet, and **Bob** can't steal the money.
 
 This explains why it was important that **Alice** and **Bob** generated two versions of the same transaction. Remember that **Bob** created `TX 002A`. He placed the timelock in **Alice's** spending condition to protect himself from **Alice** broadcasting an old state. Without including the second MultiSig condition, **Alice** would not have agreed to fund the channel in the first place. Since **Bob** has no interest in broadcasting the first commitment transaction, it is sufficient for **Alice** to place a single spending condition on her version's output.
 
-![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection_D.jpg)
-![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection_M.jpg)
+![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection_D.jpg)
+![Generating One-Time Keys for each Commitment Transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/multisig-output-protection_M.jpg)
 
 **Above**, you can see the two different versions of the initial commitment TX refunding **Alice**. The green signature indicates which party has created and already signed it. Going forward both, **Alice** and **Bob** will each generate a new one-time private key with every channel update and exchange the one-time keys used in the previous transaction.
 
@@ -163,8 +163,8 @@ One of the innovations introduced with blockchain technology was solving the dou
 
 The last set of transactions we need to look at are the ones paying **Bob 0.2** BTC. While we looked at the, schematically, we didn't consider the spending conditions placed in their outputs yet.
 
-![The first channel update happening in the second commitment transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/second-commitment-transaction_D.jpg)
-![The first channel update happening in the second commitment transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/second-commitment-transaction_M.jpg)
+![The first channel update happening in the second commitment transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/second-commitment-transaction_D.jpg)
+![The first channel update happening in the second commitment transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/second-commitment-transaction_M.jpg)
 
 The first version signed by **Bob** and broadcast-able by **Alice** uses the same spending conditions in **Alice's** output of **0.8** BTC as the previous commitment **TX** did. **It serves the same function**: If **Alice** made a second payment to **Bob**, she would again be incentivized to broadcast an old state once she received the goods. The only difference is the updated set of one-time keys (`Alice3` and `Bob3`) needed to satisfy the MultiSig output.
 
@@ -178,8 +178,8 @@ The **bilateral payment channel** between **Alice** and **Bob** can be closed in
 
 Let's assume **Alice** and **Bob** realize that they won't use their channel anymore. Both are happy with the current state of the channel paying **Bob 0.2** BTC and **Alice** the remaining **0.8** BTC.
 
-![The first channel update happening in the second commitment transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/mutual-channel-closing_D.jpg)
-![The first channel update happening in the second commitment transaction]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/mutual-channel-closing_M.jpg)
+![The first channel update happening in the second commitment transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/mutual-channel-closing_D.jpg)
+![The first channel update happening in the second commitment transaction]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/mutual-channel-closing_M.jpg)
 
 They will cooperatively create and sign a closing transaction, with both outputs spendable immediately by either participant. **This is the best-case scenario**: No party has their money locked.
 
@@ -226,8 +226,8 @@ As the name suggests, HTLCs rely on cryptographic [hash functions](https://acade
 
 **The general idea of routing a payment through several payment channels** is to create a secret and pass the secret's hash to the payer and all the intermediaries. If **Alice** were to pay **Bob** through **Ingrid**, **Bob** would create a secret and provide its hash to **Alice** and **Ingrid**. **Alice** creates a transaction commitment) paying **Ingrid**, and **Ingrid** creates a transaction (commitment) paying **Bob**. The hash is part of the spending condition in each of those transactions. Revealing its preimage (the secret) allows a payee to claim the money. Once all transactions are set up, **Bob** reveals his secret and claims his money from Ingrid. **Ingrid** learns the secret in the process and uses it to unlock **Alice's** transaction paying her.
 
-![Routing a payment through an intermediary from Alice to Bob using HTLCs]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-routing_D.jpg)
-![Routing a payment through an intermediary from Alice to Bob using HTLCs]({{site.baseurl}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-routing_M.jpg)
+![Routing a payment through an intermediary from Alice to Bob using HTLCs]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-routing_D.jpg)
+![Routing a payment through an intermediary from Alice to Bob using HTLCs]({{site.baseurl_root}}/assets/post_files/technology/expert/4.3-state-and-payment-channels/payment-routing_M.jpg)
 
 The design should ensure that the intermediaries are never at risk of losing money and that funds can be retrieved from the payment route if one of the parties becomes inactive.
 

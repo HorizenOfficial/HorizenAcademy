@@ -11,15 +11,15 @@ chapter: "Tipos de billetera"
 
 Una billetera es una programa que genera, administra y almacena un par de llaves criptográficas. El usuario puede revisar su saldo, recibir y enviar fondos desde su billetera; (si no le quedan claras las funciones principales de la billetera, lo invitamos a leer nuestro artículo de nivel principiante sobre el tema). En resumen, sin embargo, la principal diferencia entre los distintos tipos de billetera es la ubicación física en la que se almacenan las llaves del usuario.
 
-![Wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_D.jpg)
-![Wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_M.jpg)
+![Wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_D.jpg)
+![Wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/wallet2_M.jpg)
 
 ### Los diferentes tipos de billetera
 
 Este artículo busca exponer qué tipos de billetera hay disponibles en el mercado para ayudar al lector a distinguir entre ellos. Hemos descrito en la tabla siguiente los diferentes tipos de billetera.
 
-![overview]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_overview_D.jpg)
-![overview]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_overview_M.jpg)
+![overview]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_overview_D.jpg)
+![overview]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_overview_M.jpg)
 
 ### Billeteras web hosteadas
 
@@ -27,8 +27,8 @@ Antes de describir las billeteras web, recordemos que una billetera sirve como i
 
 Esto nos lleva a una distinción entre billeteras web hosteadas y no hosteadas. Con una billetera web hosteada, un tercero de confianza almacena en línea las llaves del usuario. Los terceros suelen ser centros cambiarios como Coinbase, Binance o Bittrex. Al crear un cuenta con cualquiera de estas entidades, se crea una entrada en su base de datos interna que empareja la cuenta del usuario con un par de llaves para las diferentes monedas que tienen disponibles.
 
-![Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_hosted_webwallet_D.jpg)
-![Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_hosted_webwallet_M.jpg)
+![Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_hosted_webwallet_D.jpg)
+![Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_hosted_webwallet_M.jpg)
 
 Una ventaja de una billetera web hosteada es que le da al usuario la opción de recuperar su contraseña si la olvida. En cualquier otro caso, la pérdida de la llave privada (junto con su frase mnemónica) resulta en la pérdida de todos los fondos del usuario.
 
@@ -42,8 +42,8 @@ Es indispensable que el usuario conserve algo de fondos en un centro cambiario d
 
 A la par de las billeteras web hosteadas existen las no hosteadas. La billetera web no hosteada más popular es quizás MyEtherWallet, capaz de almacenar Ether (ETH) y todos los tokens ERC-20 (los tokens que habitan la cadena de bloques de Ethereum). Estas billeteras presentan al usuario una interfaz para revisar su saldo o crear transacciones en su explorador web, pero es necesario que ingrese la información de sus llaves cada vez que inicie sesión.
 
-![Non-Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
-![Non-Hosted Web Wallets]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
 
 Hay un rango de funciones a las que el usuario tiene acceso con MyEtherWallet (comúnmente abreviada MEW). La primera de ellas le permite consultar su saldo. MetaMask es una extensión de explorador que da la opción de hacer pagos en ETH dentro del explorador y de iniciar sesión en MEW. Incluye también una función que detecta sitios fraudulentos, la cual advierte al usuario si está a punto de ingresar a uno.
 
@@ -68,9 +68,9 @@ Ya conocemos las tareas que puede realizar una billetera: revisar, recibir y env
 En el caso de las billeteras desktop y móviles, el usuario debe elegir entre aquellas que manejan una sola moneda o una billetera capaz de manejar varias. Algunas populares para desktop incluyen Coinomi y Sphere by Horizen, mientras que para dispositivos móviles existen Coinomi, Mycelium o Paytomat, entre otras.
 
 <div class="row align-items-center">
-    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/coinomi.jpg" alt="coinomi"></div>
-    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
-    <div class="col-md-4"><img src="{{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/mycelium.png" alt="mycelium"></div>
+    <div class="col-md-4"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/coinomi.jpg" alt="coinomi"></div>
+    <div class="col-md-4"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paytomat.jpg" alt="Paytomat"></div>
+    <div class="col-md-4"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/mycelium.png" alt="mycelium"></div>
 </div>
 
 Si el usuario obtuvo sus primeras monedas en un centro cambiario, lo recomendable sería que transfiriera sus fondos fuera del exchange (una billetera web hosteada) hacia una billetera desktop, hardware o de papel. Le recomendamos al usuario empezar por hacer una transacción pequeña para confirmar que el proceso transcurrirá normalmente. Si esta primera transacción resulta exitosa, puede proceder a enviarse el resto de sus fondos. Tras este proceso, se encuentra protegido de los riesgos que implica involucrar a un tercero, pero ha asumido también la responsabilidad de resguardar sus fondos.
@@ -83,7 +83,7 @@ Al imprimir la billetera de papel no se recomienda utilizar una impresora compar
 
 Tras imprimir de manera segura su billetera de papel, tendrá algo similar a esto:
 
-![paper wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.jpg)
+![paper wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.jpg)
 
 Solo queda una cosa por hacer, enviar los fondos a la llave pública. Tras de hacer eso, el resultado es o el mejor regalo de cumpleaños o un medio de almacenamiento a largo plazo para los fondos del usuario. Obviamente, los principales riesgos asociados a las billeteras de papel son su pérdida o destrucción accidentales. Si el usuario no posee la frase mnemónica para recuperar su llave privada, corre el riesgo de perder todos sus fondos por accidente; así que decida con mucho cuidado dónde guardará su billetera de papel. Imprima varias copias si se siente incómodo con solo una, luego guarde cada una en un lugar seguro.
 
@@ -95,8 +95,8 @@ Ahora lo interesante, ¿cómo funciona una billetera de este tipo?
 
 La interfaz de la billetera genera una dirección a partir de la llave pública del usuario cuando este quiere recibir fondos. Utilizar esta función es fácil. Si el usuario le da clic al botón de “Recibir” la interfaz responde arrojando la dirección que se debe compartir con el remitente. Si el usuario desea enviar fondos, la aplicación crea una transacción formal que debe firmarse. La transacción sin firmar se envía a la billetera de hardware, donde la llave privada almacenada en el dispositivo la firma. La firma regresa a la computadora, donde la transacción completa, incluyendo la firma, se propaga a la red.
 
-![signing hardware wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_signing_hardware_wallet_D.jpg)
-![signing hardware wallet]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_signing_hardware_wallet_M.jpg)
+![signing hardware wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_signing_hardware_wallet_D.jpg)
+![signing hardware wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/ES_signing_hardware_wallet_M.jpg)
 
 Las llaves privadas del usuario nunca salen del dispositivo, por lo que no son visibles para la computadora en ningún momento. No es en vano que este tipo de billetera sea el más popular, pues son la manera más segura de almacenar cripto, en especial en grandes cantidades.
 
@@ -114,7 +114,7 @@ Con las billeteras desktop, móviles, de papel o hardware, es el usuario quien p
 
 El objetivo principal del movimiento criptomonetario devolverle al usuario el control de su dinero, pero…
 
-![with great power comes great responsibility]({{site.baseurl}}/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)
+![with great power comes great responsibility]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/with-great-power-comes-great-responsibility.gif)
 
 ## Contenido para Principiantes a Continuación - Billeteras
 
@@ -127,8 +127,8 @@ Una billetera es un programa con cuatro funciones principales:
 - Mostrarle su saldo al usuario
 - Crear y firmar transacciones para enviar fondos
 
-![Wallet does in ES]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/ES_wallet_does_D.jpg)
-![Wallet does in ES]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/ES_wallet_does_M.jpg)
+![Wallet does in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/ES_wallet_does_D.jpg)
+![Wallet does in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/ES_wallet_does_M.jpg)
 
 La primera de estas funciones es la principal, y es el principal diferenciador de una billetera: **genera**, **almacena y administra las llaves del usuario**. Como se mencionó en el artículo sobre la [identidad en la cadena de bloques](https://academy.horizen.io/es/technology/advanced/the-elements-of-a-blockchain/), tener acceso a las llaves privadas significa tener acceso a sus fondos asociados.
 
@@ -146,8 +146,8 @@ Para entender cómo funciona la billetera digital, es quizás más fácil consid
 
 La cadena de bloques registra la cantidad de monedas asociadas a un par de llaves específico (la identidad del usuario dentro de la cadena). La cadena conoce siempre los fondos de un par de llaves porque tiene almacenadas todas las transacciones que han ocurrido. Si alguien recibe 10 ZEN en una transacción y recibe 10 ZEN en otra, queda claro que el dueño del par de llaves tiene ahora 20 ZEN, lo cual puede verificarse en el historial de transacciones.
 
-![Wallet in ES]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/ES_wallet_D.jpg)
-![Wallet in ES]({{site.baseurl}}/assets/post_files/technology/beginner/wallets/ES_wallet_M.jpg)
+![Wallet in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/ES_wallet_D.jpg)
+![Wallet in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/ES_wallet_M.jpg)
 
 Se necesitan las llaves almacenadas en la billetera para poder transferir fondos. Es por esto que un llavero resulta la analogía más adecuada. Si el usuario no controla sus llaves, no controla sus fondos. No es necesario saber a detalle cómo funciona cada herramienta para utilizar criptomonedas, pero sí es importante recordar que las llaves son el acceso a los fondos.
 
@@ -173,7 +173,7 @@ Lo exhortamos a probar nuestra billetera, [Sphere by Horizen](https://www.horize
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="{{site.baseurl}}/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
+        <td class="icon"><img src="{{site.baseurl_root}}/assets/post_files/eli5/what-is-a-wallet/Wallet-2.jpg" alt="Wallet"></td>
         <td>
             Una billetera es una aplicación de computadora o teléfono que sirve para recibir y mandar dinero. Para lograrlo, utiliza a del usuario. La billetera sirve para crear y administrar ambas llaves, una pública y otra privada, las cuales funcionan de manera similar a una dirección de correo electrónico y su contraseña. Sin embargo, a diferencia de una billetera real, una billetera cripto no guarda dinero.
         </td>
@@ -188,7 +188,7 @@ En el primer artículo de nuestra sección sobre tecnología, [¿Qué es una cad
 
 En este artículo presentaremos un concepto útil de recordar al pensar en las transacciones con criptomonedas y cómo funcionan. Desglosaremos este concepto por medio de una analogía que sacrifica un poco la precisión a favor de la facilidad de comprensión.
 
-![Mailboxes in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/mailboxes.png)
+![Mailboxes in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/mailboxes.png)
 
 Puede pensarse en una cadena de bloques como un conjunto de buzones que se encuentra dentro de un complejo de departamentos. Estos buzones, sin embargo, tienen algunas características especiales.
 
@@ -200,8 +200,8 @@ Los buzones pueden accederse desde donde sea, en cualquier momento, mientras se 
 
 Consideremos ahora cada buzón individualmente. Explicamos ya en artículos anteriores que la identidad del usuario en una cadena de bloques consta de un par de llaves, una pública y otra privada. Estas llaves siempre se encuentran en conjunto. Dentro de nuestra analogía, cada buzón individual es la representación de un par de llaves.
 
-![Empty in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_D.jpg)
-![Empty in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_M.jpg)
+![Empty in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_D.jpg)
+![Empty in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T1_empty_M.jpg)
 
 En lugar de enumerar los buzones, estos se identifican mediante su par de llaves. Cualquier usuario puede encontrar un buzón en específico utilizando la llave pública o dirección, pero este se puede abrir solo con la llave privada.
 
@@ -225,8 +225,8 @@ La dirección del usuario se utilizará para crear un nuevo buzón en el conjunt
 
 La transacción es visible para todos, pero solo el dueño de la llave privada correspondiente puede acceder a los fondos.
 
-![Received in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T2_received_D.jpg)
-![Received in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T2_received_M.jpg)
+![Received in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T2_received_D.jpg)
+![Received in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T2_received_M.jpg)
 
 ### Creando la primera transacción
 
@@ -239,8 +239,8 @@ Para enviar fondos a esta dirección, sucede lo siguiente:
 - La billetera ubica el buzón del receptor utilizando su dirección o llave pública.
 - La billetera introduce la transacción recién creada al buzón del receptor.
 
-![Sent in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T3_sent_D.jpg)
-![Sent in ES]({{site.baseurl}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T3_sent_M.jpg)
+![Sent in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T3_sent_D.jpg)
+![Sent in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/ES_T3_sent_M.jpg)
 
 Todos los participantes de la cadena de bloques tienen la capacidad de ver (o validar) que un usuario le ha transferido fondos a un tercero, pero solo este puede accederlos utilizando la llave privada correspondiente. Una vez que la transacción se envía, no hay manera de cambiarla o revertirla. Esto significa que el usuario debe siempre cerciorarse de estar enviando los fondos a la cuenta correcta. De ser posible, se recomienda utilizar la función de copiar y pegar en lugar de teclear manualmente una dirección y revisar los números por separado. Si se envían fondos por accidente a la persona equivocada, no hay manera de recuperarlos.
 
@@ -262,5 +262,5 @@ Por ejemplo, Alice puede enviarle un ZEN a su amigo Bob. Al hacerlo, les enviar�
 
 Cuando Bob quiera gastar ese ZEN, creará un nuevo mensaje a la red. El mensaje dirá algo como: “Yo, Bob, había recibido un ZEN de mi amiga; ahora quiero enviárselo a alguien más.” De esta manera, el dinero puede enviarse sin intermediarios. Esto es similar a recibir un billete de un dólar, mismo que se entrega la siguiente persona cuando se gasta.
 
-![Transaction in ES]({{site.baseurl}}/assets/post_files/eli5/what-is-a-transaction/ES_transaction_D.jpg)
-![Transaction in ES]({{site.baseurl}}/assets/post_files/eli5/what-is-a-transaction/ES_transaction_M.jpg)
+![Transaction in ES]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-transaction/ES_transaction_D.jpg)
+![Transaction in ES]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-transaction/ES_transaction_M.jpg)

@@ -12,8 +12,8 @@ chapter: "How Does a Blockchain Work?"
 
 **Public-Key Cryptography** is used to verify ownership on a blockchain. **Digital signatures** allow you to prove your knowledge of a private key corresponding to a particular address without revealing any information about it.
 
-![Creating a Digital Signature and Verifying It]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
-![Creating a Digital Signature and Verifying It]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
+![Creating a Digital Signature and Verifying It]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
+![Creating a Digital Signature and Verifying It]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
 
 **To create a digital signature you need two components**, a _message_, in most cases a transaction, and the _private key_. A verifier will use the message, the public key, and the digital signature as an input to the verification algorithm. **This algorithm will then produce a binary output**: Either the signature is valid, or it is not. Every full node and miner on the network will verify every single transaction using this concept.
 
@@ -27,8 +27,8 @@ A **scalar** is something that only has a magnitude. Simply speaking, any number
 
 It is a convention that scalars are written with small letters, like the private key **sk**, while vectors are written with capital letters, like your the public key **PK**.
 
-![Scalar vs. Vector]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_D.jpg)
-![Scalar vs. Vector]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_M.jpg)
+![Scalar vs. Vector]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_D.jpg)
+![Scalar vs. Vector]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/scalar_vector_M.jpg)
 
 It's important to note that the hash of a vector is a scalar. The [hash function](https://academy.horizen.io/technology/advanced/hash-functions/) consumes the _tuple_ of values as an input, and produces a scalar as an output.
 
@@ -40,8 +40,8 @@ We use the **\\(\bullet\\)** operator when we are referring to multiplication on
 - If you **multiply** the base point **P** used for the elliptic curve - **secp256k1** - with a private key, you get a public key _PK_.
 - You want to prove knowledge of **sk** to the network without revealing it.
 
-![Keys]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
-![Keys]({{site.baseurl}}/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
+![Keys]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_D.jpg)
+![Keys]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/keys_M.jpg)
 
 ## Generating the Signature
 

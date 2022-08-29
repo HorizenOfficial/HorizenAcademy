@@ -82,7 +82,7 @@ Utilizar la misma contraseña en diferentes sitios y aplicaciones es quizás la 
 
 Es de suma importancia que el usuario utilice una contraseña distinta para cada sitio o aplicación en el que tenga una cuenta. Considere este hábito como la práctica de seguridad personal número uno.
 
-![password]({{site.baseurl}}/assets/post_files/privacy/advanced/strong-passwords/ES_password.jpg)
+![password]({{site.baseurl_root}}/assets/post_files/privacy/advanced/strong-passwords/ES_password.jpg)
 
 [Source](https://xkcd.com/936/)
 
@@ -135,8 +135,8 @@ Habilitar la AF2 es una de las mejores prácticas de seguridad que el usuario pu
 
 La autenticación de dos factores funciona pidiéndole al usuario que compruebe su identidad por medio de un método de autenticación adicional a la contraseña. Es común que el método secundario de autenticación sea un mensaje de texto enviado al teléfono del usuario o un código generado en una aplicación dedicada como Microsoft Authenticator o Google Authenticator, entre otros.
 
-![2FA]({{site.baseurl}}/assets/post_files/privacy/advanced/2fa/ES_2fa_D.jpg)
-![2FA]({{site.baseurl}}/assets/post_files/privacy/advanced/2fa/ES_2fa_M.jpg)
+![2FA]({{site.baseurl_root}}/assets/post_files/privacy/advanced/2fa/ES_2fa_D.jpg)
+![2FA]({{site.baseurl_root}}/assets/post_files/privacy/advanced/2fa/ES_2fa_M.jpg)
 
 ### Los SMS como método de A2F
 
@@ -175,37 +175,37 @@ Acorde a Wikipedia, El argumento "Si no has hecho nada malo, no tienes nada que 
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="La privacidad no se trata de esconder, sino de proteger"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="La privacidad no se trata de esconder, sino de proteger"></td>
         <td>
             <strong>La privacidad no se trata de esconder, sino de proteger</strong>: Considérelo. ¿Le daría a cualquiera la contraseña de su correo electrónico y otras cuentas?, ¿dejaría que cualquiera leyera sus mensajes de redes sociales?, ¿le encantaría que alguien estuviera siempre al tanto de sus conversaciones, leyera su historial médico o lo acompañara a sus citas con el doctor?; ¿para qué usar cortinas en casa, o pantalones al salir a la calle?
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="La privacidad es un derecho humano fundamental"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="La privacidad es un derecho humano fundamental"></td>
         <td>
             <strong>La privacidad es un derecho humano fundamental</strong>: El derecho de todos a expresarse y congregarse libremente resulta fundamental aun cuando no se está llevando a cabo una protesta. Pasa lo mismo con la privacidad. Hay cosas que, instintivamente, se quieren mantener privadas; cosas como el voto, historial médico o información bancaria.
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="La falta de privacidad es perjudicial"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="La falta de privacidad es perjudicial"></td>
         <td>
             <strong>La falta de privacidad es perjudicial</strong>: Si los datos del usuario no están protegidos, es mucho más fácil que se le discrimine con base en sus datos personales o que se vea expuesto al robo o suplantación de identidad.
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Los datos de ubicación pueden ser sensibles"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Los datos de ubicación pueden ser sensibles"></td>
         <td>
             <strong>Los datos de ubicación pueden ser sensibles</strong>: Estos datos pueden revelar información sobre el usuario, como por ejemplo dónde vive, trabaja, hace las compras o se reúne con amigos. Todo smartphone moderno es capaz de determinar el domicilio y lugar de trabajo de su usuario a los pocos días de uso.
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Las redes sociales acumulan muchísima información"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Las redes sociales acumulan muchísima información"></td>
         <td>
             <strong>Las redes sociales acumulan muchísima información</strong>: Las páginas a las que les un usuario les da like o las aplicaciones que utiliza en redes sociales determinan el tipo de publicidad que verá el usuario. Asimismo, su edad, género, ocupación y otro millar de detalles también se toman en cuenta para dirigirse más personalmente al usuario. Las redes sociales son ya la plataforma de marketing más exitosa, pues no solo pueden controlar la publicidad que muestran, sino incluso los precios a los que ofrecen sus servicios o productos.
         </td>
     </tr>
     <tr>
-        <td><img src="{{site.baseurl}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Hasta el último dato cuenta:"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Hasta el último dato cuenta:"></td>
         <td>
             <strong>Hasta el último dato cuenta</strong>: Algunas empresas guardan la cuenta de correo electrónico del usuario, algunas otras registran la ubicación de dónde compra o come. Algunos buscadores conservan historiales de búsqueda enteros conforme se van usando. Sumada, esta información puede formar una imagen casi completa del usuario; desde quién es hasta adónde va, qué hace y con quiénes habla. Si suena escalofriante, es porque lo es.
         </td>
@@ -309,8 +309,8 @@ Hay muchas otras extensiones disponibles para estos y otros buscadores que puede
 
 En general, el usuario se ve expuesto a que su información sea interceptado cuando utiliza una red de Wi-Fi no asegurada en un café, aeropuerto, restaurante, etc. Haciendo uso de un VPN (virtual private network) el usuario puede estar seguro de que la comunicación entre su computadora y el punto final está protegida. Un VPN encripta toda la información transmitida por el dispositivo del usuario para luego desencriptarla cuando llega al destino deseado.
 
-![vpn]({{site.baseurl}}/assets/post_files/privacy/advanced/vpn/ES_vpn_D.jpg)
-![vpn]({{site.baseurl}}/assets/post_files/privacy/advanced/vpn/ES_vpn_M.jpg)
+![vpn]({{site.baseurl_root}}/assets/post_files/privacy/advanced/vpn/ES_vpn_D.jpg)
+![vpn]({{site.baseurl_root}}/assets/post_files/privacy/advanced/vpn/ES_vpn_M.jpg)
 
 Un VPN funciona como un túnel seguro entre dos o más dispositivos. Una red de este tipo asegura la conexión de manera que el usuario termina por contar con las mismas protecciones que ofrece una red privada. Muchas empresas, por ejemplo, le piden a sus empleados acceder a la red privada de la oficina cuando trabajan de manera remota. Esto asegura que la información transmitida no corre el riesgo de filtrarse o interceptarse.
 
@@ -376,7 +376,7 @@ Aunque su creador lo considera un experimento, Ricochet utiliza la red de Tor pa
 
 En cuanto a una selección más convencional de aplicaciones de mensajería, las más destacables son aquellas con servicios para conservar la privacidad como Signal, Threema y Wire. Securemessagingapps.com incluye una buena comparativa de estas aplicaciones con otras de uso común como Telegram, Skype, Whatsapp, Messenger, etc. Le recomendamos visitar el sitio y comparar usted mismo las características de estos distintos servicios.
 
-![Ricochet]({{site.baseurl}}/assets/post_files/privacy/beginner/messaging/ricochet.png)
+![Ricochet]({{site.baseurl_root}}/assets/post_files/privacy/beginner/messaging/ricochet.png)
 
 ### Keybase
 

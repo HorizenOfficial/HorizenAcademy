@@ -34,8 +34,8 @@ With PKC schemes like **RSA**, using modular arithmetic, the security is based o
 
 **RSA** and its modular-arithmetic-based friends are still important today and are often used alongside ECC. Rough implementations of the mathematics behind RSA can be built and explained rather easily.
 
-![RSA]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
-![RSA]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/rsa_M.jpg)
+![RSA]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/rsa_D.jpg)
+![RSA]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/rsa_M.jpg)
 
 **Above** is a rudimentary example of encrypting a _message_ (**2**) with a **public key that comprises a tuple of two values**: the _encryptor_ **E** and the _modulus_ **N**. The _cipher_ (**4**) is later decrypted using the corresponding private key comprising the tuple _decryptor_ **D** and the same _modulus_ **N**. The interesting part is the relation between the three value **E**, **D** and **N**. To keep this article at a reasonable length, we refer the interested reader to this very understandable [RSA](https://hackernoon.com/how-does-rsa-work-f44918df914b) article for an explanation of how these values are related. A simple RSA implementation accompanied by [python code](https://code.activestate.com/recipes/578838-rsa-a-simple-and-easy-to-read-implementation/) can be found here.
 
@@ -43,7 +43,7 @@ With PKC schemes like **RSA**, using modular arithmetic, the security is based o
 
 **Elliptic curve cryptography** is based on _discrete mathematics_. In discrete math, elements can only take on certain _discrete_ values. **Boolean algebra** is an example of discrete math where the possible values are zero and one. These values are usually interpreted as true and false.
 
-![An Elliptic Curve]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/curve.jpg)
+![An Elliptic Curve]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/curve.jpg)
 
 Math on the elliptic curve uses familiar mathematical operations such as addition and subtraction, but the effect of these operations is defined by the curve. Instead of having a set of rational or whole numbers as possible values, the allowed discrete values are defined by the curve. Any point on the curve is a possible value. Each number is in the set of points that make up the curve.
 
@@ -51,8 +51,8 @@ A point on the curve can be interpreted as a _vector_. **Vectors** represent qua
 
 On the elliptic curve, any point can be viewed as an arrow pointing in a certain direction and having a defined magnitude or length (also called a vector). A **scalar** is a single value, like an integer that only has a magnitude but no direction.
 
-![Scalar vs. Vector]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_D.jpg)
-![Scalar vs. Vector]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_M.jpg)
+![Scalar vs. Vector]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_D.jpg)
+![Scalar vs. Vector]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/scalar_vector_M.jpg)
 
 Multiplication and division are also defined on the curve. The multiplication of a point on the curve with a _scalar_ is easy to perform, the division of a point is computationally difficult. It is crucial for any PKC scheme to be able to easily compute a public key from a private key but the reverse operation must be infeasible. Being able to easily perform multiplications on a curve but unable to perform division efficiently creates the basic building block of a PKC scheme.
 
@@ -64,14 +64,14 @@ While all this might sound very complex at first you will see shortly that a gra
 
 Adding two points (**P** and **Q**) on the curve can be done graphically by connecting them with a straight line, taking the intersection of that line with the curve and projecting it across the **x**-axis (**R**). When a point is added to itself the tangent line at that point is taken, the intersection with the curve found and again projected across the **x**-axis.
 
-![Addition]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/addition.jpg)
+![Addition]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/addition.jpg)
 
 **Note** how the graphical approach _does not_ allow you to perform division. You would start by projecting the point **R** back across the **x**-axis, but finding the straight line that yielded the intersection you are looking for is infeasible.
 
 **Your private key** is a large random number, which when multiplied with a _base point_, sometimes also called _generator point_, on the curve yields your public key. **The key takeaway** is that your private key is a large random number or _scalar_, which multiplied with the _base point_ yields your public key, another point on the curve that can also be referred to as a _vector_.
 
-![Public and Private Key and Their Relation]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/keys_D.jpg)
-![Public and Private Key and Their Relation]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/keys_M.jpg)
+![Public and Private Key and Their Relation]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/keys_D.jpg)
+![Public and Private Key and Their Relation]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/keys_M.jpg)
 
 The elliptic curve is generally described by **\\(y^2 = x^3 +ax + b\\)** where **\\(4a^3 + 27b^2 \neq 0\\)**. **There are two possible solutions** for each **x**-value, which is very useful when compressing a point on the curve, like the base point or your public key. One can omit the **y**-coordinate and include an extra bit indicating if the **y**-value is _positive_ or _negative_ without losing any information.
 
@@ -172,15 +172,15 @@ $$
 
 ...where **p** is a large prime. For the **secp256k1** curve used in **Bitcoin** and **Horizen**, **p** is the largest prime that is less than **\\(2^{256}\\)**.
 
-![Finite Field]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/finite_D.jpg)
-![Finite Field]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/finite_M.jpg)
+![Finite Field]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/finite_D.jpg)
+![Finite Field]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/finite_M.jpg)
 
 **The graph above** shows the finite field where each point represents a valid, discrete value of a point on the curve. Notice how the symmetry with regards to the **x**-axis is preserved.
 
 **In order to graphically add two points together**, one again connects them with a straight line. This line may "wrap around" the field several times before it intersects with another point or discrete value: the result of the addition **R**. Please note that in reality, the finite field is multidimensional. The two-dimensional finite field shown here only serves as an easy to follow example.
 
-![Finite Field Addition]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_D.gif)
-![Finite Field Addition]({{site.baseurl}}/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_M.gif)
+![Finite Field Addition]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_D.gif)
+![Finite Field Addition]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.1-ecc/finite_addition_M.gif)
 
 ## Summary
 

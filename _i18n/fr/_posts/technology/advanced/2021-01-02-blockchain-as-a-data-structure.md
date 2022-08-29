@@ -15,8 +15,8 @@ On peut expliquer la technologie de Blockchain de différentes manières. L'exam
 
 Une structure de données, dans le contexte de l'informatique, est une façon de stocker, d'organiser et de gérer les données. Une structure de données vous permet d'accéder, d'ajouter, de modifier et de rechercher les données qu'elle contient. Certaines des structures de données les plus courantes et les plus élémentaires comprennent des tableaux et des listes chaînées. Un tableau est un certain nombre d'éléments énumérés. Ces éléments peuvent être des chiffres, des lettres, des mots ou même des fichiers. Les index vous permettent d'accéder à n'importe quel élément individuellement, donc si vous voulez changer une entrée dans un tableau et que vous connaissez son emplacement, vous avez un accès instantané.
 
-![Array]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_array_D.jpg)
-![Array]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_array_M.jpg)
+![Array]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_array_D.jpg)
+![Array]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_array_M.jpg)
 
 Les _nœuds_ sont les éléments de données d'une liste chaînée. Un nœud comprend au moins une donnée (de tout type) et un repère vers l'élément suivant. La fonction de ce repère est d'indiquer à votre ordinateur où trouver l'élément suivant de la liste.
 
@@ -24,20 +24,20 @@ Si vous regardez la première donnée de la liste et que vous souhaitez accéder
 
 Ce que vous n'avez pas avec une liste chaînée, c'est un _accès instantané_. Si vous recherchez une donnée spécifique dans votre liste chaînée, vous verrez le premier _nœud_, l'_en-tête_ de la liste chaînée. Si ce n'est pas l'élément que vous cherchiez, vous suivez le lien ou le pointeur, qui vous mènera au nœud suivant. Si ce nœud ne contient pas les données que vous recherchiez, vous continuez en suivant les liens dans tous les nœuds jusqu'à ce que vous trouviez les données souhaitées.
 
-![Linked List]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_linked_list_D.jpg)
-![Linked List]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_linked_list_M.jpg)
+![Linked List]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_linked_list_D.jpg)
+![Linked List]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_linked_list_M.jpg)
 
 La blockchain est comme une liste chaînée dans le contexte des structures de données. La blockchain sépare également les données dans des conteneurs ; les _blocs_. Les _blocs_ sont assez semblables aux _nœuds_ d'une liste chaînée. Chaque _bloc_ contient une _référence_, qui est le hachage du bloc précédent. Il sert de lien avec le bloc précédent et établit l'ordre tout au long de la chaîne de blocs (la blockchain).
 
-![Blockchain data]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_data_D.jpg)
-![Blockchain data]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_data_M.jpg)
+![Blockchain data]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_data_D.jpg)
+![Blockchain data]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_data_M.jpg)
 
 La principale différence entre une blockchain et une liste chaînée est que chaque référence dans une blockchain est sécurisée cryptographiquement. Vous pouvez entendre le terme structure de données "append-only" (_traduction: ajout-seulement_) décrivant les blockchains. Cela signifie que vous ne pouvez ajouter des données à une blockchain qu'en les ajoutant à l'avant. La validité des liens sécurisés est constamment vérifiée. Si vous insérez un bloc malveillant au milieu d'une blockchain, par exemple entre les blocs 1 et 3 dans le graphique ci-dessous, vous pouvez inclure une référence à son prédécesseur (bloc 1), mais il serait très difficile (lire : infaisable) de faire du bloc suivant (3) votre nouveau bloc inséré.
 
 Chaque nouveau bloc construit sur un bloc existant est communément appelé _confirmation_. Plus un bloc est vieux, plus il y aura de confirmations. Chaque confirmation rend plus difficile l'altération des données d'un bloc. Le bloc 2 du graphique ci-dessous a une confirmation. Pour falsifier ses données, il faudrait recréer une référence valide. À chaque confirmation, vous devez recréer une référence supplémentaire. Plus le bloc est ancien, plus vous pouvez être certain qu'il n'y aura pas de changements dans le bloc.
 
-![Blockchain broken]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_broken_D.jpg)
-![Blockchain broken]({{site.baseurl}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_broken_M.jpg)
+![Blockchain broken]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_broken_D.jpg)
+![Blockchain broken]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.1-blockchain-as-a-data-structure/FR_blockchain_broken_M.jpg)
 
 Les références entre les blocs ne dépendent pas seulement de l'ordre des blocs, mais aussi des données contenues dans chaque bloc. Il n'est pas possible d'ajouter ou de supprimer facilement les données d'un bloc dans une blockchain. Cette propriété est la base de la confiance que les gens accordent aux données stockées dans une blockchain.
 
@@ -73,8 +73,8 @@ Cet article a l’intention de fournir une introduction à propos de ce qu’est
 
 Dans les yeux d’un informaticien, la blockchain est une structure de données. Cette structure stocke les informations de manière fiable, bien qu’elle existe dans un environnement sans tiers de confiance. Une structure de données peut paraître très technique au début, mais c’est en réalité juste cela : une structure pour vos données. Les listes ou les tableaux sont des structures de données très simples que vous connaissez déjà. Lorsque vous écrivez n’importe quelle information sur papier, vous utiliserez une de ces deux structures de données. Dans le monde digital, il y a des structures de données plus élaborées, dont la blockchain. Le terme vient du fait que l’information est séparée en blocs. Chaque nouveau bloc indique de quel bloc il vient, ils sont “enchaînés” ensemble. Le fait d'indiquer quel bloc était le bloc précédent est généralement appelé référencement.
 
-![List table chain in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_list_table_chain_D.jpg)
-![List table chain in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_list_table_chain_M.jpg)
+![List table chain in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_list_table_chain_D.jpg)
+![List table chain in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_list_table_chain_M.jpg)
 
 ### Une base de données est efficace, mais centralisée
 
@@ -88,15 +88,15 @@ La blockchain est exploitée par un grand nombre de différentes entités, ou pa
 
 Il n'existe pas d'entité centralisée comme une banque ou une chambre de compensation responsable de l'acceptation et du traitement des nouvelles transactions. Les cryptomonnaies sont sans permission parce que chaque individu respectant les règles du protocole peut créer un portefeuille et envoyer une transaction sans avoir besoin de s'enregistrer pour utiliser le service. La transaction est ensuite diffusée sur le réseau et chaque participant (ou nœud, ou pair) en conserve une copie. Un nœud peut être une personne individuelle, un magasin acceptant la cryptomonnaie ou même une banque. Peu importe qui vous êtes. Le nombre de copies rend une blockchain plus lente qu'une base de données, mais plus sûre.
 
-![Decentralised clearing in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_decentralised_clearing_D.jpg)
-![Decentralised clearing in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_decentralised_clearing_M.jpg)
+![Decentralised clearing in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_decentralised_clearing_D.jpg)
+![Decentralised clearing in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_decentralised_clearing_M.jpg)
 
 ### D’où vient le terme blockchain ?
 
 La blockchain ne garde pas les données dans un seule registre continu mais sépare les données en blocs. Ces blocs sont reliés les uns aux autres tout comme les pages individuelles qui composent un livre. C’est comme ça que le terme blockchain est né. Imaginez un teneur de registre enregistrer les entrées en utilisant des feuilles de papier au lieu d’un livre. Toutes les quelques minutes, il prend une nouvelle feuille de papier, commençant par une note qui dit "la dernière page que j'ai utilisée est la page X, voici la page Y". Les notes qu'il inclut "enchaînent" les pages ensemble. S'il laisse tomber la pile de pages, il peut plus tard les réarranger parce que chaque page fait référence à la précédente.
 
-![Book blockchain in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_book_blockchain_D.jpg)
-![Book blockchain in FR]({{site.baseurl}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_book_blockchain_M.jpg)
+![Book blockchain in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_book_blockchain_D.jpg)
+![Book blockchain in FR]({{site.baseurl_root}}/assets/post_files/technology/beginner/blockchain-as-a-data-structure/FR_book_blockchain_M.jpg)
 
 Chaque page représente un bloc dans cette comparaison, la pile des pages utilisées représente la blockchain. La référence que la page X vienne avant la page Y est ce qui “enchaîne” les blocs ensemble. A la place d’un teneur de registre, il y en a plusieurs qui travaillent simultanément. Les teneurs de registre d’une blockchain sont appelés les mineurs et nous expliquerons leur rôle dans la section suivante : comment une blockchain fonctionne
 
@@ -112,8 +112,8 @@ Une blockchain fonctionne comme un grand livre sur internet. Ce livre garde la t
 
 Un seul bloc dans la blockchain est comme une seule page dans un livre. Vous ne pouvez faire qu'un nombre limité de transactions sur une page et vous devez utiliser la suivante lorsque la page est pleine.
 
-![What is a Blockchain in FR]({{site.baseurl}}/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_D.jpg)
-![What is a Blockchain in FR]({{site.baseurl}}/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_M.jpg)
+![What is a Blockchain in FR]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_D.jpg)
+![What is a Blockchain in FR]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-blockchain/FR_what_is_blockchain_M.jpg)
 
 La blockchain documente chaque transfert d'argent. Cela garantit que personne ne peut dépenser son argent deux fois. Si vous avez un ZEN et que vous l'envoyez à un ami ou à une boutique en ligne, l'autre personne a maintenant le contrôle de ce ZEN et vous ne pouvez plus l'utiliser.
 
