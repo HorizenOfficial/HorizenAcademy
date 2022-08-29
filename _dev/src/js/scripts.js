@@ -560,7 +560,7 @@ $(function () {
 
                 html += "<p>" + hit._highlightResult.content.value.split(" ").splice(0, 24).join(" ") + " ...</p>";
 
-                searchResult.append("<a href='/" + hit.url + "'>" + html + "</a>");
+                searchResult.append("<a href='https://academy.horizen.io/" + hit.url + "'>" + html + "</a>");
             });
 
         });
