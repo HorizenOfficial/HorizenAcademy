@@ -1,3 +1,3 @@
 ---
-destination: ./_site/docs
-baseurl: "/docs"
+destination: ./_site/blockchain-academy
+baseurl: "/blockchain-academy"
