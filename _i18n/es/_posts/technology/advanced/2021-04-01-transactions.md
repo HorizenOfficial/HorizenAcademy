@@ -15,7 +15,7 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-the-utxo-model %}">
-            <img src="/assets/post_files/technology/advanced/4.0-transactions/utxo.svg" alt="El modelo UTXO" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.0-transactions/utxo.svg" alt="El modelo UTXO" />
         </a>
     </div>
     <div class="col-md-9">
@@ -29,7 +29,7 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-03-block-explorer-continued %}">
-            <img src="/assets/post_files/technology/advanced/4.0-transactions/block_explorer.svg" alt="El explorador de bloques" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.0-transactions/block_explorer.svg" alt="El explorador de bloques" />
         </a>
     </div>
     <div class="col-md-9">
@@ -43,7 +43,7 @@ Ya debe tener una buena comprensión del funcionamiento de una cadena de bloques
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-04-atomic-swaps %}">
-            <img src="/assets/post_files/technology/advanced/4.0-transactions/atomic_swaps.svg" alt="Intercambios atómicos" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.0-transactions/atomic_swaps.svg" alt="Intercambios atómicos" />
         </a>
     </div>
     <div class="col-md-9">

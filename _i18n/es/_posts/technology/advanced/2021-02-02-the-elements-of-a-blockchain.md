@@ -17,15 +17,15 @@ Una _función hash_ es una función matemática con algunas propiedades especial
 
 No es obligatorio que la entrada sea un número, puede ser cualquier tipo de información, desde un solo carácter hasta un archivo pesado como un video. La salida de una función hash dada tiene una extensión constante sin importar la entrada. Hay muchos tipos de funciones hash y la mayoría incluyen en su nombre la extensión de la salida que producen. Una de las funciones hash más utilizadas es SHA-256 (Secure Hash Algorithm 256 bit). El número indica que la salida de la función siempre tendrá 256 bits de extensión sin importar la extensión de la entrada. El valor hash funciona como la huella digital de la información. Es posible que el usuario verifique la integridad de los archivos o que detecte si difieren entre sí comparando sus hashes.
 
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_hash_D.jpg)
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_hash_M.jpg)
+![Hash]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_hash_D.jpg)
+![Hash]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_hash_M.jpg)
 
 ### Criptografía de llave pública
 
 La _Criptografía de llave pública_, conocida también como criptografía asimétrica, recibe su nombre del hecho de que las llaves se encuentran siempre emparejadas. Si el usuario ha encriptado información con una de las llaves, necesitará la otra para desencriptarla y viceversa. Estas llaves son la llave pública y la llave privada o secreta. Las llaves del usuario se traducen a su identidad en la cadena de bloques, por lo que puede recibir fondos con su llave pública y enviarlos con la privada. La criptografía de llave pública es también el origen del término criptomoneda.
 
-![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_asymmetric_D.jpg)
-![Asymmetric](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_asymmetric_M.jpg)
+![Asymmetric]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_asymmetric_D.jpg)
+![Asymmetric]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_asymmetric_M.jpg)
 
 ### Redes par a par
 
@@ -33,15 +33,15 @@ El concepto de una red par a par (P2P) es bastante común, en especial en el con
 
 Para que el usuario cree una transacción o consulte su saldo, le pide a los demás pares (o nodos) de la red que conservan una copia de la cadena de bloques que le compartan la información que poseen. Es típico oír hablar de redes libres de permisos o resistentes a la censura al discutir el valor de la tecnología blockchain. Las redes par a par desempeñan un papel importante en darles estas propiedades a las cadenas de bloques.
 
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_central-distri_M.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_central-distri_D.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_central-distri_M.jpg)
 
 ### Mecanismos de consenso
 
 Si lo que el usuario desea es crear una especie de moneda digital en una red P2P con muchos participantes, se verá obligado a llegar a un consenso con todos sobre el orden de las transacciones. Si un usuario tiene un ZEN y crea dos transacciones distintas que gastan la misma moneda simultáneamente, habrá pares que reciban primero la versión A, mientras que otros recibirán primero la versión B. La red debe entonces llegar a un acuerdo sobre cuál de las dos transacciones ocurrió primero. El mecanismo de consenso es lo que permite que una multitud de entidades que no se conocen ni se tienen confianza lleguen a un acuerdo sobre lo ocurrido.
 
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_consensus_M.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_consensus_D.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/ES_consensus_M.jpg)
 
 ### Minado
 
@@ -72,8 +72,8 @@ De manera similar, en la red distribuida de la cadena de bloques, los _nodos com
 
 Cualquiera puede encargarse de mantener un nodo completo, en especial si desea contribuir activamente a la estabilidad y seguridad de la red, pero esto no resulta necesario para utilizar una criptomoneda o billetera. La mayoría de las billeteras disponibles en el mercado son nodos ligeros, por lo que almacenan las llaves privadas del usuario pero no conservan una copia completa de la cadena de bloques. Con la aplicación Sphere by Horizen, queda en manos del usuario decidir si se prefiere la funcionalidad de un nodo completo o ligero, lo que hace de Sphere un llamado nodo híbrido.
 
-![Nodes in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_D.jpg)
-![Nodes in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_M.jpg)
+![Nodes in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_D.jpg)
+![Nodes in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_nodes_M.jpg)
 
 ### Mineros
 
@@ -83,8 +83,8 @@ Sin entrar en detalles técnicos, puede decirse que su propósito real dentro la
 
 ¿Por qué tantas complicaciones? Siempre cabe la posibilidad de que cada minero tenga una versión de un bloque ligeramente diferente a la de otros mineros. Esto se debe a que le toma algo de tiempo a transacción propagarse a toda la red, por lo que los mineros pueden recibir las transacciones en órdenes diferentes.
 
-![Miner in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_miner_D.jpg)
-![Miner in ES](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_miner_M.jpg)
+![Miner in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_miner_D.jpg)
+![Miner in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/ES_miner_M.jpg)
 
 Los mineros empiezan a resolver un nuevo acertijo (el siguiente bloque por crearse) inmediatamente después de resolver el del bloque anterior. El minero que resuelve el problema primero tiene el privilegio de escribir en la cadena de bloques el historial de los últimos minutos. Este minero transmite su bloque a la red junto con la solución que encontró al acertijo. Todos los nodos, sin importar si están minando o no, verifican que la solución sea correcta. Si lo es, los nodos agregan el nuevo bloque a su copia de la blockchain. Cerrado este ciclo, el proceso vuelve a repetirse indefinidamente.
 
@@ -116,13 +116,13 @@ Uno de los principios que permiten funcionar a las criptomonedas es el de _cript
 
 Con la criptografía simétrica, uno encripta y desencripta un texto con la misma llave.
 
-![Symmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_symmetric_D.jpg)
-![Symmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_symmetric_M.jpg)
+![Symmetric in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_symmetric_D.jpg)
+![Symmetric in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_symmetric_M.jpg)
 
 En el caso de la criptografía asimétrica, el usuario encripta y desencripta con dos llaves diferentes: la llave pública y la llave privada. Las llaves existen siempre en pares, si se encripta un mensaje con la llave pública este debe ser desencriptado con la llave privada correspondiente y viceversa. Así de simple; el par de llaves es tu identidad en la cadena de bloques.
 
-![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_D.jpg)
-![Asymmetric in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_M.jpg)
+![Asymmetric in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_D.jpg)
+![Asymmetric in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_asymmetric_M.jpg)
 
 ### El par de llaves como identidad del usuario
 
@@ -131,8 +131,8 @@ La idea detrás de las criptomonedas es que el usuario pueda recibir fondos con 
 La comparación más común con un concepto cotidiano es la de igualar la llave pública a una dirección domiciliaria, la cual puede compartirse a cualquiera que quiera enviar una carta. La llave privada es como la llave del buzón. Solo con esta llave se puede acceder al correo, y no sería lógico entregarle la llave a un desconocido. Para información a detalle sobre este concepto, puede encontrarse otra explicación en el nivel avanzado y una exacta en el nivel experto.
 Una **transacción** es un mensaje estandarizado para la red. El mensaje incluye la cantidad de fondos que el usuario desea enviar así como el destinatario de los fondos. Posteriormente, esta información se encripta con la llave privada del usuario, un paso conocido _como firma, o firma de la transacción_.
 
-![Signing in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_signing_D.jpg)
-![Signing in ES](/assets/post_files/technology/beginner/identity-in-blockchain/ES_signing_M.jpg)
+![Signing in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_signing_D.jpg)
+![Signing in ES]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/ES_signing_M.jpg)
 
 Una firma digital funciona de manera similar a la autorización de transacciones en la vida real utilizando tu firma física. Aun con las supercomputadoras de la actualidad, no es viable intentar falsificar este tipo de firma digital, por lo que la criptografía de llave pública es uno de los medios de encriptación más seguros actualmente disponibles.
 

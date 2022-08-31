@@ -10,7 +10,7 @@ level: advanced
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl_root}}/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         <p>Horizen Academy está diseñado para ser un recurso indispensable de educación en línea en materia de blockchain, criptomonedas y privacidad en línea. No importa si el usuario quiere aprender solo por curiosidad o si lo necesita porque su empresa está en vías de implementar esta tecnología; este proyecto queda abierto a todos.</p>
@@ -21,7 +21,7 @@ level: advanced
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">
-            <img src="/assets/post_files/privacy/advanced/intro/where2.svg" alt="¿Cuándo se compromete la privacidad del usuario?" />
+            <img src="{{site.baseurl_root}}/assets/post_files/privacy/advanced/intro/where2.svg" alt="¿Cuándo se compromete la privacidad del usuario?" />
         </a>
     </div>
     <div class="col-md-9">

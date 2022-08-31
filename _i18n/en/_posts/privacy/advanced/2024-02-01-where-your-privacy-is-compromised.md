@@ -117,8 +117,8 @@ The good news is that almost every service in a blockchain world has an optional
 
 **2FA works by** requiring you to prove your identity by a secondary method of authentication in addition to your password. Most commonly the secondary method of authentication is an SMS message sent to your phone number or a code generated on a dedicated application, like **Microsoft Authenticator,** **Google Authenticator** or others.
 
-![2FA](/assets/post_files/privacy/advanced/2fa/2fa_D.jpg)
-![2FA](/assets/post_files/privacy/advanced/2fa/2fa_M.jpg)
+![2FA]({{site.baseurl_root}}/assets/post_files/privacy/advanced/2fa/2fa_D.jpg)
+![2FA]({{site.baseurl_root}}/assets/post_files/privacy/advanced/2fa/2fa_M.jpg)
 
 ### 2FA Through Text Messages
 
@@ -153,37 +153,37 @@ _Government surveillance programs do not threaten privacy unless they discover i
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="Privacy is not about hiding, it is about protecting"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/prot.svg" alt="Privacy is not about hiding, it is about protecting"></td>
         <td>
             <strong>Privacy is not about hiding, it is about protecting</strong>: Would you give passwords to your email and other accounts to anyone? Would you allow everyone to read your social media messages? Would you love to have someone always around who eavesdrops on each and every conversation of yours, see your medical records and know about your appointments with your doctor? Or let's go very trivial - why do you ever have curtains on the shady side of your house or even wear pants?
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="Privacy is a fundamental human right"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/user.svg" alt="Privacy is a fundamental human right"></td>
         <td>
             <strong>Privacy is a fundamental human right</strong>: The right to free speech and the right to assemble are the basic fundamental human rights even if you do not have anything to say or protest now. So is privacy. Think about voting, medical information, and banking information. It is obvious that you wish them to be kept private.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="Lack of privacy is harmful"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/lock.svg" alt="Lack of privacy is harmful"></td>
         <td>
             <strong>Lack of privacy is harmful</strong>: You might get discriminated against or harassed based on your personal information or become a victim of identity theft or impersonation.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Location data is sensitive"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/loc.svg" alt="Location data is sensitive"></td>
         <td>
             <strong>Location data is sensitive</strong>: It can determine where you live, where you work, where you shop and hang out with friends. Every modern smartphone detects home and workplace just after several days of usage.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Social media gathers even more"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/find.svg" alt="Social media gathers even more"></td>
         <td>
             <strong>Social media gathers even more</strong>: What you like or follow and what applications you use on social media determine what types of ads you will see. Your age, sex, occupation, job title, and every other little detail can also be taken into account for ad targeting. Social media is the best marketing platform we have seen to date. Not only do those details determine what kind of ads you see, but sometimes also what price is shown to you. Especially when you book flights your metadata determines what prices will be available.
         </td>
     </tr>
     <tr>
-        <td><img src="/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Every little bit counts"></td>
+        <td><img src="{{site.baseurl_root}}/assets/post_files/privacy/beginner/the-nothing-to-hide-argument/tick.svg" alt="Every little bit counts"></td>
         <td>
             <strong>Every little bit counts</strong>: Some companies gather emails while others locate where you go shop or eat. Some large search engines even keep your search history if you use their account. Others aggregate all the data and form a complete picture of who you are, where you go and with whom and what you do. As the great article over spreadprivacy.com says - If that feels creepy, it’s because it is.
         </td>
@@ -269,8 +269,8 @@ There are many add-ons available for these and other browsers to enhance your pr
 
 Usually, you are at risk of having the data you are sending and receiving intercepted when you are using an unsecured public network like with a Wifi hotspot in a cafe or at an airport. By using a **Virtual Private Network** (_VPN_) you can rest assured that the entire communication between your computer and the endpoint of your connection is protected. A VPN will encrypt all the data you are transmitting on your device and decrypts the data when it reaches its desired endpoint.
 
-![vpn](/assets/post_files/privacy/advanced/vpn/vpn_D.jpg)
-![vpn](/assets/post_files/privacy/advanced/vpn/vpn_M.jpg)
+![vpn]({{site.baseurl_root}}/assets/post_files/privacy/advanced/vpn/vpn_D.jpg)
+![vpn]({{site.baseurl_root}}/assets/post_files/privacy/advanced/vpn/vpn_M.jpg)
 
 **A VPN is a secure tunnel between two or more devices.** A VPN secures your connection just like if you were using a private network. For example, many companies require their employees to use a VPN to access the private office network when they are working remotely. This ensures the data is as secure as if they were on site without the risk of data leaks.
 

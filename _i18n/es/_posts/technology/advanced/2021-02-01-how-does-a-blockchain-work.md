@@ -15,7 +15,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-02-the-elements-of-a-blockchain %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/elements_of_blockchain.svg" alt="Los elementos de una cadena de bloques" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/elements_of_blockchain.svg" alt="Los elementos de una cadena de bloques" />
         </a>
     </div>
     <div class="col-md-9">
@@ -29,7 +29,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-03-hash-functions %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/hash.svg" alt="Funciones hash" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/hash.svg" alt="Funciones hash" />
         </a>
     </div>
     <div class="col-md-9">
@@ -43,7 +43,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-04-public-key-cryptography %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/pkc.svg" alt="Criptografía de llave pública" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/pkc.svg" alt="Criptografía de llave pública" />
         </a>
     </div>
     <div class="col-md-9">
@@ -57,7 +57,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-05-a-peer-to-peer-p2p-network %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/p2p.svg" alt="Redes par a par (P2P)" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/p2p.svg" alt="Redes par a par (P2P)" />
         </a>
     </div>
     <div class="col-md-9">
@@ -71,7 +71,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-06-consensus-mechanisms %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/consensus.svg" alt="Mecanismos de consenso" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/consensus.svg" alt="Mecanismos de consenso" />
         </a>
     </div>
     <div class="col-md-9">
@@ -85,7 +85,7 @@ En este capítulo del nivel avanzado de tecnología, el usuario conocerá las id
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-02-07-mining %}">
-            <img src="/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/mining.svg" alt="Minado" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.0-how-does-a-blockchain-work/mining.svg" alt="Minado" />
         </a>
     </div>
     <div class="col-md-9">

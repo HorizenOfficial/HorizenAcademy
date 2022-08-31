@@ -17,7 +17,7 @@ Si vous savez comment naviguer dans un explorateur de blocs, vous saurez comment
 
 Les informations que vous trouverez dans un explorateur de blocs sont structurées soit par blocs, soit par adresses, soit par transactions individuelles. Examinons un premier exemple pour rendre tout cela plus tangible :
 
-![Latest Blocks](/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
+![Latest Blocks]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/latest_blocks.png)
 
 Il y a un certain nombre d'explorateurs de blocs, souvent plusieurs versions pour la même blockchain. Puisque nous voulons revenir au début des cryptomonnaies dans cet exemple, nous allons visualiser le Bitcoin et utiliser un des explorateurs les plus populaires : [blockchain.com](https://www.blockchain.com/explorer).
 
@@ -35,7 +35,7 @@ Vous verrez un aperçu des blocs les plus récemment créés sur la page d'accue
 
 Jetons un coup d'oeil à un seul bloc. La hauteur du tout premier bloc est 0 comme nous l'avons dit précédemment. Si nous voulons regarder le tout premier bloc de bitcoin qui a été extrait (ou miné), nous pouvons utiliser la fonction de recherche et entrer "0". Si vous n'avez pas encore ouvert le site, ce lien vous mènera directement au bloc de genèse (Bloc Genesis), c'est ainsi que le tout premier bloc d'une blockchain est toujours appelé.
 
-![Genesis Block](/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
+![Genesis Block]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/genesis_block.png)
 
 Passons en revue les informations que nous pouvons trouver ici. Le bloc Genesis ne contient qu'une seule transaction. C'est le montant minimum que vous verrez puisque chaque bloc a une transaction dite _coinbase_, c'est la transaction qui est utilisée afin d’émettre de nouveaux bitcoins au mineur qui a résolu le bloc.
 
@@ -59,7 +59,7 @@ Vous utiliserez probablement un explorateur de blocs pour vérifier l'état d'un
 
 Si nous voulons regarder la toute première transaction de cryptomonnaie jamais faite, nous devons aller au bloc #170, où la première transaction de bitcoin de Satoshi Nakamoto à Hal Finney est incluse.
 
-![la première transaction de bitcoin](/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
+![la première transaction de bitcoin]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.2-block-explorer-continued/transactions.png)
 
 C'est le premier bloc de la blockchain bitcoin qui contient plus d'une transaction. Nous pouvons trouver la transaction coinbase tout en haut. En dessous se trouve la première transaction comme vous pouvez vous y attendre. Une personne envoyant des coins à une autre.
 
@@ -72,7 +72,7 @@ Un bénéfice souvent cité à propos de la technologie blockchain est la transp
 Un explorateur de blocs est un outil qui vous permet de parcourir la blockchain, de la même manière qu'un navigateur Web vous permet d'accéder aux informations sur Internet. Vous pouvez voir l’historique des transactions d’une adresse donnée, l’ensemble des transactions contenues dans un bloc aussi bien que le statut de ces transactions. Examinons un exemple concret de la vie quotidienne :
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Résumé de l'adresse du navigateur">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_summary.png" alt="Résumé de l'adresse du navigateur">
 </div>
 
 C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse avec un explorateur de blocs. Les explorateurs de blocs fonctionnent tous à peu près de la même façon. L'adresse recherchée pour cet exemple dans un [explorateur de blocs Horizen](https://explorer.zensystem.io/) est en haut : znf7..... Disons que c'est l'adresse de Bob.
@@ -80,7 +80,7 @@ C'est ce à quoi vous pouvez vous attendre lorsque vous recherchez une adresse a
 En haut de la page, vous trouverez un résumé de l'activité des adresses. Habituellement, l'information fournie ici comprendra le montant total qui a été reçu et envoyé de cette adresse, ainsi que le solde actuel. L'adresse que nous avons sous les yeux a reçu un total de 42 Zen. Bob n'a pas encore envoyé de Zen à d'autres adresses et a donc toujours un solde de 42 Zen.
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_tx.png" alt="Transaction de l'adresse dans l'explorateur">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/beginner/block-explorer-introduction/explorer_address_tx.png" alt="Transaction de l'adresse dans l'explorateur">
 </div>
 
 Vous trouverez ci-dessous toutes les transactions concernant l'adresse qui vous intéresse. Jusqu'à présent, cette adresse n'était qu'une partie d'une seule transaction. Une transaction est caractérisée par son ID de transaction - la phrase bleue chiffrée en haut de la fenêtre grise (a46f...). La transaction que nous examinons avait une entrée (à gauche) et deux sorties (à droite). L'entrée est ce qui a été envoyé, et les sorties sont ce qui a été reçu. Si les entrées et sorties sont nouveaux pour vous, vous pouvez en apprendre plus à leur sujet dans notre article précédent sur les transactions.

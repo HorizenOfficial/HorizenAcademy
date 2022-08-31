@@ -11,8 +11,8 @@ chapter: "¿Cómo funciona una cadena de bloques?"
 
 El internet de hoy en día es un sistema altamente centralizado. La mayoría de la información producida por sus usuarios termina en manos de unas cuantas grandes empresas. Sin embargo, existen ya varios sistemas verdaderamente distribuidos operando en línea, y aunque estos no son precisamente lo mismo que una red par a par, el propósito de este artículo nos permite usar ambos términos de manera intercambiable.
 
-![Central distri](/assets/post_files/technology/advanced/2.4-p2p/ES_central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/2.4-p2p/ES_central-distri_M.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/ES_central-distri_D.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/ES_central-distri_M.jpg)
 
 Un ejemplo de un sistema verdaderamente distribuido es el de BitTorrent. Como cualquier otra tecnología, las redes par a par tienen muchas aplicaciones legítimas, como lo es el intercambio confiable de software de código abierto. Sin embargo, poseen también varias aplicaciones un tanto menos legítimas, como la piratería de música y películas. Los sistemas distribuidos tienen varias ventajas que no poseen sus contrapartes centralizadas; la principal de ellas es su robustez. Esto se debe a que las redes par a par están incluyen en su diseño altos niveles de redundancia. Así, no hay un solo punto que pueda provocar que el sistema falle y este puede sobrevivir aun cuando la mayoría de la red se cae. Las autoridades se han enfrentado ya a complicaciones al intentar deshabilitar algunas redes par a par como BitTorrent o Napster. Esto se debe a la tolerancia a fallas inherente a la arquitectura par a par.
 
@@ -28,8 +28,8 @@ Las variaciones de la mayoría de las redes distribuidas se relacionan a la estr
 
 En el caso de la inundación, los nodos propagan un mensaje con una demora de transmisión constante o determinística. La difusión es una versión refinada de la inundación. En las redes que emplean difusión, como las de Bitcoin y muchas otras criptomonedas, los nodos propagan mensajes con demoras de transmisión aleatorias. Esto hace más difícil que un tercero determine el origen de un mensaje y en consecuencia identifique la ubicación geográfica de los nodos y posiblemente hasta al dueño.
 
-![Spreading](/assets/post_files/technology/advanced/2.4-p2p/ES_spreading_D.jpg)
-![Spreading](/assets/post_files/technology/advanced/2.4-p2p/ES_spreading_M.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/ES_spreading_D.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/ES_spreading_M.jpg)
 
 La mayoría de los sistemas distribuidos se construyen con una estructura que permite solo adjuntar información al final de la estructura (append-only); las cadenas de bloques son un buen ejemplo. Los bloques de la cadena son contenedores de datos criptográficamente conectados en un registro append-only. De esta manera, resulta inviable cambiar o eliminar datos del pasado. En algunas redes distribuidas puede ser deseable borrar información, eficientizando el almacenamiento y conservando solo la información relevante. En el caso de las cadenas de bloques, en especial las que utilizan las criptomonedas, esto resultaría devastador. Si cualquier transacción del libro contable quedara sujeta a la posibilidad de sufrir cambios, quedaría destruido el caso a favor del uso de las criptomonedas, pues existiría la posibilidad de saldos cambiantes. Queda claro que este escenario resulta poco favorable para una forma de dinero global resistente a la censura.
 
@@ -55,5 +55,5 @@ Hay computadoras especiales en el internet que almacenan la mayoría de los siti
 
 En una red par a par, la conexión también falla si el par de un usuario llega a desconectarse. Sin embargo, solo es necesario que este se conecte a otro par en la red para que todo vuelva a funcionar regularmente. Esto hace robustas a las cadenas de bloques y criptomonedas.
 
-![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
-![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)

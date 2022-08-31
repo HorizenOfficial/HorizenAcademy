@@ -23,8 +23,8 @@ A protocol is just a set of rules, let’s take a look at the individuals that p
 
 A blockchain works like a large book on the internet. This book keeps track of how much money everybody has. A single block in the blockchain is like a single page in a book. You can fit only so many words on one page before the page is full and you have to use the next one.
 
-![What is a Blockchain](/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_D.jpg)
-![What is a Blockchain](/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_M.jpg)
+![What is a Blockchain]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_D.jpg)
+![What is a Blockchain]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-blockchain/what_is_blockchain_M.jpg)
 
 The blockchain documents every transfer of money. This ensures that no one can spend the same set of his or her money twice. If you have one ZEN and send it to a friend or an online shop, the recipient is now in control of that ZEN and you cannot use it anymore.
 
@@ -44,8 +44,8 @@ Similarly, in the distributed network of a blockchain, the full nodes are up and
 
 You can run a full node if you want to contribute to the stability and security of your network, but to use cryptocurrencies, you don’t have to. Most wallets out there are light nodes, which means they store your keys but don’t maintain a copy of the blockchain. With our flagship wallet [Sphere by Horizen](https://www.horizen.io/spherebyhorizen/), you can choose to run it as a full or light node.
 
-![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_D.jpg)
-![Nodes](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_M.jpg)
+![Nodes]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_D.jpg)
+![Nodes]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/nodes_M.jpg)
 
 ## Miners
 
@@ -57,8 +57,8 @@ The network comes to a consensus on the order of transactions for that time peri
 
 Each miner has a slightly different block than the other miners. The difference is because it takes some time for a new transaction to spread across the entire network, and different miners might receive those transactions in a different order.
 
-![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_D.jpg)
-![Miner](/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_M.jpg)
+![Miner]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_D.jpg)
+![Miner]({{site.baseurl_root}}/assets/post_files/technology/beginner/the-elements-of-a-blockchain/miner_M.jpg)
 
 Miners have to solve a cryptographic puzzle to create a valid block. The miners start working on a new block - and therefore new puzzle - immediately after the previous block is added to the chain. They gather all the transactions on the network that have not been included in a block yet and put them in their version of the next block.
 
@@ -103,8 +103,8 @@ The input doesn’t have to be a number, it can be any sort of data from a singl
 
 One of the most commonly used hash functions is **SHA256**, _Secure Hash Algorithm 256 bit_. The number indicates the output of the hash function has 256 bit. A hash value can serve as a fingerprint of data. One can verify the integrity of files and detect changes by comparing their hashes.
 
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_D.jpg)
-![Hash](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_M.jpg)
+![Hash]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_D.jpg)
+![Hash]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/hash2_M.jpg)
 
 ## Public-Key Cryptography
 
@@ -112,8 +112,8 @@ We must have a concept of identity to have ownership. You want to be the sole ow
 
 [**_Public-Key Cryptography_**](https://academy.horizen.io/technology/advanced/public-key-cryptography/) is also known as _asymmetric cryptography_. With symmetric cryptography, you encrypt and decrypt a message using the same key, like with a padlock.
 
-![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_D.jpg)
-![Symmetric](/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_M.jpg)
+![Symmetric]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_D.jpg)
+![Symmetric]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/symmetric_M.jpg)
 
 The term _asymmetric_ stems from the property of keys always coming in pairs and being used complementary. If you encrypt something with one of the keys, you need the other one to decrypt it, and vice versa. The keys are called **public key** and **private key**, also _spending key_ or _secret key_. Your keys translate to your identity on the blockchain. You receive funds with your public key and send funds with your private key.
 
@@ -133,8 +133,8 @@ The real-life comparison you will hear most often is your public key being like 
 
 Your keys are important for sending and receiving transactions. Technically, a transaction is a message to all nodes on the network. This message includes how much of your money you want to send, and to whom. This information is then encrypted with your private key, a step we call _signing a transaction._
 
-![Signing](/assets/post_files/technology/beginner/identity-in-blockchain/signing_D.jpg)
-![Signing](/assets/post_files/technology/beginner/identity-in-blockchain/signing_M.jpg)
+![Signing]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/signing_D.jpg)
+![Signing]({{site.baseurl_root}}/assets/post_files/technology/beginner/identity-in-blockchain/signing_M.jpg)
 
 A digital signature works similarly to how you authorize real-life transactions using your “analog” signature. Even with modern supercomputers, it is infeasible to forge such a digital signature. The type of public-key cryptography used in blockchains is one of the safest means of encryption available today.
 
@@ -152,8 +152,8 @@ Money or data sent to a public key can only be accessed by someone who has knowl
 
 You rarely use a public key when transferring cryptocurrency. You primarily use the address that was generated from a public key. This step relies on the one-wayness of hash functions that we introduced before.
 
-![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_D.jpg)
-![From Private Key to Address](/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
+![From Private Key to Address]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_D.jpg)
+![From Private Key to Address]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.2-keys-and-addresses/address-derivation-basic_M.jpg)
 
 ### Digital Signatures
 
@@ -163,8 +163,8 @@ When a transaction is broadcast to the network, every full node and miner verifi
 
 The result of the verification is a binary output: either the signature is valid or invalid. The _verifier_ does not learn anything about the private key used to create the signature in this process.
 
-![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
-![Creating a Digital Signature and Verifying It](/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
+![Creating a Digital Signature and Verifying It]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_D.jpg)
+![Creating a Digital Signature and Verifying It]({{site.baseurl_root}}/assets/post_files/technology/expert/2.3.3-digital-signatures/digital-signature_M.jpg)
 
 ## A Peer-to-Peer Network
 
@@ -174,8 +174,8 @@ You have probably come across the term Peer-to-Peer (P2P) network before, most l
 
 Blockchains make use of this concept, and it is one reason why they are so robust. You will often hear the attributes _permissionless_ and _censorship-resistant_ when reading about the value propositions of public blockchains. The Peer-to-Peer network plays a significant part in giving blockchains these properties.
 
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_M.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_D.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/central-distri_M.jpg)
 
 ## Consensus Mechanism
 
@@ -185,15 +185,15 @@ If you want to build a form of digital money on a P2P network with many unknown 
 
 The network needs to come to an agreement, or consensus, on which of the two transactions happened first and is valid. The consensus mechanism is what enables a large number of different entities that neither know, nor trust each other to agree on a single version of the blockchain.
 
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_D.jpg)
-![Consensus](/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_M.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_D.jpg)
+![Consensus]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.1-the-elements-of-a-blockchain/consensus_M.jpg)
 
 ### Consensus in Distributed Systems
 
 There are challenges to creating consensus in distributed systems. The consensus mechanism has to tolerate malicious actors and handle a network providing unreliable communication. We define _liveness_ as the property of the system not stalling, and safety as all nodes agreeing on new blocks. Nakamoto Consensus is brilliant in that it defines consensus in a novel way: non-deterministic.
 
-![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_D.jpg)
-![Different Consensus Mechanisms in Distributed Systems](/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_M.jpg)
+![Different Consensus Mechanisms in Distributed Systems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_D.jpg)
+![Different Consensus Mechanisms in Distributed Systems]({{site.baseurl_root}}/assets/post_files/technology/expert/2.1-elements-of-a-blockchain/consensus-in-distributed-systems_M.jpg)
 
 ### Mining
 
@@ -209,8 +209,8 @@ Mining is more than just performing Proof-of-Work, it comes with economic implic
 
 One of the most highly valued properties of public blockchain protocols is their level of decentralization. Usually, there is a lot of focus on how decentralized the block generation process is, but little on how code and other changes are decided upon. [Governance](https://academy.horizen.io/technology/expert/blockchain-governance/) is the keyword here.
 
-![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
-![Liquid Democracy](/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_D.jpg)
+![Liquid Democracy]({{site.baseurl_root}}/assets/post_files/technology/expert/2.7-governance/liquid_democracy_M.jpg)
 
 Open source protocol governance is something that’s constantly iterated and improved upon. The blockchain space is relatively young compared to traditional governance processes. The large number of different blockchain projects represent a huge _real-world sandbox_.
 

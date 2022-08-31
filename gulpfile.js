@@ -53,7 +53,7 @@ gulp.task('browser-sync', ['sass', 'concat', 'jekyll-build'], function() {
 });
 
 /**
- * Compile files from _dev/src/sass into both _site/assets/css (for live injecting) and assets/css (for future jekyll builds)
+ * Compile files from _dev/src/sass
  */
 gulp.task('sass', function () {
     return gulp.src(paths.src + 'sass/*.scss')
@@ -66,13 +66,12 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({ browsers: [ 'ie >= 10', 'android >= 4.1' ] }))
         .pipe(sourcemaps.write('/maps'))
         .pipe(sourcemaps.write('/assets/css/maps'))
-        .pipe(gulp.dest('_site/assets/css'))
         // .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
 });
 
 /**
- * Compile files from _dev/src/js into both _site/assets/js (for live injecting) and assets/js (for future jekyll builds)
+ * Compile files from _dev/src/js
  */
 gulp.task('concat', function() {
     var jsFiles = [
@@ -118,7 +117,6 @@ gulp.task('concat', function() {
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('/assets/js/maps'))
-        .pipe(gulp.dest('./_site/assets/js'))
         // .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest(paths.dist + 'js'))
 });
@@ -139,7 +137,8 @@ gulp.task('watch', function () {
         '_i18n/**/*',
         '_posts/*',
         'blog/*',
-        'feeds/*'
+        'feeds/*',
+        'assets/**'
     ], ['jekyll-rebuild']);
 });
 

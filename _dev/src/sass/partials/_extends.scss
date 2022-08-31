@@ -39,21 +39,3 @@ blockquote {
   }
 }
 
-
-// PhotoSwipe
-.pswp__button--arrow--right:before {
-  background-image: url("/assets/plugins/photoswipe/default-skin.png");
-}
-@media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
-  /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
-  .pswp--svg .pswp__button,
-  .pswp--svg .pswp__button--arrow--left:before,
-  .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url("/assets/plugins/photoswipe/default-skin.svg");
-  }
-}
-.pswp__preloader--active .pswp__preloader__icn {
-  /* We use .gif in browsers that don't support CSS animation */
-  background-image: url("/assets/plugins/photoswipe/preloader.gif");
-}
-//// END PhotoSwipe
