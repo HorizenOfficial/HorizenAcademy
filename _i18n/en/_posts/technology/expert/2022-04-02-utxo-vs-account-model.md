@@ -32,8 +32,8 @@ A **_system_** is described as stateful, only if it is configured to remember pr
 
 The **first** significant difference between the two balance models is how the state of the system is _recorded_. In the _UTXO model_, the movement of assets is recorded as a _directed acyclic graph_ (**DAG**) between addresses, whereas the _account model_ maintains a database of network _states_.
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_D.jpg)
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_M.jpg)
+![UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_D.jpg)
+![UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/dag-vs-database_M.jpg)
 
 A **graph** is defined as a set of _nodes_ or _vertices_ connected by _edges_. In a **directed graph**, each edge has a direction, usually indicated through arrows. **Directed acyclic graphs** don’t allow circular relationships between nodes. The graphic above shows a directed acyclic graph of the UTXO model on the left. Each _state_ represents a block in the blockchain. Each _transaction output_ comprises a _node_ in the [DAG](https://academy.horizen.io/horizen/advanced/block-dag/), and each _transaction_ is represented by one or more _edges_ originating from a transaction output. Hence, an unspent transaction output does not have an edge originating from it. **In the example above**, the transaction outputs **3**, **5**, **6**, and **7** are unspent.
 
@@ -60,8 +60,8 @@ Transaction outputs must be spent as a whole because the records in previous blo
 - In a **cash** payment, you rely on your counterparty to return the change. In the case of the **UTXO** model, the payee is never in control of the change in the first place.
 - The other difference is that cash exists in defined, _discrete_ denominations. There are **$1**, **$5**, **$10** bills, and so on. Transaction outputs in the UTXO model can have arbitrary values, for example, **11.79327** ZEN.
 
-![Calculating the user balance in the UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
-![Calculating the user balance in the UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_M.jpg)
+![Calculating the user balance in the UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_D.jpg)
+![Calculating the user balance in the UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/utxo_M.jpg)
 
 Since there is no concept of accounts or wallets on the _protocol level_, the "burden" of maintaining a user's balance is shifted to the _client-side_. Wallets maintain a record of all addresses controlled by a user and monitor the blockchain for all associated transactions. The sum of all unspent transaction outputs it can control determines the current balance.
 
@@ -73,8 +73,8 @@ The _shorter_ the period for nodes to update the state, the higher the chance of
 
 **In the example below**, we look at a UTXO state transition with only a single hypothetical transaction for simplicity.
 
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_D.jpg)
-![UTXO model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_M.jpg)
+![UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_D.jpg)
+![UTXO model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-utxo_M.jpg)
 
 Assume **Alice** wants to transfer **8** ZEN to **Bob**, and she controls a single UTXO worth ten ZEN. The transaction she creates consumes her previously unspent transaction output **\\(UTXO_1\\)** as an input. To spend a UTXO, it needs to be "unlocked."
 
@@ -92,8 +92,8 @@ When you think about how your bank does the accounting for your bank account it 
 
 The blockchain _does not_ create an “account” for you to maintain a balance. There is _no_ final balance stored on the ledger. The blockchain only stores individual transactions and to check your balance, there is an additional step involved. Your wallet does this automatically whenever you open it. What happens in the background is that your wallet scans the ledger for all transactions to your address(es) and adds them up.
 
-![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_D.jpg)
-![wallet](/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_M.jpg)
+![wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_D.jpg)
+![wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.1-the-utxo-model/wallet_balance_Int_M.jpg)
 
 Each transaction on the blockchain has one or more inputs and one or more outputs. **Let’s have a look at an actual example throughout a series of four transactions:**
 
@@ -102,7 +102,7 @@ Usually, a _block explorer_ will show you the most recent transactions first. Fo
 #### Bob Receives His First Transaction
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX1.png" alt="TX">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.1-the-utxo-model/TX1.png" alt="TX">
 </div>
 
 In the first [transaction, or TX,](https://explorer.zensystem.io/tx/bbbd1fb01998eec8c3ca99236f9b6a2c92e12533ab3e15b7544dcd3228988c34) above, Bob’s address **znRwe...** is funded when he receives **10.2** ZEN. The **TX** has _one_ input and _two_ outputs. The **first** output of **10.2** ZEN is what Alice actually wanted to transfer to Bob, the **second** output is called the **change output**. The input that Alice was using, was an output of a transaction she received before. When she still had her money untouched, it was an _Unspent Transaction Output_ (**UTXO**). A _spent transaction output_ is indicated by the **(S)**, a _UTXO_ is indicated with a **(U)** following the amount. But we will get back to this in a minute. Alice didn’t have a UTXO that was exactly **10.2** ZEN so she used one that was larger and sent the remaining ZEN back to herself, just as you would receive change in a store if you were to pay **$45** with a **$50** bill.
@@ -110,7 +110,7 @@ In the first [transaction, or TX,](https://explorer.zensystem.io/tx/bbbd1fb01998
 #### Bob Sends His First Transaction
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX2.png" alt="TX">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.1-the-utxo-model/TX2.png" alt="TX">
 </div>
 
 In the [second transaction](https://explorer.zensystem.io/tx/62be1b18d6048194fc45209dc727fa932ab4a426072372f6d8cf537fe1f221ee), Bob spends his UTXO of **10.2** ZEN and **creates a transaction with two new UTXOs:** one of **5** ZEN to a different address and one of **5.1999** ZEN back to his own address - the _change output_. The difference between inputs and outputs - **0.0001** ZEN - is consumed as the _transaction fee_. He now owns **5.1999** ZEN on his **znRwe…** address.
@@ -122,7 +122,7 @@ In a [third transaction](https://explorer.zensystem.io/tx/315a5e96d92cb19e7529a7
 #### Spending Two UTXOs at Once
 
 <div class="my-4">
-    <img src="/assets/post_files/technology/advanced/4.1-the-utxo-model/TX4.png" alt="TX">
+    <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/4.1-the-utxo-model/TX4.png" alt="TX">
 </div>
 
 In the [last transaction](https://explorer.zensystem.io/tx/14f8bc13c9d125558830e4c1cdc5c8bea6d01d224ced153c234471f107d63aa1) of this example, Bob wants to spend **6** ZEN. Neither of the two UTXO's he has at that point is sufficient for that purpose. **Although the block explorer shows only one input for the last transaction there were clearly two inputs used:** the **5.1999** ZEN and **2** ZEN one from the two examples above.
@@ -155,8 +155,8 @@ The **main difference** comes down to the global state in the UTXO model being o
 
 In a straightforward model, a transaction presents an event that triggers a state transition of the blockchain subject to the state transition logic. Just like in the UTXO model, it is infeasible to transition the system to a new state with every transaction without risking an inconsistent state. **Transactions are also batched into blocks in the account model**, and with each new block, the system transitions to a new state. Just like we did before, we consider a simple example where a single transaction transitions the system to a new state below.
 
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_D.jpg)
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_M.jpg)
+![Account model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_D.jpg)
+![Account model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/state-transition-account_M.jpg)
 
 The setting is the same as before: **Alice** wants to transfer **8** ZEN to **Bob**. Her wallet will create a transaction that defines the spending account, the receiving account, and the amount to transfer. This transaction is then signed with Alice's private key. In this case, she is spending from her address, the receiver is Bob, and the amount to transfer is **8** ZEN.
 
@@ -182,8 +182,8 @@ The **account model**, on the other hand, is a _computational model_. In this mo
 
 There are several approaches we can use to compare the **scalability** of the UTXO and the account model. **One way** is to focus on the overall storage requirements of each system. **Another way** is to consider which model is better suited for the deployment of second-layer technologies on top of the main blockchain.
 
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_D.jpg)
-![Account model](/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_M.jpg)
+![Account model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_D.jpg)
+![Account model]({{site.baseurl_root}}/assets/post_files/technology/expert/4.1-utxo-vs-account/scaling_utxo-account_M.jpg)
 
 One second layer technology, [state and payment channels](https://academy.horizen.io/technology/expert/state-and-payment-channels/), moves the exchange of data from the blockchain to a dedicated trustless network of bidirectional communication channels.
 

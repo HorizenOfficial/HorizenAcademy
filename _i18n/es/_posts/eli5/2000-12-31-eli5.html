@@ -5,12 +5,14 @@ title: "ELI5"
 description: "Aquí explicamos blockchain y algunos temas relacionados de la manera más sencilla que podamos encontrar."
 permalink: /eli5/
 topic: eli5
-css: |
+---
+
+<style>
   .site-content-wrapper {
-    background: url(/assets/img/bkg/bg-eli5-p1.jpg) no-repeat top left;
+    background: url({{site.baseurl_root}}/assets/img/bkg/bg-eli5-1.jpg) no-repeat top left;
   }
   .site-content-wrapper > .container-fluid {
-    background: url(/assets/img/bkg/bg-eli5-p2.jpg) no-repeat bottom right;
+    background: url({{site.baseurl_root}}/assets/img/bkg/bg-eli5-2.jpg) no-repeat bottom right;
   }
   @media (max-width: 991px) {
     .site-content-wrapper > .container-fluid {
@@ -27,9 +29,9 @@ css: |
     color: #041742;
     font-weight: bold;
   }
----
+</style>
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{site.baseurl}}{{page.url}}">
 
     {% include search.html %}
 

@@ -5,9 +5,11 @@ title: "ELI5"
 description: "The Horizen Academy is a free educational platform on blockchain technology, cryptocurrency, and privacy. In this chapter, we explain blockchain and related topics in a simple and easily understandable way."
 permalink: /eli5/
 topic: eli5
-css: |
+---
+
+<style>
   .site-content-wrapper {
-    background: url(/assets/img/bkg/bg-eli5-1.jpg) no-repeat bottom center;
+    background: url({{site.baseurl_root}}/assets/img/bkg/bg-eli5-1.jpg) no-repeat bottom center;
     background-size: contain;
   }
   @media (max-width: 991px) {
@@ -40,9 +42,9 @@ css: |
       flex: 0 0 62%;
     }
   }
----
+</style>
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{site.baseurl}}{{page.url}}">
 
     {% include search.html %}
 
@@ -67,7 +69,7 @@ css: |
                 <div class="row mt-4 eli5-article">
                     <div class="col-md-4">
                         <a href="{{ site.baseurl }}{% post_url /eli5/2000-01-02-what-is-a-cryptocurrency %}">
-                            <img src="/assets/post_files/eli5/intro/2CC.svg" alt="What is a Cryptocurrency?" />
+                            <img src="{{site.baseurl_root}}/assets/post_files/eli5/intro/2CC.svg" alt="What is a Cryptocurrency?" />
                         </a>
                     </div>
                     <div class="col-md-8">

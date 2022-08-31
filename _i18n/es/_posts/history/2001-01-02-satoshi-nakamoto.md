@@ -20,7 +20,7 @@ El 3 de enero de 2019, Satoshi minó el bloque génesis (genesis block), creando
 
 <h3 class="text-center font-italic">El periódico The Times el 03 de Enero de 2019 con encabezado "Chancellor on brink of second bailout for banks."</h3>
 
-![chancellor](/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
+![chancellor]({{site.baseurl_root}}/assets/post_files/history/satoshi-nakamoto/chancellor2.jpg)
 
 Decidir incluir este encabezado sugiere que una de las motivaciones principales de Satoshi para construir Bitcoin fue la creación de una alternativa al sistema bancario de reserva fraccionaria que desestabiliza demostrablemente la economía y privaba de sus derechos al público.
 

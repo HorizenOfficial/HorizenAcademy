@@ -19,5 +19,5 @@ Horizen has one of the largest node networks in the industry and every Secure an
 
 We can't discuss further details on our VPN solution, but we will update this article as soon as we can.
 
-![Horizen VPN](/assets/post_files/horizen/beginner/horizen-vpn/VPN_D.jpg)
-![Horizen VPN](/assets/post_files/horizen/beginner/horizen-vpn/VPN_M.jpg)
+![Horizen VPN]({{site.baseurl_root}}/assets/post_files/horizen/beginner/horizen-vpn/VPN_D.jpg)
+![Horizen VPN]({{site.baseurl_root}}/assets/post_files/horizen/beginner/horizen-vpn/VPN_M.jpg)

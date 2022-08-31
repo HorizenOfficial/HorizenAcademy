@@ -16,7 +16,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-02-utxo-vs-account-model %}">
-            <img src="/assets/post_files/technology/expert/4.0-txs/utxo-vs-account-1.svg" alt="UTXO vs. Account Model" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/4.0-txs/utxo-vs-account-1.svg" alt="UTXO vs. Account Model" />
         </a>
     </div>
     <div class="col-md-9">
@@ -30,7 +30,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-03-cross-chain-transactions %}">
-            <img src="/assets/post_files/technology/expert/4.0-txs/cross-chain-2.svg" alt="Cross-Chain Transactions" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/4.0-txs/cross-chain-2.svg" alt="Cross-Chain Transactions" />
         </a>
     </div>
     <div class="col-md-9">
@@ -44,7 +44,7 @@ Digital money would be useless if there was no way to transfer it. Fortunately, 
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /technology/expert/2022-04-04-state-and-payment-channels %}">
-            <img src="/assets/post_files/technology/expert/4.0-txs/channel-3.svg" alt="State- and Payment Channels" />
+            <img src="{{site.baseurl_root}}/assets/post_files/technology/expert/4.0-txs/channel-3.svg" alt="State- and Payment Channels" />
         </a>
     </div>
     <div class="col-md-9">

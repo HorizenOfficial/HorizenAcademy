@@ -11,7 +11,7 @@ no_index: true
 
 <div class="row mb-3">
     <div class="col-md-3">
-        <img src="/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
+        <img src="{{site.baseurl_root}}/assets/img/icons/topics/privacy-blueprint.svg" alt="Horizen privacy blueprint" class="lead-icon"/>
     </div>
     <div class="col-md-9 lead">
         <p>Nous avons conçu l'Académie Horizen pour qu'elle soit le lieu idéal pour l'éducation sur la confidentialité en ligne, la blockchain et la cryptomonnaie. Peu importe pourquoi vous voulez en savoir plus sur ces sujets, peu importe votre niveau de confort ou votre intérêt : cette académie est pour vous.</p>
@@ -22,7 +22,7 @@ no_index: true
 <div class="row mt-5">
     <div class="col-md-3">
         <a href="{{ site.baseurl }}{% post_url /privacy/advanced/2024-02-01-where-your-privacy-is-compromised %}">
-            <img src="/assets/post_files/privacy/advanced/intro/where2.svg" alt="Lorsque votre vie privée est compromise" />
+            <img src="{{site.baseurl_root}}/assets/post_files/privacy/advanced/intro/where2.svg" alt="Lorsque votre vie privée est compromise" />
         </a>
     </div>
     <div class="col-md-9">

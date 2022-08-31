@@ -11,8 +11,8 @@ chapter: "¿Cómo funciona una cadena de bloques?"
 
 Es necesario que el usuario tenga alguna manera de representar su identidad para poder reclamar propiedad en la cadena de bloques, pues no hay propiedad sin representación del propietario. La criptografía de llave pública hace posible el presentar identidad en la cadena. Junto con las funciones hash discutidas en el último artículo, esta es la segunda piedra angular de la tecnología blockchain. Mientras que las funciones hash se utilizan para verificar la autenticidad e integridad de la información, la criptografía de llave pública se utiliza para verificar propiedad dentro de la cadena de bloques.
 
-![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_how_it_works_D.jpg)
-![How it works](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_how_it_works_M.jpg)
+![How it works]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_how_it_works_D.jpg)
+![How it works]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_how_it_works_M.jpg)
 
 Retomemos las bases un momento. Los fundamentos de la criptografía de llave pública son la llave pública, la llave privada, las direcciones y las firmas digitales. La llave privada crea una firma digital. La cadena de bloques contiene un registro (la transacción) que establece que hay una cantidad determinada de fondos asociada a la llave pública del usuario siempre que este recibe criptomonedas. Es necesario proporcionar una firma digital para autorizar cualquier gasto, y solo se puede proporcionar esta firma si se posee también la llave privada que corresponde a la pública.
 
@@ -21,45 +21,45 @@ Retomemos las bases un momento. Los fundamentos de la criptografía de llave pú
 Es importante discutir algo llamado criptografía de curva elíptica (CCE) antes de mencionar cómo funcionan en conjunto las llaves y direcciones. Hay distintos conceptos matemáticos utilizados para elaborar un sistema criptográfico de llave pública, pero Bitcoin y muchas otras criptomonedas utilizan CCE.
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Bitcoin, Ethereum y muchas otras monedas emplean una curva llamada secp256k1, la cual aparece a la izquierda. La ecuación correspondiente a la curva es y^2=x^3+7. Lo que les da utilidad a las curvas elípticas es su capacidad de ser empleadas como modelos matemáticos con propiedades especiales.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_0.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Esta gráfica ejemplifica cómo pueden unirse dos puntos en la curva. Al querer unir P y Q, se conectan primero con una línea recta. La línea recta cruza la curva en un tercer punto. Este punto se proyecta al lado opuesto del eje “x” (se multiplica la coordenada y por -1) y obtenemos la suma de los puntos P y Q, R. En resumen, la suma de dos puntos en la curva es equivalente a un tercer punto en la misma.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_1.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Para multiplicar un punto en la curva, es necesario sumarle su propio valor. Para multiplicar el punto P le sumamos su valor una vez. En este caso, no se están conectando ambos puntos, pero interesa la línea tangente (la flecha).
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_2.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         ¿Por qué la tangente? Un punto aleatorio cercano a P (el gris más claro) conectado a P produce la línea gris más clara. Acercar este punto a P de manera progresiva (de claro a oscuro) acerca a la línea conectora con la tangente. Entre más cercanos dos puntos en la curva, más similar la línea conectora a la tangente (hasta que finalmente se convierten en una misma).
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_3.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 <div class="row align-items-center">
-    <div class="col-lg-6 d-none d-lg-block"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-none d-lg-block"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
     <div class="col-lg-6">
         Ahora, doblar el un valor resulta fácil. Se toma nuevamente la intersección de la tangente con la curva y se proyecta al lado opuesto del eje “x”.
         <br/>
         Si el objetivo es multiplicar P por 3, sumamos P y el punto P+P. Para multiplicar P por 4, podemos sumarle a P+P su propio valor y así consecutivamente.
     </div>
-    <div class="col-lg-6 d-block d-lg-none"><img src="/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
+    <div class="col-lg-6 d-block d-lg-none"><img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ecc_4.jpg" alt="ECC" style="width: 400px;"></div>
 </div>
 
 Multiplicar un punto es tarea fácil. La división, en cambio, resulta difícil (léase inviable). No existe el algoritmo para calcular cuántas veces P se agregó a sí mismo o, en cuanto a la multiplicación, por qué número se multiplicó para llegar a otro punto.
@@ -90,7 +90,7 @@ $$
 
 Ahora, el punto base se suma a sí mismo tantas veces como lo indique la llave privada. Si el número de la llave privada del usuario fuera 3, se llevaría a cabo la operación que acaba de demostrarse. Si sumamos el valor punto base a ese mismo valor tantas veces como indique la llave privada (\* P) se obtiene la llave pública.
 
-![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_6.jpg)
+![ECC]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_6.jpg)
 
 En resumen, la llave privada es un número largo y aleatorio. La llave pública es un punto en la curva elíptica que se obtiene al multiplicar el punto base P por el número de la llave privada.
 
@@ -108,8 +108,8 @@ Base58Check es una manera de convertir bits a caracteres alfanuméricos, pero ex
 
 Es posible generar una cantidad indefinida de direcciones a partir de una sola llave privada, y muchas billeteras hacen precisamente eso de manera automática; hecho que mejora la privacidad y hace más complicado que un tercero agrupe las transacciones del usuario. Hablaremos más de este concepto y de cómo se relaciona con las llamadas direcciones de cambio en nuestro capítulo sobre privacidad en la cadena de bloques.
 
-![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_7_D.jpg)
-![ECC](/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_7_M.jpg)
+![ECC]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_7_D.jpg)
+![ECC]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.3-public-key-cryptography/ES_ecc_7_M.jpg)
 
 ### Firma digital
 
@@ -127,7 +127,7 @@ Continúe al siguiente artículo para aprender sobre las redes par a par, la inf
 
 <table class="table lead">
     <tr>
-        <td class="icon"><img src="/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
+        <td class="icon"><img src="{{site.baseurl_root}}/assets/post_files/eli5/what-is-public-key-cryptography/Keys.jpg" alt="Keys"></td>
         <td>
             Las cadenas de bloques utilizan criptografía de llave pública para identificar al verdadero dueño de una cantidad de dinero. Cada usuario crea dos llaves cuando se une a una red, una llave pública y una privada.
         </td>

@@ -19,8 +19,8 @@ Les Atomic Swaps sont une technologie qui vous permet de trader en Peer-to-Peer 
 
 Si vous avez lu l’article sur la [cryptographie à clé publique](https://academy.horizen.io/fr/technology/advanced/public-key-cryptography/), vous savez qu’une transaction valide demande une signature. Cette signature peut être créée uniquement par la personne qui a accès à la clé privée. Lorsque vous envoyez une transaction, vous la signez et la diffusez sur le réseau par la suite. Les HTLCs sont basés sur la technologie _state channels_. Nous les expliquerons en détail dans notre niveau expert, mais pour le moment, tout ce que vous devez savoir c’est qu’ils vous permettent d’échanger des transactions signées de manière sécurisée. Seulement lorsque les participants décident qu’ils ont fini la transaction, l’état final est diffusé sur la blockchain.
 
-![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_D.jpg)
-![channel hierarchy](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_M.jpg)
+![channel hierarchy]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_D.jpg)
+![channel hierarchy]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_channel_hierarchy_M.jpg)
 
 La partie "Hashed" (Hashée) de HTLC signifie qu'un hash peut servir de verrou pour le contrat, afin de le protéger d'un tiers qui y accède. La partie "Timelock" fait référence au fait que le contrat peut avoir une date d'expiration. Vous devez remplir deux conditions pour effectuer un Atomic Swap entre deux actifs : Les deux actifs et leur blockchains sous-jacente doivent prendre en charge le même algorithme de hachage, comme SHA-256 dans le cas de Bitcoin et les deux blockchains doivent prendre en charge une sorte de programmabilité qui permet le déploiement d'un HTLC.
 
@@ -28,7 +28,7 @@ La partie "Hashed" (Hashée) de HTLC signifie qu'un hash peut servir de verrou p
 
 Le processus d'un Atomic Swap ressemble généralement à ce qui suit. Supposons qu'Alice ait un peu de BTC et que Bob ait un peu de ZEN. Les deux parties conviennent d'échanger un certain montant de leurs actifs.
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_1.jpg)
+![swaps]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_1.jpg)
 
 Premièrement, Alice génère un HTLC qui a une adresse sur la blockchain Bitcoin. Le contrat possède une adresse utile à l’interaction, ici ce sera ABC. Ensuite, Alice génère ou choisi un secret; dans cet exemple son secret est XYZ. En utilisant une [fonction de hachage](https://academy.horizen.io/fr/technology/advanced/hash-functions/) elle génère un cadenas (_lock_) (ici: _1b9f_…), qui est simplement le _hash_ du secret. Maintenant elle dépose le montant en bitcoin qui a été défini avec Bob dans le contrat qui est bloqué. Enfin, elle envoie le cadenas à Bob.
 
@@ -39,13 +39,13 @@ Si Bob est en mesure de fournir le secret, le contrat transférera automatiqueme
 
 Maintenant c’est au tour de Bob.
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_2.jpg)
+![swaps]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_2.jpg)
 
 Bob crée lui aussi un Hashed Timelock Contract, mais cette fois-ci sur la blockchain Horizen. Son contrat crée également une adresse, dans cet exemple BCD. Alice lui a déjà envoyé son cadenas (le même qu’elle a utilisé dans son contrat) donc Bob va bloquer son contrat avec le même cadenas. Enfin il dépose le montant en ZEN sur lequel ils se sont mis d’accord. Et comme pour le contrat créé par Alice, le contrat de Bob peut s'exécuter de deux manières: Soit Bob est remboursé après une certaine période de temps, ou alors Alice fourni le secret et les fonds sont transférés à son adresse.
 
 Maintenant, les deux contrats sont configurés sur leur blockchain respective. Alice doit passer à la prochaine étape pendant la période bloquée, sinon, les deux auront un remboursement et rien ne se sera passé.
 
-![swaps](/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_3.jpg)
+![swaps]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.3-atomic-swaps/FR_swap_3.jpg)
 
 Alice va maintenant utiliser le secret qu’elle a choisi plus tôt pour débloquer le hashlock du contrat de Bob fait sur la blockchain Horizen et les ZEN seront libérés pour elle. C’est une opération publique et vérifiable sur la blockchain. Bob peut, ensuite, voir le secret et l’utiliser pour débloquer le bitcoin bloqué dans le contrat d’Alice. En fournissant le secret le HTLC va automatiquement débloquer les fonds à Bob vers l’adresse bitcoin qu’il aura spécifié.
 

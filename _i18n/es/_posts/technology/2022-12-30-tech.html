@@ -61,7 +61,7 @@ css: |
   }
 ---
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{site.baseurl}}{{page.url}}">
 
     {% include search.html %}
 
@@ -98,7 +98,7 @@ css: |
                 <tr class="text-uppercase font-weight-bold">
                     <td>
                         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
-                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level d-inline"> Avanzado
+                            <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level d-inline"> Avanzado
                         </a>
                     </td>
                 </tr>
@@ -125,7 +125,7 @@ css: |
                 <tr class="text-uppercase font-weight-bold">
                     <td>
                         <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
-                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avanzado
+                            <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avanzado
                         </a>
                     </td>
                 </tr>

@@ -25,8 +25,8 @@ A wallet is a program that has three main functions:
 - Showing you your **balance**
 - **Creating** and **signing** _transactions_ to send funds
 
-![Wallet does](/assets/post_files/technology/beginner/wallets/wallet_does_D.jpg)
-![Wallet does](/assets/post_files/technology/beginner/wallets/wallet_does_M.jpg)
+![Wallet does]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/wallet_does_D.jpg)
+![Wallet does]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/wallet_does_M.jpg)
 
 The **first** function is the primary function and main differentiator of all wallets: _generating_, _storing_, and _handling_ your keys. **Having access to your private keys means being able to spend your money.**
 
@@ -44,8 +44,8 @@ The blockchain records the amount of coins associated with a key pair, your iden
 
 The **main function** of a blockchain is to store all transactions in the correct order. If you receive **10 ZEN** in a transaction and receive another **10 ZEN** later on. It is clear that you, the _owner_ of the key pair, owns **20 ZEN.**
 
-![Wallet](/assets/post_files/technology/beginner/wallets/wallet_D.jpg)
-![Wallet](/assets/post_files/technology/beginner/wallets/wallet_M.jpg)
+![Wallet]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/wallet_D.jpg)
+![Wallet]({{site.baseurl_root}}/assets/post_files/technology/beginner/wallets/wallet_M.jpg)
 
 **To spend your money**, you need the _private key_ stored in your wallet. This is why a keychain is a good analogy for what a wallet does. **If you don’t control your keys, you don’t control your funds.** You don’t need to understand how public-key cryptography works in detail in order to use cryptocurrencies, but the concept of your keys giving you access to your funds is still important to remember.
 
@@ -61,20 +61,20 @@ When Bob wants to spend that **one** ZEN, he will create a new message to the ne
 
 This is how money is sent from one person to another _without_ the help of a central third party.
 
-![Transaction](/assets/post_files/eli5/what-is-a-transaction/transaction_D.jpg)
-![Transaction](/assets/post_files/eli5/what-is-a-transaction/transaction_M.jpg)
+![Transaction]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-transaction/transaction_D.jpg)
+![Transaction]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-transaction/transaction_M.jpg)
 
 _A wallet gets your balance from_ monitoring the blockchain for any transactions that involve your address. Initially, all transactions are _cryptographically locked_. The lock is based on the address the transaction is sent to, and can only be unlocked with the corresponding private key.
 
 **Let’s assume this is your wallet.** You received a total of **20** ZEN in two _different_ transactions of **10** ZEN each. Now you want to spend **2** ZEN at lunch. Your wallet starts with a blank transaction and, in a first step, chooses one of your prior transactions to spend. In this case, both transactions are of sufficient value, so your wallet might randomly choose the first one.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_input_D.jpg)
+![Balance]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/T2_input_D.jpg)
 
 The money that is being spent in a transaction is called the **input**, and the money that is being received is called the **output**.
 
 Your wallet places one of the outputs you own in the empty transaction and uses your private key to unlock it, so it becomes _spendable_ - this is what we called _signing_ the transaction. The unlocked output is now used as an input to a new transaction.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_outputs_D.jpg)
+![Balance]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/T3_outputs_D.jpg)
 
 Next, your wallet creates the _outputs_. It asks you for an _address_ to send money to and an _amount_. You want to send **2** ZEN to address **XYZ** to pay for your lunch, so your wallet creates the first output accordingly.
 
@@ -82,13 +82,13 @@ The second output is generated automatically - its called the _change output_.
 
 Outputs are similar to cash denominations. If you need to pay **$2** **USD** but only have a **$10** bill, you expect to get **$8** in change. Your wallet automatically includes the change in the transaction. The newly generated outputs are locked by default.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
+![Balance]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/T4_broadcast_D.jpg)
 
 **Lastly**, your wallet broadcasts the transaction to the network, where _all_ nodes and miners will verify if the signature you used to unlock your money is valid. If it is, miners will include your transaction in the next block. The output of **10** ZEN you used is from now on publicly visible as _spent_. The newly created outputs of **2** and **8** ZEN are included in a new block and locked - or _unspent_.
 
 Then you come across the term **UTXO** - _Unspent Transaction Output_ - this is what it refers to.
 
-![Balance](/assets/post_files/technology/beginner/intro-to-transactions-basic/T5_confirmed_D.jpg)
+![Balance]({{site.baseurl_root}}/assets/post_files/technology/beginner/intro-to-transactions-basic/T5_confirmed_D.jpg)
 
 When you own **10** ZEN, it means you received **10** ZEN in a transaction, and you have _not_ unlocked and spent that output, yet.
 
@@ -104,15 +104,15 @@ It’s **essential** to understand that your backup phrase is just as important 
 
 ## Types of Cryptocurrency Wallets
 
-![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/overview_D.jpg)
-![overview](/assets/post_files/technology/advanced/3.0-types-of-wallets/overview_M.jpg)
+![overview]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/overview_D.jpg)
+![overview]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/overview_M.jpg)
 
 ### Hosted Web Wallets
 
 We can distinguish between _hosted_ and _non-hosted_ web wallets. With **hosted web wallets**, your keys are stored online by a trusted third party. These parties are mostly exchanges such as **Coinbase**, **Binance**, or **Bittrex**. When you create an account with these entities, they will create an entry in their internal database linking your account to a set of _key pairs_ for the different coins they have listed.
 
-![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/hosted_webwallet_D.jpg)
-![Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/hosted_webwallet_M.jpg)
+![Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/hosted_webwallet_D.jpg)
+![Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/hosted_webwallet_M.jpg)
 
 An **advantage** to a hosted web wallet is the _option_ to recover your password in case you forget or misplace it. Losing your private keys, together with your mnemonic phrase, leads to a loss of funds _in all other cases_.
 
@@ -132,8 +132,8 @@ You _will_ need to keep some funds on an exchange if you plan to trade often.
 
 Besides hosted web wallets, there is also a range of _non-hosted web wallets_. One of the most popular non-hosted web wallet is likely **MyEtherWallet**, which can store _Ether_ (**ETH**) and _all_ **ERC-20** tokens, tokens that are "living" on the **Ethereum** blockchain. These wallets provide an interface to check your funds or create transactions in your web browser, _but_ you have to provide the keys with each login.
 
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
-![Non-Hosted Web Wallets](/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_D.jpg)
+![Non-Hosted Web Wallets]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/non-hosted_webwallet_M.jpg)
 
 There are a range of options to access your wallet with MyEtherWallet, often abbreviated as **MEW**. The **first** option requires your address, but only lets you view your funds.
 
@@ -167,7 +167,7 @@ When _printing_ your paper wallet, you **should not** use a _shared_ printer, li
 
 You will end up with something looking like this after printing the wallet.
 
-![paper wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.png)
+![paper wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/paper_wallet.png)
 
 **There is only one thing left to do**: send your coins to the public key. After that, you have a perfect long term storage solution for your coins. **The main risk** with a paper wallet is you actually _losing_ or _destroying_ the wallet by accident. If you don't have a mnemonic phrase to recover the private key, you are at risk of losing **all funds** on the wallet. **So choose wisely where to store your paper wallet**. Print several copies if you feel uncomfortable having only one and store all of them in separate, safe places.
 
@@ -183,8 +183,8 @@ The interface generates an address when you want to receive funds. **Using this 
 
 If you want to send money, the app creates the _raw transaction_ that needs to be _signed_. The _unsigned_ transaction is now sent to your hardware wallet, where it gets signed with your _private key_. The signature is then returned to your computer and the complete transaction, including the signature, is broadcasted to the network.
 
-![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/signing_hardware_wallet_D.jpg)
-![signing hardware wallet](/assets/post_files/technology/advanced/3.0-types-of-wallets/signing_hardware_wallet_M.jpg)
+![signing hardware wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/signing_hardware_wallet_D.jpg)
+![signing hardware wallet]({{site.baseurl_root}}/assets/post_files/technology/advanced/3.0-types-of-wallets/signing_hardware_wallet_M.jpg)
 
 **Your private key(s) do not leave the device**, _so they are not visible to the computer you are using your hardware wallet with at any time_. This is why a hardware wallet is considered the most secure way of storing crypto, especially large amounts.
 
@@ -208,8 +208,8 @@ The mnemonic phrase mechanism that you are likely familiar with was introduced w
 
 In total, there are **2048** words a mnemonic phrase may comprise, each of them _unambiguously_ identifiable by its first four letters. Similar words or different versions of the same word are not included, for example, build/built or woman/women.
 
-![Generating a Mnemonic Phrase from a Seed](/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_D.jpg)
-![Generating a Mnemonic Phrase from a Seed](/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_M.jpg)
+![Generating a Mnemonic Phrase from a Seed]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_D.jpg)
+![Generating a Mnemonic Phrase from a Seed]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/mnemonic-phrase-generation_M.jpg)
 
 **The process for generating your personal mnemonic goes as follows:**
 
@@ -248,8 +248,8 @@ The **chain code** is used as a key to the **HMAC-SHA256** pseudorandom function
 
 When looking at the key derivation in HD wallets, we can generally differentiate between _hardened secret key derivation_ (**HSKD**) and _non-hardened secret key derivation_ (**NSKD**). The difference lies in the inputs used to generate first-level keys.
 
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd-vs-hskd_D.jpg)
-![Hardened vs. Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd-vs-hskd_M.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/nskd-vs-hskd_D.jpg)
+![Hardened vs. Non-Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/nskd-vs-hskd_M.jpg)
 
 **Additionally**, we need to introduce the variable **i** at this point. It is a **32-bit** integer that is used to derive different keys with index **i** from a single zero-level key. By convention, the total range of possible values of **i** is split between **HSKD** and **NSKD**, giving both methods the option to create **2147483648** different first-level keys from a single zero-level key.
 
@@ -273,8 +273,8 @@ $$
 
 The core function that the key derivation is build around is the _hash-based message authentication code_ (**HMAC**). It is a specific type of message authentication code involving a _cryptographic hash function_ and a _secret cryptographic key._ It always uses some hash function, which is then appended to name the exact function. In this specific case, the **SHA512** hash function is used and the message authentication code is called **HMAC-SHA512**. _HMAC_ consumes several inputs. For our purposes we group them into two: the _key_ and the _data_.
 
-![Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hskd_D.jpg)
-![Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/hskd_M.jpg)
+![Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/hskd_D.jpg)
+![Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/hskd_M.jpg)
 
 For the _HSKD_ method, the concatenation of **\\(sk_0\\)** and our variable integer **i** is used as the data and the zero-level chain code **\\(c_0\\)** as the key.
 
@@ -286,8 +286,8 @@ By incrementing **i** we can generate **\\(2^{31}\\)** or **2147483648** differe
 
 We can also derive a first level private key using a combination of our zero-level public key **\\(PK_0\\)**, zero-level secret key **\\(sk_0\\)** and our zero-level chain code **\\(cc_0\\)**. This method is called _Non-Hardened Secret Key Derivation_ (**NSKD**).
 
-![Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd_D.jpg)
-![Non-Hardened Secret Key Derivation](/assets/post_files/technology/expert/3.0-wallets/nskd_M.jpg)
+![Non-Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/nskd_D.jpg)
+![Non-Hardened Secret Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/nskd_M.jpg)
 
 Again, we will use the **HMAC-SHA256** function, but this time we use the concatenation of **\\(PK_0\\)** and **i** as out _data_ and once again **\\(cc_0\\)** as our _key_. Again, the resulting **512-bit** output is split into two parts of **256** bits each. While the _second_ part becomes our first level chain code **\\(cc_1\\)** as it did in the _HSKD_ method, the first **256** bits are handled differently.
 
@@ -301,8 +301,8 @@ The zero-level private key is also the key that will allow the merchant to spend
 
 Using the **Non-Hardened Public Key Derivation** method, our zero level private key \\(sk_0\\) isn't needed at all. The first steps in the **NPKD** method are analogous to the **NSKD** method.
 
-![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_D.jpg)
-![Non-Hardened Public Key Derivation](/assets/post_files/technology/expert/3.0-wallets/npkd_M.jpg)
+![Non-Hardened Public Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/npkd_D.jpg)
+![Non-Hardened Public Key Derivation]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/npkd_M.jpg)
 
 The concatenation of **\\(PK_0\\)** and **i** is used as _data_ and **\\(cc_0\\)** as our _key_. Again, the resulting **512-bit** output is split into two parts of **256** bits.
 
@@ -324,13 +324,13 @@ For larger amounts, **3-of-5 MultiSig** schemes can be used. Casa offers solutio
 
 The spending conditions of a UTXO are defined in the _pubkey script_. It essentially determines the verification process of the transaction.
 
-![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_D.jpg)
-![Spending from a regular P2PKH Single Signature Address](/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_M.jpg)
+![Spending from a regular P2PKH Single Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_D.jpg)
+![Spending from a regular P2PKH Single Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/single-sig-spending_M.jpg)
 
 A regular “single-signature” transaction _only_ involves the verification of one signature. The **Pubkey Script** is based on the public key that the money is sent to. The digital signature that can authorize spending of this money must be based on the corresponding private key.
 
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
-![Spending from a P2SH Multi-Signature Address](/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
+![Spending from a P2SH Multi-Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_D.jpg)
+![Spending from a P2SH Multi-Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multi-sig-spending_M.jpg)
 
 The spending conditions for MultiSig transactions are defined in a so-called redeem script. The hash of the redeem script functions as an address - a _Pay to Script-Hash_ (**P2SH**) address. This address and the information contained in the redeem script is included in the _pubkey_ script.
 
@@ -340,8 +340,8 @@ The redeem script of a multisig account entails the minimum number of signatures
 
 Imagine Alice bought ZEN on an exchange and wants to store them using a MultiSig setup. This means she needs to create a multi signature address and withdraw her funds to it.
 
-![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_D.jpg)
-![Generation of a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_M.jpg)
+![Generation of a Multi Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_D.jpg)
+![Generation of a Multi Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multisig-address-generation_M.jpg)
 
 - **First**, she _generates_ a set of _private keys_. The number of keys generated depends on the MultiSig scheme she wants to use. Let’s assume she wants to setup a simple **1-of-2 scheme**, she generates two keys, either one of which is sufficient to authorize a transaction.
 - **Second**, she _creates_ the _redeem script_. It contains the information about the scheme used, _1-of-2_ in Alice’s case, and the two public keys corresponding to the two private keys generated in the _first_ step.
@@ -354,8 +354,8 @@ There are several wallet implementations that offer multi signature support. Thi
 
 Verification of a transaction from a **P2SH** address involves checking if the redeem script hashes to the redeem script hash included in the _UTXO’s_ pubkey script. In a second step, they will verify if the provided digital signature(s) satisfy the public key-based spending conditions included in the full redeem script.
 
-![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_D.jpg)
-![Spending from a Multi Signature Address](/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_M.jpg)
+![Spending from a Multi Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_D.jpg)
+![Spending from a Multi Signature Address]({{site.baseurl_root}}/assets/post_files/technology/expert/3.0-wallets/multisig-address-spending_M.jpg)
 
 **To spend from a P2SH address, the following steps are necessary:**
 

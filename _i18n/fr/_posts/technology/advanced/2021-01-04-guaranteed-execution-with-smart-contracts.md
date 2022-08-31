@@ -13,8 +13,8 @@ Nous avons examiné la blockchain de deux façons différentes. D'abord en tant 
 
 Une blockchain peut non seulement héberger des données simples comme des transactions, mais aussi de petits programmes. Nous appelons ces programmes des smart contracts. Un contrat, en général, est un accord entre les parties qui les lie. Le "smart" vient de l'exécution automatique de ces contrats numériques. Il s'agit d'un grand nombre d'énoncés "si, alors" qui sont rédigés et mis en application par le code. Le contrat s'exécute automatiquement si les conditions du contrat sont remplies.
 
-![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_D.jpg)
-![Smart Contract](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_M.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_D.jpg)
+![Smart Contract]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_smart_contract_M.jpg)
 
 ### La promesse des smart contracts
 
@@ -32,8 +32,8 @@ Une application décentralisée ou dApp est un cas d'utilisation plus sophistiqu
 
 Les dApps utilisent des smart contracts pour communiquer avec la blockchain sous-jacente. Imaginez un avenir où les bibliothèques de smart contracts avec un grand nombre de modèles de contrats différents puissent être utilisés à des fins diverses. Nous constatons déjà une tendance vers ce scénario avec des plateformes de smart contracts telles qu'Ethereum.
 
-![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_D.jpg)
-![dApp](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_M.jpg)
+![dApp]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_D.jpg)
+![dApp]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_dapp_M.jpg)
 
 ### Plateforme de Smart Contracts
 
@@ -55,8 +55,8 @@ Il faut tenir compte du fait que la rédaction de contrats traditionnels nécess
 
 Il y a un autre défi majeur à relever. Le monde numérique a besoin d'en savoir plus sur les événements du monde réel pour qu'un smart contract puisse fonctionner et s'exécuter. Un oracle est une entité qui soumet des données à une blockchain ou à un smart contract. Le problème de confiance est connu sous le nom de problème oracle. Imaginez un smart contract exécutant une plateforme de paris dans un environnement sans confiance. Un oracle doit soumettre le résultat d'un jeu pour que le smart contract distribue les fonds aux gagnants. Parce qu'un oracle détermine ce qu'un smart contract voit, il contrôle également ce qu'il fait.
 
-![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_D.jpg)
-![Oracle](/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_M.jpg)
+![Oracle]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_D.jpg)
+![Oracle]({{site.baseurl_root}}/assets/post_files/technology/advanced/1.3-smart-contracts/FR_oracle_M.jpg)
 
 Les oracles centralisés ne sont pas considérés comme une solution au problème d'oracle. Peu importe à quoi ressemble la mise en œuvre réelle, les incitations à soumettre des données mensongères pourraient l'emporter sur les avantages d'agir honnêtement dans certaines décisions. Qu'il soit centralisé ou décentralisé, un oracle aura toujours un coût. Agir honnêtement doit toujours être la stratégie la plus rentable et, par conséquent, des incitations fortes doivent être en place. C'est un autre problème qui nécessite une évaluation de la théorie des jeux et la conception d'incitations, tout comme les incitations pour les mineurs dont nous avons parlé dans notre [dernier article](https://academy.horizen.io/fr/technology/advanced/a-protocol-to-transfer-value/)
 

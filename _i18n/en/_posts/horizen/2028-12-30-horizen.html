@@ -54,7 +54,7 @@ css: |
   }
 ---
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{site.baseurl}}{{page.url}}">
 
     {% include search.html %}
 
@@ -97,7 +97,7 @@ css: |
                 <tbody>
                 <tr class="text-uppercase font-weight-bold">
                     <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /horizen/advanced/2027-12-31-horizen-advanced %}">
-                        <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
+                        <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
                     </td>
                 </tr>
                 <tr>
@@ -123,7 +123,7 @@ css: |
                     <tbody>
                     <tr class="text-uppercase font-weight-bold">
                         <td>
-                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
+                            <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Advanced
                         </td>
                     </tr>
                     <tr>

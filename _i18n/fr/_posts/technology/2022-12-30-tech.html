@@ -61,7 +61,7 @@ css: |
   }
 ---
 
-<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{page.url}}">
+<div class="post-section js-PostContent" data-topic="{{page.topic}}" data-level="{{page.level}}" data-url="{{site.baseurl}}{{page.url}}">
 
     {% include search.html %}
 
@@ -97,7 +97,7 @@ css: |
                 <tbody>
                 <tr class="text-uppercase font-weight-bold">
                     <td class="js-Clickable" data-href="{{ site.baseurl }}{% post_url /technology/advanced/2021-12-31-tech-advanced %}">
-                        <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
+                        <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
                     </td>
                 </tr>
                 <tr>
@@ -123,7 +123,7 @@ css: |
                     <tbody>
                     <tr class="text-uppercase font-weight-bold">
                         <td>
-                            <img src="/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
+                            <img src="{{site.baseurl_root}}/assets/img/icons/levels/advanced-2.svg" alt="Advanced" class="icon-level"> Avancé
                         </td>
                     </tr>
                     <tr>

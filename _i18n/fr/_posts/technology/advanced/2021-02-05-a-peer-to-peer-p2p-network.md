@@ -17,8 +17,8 @@ Mais il y a quelques inconvénients par rapport aux systèmes centralisés. Le h
 
 En informatique, le théorème CAP décrit que le coût d'un réseau distribué robuste et évolutif est le temps qu'il faut au réseau pour atteindre la cohérence. Il faut un certain temps pour qu'un événement (comme une transaction avec une cryptomonnaie) soit diffusé à chaque noeud du réseau. Dans un deuxième temps, tous les nœuds qui ont reçu l'événement doivent parvenir à un consensus sur l'ordre dans lequel les événements se sont produits. Dans notre prochain article sur les [mécanismes de consensus](https://academy.horizen.io/fr/technology/advanced/consensus-mechanisms/), nous vous présenterons les deux principales méthodes afin de parvenir à un consensus dans les réseaux distribués.
 
-![Central distri](/assets/post_files/technology/advanced/2.4-p2p/FR_central-distri_D.jpg)
-![Central distri](/assets/post_files/technology/advanced/2.4-p2p/FR_central-distri_M.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/FR_central-distri_D.jpg)
+![Central distri]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/FR_central-distri_M.jpg)
 
 Avec une architecture réseau Peer-to-Peer, chaque nœud est égal à tous les autres nœuds. Chaque nœud d'un réseau P2P agit à la fois comme un client et un serveur, contrairement aux modèles client-serveur traditionnels. Alors qu'un serveur peut connaître des temps d'arrêt pendant lesquels les clients ne peuvent pas accéder à ses données, dans un réseau P2P, vous n'avez qu'à vous connecter à un autre serveur si l'un d'eux est hors ligne.
 
@@ -26,8 +26,8 @@ Avec une architecture réseau Peer-to-Peer, chaque nœud est égal à tous les a
 
 Les variations des réseaux distribués concernent principalement la structure des données qui est maintenue et le mécanisme de broadcast ou la propagation des messages que les nœuds utilisent afin de communiquer et d’échanger des données. Les deux protocoles de broadcast les plus couramment utilisés sont le flooding et la diffusion. Dans le cas du flooding, les nœuds propagent un message avec un délai de transmission constant (ou déterministe). La diffusion est une version raffinée du flooding. Dans les réseaux utilisant la diffusion, tels que Bitcoin et la plupart des autres cryptomonnaies, les nœuds propagent les messages avec un délai de transmission aléatoire. Il est donc plus difficile pour un espion d'identifier l'origine d'un message et, par conséquent, d'identifier les nœuds dans le monde réel et leur propriétaire éventuel.
 
-![Spreading](/assets/post_files/technology/advanced/2.4-p2p/FR_spreading_D.jpg)
-![Spreading](/assets/post_files/technology/advanced/2.4-p2p/FR_spreading_M.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/FR_spreading_D.jpg)
+![Spreading]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.4-p2p/FR_spreading_M.jpg)
 
 De nombreux systèmes distribués sont construits avec une structure de données en "ajout-seulement" (append-only) et les blockchains en sont un exemple. Les blocs d'une blockchain sont des conteneurs de données cryptographiquement connectés dans un journal en “ajout-seulement”. Il est impossible de modifier ou de supprimer des données du passé. Dans d'autres réseaux distribués, il peut être souhaitable de supprimer des données, pour des raisons d'efficacité de stockage ou pour ne gérer que les informations pertinentes. Dans le cas des blockchains, en particulier celles pour les cryptomonnaies, cela serait considéré comme un bug dévastateur. Si le registre des transactions devait être modifié, cela détruirait le cas d'utilisation d'une monnaie numérique, car cela impliquerait une modification des soldes. Ce n'est évidemment pas souhaitable pour une forme de monnaie mondiale résistante à la censure.
 
@@ -53,5 +53,5 @@ Cet ordinateur spécial est communément appelé serveur. Si vous voulez accéde
 
 Dans un réseau Peer-to-Peer, votre connexion peut également se perdre, car un pair se déconnecte. Mais vous pouvez vous connecter à un autre pair sur le réseau et tout fonctionne comme d'habitude. Cela rend les blockchains et les cryptomonnaies très robustes.
 
-![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
-![Peer-to-Peer Network](/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_D.jpg)
+![Peer-to-Peer Network]({{site.baseurl_root}}/assets/post_files/eli5/what-is-a-peer-to-peer-network/peer-to-peer-network_M.jpg)
