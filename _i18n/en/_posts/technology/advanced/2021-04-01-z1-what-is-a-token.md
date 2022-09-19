@@ -136,6 +136,8 @@ All **nodes** store the same copy of the ledger, and rely on majority consensus 
 
 **To conclude**, _a token represents the perfect blend between distributed and open source technologies, experimental monetary policies and high retention B2C marketing campaigns_.
 
+![ZBF_graphics_AUG_token]({{site.baseurl_root}}/assets/post_files/technology/advanced/4.0-z1-what-is-a-token/ZBF_graphics_AUG_token.jpg)
+
 Each element is crucial to making a token successful, which is why we are seeing people from all kinds of backgrounds, including technology, business and economics express interest in launching a token.
 
 **Tokens provide prospective customers with strong incentives to adopt new products, dapps or blockchains**, while empowering developers to bootstrap an entire network from scratch without the need of traditional fundraising or connections.
