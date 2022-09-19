@@ -62,12 +62,12 @@ no_index: true
 
 <div class="row mt-5">
     <div class="col-md-3">
-        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}">
+        <a href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-0-transactions %}">
             <img src="{{site.baseurl_root}}/assets/post_files/technology/advanced/0.0-tech-advanced/transactions.svg" alt="Transacciones" />
         </a>
     </div>
     <div class="col-md-9">
-        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-01-transactions %}"><h5 class="intro-article-title">Transacciones</h5></a>
+        <a class="font-weight-bold" href="{{ site.baseurl }}{% post_url /technology/advanced/2021-04-02-0-transactions %}"><h5 class="intro-article-title">Transacciones</h5></a>
         <p class="mb-1">
             Habiendo cubierto el tema de las billeteras digitales, las interfaces que crean transacciones, nos acercaremos a la naturaleza de las transacciones y cómo funcionan.
         </p>
