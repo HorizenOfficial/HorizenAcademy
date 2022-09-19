@@ -103,6 +103,8 @@ These agreements specify how much of the Chainlink token (_LINK_) will be reward
 
 The oracle node will also need to stake a certain amount of LINK token as collateral before they can engage in a service agreement, _which acts as a deterrent against falsifying data or accepting a job that they cannot complete._
 
+![ZBF_Oracles_graphic_chainlink-overview]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.8-blockchain-oracles/ZBF_Oracles_graphic_chainlink-overview.jpg)
+
 **Service agreements** are supported by a _reputation system_, which allow requesting smart contracts to review the reputation of an oracle node by checking the history of data that a node has sent to the network based on the digital signatures they must include in every transmission.
 
 The **benefit** of a decentralized oracle system is that it introduces _token incentives_ as well as market competition through service agreements that nodes must bid for and can only continue to earn by maintaining a good reputation overtime.
@@ -116,6 +118,8 @@ The **benefit** of a decentralized oracle system is that it introduces _token in
 ### Security
 
 In addition, like any centralized system, a centralized oracle is also less secure because it has a **single point of failure**. This increases the risk that a bad actor could successfully hack the oracle and influence the data transmitted to the blockchain network.
+
+![ZBF_Oracles_graphic_security]({{site.baseurl_root}}/assets/post_files/technology/advanced/2.8-blockchain-oracles/ZBF_Oracles_graphic_security.jpg)
 
 **For these reasons**, decentralized oracles offer a much more reliable and secure method for submitting off-chain data to on-chain smart contracts.
 
