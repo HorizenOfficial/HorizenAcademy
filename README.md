@@ -1,5 +1,6 @@
 # Horizen Academy Website
 
+
 This is the first iteration of creating a website for Horizen Academy that utilizes a static site generator. It is based on past work but will evolve over time to leverage new technologies.
 
 ## Getting Started
