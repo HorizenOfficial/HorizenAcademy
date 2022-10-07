@@ -13,3 +13,5 @@ bower_components
 /assets/css
 /assets/js
 /algolia.json
+
+Gemfile.lock
