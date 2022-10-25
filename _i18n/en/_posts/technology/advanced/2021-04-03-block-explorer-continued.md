@@ -9,6 +9,8 @@ level: advanced
 chapter: "Transactions"
 ---
 
+<p></p>
+
 An often-cited benefit of blockchain technology is the _transparency_ it offers. **Transactions**, **blocks**, and **addresses** are publicly auditable, and the tool you use for that job is called the **block explorer**.
 
 The **block explorer** is a graphical tool to view and explore data on the blockchain, like how a web browser lets you access the information on the internet.
@@ -17,7 +19,39 @@ There is a block explorer available for _almost_ every public blockchain. If you
 
 It allows you to browse the history of a given chain. You can review the transaction history of a given address, the set of transactions in a block, as well as the status of transactions.
 
-**Let’s take a look at a real-life example:**
+## How Blockchain Explorers Work
+
+Have you ever wondered how Google or other search engines work? How do they know what websites to show you when you type in a query? The answer lies in something called a "crawler," which is a program that scours the internet for new and updated content.
+
+Blockchain explorers work in a similar way, they’re programs that scan the blockchain for new and unique transactions. Just as Google shows you results based on your search query, blockchain explorers display transaction data based on specific criteria. For example, if you're looking for all the transactions involving a certain address, you can use a block explorer to find them.
+
+Blockchain explorers don't, however, typically index all of the data on the blockchain. Instead, they focus on transaction data and metadata, such as addresses, timestamps, and amounts. This makes them an essential tool for blockchain users, as they provide visibility into how the network is being used.
+
+There are many different types of block explorers available today, each with its own features and interface. While each one has its own strengths and weaknesses, they all serve the same basic purpose: to help users understand what's going on with the blockchain network.
+
+### Interfacing With A Full Node
+
+**Nodes** are the backbone of any decentralized network, including blockchain networks. A node is simply a computer that's running the software required to participate in the network. Full nodes are an important part of the ecosystem because they validate and relay transactions.
+
+In order to retrieve data, blockchain explorers use full nodes as their source. This process is similar to how search engines use web crawlers to index websites. In both cases, the goal is to gain visibility into a large amount of data.
+
+There are two main ways that blockchain explorers can interface with full nodes: through an API or by running their own full node.
+
+Using an API is the simplest way to get started with a block explorer. An API is a set of programming instructions that allow software to interact with another piece of software. In this case, the block explorer would be using the full node's API to retrieve data from the blockchain.
+
+However, running your own full node provides the most complete picture of what's going on with the network. By doing this, you can ensure that all data being displayed is accurate and up-to-date. Additionally, you'll have more control over which transactions are displayed and how they're sorted.
+
+## Why Different Blockchains Need Different Blockchain Explorers
+
+Every blockchain is its own replicated, append-only database with its own specific features, functionalities, and data structures. Because of this, every blockchain needs its own dedicated explorer. Not every explorer can index and search data from every blockchain.
+
+**For example**, the Bitcoin blockchain is different from the Ethereum blockchain. The data structures are different, which means that a Bitcoin explorer wouldn't be able to index and search data from the Ethereum blockchain (and vice versa).
+
+Additionally, each blockchain has its own rules for how data is stored and organized. These rules are known as the consensus protocol. Explorers must be designed specifically for each consensus protocol in order to work correctly.
+
+**Lastly**, blockchains can vary greatly in terms of size and complexity. Some are relatively small and simple, while others are large and complex. This impacts the design of the explorer, as the larger and more complex blockchains require more powerful explorers.
+
+Another way in which blockchain explorers could be improved is to create a single explorer that aggregates all data shared across multiple block explorers. This would be a highly useful tool for investors, researchers and financial institutions who may be looking to capture a birds eye view of the entire crypto ecosystem and more easily discover new dapps and protocols.
 
 ## Horizen's Block Explorer
 
@@ -56,7 +90,7 @@ You will see an overview of the most recently created blocks on the landing page
 - **Transactions**: The number of _transactions_ included in this block.
 - **Total Sent**: The **1547** transactions that took place add up to almost **4700** Bitcoins sent.
 - **Relayed By**: The _miner_ or _mining pool_ that solved the block and earned the block reward.
-- **Size**: The amount of storage the block takes up
+- **Size**: The amount of storage the block takes up.
 - **Weight**: A metric that refers to the _size_ of a block. It is a more technical metric but as you can see, the _more_ transactions in a block and the _bigger_ the file size of a block, the _bigger_ the weight.
 
 ### The Genesis Block
@@ -96,6 +130,36 @@ If we want to look at the very first cryptocurrency transaction ever done, we ne
 </div>
 
 It is the _first_ block on the Bitcoin blockchain that contains _more_ than one transaction. We can find the coinbase transaction on the very top. Below is the first transaction as you would expect it. One person sending coins to another one.
+
+## Tokenization Platform Explorer
+
+When a tokenization platform is used to create a unique asset, there is value in being able to explore that data. This can be done by creating your own blockchain explorer or by using an existing one.
+
+Once you've chosen a blockchain explorer, you can begin using it to track activity on the network. This information can be used to understand how the network works and how it's being used by users. Additionally, it can be helpful for spotting trends and identifying potential issues.
+
+Check out the block explorer for [Tokenmint](https://explorer.tokenmint.global/).
+
+## Enhancing Blockchain Explorers
+
+Blockchain explorers are an essential tool for anyone who wants to understand how the blockchain works or to track specific transactions. However, there's still room for improvement when it comes to these programs:
+
+### Aggregated Block Explorers
+
+Explorers could be improved is to create a single explorer that aggregates all data shared across multiple block explorers. This would be a highly useful tool for investors, researchers and financial institutions who may be looking to capture a birds eye view of the entire crypto ecosystem and more easily discover new dapps and protocols.
+
+### Indexing All Data on the Blockchain
+
+While current blockchain explorers focus on transaction data, not all of them index all of the data on the chain. This makes it difficult to get a complete picture of what's going on.
+
+### Improved Search Functionality
+
+It can be tough to find specific transactions using current blockchain explorers. This is due in part to the way data is sorted and displayed. Improving the search functionality would make it easier for users to find what they're looking for.
+
+### User-friendly interfaces
+
+Making block explorers more intuitive and easier to use would go a long way toward increasing adoption.
+
+As the technology continues to evolve, we can expect to see even more advancements in this area.
 
 ## Summary
 
