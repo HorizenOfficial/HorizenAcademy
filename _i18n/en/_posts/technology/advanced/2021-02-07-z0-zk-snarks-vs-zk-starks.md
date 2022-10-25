@@ -7,6 +7,7 @@ permalink: /technology/advanced/zk-snarks-vs-zk-starks/
 topic: technology
 level: advanced
 chapter: "zk-SNARKs vs zk-STARKs"
+image: assets/post_files/technology/advanced/zk-snarks-vs-zk-starks/meta.jpg
 ---
 
 <p></p>
@@ -81,6 +82,8 @@ It also uses a collision-resistant hash function, which supposedly makes it resi
 _The drawback_ with zk-STARKs is that the proof sizes are larger than zk-SNARKs owing to the larger set of data that needs to be processed when sampling publicly verifiable information.
 
 Larger proof sizes means that zk-STARKs require more gas fees for transactions.
+
+![STARKs SNARKs comparison]({{site.baseurl_root}}/assets/post_files/technology/advanced/zk-snarks-vs-zk-starks/ZBF_graphic_ZKsnarks-starks.jpg)
 
 ## zk-SNARKs vs zk-STARKs - Applications
 
