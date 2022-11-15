@@ -95,7 +95,7 @@ An **ASIC Miner** is a type of integrated circuit computer hardware that is desi
 <b>AvalonMiner 1246</b>
 </td>
 <td>90.0 TH/s</td>
-<td>90.0 TH/s</td>
+<td>$5,500</td>
 </tr>
 
 </table>
