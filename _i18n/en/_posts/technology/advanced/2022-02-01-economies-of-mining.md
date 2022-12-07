@@ -7,6 +7,7 @@ permalink: /technology/advanced/economies-of-mining/
 topic: technology
 level: advanced
 chapter: "Economics of Cryptocurrency Mining"
+image: assets/post_files/technology/advanced/economies-of-mining/meta.jpeg
 ---
 
 <p></p>
