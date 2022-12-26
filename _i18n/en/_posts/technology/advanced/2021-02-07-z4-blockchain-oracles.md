@@ -7,6 +7,7 @@ permalink: /technology/advanced/blockchain-oracle/
 topic: technology
 level: advanced
 chapter: "Blockchain Oracles"
+image: assets/post_files/technology/advanced/blockchain-oracles/meta.jpeg
 ---
 
 ## The Oracle Problem
