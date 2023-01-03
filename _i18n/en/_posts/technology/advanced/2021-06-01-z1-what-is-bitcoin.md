@@ -7,6 +7,7 @@ permalink: /technology/advanced/what-is-bitcoin/
 topic: technology
 level: advanced
 chapter: "Bitcoin Glossary"
+image: assets/post_files/technology/advanced/what-is-bitcoin/meta.jpeg
 ---
 
 ## Bitcoin Terminology
