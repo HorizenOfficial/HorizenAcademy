@@ -7,6 +7,7 @@ permalink: /technology/advanced/how-does-blockchain-work/
 topic: technology
 level: advanced
 chapter: "How Does Blockchain Work"
+image: assets/post_files/technology/advanced/how-does-blockchain-work/meta.jpeg
 ---
 
 <p></p>
