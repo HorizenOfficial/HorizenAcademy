@@ -100,9 +100,7 @@ The use of cheap collateral to take out loans is a _very risky endeavor_ that of
 This is because the extreme volatility of these assets means that a margin loan can become liquidated very quickly, especially if the broader market experiences a large and sudden drawdown in prices, which is very typical in crypto.
 
 * This poses a **risk for borrowers** if they are unable to post additional margin in time to avoid liquidation.
-
 * It also poses a **risk for lenders**, as even smart contracts may not be fast enough to sell a token before it reaches its liquidation price, especially if the size of the collateral is large and the token is highly illiquid.
-
 If a token has just recently been minted by a crypto project, and a large portion of the supply is either unvested or controlled by project insiders, it will naturally be more prone to extreme volatility due its low circulating supply and is therefore a poor candidate for collateral.
 
 By contrast, **pristine collateral** is considered _pristine_ because it is:
@@ -155,11 +153,8 @@ The most popular decentralized applications for lending and borrowing crypto tod
 To use these dapps, simply:
 
 * Connect your wallet
-
 * Review the market interest rates for borrowing and lending, as well as the collateral amounts
-
 * Deposit crypto assets in the designated smart contract
-
 * Receive the borrowed crypto assets directly to your wallet
 
 Ultimately, crypto-based lending is still very early and highly experimental. As the industry develops, we can expect there to be new and exciting models for lending that will begin to achieve adoption, such as smart contracts that are optimized to manage riskier forms of collateral like tokens or event NFTs.
