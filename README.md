@@ -1,7 +1,8 @@
-# Horizen Academy Website
+#Deprecation
 
 This project is archived. Refer to the new Horizen Academy project here: https://github.com/HorizenOfficial/horizen-academy-v2
 
+# Horizen Academy Website
 
 This is the first iteration of creating a website for Horizen Academy that utilizes a static site generator. It is based on past work but will evolve over time to leverage new technologies.
 
