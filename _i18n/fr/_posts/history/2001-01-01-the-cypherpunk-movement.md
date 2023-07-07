@@ -59,7 +59,7 @@ En 1997, Adam Back a créé HashCash qui a été proposé comme une mesure contr
 
 En 2008, Satoshi Nakamoto a finalement publié le livre blanc Bitcoin, citant et s'appuyant sur HashCash et b-money. Non seulement ses premières communications, mais aussi certaines parties de son livre blanc, comme ce qui suit sur la vie privée, suggèrent qu'il est proche du mouvement Cypherpunk.
 
-**Anglaid**
+**Anglais**
 
 _"The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the ‘tape’, is made public, but without telling who the parties were."_
 
