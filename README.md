@@ -1,4 +1,4 @@
-#Deprecation
+# Deprecation
 
 This project is archived. Refer to the new Horizen Academy project here: https://github.com/HorizenOfficial/horizen-academy-v2
 
